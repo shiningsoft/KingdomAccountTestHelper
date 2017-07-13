@@ -1,5 +1,6 @@
 ﻿using NLog;
 using System;
+using System.Reflection;
 using System.ServiceModel;
 using 金证统一账户测试账户生成器.KessService;
 
@@ -10,7 +11,10 @@ namespace Yushen.WebService.KessClient
     /// </summary>
     class Kess:IDisposable
     {
-        KessServiceClient kessClient;
+        string kessWebserviceURL = "http://60.173.222.38:30002/kess/services/KessService?wsdl";
+        string kessClassName = "金证统一账户测试账户生成器.KessService.KessServiceClient";
+        object kessClient;
+        Type kessClientType;
         string operatorId;
         string password;
         string channel;
@@ -33,15 +37,13 @@ namespace Yushen.WebService.KessClient
 
             try
             {
-                this.kessClient = new KessServiceClient("KessService", "http://60.173.222.38:30004/kess/services/KessService?wsdl");
-            }
-            catch (EndpointNotFoundException)
-            {
-                throw new Exception("WebService地址无效，请检查");
+                // 利用反射建立WebService的实例
+                this.kessClientType = Type.GetType(this.kessClassName);
+                this.kessClient = Activator.CreateInstance(this.kessClientType, new object[] { "KessService", this.kessWebserviceURL });
             }
             catch (Exception ex)
             {
-                throw new Exception("WebService连接失败：" + ex.Message);
+                this.throwNewException("WebService连接失败：" + ex.Message);
             }
 
             this.operatorLogin();
@@ -62,7 +64,7 @@ namespace Yushen.WebService.KessClient
             
             if (response.flag == "0" && response.prompt.IndexOf("用户已登陆，不用重复登陆")==-1)
             {
-                throw new Exception("用户登录失败：" + response.prompt);
+                this.throwNewException("用户登录失败：" + response.prompt);
             }
         }
 
@@ -149,41 +151,14 @@ namespace Yushen.WebService.KessClient
 
             logger.Info("调用Webservice功能<" + request.operateName + ">|" + request.xml);
 
-            switch (request.operateName)
+            // 利用反射调用WebService的成员函数
+            try
             {
-                case "getCommonParams":
-                    result = this.kessClient.getCommonParams(request.xml);
-                    break;
-                case "getUserInfoById":
-                    result = this.kessClient.getUserInfoById(request.xml);
-                    break;
-                case "listCuacct":
-                    result = this.kessClient.listCuacct(request.xml);
-                    break;
-                case "mdfUserExtInfo":
-                    result = this.kessClient.mdfUserExtInfo(request.xml);
-                    break;
-                case "openCuacct":
-                    result = this.kessClient.openCuacct(request.xml);
-                    break;
-                case "openCustomer":
-                    result = this.kessClient.openCustomer(request.xml);
-                    break;
-                case "openYMTAcctByKbss":
-                    result = this.kessClient.openYMTAcctByKbss(request.xml);
-                    break;
-                case "operatorLogin":
-                    result = this.kessClient.operatorLogin(request.xml);
-                    break;
-                case "queryCustBasicInfoList":
-                    result = this.kessClient.queryCustBasicInfoList(request.xml);
-                    break;
-                case "submitStkAcctBizOpReq2NewZD":
-                    result = this.kessClient.submitStkAcctBizOpReq2NewZD(request.xml);
-                    break;
-                default:
-                    logger.Error("没有对应的WebService调用函数：" + request.operateName);
-                    throw new Exception("没有对应的WebService调用函数：" + request.operateName);
+                result = (string)this.kessClientType.GetMethod(request.operateName).Invoke(this.kessClient, new object[] { request.xml });
+            }
+            catch (Exception ex)
+            {
+                this.throwNewException("WebService调用失败：" + this.kessWebserviceURL + ex.Message);
             }
             
             logger.Info("响应Webservice功能<" + request.operateName + ">|" + result);
@@ -191,9 +166,15 @@ namespace Yushen.WebService.KessClient
             return result;
         }
 
+        internal void throwNewException(string message)
+        {
+            logger.Error(message);
+            throw new Exception(message);
+        }
+
         public void Dispose()
         {
-            this.kessClient.Close();
+            this.kessClientType.GetMethod("Close").Invoke(this.kessClient, new object[] {}); ;
         }
     }
 }
