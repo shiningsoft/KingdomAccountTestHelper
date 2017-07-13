@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--公共参数查询-->
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//公共参数ID @ 表示全部 -->
+  <REGKEY_ID></REGKEY_ID>
+    <LEVEL>99</LEVEL>
+  </data>
+</request>

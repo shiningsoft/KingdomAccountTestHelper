@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- 通过身份证查找客户 -->
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//证件类型（必传）00：身份证 -->
+    <ID_TYPE>00</ID_TYPE>
+    <!-- //证件号码（必传） -->
+    <ID_CODE></ID_CODE>
+    <!--//用户角色（非必传） -->
+    <USER_ROLES></USER_ROLES>
+  </data>
+</request>

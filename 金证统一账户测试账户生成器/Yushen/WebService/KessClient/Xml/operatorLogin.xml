@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<request>
+  <auth>
+    <!--//操作员代码（必传）-->
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!---->
+    <USER_CODE></USER_CODE>
+    <!--//操作员密码（必传）-->
+    <PASSWORD></PASSWORD>
+    <!--//操作渠道（非必传） 若传，不允许传空-->
+    <F_CHANNEL></F_CHANNEL>
+    <!--//代理IP（非必传）-->
+    <AGENT_IP></AGENT_IP>
+    <!--//打印标志（非必传） 0-支持，其他-不支持-->
+    <PRINT_FLAG></PRINT_FLAG>
+  </data>
+</request>
