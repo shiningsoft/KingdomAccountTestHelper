@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Data;
 using System.IO;
 using System.Xml;
 
 namespace Yushen.WebService.KessClient
 {
-    class Response
+    public class Response
     {
         XmlDocument xmlDoc = new XmlDocument();
         public string flag = "";
@@ -22,6 +23,9 @@ namespace Yushen.WebService.KessClient
             this.checkResult();
         }
 
+        /// <summary>
+        /// 对服务器返回的XML内容和操作结果进行检查，如果不符合标准格式则抛出异常
+        /// </summary>
         internal void checkResult()
         {
             XmlNode node = xmlDoc.SelectSingleNode("/response/result");
@@ -35,9 +39,22 @@ namespace Yushen.WebService.KessClient
             }
         }
 
-        public string getRecord()
+        public string record
         {
-            return xmlDoc.SelectSingleNode("/response/record").InnerXml;
+            get
+            {
+                return xmlDoc.SelectSingleNode("/response/record").InnerXml;
+            }
+        }
+
+        /// <summary>
+        /// 通过xpath获取单一节点的txt内容
+        /// </summary>
+        /// <param name="xpath"></param>
+        /// <returns></returns>
+        public string getRecordSingleNodeText(string xpath)
+        {
+            return xmlDoc.SelectSingleNode(xpath).InnerText;
         }
 
         public string xml
@@ -70,6 +87,10 @@ namespace Yushen.WebService.KessClient
             return sw.ToString();
         }
 
+        /// <summary>
+        /// 通过XML字符串生成XmlDocument对象
+        /// </summary>
+        /// <param name="xmlString"></param>
         internal void createXmlDocumentFromString(string xmlString)
         {
             try

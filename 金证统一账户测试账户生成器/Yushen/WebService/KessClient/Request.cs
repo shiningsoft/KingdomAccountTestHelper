@@ -3,7 +3,7 @@ using System.Xml;
 
 namespace Yushen.WebService.KessClient
 {
-    class Request
+    public class Request
     {
         /// <summary>
         /// Webservice操作的名称
@@ -11,6 +11,7 @@ namespace Yushen.WebService.KessClient
         public string operateName;
 
         string xmlPath = "Yushen/WebService/KessClient/Xml/";
+
         XmlDocument xmlDoc = new XmlDocument();
 
         /// <summary>

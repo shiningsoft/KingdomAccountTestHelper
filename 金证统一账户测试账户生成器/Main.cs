@@ -22,9 +22,8 @@ namespace 金证统一账户测试账户生成器
                 if (kess == null)
                 {
                     kess = new Kess(operatorId.Text, password.Text, "");
-                    infoBox.Text += "用户登录成功\r\n";
                 }
-                infoBox.Text += kess.getUserInfoById(userCode.Text) + "\r\n";
+                infoBox.Text += kess.getSingleCommonParamValue(userCode.Text) + "\r\n";
                 
                 infoBox.Select(infoBox.TextLength, 0);
                 infoBox.ScrollToCaret();
@@ -33,6 +32,17 @@ namespace 金证统一账户测试账户生成器
             {
                 infoBox.Text += ex.Message + "\r\n";
             }
+        }
+
+        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutBox aboutBox = new AboutBox();
+            aboutBox.Show();
+        }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
