@@ -104,5 +104,26 @@ namespace Yushen.WebService.KessClient
                 throw new Exception("读取response内容失败：" + ex.Message);
             }
         }
+        
+        /// <summary>
+        /// 通过XML字符串创建DataSet对象
+        /// </summary>
+        /// <param name="xmlString"></param>
+        internal DataSet createDataSetFromXmlString(string xmlString)
+        {
+            DataSet ds = new DataSet();
+            using (StringReader xmlSR = new StringReader(xmlString))
+            {
+                // 读取xml到DataSet
+                // XmlReadMode.InferTypedSchema：忽视任何内联架构，从数据推断出强类型架构并加载数据。如果无法推断，则解释成字符串数据
+                ds.ReadXml(xmlSR, XmlReadMode.InferTypedSchema);
+            }
+
+            if (ds == null)
+            {
+                throw new Exception("DataSet读取XML失败");
+            }
+            return ds;
+        }
     }
 }

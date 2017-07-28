@@ -22,5 +22,53 @@ namespace 金证统一账户测试账户生成器.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://60.173.222.38:30004/kess/services/KessService?wsdl")]
+        public string kessWebserviceURL {
+            get {
+                return ((string)(this["kessWebserviceURL"]));
+            }
+            set {
+                this["kessWebserviceURL"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("金证统一账户测试账户生成器.KessService.KessServiceClient")]
+        public string kessClassName {
+            get {
+                return ((string)(this["kessClassName"]));
+            }
+            set {
+                this["kessClassName"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("90019")]
+        public string operatorId {
+            get {
+                return ((string)(this["operatorId"]));
+            }
+            set {
+                this["operatorId"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("888888")]
+        public string operatorPassword {
+            get {
+                return ((string)(this["operatorPassword"]));
+            }
+            set {
+                this["operatorPassword"] = value;
+            }
+        }
     }
 }

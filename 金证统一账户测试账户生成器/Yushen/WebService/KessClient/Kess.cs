@@ -9,17 +9,57 @@ namespace Yushen.WebService.KessClient
     /// <summary>
     /// 用于金证统一账户系统WebService接口的操作类
     /// </summary>
-    public partial class Kess:IDisposable
+    public partial class Kess : IDisposable
     {
+
+        /// <summary>
+        /// 设置金证WebService的URL地址
+        /// </summary>
         string kessWebserviceURL = "http://60.173.222.38:30004/kess/services/KessService?wsdl";
-        string kessClassName = "金证统一账户测试账户生成器.KessService.KessServiceClient";
+
+        /// <summary>
+        /// 设置金证WebService接口的类名，用于建立反射调用WebService
+        /// </summary>
+        readonly string kessClassName = "金证统一账户测试账户生成器.KessService.KessServiceClient";
+
+        /// <summary>
+        /// 用于建立反射调用WebService
+        /// </summary>
         object kessClient;
+
+        /// <summary>
+        /// 用于建立反射调用WebService
+        /// </summary>
         Type kessClientType;
+
+        /// <summary>
+        /// 统一账户系统操作员编号
+        /// </summary>
         string operatorId;
+
+        /// <summary>
+        /// 统一账户系统操作员密码
+        /// </summary>
         string password;
+
+        /// <summary>
+        /// 操作渠道
+        /// </summary>
         string channel;
+
+        /// <summary>
+        /// 字典项，金证Win版柜台系统
+        /// </summary>
         static string WindowsCounter = "Win";
+
+        /// <summary>
+        /// 字典项，金证U版柜台系统
+        /// </summary>
         static string UnixCounter = "Uinx";
+
+        /// <summary>
+        /// 日志记录器
+        /// </summary>
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
@@ -28,12 +68,12 @@ namespace Yushen.WebService.KessClient
         /// <param name="operatorId">操作员代码</param>
         /// <param name="password">操作员密码</param>
         /// <param name="channel">统一账户操作渠道</param>
-        public Kess(string operatorId, string password, string channel, string kessWebserviceURL="")
+        public Kess(string operatorId, string password, string channel, string kessWebserviceURL = "")
         {
             this.operatorId = operatorId;
             this.password = password;
             this.channel = channel;
-            if (kessWebserviceURL!="")
+            if (kessWebserviceURL != "")
             {
                 this.kessWebserviceURL = kessWebserviceURL;
             }
@@ -54,9 +94,9 @@ namespace Yushen.WebService.KessClient
         /// 操作员登录
         /// </summary>
         /// <returns></returns>
-        public bool operatorLogin(string operatorId="", string password = "")
+        public bool operatorLogin(string operatorId = "", string password = "")
         {
-            if (operatorId!="")
+            if (operatorId != "")
             {
                 if (password != "")
                 {
@@ -68,15 +108,15 @@ namespace Yushen.WebService.KessClient
                     this.throwNewException("操作员密码不能为空");
                 }
             }
-            
+
             Request request = new Request(this.operatorId, "operatorLogin");
             request.setAttr("USER_CODE", this.operatorId);
             request.setAttr("PASSWORD", this.password);
             request.setAttr("F_CHANNEL", this.channel);
 
             Response response = new Response(this.invoke(request));
-            
-            if (response.flag == "0" && response.prompt.IndexOf("用户已登陆，不用重复登陆")==-1)
+
+            if (response.flag == "0" && response.prompt.IndexOf("用户已登陆，不用重复登陆") == -1)
             {
                 this.throwNewException("用户登录失败：" + response.prompt);
             }
@@ -103,10 +143,10 @@ namespace Yushen.WebService.KessClient
         {
             Request request = new Request(this.operatorId, "queryCustBasicInfoList");
             request.setAttr("USER_CODE", userCode);
-            
+
             return this.invoke(request);
         }
-        
+
         /// <summary>
         /// 单个公共参数查询，返回value值。
         /// </summary>
@@ -120,7 +160,7 @@ namespace Yushen.WebService.KessClient
             {
                 this.throwNewException("单一公共参数查询时返回值不能多于1个");
             }
-            
+
             return (string)this.createDataSetFromXmlString(response.record).Tables[0].Rows[0]["REGKEY_VAL"];
         }
 
@@ -136,14 +176,14 @@ namespace Yushen.WebService.KessClient
 
             Response response = new Response(this.invoke(request));
 
-            if (response.flag!="1")
+            if (response.flag != "1")
             {
                 this.throwNewException("查询公共参数" + regkeyId + "失败：" + response.prompt);
             }
 
             return response;
         }
-        
+
         /// <summary>
         /// 根据身份证号查询已有客户代码
         /// </summary>
@@ -158,10 +198,12 @@ namespace Yushen.WebService.KessClient
             return response.xml;
         }
 
-
+        /// <summary>
+        /// 析构函数
+        /// </summary>
         public void Dispose()
         {
-            this.kessClientType.GetMethod("Close").Invoke(this.kessClient, new object[] {}); ;
+            this.kessClientType.GetMethod("Close").Invoke(this.kessClient, new object[] { }); ;
         }
     }
 }
