@@ -71,7 +71,7 @@
 
         #endregion
 
-        public System.Windows.Forms.TextBox infoBox;
+        private System.Windows.Forms.TextBox infoBox;
         private System.Windows.Forms.Button btnClose;
     }
 }

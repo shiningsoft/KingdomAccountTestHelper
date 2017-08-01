@@ -124,6 +124,16 @@ namespace Yushen.WebService.KessClient
             return true;
         }
 
+        /// <summary>
+        /// 开立客户号
+        /// </summary>
+        /// <param name="USER_NAME"></param>
+        /// <param name="ID_CODE"></param>
+        /// <param name="ID_ISS_AGCY"></param>
+        /// <param name="ID_BEG_DATE"></param>
+        /// <param name="ID_EXP_DATE"></param>
+        /// <param name="CITIZENSHIP"></param>
+        /// <param name="NATIONALITY"></param>
         public void createCustomerCode(string USER_NAME, string ID_CODE, string ID_ISS_AGCY, string ID_BEG_DATE, string ID_EXP_DATE, string CITIZENSHIP, string NATIONALITY)
         {
             Response response = new Response(this.getUserInfoById(ID_CODE));

@@ -232,7 +232,6 @@ namespace 金证统一账户测试账户生成器
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Main";
             this.Text = "金证统一账户测试账户生成器";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.tabPage1.ResumeLayout(false);

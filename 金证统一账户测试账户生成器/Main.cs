@@ -22,23 +22,23 @@ namespace 金证统一账户测试账户生成器
             resultForm.Show();
             try
             {
+                // 建立WebService连接
                 if (kess == null)
                 {
                     kess = new Kess(operatorId.Text, password.Text, "");
                 }
 
+                // 异步方式调用WebService查询
                 Task task = Task.Run(()=>
                 {
                     this.Invoke((MethodInvoker)(()=> {
-                        resultForm.infoBox.Text += kess.getSingleCommonParamValue(userCode.Text) + "\r\n";
-                        resultForm.infoBox.Select(resultForm.infoBox.TextLength, 0);
-                        resultForm.infoBox.ScrollToCaret();
+                        resultForm.Append(kess.getSingleCommonParamValue(userCode.Text));
                     }));
                 });
             }
             catch (Exception ex)
             {
-                resultForm.infoBox.Text += ex.Message + "\r\n";
+                resultForm.Append(ex.Message);
             }
         }
 

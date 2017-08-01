@@ -30,6 +30,25 @@ namespace 金证统一账户测试账户生成器
             }
         }
         /// <summary>
+        /// 用户设置的密码
+        /// </summary>
+        private string _password = "";
+        /// <summary>
+        /// 用户设置的密码
+        /// </summary>
+        public string password
+        {
+            get
+            {
+                return _password;
+            }
+
+            set
+            {
+                _password = value;
+            }
+        }
+        /// <summary>
         ///（私有）用户类型（必传） dd[user_type]
         /// </summary>
         private string _user_type = "00";

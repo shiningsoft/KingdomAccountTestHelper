@@ -80,6 +80,8 @@
     </Compile>
     <Compile Include="User.cs" />
     <Compile Include="Yushen\NLog\NlogTest.cs" />
+    <Compile Include="Yushen\Util\IDCardNumber.cs" />
+    <Compile Include="Yushen\Util\Generator.cs" />
     <Compile Include="Yushen\Util\Validator.cs" />
     <Compile Include="Yushen\WebService\KessClient\KessInternal.cs" />
     <Compile Include="Yushen\WebService\KessClient\Response.cs" />
@@ -94,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Yushen\Util\AreaCodeInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\getCommonParams.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -184,6 +189,9 @@
     <Content Include="Yushen\WebService\KessClient\Xml\listCuacct.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Module\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

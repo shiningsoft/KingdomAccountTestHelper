@@ -51,8 +51,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Yushen\Util\IDCardNumberTests.cs" />
     <Compile Include="Yushen\Util\ValidatorTests.cs" />
-    <Compile Include="Yushen\WebService\KessClient\KessTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\金证统一账户测试账户生成器\金证统一账户测试账户生成器.csproj">

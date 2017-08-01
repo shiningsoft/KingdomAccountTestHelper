@@ -1,20 +1,21 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Yushen.WebService.KessClient;
+using Yushen.Util;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Yushen.WebService.KessClient.Tests
+namespace Yushen.Util.Tests
 {
     [TestClass()]
-    public class KessTests
+    public class IDCardNumberTests
     {
         [TestMethod()]
-        public void queryCustBasicInfoListTest()
+        public void RandomTest()
         {
-            Assert.Fail();
+            string id = IDCardNumber.Random().CardNumber;
+            Assert.IsTrue(id.Length == 18);
         }
     }
 }

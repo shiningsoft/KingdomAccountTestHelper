@@ -5,28 +5,64 @@ using System.Xml;
 
 namespace Yushen.WebService.KessClient
 {
+    /// <summary>
+    /// 统一WebService响应结果类
+    /// </summary>
     public class Response
     {
-        XmlDocument xmlDoc = new XmlDocument();
+        /// <summary>
+        /// 用于存储WebService返回值的Xml文档对象
+        /// </summary>
+        private XmlDocument xmlDoc = new XmlDocument();
+        /// <summary>
+        /// WebService返回的服务器处理结果
+        /// </summary>
         public string flag = "";
+        /// <summary>
+        /// WebService返回的服务器消息
+        /// </summary>
         public string prompt = "";
+        /// <summary>
+        /// WebService返回的查询结果条数
+        /// </summary>
         public int length = 0;
 
+        /// <summary>
+        /// 构造函数
+        /// </summary>
+        /// <param name="xmlString"></param>
         public Response(string xmlString)
         {
             this.createXmlDocumentFromString(xmlString);
+
+            if (xmlDoc.SelectSingleNode("/response/result/flag")==null)
+            {
+                throw new Exception("找不到属性/response/result/flag");
+            }
+            if (xmlDoc.SelectSingleNode("/response/result/prompt") == null)
+            {
+                throw new Exception("找不到属性/response/result/prompt");
+            }
+            if (xmlDoc.SelectSingleNode("/response/result/length") == null)
+            {
+                throw new Exception("找不到属性/response/result/length");
+            }
+            if (xmlDoc.SelectSingleNode("/response/record") == null)
+            {
+                throw new Exception("找不到属性/response/record");
+            }
 
             this.flag = xmlDoc.SelectSingleNode("/response/result/flag").InnerText;
             this.prompt = xmlDoc.SelectSingleNode("/response/result/prompt").InnerText;
             this.length = int.Parse(xmlDoc.SelectSingleNode("/response/result/length").InnerText);
 
-            this.checkResult();
+            this.validResult();
         }
 
         /// <summary>
         /// 对服务器返回的XML内容和操作结果进行检查，如果不符合标准格式则抛出异常
         /// </summary>
-        internal void checkResult()
+        internal void validResult()
         {
             XmlNode node = xmlDoc.SelectSingleNode("/response/result");
             if (node == null)
@@ -37,8 +73,12 @@ namespace Yushen.WebService.KessClient
             {
                 throw new Exception("操作结果异常，flag=" + node.SelectSingleNode("flag").InnerText + "，应为0或1。错误消息：" + node.SelectSingleNode("prompt").InnerText);
             }
+
         }
 
+        /// <summary>
+        /// WebService返回结果中record节点的InnerXml值
+        /// </summary>
         public string record
         {
             get
@@ -57,6 +97,9 @@ namespace Yushen.WebService.KessClient
             return xmlDoc.SelectSingleNode(xpath).InnerText;
         }
 
+        /// <summary>
+        /// WebService返回结果的Xml原始字符串
+        /// </summary>
         public string xml
         {
             get
@@ -109,7 +152,7 @@ namespace Yushen.WebService.KessClient
         /// 通过XML字符串创建DataSet对象
         /// </summary>
         /// <param name="xmlString"></param>
-        internal DataSet createDataSetFromXmlString(string xmlString)
+        private DataSet createDataSetFromXmlString(string xmlString)
         {
             DataSet ds = new DataSet();
             using (StringReader xmlSR = new StringReader(xmlString))
@@ -123,6 +166,83 @@ namespace Yushen.WebService.KessClient
             {
                 throw new Exception("DataSet读取XML失败");
             }
+            return ds;
+        }
+
+        /// <summary>
+        /// 通过XML字符串创建DataTable对象
+        /// </summary>
+        /// <param name="xmlString"></param>
+        private DataTable createDataTableFromXmlString(string xmlString)
+        {
+            DataTable ds = new DataTable();
+            using (StringReader xmlSR = new StringReader(xmlString))
+            {
+                // 读取xml到DataSet
+                // XmlReadMode.InferTypedSchema：忽视任何内联架构，从数据推断出强类型架构并加载数据。如果无法推断，则解释成字符串数据
+                ds.ReadXml(xmlSR);
+            }
+
+            if (ds == null)
+            {
+                throw new Exception("DataSet读取XML失败");
+            }
+            return ds;
+        }
+
+        private DataSet createDataSet()
+        {
+            // 验证length值与record中的结果数量是否一致
+            int rowCount = xmlDoc.SelectNodes("/response/record/row").Count;
+            if (length == 0)
+            {
+                bool rowWithChildNodes = rowCount == 1 && xmlDoc.SelectSingleNode("/response/record/row").ChildNodes.Count > 0;
+                bool rowCountMoreThanOne = rowCount > 1;
+
+                if (rowWithChildNodes || rowCountMoreThanOne)
+                {
+                    // length=0但是有结果
+                    throw new Exception("返回值中length=0但是record节点有结果");
+                }
+            }
+            else if (length == 1)
+            {
+                bool rowCountMoreThanOne = xmlDoc.SelectNodes("/response/record/row").Count > 1;
+                if (rowCountMoreThanOne)
+                {
+                    throw new Exception("length=1但是返回值中row的数量等于" + rowCount.ToString());
+                }
+            }
+            else if (length > 1)
+            {
+                if (length != rowCount)
+                {
+                    throw new Exception("返回值中row的数量" + rowCount.ToString() + "与length值" + length.ToString() + "不一致");
+                }
+            }
+            else
+            {
+                throw new Exception("length的值小于0：" + length.ToString());
+            }
+
+            DataSet ds = new DataSet();
+            DataTable record;
+
+            if (this.length == 0)
+            {
+                record = createDataTableFromXmlString("<row></row>");
+            }
+            else if (this.length == 1)
+            {
+                record = createDataTableFromXmlString("<row>" + this.record + "</row>");
+            }
+            else
+            {
+                record = createDataTableFromXmlString(this.record);
+            }
+            record.TableName = "record";
+            ds.Tables.Add(record);
+
             return ds;
         }
     }
