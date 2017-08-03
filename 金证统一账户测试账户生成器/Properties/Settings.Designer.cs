@@ -26,24 +26,12 @@ namespace 金证统一账户测试账户生成器.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("http://60.173.222.38:30004/kess/services/KessService?wsdl")]
-        public string kessWebserviceURL {
+        public string webservice {
             get {
-                return ((string)(this["kessWebserviceURL"]));
+                return ((string)(this["webservice"]));
             }
             set {
-                this["kessWebserviceURL"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("金证统一账户测试账户生成器.KessService.KessServiceClient")]
-        public string kessClassName {
-            get {
-                return ((string)(this["kessClassName"]));
-            }
-            set {
-                this["kessClassName"] = value;
+                this["webservice"] = value;
             }
         }
         
@@ -68,6 +56,18 @@ namespace 金证统一账户测试账户生成器.Properties {
             }
             set {
                 this["operatorPassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("8")]
+        public string channel {
+            get {
+                return ((string)(this["channel"]));
+            }
+            set {
+                this["channel"] = value;
             }
         }
     }

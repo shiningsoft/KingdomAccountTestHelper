@@ -24,5 +24,12 @@ namespace 金证统一账户测试账户生成器
         {
             this.infoBox.Text = "";
         }
+
+        private void ResultForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            this.Hide();
+            this.Clear();
+            e.Cancel = true;
+        }
     }
 }

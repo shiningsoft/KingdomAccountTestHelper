@@ -46,12 +46,12 @@ namespace Yushen.Util
         private static Random rnd = new Random((int)DateTime.Now.ToFileTimeUtc());
 
         /// <summary>
-        /// 生成随机姓名
+        /// 随机生成姓名
         /// </summary>
         /// <param name="minLength">姓名最小长度，默认2个字</param>
         /// <param name="maxLength">姓名最大长度，默认4个字</param>
         /// <returns></returns>
-        public static string getRandomName(int minLength=2, int maxLength=4)
+        public static string CreateChineseName(int minLength=2, int maxLength=4)
         {
             int namelength = 0;
             namelength = rnd.Next(minLength, maxLength);
@@ -77,21 +77,21 @@ namespace Yushen.Util
         }
 
         /// <summary>
-        /// 生成随机整数数字
+        /// 随机生成整数数字
         /// </summary>
         /// <param name="startnumber">起始数字</param>
         /// <param name="endnumber">结束数字</param>
         /// <returns></returns>
-        public static int GetRandomNumber(int startnumber, int endnumber)
+        public static int CreateRandomNumber(int startnumber, int endnumber)
         {
             return rnd.Next(startnumber, endnumber);
         }
 
         /// <summary>
-        /// 生成随机民族
+        /// 随机生成民族
         /// </summary>
         /// <returns></returns>
-        public static string GetRandomNation()
+        public static string CreateRandomNation()
         {
             nationName = nationName.Replace("\n", "");
             nationName = nationName.Replace("\r", "");
@@ -101,5 +101,13 @@ namespace Yushen.Util
             return nation;
         }
 
+        /// <summary>
+        /// 随机生成一个18位身份证号码
+        /// </summary>
+        /// <returns></returns>
+        public static string CreateIdNO()
+        {
+            return IDCardNumber.Random().CardNumber;
+        }
     }
 }

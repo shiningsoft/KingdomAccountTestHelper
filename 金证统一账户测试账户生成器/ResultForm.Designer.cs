@@ -64,6 +64,7 @@
             this.Controls.Add(this.infoBox);
             this.Name = "ResultForm";
             this.Text = "执行结果";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ResultForm_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

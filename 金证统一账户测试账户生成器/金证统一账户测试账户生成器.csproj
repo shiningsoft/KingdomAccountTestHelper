@@ -66,6 +66,7 @@
     <Compile Include="AboutBox.Designer.cs">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Yushen\WebService\KessClient\RiskLevel.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="ResultForm.cs">
       <SubType>Form</SubType>
@@ -73,17 +74,18 @@
     <Compile Include="ResultForm.Designer.cs">
       <DependentUpon>ResultForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Yushen\WebService\KessClient\RiskTest.cs" />
     <Compile Include="Service References\KessService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="User.cs" />
+    <Compile Include="Yushen\WebService\KessClient\User.cs" />
     <Compile Include="Yushen\NLog\NlogTest.cs" />
     <Compile Include="Yushen\Util\IDCardNumber.cs" />
     <Compile Include="Yushen\Util\Generator.cs" />
     <Compile Include="Yushen\Util\Validator.cs" />
-    <Compile Include="Yushen\WebService\KessClient\KessInternal.cs" />
+    <Compile Include="Yushen\WebService\KessClient\KessPrivate.cs" />
     <Compile Include="Yushen\WebService\KessClient\Response.cs" />
     <Compile Include="Yushen\WebService\KessClient\Request.cs" />
     <Compile Include="Yushen\WebService\KessClient\Kess.cs" />
@@ -100,6 +102,18 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\getCommonParams.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\getDictData.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\getCubsbLog.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\cubsbScOpenAcct.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\syncSurveyAns2Kbss.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <EmbeddedResource Include="AboutBox.resx">
@@ -162,6 +176,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfUserPassword.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\openYMTAcctByKbss.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

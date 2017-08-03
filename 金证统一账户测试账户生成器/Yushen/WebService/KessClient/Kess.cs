@@ -1,8 +1,8 @@
 ﻿using NLog;
 using System;
+using System.Data;
 using System.Reflection;
 using System.ServiceModel;
-using 金证统一账户测试账户生成器.KessService;
 
 namespace Yushen.WebService.KessClient
 {
@@ -13,54 +13,14 @@ namespace Yushen.WebService.KessClient
     {
 
         /// <summary>
-        /// 设置金证WebService的URL地址
-        /// </summary>
-        string kessWebserviceURL = "http://60.173.222.38:30004/kess/services/KessService?wsdl";
-
-        /// <summary>
-        /// 设置金证WebService接口的类名，用于建立反射调用WebService
-        /// </summary>
-        readonly string kessClassName = "金证统一账户测试账户生成器.KessService.KessServiceClient";
-
-        /// <summary>
-        /// 用于建立反射调用WebService
-        /// </summary>
-        object kessClient;
-
-        /// <summary>
-        /// 用于建立反射调用WebService
-        /// </summary>
-        Type kessClientType;
-
-        /// <summary>
-        /// 统一账户系统操作员编号
-        /// </summary>
-        string operatorId;
-
-        /// <summary>
-        /// 统一账户系统操作员密码
-        /// </summary>
-        string password;
-
-        /// <summary>
-        /// 操作渠道
-        /// </summary>
-        string channel;
-
-        /// <summary>
         /// 字典项，金证Win版柜台系统
         /// </summary>
-        static string WindowsCounter = "Win";
+        public static string WindowsCounter = "Win";
 
         /// <summary>
         /// 字典项，金证U版柜台系统
         /// </summary>
-        static string UnixCounter = "Uinx";
-
-        /// <summary>
-        /// 日志记录器
-        /// </summary>
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        public static string UnixCounter = "Uinx";
 
         /// <summary>
         /// 构造函数
@@ -73,6 +33,11 @@ namespace Yushen.WebService.KessClient
             this.operatorId = operatorId;
             this.password = password;
             this.channel = channel;
+            if (kessWebserviceURL != "")
+            {
+                this.kessWebserviceURL = kessWebserviceURL;
+            }
+
             if (kessWebserviceURL != "")
             {
                 this.kessWebserviceURL = kessWebserviceURL;
@@ -125,7 +90,7 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
-        /// 开立客户号
+        /// 按照金证标准流程开立客户号
         /// </summary>
         /// <param name="USER_NAME"></param>
         /// <param name="ID_CODE"></param>
@@ -134,27 +99,169 @@ namespace Yushen.WebService.KessClient
         /// <param name="ID_EXP_DATE"></param>
         /// <param name="CITIZENSHIP"></param>
         /// <param name="NATIONALITY"></param>
-        public void createCustomerCode(string USER_NAME, string ID_CODE, string ID_ISS_AGCY, string ID_BEG_DATE, string ID_EXP_DATE, string CITIZENSHIP, string NATIONALITY)
+        public string createCustomerCode(User user)
         {
-            Response response = new Response(this.getUserInfoById(ID_CODE));
-            if (response.length > 0)
+            Response response = new Response(this.getUserInfoById(user.id_code));
+            if (response.length == 0 || this.getSingleCommonParamValue("OPEN_CUST_CHECK_ID_FLAG") == "1")
             {
-                this.getCommonParams("OPEN_CUST_CHECK_ID_FLAG");
+                response = this.openCustomer(user);
+                return response.getSingleNodeText("/response/record/row/USER_CODE");
             }
-
+            else
+            {
+                throw new Exception("系统不允许同一证件开多个客户代码");
+            }
         }
 
         /// <summary>
-        /// 查询用户基本资料
+        /// 按照金证标准流程开立资金账号
         /// </summary>
-        /// <param name="userCode">客户代码</param>
+        /// <param name="user"></param>
         /// <returns></returns>
-        public string queryCustBasicInfoList(string userCode)
+        public string openCuacctCode(User user)
         {
-            Request request = new Request(this.operatorId, "queryCustBasicInfoList");
-            request.setAttr("USER_CODE", userCode);
+            Response response = this.listCuacct(user);
+            // 判断是否已经开立过资金账号
+            if (response.length == 0)
+            {
+                bool useUserCodeAsCuacctCode = this.getSingleCommonParamValue("CUST_CUACCT_SHARE_SERIAL") == "1" ? true : false;
+                if (useUserCodeAsCuacctCode)
+                {
+                    user.cuacct_code = user.user_code;
+                }
+                response = this.openCuacct(user);
+            }
+            else if (response.length > 0)
+            {
+                throw new NotImplementedException("客户号已有资金账户的处理逻辑暂未实现");
+            }
 
-            return this.invoke(request);
+            if (response.flag == "1")
+            {
+                return response.getSingleNodeText("/response/record/row/CUACCT_CODE");
+            }
+            else
+            {
+                throw new Exception("开立资金账号失败：" + response.prompt);
+            }
+        }
+
+        /// <summary>
+        /// 查询客户资产账户
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Response listCuacct(User user)
+        {
+            if (user.user_code =="")
+            {
+                throwNewException("必要参数用户代码不能为空");
+            }
+            Request request = new Request(this.operatorId, "listCuacct");
+            request.setAttr("USER_CODE", user.user_code);    // 客户名称
+
+            Response response = new Response(this.invoke(request));
+            if (response.flag != "0" && response.flag != "1")
+            {
+                throw new Exception("操作失败：" + response.prompt);
+            }
+            return response;
+        }
+
+        public void bankSign(User user)
+        {
+            this.cubsbScOpenAcctOneStep(user.user_code, user.cuacct_code, user.bank_acct_code);
+        }
+
+        /// <summary>
+        /// 管理用户密码
+        /// </summary>
+        /// <param name="user">用户信息</param>
+        /// <param name="OPERATION_TYPE">操作类型，0增加密码，1修改密码，3重置密码</param>
+        /// <returns></returns>
+        public bool mdfUserPassword(User user, string USE_SCOPE, string OPERATION_TYPE="0")
+        {
+            // 前置条件判断
+            if (user.user_code == "")
+            {
+                throwNewException("必要参数用户代码不能为空");
+            }
+            if (user.password == "")
+            {
+                throwNewException("必要参数密码不能为空");
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "mdfUserPassword");
+            request.setAttr("OP_USER", this.operatorId);    // 操作用户
+            request.setAttr("OPERATION_TYPE", OPERATION_TYPE);    // 操作类型，0增加密码，1修改密码，3重置密码
+            request.setAttr("USER_CODE", user.user_code);    // 客户名称
+            request.setAttr("NEW_AUTH_DATA", user.password);    // 新密码
+            request.setAttr("USE_SCOPE", USE_SCOPE);    // 设置交易密码
+
+            // 调用WebService获取返回值
+            Response response = new Response(this.invoke(request));
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                throw new Exception("操作失败：" + response.prompt);
+            }
+
+            // 返回结果
+            return true;
+        }
+
+        public bool syncSurveyAns2Kbss(User user, string riskLevel)
+        {
+            // 前置条件判断
+            if (user.user_code == "")
+            {
+                throwNewException("必要参数用户代码不能为空");
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "syncSurveyAns2Kbss");
+            request.setAttr("USER_CODE", user.user_code);    // 客户名称
+            request.setAttr("SURVEY_SN", "1");
+            request.setAttr("SURVEY_COLS", RiskTest.cols);
+
+            string cells="";
+            switch (riskLevel)
+            {
+                case "A":
+                    cells = RiskTest.cells_A;
+                    break;
+                case "B":
+                    cells = RiskTest.cells_B;
+                    break;
+                case "C":
+                    cells = RiskTest.cells_C;
+                    break;
+                case "D":
+                    cells = RiskTest.cells_D;
+                    break;
+                case "E":
+                    cells = RiskTest.cells_E;
+                    break;
+
+                default:
+                    throwNewException("风险等级" + riskLevel + "不存在");
+                    break;
+            }
+            request.setAttr("SURVEY_CELLS", cells);
+
+            // 调用WebService获取返回值
+            Response response = new Response(this.invoke(request));
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                throw new Exception("操作失败：" + response.prompt);
+            }
+
+            // 返回结果
+            return true;
         }
 
         /// <summary>
@@ -171,7 +278,7 @@ namespace Yushen.WebService.KessClient
                 this.throwNewException("单一公共参数查询时返回值不能多于1个");
             }
 
-            return (string)this.createDataSetFromXmlString(response.record).Tables[0].Rows[0]["REGKEY_VAL"];
+            return response.getSingleNodeText("/response/record/row/REGKEY_VAL");
         }
 
         /// <summary>
@@ -192,6 +299,26 @@ namespace Yushen.WebService.KessClient
             }
 
             return response;
+        }
+
+        /// <summary>
+        /// 查询数据字典
+        /// </summary>
+        /// <param name="dictName">字典项名称</param>
+        /// <returns></returns>
+        public string getDictData(string dictName)
+        {
+            if (dictName=="")
+            {
+                throwNewException("字典项名称不能为空");
+            }
+            Request request = new Request(this.operatorId, "getDictData");
+            request.setAttr("DD_ID", dictName);
+            request.setAttr("INT_ORG", "0");
+
+            Response response = new Response(this.invoke(request));
+
+            return response.xml;
         }
 
         /// <summary>

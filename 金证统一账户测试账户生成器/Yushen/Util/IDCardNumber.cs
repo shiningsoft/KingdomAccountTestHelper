@@ -13,7 +13,7 @@ namespace Yushen.Util
     /// 身份证号码解析与生成
     /// 作者：宋雷鸣 10522779@qq.com
     /// </summary>
-    public class IDCardNumber
+    class IDCardNumber
     {
         #region 身份证信息属性
         private string _province;
@@ -81,8 +81,7 @@ namespace Yushen.Util
         }
 
         #endregion
-
-        #region 静态方法
+        
         private static readonly List<string[]> Areas = new List<string[]>();
         /// <summary>
         /// 获取区域信息
@@ -216,7 +215,6 @@ namespace Yushen.Util
             //
             return codeNumber;
         }
-        #endregion
 
         #region 身份证解析方法
         private IDCardNumber(string idCardNumber)

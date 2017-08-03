@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Yushen.Util;
 
-namespace 金证统一账户测试账户生成器
+namespace Yushen.WebService.KessClient
 {
-    class User
+    public class User
     {
         /// <summary>
         ///（私有）客户名称（必传）
@@ -88,6 +88,26 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
+        /// <summary>
+        ///（私有）银行卡号
+        /// </summary>
+        private string _bank_acct_code = "";
+
+        /// <summary>
+        /// 银行卡号
+        /// </summary>
+        public string bank_acct_code
+        {
+            get
+            {
+                return _bank_acct_code;
+            }
+
+            set
+            {
+                _bank_acct_code = value;
+            }
+        }
         /// <summary>
         ///（私有）证件号码（必传）
         /// </summary>
@@ -170,7 +190,7 @@ namespace 金证统一账户测试账户生成器
 
             set
             {
-                if (!Validator.IsDate(value))
+                if (!Validator.IsInteger(value))
                 {
                     throwException(value.ToString() + "证件有效日期格式不正确");
                 }
@@ -269,7 +289,7 @@ namespace 金证统一账户测试账户生成器
 
             set
             {
-                if (!Validator.IsDate(value))
+                if (!Validator.IsInteger(value))
                 {
                     throwException(value.ToString() + "证件开始日期格式不正确");
                 }
@@ -1520,16 +1540,140 @@ namespace 金证统一账户测试账户生成器
                 _fin_edu_flag = value;
             }
         }
+        /// <summary>
+        /// （私有）客户代码
+        /// </summary>
+        private string _user_code = "";
+        /// <summary>
+        /// 客户代码
+        /// </summary>
+        public string user_code
+        {
+            get
+            {
+                return _user_code;
+            }
+
+            set
+            {
+                _user_code = value;
+            }
+        }
+        /// <summary>
+        ///（私有）资金账号
+        /// </summary>
+        private string _cuacct_code = "";
+        /// <summary>
+        /// 资金账号
+        /// </summary>
+        public string cuacct_code
+        {
+            get
+            {
+                return _cuacct_code;
+            }
+
+            set
+            {
+                _cuacct_code = value;
+            }
+        }
+        /// <summary>
+        ///（私有）深圳A股账号
+        /// </summary>
+        private string _szacct = "";
+        /// <summary>
+        /// 深圳A股账号
+        /// </summary>
+        public string szacct
+        {
+            get
+            {
+                return _szacct;
+            }
+
+            set
+            {
+                _szacct = value;
+            }
+        }
+        /// <summary>
+        ///（私有）上海A股账号
+        /// </summary>
+        private string _shacct = "";
+        /// <summary>
+        ///金融相关专业学历校验标识（非必传）
+        /// </summary>
+        public string shacct
+        {
+            get
+            {
+                return _shacct;
+            }
+
+            set
+            {
+                _shacct = value;
+            }
+        }
+
+        /// <summary>
+        ///（私有）银行代码
+        /// </summary>
+        private string _bank_code = "";
+
+        /// <summary>
+        /// 统一账户银行代码
+        /// </summary>
+        public string bank_code
+        {
+            get
+            {
+                return _bank_code;
+            }
+
+            set
+            {
+                _bank_code = value;
+            }
+        }
 
         /// <summary>
         /// 日志记录器
         /// </summary>
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        protected static Logger logger = LogManager.GetCurrentClassLogger();
 
-        private void throwException(string message)
+        protected void throwException(string message)
         {
             logger.Error(message);
             throw new Exception(message);
         }
+
+        /// <summary>
+        /// 开立客户号
+        /// </summary>
+        //public void createCustomerCode()
+        //{
+        //    Response response;
+        //    response = new Response(kess.getUserInfoById(id_code));
+        //    if (response.length == 0 || kess.getSingleCommonParamValue("OPEN_CUST_CHECK_ID_FLAG") == "1")
+        //    {
+        //        response = kess.openCustomer(user_name, id_code, id_iss_agcy, id_beg_date, id_exp_date, citizenship, nationality);
+        //        this.user_code = response.getSingleNodeText("/response/record/row/USER_CODE");
+        //    }
+        //    else
+        //    {
+        //        throwException("系统不允许同一证件开多个客户代码");
+        //    }
+        //}
+
+        /// <summary>
+        /// 开资金账号
+        /// </summary>
+        //public void createCuacctCode()
+        //{
+        //    Response response;
+        //    // response = new Response(kess.qu);
+        //}
     }
 }

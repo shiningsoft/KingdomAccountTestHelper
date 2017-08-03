@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//客户代码(必输)-->
+    <USER_CODE></USER_CODE>
+    <!--//调查表编码(必输)-->
+    <SURVEY_SN>1</SURVEY_SN>
+    <!--//调查表栏目（复数）(以‘|’隔开)(必输)-->
+    <SURVEY_COLS></SURVEY_COLS>
+    <!--//调查表单元（复数）(以‘|’隔开)(必输)-->
+    <SURVEY_CELLS></SURVEY_CELLS>
+    <!--//调查表作答分值（复数）(以’|’隔开)(非必输)-->
+    <SURVEY_ANS_VALS></SURVEY_ANS_VALS>
+  </data>
+</request>
