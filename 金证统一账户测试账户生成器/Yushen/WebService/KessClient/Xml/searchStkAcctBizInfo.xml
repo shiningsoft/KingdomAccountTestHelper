@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--2.120 证券账户业务信息查询（新）-->
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//流水序号-->
+    <SERIAL_NO></SERIAL_NO>
+    <!--//业务类型DD-[ACCTBIZ_EXCODE]-->
+    <ACCTBIZ_EXCODE></ACCTBIZ_EXCODE>
+    <!--//账户类型-->
+    <ACCT_TYPE></ACCT_TYPE>
+    <!--//交易账户-->
+    <TRDACCT></TRDACCT>
+    <!--//机构代码-->
+    <INT_ORG></INT_ORG>
+    <!--//证件号码-->
+    <ID_CODE></ID_CODE>
+  </data>
+</request>

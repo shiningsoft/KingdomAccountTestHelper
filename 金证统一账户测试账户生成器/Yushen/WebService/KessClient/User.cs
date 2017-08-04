@@ -129,10 +129,17 @@ namespace Yushen.WebService.KessClient
                 {
                     throwException("设置证件号码之前必须先设置证件类别");
                 }
+
                 if (id_type == "00" && !Validator.IsIDCard(value))
                 {
                     throwException(value.ToString() + "身份证格式不正确");
                 }
+
+                if (id_type == "00")
+                {
+                    this.birthday = value.Substring(6, 8);
+                }
+
                 _id_code = value;
             }
         }
@@ -511,6 +518,26 @@ namespace Yushen.WebService.KessClient
             }
         }
         /// <summary>
+        ///（私有）一码通账号
+        /// </summary>
+        private string _ymt_code = "";
+        /// <summary>
+        /// 一码通账号
+        /// </summary>
+        public string ymt_code
+        {
+            get
+            {
+                return _ymt_code;
+            }
+
+            set
+            {
+                _ymt_code = value;
+            }
+        }
+
+        /// <summary>
         ///（私有）性别（非必传） dd[sex]
         /// </summary>
         private string _sex = "";
@@ -545,7 +572,7 @@ namespace Yushen.WebService.KessClient
 
             set
             {
-                if (!Validator.IsDate(value))
+                if (!Validator.IsInteger(value))
                 {
                     throwException(value.ToString() + "出生日期格式不正确");
                 }
@@ -1602,7 +1629,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         private string _shacct = "";
         /// <summary>
-        ///金融相关专业学历校验标识（非必传）
+        ///上海A股账号
         /// </summary>
         public string shacct
         {

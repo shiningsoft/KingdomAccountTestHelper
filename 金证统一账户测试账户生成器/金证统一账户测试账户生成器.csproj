@@ -113,6 +113,18 @@
     <Content Include="Yushen\WebService\KessClient\Xml\cubsbScOpenAcct.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\onSearchNewZD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\openStkAcctByNewZD.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\openYMTAcct.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\searchStkAcctBizInfo.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\syncSurveyAns2Kbss.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

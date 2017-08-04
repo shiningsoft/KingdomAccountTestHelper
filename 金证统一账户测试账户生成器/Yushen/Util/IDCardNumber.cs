@@ -54,7 +54,7 @@ namespace Yushen.Util
         }
         private int _sex;
         /// <summary>
-        /// 性别，0为女，1为男
+        /// 性别，1为女，0为男
         /// </summary>
         public int Sex
         {
@@ -256,7 +256,7 @@ namespace Yushen.Util
             }
             //取性别
             string orderCode = _cardnumber.Substring(14, 3);
-            this._sex = Convert.ToInt16(orderCode) % 2 == 0 ? 0 : 1;
+            this._sex = Convert.ToInt16(orderCode) % 2 == 0 ? 1 : 0;
             //生成Javascript对象
             _json = @"prov:'{0}',area:'{1}',city:'{2}',year:{3},month:{4},day:{5},sex:{6},number:'{7}'";
             _json = string.Format(_json, _province, _area, _city, _age.Year, _age.Month, _age.Day, _sex, _cardnumber);

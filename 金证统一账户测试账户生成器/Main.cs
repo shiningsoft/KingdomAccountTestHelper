@@ -51,11 +51,14 @@ namespace 金证统一账户测试账户生成器
                         user.occu_type = occu_type.Text;
                         user.education = education.Text;
                         user.bank_code = bank_code.Text;
+                        user.zip_code = zip_code.Text;
+                        user.sex = tbxSex.Text;
+                        user.int_org = "18";
 
-                        user.user_code = kess.createCustomerCode(user);
+                        user.cust_code = kess.createCustomerCode(user);
 
-                        resultForm.Append("客户号开立成功："+user.user_code);
-                        tbxUserCode.Text = user.user_code;
+                        resultForm.Append("客户号开立成功："+user.cust_code);
+                        tbxCustCode.Text = user.cust_code;
                     }
                     catch (Exception ex)
                     {
@@ -87,7 +90,6 @@ namespace 金证统一账户测试账户生成器
 
         private void button2_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
             try
             {
                 // 建立WebService连接
@@ -102,7 +104,9 @@ namespace 金证统一账户测试账户生成器
                     this.Invoke((MethodInvoker)(() => {
                         try
                         {
-                            resultForm.Append(kess.getDictData(dictName.Text));
+                            Response response = kess.getDictData(dictName.Text);
+                            dataGridView1.DataSource = response.DataSet.Tables["row"];
+
                         }
                         catch (Exception ex)
                         {
@@ -140,7 +144,9 @@ namespace 金证统一账户测试账户生成器
         private void reCreateUserInfo()
         {
             user_name.Text = Generator.CreateChineseName();
-            id_code.Text = Generator.CreateIdNO();
+            IDCardNumber idcard = IDCardNumber.Random();
+            id_code.Text = idcard.CardNumber;
+            tbxSex.Text = idcard.Sex.ToString();
 
             risk_level.SelectedValue = "E"; // 激进型
         }
@@ -244,6 +250,88 @@ namespace 金证统一账户测试账户生成器
 
                     resultForm.Append("资金账号开立成功：" + user.cuacct_code);
                     tbxCuacct.Text = user.cuacct_code;
+                }));
+            });
+        }
+
+        private void btnOpenYMT_Click(object sender, EventArgs e)
+        {
+            resultForm.Show();
+
+            // 异步方式调用WebService查询
+            Task task = Task.Run(() =>
+            {
+                this.Invoke((MethodInvoker)(() => {
+                    try
+                    {
+                        // 建立WebService连接
+                        if (kess == null)
+                        {
+                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                        }
+
+                        Response response = kess.openYMTAcct(user.user_type, user.user_fname, user.id_type, user.id_code, user.int_org, user.cust_code, user.birthday, user.id_beg_date, user.id_exp_date, user.citizenship, user.id_addr, user.id_addr, user.zip_code, user.occu_type, user.nationality, user.education, user.tel, user.mobile_tel, user.sex);
+
+                        if (response.length > 2)
+                        {
+                            throw new Exception("该客户有" + response.length.ToString() + "个一码通账号");
+                        }
+                        else if(response.length == 0)
+                        {
+                            throw new Exception("没有返回一码通账号列表");
+                        }
+
+                        string ymtCode = response.getValue("YMT_CODE");
+                        resultForm.Append("一码通账号开立成功：" + response.getValue("YMT_CODE"));
+                        user.ymt_code = ymtCode;
+
+                        tbxYMTCode.Text = ymtCode;
+                    }
+                    catch (Exception ex)
+                    {
+                        resultForm.Append(ex.Message);
+                    }
+                }));
+            });
+        }
+
+        private void btnOpenStockAccount_Click(object sender, EventArgs e)
+        {
+            resultForm.Show();
+
+            // 异步方式调用WebService查询
+            Task task = Task.Run(() =>
+            {
+                this.Invoke((MethodInvoker)(() => {
+                    try
+                    {
+                        // 建立WebService连接
+                        if (kess == null)
+                        {
+                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                        }
+
+                        Response response = kess.openStkAcct(user, "00");
+
+                        if (response.length > 2)
+                        {
+                            throw new Exception("该客户有" + response.length.ToString() + "个股东卡号");
+                        }
+                        else if (response.length == 0)
+                        {
+                            throw new Exception("没有返回股东账号列表");
+                        }
+
+                        string trdacctCode = response.getValue("TRDACCT");
+                        resultForm.Append("股东账号开立成功：" + trdacctCode);
+                        user.ymt_code = trdacctCode;
+
+                        tbxSHAcct.Text = trdacctCode;
+                    }
+                    catch (Exception ex)
+                    {
+                        resultForm.Append(ex.Message);
+                    }
                 }));
             });
         }

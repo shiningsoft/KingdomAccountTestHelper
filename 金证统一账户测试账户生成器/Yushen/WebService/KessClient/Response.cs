@@ -135,6 +135,16 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
+        /// 返回record中第一行对应字段名称的值
+        /// </summary>
+        /// <param name="columnName">字段名称</param>
+        /// <returns></returns>
+        public string getValue(string columnName)
+        {
+            return getSingleNodeText("/response/record/row/" + columnName);
+        }
+
+        /// <summary>
         /// WebService返回结果的Xml原始字符串
         /// </summary>
         public string xml
