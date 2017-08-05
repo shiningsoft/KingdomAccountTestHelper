@@ -108,17 +108,68 @@ namespace Yushen.WebService.KessClient
         /// <param name="NEW_CUST_FNAME">新客户名称（非必输）</param>
         /// <param name="NEW_ID_TYPE">新证件类型（非必输）</param>
         /// <param name="NEW_ID_CODE">新证件号码（非必输）</param>
+        /// <param name="timeout">超时时间</param>
         /// <returns>业务流水号</returns>
-        private Response submitStkAcctBizOpReq2NewZD(string OPERATOR_TYPE, string ACCTBIZ_EXCODE, string YMT_CODE = "", string CUST_CODE = "", string INT_ORG = "", string USER_TYPE = "", string CUST_FNAME = "", string ID_TYPE = "", string ID_CODE = "", string STKBD = "", string TRDACCT_EXCLS = "", string TRDACCT = "", string TRDACCT_EX = "", string BIRTHDAY = "", string ID_BEG_DATE = "", string ID_EXP_DATE = "", string CITIZENSHIP = "", string ID_ADDR = "", string ADDRESS = "", string ZIP_CODE = "", string OCCU_TYPE = "", string EDUCATION = "", string TEL = "", string MOBILE_TEL = "", string NET_SERVICE = "", string NET_SERVICEPASS = "", string SEX = "", string CHK_STATUS = "", string ACCT_OPENTYPE = "1", string ACCT_TYPE = "", string CORP_EXTYPE = "", string EMAIL = "", string FAX = "", string ACCTBIZ_CLS = "", string FIRST_TRD_DATE = "", string PROPER_CLS = "", string SIGN_CLS = "", string SIGN_DATE = "", string EFT_DATE = "", string UNTRD_FLAG = "", string PESEND_FLAG = "", string NEW_CUST_FNAME = "", string NEW_ID_TYPE = "", string NEW_ID_CODE = "")
+        private Response submitStkAcctBizOpReq2NewZD(
+                    string OPERATOR_TYPE,
+                    string ACCTBIZ_EXCODE,
+                    string YMT_CODE = "",
+                    string CUST_CODE = "",
+                    string INT_ORG = "",
+                    string USER_TYPE = "",
+                    string CUST_FNAME = "",
+                    string ID_TYPE = "",
+                    string ID_CODE = "",
+                    string STKBD = "",
+                    string TRDACCT_EXCLS = "",
+                    string TRDACCT = "",
+                    string TRDACCT_EX = "",
+                    string BIRTHDAY = "",
+                    string ID_BEG_DATE = "",
+                    string ID_EXP_DATE = "",
+                    string CITIZENSHIP = "",
+                    string ID_ADDR = "",
+                    string ADDRESS = "",
+                    string ZIP_CODE = "",
+                    string OCCU_TYPE = "",
+                    string EDUCATION = "",
+                    string TEL = "",
+                    string MOBILE_TEL = "",
+                    string NET_SERVICE = "",
+                    string NET_SERVICEPASS = "",
+                    string SEX = "",
+                    string CHK_STATUS = "",
+                    string ACCT_OPENTYPE = "1",
+                    string ACCT_TYPE = "",
+                    string CORP_EXTYPE = "",
+                    string EMAIL = "",
+                    string FAX = "",
+                    string ACCTBIZ_CLS = "",
+                    string FIRST_TRD_DATE = "",
+                    string PROPER_CLS = "",
+                    string SIGN_CLS = "",
+                    string SIGN_DATE = "",
+                    string EFT_DATE = "",
+                    string UNTRD_FLAG = "",
+                    string PESEND_FLAG = "",
+                    string NEW_CUST_FNAME = "",
+                    string NEW_ID_TYPE = "",
+                    string NEW_ID_CODE = "",
+                    int timeout = 30
+            )
         {
             // 前置条件判断
             if (OPERATOR_TYPE == "")
             {
-                throwNewException("必要参数操作类型不能为空");
+                string message = "必要参数操作类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
             }
             if (ACCTBIZ_EXCODE == "")
             {
-                throwNewException("必要参数业务类型不能为空");
+                string message = "必要参数业务类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 初始化请求
@@ -185,16 +236,18 @@ namespace Yushen.WebService.KessClient
             bool isTimeOut = false;
             int sleepInterval = 3000;
             int currentCostTime = 0;
-            int timeout = 30 * 1000;
+            timeout = timeout * 1000;
 
             while (result == false && isTimeOut == false)
             {
+                // 查询处理结果
                 response = searchStkAcctBizInfo(serialNo, ACCTBIZ_EXCODE);
 
                 // 判断账户业务处理状态
                 status = response.getValue("ACCTBIZ_STATUS");
                 if (status == "2" || status == "3")
                 {
+                    // 中登处理完成，返回处理结果
                     return response;
                 }
 
@@ -312,11 +365,15 @@ namespace Yushen.WebService.KessClient
             // 前置条件判断
             if (SERIAL_NO == "")
             {
-                throwNewException("必要参数流水号不能为空");
+                string message = "必要参数流水号不能为空";
+                logger.Error(message);
+                throw new Exception(message);
             }
             if (ACCTBIZ_EXCODE == "")
             {
-                throwNewException("必要参数业务类型不能为空");
+                string message = "必要参数业务类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 初始化请求
@@ -487,24 +544,16 @@ namespace Yushen.WebService.KessClient
             }
             catch (Exception ex)
             {
-                this.throwNewException("WebService调用失败：" + this.kessWebserviceURL + ex.Message);
+                string message = "WebService调用失败：" + this.kessWebserviceURL +" "+ ex.Message;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             logger.Info("响应Webservice功能<" + request.operateName + ">|" + result);
 
             return result;
         }
-
-        /// <summary>
-        /// 记录错误日志并且抛出一个异常
-        /// </summary>
-        /// <param name="message">异常消息内容</param>
-        private void throwNewException(string message)
-        {
-            logger.Error(message);
-            throw new Exception(message);
-        }
-
+        
         /// <summary>
         /// 通过XML字符串创建DataSet对象
         /// </summary>

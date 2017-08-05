@@ -106,6 +106,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxSex = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -235,6 +236,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnLogin);
             this.tabPage1.Controls.Add(this.tbxSex);
             this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.zip_code);
@@ -409,13 +411,13 @@ namespace 金证统一账户测试账户生成器
             // btnQueryStockAccount
             // 
             this.btnQueryStockAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnQueryStockAccount.Enabled = false;
             this.btnQueryStockAccount.Location = new System.Drawing.Point(561, 204);
             this.btnQueryStockAccount.Name = "btnQueryStockAccount";
             this.btnQueryStockAccount.Size = new System.Drawing.Size(86, 23);
             this.btnQueryStockAccount.TabIndex = 45;
             this.btnQueryStockAccount.Text = "股东账户查询";
             this.btnQueryStockAccount.UseVisualStyleBackColor = true;
+            this.btnQueryStockAccount.Click += new System.EventHandler(this.btnQueryStockAccount_Click);
             // 
             // btnBankSign
             // 
@@ -822,6 +824,8 @@ namespace 金证统一账户测试账户生成器
             this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(7, 33);
             this.dataGridView1.Name = "dataGridView1";
@@ -829,6 +833,17 @@ namespace 金证统一账户测试账户生成器
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(905, 397);
             this.dataGridView1.TabIndex = 11;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLogin.Location = new System.Drawing.Point(812, 37);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(100, 23);
+            this.btnLogin.TabIndex = 63;
+            this.btnLogin.Text = "操作员登录";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Main
             // 
@@ -926,6 +941,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.TextBox tbxSex;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 

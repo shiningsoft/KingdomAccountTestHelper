@@ -53,7 +53,7 @@ namespace 金证统一账户测试账户生成器
                         user.bank_code = bank_code.Text;
                         user.zip_code = zip_code.Text;
                         user.sex = tbxSex.Text;
-                        user.int_org = "18";
+                        user.int_org = "19";
 
                         user.cust_code = kess.createCustomerCode(user);
 
@@ -106,10 +106,14 @@ namespace 金证统一账户测试账户生成器
                         {
                             Response response = kess.getDictData(dictName.Text);
                             dataGridView1.DataSource = response.DataSet.Tables["row"];
-
+                            if (dataGridView1.ColumnCount>=2)
+                            {
+                                dataGridView1.AutoResizeColumn(2);
+                            }
                         }
                         catch (Exception ex)
                         {
+                            resultForm.Show();
                             resultForm.Append(ex.Message);
                         }
                     }));
@@ -311,7 +315,7 @@ namespace 金证统一账户测试账户生成器
                             kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
                         }
 
-                        Response response = kess.openStkAcct(user, "00");
+                        Response response = kess.openStkAcct(user,"11");
 
                         if (response.length > 2)
                         {
@@ -334,6 +338,53 @@ namespace 金证统一账户测试账户生成器
                     }
                 }));
             });
+        }
+
+        private void btnQueryStockAccount_Click(object sender, EventArgs e)
+        {
+            resultForm.Show();
+            
+            try
+            {
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                }
+
+                Response response = kess.queryStkAcct(user,"11");
+
+                if (response.length > 0)
+                {
+                    throw new Exception("该客户有" + response.length.ToString() + "个股东卡号");
+                }
+                else if (response.length == 0)
+                {
+                    throw new Exception(response.prompt);
+                }
+
+                resultForm.Append("股东账户查询结果：" + response.prompt);
+                tbxSHAcct.Text = response.prompt;
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            // 建立WebService连接
+            if (kess == null)
+            {
+                kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+            }
+
+            if (kess.operatorLogin())
+            {
+                resultForm.Show();
+                resultForm.Append("操作员登录成功");
+            }
         }
     }
 }

@@ -246,5 +246,14 @@ namespace Yushen.WebService.KessClient
                 return ds;
             }
         }
+
+        /// <summary>
+        /// 清空record节点的所有内容，并将length设置为0
+        /// </summary>
+        public void empty()
+        {
+            this.length = 0;
+            this.xmlDoc.SelectSingleNode("/response/record").RemoveAll();
+        }
     }
 }

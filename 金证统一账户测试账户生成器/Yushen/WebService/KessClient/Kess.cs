@@ -51,7 +51,9 @@ namespace Yushen.WebService.KessClient
             this.kessClient = Activator.CreateInstance(this.kessClientType, new object[] { "KessService", this.kessWebserviceURL });
             if (this.kessClient == null)
             {
-                this.throwNewException("WebService连接失败：" + this.kessWebserviceURL);
+                string message = "WebService连接失败：" + this.kessWebserviceURL;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 操作员登录
@@ -60,6 +62,7 @@ namespace Yushen.WebService.KessClient
 
         /// <summary>
         /// 操作员登录
+        /// 登陆成功返回true，登录失败抛出异常
         /// </summary>
         /// <returns></returns>
         public bool operatorLogin(string operatorId = "", string password = "")
@@ -73,7 +76,9 @@ namespace Yushen.WebService.KessClient
                 }
                 else
                 {
-                    this.throwNewException("操作员密码不能为空");
+                    string message = "操作员密码不能为空";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
             }
 
@@ -86,7 +91,9 @@ namespace Yushen.WebService.KessClient
 
             if (response.flag == "0" && response.prompt.IndexOf("用户已登陆，不用重复登陆") == -1)
             {
-                this.throwNewException("用户登录失败：" + response.prompt);
+                string message = "用户登录失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             return true;
@@ -158,7 +165,9 @@ namespace Yushen.WebService.KessClient
         {
             if (user.cust_code == "")
             {
-                throwNewException("必要参数用户代码不能为空");
+                string message = "必要参数用户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
             }
             Request request = new Request(this.operatorId, "listCuacct");
             request.setAttr("USER_CODE", user.cust_code);    // 客户名称
@@ -187,11 +196,15 @@ namespace Yushen.WebService.KessClient
             // 前置条件判断
             if (user.cust_code == "")
             {
-                throwNewException("必要参数客户代码不能为空");
+                string message = "必要参数客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
             }
             if (user.password == "")
             {
-                throwNewException("必要参数密码不能为空");
+                string message = "必要参数密码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 初始化请求
@@ -226,7 +239,9 @@ namespace Yushen.WebService.KessClient
             // 前置条件判断
             if (user.cust_code == "")
             {
-                throwNewException("必要参数客户代码不能为空");
+                string message = "必要参数客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 初始化请求
@@ -255,8 +270,9 @@ namespace Yushen.WebService.KessClient
                     break;
 
                 default:
-                    throwNewException("风险等级" + riskLevel + "不存在");
-                    break;
+                    string message = "风险等级" + riskLevel + "不存在";
+                    logger.Error(message);
+                    throw new Exception(message);
             }
             request.setAttr("SURVEY_CELLS", cells);
 
@@ -410,15 +426,36 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
+        /// 查询中登股东账户信息
         /// 实现2.95 新中登实时查询
         /// </summary>
         /// <param name="user">用户信息对象</param>
         /// <param name="ACCT_TYPE">证券账户类别(非必输)11:沪A，21:深A。DD[ACCT_TYPE]</param>
+        /// <param name="ACCTBIZ_EXCODE">账户代理业务(非必输)DD[ACCTBIZ_EXCODE]默认为07-证券账户查询</param>
         /// <returns></returns>
-        public Response onSearchNewZD(User user,string ACCT_TYPE = "")
+        public Response onSearchNewZD(User user,string ACCT_TYPE = "", string ACCTBIZ_EXCODE = "07")
         {
             // 前置条件判断
-
+            if (user.user_type=="")
+            {
+                throw new Exception("用户类型不能为空");
+            }
+            if (user.user_fname == "")
+            {
+                throw new Exception("用户全称不能为空");
+            }
+            if (user.id_type == "")
+            {
+                throw new Exception("证件类型不能为空");
+            }
+            if (user.id_code == "")
+            {
+                throw new Exception("证件编号不能为空");
+            }
+            if (user.int_org == "")
+            {
+                throw new Exception("机构代码不能为空");
+            }
 
             // 初始化请求
             Request request = new Request(this.operatorId, "onSearchNewZD");
@@ -427,7 +464,8 @@ namespace Yushen.WebService.KessClient
             request.setAttr("ID_TYPE", user.id_type);
             request.setAttr("ID_CODE", user.id_code);
             request.setAttr("INT_ORG", user.int_org);
-            request.setAttr("ACCT_TYPE", ACCT_TYPE);
+            request.setAttr("ACCT_TYPE", ACCT_TYPE); 
+            request.setAttr("ACCTBIZ_EXCODE", ACCTBIZ_EXCODE);
 
 
             // 调用WebService获取返回值
@@ -444,55 +482,103 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
-        /// 按照金证标准流程开立一码通账号
+        /// 查询用户在对应市场的中登账户列表
         /// </summary>
         /// <param name="user"></param>
-        /// <param name="timeout"></param>
+        /// <param name="ACCT_TYPE">证券账户类别(非必输)11:沪A，21:深A。DD[ACCT_TYPE]</param>
         /// <returns></returns>
-        public Response openStkAcct(User user, string stkbd, int timeout = 30)
+        public Response queryStkAcct(User user, string ACCT_TYPE = "")
         {
-            //Response response = this.submitStkAcctBizOpReq2NewZD("0", "07",
-            //    CUST_CODE: user.cust_code,
-            //    CUST_FNAME: user.user_fname,
-            //    ID_TYPE: user.id_type,
-            //    ID_CODE: user.id_code,
-            //    ID_ADDR: user.id_addr,
-            //    ID_BEG_DATE: user.id_beg_date,
-            //    ID_EXP_DATE: user.id_exp_date,
-            //    CITIZENSHIP: user.citizenship,
-            //    ADDRESS: user.id_addr,
-            //    SEX: user.sex,
-            //    OCCU_TYPE: user.occu_type,
-            //    EDUCATION: user.education);
-            Response response = this.onSearchNewZD(user, "11");
-            response = this.onSearchNewZD(user, "21");
-
-
-            // 判断账户业务处理状态
-            string status = response.getValue("ACCTBIZ_STATUS");
-            if (status == "2")
+            // 前置条件判断
+            if (user.user_type == "")
             {
-                string ACCT_TYPE = response.getValue("ACCT_TYPE");
-                string ACCT_STATUS = response.getValue("ACCT_STATUS");
-                if (ACCT_TYPE == "21" && ACCT_STATUS == "00")
-                {
-                    // 系统内加挂
-                    Console.WriteLine("准备系统内加挂");
-                    throw new NotImplementedException("暂未实现此功能");
-                }
-                else
-                {
-                    // 新开股东账户
-                    Console.WriteLine("准备新开股东账户");
-                    throw new NotImplementedException("暂未实现此功能");
-                }
-
+                throw new Exception("用户类型不能为空");
             }
-            else
+            if (user.user_fname == "")
             {
-                // 证券账户处理状态=3
-                throw new NotImplementedException("暂未实现此功能");
+                throw new Exception("用户全称不能为空");
             }
+            if (user.id_type == "")
+            {
+                throw new Exception("证件类型不能为空");
+            }
+            if (user.id_code == "")
+            {
+                throw new Exception("证件编号不能为空");
+            }
+            if (user.int_org == "")
+            {
+                throw new Exception("机构代码不能为空");
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "onSearchNewZD");
+            request.setAttr("USER_TYPE", user.user_type);
+            request.setAttr("CUST_FNAME", user.user_fname);
+            request.setAttr("ID_TYPE", user.id_type);
+            request.setAttr("ID_CODE", user.id_code);
+            request.setAttr("INT_ORG", user.int_org);
+            request.setAttr("ACCT_TYPE", ACCT_TYPE);
+            request.setAttr("ACCTBIZ_EXCODE", "07");
+
+
+            // 调用WebService获取返回值
+            Response response = new Response(this.invoke(request));
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                throw new Exception("操作失败：" + response.prompt);
+            }
+
+            string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
+            if (response.length==1 && RTN_ERR_CODE=="3031") // 证券账户不存在时清空数据
+            {
+                response.prompt = response.getValue("RETURN_MSG");
+                response.empty();
+            }
+
+            // 返回结果
+            return response;
+        }
+
+        /// <summary>
+        /// 开立对应市场的股东账号
+        /// </summary>
+        /// <param name="user">用户信息对象</param>
+        /// <param name="ACCT_TYPE">证券账户类别(非必输)11:沪A，21:深A。DD[ACCT_TYPE]</param>
+        /// <param name="timeout">超时时间，单位为秒</param>
+        /// <returns></returns>
+        public Response openStkAcct(User user, string ACCT_TYPE, int timeout = 30)
+        {
+            Response response = this.submitStkAcctBizOpReq2NewZD("0", "02",
+                ACCT_TYPE: ACCT_TYPE,
+                CUST_CODE: user.cust_code,
+                CUST_FNAME: user.user_fname,
+                ID_TYPE: user.id_type,
+                ID_CODE: user.id_code,
+                ID_ADDR: user.id_addr,
+                ID_BEG_DATE: user.id_beg_date,
+                ID_EXP_DATE: user.id_exp_date,
+                CITIZENSHIP: user.citizenship,
+                ADDRESS: user.id_addr,
+                SEX: user.sex,
+                OCCU_TYPE: user.occu_type,
+                EDUCATION: user.education,
+                CHK_STATUS:"2",
+                NET_SERVICE:"0",
+                YMT_CODE:user.ymt_code,
+                BIRTHDAY:user.birthday,
+                ACCT_OPENTYPE:"1"
+                );
+
+            string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
+            if (response.length == 1 && RTN_ERR_CODE != "0000") // 证券账户开立失败
+            {
+                response.prompt = response.getValue("RETURN_MSG");
+            }
+
+            return response;
         }
 
         /// <summary>
@@ -506,7 +592,9 @@ namespace Yushen.WebService.KessClient
 
             if (response.length > 1)
             {
-                this.throwNewException("单一公共参数查询时返回值不能多于1个");
+                string message = "单一公共参数查询时返回值不能多于1个";
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             return response.getSingleNodeText("/response/record/row/REGKEY_VAL");
@@ -526,7 +614,9 @@ namespace Yushen.WebService.KessClient
 
             if (response.flag != "1")
             {
-                this.throwNewException("查询公共参数" + regkeyId + "失败：" + response.prompt);
+                string message = "查询公共参数" + regkeyId + "失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             return response;
@@ -541,13 +631,22 @@ namespace Yushen.WebService.KessClient
         {
             if (dictName=="")
             {
-                throwNewException("字典项名称不能为空");
+                string message = "字典项名称不能为空";
+                logger.Error(message);
+                throw new Exception(message);
             }
             Request request = new Request(this.operatorId, "getDictData");
             request.setAttr("DD_ID", dictName);
             request.setAttr("INT_ORG", "0");
 
             Response response = new Response(this.invoke(request));
+
+            if (response.flag != "1")
+            {
+                string message = "查询数据字典" + dictName + "失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
 
             return response;
         }
