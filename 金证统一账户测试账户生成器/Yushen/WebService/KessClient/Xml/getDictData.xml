@@ -5,8 +5,8 @@
   </auth>
   <data>
     <!--//字典标识（必传）-->
-    <DD_ID >0</DD_ID >
+    <DD_ID ></DD_ID >
     <!--//机构代码（必传）-->
-    <INT_ORG>0</INT_ORG>
+    <INT_ORG></INT_ORG>
   </data>
 </request>

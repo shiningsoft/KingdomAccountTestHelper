@@ -1,11 +1,5 @@
-﻿using NLog;
-using System;
-using System.Data;
-using System.Reflection;
-using System.ServiceModel;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Timers;
+﻿using System;
+using Dict = Yushen.WebService.KessClient.Dict;
 
 namespace Yushen.WebService.KessClient
 {
@@ -376,7 +370,7 @@ namespace Yushen.WebService.KessClient
                                     string LINKMAN_ID_TYPE = "",
                                     string LINKMAN_ID_CODE = "",
                                     string ID_ADDR2 = "",
-                                    string ACCT_OPENTYPE = "1"
+                                    string ACCT_OPENTYPE = Dict.ACCT_OPENTYPE.客户网上自助
                                     )
         {
             // 前置条件判断
@@ -445,7 +439,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="ACCT_TYPE">证券账户类别(非必输)11:沪A，21:深A。DD[ACCT_TYPE]</param>
         /// <param name="ACCTBIZ_EXCODE">账户代理业务(非必输)DD[ACCTBIZ_EXCODE]默认为07-证券账户查询</param>
         /// <returns></returns>
-        public Response onSearchNewZD(User user,string ACCT_TYPE = "", string ACCTBIZ_EXCODE = "07")
+        public Response onSearchNewZD(User user,string ACCT_TYPE = "", string ACCTBIZ_EXCODE = Dict.ACCTBIZ_EXCODE.证券账户查询)
         {
             // 前置条件判断
             if (user.user_type=="")
@@ -533,14 +527,15 @@ namespace Yushen.WebService.KessClient
             request.setAttr("ID_CODE", user.id_code);
             request.setAttr("INT_ORG", user.int_org);
             request.setAttr("ACCT_TYPE", ACCT_TYPE);
-            request.setAttr("ACCTBIZ_EXCODE", "07");
+            request.setAttr("ACCTBIZ_EXCODE", Dict.ACCTBIZ_EXCODE.证券账户查询);
 
 
             // 调用WebService获取返回值
             Response response = new Response(this.invoke(request));
 
             // 判断返回的操作结果是否异常
-            if (response.flag != "0" && response.flag != "1")
+            // if (response.flag != "0" && response.flag != "1")
+            if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
                 logger.Error(message);
@@ -570,7 +565,12 @@ namespace Yushen.WebService.KessClient
         /// <returns></returns>
         public Response openStkAcct(User user, string ACCT_TYPE, int timeout = 30)
         {
-            Response response = this.submitStkAcctBizOpReq2NewZD("0", "02",
+            // 前置条件判断
+
+            // 初始化请求
+
+            // 调用WebService获取返回值
+            Response response = this.submitStkAcctBizOpReq2NewZD("0", Dict.ACCTBIZ_EXCODE.证券账户开立,
                 ACCT_TYPE: ACCT_TYPE,
                 CUST_CODE: user.cust_code,
                 CUST_FNAME: user.user_fname,
@@ -593,17 +593,20 @@ namespace Yushen.WebService.KessClient
                 NET_SERVICE:"0",
                 YMT_CODE:user.ymt_code,
                 BIRTHDAY:user.birthday,
-                ACCT_OPENTYPE:"1"
+                ACCT_OPENTYPE:Dict.ACCT_OPENTYPE.客户网上自助
                 );
 
+            // 判断返回的操作结果是否异常
             string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
             if (response.length == 1 && RTN_ERR_CODE != "0000") // 证券账户开立失败
             {
-                response.prompt = response.getValue("RETURN_MSG");
+                throw new Exception("证券账户开立失败：" + response.getValue("RETURN_MSG"));
             }
 
+            // 返回结果
             return response;
         }
+
 
         /// <summary>
         /// 单个公共参数查询，返回value值。
@@ -622,6 +625,40 @@ namespace Yushen.WebService.KessClient
             }
 
             return response.getSingleNodeText("/response/record/row/REGKEY_VAL");
+        }
+
+        /// <summary>
+        /// 加挂上海股东户
+        /// </summary>
+        /// <param name="user"></param>
+        public bool registerSHAStkTrdAcct(User user)
+        {
+            try
+            {
+                openStkTrdAcct(user, Dict.STKBD.上海A股, user.shacct, "上海A股");
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// 加挂深圳股东户
+        /// </summary>
+        /// <param name="user"></param>
+        public bool registerSZAStkTrdAcct(User user)
+        {
+            try
+            {
+                openStkTrdAcct(user, Dict.STKBD.深圳A股, user.szacct, "深圳A股");
+                return true;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         /// <summary>

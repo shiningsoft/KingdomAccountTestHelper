@@ -140,7 +140,7 @@ namespace Yushen.WebService.KessClient
                     string NET_SERVICEPASS = "",
                     string SEX = "",
                     string CHK_STATUS = "",
-                    string ACCT_OPENTYPE = "1",
+                    string ACCT_OPENTYPE = Dict.ACCT_OPENTYPE.客户网上自助,
                     string ACCT_TYPE = "",
                     string CORP_EXTYPE = "",
                     string EMAIL = "",
@@ -248,14 +248,13 @@ namespace Yushen.WebService.KessClient
 
                 // 判断账户业务处理状态
                 status = response.getValue("ACCTBIZ_STATUS");
-                if (status == "2" || status == "3")
+                if (status == Dict.ACCTBIZ_STATUS.处理成功 || status == Dict.ACCTBIZ_STATUS.处理失败)
                 {
                     // 中登处理完成，返回处理结果
                     return response;
                 }
 
                 // 延时处理
-                // Task.Delay(sleepInterval);
                 Thread.Sleep(sleepInterval);
 
                 // 计算是否超时
@@ -303,7 +302,7 @@ namespace Yushen.WebService.KessClient
                 string CUST_FNAME = "",
                 string ACCT_TYPE = "",
                 string INT_ORG = "",
-                string ACCT_OPENTYPE = "1",
+                string ACCT_OPENTYPE = Dict.ACCT_OPENTYPE.客户网上自助,
                 string TRDACCT = "",
                 string TRDACCT_EX = "",
                 string STKPBU = "",
@@ -350,6 +349,68 @@ namespace Yushen.WebService.KessClient
 
             // 返回结果
             return response;
+        }
+
+        /// <summary>
+        /// 证券账户系统内开户（加挂股东账户）
+        /// 实现 2.49 证券账户开户
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="STKBD"></param>
+        /// <param name="TRDACCT"></param>
+        /// <param name="TRDACCT_NAME"></param>
+        /// <returns></returns>
+        private bool openStkTrdAcct(User user, string STKBD = "", string TRDACCT = "", string TRDACCT_NAME = "")
+        {
+            // 前置条件判断
+            if (user.cust_code == "")
+            {
+                throw new Exception("客户代码不能为空");
+            }
+            if (user.cuacct_code == "")
+            {
+                throw new Exception("资产账号不能为空");
+            }
+            if (user.id_type == "")
+            {
+                throw new Exception("证件类型不能为空");
+            }
+            if (user.id_code == "")
+            {
+                throw new Exception("证件编号不能为空");
+            }
+            if (STKBD == "")
+            {
+                throw new Exception("交易板块不能为空");
+            }
+            if (TRDACCT == "")
+            {
+                throw new Exception("交易账号不能为空");
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "openStkTrdAcct");
+            request.setAttr("CUST_CODE", user.cust_code);
+            request.setAttr("CUACCT_CODE", user.cuacct_code);
+            request.setAttr("ID_TYPE", user.id_type);
+            request.setAttr("ID_CODE", user.id_code);
+            request.setAttr("STKBD", STKBD);
+            request.setAttr("TRDACCT", TRDACCT);
+
+
+            // 调用WebService获取返回值
+            Response response = new Response(this.invoke(request));
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return true;
         }
 
         /// <summary>

@@ -394,6 +394,7 @@ namespace 金证统一账户测试账户生成器
             this.btnRegisterStockAccount.TabIndex = 47;
             this.btnRegisterStockAccount.Text = "加挂股东账户";
             this.btnRegisterStockAccount.UseVisualStyleBackColor = true;
+            this.btnRegisterStockAccount.Click += new System.EventHandler(this.btnRegisterStockAccount_Click);
             // 
             // btnOpenStockAccount
             // 

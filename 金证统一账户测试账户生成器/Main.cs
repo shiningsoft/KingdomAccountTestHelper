@@ -4,7 +4,7 @@ using Yushen.Util;
 using Yushen.WebService.KessClient;
 using NLog;
 using System.Threading.Tasks;
-using System.Collections.Generic;
+using Dict = Yushen.WebService.KessClient.Dict;
 
 namespace 金证统一账户测试账户生成器
 {
@@ -315,15 +315,15 @@ namespace 金证统一账户测试账户生成器
                             kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
                         }
 
-                        Response response = kess.openStkAcct(user,"11");
-                        string trdacctCode = response.getValue("TRDACCT");
-                        resultForm.Append("沪A股东账号开立成功：" + trdacctCode);
-                        tbxSHAcct.Text = trdacctCode;
+                        Response response = kess.openStkAcct(user,Dict.ACCT_TYPE.沪市A股账户);
+                        user.shacct = response.getValue("TRDACCT");
+                        resultForm.Append("沪A股东账号开立成功：" + user.shacct);
+                        tbxSHAcct.Text = user.shacct;
 
-                        response = kess.openStkAcct(user, "21");
-                        trdacctCode = response.getValue("TRDACCT");
-                        resultForm.Append("深A股东账号开立成功：" + trdacctCode);
-                        tbxSZAcct.Text = trdacctCode;
+                        response = kess.openStkAcct(user, Dict.ACCT_TYPE.深市A股账户);
+                        user.szacct = response.getValue("TRDACCT");
+                        resultForm.Append("深A股东账号开立成功：" + user.szacct);
+                        tbxSZAcct.Text = user.szacct;
 
                     }
                     catch (Exception ex)
@@ -368,6 +368,41 @@ namespace 金证统一账户测试账户生成器
                 resultForm.Show();
                 resultForm.Append("操作员登录成功");
             }
+        }
+
+        private void btnRegisterStockAccount_Click(object sender, EventArgs e)
+        {
+            resultForm.Show();
+
+            // 异步方式调用WebService查询
+            Task task = Task.Run(() =>
+            {
+                this.Invoke((MethodInvoker)(() => {
+                    try
+                    {
+                        // 建立WebService连接
+                        if (kess == null)
+                        {
+                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                        }
+                        
+                        if (kess.registerSHAStkTrdAcct(user))
+                        {
+                            resultForm.Append("沪A股东账号加挂成功");
+                        }
+
+                        if (kess.registerSZAStkTrdAcct(user))
+                        {
+                            resultForm.Append("深A股东账号加挂成功");
+                        }
+
+                    }
+                    catch (Exception ex)
+                    {
+                        resultForm.Append("股东账号加挂失败：" + ex.Message);
+                    }
+                }));
+            });
         }
     }
 }
