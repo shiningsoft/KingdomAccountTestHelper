@@ -143,7 +143,9 @@ namespace Yushen.WebService.KessClient
             }
             else if (response.length > 0)
             {
-                throw new NotImplementedException("客户号已有资金账户的处理逻辑暂未实现");
+                string msg = "客户号已有资金账户的处理逻辑暂未实现";
+                logger.Error(msg);
+                throw new NotImplementedException(msg);
             }
 
             if (response.flag == "1")
@@ -152,7 +154,9 @@ namespace Yushen.WebService.KessClient
             }
             else
             {
-                throw new Exception("开立资金账号失败：" + response.prompt);
+                string msg = "开立资金账号失败：" + response.prompt;
+                logger.Error(msg);
+                throw new NotImplementedException(msg);
             }
         }
 
@@ -175,7 +179,9 @@ namespace Yushen.WebService.KessClient
             Response response = new Response(this.invoke(request));
             if (response.flag != "0" && response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string msg = "操作失败：" + response.prompt;
+                logger.Error(msg);
+                throw new NotImplementedException(msg);
             }
             return response;
         }
@@ -221,7 +227,9 @@ namespace Yushen.WebService.KessClient
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 返回结果
@@ -282,7 +290,9 @@ namespace Yushen.WebService.KessClient
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 返回结果
@@ -418,7 +428,9 @@ namespace Yushen.WebService.KessClient
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 返回结果
@@ -474,7 +486,9 @@ namespace Yushen.WebService.KessClient
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 返回结果
@@ -526,16 +540,21 @@ namespace Yushen.WebService.KessClient
             Response response = new Response(this.invoke(request));
 
             // 判断返回的操作结果是否异常
-            if (response.flag != "1")
+            if (response.flag != "0" && response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
-            string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
-            if (response.length==1 && RTN_ERR_CODE=="3031") // 证券账户不存在时清空数据
+            if (response.flag == "1")
             {
-                response.prompt = response.getValue("RETURN_MSG");
-                response.empty();
+                string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
+                if (response.length == 1 && RTN_ERR_CODE == "3031") // 证券账户不存在时清空数据
+                {
+                    response.prompt = response.getValue("RETURN_MSG");
+                    response.empty();
+                }
             }
 
             // 返回结果
@@ -555,6 +574,7 @@ namespace Yushen.WebService.KessClient
                 ACCT_TYPE: ACCT_TYPE,
                 CUST_CODE: user.cust_code,
                 CUST_FNAME: user.user_fname,
+                USER_TYPE: user.user_type,
                 ID_TYPE: user.id_type,
                 ID_CODE: user.id_code,
                 ID_ADDR: user.id_addr,
@@ -562,9 +582,13 @@ namespace Yushen.WebService.KessClient
                 ID_EXP_DATE: user.id_exp_date,
                 CITIZENSHIP: user.citizenship,
                 ADDRESS: user.id_addr,
+                MOBILE_TEL: user.mobile_tel,
+                TEL: user.tel,
                 SEX: user.sex,
+                INT_ORG: user.int_org,
                 OCCU_TYPE: user.occu_type,
                 EDUCATION: user.education,
+                ZIP_CODE: user.zip_code,
                 CHK_STATUS:"2",
                 NET_SERVICE:"0",
                 YMT_CODE:user.ymt_code,

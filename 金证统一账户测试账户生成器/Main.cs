@@ -316,21 +316,15 @@ namespace 金证统一账户测试账户生成器
                         }
 
                         Response response = kess.openStkAcct(user,"11");
-
-                        if (response.length > 2)
-                        {
-                            throw new Exception("该客户有" + response.length.ToString() + "个股东卡号");
-                        }
-                        else if (response.length == 0)
-                        {
-                            throw new Exception("没有返回股东账号列表");
-                        }
-
                         string trdacctCode = response.getValue("TRDACCT");
-                        resultForm.Append("股东账号开立成功：" + trdacctCode);
-                        user.ymt_code = trdacctCode;
-
+                        resultForm.Append("沪A股东账号开立成功：" + trdacctCode);
                         tbxSHAcct.Text = trdacctCode;
+
+                        response = kess.openStkAcct(user, "21");
+                        trdacctCode = response.getValue("TRDACCT");
+                        resultForm.Append("深A股东账号开立成功：" + trdacctCode);
+                        tbxSZAcct.Text = trdacctCode;
+
                     }
                     catch (Exception ex)
                     {
@@ -352,19 +346,8 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
                 }
 
-                Response response = kess.queryStkAcct(user,"11");
-
-                if (response.length > 0)
-                {
-                    throw new Exception("该客户有" + response.length.ToString() + "个股东卡号");
-                }
-                else if (response.length == 0)
-                {
-                    throw new Exception(response.prompt);
-                }
-
-                resultForm.Append("股东账户查询结果：" + response.prompt);
-                tbxSHAcct.Text = response.prompt;
+                Response response = kess.queryStkAcct(user);
+                resultForm.Append("该客户有" + response.length.ToString() + "个股东卡号");
             }
             catch (Exception ex)
             {

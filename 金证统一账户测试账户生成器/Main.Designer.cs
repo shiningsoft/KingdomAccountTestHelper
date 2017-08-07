@@ -328,7 +328,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnOpenAccountByOneClick
             // 
-            this.btnOpenAccountByOneClick.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenAccountByOneClick.Location = new System.Drawing.Point(13, 204);
             this.btnOpenAccountByOneClick.Name = "btnOpenAccountByOneClick";
             this.btnOpenAccountByOneClick.Size = new System.Drawing.Size(86, 23);
@@ -389,7 +388,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnRegisterStockAccount
             // 
-            this.btnRegisterStockAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRegisterStockAccount.Location = new System.Drawing.Point(826, 204);
             this.btnRegisterStockAccount.Name = "btnRegisterStockAccount";
             this.btnRegisterStockAccount.Size = new System.Drawing.Size(86, 23);
@@ -399,7 +397,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnOpenStockAccount
             // 
-            this.btnOpenStockAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenStockAccount.Location = new System.Drawing.Point(745, 204);
             this.btnOpenStockAccount.Name = "btnOpenStockAccount";
             this.btnOpenStockAccount.Size = new System.Drawing.Size(75, 23);
@@ -410,7 +407,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnQueryStockAccount
             // 
-            this.btnQueryStockAccount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnQueryStockAccount.Location = new System.Drawing.Point(561, 204);
             this.btnQueryStockAccount.Name = "btnQueryStockAccount";
             this.btnQueryStockAccount.Size = new System.Drawing.Size(86, 23);
@@ -421,7 +417,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnBankSign
             // 
-            this.btnBankSign.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBankSign.Enabled = false;
             this.btnBankSign.Location = new System.Drawing.Point(467, 204);
             this.btnBankSign.Name = "btnBankSign";
@@ -433,7 +428,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnSubmitRiskTest
             // 
-            this.btnSubmitRiskTest.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmitRiskTest.Location = new System.Drawing.Point(371, 204);
             this.btnSubmitRiskTest.Name = "btnSubmitRiskTest";
             this.btnSubmitRiskTest.Size = new System.Drawing.Size(90, 23);
@@ -444,7 +438,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnSetPassword
             // 
-            this.btnSetPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSetPassword.Location = new System.Drawing.Point(290, 204);
             this.btnSetPassword.Name = "btnSetPassword";
             this.btnSetPassword.Size = new System.Drawing.Size(75, 23);
@@ -455,7 +448,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnOpenCuacct
             // 
-            this.btnOpenCuacct.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenCuacct.Location = new System.Drawing.Point(209, 204);
             this.btnOpenCuacct.Name = "btnOpenCuacct";
             this.btnOpenCuacct.Size = new System.Drawing.Size(75, 23);
@@ -592,7 +584,7 @@ namespace 金证统一账户测试账户生成器
             this.education.Name = "education";
             this.education.Size = new System.Drawing.Size(100, 21);
             this.education.TabIndex = 22;
-            this.education.Text = "02";
+            this.education.Text = "2";
             // 
             // occu_type
             // 
@@ -740,7 +732,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnOpenUserCode
             // 
-            this.btnOpenUserCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenUserCode.Location = new System.Drawing.Point(128, 204);
             this.btnOpenUserCode.Name = "btnOpenUserCode";
             this.btnOpenUserCode.Size = new System.Drawing.Size(75, 23);
@@ -773,7 +764,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnOpenYMT
             // 
-            this.btnOpenYMT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnOpenYMT.Location = new System.Drawing.Point(653, 204);
             this.btnOpenYMT.Name = "btnOpenYMT";
             this.btnOpenYMT.Size = new System.Drawing.Size(86, 23);

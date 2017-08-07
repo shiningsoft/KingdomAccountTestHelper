@@ -5,6 +5,7 @@ using System.Data;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Yushen.WebService.KessClient
@@ -15,7 +16,7 @@ namespace Yushen.WebService.KessClient
     /// 
     /// 此文件存储内部方法
     /// 
-    public partial class Kess
+    public partial class Kess : IDisposable
     {
 
         /// <summary>
@@ -225,7 +226,9 @@ namespace Yushen.WebService.KessClient
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             string serialNo = response.getValue("SERIAL_NO");
@@ -252,8 +255,8 @@ namespace Yushen.WebService.KessClient
                 }
 
                 // 延时处理
-                Task.Delay(sleepInterval);
-                // Thread.Sleep(sleepInterval);
+                // Task.Delay(sleepInterval);
+                Thread.Sleep(sleepInterval);
 
                 // 计算是否超时
                 currentCostTime += sleepInterval;
@@ -340,7 +343,9 @@ namespace Yushen.WebService.KessClient
             // 判断返回的操作结果是否异常
             if (response.flag != "0" && response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 返回结果
@@ -378,7 +383,7 @@ namespace Yushen.WebService.KessClient
 
             // 初始化请求
             Request request = new Request(this.operatorId, "searchStkAcctBizInfo");
-            request.setAttr("SERIAL_NO", this.operatorId);
+            request.setAttr("SERIAL_NO", SERIAL_NO);
             request.setAttr("ACCTBIZ_EXCODE", ACCTBIZ_EXCODE);
             request.setAttr("ACCT_TYPE", ACCT_TYPE);
             request.setAttr("TRDACCT", TRDACCT);
@@ -391,7 +396,9 @@ namespace Yushen.WebService.KessClient
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 返回结果
@@ -418,7 +425,9 @@ namespace Yushen.WebService.KessClient
             Response response = new Response(this.invoke(request));
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
             return response;
         }
@@ -436,7 +445,9 @@ namespace Yushen.WebService.KessClient
             Response response = new Response(this.invoke(request));
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
             return response;
         }
@@ -476,7 +487,9 @@ namespace Yushen.WebService.KessClient
             Response response = new Response(this.invoke(request));
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             return response;
@@ -500,7 +513,9 @@ namespace Yushen.WebService.KessClient
             Response response = new Response(this.invoke(request));
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
             
             return response;
@@ -520,7 +535,9 @@ namespace Yushen.WebService.KessClient
             Response response = new Response(this.invoke(request));
             if (response.flag != "1")
             {
-                throw new Exception("操作失败：" + response.prompt);
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             return response;
@@ -535,12 +552,22 @@ namespace Yushen.WebService.KessClient
         {
             string result = "";
 
-            logger.Info("调用Webservice功能<" + request.operateName + ">|" + request.xml);
-
             // 利用反射调用WebService的成员函数
             try
             {
+                logger.Info("调用Webservice功能<" + request.operateName + ">|" + request.xml);
                 result = (string)this.kessClientType.GetMethod(request.operateName).Invoke(this.kessClient, new object[] { request.xml });
+                logger.Info("响应Webservice功能<" + request.operateName + ">|" + result);
+
+                // 操作员已经退出的时候，先重新登录然后再次执行
+                if (result.IndexOf("<prompt>您必须先登陆，才能进行其它操作。</prompt>") > -1)
+                {
+                    this.operatorLogin();
+
+                    logger.Info("调用Webservice功能<" + request.operateName + ">|" + request.xml);
+                    result = (string)this.kessClientType.GetMethod(request.operateName).Invoke(this.kessClient, new object[] { request.xml });
+                    logger.Info("响应Webservice功能<" + request.operateName + ">|" + result);
+                }
             }
             catch (Exception ex)
             {
@@ -548,8 +575,6 @@ namespace Yushen.WebService.KessClient
                 logger.Error(message);
                 throw new Exception(message);
             }
-
-            logger.Info("响应Webservice功能<" + request.operateName + ">|" + result);
 
             return result;
         }
