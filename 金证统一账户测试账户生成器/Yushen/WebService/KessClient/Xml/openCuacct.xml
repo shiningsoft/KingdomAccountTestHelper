@@ -8,7 +8,7 @@
     <!--//用户代码 (必传) -->
     <USER_CODE></USER_CODE>
     <!--//资产账户类别（必传） DD[CUACCT_CLS] -->
-    <CUACCT_CLS>0</CUACCT_CLS>
+    <CUACCT_CLS>z</CUACCT_CLS>
     <!--//资产账户级别（必传） DD[CUACCT_LVL] -->
     <CUACCT_LVL>0</CUACCT_LVL>
     <!--//资产账户组别（必传） DD[CUACCT_GRP] -->

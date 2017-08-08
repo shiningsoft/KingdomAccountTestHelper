@@ -474,14 +474,82 @@ namespace Yushen.WebService.KessClient
         private Response openCustomer(User user)
         {
             Request request = new Request(this.operatorId, "openCustomer");
-            request.setAttr("USER_NAME", user.user_name);    // 客户名称
-            request.setAttr("ID_CODE", user.id_code);        // 证件号码
-            request.setAttr("USER_FNAME", user.user_name);   // 用户全称
-            request.setAttr("ID_ISS_AGCY", user.id_iss_agcy);    // 发证机关
-            request.setAttr("ID_BEG_DATE", user.id_beg_date);    // 证件开始日期
-            request.setAttr("ID_EXP_DATE", user.id_exp_date);    // 证件有效日期
-            request.setAttr("CITIZENSHIP", user.citizenship);    // 国籍
-            request.setAttr("NATIONALITY", user.nationality);    // 民族
+            request.setAttr("USER_NAME", user.user_name); // 客户名称（必传）
+            request.setAttr("USER_TYPE", user.user_type); // 用户类型（必传）dd[user_type]
+            request.setAttr("ID_TYPE", user.id_type); // 证件类型（必传）dd[id_type]
+            request.setAttr("ID_CODE", user.id_code); // 证件号码（必传）
+            request.setAttr("USER_FNAME", user.user_fname); // 用户全称（必传）
+            request.setAttr("ID_ISS_AGCY", user.id_iss_agcy); // 发证机关（必传）
+            request.setAttr("ID_EXP_DATE", user.id_exp_date); // 证件有效日期（必传）
+            request.setAttr("CITIZENSHIP", user.citizenship); // 国籍（必传）dd[citizenship]
+            request.setAttr("NATIONALITY", user.nationality); // 民族（必传）dd[nationality]
+            request.setAttr("CUST_CODE", user.cust_code); // 客户代码（非必传）
+            request.setAttr("INT_ORG", user.int_org); // 机构代码（非必传）
+            request.setAttr("ID_BEG_DATE", user.id_beg_date); // 证件开始日期（非必传）
+            request.setAttr("ID_ZIP_CODE", user.id_zip_code); // 证件邮编（非必传）
+            request.setAttr("ID_ADDR", user.id_addr); // 证件地址（非必传）
+            request.setAttr("ZIP_CODE", user.zip_code); // 邮政编码（非必传）
+            request.setAttr("ADDRESS", user.address); // 联系地址（非必传）
+            request.setAttr("TEL", user.tel); // 联系电话（非必传）
+            request.setAttr("FAX", user.fax); // 传真电话（非必传）
+            request.setAttr("EMAIL", user.email); // 电子邮箱（非必传）
+            request.setAttr("MOBILE_TEL", user.mobile_tel); // 移动电话（非必传）
+            request.setAttr("EDUCATION", user.education); // 学历（非必传）dd[education]
+            request.setAttr("NATIVE_PLACE", user.native_place); // 籍贯/注册地（非必传）
+            request.setAttr("SEX", user.sex); // 性别（非必传）dd[sex]
+            request.setAttr("BIRTHDAY", user.birthday); // 出生日期（非必传）
+            request.setAttr("REMARK", user.remark); // 备注信息（非必传）
+            request.setAttr("MARRY", user.marry); // 婚姻状况（非必传）dd[marry]
+            request.setAttr("INTEREST", user.interest); // 兴趣爱好（非必传）
+            request.setAttr("VEHICLE", user.vehicle); // 交通工具（非必传）dd[vehicle]
+            request.setAttr("HOUSE_OWNER", user.house_owner); // 住宅所有权状况（非必传）
+            request.setAttr("OFFICE_TEL", user.office_tel); // 办公电话（非必传）
+            request.setAttr("WELL_TEL", user.well_tel); // 小灵通电话（非必传）
+            request.setAttr("LINKTEL_ORDER", user.linktel_order); // 首选联系电话（非必传）
+            request.setAttr("OFFICE_ADDR", user.office_addr); // 办公地址（非必传）
+            request.setAttr("CORP_ADDR", user.corp_addr); // 公司地址（非必传）
+            request.setAttr("LINKADDR_ORDER", user.linkaddr_order); // 首选联系地址（非必传）
+            request.setAttr("CUST_CLS", user.cust_cls); // 客户类别（非必传）dd[cust_cls]
+            request.setAttr("CUST_TYPE", user.cust_type); // 客户类型（非必传）dd[cust_type]
+            request.setAttr("CHANNELS", user.channels); // 操作渠道（非必传）dd[channel]
+            request.setAttr("CRITERION", user.criterion); // 规范客户标志（非必传）dd[criterion]
+            request.setAttr("RISK_FACTOR", user.risk_factor); // 风险因素（非必传）dd[risk_factor]
+            request.setAttr("CREDIT_LVL", user.credit_lvl); // 信用级别（非必传）
+            request.setAttr("REMOTE_PROTOCOL", user.remote_protocol); // 远程签署协议（非必传）
+            request.setAttr("CUST_SOURCE", user.cust_source); // 客户来源（非必传）
+            request.setAttr("SERVICE_LVL", user.service_lvl); // 服务级别（非必传）
+            request.setAttr("BSB_USER_FNAME", user.bsb_user_fname); // 签约客户姓名（非必传）
+            request.setAttr("BSB_ID_TYPE", user.bsb_id_type); // 签约证件类型（非必传）dd[id_type]
+            request.setAttr("BSB_ID_CODE", user.bsb_id_code); // 签约证件号码（非必传）
+            request.setAttr("BSB_ID_EXP_DATE", user.bsb_id_exp_date); // 签约证件有效日期（非必传）
+            request.setAttr("CARD_ID", user.card_id); // 磁卡号码（非必传）
+            request.setAttr("CHK_RIGHT_FLAG", user.chk_right_flag); // 校验标志（非必传）
+            request.setAttr("OPEN_SOURCE", user.open_source); // 开户来源（非必传）dd[open_source]
+            request.setAttr("OTHER_REMARK", user.other_remark); // 其它备注（非必传）
+            request.setAttr("SPEC_REMARK", user.spec_remark); // 特殊备注（非必传）
+            request.setAttr("LINTEL_PD", user.lintel_pd); // 联络频度（非必传）
+            request.setAttr("AML_LVL", user.aml_lvl); // 反洗钱等级（非必传）dd[aml_lvl]
+            request.setAttr("FILINGCABINET_NO", user.filingcabinet_no); // 文件柜编号（非必传）
+            request.setAttr("CUST_GRP", user.cust_grp); // 客户分组（非必传）dd[cust_grp]
+            request.setAttr("IDCARD_TYPE", user.idcard_type); // 证件卡类型（非必传）
+            request.setAttr("IDCARD_CHECK_FLAG", user.idcard_check_flag); // 证件卡校验标志（非必传）dd[idcard_check_flag]
+            request.setAttr("OPEN_AGENT", user.open_agent); // 开户代理人（非必传）
+            request.setAttr("SUBJECT_IDENTITY", user.subject_identity); // 主体身份（非必传）
+            request.setAttr("INCOME", user.income); // 年收入（非必传）
+            request.setAttr("INOUTSIDE_IDENTITY", user.inoutside_identity); // 境内外身份（非必传）
+            request.setAttr("SPECIAL_STATUS", user.special_status); // 特殊身份（非必传）
+            request.setAttr("ENTERPRISE_LEVEL", user.enterprise_level); // 企业层级（非必传）
+            request.setAttr("SZORGTYPE", user.szorgtype); // 机构产品类别（深）（非必传）
+            request.setAttr("NATIONAL_ATTR", user.national_attr); // 国有属性（非必传）dd[national_attr]
+            request.setAttr("LISTED_ATTR", user.listed_attr); // 上市属性（非必传）dd[listed_attr]
+            request.setAttr("IDCARD_READ_FLAG", user.idcard_read_flag); // 证件卡读卡标志（非必传）
+            request.setAttr("MAIN_YEAR_CHK_DATE", user.main_year_chk_date); // 主证件年检日期（非必传）
+            request.setAttr("WORKPLACE", user.workplace); // 工作单位（非必传）
+            request.setAttr("TRADE", user.trade); // 行业类型（非必传）
+            request.setAttr("OCCU_TYPE", user.occu_type); // 当前职业（非必传）
+            request.setAttr("TEL_CHK_FLAG", user.tel_chk_flag); // 手机校验标识（非必传）
+            request.setAttr("EMAIL_CHK_FLAG", user.email_chk_flag); // 邮箱校验标识（非必传）
+            request.setAttr("FIN_EDU_FLAG", user.fin_edu_flag); // 金融相关专业学历校验标识（非必传）
 
             Response response = new Response(this.invoke(request));
             if (response.flag != "1")
@@ -496,12 +564,28 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 直接发起新开资金账户
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="USER_CODE">用户代码 (必传)</param>
+        /// <param name="CUACCT_CLS">资产账户类别（必传） DD[CUACCT_CLS]</param>
+        /// <param name="CUACCT_LVL">资产账户级别（必传） DD[CUACCT_LVL]</param>
+        /// <param name="CUACCT_GRP">资产账户组别（必传） DD[CUACCT_GRP]</param>
+        /// <param name="CURRENCY">货币（必传） DD[CURRENCY]</param>
+        /// <param name="INT_ORG">内部机构（非必传</param>
+        /// <param name="CUACCT_CODE">资产账户（非必传）</param>
+        /// <param name="FUND_TYPE">帐户类型（非必传）</param>
+        /// <param name="OP_REMARK">备注信息（非必传）</param>
         /// <returns></returns>
-        private Response openCuacct(User user)
+        private Response openCuacct(string USER_CODE, string CUACCT_CLS="z",string CUACCT_LVL="0",string CUACCT_GRP="0",string CURRENCY = "0",string INT_ORG="",string CUACCT_CODE="",string FUND_TYPE="",string OP_REMARK="")
         {
             Request request = new Request(this.operatorId, "openCuacct");
-            request.setAttr("USER_CODE", user.cust_code);    // 客户名称
+            request.setAttr("USER_CODE", USER_CODE);
+            request.setAttr("CUACCT_CLS", CUACCT_CLS);
+            request.setAttr("CUACCT_LVL", CUACCT_LVL);
+            request.setAttr("CUACCT_GRP", CUACCT_GRP);
+            request.setAttr("CURRENCY", CURRENCY);
+            request.setAttr("INT_ORG", INT_ORG);
+            request.setAttr("CUACCT_CODE", CUACCT_CODE);
+            request.setAttr("FUND_TYPE", FUND_TYPE);
+            request.setAttr("OP_REMARK", OP_REMARK);
 
             Response response = new Response(this.invoke(request));
             if (response.flag != "1")

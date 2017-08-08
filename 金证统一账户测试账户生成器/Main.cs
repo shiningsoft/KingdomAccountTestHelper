@@ -5,6 +5,7 @@ using Yushen.WebService.KessClient;
 using NLog;
 using System.Threading.Tasks;
 using Dict = Yushen.WebService.KessClient.Dict;
+using System.Data;
 
 namespace 金证统一账户测试账户生成器
 {
@@ -37,13 +38,17 @@ namespace 金证统一账户测试账户生成器
                             kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
                         }
                         user = new User();
+                        user.user_type = Dict.USER_TYPE.个人;
                         user.user_name = user_name.Text;
                         user.user_fname = user_name.Text;
+                        user.id_type = Dict.ID_TYPE.身份证;
                         user.id_code = id_code.Text;
                         user.id_addr = id_addr.Text;
                         user.id_iss_agcy = id_iss_agcy.Text;
                         user.id_beg_date = id_beg_date.Text;
                         user.id_exp_date = id_exp_date.Text;
+                        user.linkaddr_order = id_addr.Text;
+                        user.address = id_addr.Text;
                         user.citizenship = citizenship.Text;
                         user.nationality = nationality.Text;
                         user.password = password.Text;
@@ -54,8 +59,12 @@ namespace 金证统一账户测试账户生成器
                         user.zip_code = zip_code.Text;
                         user.sex = tbxSex.Text;
                         user.int_org = "19";
-
+                        user.cust_cls = Dict.CUST_CLS.标准客户;
+                        user.cust_type = Dict.CUST_TYPE.普通;
+                        user.channels = Dict.CHANNEL.柜台系统 + Dict.CHANNEL.电话委托 + Dict.CHANNEL.网上委托 + Dict.CHANNEL.手机炒股;
+                        
                         user.cust_code = kess.createCustomerCode(user);
+                        user.user_code = user.cust_code;
 
                         resultForm.Append("客户号开立成功："+user.cust_code);
                         tbxCustCode.Text = user.cust_code;
@@ -92,6 +101,7 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
+                dictName.Text = dictName.Text.ToUpper();
                 // 建立WebService连接
                 if (kess == null)
                 {
@@ -115,6 +125,12 @@ namespace 金证统一账户测试账户生成器
                         {
                             resultForm.Show();
                             resultForm.Append(ex.Message);
+                            if (dataGridView1.DataSource != null)
+                            {
+                                DataTable dt = (DataTable)dataGridView1.DataSource;
+                                dt.Rows.Clear();
+                                dataGridView1.DataSource = dt;
+                            }
                         }
                     }));
                 });
@@ -129,9 +145,10 @@ namespace 金证统一账户测试账户生成器
         {
             // 初始化风险评级选项
             RiskTest riskTest = new RiskTest();
+            Dict.RiskTestLevel levelList = new Dict.RiskTestLevel();
             risk_level.DisplayMember = "name";
             risk_level.ValueMember = "value";
-            risk_level.DataSource = riskTest.riskLevelList;
+            risk_level.DataSource = levelList.DataTable;
             
             // 初始化WebService连接
             if (kess == null)

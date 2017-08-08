@@ -1,13 +1,124 @@
-﻿/// <summary>
+﻿using System;
+using System.Collections;
+using System.Data;
+using System.Reflection;
+
+/// <summary>
 /// 统一账户系统数据字典
 /// </summary>
 namespace Yushen.WebService.KessClient.Dict
 {
+    /// <summary>
+    /// 风险测评结果
+    /// </summary>
+    class RiskTestLevel :Dict
+    {
+        public const string 保守型 = "A";
+        public const string 谨慎型 = "B";
+        public const string 稳健型 = "C";
+        public const string 积极型 = "D";
+        public const string 激进型 = "E";
+    }
+
+    /// <summary>
+    /// 用户类型
+    /// </summary>
+    class USER_TYPE : Dict
+    {
+        public const string 个人 = "0";
+        public const string 机构 = "1";
+        public const string 产品 = "2";
+    }
+
+    /// <summary>
+    /// 操作渠道
+    /// </summary>
+    class CHANNEL : Dict
+    {
+        public const string 柜台系统 = "0";
+        public const string 漫游委托 = "1";
+        public const string 电话委托 = "2";
+        public const string 刷卡委托 = "3";
+        public const string 热键委托 = "4";
+        public const string 远程委托 = "5";
+        public const string 分支委托 = "6";
+        public const string 银行委托 = "7";
+        public const string 网上委托 = "8";
+        public const string 呼叫中心 = "9";
+        public const string 手机炒股 = "a";
+        public const string PB委托 = "p";
+    }
+
+    /// <summary>
+    /// 客户类别
+    /// </summary>
+    class CUST_CLS : Dict
+    {
+        public const string 标准客户 = "0";
+        public const string 核心客户 = "1";
+        public const string 重要客户 = "2";
+        public const string PB客户 = "8";
+        public const string 透支帐户 = "m";
+        public const string 关联方帐户 = "n";
+        public const string 权属不清存疑 = "o";
+        public const string 涉嫌违规存疑 = "p";
+        public const string 调查帐户存疑 = "q";
+        public const string 监控帐户 = "r";
+        public const string 权证大赛 = "s";
+    }
+
+    /// <summary>
+    /// 客户类型
+    /// </summary>
+    class CUST_TYPE :Dict
+    {
+        public const string 普通 = "0";
+        public const string 自营 = "1";
+        public const string 资管 = "2";
+        public const string QFII = "3";
+    }
+
+    /// <summary>
+    /// 证件类型
+    /// </summary>
+    class ID_TYPE : Dict
+    {
+        public const string 身份证 = "00";
+        public const string 护照 = "01";
+        public const string 军官证 = "02";
+        public const string 士兵证 = "03";
+        public const string 回乡证 = "04";
+        public const string 户口本 = "05";
+        public const string 外国护照 = "06";
+        public const string 技术监督局号码 = "08";
+        public const string 其它证件 = "09";
+        public const string 香港居民通行证 = "0b";
+        public const string 澳门居民通行证 = "0c";
+        public const string 台湾居民通行证 = "0d";
+        public const string 外国人永久居留证 = "0e";
+        public const string 社会保障号 = "0f";
+        public const string 文职证 = "0g";
+        public const string 警官证 = "0h";
+        public const string 香港居民身份证 = "0i";
+        public const string 澳门居民身份证 = "0j";
+        public const string 工商营业执照 = "10";
+        public const string 社团法人注册登记证书 = "11";
+        public const string 机关法人成立批文 = "12";
+        public const string 事业法人成立批文 = "13";
+        public const string 境外有效商业登记证明文件 = "14";
+        public const string 武警 = "15";
+        public const string 军队 = "16";
+        public const string 基金会 = "17";
+        // public const string 技术监督局号码 = "18";
+        public const string 其它证书 = "19";
+        public const string 组织机构代码证 = "1A";
+        public const string 批文 = "1Z";
+    }
 
     /// <summary>
     /// 开户类别
     /// </summary>
-    static class ACCT_OPENTYPE
+    class ACCT_OPENTYPE : Dict
     {
         public const string 临柜办理开户 = "0";
         public const string 客户网上自助 = "1";
@@ -18,7 +129,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 交易板块
     /// </summary>
-    static class STKBD
+    class STKBD : Dict
     {
         public const string 深圳A股 = "00";
         public const string 深圳B股 = "01";
@@ -35,7 +146,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 证券账户类别
     /// </summary>
-    static class ACCT_TYPE
+    class ACCT_TYPE : Dict
     {
         public const string 沪市A股账户 = "11";
         public const string 沪市B股账户 = "12";
@@ -54,7 +165,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 证券账户代理中登业务
     /// </summary>
-    static class ACCTBIZ_EXCODE
+    class ACCTBIZ_EXCODE : Dict
     {
         public const string 一码通账户开立 = "01";
         public const string 证券账户开立 = "02";
@@ -84,7 +195,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 账户业务处理状态
     /// </summary>
-    static class ACCTBIZ_STATUS
+    class ACCTBIZ_STATUS : Dict
     {
         public const string 未发送 = "0";
         public const string 已发送 = "1";
@@ -95,7 +206,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 测评类别
     /// </summary>
-    static class SURVEY_CLS
+    class SURVEY_CLS : Dict
     {
         public const string 经纪业务问卷测评 = "0";
         public const string 基金投资者问卷测评 = "1";
@@ -112,7 +223,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 职业类型
     /// </summary>
-    static class OCCU_EXTYPE
+    class OCCU_EXTYPE : Dict
     {
         public const string 文教科卫专业人员 = "01";
         public const string 党政在职或离退休机关干部 = "02";
@@ -132,7 +243,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 资产账户状态
     /// </summary>
-    static class CUACCT_STATUS
+    class CUACCT_STATUS : Dict
     {
         public const string 正常 = "0";
         public const string 锁定 = "1";
@@ -146,7 +257,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 客户协议类型
     /// </summary>
-    static class CUST_AMGT_TYPE
+    class CUST_AMGT_TYPE : Dict
     {
         public const string 代理新股申购 = "00";
         public const string 代理新股配售 = "01";
@@ -198,7 +309,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 货币
     /// </summary>
-    static class CURRENCY
+    class CURRENCY : Dict
     {
         public const string 人民币 = "0";
         public const string 港币 = "1";
@@ -208,7 +319,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 国籍
     /// </summary>
-    static class CITIZENSHIP
+    class CITIZENSHIP : Dict
     {
         public const string 阿鲁巴 = "ABW";
         public const string 阿富汗 = "AFG";
@@ -459,4 +570,36 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 赞比亚 = "ZMB";
         public const string 津巴布韦 = "ZWE";
     }
+
+    /// <summary>
+    /// 数据字典基类。
+    /// 所有数据字典类应当继承自本类。
+    /// </summary>
+    abstract class Dict
+    {
+        /// <summary>
+        /// 创建DataTable以便绑定数据源
+        /// </summary>
+        /// <returns></returns>
+        public DataTable DataTable
+        {
+            get
+            {
+                Type t = GetType();
+                FieldInfo[] FiledList = t.GetFields();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("name");
+                dt.Columns.Add("value");
+                foreach (FieldInfo item in FiledList)
+                {
+                    DataRow dr = dt.NewRow();
+                    dr["name"] = item.Name;
+                    dr["value"] = item.GetValue(this).ToString();
+                    dt.Rows.Add(dr);
+                }
+                return dt;
+            }
+        }
+    }
+
 }

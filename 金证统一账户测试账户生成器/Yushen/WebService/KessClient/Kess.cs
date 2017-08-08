@@ -109,7 +109,7 @@ namespace Yushen.WebService.KessClient
             if (response.length == 0 || this.getSingleCommonParamValue("OPEN_CUST_CHECK_ID_FLAG") == "1")
             {
                 response = this.openCustomer(user);
-                return response.getSingleNodeText("/response/record/row/USER_CODE");
+                return response.getValue("USER_CODE");
             }
             else
             {
@@ -133,7 +133,7 @@ namespace Yushen.WebService.KessClient
                 {
                     user.cuacct_code = user.cust_code;
                 }
-                response = this.openCuacct(user);
+                response = this.openCuacct(user.cust_code,"z");
             }
             else if (response.length > 0)
             {
@@ -144,7 +144,7 @@ namespace Yushen.WebService.KessClient
 
             if (response.flag == "1")
             {
-                return response.getSingleNodeText("/response/record/row/CUACCT_CODE");
+                return response.getValue("CUACCT_CODE");
             }
             else
             {
@@ -702,7 +702,7 @@ namespace Yushen.WebService.KessClient
 
             Response response = new Response(this.invoke(request));
 
-            if (response.flag != "1")
+            if(response.flag != "1")
             {
                 string message = "查询数据字典" + dictName + "失败：" + response.prompt;
                 logger.Error(message);
