@@ -39,25 +39,26 @@ namespace 金证统一账户测试账户生成器
                         }
                         user = new User();
                         user.user_type = Dict.USER_TYPE.个人;
-                        user.user_name = user_name.Text;
-                        user.user_fname = user_name.Text;
+                        user.user_name = user_name.Text.Trim();
+                        user.user_fname = user_name.Text.Trim();
                         user.id_type = Dict.ID_TYPE.身份证;
-                        user.id_code = id_code.Text;
-                        user.id_addr = id_addr.Text;
-                        user.id_iss_agcy = id_iss_agcy.Text;
-                        user.id_beg_date = id_beg_date.Text;
-                        user.id_exp_date = id_exp_date.Text;
+                        user.id_code = id_code.Text.Trim();
+                        user.id_addr = id_addr.Text.Trim();
+                        user.id_iss_agcy = id_iss_agcy.Text.Trim();
+                        user.id_beg_date = id_beg_date.Text.Trim();
+                        user.id_exp_date = id_exp_date.Text.Trim();
+                        user.linktel_order = Dict.LINKTEL_ORDER.手机;
                         user.linkaddr_order = Dict.LINKADDR_ORDER.家庭地址;
-                        user.address = id_addr.Text;
-                        user.citizenship = citizenship.Text;
-                        user.nationality = nationality.Text;
-                        user.password = password.Text;
-                        user.mobile_tel = mobile_tel.Text;
-                        user.occu_type = occu_type.Text;
-                        user.education = education.Text;
-                        user.bank_code = bank_code.Text;
-                        user.zip_code = zip_code.Text;
-                        user.sex = tbxSex.Text;
+                        user.address = id_addr.Text.Trim();
+                        user.citizenship = citizenship.Text.Trim();
+                        user.nationality = nationality.Text.Trim();
+                        user.password = password.Text.Trim();
+                        user.mobile_tel = mobile_tel.Text.Trim();
+                        user.occu_type = occu_type.Text.Trim();
+                        user.education = education.Text.Trim();
+                        user.bank_code = bank_code.Text.Trim();
+                        user.zip_code = zip_code.Text.Trim();
+                        user.sex = tbxSex.Text.Trim();
                         user.int_org = "19";
                         user.cust_cls = Dict.CUST_CLS.标准客户;
                         user.cust_type = Dict.CUST_TYPE.普通;
@@ -101,7 +102,7 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
-                dictName.Text = dictName.Text.ToUpper();
+                dictName.Text = dictName.Text.ToUpper().Trim();
                 // 建立WebService连接
                 if (kess == null)
                 {
@@ -427,6 +428,11 @@ namespace 金证统一账户测试账户生成器
                     }
                 }));
             });
+        }
+
+        private void btnOpenAccountByOneClick_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

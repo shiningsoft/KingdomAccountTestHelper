@@ -11,7 +11,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 风险测评结果
     /// </summary>
-    class RiskTestLevel :Dict
+    class RiskTestLevel : Dict
     {
         public const string 保守型 = "A";
         public const string 谨慎型 = "B";
@@ -23,11 +23,40 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 用户类型
     /// </summary>
+    class YMT_STATUS : Dict
+    {
+        public const string 正常 = "0";
+        public const string 注销 = "1";
+    }
+
+    /// <summary>
+    /// 是否
+    /// </summary>
+    class YES_NO : Dict
+    {
+        public const string 否 = "0";
+        public const string 是 = "1";
+    }
+
+    /// <summary>
+    /// 用户类型
+    /// </summary>
     class USER_TYPE : Dict
     {
         public const string 个人 = "0";
         public const string 机构 = "1";
         public const string 产品 = "2";
+    }
+
+    /// <summary>
+    /// 网上业务类型
+    /// </summary>
+    class WEB_BIZ : Dict
+    {
+        public const string 网上自助 = "0";
+        public const string 视频见证 = "1";
+        public const string 双人见证 = "2";
+        public const string 手机自助 = "3";
     }
 
     /// <summary>
@@ -66,6 +95,164 @@ namespace Yushen.WebService.KessClient.Dict
     {
         public const string 家庭地址 = "1";
         public const string 单位地址 = "2";
+    }
+
+    /// <summary>
+    /// 反洗钱等级
+    /// </summary>
+    class AML_LVL : Dict
+    {
+        public const string 未定义 = "*";
+        public const string 低 = "0";
+        public const string 中 = "1";
+        public const string 高 = "2";
+        public const string 黑名单 = "3";
+    }
+
+    /// <summary>
+    /// 预约开户方式
+    /// </summary>
+    class APPT_CHNL : Dict
+    {
+        public const string 柜台预约 = "0";
+        public const string WEB方式预约 = "1";
+        public const string 银行预约无确认 = "2";
+        public const string 银行预约需确认 = "3";
+        public const string 离柜开户 = "4";
+        public const string 非现场开户新开户 = "5";
+        public const string 非现场开户转户 = "6";
+    }
+
+    /// <summary>
+    /// 预约来源
+    /// </summary>
+    class APPT_SOURCE : Dict
+    {
+        public const string 未定义 = "*";
+        public const string 现场客户 = "0";
+        public const string 工行预约 = "1";
+        public const string 国元金网预约 = "2";
+        public const string 社区 = "3";
+        public const string 转介绍 = "4";
+        public const string 国元CRM预约 = "5";
+        public const string 展业平台开户 = "6";
+        public const string 微信预约 = "7";
+        public const string 网站自助开户 = "8";
+    }
+
+    /// <summary>
+    /// 电子协议类型
+    /// </summary>
+    class CONTRACT_TYPE : Dict
+    {
+        public const string 投顾产品 = "00";
+        public const string 网上开户业务约定书 = "01";
+        public const string 风险揭示书 = "02";
+        public const string 客户须知 = "03";
+        public const string 上海证券交易所个人投资者行为指引 = "04";
+        public const string 证券交易委托代理协议 = "05";
+        public const string 个人数字证书申请责任书 = "06";
+        public const string 数字证书业务风险提示书 = "07";
+        public const string 三方存管协议 = "10";
+        public const string OTC产品电子协议签署 = "20";
+        public const string 网上开户电子协议 = "30";
+        public const string 金易贷电子协议 = "40";
+    }
+
+    /// <summary>
+    /// 资产账户属性
+    /// </summary>
+    class CUACCT_ATTR : Dict
+    {
+        public const string 普通账户 = "0";
+        public const string 信用账户 = "1";
+        public const string OTC支付账户 = "2";
+        public const string 股票期权 = "3";
+        public const string OTC独立存管账户 = "4";
+    }
+
+    /// <summary>
+    /// 资产账户状态
+    /// </summary>
+    class CUACCT_STATUS : Dict
+    {
+        public const string 正常 = "0";
+        public const string 锁定 = "1";
+        public const string 冻结 = "2";
+        public const string 挂失 = "3";
+        public const string 休眠 = "4";
+        public const string 不合格 = "5";
+        public const string 销户 = "9";
+    }
+
+    /// <summary>
+    /// 首选联系方式
+    /// </summary>
+    class LINGKINDS_ORDER : Dict
+    {
+        public const string 手机 = "1";
+        public const string 固定电话 = "2";
+        public const string 电子邮件 = "3";
+        public const string 传真 = "4";
+    }
+
+    /// <summary>
+    /// 首选联系电话
+    /// </summary>
+    class LINKTEL_ORDER : Dict
+    {
+        public const string 手机 = "1";
+        public const string 家庭电话 = "2";
+        public const string 工作电话 = "3";
+        public const string 小灵通 = "4";
+    }
+
+    /// <summary>
+    /// 网络服务标识
+    /// </summary>
+    class NET_SERVICE : Dict
+    {
+        public const string 否 = "0";
+        public const string 是 = "1";
+    }
+
+    /// <summary>
+    /// 性别
+    /// </summary>
+    class SEX : Dict
+    {
+        public const string 男性 = "0";
+        public const string 女性 = "1";
+        public const string 其他 = "2";
+    }
+
+    /// <summary>
+    /// 影像状态
+    /// </summary>
+    class IMG_STATUS : Dict
+    {
+        public const string 正常 = "0";
+        public const string 未上传 = "1";
+        public const string 上传未审核 = "2";
+        public const string 修改未审核 = "3";
+        public const string 上传审核取消 = "4";
+        public const string 修改审核取消 = "5";
+        public const string 删除 = "6";
+        public const string 作废 = "7";
+        public const string 丢失 = "8";
+        public const string 未采集 = "A";
+        public const string 已采集 = "B";
+        public const string 任务流水被异常 = "T";
+    }
+
+    /// <summary>
+    /// 银证业务类型
+    /// </summary>
+    class CUBSB_TYPE : Dict
+    {
+        public const string 转帐 = "0";
+        public const string 存管 = "1";
+        public const string 银衍 = "2";
     }
 
     /// <summary>
@@ -223,6 +410,59 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 账户业务处理状态
+    /// </summary>
+    class TRDACCT_STATUS : Dict
+    {
+        public const string 正常 = "0";
+        public const string 挂失 = "1";
+        public const string 冻结 = "2";
+        public const string 休眠 = "4";
+        public const string 禁买 = "5";
+        public const string 禁卖 = "6";
+        public const string 注销 = "9";
+    }
+
+    /// <summary>
+    /// 账户业务处理状态
+    /// </summary>
+    class TREG_STATUS : Dict
+    {
+        public const string 未指定 = "0";
+        public const string 首日指定 = "1";
+        public const string 已指定 = "2";
+    }
+
+    /// <summary>
+    /// 用户角色
+    /// </summary>
+    class USER_ROLE : Dict
+    {
+        public const string 结算法人 = "0";
+        public const string 客户 = "1";
+        public const string 操作员 = "2";
+        public const string 经纪人 = "3";
+        public const string 代理人 = "4";
+    }
+
+    /// <summary>
+    /// 使用范围
+    /// </summary>
+    class USE_SCOPE : Dict
+    {
+        public const string 登录和交易 = "0";
+        public const string 资金业务 = "1";
+        public const string 信用交易和登录密码 = "2";
+        public const string 信用资金密码 = "3";
+        public const string 股票期权交易密码 = "4";
+        public const string 股票期权资金密码 = "5";
+        public const string OTC交易密码 = "6";
+        public const string OTC资金密码 = "7";
+        public const string 消费支付密码 = "8";
+        public const string 网厅用户密码 = "W";
+    }
+
+    /// <summary>
     /// 测评类别
     /// </summary>
     class SURVEY_CLS : Dict
@@ -257,20 +497,6 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 证券从业人员 = "10";
         public const string 离退休 = "11";
         public const string 其他 = "99";
-    }
-
-    /// <summary>
-    /// 资产账户状态
-    /// </summary>
-    class CUACCT_STATUS : Dict
-    {
-        public const string 正常 = "0";
-        public const string 锁定 = "1";
-        public const string 冻结 = "2";
-        public const string 挂失 = "3";
-        public const string 休眠 = "4";
-        public const string 不合格 = "5";
-        public const string 销户 = "9";
     }
 
     /// <summary>
@@ -333,6 +559,185 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 人民币 = "0";
         public const string 港币 = "1";
         public const string 美元 = "2";
+    }
+
+    /// <summary>
+    /// 子系统
+    /// </summary>
+    class SUBSYS : Dict
+    {
+        public const string 簿记子系统 = "1";
+        public const string 融资融券子系统 = "10";
+        public const string 消费支付子系统 = "11";
+        public const string OTC子系统 = "13";
+        public const string 股票期权子系统 = "16";
+        public const string 资金管理系统 = "18";
+        public const string 清算子系统 = "2";
+        public const string 统一认证子系统 = "27";
+        public const string 交易子系统 = "3";
+        public const string 影像子系统 = "30";
+        public const string 期货IB子系统 = "31";
+        public const string CRM数据中心 = "32";
+        public const string 数据服务中心 = "4";
+        public const string 其他 = "9";
+    }
+
+    /// <summary>
+    /// 证券业务
+    /// </summary>
+    class STK_BIZ : Dict
+    {
+        public const string 证券买入 = "100";
+        public const string 证券卖出 = "101";
+        public const string 证券可售冻结卖出 = "102";
+        public const string 新股申购 = "103";
+        public const string 新股增发 = "104";
+        public const string 配股 = "106";
+        public const string 要约收购 = "107";
+        public const string 解除要约 = "108";
+        public const string 质押入库 = "110";
+        public const string 质押出库 = "111";
+        public const string 市值配售新股申购 = "113";
+        public const string 质押入库且冻结 = "115";
+        public const string 质押出库且解冻 = "116";
+        public const string 港股通买入 = "130";
+        public const string 港股通卖出 = "131";
+        public const string 国债分销 = "140";
+        public const string 债券兑付 = "145";
+        public const string 债券兑息 = "146";
+        public const string 回购融资 = "150";
+        public const string 回购融券 = "151";
+        public const string 转债申购 = "152";
+        public const string 转债配债 = "153";
+        public const string 转债转股 = "160";
+        public const string 转债回售 = "161";
+        public const string 买断回购融资 = "162";
+        public const string 买断回购融券 = "163";
+        public const string 质押回购融资 = "164";
+        public const string 质押回购融券 = "165";
+        public const string 货币基金申购 = "170";
+        public const string 货币基金赎回 = "171";
+        public const string 货币基金收益结转 = "172";
+        public const string 资管份额转入 = "175";
+        public const string 资管份额转出 = "176";
+        public const string ETF网下现金认购 = "180";
+        public const string ETF申购 = "181";
+        public const string ETF赎回 = "182";
+        public const string ETF网上现金认购 = "183";
+        public const string ETF网下股票认购 = "184";
+        public const string 跨境ETF申购 = "187";
+        public const string 跨境ETF赎回 = "188";
+        public const string 开放式基金认购沪 = "190";
+        public const string 开放式基金跨市场转托 = "191";
+        public const string 开放式基金分红方式设定 = "192";
+        public const string 开放式基金转换 = "193";
+        public const string 开放式基金申购 = "194";
+        public const string 开放式基金赎回 = "195";
+        public const string 基金红利 = "196";
+        public const string TA发起业务 = "197";
+        public const string 开放式基金认购深 = "198";
+        public const string 权证创设 = "200";
+        public const string 权证注销 = "201";
+        public const string 证券给付型认购权证行权 = "202";
+        public const string 证券给付型认沽权证行权 = "203";
+        public const string 现金结算型认购权证行权 = "204";
+        public const string 现金结算型认沽权证行权 = "205";
+        public const string 自主行权 = "206";
+        public const string ETF申购赎回现金差额 = "208";
+        public const string ETF申购赎回现金替代多退少补 = "209";
+        public const string B转H股业务 = "220";
+        public const string 国债预发行买入开仓 = "230";
+        public const string 国债预发行卖出开仓 = "231";
+        public const string 国债预发行买入平仓 = "232";
+        public const string 国债预发行卖出平仓 = "233";
+        public const string 挂牌公司股票定价买入 = "260";
+        public const string 挂牌公司股票定价卖出 = "261";
+        public const string 挂牌公司股票互报成交确认买入 = "262";
+        public const string 挂牌公司股票互报成交确认卖出 = "263";
+        public const string 挂牌公司股票成交确认买入 = "264";
+        public const string 挂牌公司股票成交确认卖出 = "265";
+        public const string 指定交易 = "300";
+        public const string 撤销指定 = "301";
+        public const string 回购指定 = "302";
+        public const string 回购撤销 = "303";
+        public const string 证券转托管出 = "330";
+        public const string 密码服务 = "340";
+        public const string 议案投票 = "345";
+        public const string 网络投票 = "346";
+        // public const string 资管份额转入 = "350";
+        // public const string 资管份额转出 = "355";
+        public const string 证券转换业务 = "499";
+        public const string 新股登记 = "500";
+        public const string 股份托管 = "501";
+        public const string 合并证券账户 = "502";
+        public const string 更换证券账户 = "503";
+        public const string 红股到帐 = "504";
+        public const string 股息派发 = "505";
+        public const string 退款退息明细 = "506";
+        public const string 证券转托管入 = "508";
+        public const string ETF认购到账 = "510";
+        public const string 司法冻结 = "600";
+        public const string 司法冻结解冻 = "601";
+        public const string 司法冻结续冻 = "602";
+        public const string 司法冻结轮候 = "603";
+        public const string 司法冻结轮候解除 = "604";
+        public const string 证券冻结 = "610";
+        public const string 证券解冻 = "611";
+        public const string 证券过户 = "612";
+        public const string 股份转入转出业务 = "613";
+        public const string 债券存提券 = "614";
+        public const string 证券转换 = "620";
+        public const string 股份特殊调账业务 = "623";
+        public const string 法人转配股转股 = "624";
+        public const string 三板买卖回退 = "640";
+        public const string 担保品买入 = "700";
+        public const string 担保品卖出 = "701";
+        public const string 融资买入 = "702";
+        public const string 融券卖出 = "703";
+        public const string 买券还券 = "704";
+        public const string 卖券还款 = "705";
+        public const string 融资平仓 = "706";
+        public const string 融券平仓 = "707";
+        public const string 担保品转入 = "708";
+        public const string 担保品转出 = "709";
+        public const string 现券还券 = "710";
+        public const string 余券划转 = "711";
+        public const string 国债分销买入 = "800";
+        public const string 国债分销卖出 = "801";
+        public const string 摘牌 = "802";
+        public const string 盘后基金合并业务 = "820";
+        public const string 盘后基金拆分业务 = "821";
+        public const string 跨市场ETF现金申购 = "825";
+        public const string 跨市场ETF现金赎回 = "826";
+        public const string 跨市场ETF申购 = "827";
+        public const string 跨市场ETF赎回 = "828";
+        public const string 盘后跨市场ETF申赎冲销 = "829";
+        public const string 上证LOF认购 = "830";
+        public const string 上证LOF申购 = "831";
+        public const string 上证LOF赎回 = "832";
+        public const string 上证LOF转托管 = "833";
+        public const string 上证LOF拆分 = "834";
+        public const string 上证LOF合并 = "835";
+        public const string 限售股 = "850";
+        public const string 报价回购初始交易 = "855";
+        public const string 报价回购购回交易 = "856";
+        public const string 报价回购质押入库 = "865";
+        public const string 报价回购质押出库 = "866";
+        public const string 约定购回初始交易 = "870";
+        public const string 约定购回购回交易 = "871";
+        public const string 约定购回调账回补 = "872";
+        public const string 约定购回调账购回 = "873";
+        public const string 股票质押初始交易 = "880";
+        public const string 股票质押购回交易 = "881";
+        public const string 股票质押补充质押 = "882";
+        public const string 股票质押解除质押 = "883";
+        public const string 股票质押终止购回 = "884";
+        public const string 股票质押违约处置 = "885";
+        public const string 证券买入_大宗 = "950";
+        public const string 证券卖出_大宗 = "951";
+        public const string 柜台单费处理 = "981";
+        public const string 柜台股息红利差别化个税补税处理 = "991";
+        public const string 柜台股权激励自主行权延时扣税处理 = "992";
     }
 
     /// <summary>

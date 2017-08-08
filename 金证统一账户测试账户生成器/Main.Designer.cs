@@ -406,6 +406,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenAccountByOneClick.TabIndex = 54;
             this.btnOpenAccountByOneClick.Text = "一站式开户";
             this.btnOpenAccountByOneClick.UseVisualStyleBackColor = true;
+            this.btnOpenAccountByOneClick.Click += new System.EventHandler(this.btnOpenAccountByOneClick_Click);
             // 
             // tbxSZAcct
             // 
