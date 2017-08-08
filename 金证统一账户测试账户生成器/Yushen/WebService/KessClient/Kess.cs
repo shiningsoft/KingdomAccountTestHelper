@@ -163,7 +163,7 @@ namespace Yushen.WebService.KessClient
         {
             if (user.cust_code == "")
             {
-                string message = "必要参数用户代码不能为空";
+                string message = "用户代码不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
@@ -196,13 +196,13 @@ namespace Yushen.WebService.KessClient
             // 前置条件判断
             if (user.cust_code == "")
             {
-                string message = "必要参数客户代码不能为空";
+                string message = "客户代码不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
             if (user.password == "")
             {
-                string message = "必要参数密码不能为空";
+                string message = "密码不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
@@ -241,7 +241,7 @@ namespace Yushen.WebService.KessClient
             // 前置条件判断
             if (user.cust_code == "")
             {
-                string message = "必要参数客户代码不能为空";
+                string message = "客户代码不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
@@ -376,7 +376,7 @@ namespace Yushen.WebService.KessClient
             // 前置条件判断
             if (CUST_CODE=="")
             {
-                throw new Exception("必要参数客户代码不能为空");
+                throw new Exception("客户代码不能为空");
             }
 
             // 初始化请求
@@ -571,6 +571,10 @@ namespace Yushen.WebService.KessClient
         public Response openStkAcct(User user, string ACCT_TYPE, int timeout = 30)
         {
             // 前置条件判断
+            if (user.ymt_code=="")
+            {
+                throw new Exception("一码通不能为空");
+            }
 
             // 初始化请求
 
@@ -736,7 +740,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user">用户对象</param>
         /// <returns></returns>
-        public bool validateIdCode(User user)
+        public Response validateIdCode(User user)
         {
             // 前置条件判断
             if (user.id_code == "")
@@ -772,14 +776,7 @@ namespace Yushen.WebService.KessClient
             }
 
             // 返回结果
-            if (response.getValue("ID_CODE_CHKRLT") =="一致")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return response;
         }
 
         /// <summary>

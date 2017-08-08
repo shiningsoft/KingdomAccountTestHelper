@@ -491,14 +491,16 @@ namespace 金证统一账户测试账户生成器
                             kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
                         }
 
-                        bool result = kess.validateIdCode(user);
-                        if (result)
+                        Response response = kess.validateIdCode(user);
+
+                        // 返回结果
+                        if (response.getValue("ID_CODE_CHKRLT") == "一致")
                         {
                             resultForm.Append("公安校验通过");
                         }
                         else
                         {
-                            resultForm.Append("公安校验未通过");
+                            resultForm.Append("公安校验未通过：" + response.getValue("ID_CODE_CHKRLT"));
                         }
                     }
                     catch (Exception ex)

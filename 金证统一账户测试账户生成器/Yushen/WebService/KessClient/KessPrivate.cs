@@ -162,13 +162,13 @@ namespace Yushen.WebService.KessClient
             // 前置条件判断
             if (OPERATOR_TYPE == "")
             {
-                string message = "必要参数操作类型不能为空";
+                string message = "操作类型不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
             if (ACCTBIZ_EXCODE == "")
             {
-                string message = "必要参数业务类型不能为空";
+                string message = "业务类型不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
@@ -431,13 +431,13 @@ namespace Yushen.WebService.KessClient
             // 前置条件判断
             if (SERIAL_NO == "")
             {
-                string message = "必要参数流水号不能为空";
+                string message = "流水号不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
             if (ACCTBIZ_EXCODE == "")
             {
-                string message = "必要参数业务类型不能为空";
+                string message = "业务类型不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
