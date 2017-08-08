@@ -170,6 +170,9 @@
     <Content Include="Yushen\WebService\KessClient\Xml\syncSurveyAns2Kbss.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\validateIdCode.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <EmbeddedResource Include="AboutBox.resx">
       <DependentUpon>AboutBox.cs</DependentUpon>
     </EmbeddedResource>

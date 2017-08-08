@@ -107,6 +107,7 @@ namespace 金证统一账户测试账户生成器
             this.education = new System.Windows.Forms.ComboBox();
             this.citizenship = new System.Windows.Forms.ComboBox();
             this.sex = new System.Windows.Forms.ComboBox();
+            this.btnValidateId = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -138,7 +139,7 @@ namespace 金证统一账户测试账户生成器
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -253,6 +254,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnValidateId);
             this.tabPage1.Controls.Add(this.sex);
             this.tabPage1.Controls.Add(this.citizenship);
             this.tabPage1.Controls.Add(this.education);
@@ -843,6 +845,16 @@ namespace 金证统一账户测试账户生成器
             this.sex.Size = new System.Drawing.Size(100, 20);
             this.sex.TabIndex = 68;
             // 
+            // btnValidateId
+            // 
+            this.btnValidateId.Location = new System.Drawing.Point(826, 241);
+            this.btnValidateId.Name = "btnValidateId";
+            this.btnValidateId.Size = new System.Drawing.Size(86, 23);
+            this.btnValidateId.TabIndex = 69;
+            this.btnValidateId.Text = "中登公安校验";
+            this.btnValidateId.UseVisualStyleBackColor = true;
+            this.btnValidateId.Click += new System.EventHandler(this.btnValidateId_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -941,6 +953,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ComboBox occu_type;
         private System.Windows.Forms.ComboBox nationality;
         private System.Windows.Forms.ComboBox sex;
+        private System.Windows.Forms.Button btnValidateId;
     }
 }
 

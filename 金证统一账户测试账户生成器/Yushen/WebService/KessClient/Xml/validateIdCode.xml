@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//见证类别DD[WEB_BIZ]-->
+    <WEB_BIZ></WEB_BIZ>
+    <!--//操作员-->
+    <USER_CODE></USER_CODE>
+    <!--//用户名称（必填）-->
+    <USER_NAME></USER_NAME>
+    <!--//证件号码（必填）-->
+    <ID_CODE></ID_CODE>
+    <!--//请求标志固定为0，可不用传此值-->
+    <REQFLAG>0</REQFLAG>
+    <!--//民族DD[NATIONALITY]-->
+    <NATIONALITY></NATIONALITY>
+    <!--//性别DD[SEX]-->
+    <SEX></SEX>
+    <!--//出生日期（必填）-->
+    <BIRTHDAY></BIRTHDAY>
+  </data>
+</request>

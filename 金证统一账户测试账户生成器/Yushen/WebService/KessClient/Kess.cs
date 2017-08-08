@@ -732,6 +732,57 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
+        /// 2.14 公安联网校验查询
+        /// </summary>
+        /// <param name="user">用户对象</param>
+        /// <returns></returns>
+        public bool validateIdCode(User user)
+        {
+            // 前置条件判断
+            if (user.id_code == "")
+            {
+                throw new Exception("证件代码不能为空");
+            }
+            if (user.user_fname == "")
+            {
+                throw new Exception("用户全称不能为空");
+            }
+            if (user.birthday == "")
+            {
+                throw new Exception("出生日期不能为空");
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "validateIdCode");
+            request.setAttr("WEB_BIZ", Dict.WEB_BIZ.网上自助);
+            request.setAttr("USER_CODE", this.operatorId);
+            request.setAttr("USER_NAME", user.user_fname);
+            request.setAttr("REQFLAG", "0");
+            request.setAttr("ID_CODE", user.id_code);
+            request.setAttr("NATIONALITY", user.nationality);
+            request.setAttr("BIRTHDAY", user.birthday);
+            
+            // 调用WebService获取返回值
+            Response response = new Response(this.invoke(request));
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1") 
+            {
+                throw new Exception("公安校验失败：" + response.prompt);
+            }
+
+            // 返回结果
+            if (response.getValue("ID_CODE_CHKRLT") =="一致")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
         /// 析构函数
         /// </summary>
         public void Dispose()
