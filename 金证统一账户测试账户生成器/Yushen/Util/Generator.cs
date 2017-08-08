@@ -82,9 +82,9 @@ namespace Yushen.Util
         /// <param name="startnumber">起始数字</param>
         /// <param name="endnumber">结束数字</param>
         /// <returns></returns>
-        public static int CreateRandomNumber(int startnumber, int endnumber)
+        public static int CreateRandomInteger(int start, int end)
         {
-            return rnd.Next(startnumber, endnumber);
+            return rnd.Next(start, end);
         }
 
         /// <summary>

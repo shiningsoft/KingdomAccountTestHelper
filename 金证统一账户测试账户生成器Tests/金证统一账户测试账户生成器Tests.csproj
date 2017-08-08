@@ -51,7 +51,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Yushen\Util\IDCardNumberTests.cs" />
     <Compile Include="Yushen\Util\ValidatorTests.cs" />
   </ItemGroup>
   <ItemGroup>

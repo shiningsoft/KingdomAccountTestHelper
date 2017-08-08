@@ -178,8 +178,8 @@ namespace 金证统一账户测试账户生成器
             risk_level.SelectedValue = Dict.RiskTestLevel.积极型;
             occu_type.SelectedValue = Dict.OCCU_EXTYPE.行政企事业单位工人;
             citizenship.SelectedValue = Dict.CITIZENSHIP.中国;
-            education.SelectedIndex = Generator.CreateRandomNumber(0, education.Items.Count);
-            bank_code.SelectedIndex = Generator.CreateRandomNumber(0, bank_code.Items.Count);
+            education.SelectedIndex = Generator.CreateRandomInteger(0, education.Items.Count);
+            bank_code.SelectedIndex = Generator.CreateRandomInteger(0, bank_code.Items.Count);
 
             saveUserInfo();
         }
