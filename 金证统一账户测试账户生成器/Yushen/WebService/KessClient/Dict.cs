@@ -5,7 +5,9 @@ using System.Reflection;
 using Yushen.Util;
 
 /// <summary>
-/// 统一账户系统数据字典
+/// 系统数据字典
+/// 纯大写字母为统一账户标准数据字典
+/// 驼峰命名法为自定义数据字典
 /// </summary>
 namespace Yushen.WebService.KessClient.Dict
 {
@@ -21,11 +23,28 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 激进型 = "E";
     }
 
-    class Bank : Dict
+    /// <summary>
+    /// 银行代码
+    /// </summary>
+    class BankCode : Dict
     {
-
+        public const string 农业银行 = "5100";
+        public const string 招商银行 = "5500";
+        public const string 建设银行 = "5000";
+        public const string 中国银行 = "5300";
+        public const string 工商银行 = "5200";
+        public const string 兴业银行 = "5700";
+        public const string 光大银行 = "5800";
+        public const string 交通银行 = "5400";
+        public const string 中信银行 = "5600";
+        public const string 民生银行 = "6000";
+        public const string 平安银行 = "6100";
+        public const string 上海银行 = "7100";
+        public const string 华夏银行 = "5900";
+        public const string 广发银行 = "6200";
+        public const string 邮储银行 = "8500";
+        public const string 浦发银行 = "6300";
     }
-
     /// <summary>
     /// 用户类型
     /// </summary>
@@ -579,6 +598,18 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 证券从业人员 = "10";
         public const string 离退休 = "11";
         public const string 其他 = "99";
+    }
+    /// <summary>
+    /// 远程同步系统（风险测评）
+    /// </summary>
+    class SURVEY_SYN : Dict
+    {
+        public const string 集中交易系统 = "0";
+        public const string 融资融券系统 = "1";
+        public const string OTC系统 = "2";
+        public const string 股票期权系统 = "3";
+        public const string 集中交易系统_存在客户号 = "4";
+        public const string 不同步 = "9";
     }
 
     /// <summary>

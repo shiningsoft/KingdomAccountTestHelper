@@ -76,7 +76,6 @@ namespace 金证统一账户测试账户生成器
             this.risk_level = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
-            this.bank_code = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.TextBox();
             this.button3 = new System.Windows.Forms.Button();
@@ -108,6 +107,7 @@ namespace 金证统一账户测试账户生成器
             this.citizenship = new System.Windows.Forms.ComboBox();
             this.sex = new System.Windows.Forms.ComboBox();
             this.btnValidateId = new System.Windows.Forms.Button();
+            this.bank_code = new System.Windows.Forms.ComboBox();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -254,6 +254,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.bank_code);
             this.tabPage1.Controls.Add(this.btnValidateId);
             this.tabPage1.Controls.Add(this.sex);
             this.tabPage1.Controls.Add(this.citizenship);
@@ -285,7 +286,6 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Controls.Add(this.risk_level);
             this.tabPage1.Controls.Add(this.label16);
             this.tabPage1.Controls.Add(this.label15);
-            this.tabPage1.Controls.Add(this.bank_code);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.password);
             this.tabPage1.Controls.Add(this.button3);
@@ -554,14 +554,6 @@ namespace 金证统一账户测试账户生成器
             this.label15.TabIndex = 36;
             this.label15.Text = "存管银行：";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // bank_code
-            // 
-            this.bank_code.Location = new System.Drawing.Point(458, 39);
-            this.bank_code.Name = "bank_code";
-            this.bank_code.Size = new System.Drawing.Size(100, 21);
-            this.bank_code.TabIndex = 35;
-            this.bank_code.Text = "5900";
             // 
             // label1
             // 
@@ -855,6 +847,15 @@ namespace 金证统一账户测试账户生成器
             this.btnValidateId.UseVisualStyleBackColor = true;
             this.btnValidateId.Click += new System.EventHandler(this.btnValidateId_Click);
             // 
+            // bank_code
+            // 
+            this.bank_code.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.bank_code.FormattingEnabled = true;
+            this.bank_code.Location = new System.Drawing.Point(458, 39);
+            this.bank_code.Name = "bank_code";
+            this.bank_code.Size = new System.Drawing.Size(100, 20);
+            this.bank_code.TabIndex = 70;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -922,7 +923,6 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox password;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox bank_code;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox risk_level;
         private System.Windows.Forms.Button btnOpenStockAccount;
@@ -954,6 +954,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ComboBox nationality;
         private System.Windows.Forms.ComboBox sex;
         private System.Windows.Forms.Button btnValidateId;
+        private System.Windows.Forms.ComboBox bank_code;
     }
 }
 

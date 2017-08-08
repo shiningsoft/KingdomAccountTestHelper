@@ -151,6 +151,11 @@ namespace 金证统一账户测试账户生成器
             citizenship.ValueMember = "value";
             citizenship.DataSource = citizenshipList.DataTable;
 
+            Dict.BankCode bankCodeList = new Dict.BankCode();
+            bank_code.DisplayMember = "name";
+            bank_code.ValueMember = "value";
+            bank_code.DataSource = bankCodeList.DataTable;
+
             // 初始化WebService连接
             if (kess == null)
             {
@@ -174,6 +179,7 @@ namespace 金证统一账户测试账户生成器
             occu_type.SelectedValue = Dict.OCCU_EXTYPE.行政企事业单位工人;
             citizenship.SelectedValue = Dict.CITIZENSHIP.中国;
             education.SelectedIndex = Generator.CreateRandomNumber(0, education.Items.Count);
+            bank_code.SelectedIndex = Generator.CreateRandomNumber(0, bank_code.Items.Count);
 
             saveUserInfo();
         }
@@ -199,7 +205,7 @@ namespace 金证统一账户测试账户生成器
             user.mobile_tel = mobile_tel.Text.Trim();
             user.occu_type = occu_type.SelectedValue.ToString();
             user.education = education.SelectedValue.ToString();
-            user.bank_code = bank_code.Text.Trim();
+            user.bank_code = bank_code.SelectedValue.ToString();
             user.zip_code = zip_code.Text.Trim();
             user.sex = sex.SelectedValue.ToString();
             user.int_org = "19";
