@@ -534,14 +534,6 @@ namespace Yushen.WebService.KessClient
             Response response = new Response(this.invoke(request));
 
             // 判断返回的操作结果是否异常
-            // if (response.flag != "0" && response.flag != "1")
-            if (response.flag != "1")
-            {
-                string message = "操作失败：" + response.prompt;
-                logger.Error(message);
-                throw new Exception(message);
-            }
-
             if (response.flag == "1")
             {
                 string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
@@ -550,6 +542,16 @@ namespace Yushen.WebService.KessClient
                     response.prompt = response.getValue("RETURN_MSG");
                     response.empty();
                 }
+            }
+            else if (response.flag == "0" && response.prompt== "中登接口调用失败: 在当前条件下查找不到相应的记录.")
+            {
+                response.flag = "1";
+            }
+            else
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
             }
 
             // 返回结果

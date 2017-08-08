@@ -46,10 +46,17 @@ namespace 金证统一账户测试账户生成器
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPageGetDict = new System.Windows.Forms.TabPage();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnLogin = new System.Windows.Forms.Button();
+            this.tbxSex = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.zip_code = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.btnOpenYMT = new System.Windows.Forms.Button();
             this.btnOpenCYB = new System.Windows.Forms.Button();
             this.tbxYMTCode = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
@@ -100,18 +107,11 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenUserCode = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.btnOpenYMT = new System.Windows.Forms.Button();
-            this.zip_code = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.tbxSex = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -207,6 +207,23 @@ namespace 金证统一账户测试账户生成器
             this.tabPageGetDict.Text = "数据字典查询";
             this.tabPageGetDict.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(7, 33);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(905, 397);
+            this.dataGridView1.TabIndex = 11;
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(363, 5);
@@ -299,12 +316,67 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnLogin
+            // 
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogin.Location = new System.Drawing.Point(812, 37);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(100, 23);
+            this.btnLogin.TabIndex = 63;
+            this.btnLogin.Text = "操作员登录";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
+            // 
+            // tbxSex
+            // 
+            this.tbxSex.Location = new System.Drawing.Point(639, 12);
+            this.tbxSex.Name = "tbxSex";
+            this.tbxSex.Size = new System.Drawing.Size(100, 21);
+            this.tbxSex.TabIndex = 61;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(592, 15);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(41, 12);
+            this.label22.TabIndex = 62;
+            this.label22.Text = "性别：";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // zip_code
+            // 
+            this.zip_code.Location = new System.Drawing.Point(266, 173);
+            this.zip_code.Name = "zip_code";
+            this.zip_code.Size = new System.Drawing.Size(100, 21);
+            this.zip_code.TabIndex = 60;
+            this.zip_code.Text = "230000";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(219, 176);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(41, 12);
+            this.label21.TabIndex = 59;
+            this.label21.Text = "邮编：";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btnOpenYMT
+            // 
+            this.btnOpenYMT.Location = new System.Drawing.Point(653, 204);
+            this.btnOpenYMT.Name = "btnOpenYMT";
+            this.btnOpenYMT.Size = new System.Drawing.Size(86, 23);
+            this.btnOpenYMT.TabIndex = 58;
+            this.btnOpenYMT.Text = "开一码通";
+            this.btnOpenYMT.UseVisualStyleBackColor = true;
+            this.btnOpenYMT.Click += new System.EventHandler(this.btnOpenYMT_Click);
+            // 
             // btnOpenCYB
             // 
-            this.btnOpenCYB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnOpenCYB.Location = new System.Drawing.Point(463, 243);
+            this.btnOpenCYB.Location = new System.Drawing.Point(467, 241);
             this.btnOpenCYB.Name = "btnOpenCYB";
-            this.btnOpenCYB.Size = new System.Drawing.Size(90, 23);
+            this.btnOpenCYB.Size = new System.Drawing.Size(88, 23);
             this.btnOpenCYB.TabIndex = 57;
             this.btnOpenCYB.Text = "开通创业板";
             this.btnOpenCYB.UseVisualStyleBackColor = true;
@@ -514,7 +586,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Location = new System.Drawing.Point(812, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 23);
@@ -763,79 +835,6 @@ namespace 金证统一账户测试账户生成器
             this.tabControl1.Size = new System.Drawing.Size(926, 462);
             this.tabControl1.TabIndex = 9;
             // 
-            // btnOpenYMT
-            // 
-            this.btnOpenYMT.Location = new System.Drawing.Point(653, 204);
-            this.btnOpenYMT.Name = "btnOpenYMT";
-            this.btnOpenYMT.Size = new System.Drawing.Size(86, 23);
-            this.btnOpenYMT.TabIndex = 58;
-            this.btnOpenYMT.Text = "开一码通";
-            this.btnOpenYMT.UseVisualStyleBackColor = true;
-            this.btnOpenYMT.Click += new System.EventHandler(this.btnOpenYMT_Click);
-            // 
-            // zip_code
-            // 
-            this.zip_code.Location = new System.Drawing.Point(266, 173);
-            this.zip_code.Name = "zip_code";
-            this.zip_code.Size = new System.Drawing.Size(100, 21);
-            this.zip_code.TabIndex = 60;
-            this.zip_code.Text = "230000";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(219, 176);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(41, 12);
-            this.label21.TabIndex = 59;
-            this.label21.Text = "邮编：";
-            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tbxSex
-            // 
-            this.tbxSex.Location = new System.Drawing.Point(639, 12);
-            this.tbxSex.Name = "tbxSex";
-            this.tbxSex.Size = new System.Drawing.Size(100, 21);
-            this.tbxSex.TabIndex = 61;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(592, 15);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(41, 12);
-            this.label22.TabIndex = 62;
-            this.label22.Text = "性别：";
-            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 33);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(905, 397);
-            this.dataGridView1.TabIndex = 11;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogin.Location = new System.Drawing.Point(812, 37);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(100, 23);
-            this.btnLogin.TabIndex = 63;
-            this.btnLogin.Text = "操作员登录";
-            this.btnLogin.UseVisualStyleBackColor = true;
-            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -851,10 +850,10 @@ namespace 金证统一账户测试账户生成器
             this.menuStrip.PerformLayout();
             this.tabPageGetDict.ResumeLayout(false);
             this.tabPageGetDict.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

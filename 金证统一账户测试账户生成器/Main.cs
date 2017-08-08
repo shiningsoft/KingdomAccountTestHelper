@@ -47,7 +47,7 @@ namespace 金证统一账户测试账户生成器
                         user.id_iss_agcy = id_iss_agcy.Text;
                         user.id_beg_date = id_beg_date.Text;
                         user.id_exp_date = id_exp_date.Text;
-                        user.linkaddr_order = id_addr.Text;
+                        user.linkaddr_order = Dict.LINKADDR_ORDER.家庭地址;
                         user.address = id_addr.Text;
                         user.citizenship = citizenship.Text;
                         user.nationality = nationality.Text;
@@ -261,16 +261,23 @@ namespace 金证统一账户测试账户生成器
             Task task = Task.Run(() =>
             {
                 this.Invoke((MethodInvoker)(() => {
-                    // 建立WebService连接
-                    if (kess == null)
+                    try
                     {
-                        kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                        // 建立WebService连接
+                        if (kess == null)
+                        {
+                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                        }
+
+                        user.cuacct_code = kess.openCuacctCode(user);
+
+                        resultForm.Append("资金账号开立成功：" + user.cuacct_code);
+                        tbxCuacct.Text = user.cuacct_code;
                     }
-
-                    user.cuacct_code = kess.openCuacctCode(user);
-
-                    resultForm.Append("资金账号开立成功：" + user.cuacct_code);
-                    tbxCuacct.Text = user.cuacct_code;
+                    catch (Exception ex)
+                    {
+                        resultForm.Append(ex.Message);
+                    }
                 }));
             });
         }

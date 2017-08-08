@@ -31,6 +31,16 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 签约类别
+    /// </summary>
+    class SIGN_CLS : Dict
+    {
+        public const string T加0开通 = "0";
+        public const string T加2开通交易 = "2";
+        public const string T加5开通交易 = "5";
+        public const string 无需在本公司签署风险揭示书 = "A";
+    }
+    /// <summary>
     /// 操作渠道
     /// </summary>
     class CHANNEL : Dict
@@ -47,6 +57,15 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 呼叫中心 = "9";
         public const string 手机炒股 = "a";
         public const string PB委托 = "p";
+    }
+
+    /// <summary>
+    /// 首选联系地址
+    /// </summary>
+    class LINKADDR_ORDER : Dict
+    {
+        public const string 家庭地址 = "1";
+        public const string 单位地址 = "2";
     }
 
     /// <summary>
