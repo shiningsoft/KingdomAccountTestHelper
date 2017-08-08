@@ -374,7 +374,10 @@ namespace Yushen.WebService.KessClient
                                     )
         {
             // 前置条件判断
-
+            if (CUST_CODE=="")
+            {
+                throw new Exception("必要参数客户代码不能为空");
+            }
 
             // 初始化请求
             Request request = new Request(this.operatorId, "openYMTAcct");

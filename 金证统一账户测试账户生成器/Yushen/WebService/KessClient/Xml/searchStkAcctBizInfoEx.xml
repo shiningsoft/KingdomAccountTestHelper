@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//流水序号（必传）-->
+    <SERIAL_NO></SERIAL_NO>
+  </data>
+</request>

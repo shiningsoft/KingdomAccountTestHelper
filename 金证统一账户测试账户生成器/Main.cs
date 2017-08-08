@@ -50,15 +50,15 @@ namespace 金证统一账户测试账户生成器
                         user.linktel_order = Dict.LINKTEL_ORDER.手机;
                         user.linkaddr_order = Dict.LINKADDR_ORDER.家庭地址;
                         user.address = id_addr.Text.Trim();
-                        user.citizenship = citizenship.Text.Trim();
-                        user.nationality = nationality.Text.Trim();
+                        user.citizenship = citizenship.SelectedValue.ToString();
+                        user.nationality = nationality.SelectedValue.ToString();
                         user.password = password.Text.Trim();
                         user.mobile_tel = mobile_tel.Text.Trim();
-                        user.occu_type = occu_type.Text.Trim();
-                        user.education = education.Text.Trim();
+                        user.occu_type = occu_type.SelectedValue.ToString();
+                        user.education = education.SelectedValue.ToString();
                         user.bank_code = bank_code.Text.Trim();
                         user.zip_code = zip_code.Text.Trim();
-                        user.sex = tbxSex.Text.Trim();
+                        user.sex = sex.SelectedValue.ToString();
                         user.int_org = "19";
                         user.cust_cls = Dict.CUST_CLS.标准客户;
                         user.cust_type = Dict.CUST_TYPE.普通;
@@ -80,11 +80,12 @@ namespace 金证统一账户测试账户生成器
 
         private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void 关于ToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -145,12 +146,37 @@ namespace 金证统一账户测试账户生成器
         private void Main_Load(object sender, EventArgs e)
         {
             // 初始化风险评级选项
-            RiskTest riskTest = new RiskTest();
+            // RiskTest riskTest = new RiskTest();
             Dict.RiskTestLevel levelList = new Dict.RiskTestLevel();
             risk_level.DisplayMember = "name";
             risk_level.ValueMember = "value";
             risk_level.DataSource = levelList.DataTable;
-            
+
+            Dict.NATIONALITY nationalityList = new Dict.NATIONALITY();
+            nationality.DisplayMember = "name";
+            nationality.ValueMember = "value";
+            nationality.DataSource = nationalityList.DataTable;
+
+            Dict.SEX sexList = new Dict.SEX();
+            sex.DisplayMember = "name";
+            sex.ValueMember = "value";
+            sex.DataSource = sexList.DataTable;
+
+            Dict.OCCU_EXTYPE occuList = new Dict.OCCU_EXTYPE();
+            occu_type.DisplayMember = "name";
+            occu_type.ValueMember = "value";
+            occu_type.DataSource = occuList.DataTable;
+
+            Dict.EDUCATION eduList = new Dict.EDUCATION();
+            education.DisplayMember = "name";
+            education.ValueMember = "value";
+            education.DataSource = eduList.DataTable;
+
+            Dict.CITIZENSHIP citizenshipList = new Dict.CITIZENSHIP();
+            citizenship.DisplayMember = "name";
+            citizenship.ValueMember = "value";
+            citizenship.DataSource = citizenshipList.DataTable;
+
             // 初始化WebService连接
             if (kess == null)
             {
@@ -168,9 +194,12 @@ namespace 金证统一账户测试账户生成器
             user_name.Text = Generator.CreateChineseName();
             IDCardNumber idcard = IDCardNumber.Random();
             id_code.Text = idcard.CardNumber;
-            tbxSex.Text = idcard.Sex.ToString();
 
-            risk_level.SelectedValue = "E"; // 激进型
+            sex.SelectedValue = idcard.Sex.ToString();
+            risk_level.SelectedValue = Dict.RiskTestLevel.积极型;
+            occu_type.SelectedValue = Dict.OCCU_EXTYPE.行政企事业单位工人;
+            citizenship.SelectedValue = Dict.CITIZENSHIP.中国;
+            education.SelectedIndex = Generator.CreateRandomNumber(0, education.Items.Count);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -433,6 +462,11 @@ namespace 金证统一账户测试账户生成器
         private void btnOpenAccountByOneClick_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnOpenCYB_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

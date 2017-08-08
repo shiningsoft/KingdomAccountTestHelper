@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//操作类型（必传）-->
+    <OPER_TYPE></OPER_TYPE>
+    <!--//客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--//控制人编码（非必传）-->
+    <CONTROLLER_NUM></CONTROLLER_NUM>
+    <!--//控制人姓名（非必传）-->
+    <CONTROLLER_NAME></CONTROLLER_NAME>
+    <!--//控制人证件类型（非必传）-->
+    <CONTROLLER_ID_TYPE></CONTROLLER_ID_TYPE>
+    <!--//控制人证件号码（必传）-->
+    <CONTROLLER_ID_CODE></CONTROLLER_ID_CODE>
+    <!--//控制人证件有效期（非必传）-->
+    <CONTROLLER_ID_EXP_DATE></CONTROLLER_ID_EXP_DATE>
+    <!--//控制人电话（非必传）-->
+    <CONTROLLER_TEL></CONTROLLER_TEL>
+    <!--//控制人邮箱（非必传）-->
+    <CONTROLLER_EMAIL></CONTROLLER_EMAIL>
+    <!--//控制人与本人关系（非必传）-->
+    <CONTROLLER_RELATION></CONTROLLER_RELATION>
+    <!--//备注（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

@@ -52,7 +52,6 @@ namespace 金证统一账户测试账户生成器
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.btnLogin = new System.Windows.Forms.Button();
-            this.tbxSex = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.zip_code = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -86,10 +85,6 @@ namespace 金证统一账户测试账户生成器
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.mobile_tel = new System.Windows.Forms.TextBox();
-            this.citizenship = new System.Windows.Forms.TextBox();
-            this.education = new System.Windows.Forms.TextBox();
-            this.occu_type = new System.Windows.Forms.TextBox();
-            this.nationality = new System.Windows.Forms.TextBox();
             this.id_addr = new System.Windows.Forms.TextBox();
             this.id_iss_agcy = new System.Windows.Forms.TextBox();
             this.id_code = new System.Windows.Forms.TextBox();
@@ -107,6 +102,11 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenUserCode = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.nationality = new System.Windows.Forms.ComboBox();
+            this.occu_type = new System.Windows.Forms.ComboBox();
+            this.education = new System.Windows.Forms.ComboBox();
+            this.citizenship = new System.Windows.Forms.ComboBox();
+            this.sex = new System.Windows.Forms.ComboBox();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -253,8 +253,12 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.sex);
+            this.tabPage1.Controls.Add(this.citizenship);
+            this.tabPage1.Controls.Add(this.education);
+            this.tabPage1.Controls.Add(this.occu_type);
+            this.tabPage1.Controls.Add(this.nationality);
             this.tabPage1.Controls.Add(this.btnLogin);
-            this.tabPage1.Controls.Add(this.tbxSex);
             this.tabPage1.Controls.Add(this.label22);
             this.tabPage1.Controls.Add(this.zip_code);
             this.tabPage1.Controls.Add(this.label21);
@@ -288,10 +292,6 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Controls.Add(this.label13);
             this.tabPage1.Controls.Add(this.label12);
             this.tabPage1.Controls.Add(this.mobile_tel);
-            this.tabPage1.Controls.Add(this.citizenship);
-            this.tabPage1.Controls.Add(this.education);
-            this.tabPage1.Controls.Add(this.occu_type);
-            this.tabPage1.Controls.Add(this.nationality);
             this.tabPage1.Controls.Add(this.id_addr);
             this.tabPage1.Controls.Add(this.id_iss_agcy);
             this.tabPage1.Controls.Add(this.id_code);
@@ -326,13 +326,6 @@ namespace 金证统一账户测试账户生成器
             this.btnLogin.Text = "操作员登录";
             this.btnLogin.UseVisualStyleBackColor = true;
             this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
-            // 
-            // tbxSex
-            // 
-            this.tbxSex.Location = new System.Drawing.Point(639, 12);
-            this.tbxSex.Name = "tbxSex";
-            this.tbxSex.Size = new System.Drawing.Size(100, 21);
-            this.tbxSex.TabIndex = 61;
             // 
             // label22
             // 
@@ -378,8 +371,9 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenCYB.Name = "btnOpenCYB";
             this.btnOpenCYB.Size = new System.Drawing.Size(88, 23);
             this.btnOpenCYB.TabIndex = 57;
-            this.btnOpenCYB.Text = "开通创业板";
+            this.btnOpenCYB.Text = "签署创业板";
             this.btnOpenCYB.UseVisualStyleBackColor = true;
+            this.btnOpenCYB.Click += new System.EventHandler(this.btnOpenCYB_Click);
             // 
             // tbxYMTCode
             // 
@@ -475,7 +469,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenStockAccount.Name = "btnOpenStockAccount";
             this.btnOpenStockAccount.Size = new System.Drawing.Size(75, 23);
             this.btnOpenStockAccount.TabIndex = 46;
-            this.btnOpenStockAccount.Text = "开股东户";
+            this.btnOpenStockAccount.Text = "新开股东户";
             this.btnOpenStockAccount.UseVisualStyleBackColor = true;
             this.btnOpenStockAccount.Click += new System.EventHandler(this.btnOpenStockAccount_Click);
             // 
@@ -644,38 +638,6 @@ namespace 金证统一账户测试账户生成器
             this.mobile_tel.TabIndex = 26;
             this.mobile_tel.Text = "18655958868";
             // 
-            // citizenship
-            // 
-            this.citizenship.Location = new System.Drawing.Point(458, 173);
-            this.citizenship.Name = "citizenship";
-            this.citizenship.Size = new System.Drawing.Size(100, 21);
-            this.citizenship.TabIndex = 24;
-            this.citizenship.Text = "CHN";
-            // 
-            // education
-            // 
-            this.education.Location = new System.Drawing.Point(458, 146);
-            this.education.Name = "education";
-            this.education.Size = new System.Drawing.Size(100, 21);
-            this.education.TabIndex = 22;
-            this.education.Text = "2";
-            // 
-            // occu_type
-            // 
-            this.occu_type.Location = new System.Drawing.Point(458, 119);
-            this.occu_type.Name = "occu_type";
-            this.occu_type.Size = new System.Drawing.Size(100, 21);
-            this.occu_type.TabIndex = 20;
-            this.occu_type.Text = "04";
-            // 
-            // nationality
-            // 
-            this.nationality.Location = new System.Drawing.Point(458, 92);
-            this.nationality.Name = "nationality";
-            this.nationality.Size = new System.Drawing.Size(100, 21);
-            this.nationality.TabIndex = 18;
-            this.nationality.Text = "00";
-            // 
             // id_addr
             // 
             this.id_addr.Location = new System.Drawing.Point(105, 147);
@@ -836,6 +798,51 @@ namespace 金证统一账户测试账户生成器
             this.tabControl1.Size = new System.Drawing.Size(926, 462);
             this.tabControl1.TabIndex = 9;
             // 
+            // nationality
+            // 
+            this.nationality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.nationality.FormattingEnabled = true;
+            this.nationality.Location = new System.Drawing.Point(458, 92);
+            this.nationality.Name = "nationality";
+            this.nationality.Size = new System.Drawing.Size(100, 20);
+            this.nationality.TabIndex = 64;
+            // 
+            // occu_type
+            // 
+            this.occu_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.occu_type.FormattingEnabled = true;
+            this.occu_type.Location = new System.Drawing.Point(458, 119);
+            this.occu_type.Name = "occu_type";
+            this.occu_type.Size = new System.Drawing.Size(100, 20);
+            this.occu_type.TabIndex = 65;
+            // 
+            // education
+            // 
+            this.education.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.education.FormattingEnabled = true;
+            this.education.Location = new System.Drawing.Point(458, 145);
+            this.education.Name = "education";
+            this.education.Size = new System.Drawing.Size(100, 20);
+            this.education.TabIndex = 66;
+            // 
+            // citizenship
+            // 
+            this.citizenship.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.citizenship.FormattingEnabled = true;
+            this.citizenship.Location = new System.Drawing.Point(458, 173);
+            this.citizenship.Name = "citizenship";
+            this.citizenship.Size = new System.Drawing.Size(100, 20);
+            this.citizenship.TabIndex = 67;
+            // 
+            // sex
+            // 
+            this.sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sex.FormattingEnabled = true;
+            this.sex.Location = new System.Drawing.Point(639, 12);
+            this.sex.Name = "sex";
+            this.sex.Size = new System.Drawing.Size(100, 20);
+            this.sex.TabIndex = 68;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -844,6 +851,7 @@ namespace 金证统一账户测试账户生成器
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "金证统一账户测试账户生成器";
             this.Load += new System.EventHandler(this.Main_Load);
@@ -882,10 +890,6 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox mobile_tel;
-        private System.Windows.Forms.TextBox citizenship;
-        private System.Windows.Forms.TextBox education;
-        private System.Windows.Forms.TextBox occu_type;
-        private System.Windows.Forms.TextBox nationality;
         private System.Windows.Forms.TextBox id_addr;
         private System.Windows.Forms.TextBox id_iss_agcy;
         private System.Windows.Forms.TextBox id_code;
@@ -929,10 +933,14 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Button btnOpenYMT;
         private System.Windows.Forms.TextBox zip_code;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.TextBox tbxSex;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.ComboBox citizenship;
+        private System.Windows.Forms.ComboBox education;
+        private System.Windows.Forms.ComboBox occu_type;
+        private System.Windows.Forms.ComboBox nationality;
+        private System.Windows.Forms.ComboBox sex;
     }
 }
 

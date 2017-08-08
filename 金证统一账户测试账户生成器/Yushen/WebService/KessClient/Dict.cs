@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Data;
 using System.Reflection;
+using Yushen.Util;
 
 /// <summary>
 /// 统一账户系统数据字典
@@ -18,6 +19,11 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 稳健型 = "C";
         public const string 积极型 = "D";
         public const string 激进型 = "E";
+    }
+
+    class Bank : Dict
+    {
+
     }
 
     /// <summary>
@@ -98,6 +104,21 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 首选联系地址
+    /// </summary>
+    class EDUCATION : Dict
+    {
+        public const string 博士 = "0";
+        public const string 硕士 = "1";
+        public const string 本科 = "2";
+        public const string 大专 = "3";
+        public const string 中专 = "4";
+        public const string 高中 = "5";
+        public const string 初中以下 = "6";
+        public const string 其他 = "Z";
+    }
+
+    /// <summary>
     /// 反洗钱等级
     /// </summary>
     class AML_LVL : Dict
@@ -157,6 +178,58 @@ namespace Yushen.WebService.KessClient.Dict
         public const string OTC产品电子协议签署 = "20";
         public const string 网上开户电子协议 = "30";
         public const string 金易贷电子协议 = "40";
+    }
+
+
+    /// <summary>
+    /// 电子协议类别
+    /// </summary>
+    class CONTRACT_CLS : Dict
+    {
+        public const string 投顾产品0 = "000";
+        public const string 投顾产品1 = "001";
+        public const string 投顾产品2 = "002";
+        public const string 投顾产品3 = "003";
+        public const string 投顾产品4 = "004";
+        public const string 投顾产品5 = "005";
+        public const string 网上开户业务约定书 = "010";
+        public const string 风险揭示书 = "020";
+        public const string 客户须知 = "030";
+        public const string 上海证券交易所个人投资者行为指引 = "040";
+        public const string 证券交易委托代理协议 = "050";
+        public const string 个人数字证书申请责任书 = "060";
+        public const string 数字证书业务风险提示书 = "070";
+        public const string 三方存管协议 = "100";
+        public const string 兴业银行三方存管协议 = "101";
+        public const string 农业银行三方存管协议 = "102";
+        public const string 招商银行三方存管协议 = "103";
+        public const string 交通银行三方存管协议 = "104";
+        public const string 建设银行三方存管协议 = "105";
+        public const string 工商银行三方存管协议 = "106";
+        public const string 中国银行三方存管协议 = "107";
+        public const string 中信银行三方存管协议 = "108";
+        public const string 华夏银行三方存管协议 = "109";
+        public const string 民生银行三方存管协议 = "10a";
+        public const string 光大银行三方存管协议 = "10b";
+        public const string 平安银行三方存管协议 = "10c";
+        public const string 广发银行三方存管协议 = "10d";
+        public const string 浦发银行三方存管协议 = "10f";
+        public const string 上海银行三方存管协议 = "10g";
+        public const string OTC电子约定书 = "201";
+        public const string OTC电子合同 = "202";
+        public const string 理财协议 = "203";
+        public const string 客户账户开户协议 = "300";
+        public const string 客户须知302 = "302";
+        public const string 指定交易协议 = "303";
+        public const string 沪深权证风险揭示书 = "304";
+        public const string 上海证券交易所风险警示股票交易风险揭示书 = "305";
+        public const string 沪深交易所退市整理期股票交易风险揭示书 = "306";
+        public const string 上海交易所个人投资者行为指引 = "307";
+        public const string 证券交易委托代理协议308 = "308";
+        public const string 证券投资基金投资人权益须知 = "309";
+        public const string 证券交易委托风险揭示书 = "30a";
+        public const string 开放式基金电话委托及网上交易委托协议书 = "30b";
+        public const string 金易贷贷款协议 = "401";
     }
 
     /// <summary>
@@ -407,6 +480,15 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 已发送 = "1";
         public const string 处理成功 = "2";
         public const string 处理失败 = "3";
+    }
+
+    /// <summary>
+    /// 适当性类别
+    /// </summary>
+    class PROPER_CLS : Dict
+    {
+        public const string 创业板 = "1";
+        public const string 其他 = "9";
     }
 
     /// <summary>
@@ -740,6 +822,71 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 柜台股权激励自主行权延时扣税处理 = "992";
     }
 
+
+    /// <summary>
+    /// 是否
+    /// </summary>
+    class NATIONALITY : Dict
+    {
+        public const string 汉族 = "00";
+        public const string 蒙古族 = "01";
+        public const string 回族 = "02";
+        public const string 藏族 = "03";
+        public const string 维吾尔族 = "04";
+        public const string 苗族 = "05";
+        public const string 彝族 = "06";
+        public const string 壮族 = "07";
+        public const string 布依族 = "08";
+        public const string 朝鲜族 = "09";
+        public const string 满族 = "10";
+        public const string 侗族 = "11";
+        public const string 瑶族 = "12";
+        public const string 白族 = "13";
+        public const string 土家族 = "14";
+        public const string 哈尼族 = "15";
+        public const string 哈萨克族 = "16";
+        public const string 傣族 = "17";
+        public const string 黎族 = "18";
+        public const string 傈僳族 = "19";
+        public const string 佤族 = "20";
+        public const string 畲族 = "21";
+        public const string 高山族 = "22";
+        public const string 拉祜族 = "23";
+        public const string 水族 = "24";
+        public const string 东乡族 = "25";
+        public const string 纳西族 = "26";
+        public const string 景颇族 = "27";
+        public const string 柯尔克孜族 = "28";
+        public const string 土族 = "29";
+        public const string 达斡尔族 = "30";
+        public const string 仫佬族 = "31";
+        public const string 羌族 = "32";
+        public const string 布朗族 = "33";
+        public const string 撒拉族 = "34";
+        public const string 毛南族 = "35";
+        public const string 仡佬族 = "36";
+        public const string 锡伯族 = "37";
+        public const string 阿昌族 = "38";
+        public const string 普米族 = "39";
+        public const string 塔吉克族 = "40";
+        public const string 怒族 = "41";
+        public const string 乌兹别克族 = "42";
+        public const string 俄罗斯族 = "43";
+        public const string 鄂温克族 = "44";
+        public const string 德昂族 = "45";
+        public const string 保安族 = "46";
+        public const string 裕固族 = "47";
+        public const string 京族 = "48";
+        public const string 塔塔尔族 = "49";
+        public const string 独龙族 = "50";
+        public const string 鄂伦春族 = "51";
+        public const string 赫哲族 = "52";
+        public const string 门巴族 = "53";
+        public const string 珞巴族 = "54";
+        public const string 基诺族 = "55";
+        public const string 其它 = "56";
+    }
+
     /// <summary>
     /// 国籍
     /// </summary>
@@ -1025,5 +1172,4 @@ namespace Yushen.WebService.KessClient.Dict
             }
         }
     }
-
 }
