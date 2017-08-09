@@ -637,6 +637,7 @@ namespace Yushen.WebService.KessClient
             // 初始化请求
 
             // 调用WebService获取返回值
+            // 发送中登请求
             string serialNo = this.submitStkAcctBizOpReq2NewZD(
                 OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
                 ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
@@ -647,8 +648,9 @@ namespace Yushen.WebService.KessClient
                 CHK_STATUS: Dict.CHK_STATUS.已通过,
                 NET_SERVICE: Dict.NET_SERVICE.否,
                 ACCT_OPENTYPE: "",  // 必须送空值
+                // 以上参数不要随意修改
                 CUST_CODE: user.cust_code,
-                YMT_CODE: user.ymt_code,
+                YMT_CODE: user.ymt_code,    // 一码通可以不送
                 CUST_FNAME: user.user_fname,
                 USER_TYPE: user.user_type,
                 ID_TYPE: user.id_type,
@@ -667,16 +669,87 @@ namespace Yushen.WebService.KessClient
                 ZIP_CODE: user.zip_code,
                 BIRTHDAY: user.birthday
                 );
-            Response response = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护);
+            // 获取中登处理结果
+            Response responseStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护,TRDACCT:user.szacct);
 
             // 判断返回的操作结果是否异常
-            if (response.length == 1 && response.getValue("RTN_ERR_CODE") != "0000")
+            if (responseStkAcctBizInfo.length == 1 && responseStkAcctBizInfo.getValue("RTN_ERR_CODE") != "0000")
             {
-                throw new Exception("中登返回错误：" + response.getValue("RTN_ERR_CODE") + response.getValue("RETURN_MSG"));
+                throw new Exception("中登返回错误：" + responseStkAcctBizInfo.getValue("RTN_ERR_CODE") + "，错误信息：" + responseStkAcctBizInfo.getValue("RETURN_MSG"));
+            }
+
+            // 中登处理是否成功
+            if (responseStkAcctBizInfo.getValue("ACCTBIZ_STATUS")=="2")
+            {
+                // 获取签署信息
+                Response responseStkAcctBizInfoEx = this.searchStkAcctBizInfoEx(serialNo);
             }
 
             // 返回结果
-            return response;
+            return responseStkAcctBizInfo;
+        }
+
+        /// <summary>
+        /// 开通
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Response openCYB(User user)
+        {
+            // 前置条件判断
+            if (user.id_code == "")
+            {
+                throw new Exception("证件代码不能为空");
+            }
+
+            // 初始化请求
+
+            // 调用WebService获取返回值
+            // 发送中登请求
+            string serialNo = this.submitStkAcctBizOpReq2NewZD(
+                OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
+                ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
+                PROPER_CLS: Dict.PROPER_CLS.创业板,
+                ACCTBIZ_CLS: Dict.AcctBiz_CLS.创业板_开通,
+                ACCT_TYPE: Dict.ACCT_TYPE.深市A股账户,
+                STKBD: Dict.STKBD.深圳A股,
+                CHK_STATUS: Dict.CHK_STATUS.已通过,
+                NET_SERVICE: Dict.NET_SERVICE.否,
+                ACCT_OPENTYPE: "",  // 必须送空值
+                // 以上参数不要随意修改
+                CUST_CODE: user.cust_code,
+                YMT_CODE: user.ymt_code,    // 一码通可以不送
+                CUST_FNAME: user.user_fname,
+                USER_TYPE: user.user_type,
+                ID_TYPE: user.id_type,
+                ID_CODE: user.id_code,
+                ID_ADDR: user.id_addr,
+                ID_BEG_DATE: user.id_beg_date,
+                ID_EXP_DATE: user.id_exp_date,
+                CITIZENSHIP: user.citizenship,
+                ADDRESS: user.id_addr,
+                MOBILE_TEL: user.mobile_tel,
+                TEL: user.tel,
+                SEX: user.sex,
+                INT_ORG: user.int_org,
+                OCCU_TYPE: user.occu_type,
+                EDUCATION: user.education,
+                ZIP_CODE: user.zip_code,
+                BIRTHDAY: user.birthday
+                );
+
+            // 获取中登处理结果
+            Response responseStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护, TRDACCT: user.szacct);
+            
+            // 中登处理是否成功
+            if (responseStkAcctBizInfo.getValue("ACCTBIZ_STATUS") == "2")
+            {
+                // 系统内开通创业板
+                
+            }
+
+            // 返回结果
+            return responseStkAcctBizInfo;
         }
 
         /// <summary>
