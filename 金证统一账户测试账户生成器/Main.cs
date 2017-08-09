@@ -699,7 +699,21 @@ namespace 金证统一账户测试账户生成器
 
         private void btnQueryCYB_Click(object sender, EventArgs e)
         {
-            
+            try
+            {
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                }
+
+                kess.queryCYB(user);
+
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("创业板查询失败：" + ex.Message);
+            }
         }
     }
 }

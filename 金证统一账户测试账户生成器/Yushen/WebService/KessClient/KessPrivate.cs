@@ -140,7 +140,7 @@ namespace Yushen.WebService.KessClient
                     string NET_SERVICEPASS = "",
                     string SEX = "",
                     string CHK_STATUS = "",
-                    string ACCT_OPENTYPE = Dict.ACCT_OPENTYPE.客户网上自助,
+                    string ACCT_OPENTYPE = "",
                     string ACCT_TYPE = "",
                     string CORP_EXTYPE = "",
                     string EMAIL = "",
@@ -424,7 +424,6 @@ namespace Yushen.WebService.KessClient
 
             bool result = false;
             string status = "";
-            bool isTimeOut = false;
             int sleepInterval = interval * 1000;
             int currentCostTime = 0;
             timeout = timeout * 1000;
@@ -440,8 +439,18 @@ namespace Yushen.WebService.KessClient
 
             Response response;
 
-            while (result == false && isTimeOut == false)
+            while (result == false)
             {
+                // 延时处理
+                Thread.Sleep(sleepInterval);
+
+                // 计算是否超时
+                currentCostTime += sleepInterval;
+                if (currentCostTime > timeout)
+                {
+                    break;
+                }
+
                 // 调用WebService获取返回值
                 response = new Response(this.invoke(request));
 
@@ -459,16 +468,6 @@ namespace Yushen.WebService.KessClient
 
                     // 返回结果
                     return response;
-                }
-
-                // 延时处理
-                Thread.Sleep(sleepInterval);
-
-                // 计算是否超时
-                currentCostTime += sleepInterval;
-                if (currentCostTime > timeout)
-                {
-                    isTimeOut = true;
                 }
             }
 
@@ -505,7 +504,6 @@ namespace Yushen.WebService.KessClient
 
             bool result = false;
             string status = "";
-            bool isTimeOut = false;
             int sleepInterval = interval * 1000;
             int currentCostTime = 0;
             timeout = timeout * 1000;
@@ -516,8 +514,18 @@ namespace Yushen.WebService.KessClient
 
             Response response;
 
-            while (result == false && isTimeOut == false)
+            while (result == false)
             {
+                // 延时处理
+                Thread.Sleep(sleepInterval);
+
+                // 计算是否超时
+                currentCostTime += sleepInterval;
+                if (currentCostTime > timeout)
+                {
+                    break;
+                }
+
                 // 调用WebService获取返回值
                 response = new Response(this.invoke(request));
 
@@ -535,16 +543,6 @@ namespace Yushen.WebService.KessClient
 
                     // 返回结果
                     return response;
-                }
-
-                // 延时处理
-                Thread.Sleep(sleepInterval);
-
-                // 计算是否超时
-                currentCostTime += sleepInterval;
-                if (currentCostTime > timeout)
-                {
-                    isTimeOut = true;
                 }
             }
 

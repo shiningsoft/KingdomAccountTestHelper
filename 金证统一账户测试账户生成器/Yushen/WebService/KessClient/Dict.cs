@@ -567,7 +567,7 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
-    /// 账户业务处理状态
+    /// 交易账户状态
     /// </summary>
     class TRDACCT_STATUS : Dict
     {
@@ -581,7 +581,7 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
-    /// 账户业务处理状态
+    /// 交易指定状态
     /// </summary>
     class TREG_STATUS : Dict
     {

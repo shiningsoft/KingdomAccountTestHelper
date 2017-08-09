@@ -629,9 +629,9 @@ namespace Yushen.WebService.KessClient
         public Response queryCYB(User user)
         {
             // 前置条件判断
-            if (user.ymt_code == "")
+            if (user.id_code=="")
             {
-                throw new Exception("一码通不能为空");
+                throw new Exception("证件代码不能为空");
             }
 
             // 初始化请求
@@ -641,8 +641,14 @@ namespace Yushen.WebService.KessClient
                 OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
                 ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
                 PROPER_CLS: Dict.PROPER_CLS.创业板,
+                ACCTBIZ_CLS: Dict.AcctBiz_CLS.创业板_查询,
                 ACCT_TYPE: Dict.ACCT_TYPE.深市A股账户,
+                STKBD:Dict.STKBD.深圳A股,
+                CHK_STATUS: Dict.CHK_STATUS.已通过,
+                NET_SERVICE: Dict.NET_SERVICE.否,
+                ACCT_OPENTYPE: "",  // 必须送空值
                 CUST_CODE: user.cust_code,
+                YMT_CODE: user.ymt_code,
                 CUST_FNAME: user.user_fname,
                 USER_TYPE: user.user_type,
                 ID_TYPE: user.id_type,
@@ -659,11 +665,7 @@ namespace Yushen.WebService.KessClient
                 OCCU_TYPE: user.occu_type,
                 EDUCATION: user.education,
                 ZIP_CODE: user.zip_code,
-                CHK_STATUS: Dict.CHK_STATUS.已通过,
-                NET_SERVICE: Dict.NET_SERVICE.否,
-                YMT_CODE: user.ymt_code,
-                BIRTHDAY: user.birthday,
-                ACCT_OPENTYPE: Dict.ACCT_OPENTYPE.客户网上自助
+                BIRTHDAY: user.birthday
                 );
             Response response = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护);
 
