@@ -115,11 +115,14 @@ namespace 金证统一账户测试账户生成器
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.btnRegisterSZAStkAcct = new System.Windows.Forms.Button();
             this.btnOpenSZAStkAcct = new System.Windows.Forms.Button();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -261,6 +264,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.statusStrip1);
             this.tabPage1.Controls.Add(this.btnRegisterSZAStkAcct);
             this.tabPage1.Controls.Add(this.btnOpenSZAStkAcct);
             this.tabPage1.Controls.Add(this.button1);
@@ -323,7 +327,7 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(918, 436);
+            this.tabPage1.Size = new System.Drawing.Size(918, 467);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -874,7 +878,7 @@ namespace 金证统一账户测试账户生成器
             this.tabControl1.Location = new System.Drawing.Point(12, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(926, 462);
+            this.tabControl1.Size = new System.Drawing.Size(926, 493);
             this.tabControl1.TabIndex = 9;
             // 
             // btnRegisterSZAStkAcct
@@ -897,11 +901,27 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenSZAStkAcct.UseVisualStyleBackColor = true;
             this.btnOpenSZAStkAcct.Click += new System.EventHandler(this.button5_Click);
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabelCurrentServer});
+            this.statusStrip1.Location = new System.Drawing.Point(3, 442);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(912, 22);
+            this.statusStrip1.TabIndex = 74;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabelCurrentServer
+            // 
+            this.toolStripStatusLabelCurrentServer.Name = "toolStripStatusLabelCurrentServer";
+            this.toolStripStatusLabelCurrentServer.Size = new System.Drawing.Size(80, 17);
+            this.toolStripStatusLabelCurrentServer.Text = "当前服务器：";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(950, 502);
+            this.ClientSize = new System.Drawing.Size(950, 533);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
@@ -917,6 +937,8 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -999,6 +1021,8 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnRegisterSZAStkAcct;
         private System.Windows.Forms.Button btnOpenSZAStkAcct;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabelCurrentServer;
     }
 }
 

@@ -55,6 +55,16 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 操作类型
+    /// </summary>
+    class OPERATION_TYPE : Dict
+    {
+        public const string 增加密码 = "0";
+        public const string 修改密码 = "1";
+        public const string 重置密码 = "3";
+    }
+
+    /// <summary>
     /// 是否
     /// </summary>
     class YES_NO : Dict

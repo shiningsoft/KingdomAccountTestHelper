@@ -105,5 +105,10 @@ namespace 金证统一账户测试账户生成器
         {
             this.Close();
         }
+
+        private void AboutBox_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
