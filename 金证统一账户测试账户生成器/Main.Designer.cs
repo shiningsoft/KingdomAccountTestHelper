@@ -55,7 +55,7 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnQueryCYB = new System.Windows.Forms.Button();
             this.bank_code = new System.Windows.Forms.ComboBox();
             this.btnValidateId = new System.Windows.Forms.Button();
             this.sex = new System.Windows.Forms.ComboBox();
@@ -213,7 +213,7 @@ namespace 金证统一账户测试账户生成器
             this.tabPageGetDict.Location = new System.Drawing.Point(4, 22);
             this.tabPageGetDict.Name = "tabPageGetDict";
             this.tabPageGetDict.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPageGetDict.Size = new System.Drawing.Size(918, 436);
+            this.tabPageGetDict.Size = new System.Drawing.Size(918, 467);
             this.tabPageGetDict.TabIndex = 1;
             this.tabPageGetDict.Text = "数据字典查询";
             this.tabPageGetDict.UseVisualStyleBackColor = true;
@@ -232,7 +232,7 @@ namespace 金证统一账户测试账户生成器
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(905, 397);
+            this.dataGridView1.Size = new System.Drawing.Size(905, 428);
             this.dataGridView1.TabIndex = 11;
             // 
             // button2
@@ -267,7 +267,7 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Controls.Add(this.statusStrip1);
             this.tabPage1.Controls.Add(this.btnRegisterSZAStkAcct);
             this.tabPage1.Controls.Add(this.btnOpenSZAStkAcct);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.btnQueryCYB);
             this.tabPage1.Controls.Add(this.bank_code);
             this.tabPage1.Controls.Add(this.btnValidateId);
             this.tabPage1.Controls.Add(this.sex);
@@ -332,15 +332,16 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // btnQueryCYB
             // 
-            this.button1.Enabled = false;
-            this.button1.Location = new System.Drawing.Point(424, 353);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 23);
-            this.button1.TabIndex = 71;
-            this.button1.Text = "创业板签约查询";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnQueryCYB.Enabled = false;
+            this.btnQueryCYB.Location = new System.Drawing.Point(424, 353);
+            this.btnQueryCYB.Name = "btnQueryCYB";
+            this.btnQueryCYB.Size = new System.Drawing.Size(100, 23);
+            this.btnQueryCYB.TabIndex = 71;
+            this.btnQueryCYB.Text = "创业板签约查询";
+            this.btnQueryCYB.UseVisualStyleBackColor = true;
+            this.btnQueryCYB.Click += new System.EventHandler(this.btnQueryCYB_Click);
             // 
             // bank_code
             // 
@@ -408,7 +409,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnLogin
             // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLogin.Location = new System.Drawing.Point(812, 37);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 23);
@@ -664,7 +664,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // button3
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.button3.Location = new System.Drawing.Point(812, 10);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(100, 23);
@@ -914,8 +913,8 @@ namespace 金证统一账户测试账户生成器
             // toolStripStatusLabelCurrentServer
             // 
             this.toolStripStatusLabelCurrentServer.Name = "toolStripStatusLabelCurrentServer";
-            this.toolStripStatusLabelCurrentServer.Size = new System.Drawing.Size(80, 17);
-            this.toolStripStatusLabelCurrentServer.Text = "当前服务器：";
+            this.toolStripStatusLabelCurrentServer.Size = new System.Drawing.Size(68, 17);
+            this.toolStripStatusLabelCurrentServer.Text = "当前环境：";
             // 
             // Main
             // 
@@ -925,7 +924,6 @@ namespace 金证统一账户测试账户生成器
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip);
             this.MainMenuStrip = this.menuStrip;
-            this.MaximizeBox = false;
             this.Name = "Main";
             this.Text = "金证统一账户测试账户生成器";
             this.Load += new System.EventHandler(this.Main_Load);
@@ -1018,7 +1016,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ComboBox sex;
         private System.Windows.Forms.Button btnValidateId;
         private System.Windows.Forms.ComboBox bank_code;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnQueryCYB;
         private System.Windows.Forms.Button btnRegisterSZAStkAcct;
         private System.Windows.Forms.Button btnOpenSZAStkAcct;
         private System.Windows.Forms.StatusStrip statusStrip1;

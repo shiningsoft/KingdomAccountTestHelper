@@ -696,5 +696,10 @@ namespace 金证统一账户测试账户生成器
                 resultForm.Append("深A股东账号加挂成功");
             }
         }
+
+        private void btnQueryCYB_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }

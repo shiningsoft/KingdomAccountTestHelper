@@ -45,6 +45,7 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 邮储银行 = "8500";
         public const string 浦发银行 = "6300";
     }
+
     /// <summary>
     /// 用户类型
     /// </summary>
@@ -52,6 +53,23 @@ namespace Yushen.WebService.KessClient.Dict
     {
         public const string 正常 = "0";
         public const string 注销 = "1";
+    }
+
+    /// <summary>
+    /// 业务类型（非必传） 
+    /// 创业板开通或查询时必输，01-开通 03-查询； 
+    /// 使用信息维护时必输，01-新增，02-撤销，03-查询；
+    /// 中登身份校验时必输，01-简项查询，无照片返回，02-简项查询，有照片返回；
+    /// </summary>
+    class AcctBiz_CLS : Dict
+    {
+        public const string 创业板_开通 = "01";
+        public const string 创业板_查询 = "03";
+        public const string 使用信息维护_新增 = "01";
+        public const string 使用信息维护_撤销 = "02";
+        public const string 使用信息维护_查询 = "03";
+        public const string 中登身份校验_简项查询_无照片返回 = "01";
+        public const string 中登身份校验_简项查询_有照片返回 = "02";
     }
 
     /// <summary>
