@@ -382,8 +382,9 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
-        /// 2.120 证券账户业务信息查询（新） 
-        /// 注1：此接口的入参SERIAL_NO为2.119的出参。 
+        /// 证券账户业务信息查询（新） 
+        /// 自动轮询中登处理结果，默认30秒超时。
+        /// 注1：此接口的入参SERIAL_NO为submitStkAcctBizOpReq2NewZD的出参。 
         /// 注2：此接口为实时获取中登返回信息，根据返回参数ACCTBIZ_STATUS（0-未发送中登，1-已发送中登，2-处理成功，3-处理失败）来确定接口是否正确查询到了中登返回结果，需外围控制超时时间。
         /// 在超时时间范围内，需循环调用此接口，直至获取到ACCTBIZ_STATUS=2或是3。
         /// </summary>
@@ -393,6 +394,8 @@ namespace Yushen.WebService.KessClient
         /// <param name="TRDACCT">交易账户</param>
         /// <param name="INT_ORG">机构代码</param>
         /// <param name="ID_CODE">证件号码</param>
+        /// <param name="timeout">超时时间，单位：秒</param>
+        /// <param name="interval">每次轮询的间隔时间，单位：秒</param>
         /// <returns></returns>
         private Response searchStkAcctBizInfo(
             string SERIAL_NO, 
@@ -401,7 +404,8 @@ namespace Yushen.WebService.KessClient
             string TRDACCT = "", 
             string INT_ORG = "", 
             string ID_CODE = "", 
-            int timeout = 30
+            int timeout = 30,
+            int interval = 3
          )
         {
             // 前置条件判断
@@ -421,7 +425,7 @@ namespace Yushen.WebService.KessClient
             bool result = false;
             string status = "";
             bool isTimeOut = false;
-            int sleepInterval = 3000;
+            int sleepInterval = interval * 1000;
             int currentCostTime = 0;
             timeout = timeout * 1000;
 
@@ -433,6 +437,82 @@ namespace Yushen.WebService.KessClient
             request.setAttr("TRDACCT", TRDACCT);
             request.setAttr("INT_ORG", INT_ORG);
             request.setAttr("ID_CODE", ID_CODE);
+
+            Response response;
+
+            while (result == false && isTimeOut == false)
+            {
+                // 调用WebService获取返回值
+                response = new Response(this.invoke(request));
+
+                // 判断账户业务处理状态
+                status = response.getValue("ACCTBIZ_STATUS");
+                if (status == Dict.ACCTBIZ_STATUS.处理成功 || status == Dict.ACCTBIZ_STATUS.处理失败)
+                {
+                    // 判断返回的操作结果是否异常
+                    if (response.flag != "1")
+                    {
+                        string message = "操作失败：" + response.prompt;
+                        logger.Error(message);
+                        throw new Exception(message);
+                    }
+
+                    // 返回结果
+                    return response;
+                }
+
+                // 延时处理
+                Thread.Sleep(sleepInterval);
+
+                // 计算是否超时
+                currentCostTime += sleepInterval;
+                if (currentCostTime > timeout)
+                {
+                    isTimeOut = true;
+                }
+            }
+
+            throw new Exception("中登处理超时，未查到结果。中登流水号：" + SERIAL_NO);
+        }
+
+        /// <summary>
+        /// 2.132 证券账户业务信息拓展查询
+        /// 自动轮询中登处理结果，默认30秒超时。
+        /// 注1：此接口的入参SERIAL_NO为submitStkAcctBizOpReq2NewZD的出参。
+        /// </summary>
+        /// <param name="SERIAL_NO"></param>
+        /// <param name="ACCTBIZ_EXCODE"></param>
+        /// <param name="ACCT_TYPE"></param>
+        /// <param name="TRDACCT"></param>
+        /// <param name="INT_ORG"></param>
+        /// <param name="ID_CODE"></param>
+        /// <param name="timeout">超时时间，单位：秒。默认30秒</param>
+        /// <param name="interval">每次轮询的间隔时间，单位：秒。默认3秒</param>
+        /// <returns></returns>
+        private Response searchStkAcctBizInfoEx(
+           string SERIAL_NO,
+           int timeout = 30,
+           int interval = 3
+        )
+        {
+            // 前置条件判断
+            if (SERIAL_NO == "")
+            {
+                string message = "流水号不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            bool result = false;
+            string status = "";
+            bool isTimeOut = false;
+            int sleepInterval = interval * 1000;
+            int currentCostTime = 0;
+            timeout = timeout * 1000;
+
+            // 查询处理结果
+            Request request = new Request(this.operatorId, "searchStkAcctBizInfoEx");
+            request.setAttr("SERIAL_NO", SERIAL_NO);
 
             Response response;
 
