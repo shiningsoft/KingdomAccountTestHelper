@@ -784,7 +784,19 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         public void Dispose()
         {
-            this.kessClientType.GetMethod("Close").Invoke(this.kessClient, new object[] { }); ;
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+        
+        // The bulk of the clean-up code is implemented in Dispose(bool)  
+        protected virtual void Dispose(bool disposing)
+        {
+            if (disposing)
+            {
+                // free managed resources  
+                this.kessClientType.GetMethod("Close").Invoke(this.kessClient, new object[] { });
+            }
+            // free native resources if there are any. 
         }
     }
 }

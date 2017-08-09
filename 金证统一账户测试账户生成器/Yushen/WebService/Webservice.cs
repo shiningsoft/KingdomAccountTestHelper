@@ -33,7 +33,6 @@ namespace Yushen.Web
             using (Stream reqStream = request.GetRequestStream())
             {
                 reqStream.Write(bs, 0, bs.Length);
-                reqStream.Close();
             }
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
@@ -95,7 +94,6 @@ namespace Yushen.Web
             using (Stream reqStream = request.GetRequestStream())
             {
                 reqStream.Write(bs, 0, bs.Length);
-                reqStream.Close();
             }
 
             using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())

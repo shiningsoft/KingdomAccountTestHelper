@@ -171,7 +171,6 @@ namespace Yushen.WebService.KessClient
                 writer.Indentation = 2;  // the Indentation
                 writer.Formatting = Formatting.Indented;
                 doc.WriteContentTo(writer);
-                writer.Close();
             }
 
             return sw.ToString();
