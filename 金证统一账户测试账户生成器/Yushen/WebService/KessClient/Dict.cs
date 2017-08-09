@@ -83,9 +83,46 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 操作类型
+    /// 用于中登业务,一般情况都送0（增加）
+    /// </summary>
+    class OPERATOR_TYPE : Dict
+    {
+        public const string 增加 = "0";
+        public const string 修改 = "1";
+        public const string 删除 = "2";
+    }
+
+    /// <summary>
     /// 是否
     /// </summary>
     class YES_NO : Dict
+    {
+        public const string 否 = "0";
+        public const string 是 = "1";
+    }
+
+    /// <summary>
+    /// 复核状态
+    /// 默认为0-未复核，若操作不需要进行操作员复核，则CHK_STATUS必须传2-已通过
+    /// </summary>
+    class CHK_STATUS : Dict
+    {
+        public const string 未复核 = "0";
+        public const string 复核中 = "1";
+        public const string 已通过 = "2";
+        public const string 已撤销 = "3";
+        public const string 已过期 = "4";
+        public const string 待审核 = "5";
+        public const string 通过 = "6";
+        public const string 未通过 = "7";
+        public const string 审核中 = "8";
+    }
+
+    /// <summary>
+    /// 网络服务
+    /// </summary>
+    class NET_SERVICE : Dict
     {
         public const string 否 = "0";
         public const string 是 = "1";
@@ -325,15 +362,6 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 家庭电话 = "2";
         public const string 工作电话 = "3";
         public const string 小灵通 = "4";
-    }
-
-    /// <summary>
-    /// 网络服务标识
-    /// </summary>
-    class NET_SERVICE : Dict
-    {
-        public const string 否 = "0";
-        public const string 是 = "1";
     }
 
     /// <summary>

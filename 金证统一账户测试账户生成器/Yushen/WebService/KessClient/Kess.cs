@@ -579,7 +579,9 @@ namespace Yushen.WebService.KessClient
             // 初始化请求
 
             // 调用WebService获取返回值
-            Response response = this.submitStkAcctBizOpReq2NewZD("0", Dict.ACCTBIZ_EXCODE.证券账户开立,
+            string serialNo = this.submitStkAcctBizOpReq2NewZD(
+                OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
+                ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.证券账户开立,
                 ACCT_TYPE: ACCT_TYPE,
                 CUST_CODE: user.cust_code,
                 CUST_FNAME: user.user_fname,
@@ -598,12 +600,15 @@ namespace Yushen.WebService.KessClient
                 OCCU_TYPE: user.occu_type,
                 EDUCATION: user.education,
                 ZIP_CODE: user.zip_code,
-                CHK_STATUS:"2",
-                NET_SERVICE:"0",
+                CHK_STATUS: Dict.CHK_STATUS.已通过,
+                NET_SERVICE: Dict.NET_SERVICE.否,
                 YMT_CODE:user.ymt_code,
                 BIRTHDAY:user.birthday,
-                ACCT_OPENTYPE:Dict.ACCT_OPENTYPE.客户网上自助
+                ACCT_OPENTYPE:Dict.ACCT_OPENTYPE.客户网上自助,
+                timeout: timeout
                 );
+
+            Response response = searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.证券账户开立);
 
             // 判断返回的操作结果是否异常
             string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
@@ -616,6 +621,61 @@ namespace Yushen.WebService.KessClient
             return response;
         }
 
+        /// <summary>
+        /// 创业板签约信息查询
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
+        public Response queryCYB(User user)
+        {
+            // 前置条件判断
+            if (user.ymt_code == "")
+            {
+                throw new Exception("一码通不能为空");
+            }
+
+            // 初始化请求
+
+            // 调用WebService获取返回值
+            string serialNo = this.submitStkAcctBizOpReq2NewZD(
+                OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
+                ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
+                PROPER_CLS: Dict.PROPER_CLS.创业板,
+                ACCT_TYPE: Dict.ACCT_TYPE.深市A股账户,
+                CUST_CODE: user.cust_code,
+                CUST_FNAME: user.user_fname,
+                USER_TYPE: user.user_type,
+                ID_TYPE: user.id_type,
+                ID_CODE: user.id_code,
+                ID_ADDR: user.id_addr,
+                ID_BEG_DATE: user.id_beg_date,
+                ID_EXP_DATE: user.id_exp_date,
+                CITIZENSHIP: user.citizenship,
+                ADDRESS: user.id_addr,
+                MOBILE_TEL: user.mobile_tel,
+                TEL: user.tel,
+                SEX: user.sex,
+                INT_ORG: user.int_org,
+                OCCU_TYPE: user.occu_type,
+                EDUCATION: user.education,
+                ZIP_CODE: user.zip_code,
+                CHK_STATUS: Dict.CHK_STATUS.已通过,
+                NET_SERVICE: Dict.NET_SERVICE.否,
+                YMT_CODE: user.ymt_code,
+                BIRTHDAY: user.birthday,
+                ACCT_OPENTYPE: Dict.ACCT_OPENTYPE.客户网上自助
+                );
+            Response response = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护);
+
+            // 判断返回的操作结果是否异常
+            if (response.length == 1 && response.getValue("RTN_ERR_CODE") != "0000")
+            {
+                throw new Exception("中登返回错误：" + response.getValue("RTN_ERR_CODE") + response.getValue("RETURN_MSG"));
+            }
+
+            // 返回结果
+            return response;
+        }
 
         /// <summary>
         /// 单个公共参数查询，返回value值。

@@ -5,7 +5,7 @@ using System.Text;
 using System.Net;
 using System.IO;
 
-namespace Yushen.Web
+namespace Yushen.WebService
 {
     class Webservice
     {

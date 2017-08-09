@@ -111,7 +111,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="NEW_ID_CODE">新证件号码（非必输）</param>
         /// <param name="timeout">超时时间</param>
         /// <returns>业务流水号</returns>
-        private Response submitStkAcctBizOpReq2NewZD(
+        private string submitStkAcctBizOpReq2NewZD(
                     string OPERATOR_TYPE,
                     string ACCTBIZ_EXCODE,
                     string YMT_CODE = "",
@@ -231,42 +231,10 @@ namespace Yushen.WebService.KessClient
                 throw new Exception(message);
             }
 
-            string serialNo = response.getValue("SERIAL_NO");
-
-            // 查询中登处理结果，并返回
-            bool result = false;
-            string status = "";
-            bool isTimeOut = false;
-            int sleepInterval = 3000;
-            int currentCostTime = 0;
-            timeout = timeout * 1000;
-
-            while (result == false && isTimeOut == false)
-            {
-                // 查询处理结果
-                response = searchStkAcctBizInfo(serialNo, ACCTBIZ_EXCODE);
-
-                // 判断账户业务处理状态
-                status = response.getValue("ACCTBIZ_STATUS");
-                if (status == Dict.ACCTBIZ_STATUS.处理成功 || status == Dict.ACCTBIZ_STATUS.处理失败)
-                {
-                    // 中登处理完成，返回处理结果
-                    return response;
-                }
-
-                // 延时处理
-                Thread.Sleep(sleepInterval);
-
-                // 计算是否超时
-                currentCostTime += sleepInterval;
-                if (currentCostTime > timeout)
-                {
-                    isTimeOut = true;
-                }
-            }
-
-            throw new Exception("中登处理超时，未查到结果。中登流水号：" + serialNo);
+            return response.getValue("SERIAL_NO");
+            
         }
+        
 
         /// <summary>
         /// 实现 2.121 中登开立股东账户。 
@@ -426,7 +394,15 @@ namespace Yushen.WebService.KessClient
         /// <param name="INT_ORG">机构代码</param>
         /// <param name="ID_CODE">证件号码</param>
         /// <returns></returns>
-        private Response searchStkAcctBizInfo(string SERIAL_NO, string ACCTBIZ_EXCODE, string ACCT_TYPE = "", string TRDACCT = "", string INT_ORG = "", string ID_CODE = "")
+        private Response searchStkAcctBizInfo(
+            string SERIAL_NO, 
+            string ACCTBIZ_EXCODE, 
+            string ACCT_TYPE = "", 
+            string TRDACCT = "", 
+            string INT_ORG = "", 
+            string ID_CODE = "", 
+            int timeout = 30
+         )
         {
             // 前置条件判断
             if (SERIAL_NO == "")
@@ -442,7 +418,14 @@ namespace Yushen.WebService.KessClient
                 throw new Exception(message);
             }
 
-            // 初始化请求
+            bool result = false;
+            string status = "";
+            bool isTimeOut = false;
+            int sleepInterval = 3000;
+            int currentCostTime = 0;
+            timeout = timeout * 1000;
+
+            // 查询处理结果
             Request request = new Request(this.operatorId, "searchStkAcctBizInfo");
             request.setAttr("SERIAL_NO", SERIAL_NO);
             request.setAttr("ACCTBIZ_EXCODE", ACCTBIZ_EXCODE);
@@ -451,19 +434,41 @@ namespace Yushen.WebService.KessClient
             request.setAttr("INT_ORG", INT_ORG);
             request.setAttr("ID_CODE", ID_CODE);
 
-            // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response;
 
-            // 判断返回的操作结果是否异常
-            if (response.flag != "1")
+            while (result == false && isTimeOut == false)
             {
-                string message = "操作失败：" + response.prompt;
-                logger.Error(message);
-                throw new Exception(message);
+                // 调用WebService获取返回值
+                response = new Response(this.invoke(request));
+
+                // 判断账户业务处理状态
+                status = response.getValue("ACCTBIZ_STATUS");
+                if (status == Dict.ACCTBIZ_STATUS.处理成功 || status == Dict.ACCTBIZ_STATUS.处理失败)
+                {
+                    // 判断返回的操作结果是否异常
+                    if (response.flag != "1")
+                    {
+                        string message = "操作失败：" + response.prompt;
+                        logger.Error(message);
+                        throw new Exception(message);
+                    }
+
+                    // 返回结果
+                    return response;
+                }
+
+                // 延时处理
+                Thread.Sleep(sleepInterval);
+
+                // 计算是否超时
+                currentCostTime += sleepInterval;
+                if (currentCostTime > timeout)
+                {
+                    isTimeOut = true;
+                }
             }
 
-            // 返回结果
-            return response;
+            throw new Exception("中登处理超时，未查到结果。中登流水号：" + SERIAL_NO);
         }
 
         /// <summary>

@@ -334,7 +334,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnQueryCYB
             // 
-            this.btnQueryCYB.Enabled = false;
             this.btnQueryCYB.Location = new System.Drawing.Point(424, 353);
             this.btnQueryCYB.Name = "btnQueryCYB";
             this.btnQueryCYB.Size = new System.Drawing.Size(100, 23);
