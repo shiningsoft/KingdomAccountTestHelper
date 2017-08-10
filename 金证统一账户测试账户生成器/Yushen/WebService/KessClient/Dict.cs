@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Data;
 using System.Reflection;
-using Yushen.Util;
 
 /// <summary>
 /// 系统数据字典
@@ -1329,6 +1327,26 @@ namespace Yushen.WebService.KessClient.Dict
             {
                 return this._selectable;
             }
+        }
+
+        /// <summary>
+        /// 判断指定值是否在字典中存在
+        /// 如果存在则返回索引值，否则返回-1。
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public int IndexOf(string value)
+        {
+            Type t = GetType();
+            FieldInfo[] FiledList = t.GetFields();
+            for (int i = 0; i < FiledList.Length; i++)
+            {
+                if (value == FiledList[i].GetValue(this).ToString())
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
     }
 }

@@ -641,15 +641,16 @@ namespace Yushen.WebService.KessClient
             string serialNo = this.submitStkAcctBizOpReq2NewZD(
                 OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
                 ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
-                PROPER_CLS: Dict.PROPER_CLS.创业板,
+                PROPER_CLS: "",  // 适当性类别必须为空
                 ACCTBIZ_CLS: Dict.AcctBiz_CLS.创业板_查询,
                 ACCT_TYPE: Dict.ACCT_TYPE.深市A股账户,
                 STKBD:Dict.STKBD.深圳A股,
                 CHK_STATUS: Dict.CHK_STATUS.已通过,
                 NET_SERVICE: Dict.NET_SERVICE.否,
                 ACCT_OPENTYPE: "",  // 必须送空值
-                // 以上参数不要随意修改
                 CUST_CODE: user.cust_code,
+                TRDACCT: user.szacct,
+                // 以上参数不要随意修改
                 // YMT_CODE: user.ymt_code,    // 一码通可以不送
                 CUST_FNAME: user.user_fname,
                 USER_TYPE: user.user_type,
@@ -678,15 +679,9 @@ namespace Yushen.WebService.KessClient
                 throw new Exception("中登返回错误：" + responseStkAcctBizInfo.getValue("RTN_ERR_CODE") + "，错误信息：" + responseStkAcctBizInfo.getValue("RETURN_MSG"));
             }
 
-            // 中登处理是否成功
-            if (responseStkAcctBizInfo.getValue("ACCTBIZ_STATUS")=="2")
-            {
-                // 获取签署信息
-                Response responseStkAcctBizInfoEx = this.searchStkAcctBizInfoEx(serialNo);
-            }
-
-            // 返回结果
-            return responseStkAcctBizInfo;
+            // 获取签署信息
+            Response responseStkAcctBizInfoEx = this.searchStkAcctBizInfoEx(serialNo);
+            return responseStkAcctBizInfoEx;
         }
 
         /// <summary>
@@ -696,7 +691,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SIGN_CLS">签约类别</param>
         /// <param name="SIGN_DATE">签约日期</param>
         /// <returns></returns>
-        public bool openCyb2ZD(User user,string SIGN_CLS, string SIGN_DATE)
+        public void openCyb2ZD(User user,string SIGN_CLS, string SIGN_DATE)
         {
             // 前置条件判断
             if (user.id_code == "")
@@ -761,7 +756,7 @@ namespace Yushen.WebService.KessClient
             }
 
             // 返回成功
-            return true;
+            // return true;
         }
 
         /// <summary>
@@ -772,7 +767,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SIGN_DATE">签署日期，空值表示当天</param>
         /// <param name="EFT_DATE">生效日期，空值表示当天</param>
         /// <returns></returns>
-        public bool openCyb2KBSS(
+        public void openCyb2KBSS(
             User user,
             string OPEN_TYPE,
             string SIGN_DATE="",
@@ -824,7 +819,7 @@ namespace Yushen.WebService.KessClient
             }
 
             // 返回结果
-            return true;
+            // return true;
         }
 
         /// <summary>

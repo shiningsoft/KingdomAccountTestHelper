@@ -55,6 +55,13 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbxCybSignCls = new System.Windows.Forms.ComboBox();
+            this.tbxCybSignDate = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.dtpCybSignDate = new System.Windows.Forms.DateTimePicker();
+            this.cbxOpenType = new System.Windows.Forms.ComboBox();
+            this.label23 = new System.Windows.Forms.Label();
             this.btnOpenLogFolder = new System.Windows.Forms.Button();
             this.btnOpenLogFile = new System.Windows.Forms.Button();
             this.btnRegisterSZAStkAcct = new System.Windows.Forms.Button();
@@ -120,13 +127,6 @@ namespace 金证统一账户测试账户生成器
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cbxOpenType = new System.Windows.Forms.ComboBox();
-            this.dtpCybSignDate = new System.Windows.Forms.DateTimePicker();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -274,8 +274,8 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.comboBox1);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.cbxCybSignCls);
+            this.tabPage1.Controls.Add(this.tbxCybSignDate);
             this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.label24);
             this.tabPage1.Controls.Add(this.dtpCybSignDate);
@@ -350,6 +350,69 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // cbxCybSignCls
+            // 
+            this.cbxCybSignCls.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCybSignCls.FormattingEnabled = true;
+            this.cbxCybSignCls.Location = new System.Drawing.Point(211, 382);
+            this.cbxCybSignCls.Name = "cbxCybSignCls";
+            this.cbxCybSignCls.Size = new System.Drawing.Size(100, 20);
+            this.cbxCybSignCls.TabIndex = 82;
+            // 
+            // tbxCybSignDate
+            // 
+            this.tbxCybSignDate.Location = new System.Drawing.Point(105, 382);
+            this.tbxCybSignDate.Name = "tbxCybSignDate";
+            this.tbxCybSignDate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxCybSignDate.Size = new System.Drawing.Size(100, 21);
+            this.tbxCybSignDate.TabIndex = 81;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(22, 385);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(77, 12);
+            this.label25.TabIndex = 80;
+            this.label25.Text = "创业板信息：";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(563, 69);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(101, 12);
+            this.label24.TabIndex = 79;
+            this.label24.Text = "创业板签约类型：";
+            // 
+            // dtpCybSignDate
+            // 
+            this.dtpCybSignDate.CustomFormat = "yyyyMMdd";
+            this.dtpCybSignDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpCybSignDate.Location = new System.Drawing.Point(670, 36);
+            this.dtpCybSignDate.Name = "dtpCybSignDate";
+            this.dtpCybSignDate.Size = new System.Drawing.Size(100, 21);
+            this.dtpCybSignDate.TabIndex = 78;
+            this.dtpCybSignDate.Value = new System.DateTime(2017, 8, 10, 0, 0, 0, 0);
+            // 
+            // cbxOpenType
+            // 
+            this.cbxOpenType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxOpenType.FormattingEnabled = true;
+            this.cbxOpenType.Location = new System.Drawing.Point(670, 66);
+            this.cbxOpenType.Name = "cbxOpenType";
+            this.cbxOpenType.Size = new System.Drawing.Size(100, 20);
+            this.cbxOpenType.TabIndex = 77;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(563, 41);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(101, 12);
+            this.label23.TabIndex = 76;
+            this.label23.Text = "创业板签约日期：";
+            // 
             // btnOpenLogFolder
             // 
             this.btnOpenLogFolder.Location = new System.Drawing.Point(812, 153);
@@ -392,7 +455,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnQueryCYB
             // 
-            this.btnQueryCYB.Enabled = false;
             this.btnQueryCYB.Location = new System.Drawing.Point(423, 380);
             this.btnQueryCYB.Name = "btnQueryCYB";
             this.btnQueryCYB.Size = new System.Drawing.Size(100, 23);
@@ -961,69 +1023,6 @@ namespace 金证统一账户测试账户生成器
             this.currentUser.Size = new System.Drawing.Size(48, 21);
             this.currentUser.Text = "用户：";
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(563, 41);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(101, 12);
-            this.label23.TabIndex = 76;
-            this.label23.Text = "创业板签约日期：";
-            // 
-            // cbxOpenType
-            // 
-            this.cbxOpenType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxOpenType.FormattingEnabled = true;
-            this.cbxOpenType.Location = new System.Drawing.Point(670, 66);
-            this.cbxOpenType.Name = "cbxOpenType";
-            this.cbxOpenType.Size = new System.Drawing.Size(100, 20);
-            this.cbxOpenType.TabIndex = 77;
-            // 
-            // dtpCybSignDate
-            // 
-            this.dtpCybSignDate.CustomFormat = "yyyyMMdd";
-            this.dtpCybSignDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCybSignDate.Location = new System.Drawing.Point(670, 36);
-            this.dtpCybSignDate.Name = "dtpCybSignDate";
-            this.dtpCybSignDate.Size = new System.Drawing.Size(100, 21);
-            this.dtpCybSignDate.TabIndex = 78;
-            this.dtpCybSignDate.Value = new System.DateTime(2017, 8, 10, 0, 0, 0, 0);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(563, 69);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(101, 12);
-            this.label24.TabIndex = 79;
-            this.label24.Text = "创业板签约类型：";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(22, 385);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(77, 12);
-            this.label25.TabIndex = 80;
-            this.label25.Text = "创业板信息：";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(105, 382);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 81;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(211, 382);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(100, 20);
-            this.comboBox1.TabIndex = 82;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1137,9 +1136,9 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.DateTimePicker dtpCybSignDate;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxCybSignDate;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbxCybSignCls;
     }
 }
 

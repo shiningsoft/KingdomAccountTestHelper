@@ -388,6 +388,10 @@ namespace 金证统一账户测试账户生成器
 
                 Response response = kess.queryStkAcct(user);
                 resultForm.Append("该客户有" + response.length.ToString() + "个股东卡号");
+                foreach (DataRow ds in response.DataSet.Tables["row"].Rows)
+                {
+                    // resultForm.Append("该客户有" + response.length.ToString() + "个股东卡号");
+                }
             }
             catch (Exception ex)
             {
@@ -447,18 +451,14 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
                 }
 
-                if (kess.openCyb2ZD(user, cbxOpenType.SelectedValue.ToString(), dtpCybSignDate.Text))
-                {
-                    resultForm.Append("中登创业板开通成功");
-                    if (kess.openCyb2KBSS(user, Dict.OPEN_TYPE.T加2, dtpCybSignDate.Text, dtpCybSignDate.Text))
-                    {
-                        resultForm.Append("系统内创业板开通成功");
-                    }
-                }
+                kess.openCyb2ZD(user, cbxOpenType.SelectedValue.ToString(), dtpCybSignDate.Text);
+                resultForm.Append("中登创业板开通成功");
+                kess.openCyb2KBSS(user, Dict.OPEN_TYPE.T加2, dtpCybSignDate.Text, dtpCybSignDate.Text);
+                resultForm.Append("系统内创业板协议签署成功");
             }
             catch (Exception ex)
             {
-                resultForm.Append("系统内创业板开通失败：" + ex.Message);
+                resultForm.Append("创业板开通失败：" + ex.Message);
             }
         }
 
@@ -734,7 +734,20 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
                 }
 
-                kess.queryCYB(user);
+                Response response = kess.queryCYB(user);
+
+                tbxCybSignDate.Text = response.getValue("SIGN_DATE");
+
+                Dict.SIGN_CLS signClsList = new Dict.SIGN_CLS();
+                cbxCybSignCls.DisplayMember = "name";
+                cbxCybSignCls.ValueMember = "value";
+                cbxCybSignCls.DataSource = signClsList.DataTable;
+                string signcls = response.getValue("SIGN_CLS");
+                if (signClsList.IndexOf(signcls)==-1)
+                {
+                    throw new Exception("返回的签约类别SIGN_CLS字段值 " + signcls + " 无效");
+                }
+                cbxCybSignCls.SelectedValue = signcls;
 
             }
             catch (Exception ex)
