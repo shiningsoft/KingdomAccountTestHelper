@@ -39,6 +39,7 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,7 +56,6 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.btnSHAAcctBind = new System.Windows.Forms.Button();
             this.cbxCybSignCls = new System.Windows.Forms.ComboBox();
             this.tbxCybSignDate = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -275,7 +275,6 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnSHAAcctBind);
             this.tabPage1.Controls.Add(this.cbxCybSignCls);
             this.tabPage1.Controls.Add(this.tbxCybSignDate);
             this.tabPage1.Controls.Add(this.label25);
@@ -352,28 +351,18 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // btnSHAAcctBind
-            // 
-            this.btnSHAAcctBind.Enabled = false;
-            this.btnSHAAcctBind.Location = new System.Drawing.Point(423, 326);
-            this.btnSHAAcctBind.Name = "btnSHAAcctBind";
-            this.btnSHAAcctBind.Size = new System.Drawing.Size(100, 23);
-            this.btnSHAAcctBind.TabIndex = 83;
-            this.btnSHAAcctBind.Text = "指定交易";
-            this.btnSHAAcctBind.UseVisualStyleBackColor = true;
-            // 
             // cbxCybSignCls
             // 
             this.cbxCybSignCls.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxCybSignCls.FormattingEnabled = true;
-            this.cbxCybSignCls.Location = new System.Drawing.Point(211, 382);
+            this.cbxCybSignCls.Location = new System.Drawing.Point(529, 382);
             this.cbxCybSignCls.Name = "cbxCybSignCls";
             this.cbxCybSignCls.Size = new System.Drawing.Size(100, 20);
             this.cbxCybSignCls.TabIndex = 82;
             // 
             // tbxCybSignDate
             // 
-            this.tbxCybSignDate.Location = new System.Drawing.Point(105, 382);
+            this.tbxCybSignDate.Location = new System.Drawing.Point(423, 382);
             this.tbxCybSignDate.Name = "tbxCybSignDate";
             this.tbxCybSignDate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxCybSignDate.Size = new System.Drawing.Size(100, 21);
@@ -382,7 +371,7 @@ namespace 金证统一账户测试账户生成器
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(22, 385);
+            this.label25.Location = new System.Drawing.Point(340, 385);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(77, 12);
             this.label25.TabIndex = 80;
@@ -616,7 +605,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnOpenAccountByOneClick
             // 
-            this.btnOpenAccountByOneClick.Location = new System.Drawing.Point(105, 409);
+            this.btnOpenAccountByOneClick.Location = new System.Drawing.Point(105, 382);
             this.btnOpenAccountByOneClick.Name = "btnOpenAccountByOneClick";
             this.btnOpenAccountByOneClick.Size = new System.Drawing.Size(100, 23);
             this.btnOpenAccountByOneClick.TabIndex = 54;
@@ -1043,6 +1032,7 @@ namespace 金证统一账户测试账户生成器
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Main";
             this.Text = "金证统一账户测试账户生成器";
@@ -1151,7 +1141,6 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.TextBox tbxCybSignDate;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox cbxCybSignCls;
-        private System.Windows.Forms.Button btnSHAAcctBind;
     }
 }
 
