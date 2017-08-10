@@ -411,9 +411,9 @@ namespace Yushen.WebService.KessClient
             // 前置条件判断
             if (SERIAL_NO == "")
             {
-                string message = "流水号不能为空";
-                logger.Error(message);
-                throw new Exception(message);
+                string msg = "流水号不能为空";
+                logger.Error(msg);
+                throw new Exception(msg);
             }
 
             bool result = false;
@@ -451,14 +451,18 @@ namespace Yushen.WebService.KessClient
                 // 判断返回的操作结果是否异常
                 if (response.flag != "1")
                 {
-                    string message = "操作失败：" + response.prompt;
-                    logger.Error(message);
-                    throw new Exception(message);
+                    string msg = "操作失败：" + response.prompt;
+                    logger.Error(msg);
+                    throw new Exception(msg);
                 }
 
                 // 判断账户业务处理状态
                 status = response.getValue("ACCTBIZ_STATUS");
-                if (status == Dict.ACCTBIZ_STATUS.处理成功 || status == Dict.ACCTBIZ_STATUS.处理失败)
+                if (status == Dict.ACCTBIZ_STATUS.处理失败)
+                {
+                    throw new Exception(response.getValue("RETURN_MSG"));
+                }
+                else if (status == Dict.ACCTBIZ_STATUS.处理成功)
                 {
                     // 返回结果
                     return response;
@@ -785,6 +789,113 @@ namespace Yushen.WebService.KessClient
                 throw new Exception("DataSet读取XML失败");
             }
             return ds;
+        }
+
+        /// <summary>
+        /// 客户协议维护
+        /// 实现 2.59 客户协议维护
+        /// </summary>
+        /// <param name="OPERATION_TYPE">操作类型0-增加1-修改2-删除</param>
+        /// <param name="CUST_CODE">客户代码</param>
+        /// <param name="CUST_AGMT_TYPE">协议类型DD[CUST_AGMT_TYPE]</param>
+        /// <param name="EXP_DATE">有效截止日期</param>
+        /// <param name="EFT_DATE">生效日期</param>
+        /// <param name="OP_REMARK">操作备注</param>
+        /// <param name="TRDACCT">交易账户</param>
+        /// <param name="STKBD">交易板块DD[STKBD]</param>
+        /// <param name="OPEN_TYPE">开通类型0-T+02-T+25-T+5A</param>
+        /// <param name="OPEN_TYPE_WIN">w版开通类型0-T+02-T+25-T+5</param>
+        /// <param name="SIGN_PLACE">签署地0-本证券公司1-其它证券公司</param>
+        /// <param name="REDO_FLAG">是否重新申报1-重新申报</param>
+        /// <param name="DEAL_STATUS">报送状态0-未报,1-已报,9-报送失败</param>
+        /// <param name="SIGN_DATE">签署日期</param>
+        /// <param name="FRT_BIZ_SN">任务流序号</param>
+        /// <param name="BATCHNO">批次号</param>
+        /// <param name="APPLY_DATE">报送时间</param>
+        /// <param name="RETURN_MSG">应答原因</param>
+        /// <param name="REMOTE_SYS">对接远程系统</param>
+        /// <param name="ACCT_TYPE">开通类型</param>
+        /// <param name="CUACCT_CODE">资产账户</param>
+        /// <param name="AGMT_OPER_FLAG">协议操作标志</param>
+        /// <param name="OPEN_FLAG">申请标志</param>
+        /// <param name="SETT_DEALLOG">是否处理报送流水</param>
+        /// <param name="CHECK_RES_RIGHT">检查资源权限</param>
+        /// <returns></returns>
+        private Response setCustAgreement(
+            string OPERATION_TYPE = "",
+            string CUST_CODE = "",
+            string CUST_AGMT_TYPE = "",
+            string EXP_DATE = "",
+            string EFT_DATE = "",
+            string OP_REMARK = "",
+            string TRDACCT = "",
+            string STKBD = "",
+            string OPEN_TYPE = "",
+            string OPEN_TYPE_WIN = "",
+            string SIGN_PLACE = "",
+            string REDO_FLAG = "",
+            string DEAL_STATUS = "0",
+            string SIGN_DATE = "",
+            string FRT_BIZ_SN = "",
+            string BATCHNO = "",
+            string APPLY_DATE = "",
+            string RETURN_MSG = "",
+            string REMOTE_SYS = "",
+            string ACCT_TYPE = "",
+            string CUACCT_CODE = "",
+            string AGMT_OPER_FLAG = "",
+            string OPEN_FLAG = "",
+            string SETT_DEALLOG = "",
+            string CHECK_RES_RIGHT = ""
+        )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                throw new Exception("客户代码不能为空");
+            }
+
+            // 查询处理结果
+            Request request = new Request(this.operatorId, "setCustAgreement");
+            request.setAttr("OPERATION_TYPE", OPERATION_TYPE); // 操作类型0-增加1-修改2-删除
+            request.setAttr("CUST_CODE", CUST_CODE); // 客户代码
+            request.setAttr("CUST_AGMT_TYPE", CUST_AGMT_TYPE); // 协议类型DD[CUST_AGMT_TYPE]
+            request.setAttr("EXP_DATE", EXP_DATE); // 有效截止日期
+            request.setAttr("EFT_DATE", EFT_DATE); // 生效日期
+            request.setAttr("OP_REMARK", OP_REMARK); // 操作备注
+            request.setAttr("TRDACCT", TRDACCT); // 交易账户
+            request.setAttr("STKBD", STKBD); // 交易板块DD[STKBD]
+            request.setAttr("OPEN_TYPE", OPEN_TYPE); // 开通类型0-T+02-T+25-T+5A
+            request.setAttr("OPEN_TYPE_WIN", OPEN_TYPE_WIN); // w版开通类型0-T+02-T+25-T+5
+            request.setAttr("SIGN_PLACE", SIGN_PLACE); // 签署地0-本证券公司1-其它证券公司
+            request.setAttr("REDO_FLAG", REDO_FLAG); // 是否重新申报1-重新申报
+            request.setAttr("DEAL_STATUS", DEAL_STATUS); // 报送状态0-未报,1-已报,9-报送失败
+            request.setAttr("SIGN_DATE", SIGN_DATE); // 签署日期
+            request.setAttr("FRT_BIZ_SN", FRT_BIZ_SN); // 任务流序号
+            request.setAttr("BATCHNO", BATCHNO); // 批次号
+            request.setAttr("APPLY_DATE", APPLY_DATE); // 报送时间
+            request.setAttr("RETURN_MSG", RETURN_MSG); // 应答原因
+            request.setAttr("REMOTE_SYS", REMOTE_SYS); // 对接远程系统
+            request.setAttr("ACCT_TYPE", ACCT_TYPE); // 开通类型
+            request.setAttr("CUACCT_CODE", CUACCT_CODE); // 资产账户
+            request.setAttr("AGMT_OPER_FLAG", AGMT_OPER_FLAG); // 协议操作标志
+            request.setAttr("OPEN_FLAG", OPEN_FLAG); // 申请标志
+            request.setAttr("SETT_DEALLOG", SETT_DEALLOG); // 是否处理报送流水
+            request.setAttr("CHECK_RES_RIGHT", CHECK_RES_RIGHT); // 检查资源权限
+
+            // 调用WebService获取返回值
+            Response response = new Response(this.invoke(request));
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
         }
     }
 }

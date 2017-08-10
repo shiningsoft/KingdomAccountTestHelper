@@ -650,7 +650,7 @@ namespace Yushen.WebService.KessClient
                 ACCT_OPENTYPE: "",  // 必须送空值
                 // 以上参数不要随意修改
                 CUST_CODE: user.cust_code,
-                YMT_CODE: user.ymt_code,    // 一码通可以不送
+                // YMT_CODE: user.ymt_code,    // 一码通可以不送
                 CUST_FNAME: user.user_fname,
                 USER_TYPE: user.user_type,
                 ID_TYPE: user.id_type,
@@ -690,16 +690,26 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
-        /// 开通
+        /// 中登开通创业板
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="user">用户对象</param>
+        /// <param name="SIGN_CLS">签约类别</param>
+        /// <param name="SIGN_DATE">签约日期</param>
         /// <returns></returns>
-        public Response openCYB(User user)
+        public bool openCyb2ZD(User user,string SIGN_CLS, string SIGN_DATE)
         {
             // 前置条件判断
             if (user.id_code == "")
             {
                 throw new Exception("证件代码不能为空");
+            }
+            if (SIGN_CLS == "")
+            {
+                throw new Exception("签约类别不能为空");
+            }
+            if (SIGN_DATE == "")
+            {
+                throw new Exception("签约日期不能为空");
             }
 
             // 初始化请求
@@ -716,9 +726,12 @@ namespace Yushen.WebService.KessClient
                 CHK_STATUS: Dict.CHK_STATUS.已通过,
                 NET_SERVICE: Dict.NET_SERVICE.否,
                 ACCT_OPENTYPE: "",  // 必须送空值
+                SIGN_CLS: SIGN_CLS,
+                SIGN_DATE: SIGN_DATE,
                 // 以上参数不要随意修改
                 CUST_CODE: user.cust_code,
-                YMT_CODE: user.ymt_code,    // 一码通可以不送
+                YMT_CODE: user.ymt_code,
+                TRDACCT: user.szacct,
                 CUST_FNAME: user.user_fname,
                 USER_TYPE: user.user_type,
                 ID_TYPE: user.id_type,
@@ -740,16 +753,78 @@ namespace Yushen.WebService.KessClient
 
             // 获取中登处理结果
             Response responseStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护, TRDACCT: user.szacct);
-            
+
             // 中登处理是否成功
-            if (responseStkAcctBizInfo.getValue("ACCTBIZ_STATUS") == "2")
+            if (responseStkAcctBizInfo.flag!="1")
             {
-                // 系统内开通创业板
-                
+                throw new Exception("中登开通创业板失败：" + responseStkAcctBizInfo.prompt);
+            }
+
+            // 返回成功
+            return true;
+        }
+
+        /// <summary>
+        /// 系统内开通创业板
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="OPEN_TYPE">开通类型，见数据字典</param>
+        /// <param name="SIGN_DATE">签署日期，空值表示当天</param>
+        /// <param name="EFT_DATE">生效日期，空值表示当天</param>
+        /// <returns></returns>
+        public bool openCyb2KBSS(
+            User user,
+            string OPEN_TYPE,
+            string SIGN_DATE="",
+            string EFT_DATE=""
+        )
+        {
+            // 前置条件判断
+            if (user.cust_code == "")
+            {
+                throw new Exception("客户号不能为空");
+            }
+            if (user.szacct == "")
+            {
+                throw new Exception("深A账户不能为空");
+            }
+            if (user.cust_code == "")
+            {
+                throw new Exception("客户号不能为空");
+            }
+            if (user.cust_code == "")
+            {
+                throw new Exception("客户号不能为空");
+            }
+            if (user.cust_code == "")
+            {
+                throw new Exception("客户号不能为空");
+            }
+
+            // 初始化请求
+
+            // 调用WebService获取返回值
+            Response response = this.setCustAgreement(
+                OPERATION_TYPE: "0",
+                CUST_CODE: user.cust_code,
+                CUACCT_CODE: user.cuacct_code,
+                TRDACCT: user.szacct,
+                CUST_AGMT_TYPE: Dict.CUST_AGMT_TYPE.创业板协议,
+                STKBD: Dict.STKBD.深圳A股,
+                OPEN_TYPE: Dict.OPEN_TYPE.T加5,
+                SIGN_PLACE: Dict.SIGN_PLACE.本证券公司,
+                REDO_FLAG: "",
+                SIGN_DATE: SIGN_DATE,
+                EFT_DATE: EFT_DATE
+            );
+
+            if (response.flag!="1")
+            {
+                throw new Exception("创业板协议签署失败：" + response.prompt);
             }
 
             // 返回结果
-            return responseStkAcctBizInfo;
+            return true;
         }
 
         /// <summary>

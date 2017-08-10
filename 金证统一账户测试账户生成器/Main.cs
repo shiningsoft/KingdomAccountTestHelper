@@ -154,6 +154,11 @@ namespace 金证统一账户测试账户生成器
             bank_code.ValueMember = "value";
             bank_code.DataSource = bankCodeList.DataTable;
 
+            Dict.OPEN_TYPE openTypeList = new Dict.OPEN_TYPE();
+            cbxOpenType.DisplayMember = "name";
+            cbxOpenType.ValueMember = "value";
+            cbxOpenType.DataSource = openTypeList.DataTable;
+
             // 初始化WebService连接
             if (kess == null)
             {
@@ -164,6 +169,7 @@ namespace 金证统一账户测试账户生成器
 
             Uri uri = new Uri(Properties.Settings.Default.webservice);
             toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port;
+            currentUser.Text = "用户：" + Properties.Settings.Default.operatorId;
         }
 
         /// <summary>
@@ -181,6 +187,7 @@ namespace 金证统一账户测试账户生成器
             citizenship.SelectedValue = Dict.CITIZENSHIP.中国;
             education.SelectedIndex = Generator.CreateRandomInteger(0, education.Items.Count);
             bank_code.SelectedIndex = Generator.CreateRandomInteger(0, bank_code.Items.Count);
+            cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
 
             saveUserInfo();
         }
@@ -432,7 +439,27 @@ namespace 金证统一账户测试账户生成器
 
         private void btnOpenCYB_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                }
 
+                if (kess.openCyb2ZD(user, cbxOpenType.SelectedValue.ToString(), dtpCybSignDate.Text))
+                {
+                    resultForm.Append("中登创业板开通成功");
+                    if (kess.openCyb2KBSS(user, Dict.OPEN_TYPE.T加2, dtpCybSignDate.Text, dtpCybSignDate.Text))
+                    {
+                        resultForm.Append("系统内创业板开通成功");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("系统内创业板开通失败：" + ex.Message);
+            }
         }
 
         private void btnValidateId_Click(object sender, EventArgs e)
@@ -714,6 +741,18 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("创业板查询失败：" + ex.Message);
             }
+        }
+
+        private void btnOpenLogFile_Click(object sender, EventArgs e)
+        {
+            string path = Environment.CurrentDirectory + @"\logs\" + DateTime.Now.ToString("yyyy-MM-dd") + @".log";
+            System.Diagnostics.Process.Start(path);
+        }
+
+        private void btnOpenLogFolder_Click(object sender, EventArgs e)
+        {
+            string path = Environment.CurrentDirectory + @"\logs\";
+            System.Diagnostics.Process.Start(path);
         }
     }
 }

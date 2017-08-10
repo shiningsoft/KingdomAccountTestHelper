@@ -159,6 +159,19 @@ namespace Yushen.WebService.KessClient.Dict
         public const string T加5开通交易 = "5";
         public const string 无需在本公司签署风险揭示书 = "A";
     }
+
+    /// <summary>
+    /// 开通类型
+    /// 0-T+0 2-T+2 5-T+5 A-无需在本公司签署风险揭示书
+    /// </summary>
+    class OPEN_TYPE : Dict
+    {
+        public const string T加0 = "0";
+        public const string T加2 = "2";
+        public const string T加5 = "5";
+        public const string 无需在本公司签署风险揭示书 = "A";
+    }
+
     /// <summary>
     /// 操作渠道
     /// </summary>
@@ -317,6 +330,27 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 报送状态
+    /// 文档描述：0-未报,1-已报,9-报送失败，与统一设置不一致
+    /// </summary>
+    class DEAL_STATUS : Dict
+    {
+        public const string 获取成功_全部 = "0";
+        public const string 获取成功_部分 = "1";
+        public const string 未获取 = "2";
+    }
+
+    /// <summary>
+    /// 签署地
+    /// 0-本证券公司 1-其它证券公司
+    /// </summary>
+    class SIGN_PLACE : Dict
+    {
+        public const string 本证券公司 = "0";
+        public const string 其它证券公司 = "1";
+    }
+
+    /// <summary>
     /// 资产账户属性
     /// </summary>
     class CUACCT_ATTR : Dict
@@ -419,6 +453,17 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 调查帐户存疑 = "q";
         public const string 监控帐户 = "r";
         public const string 权证大赛 = "s";
+    }
+
+    /// <summary>
+    /// 对接远程系统
+    /// </summary>
+    class REMOTE_SYS : Dict
+    {
+        public const string 普通交易系统 = "0";
+        public const string 融资融券系统 = "1";
+        public const string 股票期权系统 = "2";
+        public const string 统一认证系统 = "3";
     }
 
     /// <summary>
@@ -567,6 +612,58 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 协议类型 DD[CUST_AGMT_TYPE]
+    /// </summary>
+    class CUST_AGMT_TYPE : Dict
+    {
+        public const string 代理新股申购 = "00";
+        public const string 代理新股配售 = "01";
+        public const string 代理配股缴款 = "02";
+        public const string 证券投资基金风险揭示书 = "03";
+        public const string 客户委托理财电子签名约定书 = "07";
+        public const string 代理无效 = "08";
+        public const string 权证交易协议 = "09";
+        public const string 创业板协议 = "0A";
+        public const string 开通债券回购协议 = "0B";
+        public const string 股票期权自动行权协议 = "0G";
+        public const string 开通报价回购 = "0L";
+        public const string 开通跨境跨市场ETF = "0M";
+        public const string 开通协议大宗交易 = "0N";
+        public const string 债券专业投资者协议 = "0O";
+        public const string 开通优先股转让交易权限 = "0P";
+        public const string 中小企业私募债券协议 = "0S";
+        public const string 新债券合格投资者协议 = "0W";
+        public const string 开通约定购回 = "0Y";
+        public const string 客户退市协议 = "0b";
+        public const string 股转受限投资者交易协议 = "0c";
+        public const string 风险警示协议 = "0e";
+        public const string 自主行权协议 = "0f";
+        public const string 开通上证LOF交易业务权限 = "0g";
+        public const string 挂牌公司股票交易协议 = "0i";
+        public const string 港股通协议 = "0l";
+        public const string 股票质押回购融入交易协议 = "0m";
+        public const string 股票质押回购融出交易协议 = "0n";
+        public const string 风险警示债券买入协议 = "0o";
+        public const string 暂停上市债券买入协议 = "0p";
+        public const string 小贷通交易融入权限 = "0q";
+        public const string 资管产品份额交易协议 = "0r";
+        public const string 黄金ETF协议 = "0s";
+        public const string 国债预发行交易协议 = "0u";
+        public const string 股票期权协议 = "0w";
+        public const string 两网退市股票交易协议 = "0y";
+        public const string 第三方存管单客户多银行协议 = "0z";
+        public const string 债券合格投资者协议 = "11";
+        public const string 优先股转让适当性协议 = "12";
+        public const string 证券电子签名约定书 = "14";
+        public const string 场内基金盲拆协议 = "15";
+        public const string 质押协议回购融入协议 = "17";
+        public const string 质押协议回购融出协议 = "18";
+        public const string 股转优先股交易协议 = "21";
+        public const string 一键登录协议 = "22";
+        public const string 分级基金合格投资者权限 = "26";
+    }
+
+    /// <summary>
     /// 交易账户状态
     /// </summary>
     class TRDACCT_STATUS : Dict
@@ -666,58 +763,6 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 股票期权系统 = "3";
         public const string 集中交易系统_存在客户号 = "4";
         public const string 不同步 = "9";
-    }
-
-    /// <summary>
-    /// 客户协议类型
-    /// </summary>
-    class CUST_AMGT_TYPE : Dict
-    {
-        public const string 代理新股申购 = "00";
-        public const string 代理新股配售 = "01";
-        public const string 代理配股缴款 = "02";
-        public const string 证券投资基金风险揭示书 = "03";
-        public const string 客户委托理财电子签名约定书 = "07";
-        public const string 代理无效 = "08";
-        public const string 权证交易协议 = "09";
-        public const string 创业板协议 = "0A";
-        public const string 开通债券回购协议 = "0B";
-        public const string 股票期权自动行权协议 = "0G";
-        public const string 开通报价回购 = "0L";
-        public const string 开通跨境跨市场ETF = "0M";
-        public const string 开通协议大宗交易 = "0N";
-        public const string 债券专业投资者协议 = "0O";
-        public const string 开通优先股转让交易权限 = "0P";
-        public const string 中小企业私募债券协议 = "0S";
-        public const string 新债券合格投资者协议 = "0W";
-        public const string 开通约定购回 = "0Y";
-        public const string 客户退市协议 = "0b";
-        public const string 股转受限投资者交易协议 = "0c";
-        public const string 风险警示协议 = "0e";
-        public const string 自主行权协议 = "0f";
-        public const string 开通上证LOF交易业务权限 = "0g";
-        public const string 挂牌公司股票交易协议 = "0i";
-        public const string 港股通协议 = "0l";
-        public const string 股票质押回购融入交易协议 = "0m";
-        public const string 股票质押回购融出交易协议 = "0n";
-        public const string 风险警示债券买入协议 = "0o";
-        public const string 暂停上市债券买入协议 = "0p";
-        public const string 小贷通交易融入权限 = "0q";
-        public const string 资管产品份额交易协议 = "0r";
-        public const string 黄金ETF协议 = "0s";
-        public const string 国债预发行交易协议 = "0u";
-        public const string 股票期权协议 = "0w";
-        public const string 两网退市股票交易协议 = "0y";
-        public const string 第三方存管单客户多银行协议 = "0z";
-        public const string 债券合格投资者协议 = "11";
-        public const string 优先股转让适当性协议 = "12";
-        public const string 证券电子签名约定书 = "14";
-        public const string 场内基金盲拆协议 = "15";
-        public const string 质押协议回购融入协议 = "17";
-        public const string 质押协议回购融出协议 = "18";
-        public const string 股转优先股交易协议 = "21";
-        public const string 一键登录协议 = "22";
-        public const string 分级基金合格投资者权限 = "26";
     }
 
     /// <summary>
@@ -1248,6 +1293,15 @@ namespace Yushen.WebService.KessClient.Dict
                 DataTable dt = new DataTable();
                 dt.Columns.Add("name");
                 dt.Columns.Add("value");
+
+                if (selectable)
+                {
+                    DataRow dr = dt.NewRow();
+                    dr["name"] = "请选择";
+                    dr["value"] = "";
+                    dt.Rows.Add(dr);
+                }
+
                 foreach (FieldInfo item in FiledList)
                 {
                     DataRow dr = dt.NewRow();
@@ -1256,6 +1310,24 @@ namespace Yushen.WebService.KessClient.Dict
                     dt.Rows.Add(dr);
                 }
                 return dt;
+            }
+        }
+
+        private bool _selectable = false;
+
+        /// <summary>
+        /// 设置是否可选
+        /// 设置为true之后，DataTable的第一行将是“请选择”
+        /// </summary>
+        public bool selectable
+        {
+            set
+            {
+                this._selectable = true;
+            }
+            get
+            {
+                return this._selectable;
             }
         }
     }
