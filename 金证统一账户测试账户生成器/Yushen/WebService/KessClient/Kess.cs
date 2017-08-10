@@ -648,10 +648,10 @@ namespace Yushen.WebService.KessClient
                 CHK_STATUS: Dict.CHK_STATUS.已通过,
                 NET_SERVICE: Dict.NET_SERVICE.否,
                 ACCT_OPENTYPE: "",  // 必须送空值
-                CUST_CODE: user.cust_code,
                 TRDACCT: user.szacct,
                 // 以上参数不要随意修改
                 // YMT_CODE: user.ymt_code,    // 一码通可以不送
+                CUST_CODE: user.cust_code,
                 CUST_FNAME: user.user_fname,
                 USER_TYPE: user.user_type,
                 ID_TYPE: user.id_type,
@@ -671,17 +671,18 @@ namespace Yushen.WebService.KessClient
                 BIRTHDAY: user.birthday
                 );
             // 获取中登处理结果
-            Response responseStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护,TRDACCT:user.szacct);
+            Response rspsStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护,TRDACCT:user.szacct);
 
             // 判断返回的操作结果是否异常
-            if (responseStkAcctBizInfo.length == 1 && responseStkAcctBizInfo.getValue("RTN_ERR_CODE") != "0000")
+            if (rspsStkAcctBizInfo.length == 1 && rspsStkAcctBizInfo.getValue("RTN_ERR_CODE") != "0000")
             {
-                throw new Exception("中登返回错误：" + responseStkAcctBizInfo.getValue("RTN_ERR_CODE") + "，错误信息：" + responseStkAcctBizInfo.getValue("RETURN_MSG"));
+                throw new Exception("中登返回错误：" + rspsStkAcctBizInfo.getValue("RTN_ERR_CODE") + "，错误信息：" + rspsStkAcctBizInfo.getValue("RETURN_MSG"));
             }
 
-            // 获取签署信息
-            Response responseStkAcctBizInfoEx = this.searchStkAcctBizInfoEx(serialNo);
-            return responseStkAcctBizInfoEx;
+            // 通过扩展信息查询接口获取创业板签署信息
+            Response response = this.searchStkAcctBizInfoEx(serialNo);
+
+            return response;
         }
 
         /// <summary>
