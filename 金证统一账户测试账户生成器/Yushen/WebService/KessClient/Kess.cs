@@ -626,12 +626,12 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public Response queryCYB(User user)
+        public Response queryCYB(User user) // TODO:: 测试入参只保留深圳A股账号是否可行？
         {
             // 前置条件判断
-            if (user.id_code=="")
+            if (user.szacct=="")
             {
-                throw new Exception("证件代码不能为空");
+                throw new Exception("深圳股东代码不能为空");
             }
 
             // 初始化请求
@@ -839,7 +839,7 @@ namespace Yushen.WebService.KessClient
                 throw new Exception(message);
             }
 
-            return response.getSingleNodeText("/response/record/row/REGKEY_VAL");
+            return response.getValue("REGKEY_VAL");
         }
 
         /// <summary>

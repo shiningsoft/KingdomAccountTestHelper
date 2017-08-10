@@ -55,6 +55,7 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnSHAAcctBind = new System.Windows.Forms.Button();
             this.cbxCybSignCls = new System.Windows.Forms.ComboBox();
             this.tbxCybSignDate = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -274,6 +275,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnSHAAcctBind);
             this.tabPage1.Controls.Add(this.cbxCybSignCls);
             this.tabPage1.Controls.Add(this.tbxCybSignDate);
             this.tabPage1.Controls.Add(this.label25);
@@ -350,6 +352,16 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // btnSHAAcctBind
+            // 
+            this.btnSHAAcctBind.Enabled = false;
+            this.btnSHAAcctBind.Location = new System.Drawing.Point(423, 326);
+            this.btnSHAAcctBind.Name = "btnSHAAcctBind";
+            this.btnSHAAcctBind.Size = new System.Drawing.Size(100, 23);
+            this.btnSHAAcctBind.TabIndex = 83;
+            this.btnSHAAcctBind.Text = "指定交易";
+            this.btnSHAAcctBind.UseVisualStyleBackColor = true;
+            // 
             // cbxCybSignCls
             // 
             this.cbxCybSignCls.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -415,7 +427,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnOpenLogFolder
             // 
-            this.btnOpenLogFolder.Location = new System.Drawing.Point(812, 153);
+            this.btnOpenLogFolder.Location = new System.Drawing.Point(812, 144);
             this.btnOpenLogFolder.Name = "btnOpenLogFolder";
             this.btnOpenLogFolder.Size = new System.Drawing.Size(100, 23);
             this.btnOpenLogFolder.TabIndex = 75;
@@ -425,7 +437,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnOpenLogFile
             // 
-            this.btnOpenLogFile.Location = new System.Drawing.Point(812, 124);
+            this.btnOpenLogFile.Location = new System.Drawing.Point(812, 117);
             this.btnOpenLogFile.Name = "btnOpenLogFile";
             this.btnOpenLogFile.Size = new System.Drawing.Size(100, 23);
             this.btnOpenLogFile.TabIndex = 74;
@@ -455,11 +467,11 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnQueryCYB
             // 
-            this.btnQueryCYB.Location = new System.Drawing.Point(423, 380);
+            this.btnQueryCYB.Location = new System.Drawing.Point(529, 353);
             this.btnQueryCYB.Name = "btnQueryCYB";
             this.btnQueryCYB.Size = new System.Drawing.Size(100, 23);
             this.btnQueryCYB.TabIndex = 71;
-            this.btnQueryCYB.Text = "创业板签约查询";
+            this.btnQueryCYB.Text = "创业板信息查询";
             this.btnQueryCYB.UseVisualStyleBackColor = true;
             this.btnQueryCYB.Click += new System.EventHandler(this.btnQueryCYB_Click);
             // 
@@ -474,7 +486,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnValidateId
             // 
-            this.btnValidateId.Location = new System.Drawing.Point(812, 66);
+            this.btnValidateId.Location = new System.Drawing.Point(812, 64);
             this.btnValidateId.Name = "btnValidateId";
             this.btnValidateId.Size = new System.Drawing.Size(100, 23);
             this.btnValidateId.TabIndex = 69;
@@ -529,7 +541,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(812, 37);
+            this.btnLogin.Location = new System.Drawing.Point(812, 36);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 23);
             this.btnLogin.TabIndex = 63;
@@ -577,7 +589,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnOpenCYB
             // 
-            this.btnOpenCYB.Location = new System.Drawing.Point(317, 380);
+            this.btnOpenCYB.Location = new System.Drawing.Point(423, 353);
             this.btnOpenCYB.Name = "btnOpenCYB";
             this.btnOpenCYB.Size = new System.Drawing.Size(100, 23);
             this.btnOpenCYB.TabIndex = 57;
@@ -685,7 +697,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnQueryStockAccount
             // 
-            this.btnQueryStockAccount.Location = new System.Drawing.Point(812, 95);
+            this.btnQueryStockAccount.Location = new System.Drawing.Point(812, 90);
             this.btnQueryStockAccount.Name = "btnQueryStockAccount";
             this.btnQueryStockAccount.Size = new System.Drawing.Size(100, 23);
             this.btnQueryStockAccount.TabIndex = 45;
@@ -1139,6 +1151,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.TextBox tbxCybSignDate;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox cbxCybSignCls;
+        private System.Windows.Forms.Button btnSHAAcctBind;
     }
 }
 

@@ -124,7 +124,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="xpath"></param>
         /// <returns></returns>
-        public string getSingleNodeText(string xpath)
+        private string getSingleNodeText(string xpath)
         {
             XmlNode node = xmlDoc.SelectSingleNode(xpath);
             if (node==null)

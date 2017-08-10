@@ -686,6 +686,16 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 交易指定状态
+    /// </summary>
+    class BREG_STATUS : Dict
+    {
+        public const string 未指定 = "0";
+        public const string 首日指定 = "1";
+        public const string 已指定 = "2";
+    }
+
+    /// <summary>
     /// 用户角色
     /// </summary>
     class USER_ROLE : Dict
@@ -1321,7 +1331,7 @@ namespace Yushen.WebService.KessClient.Dict
         {
             set
             {
-                this._selectable = true;
+                this._selectable = value;
             }
             get
             {

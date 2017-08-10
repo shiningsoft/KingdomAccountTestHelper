@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="Yushen\WebService\KessClient\Xml\listStkPbuOrg.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\mdfControlLerInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -171,6 +172,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\signAgreement.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\stkTrdacctBind.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\syncSurveyAns2Kbss.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
