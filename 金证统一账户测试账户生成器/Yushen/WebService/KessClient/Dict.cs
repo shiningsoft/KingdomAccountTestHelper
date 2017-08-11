@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Reflection;
 
@@ -1347,7 +1348,7 @@ namespace Yushen.WebService.KessClient.Dict
         /// <returns></returns>
         public int IndexOf(string value)
         {
-            Type t = GetType();
+            Type t = this.GetType();
             FieldInfo[] FiledList = t.GetFields();
             for (int i = 0; i < FiledList.Length; i++)
             {
@@ -1357,6 +1358,26 @@ namespace Yushen.WebService.KessClient.Dict
                 }
             }
             return -1;
+        }
+
+        /// <summary>
+        /// 根据指定的字典值取得对应的字典项名称。
+        /// 找不到时返回空。
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public string getNameByValue(string value)
+        {
+            Type t = this.GetType();
+            FieldInfo[] FiledList = t.GetFields();
+            for (int i = 0; i < FiledList.Length; i++)
+            {
+                if (value == FiledList[i].GetValue(value).ToString())
+                {
+                    return FiledList[i].Name;
+                }
+            }
+            return "";
         }
     }
 }

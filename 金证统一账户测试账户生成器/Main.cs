@@ -646,6 +646,7 @@ namespace 金证统一账户测试账户生成器
 
         private void btnQueryCYB_Click(object sender, EventArgs e)
         {
+            resultForm.Show();
             try
             {
                 // 建立WebService连接
@@ -654,21 +655,31 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                Response response = kess.queryCYB(user);
+                // 清空显示
+                tbxCybSignDate.Text = "";
+                if (cbxCybSignCls.DataSource!=null)
+                {
+                    DataTable dt = (DataTable)cbxCybSignCls.DataSource;
+                    dt.Rows.Clear();
+                    cbxCybSignCls.DataSource = dt;
+                }
+
+                // 根据股东账号查询创业板信息
+                Response response = kess.queryCYB(tbxSZAcct.Text.Trim());
 
                 tbxCybSignDate.Text = response.getValue("SIGN_DATE");
 
                 Dict.SIGN_CLS signClsList = new Dict.SIGN_CLS();
-                cbxCybSignCls.DisplayMember = "name";
-                cbxCybSignCls.ValueMember = "value";
-                cbxCybSignCls.DataSource = signClsList.DataTable;
-                string signcls = response.getValue("SIGN_CLS");
-                if (signClsList.IndexOf(signcls) == -1)
-                {
-                    throw new Exception("返回的签约类别SIGN_CLS字段值 " + signcls + " 无效");
-                }
-                cbxCybSignCls.SelectedValue = signcls;
-
+                tbxCybSignDate.Text += "；" + signClsList.getNameByValue(response.getValue("SIGN_CLS"));
+                //string signcls = response.getValue("SIGN_CLS");
+                //if (signClsList.IndexOf(signcls) == -1)
+                //{
+                //    throw new Exception("返回的签约类别SIGN_CLS字段值 " + signcls + " 无效");
+                //}
+                //cbxCybSignCls.DisplayMember = "name";
+                //cbxCybSignCls.ValueMember = "value";
+                //cbxCybSignCls.DataSource = signClsList.DataTable;
+                //cbxCybSignCls.SelectedValue = signcls;
             }
             catch (Exception ex)
             {
@@ -686,6 +697,20 @@ namespace 金证统一账户测试账户生成器
         {
             string path = Environment.CurrentDirectory + @"\logs\";
             System.Diagnostics.Process.Start(path);
+        }
+
+        private frmSettings settings;
+        private void 设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (settings==null||settings.IsDisposed)
+            {
+                settings = new frmSettings();
+                settings.Show();
+            }
+            else
+            {
+                settings.Activate();
+            }
         }
     }
 }

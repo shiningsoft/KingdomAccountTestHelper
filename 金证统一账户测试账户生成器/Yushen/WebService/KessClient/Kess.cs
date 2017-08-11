@@ -626,10 +626,10 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public Response queryCYB(User user) // TODO:: 测试入参只保留深圳A股账号是否可行？
+        public Response queryCYB(string TRDACCT) // TODO:: 测试入参只保留深圳A股账号是否可行？
         {
             // 前置条件判断
-            if (user.szacct=="")
+            if (TRDACCT == "")
             {
                 throw new Exception("深圳股东代码不能为空");
             }
@@ -639,39 +639,19 @@ namespace Yushen.WebService.KessClient
             // 调用WebService获取返回值
             // 发送中登请求
             string serialNo = this.submitStkAcctBizOpReq2NewZD(
-                OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
-                ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
-                PROPER_CLS: "",  // 适当性类别必须为空
-                ACCTBIZ_CLS: Dict.AcctBiz_CLS.创业板_查询,
-                ACCT_TYPE: Dict.ACCT_TYPE.深市A股账户,
-                STKBD:Dict.STKBD.深圳A股,
-                CHK_STATUS: Dict.CHK_STATUS.已通过,
-                NET_SERVICE: Dict.NET_SERVICE.否,
-                ACCT_OPENTYPE: "",  // 必须送空值
-                TRDACCT: user.szacct,
-                // 以上参数不要随意修改
-                // YMT_CODE: user.ymt_code,    // 一码通可以不送
-                CUST_CODE: user.cust_code,
-                CUST_FNAME: user.user_fname,
-                USER_TYPE: user.user_type,
-                ID_TYPE: user.id_type,
-                ID_CODE: user.id_code,
-                ID_ADDR: user.id_addr,
-                ID_BEG_DATE: user.id_beg_date,
-                ID_EXP_DATE: user.id_exp_date,
-                CITIZENSHIP: user.citizenship,
-                ADDRESS: user.id_addr,
-                MOBILE_TEL: user.mobile_tel,
-                TEL: user.tel,
-                SEX: user.sex,
-                INT_ORG: user.int_org,
-                OCCU_TYPE: user.occu_type,
-                EDUCATION: user.education,
-                ZIP_CODE: user.zip_code,
-                BIRTHDAY: user.birthday
-                );
+                                    OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
+                                    ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
+                                    ACCTBIZ_CLS: Dict.AcctBiz_CLS.创业板_查询,
+                                    ACCT_TYPE: Dict.ACCT_TYPE.深市A股账户,
+                                    STKBD:Dict.STKBD.深圳A股,
+                                    CHK_STATUS: Dict.CHK_STATUS.已通过,
+                                    NET_SERVICE: Dict.NET_SERVICE.否,
+                                    PROPER_CLS: "",  // 适当性类别必须为空
+                                    ACCT_OPENTYPE: "",  // 必须送空值
+                                    TRDACCT: TRDACCT    // 深圳A股账号
+                                );
             // 获取中登处理结果
-            Response rspsStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护,TRDACCT:user.szacct);
+            Response rspsStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo);
 
             // 判断返回的操作结果是否异常
             if (rspsStkAcctBizInfo.length == 1 && rspsStkAcctBizInfo.getValue("RTN_ERR_CODE") != "0000")

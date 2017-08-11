@@ -45,7 +45,6 @@ namespace 金证统一账户测试账户生成器
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.新开账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.新开创业板转签测试账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.数据字典查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,7 +55,6 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.cbxCybSignCls = new System.Windows.Forms.ComboBox();
             this.tbxCybSignDate = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -128,6 +126,7 @@ namespace 金证统一账户测试账户生成器
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
+            this.cbxCybSignCls = new System.Windows.Forms.ComboBox();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -160,7 +159,7 @@ namespace 金证统一账户测试账户生成器
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -168,7 +167,6 @@ namespace 金证统一账户测试账户生成器
             // 
             this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.新开账户ToolStripMenuItem,
-            this.新开创业板转签测试账户ToolStripMenuItem,
             this.数据字典查询ToolStripMenuItem});
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(44, 21);
@@ -177,20 +175,14 @@ namespace 金证统一账户测试账户生成器
             // 新开账户ToolStripMenuItem
             // 
             this.新开账户ToolStripMenuItem.Name = "新开账户ToolStripMenuItem";
-            this.新开账户ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.新开账户ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.新开账户ToolStripMenuItem.Text = "新开账户";
             this.新开账户ToolStripMenuItem.Click += new System.EventHandler(this.新开随机账户ToolStripMenuItem_Click);
-            // 
-            // 新开创业板转签测试账户ToolStripMenuItem
-            // 
-            this.新开创业板转签测试账户ToolStripMenuItem.Name = "新开创业板转签测试账户ToolStripMenuItem";
-            this.新开创业板转签测试账户ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
-            this.新开创业板转签测试账户ToolStripMenuItem.Text = "新开创业板转签测试账户";
             // 
             // 数据字典查询ToolStripMenuItem
             // 
             this.数据字典查询ToolStripMenuItem.Name = "数据字典查询ToolStripMenuItem";
-            this.数据字典查询ToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.数据字典查询ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.数据字典查询ToolStripMenuItem.Text = "数据字典查询";
             // 
             // 设置ToolStripMenuItem
@@ -198,6 +190,7 @@ namespace 金证统一账户测试账户生成器
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
             this.设置ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.设置ToolStripMenuItem.Text = "设置";
+            this.设置ToolStripMenuItem.Click += new System.EventHandler(this.设置ToolStripMenuItem_Click);
             // 
             // 关于ToolStripMenuItem
             // 
@@ -351,21 +344,13 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // cbxCybSignCls
-            // 
-            this.cbxCybSignCls.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCybSignCls.FormattingEnabled = true;
-            this.cbxCybSignCls.Location = new System.Drawing.Point(529, 382);
-            this.cbxCybSignCls.Name = "cbxCybSignCls";
-            this.cbxCybSignCls.Size = new System.Drawing.Size(100, 20);
-            this.cbxCybSignCls.TabIndex = 82;
-            // 
             // tbxCybSignDate
             // 
             this.tbxCybSignDate.Location = new System.Drawing.Point(423, 382);
             this.tbxCybSignDate.Name = "tbxCybSignDate";
+            this.tbxCybSignDate.ReadOnly = true;
             this.tbxCybSignDate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxCybSignDate.Size = new System.Drawing.Size(100, 21);
+            this.tbxCybSignDate.Size = new System.Drawing.Size(206, 21);
             this.tbxCybSignDate.TabIndex = 81;
             // 
             // label25
@@ -1024,6 +1009,16 @@ namespace 金证统一账户测试账户生成器
             this.currentUser.Size = new System.Drawing.Size(48, 21);
             this.currentUser.Text = "用户：";
             // 
+            // cbxCybSignCls
+            // 
+            this.cbxCybSignCls.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCybSignCls.FormattingEnabled = true;
+            this.cbxCybSignCls.Location = new System.Drawing.Point(635, 355);
+            this.cbxCybSignCls.Name = "cbxCybSignCls";
+            this.cbxCybSignCls.Size = new System.Drawing.Size(100, 20);
+            this.cbxCybSignCls.TabIndex = 82;
+            this.cbxCybSignCls.Visible = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1062,7 +1057,6 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
         private System.Windows.Forms.ToolStripMenuItem 新开账户ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 新开创业板转签测试账户ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 数据字典查询ToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPageGetDict;
         private System.Windows.Forms.Button button2;
