@@ -17,6 +17,7 @@ namespace 金证统一账户测试账户生成器
 
         public void Append(string message)
         {
+            this.Show();
             this.infoBox.AppendText(message + Environment.NewLine);
         }
 

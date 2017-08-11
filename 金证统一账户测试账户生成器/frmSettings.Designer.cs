@@ -38,12 +38,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tbxZdTimeout = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cancel
             // 
             this.cancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.cancel.Location = new System.Drawing.Point(578, 136);
+            this.cancel.Location = new System.Drawing.Point(476, 163);
             this.cancel.Name = "cancel";
             this.cancel.Size = new System.Drawing.Size(75, 23);
             this.cancel.TabIndex = 0;
@@ -54,7 +57,7 @@
             // accept
             // 
             this.accept.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.accept.Location = new System.Drawing.Point(497, 136);
+            this.accept.Location = new System.Drawing.Point(395, 163);
             this.accept.Name = "accept";
             this.accept.Size = new System.Drawing.Size(75, 23);
             this.accept.TabIndex = 1;
@@ -66,33 +69,30 @@
             // 
             this.tbxWebserviceUrl.Location = new System.Drawing.Point(129, 12);
             this.tbxWebserviceUrl.Name = "tbxWebserviceUrl";
-            this.tbxWebserviceUrl.Size = new System.Drawing.Size(524, 21);
+            this.tbxWebserviceUrl.Size = new System.Drawing.Size(422, 21);
             this.tbxWebserviceUrl.TabIndex = 2;
-            this.tbxWebserviceUrl.TextChanged += new System.EventHandler(this.tbxWebserviceUrl_TextChanged);
             // 
             // tbxOperatorId
             // 
             this.tbxOperatorId.Location = new System.Drawing.Point(129, 39);
             this.tbxOperatorId.Name = "tbxOperatorId";
-            this.tbxOperatorId.Size = new System.Drawing.Size(100, 21);
+            this.tbxOperatorId.Size = new System.Drawing.Size(175, 21);
             this.tbxOperatorId.TabIndex = 3;
-            this.tbxOperatorId.TextChanged += new System.EventHandler(this.tbxOperatorId_TextChanged);
             // 
             // tbxPassword
             // 
             this.tbxPassword.Location = new System.Drawing.Point(129, 66);
             this.tbxPassword.Name = "tbxPassword";
-            this.tbxPassword.Size = new System.Drawing.Size(100, 21);
+            this.tbxPassword.PasswordChar = '*';
+            this.tbxPassword.Size = new System.Drawing.Size(175, 21);
             this.tbxPassword.TabIndex = 4;
-            this.tbxPassword.TextChanged += new System.EventHandler(this.tbxPassword_TextChanged);
             // 
             // tbxChannel
             // 
             this.tbxChannel.Location = new System.Drawing.Point(129, 93);
             this.tbxChannel.Name = "tbxChannel";
-            this.tbxChannel.Size = new System.Drawing.Size(100, 21);
+            this.tbxChannel.Size = new System.Drawing.Size(175, 21);
             this.tbxChannel.TabIndex = 5;
-            this.tbxChannel.TextChanged += new System.EventHandler(this.tbxChannel_TextChanged);
             // 
             // label1
             // 
@@ -130,11 +130,39 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "操作渠道：";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(34, 123);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(89, 12);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "中登超时时间：";
+            // 
+            // tbxZdTimeout
+            // 
+            this.tbxZdTimeout.Location = new System.Drawing.Point(129, 120);
+            this.tbxZdTimeout.Name = "tbxZdTimeout";
+            this.tbxZdTimeout.Size = new System.Drawing.Size(175, 21);
+            this.tbxZdTimeout.TabIndex = 10;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(310, 123);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(17, 12);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "秒";
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 171);
+            this.ClientSize = new System.Drawing.Size(563, 198);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.tbxZdTimeout);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -165,5 +193,8 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox tbxZdTimeout;
+        private System.Windows.Forms.Label label6;
     }
 }

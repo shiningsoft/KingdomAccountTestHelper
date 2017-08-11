@@ -14,5 +14,8 @@
     <Setting Name="操作渠道" Type="System.String" Scope="User">
       <Value Profile="(Default)">8</Value>
     </Setting>
+    <Setting Name="中登超时时间" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">30</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

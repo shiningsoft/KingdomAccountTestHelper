@@ -70,5 +70,17 @@ namespace 金证统一账户测试账户生成器.Properties {
                 this["操作渠道"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        public int 中登超时时间 {
+            get {
+                return ((int)(this["中登超时时间"]));
+            }
+            set {
+                this["中登超时时间"] = value;
+            }
+        }
     }
 }

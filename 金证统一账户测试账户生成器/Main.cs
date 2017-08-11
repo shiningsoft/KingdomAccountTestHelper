@@ -141,10 +141,17 @@ namespace 金证统一账户测试账户生成器
             cbxOpenType.ValueMember = "value";
             cbxOpenType.DataSource = openTypeList.DataTable;
 
-            // 初始化WebService连接
-            if (kess == null)
+            try
             {
-                kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                // 初始化WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("初始化失败：" + ex.Message);
             }
 
             reCreateUserInfo();
@@ -353,16 +360,20 @@ namespace 金证统一账户测试账户生成器
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // 建立WebService连接
-            if (kess == null)
+            try
             {
+                // 建立WebService连接
                 kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-            }
 
-            if (kess.operatorLogin())
+                if (kess.operatorLogin())
+                {
+                    resultForm.Show();
+                    resultForm.Append("操作员登录成功");
+                }
+            }
+            catch (Exception ex)
             {
-                resultForm.Show();
-                resultForm.Append("操作员登录成功");
+                resultForm.Append("操作员登录失败：" + ex.Message);
             }
         }
 
@@ -437,7 +448,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void btnOpenSZAStkAcct_Click(object sender, EventArgs e)
         {
 
             resultForm.Show();

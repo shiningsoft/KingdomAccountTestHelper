@@ -24,6 +24,7 @@ namespace 金证统一账户测试账户生成器
             tbxOperatorId.Text = Settings.Default.操作员代码;
             tbxPassword.Text = Settings.Default.操作员密码;
             tbxChannel.Text = Settings.Default.操作渠道;
+            tbxZdTimeout.Text = Settings.Default.中登超时时间.ToString();
         }
 
         private void tbxWebserviceUrl_TextChanged(object sender, EventArgs e)
@@ -52,6 +53,7 @@ namespace 金证统一账户测试账户生成器
             Settings.Default.操作员代码 = tbxOperatorId.Text.Trim();
             Settings.Default.操作员密码 = tbxPassword.Text.Trim();
             Settings.Default.操作渠道 = tbxChannel.Text.Trim();
+            Settings.Default.中登超时时间 = int.Parse(tbxZdTimeout.Text.Trim());
             Settings.Default.Save();
             this.Close();
         }

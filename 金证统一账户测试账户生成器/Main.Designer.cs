@@ -437,7 +437,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenSZAStkAcct.TabIndex = 72;
             this.btnOpenSZAStkAcct.Text = "新开";
             this.btnOpenSZAStkAcct.UseVisualStyleBackColor = true;
-            this.btnOpenSZAStkAcct.Click += new System.EventHandler(this.button5_Click);
+            this.btnOpenSZAStkAcct.Click += new System.EventHandler(this.btnOpenSZAStkAcct_Click);
             // 
             // btnQueryCYB
             // 
