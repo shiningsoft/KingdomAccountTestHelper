@@ -1035,6 +1035,7 @@ namespace 金证统一账户测试账户生成器
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Main";
+            this.ShowIcon = false;
             this.Text = "金证统一账户测试账户生成器";
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip.ResumeLayout(false);

@@ -6,6 +6,7 @@ using NLog;
 using System.Threading.Tasks;
 using Dict = Yushen.WebService.KessClient.Dict;
 using System.Data;
+using 金证统一账户测试账户生成器.Properties;
 
 namespace 金证统一账户测试账户生成器
 {
@@ -26,28 +27,15 @@ namespace 金证统一账户测试账户生成器
             resultForm.Clear();
             resultForm.Show();
 
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            // 建立WebService连接
+            if (kess == null)
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+            }
 
-                        saveUserInfo();
+            saveUserInfo();
 
-                        openCustCode();
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append(ex.Message);
-                    }
-                }));
-            });
+            openCustCode();
         }
 
         private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -79,35 +67,29 @@ namespace 金证统一账户测试账户生成器
                 // 建立WebService连接
                 if (kess == null)
                 {
-                    kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                // 异步方式调用WebService查询
-                Task task = Task.Run(() =>
+                try
                 {
-                    this.Invoke((MethodInvoker)(() => {
-                        try
-                        {
-                            Response response = kess.getDictData(dictName.Text);
-                            dataGridView1.DataSource = response.DataSet.Tables["row"];
-                            if (dataGridView1.ColumnCount>=2)
-                            {
-                                dataGridView1.AutoResizeColumn(2);
-                            }
-                        }
-                        catch (Exception ex)
-                        {
-                            resultForm.Show();
-                            resultForm.Append(ex.Message);
-                            if (dataGridView1.DataSource != null)
-                            {
-                                DataTable dt = (DataTable)dataGridView1.DataSource;
-                                dt.Rows.Clear();
-                                dataGridView1.DataSource = dt;
-                            }
-                        }
-                    }));
-                });
+                    Response response = kess.getDictData(dictName.Text);
+                    dataGridView1.DataSource = response.DataSet.Tables["row"];
+                    if (dataGridView1.ColumnCount >= 2)
+                    {
+                        dataGridView1.AutoResizeColumn(2);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    resultForm.Show();
+                    resultForm.Append(ex.Message);
+                    if (dataGridView1.DataSource != null)
+                    {
+                        DataTable dt = (DataTable)dataGridView1.DataSource;
+                        dt.Rows.Clear();
+                        dataGridView1.DataSource = dt;
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -162,14 +144,14 @@ namespace 金证统一账户测试账户生成器
             // 初始化WebService连接
             if (kess == null)
             {
-                kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
             }
 
             reCreateUserInfo();
 
-            Uri uri = new Uri(Properties.Settings.Default.webservice);
+            Uri uri = new Uri(Settings.Default.webservice);
             toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port;
-            currentUser.Text = "用户：" + Properties.Settings.Default.operatorId;
+            currentUser.Text = "用户：" + Settings.Default.操作员代码;
         }
 
         /// <summary>
@@ -239,54 +221,42 @@ namespace 金证统一账户测试账户生成器
         {
             resultForm.Show();
 
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            try
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
-                        syncSurveyAns2Kbss();
+                syncSurveyAns2Kbss();
 
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append(ex.Message);
-                    }
-                }));
-            });
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         private void btnSetPassword_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            try
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
-                        mdfUserPassword();
+                mdfUserPassword();
 
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append(ex.Message);
-                    }
-                }));
-            });
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         /// <summary>
@@ -298,92 +268,74 @@ namespace 金证统一账户测试账户生成器
         {
             resultForm.Show();
 
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            try
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
-                        openCuacctCode();
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append(ex.Message);
-                    }
-                }));
-            });
+                openCuacctCode();
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         private void btnOpenYMT_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            try
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
-                        openYMTCode();
+                openYMTCode();
 
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append(ex.Message);
-                    }
-                }));
-            });
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         private void btnOpenStockAccount_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
-            {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
-
-                        openSHACode();
-
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append(ex.Message);
-                    }
-                }));
-            });
-        }
-
-        private void btnQueryStockAccount_Click(object sender, EventArgs e)
-        {
-            resultForm.Show();
-            
             try
             {
                 // 建立WebService连接
                 if (kess == null)
                 {
-                    kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
+
+                openSHACode();
+
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+        }
+
+        private void btnQueryStockAccount_Click(object sender, EventArgs e)
+        {
+            resultForm.Show();
+
+            try
+            {
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
                 Response response = kess.queryStkAcct(user);
@@ -404,7 +356,7 @@ namespace 金证统一账户测试账户生成器
             // 建立WebService连接
             if (kess == null)
             {
-                kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
             }
 
             if (kess.operatorLogin())
@@ -417,28 +369,21 @@ namespace 金证统一账户测试账户生成器
         private void btnRegisterStockAccount_Click(object sender, EventArgs e)
         {
             resultForm.Show();
-
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            try
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
-                        registerSHACode();
+                registerSHACode();
 
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append("股东账号加挂失败：" + ex.Message);
-                    }
-                }));
-            });
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("股东账号加挂失败：" + ex.Message);
+            }
         }
 
         private void btnOpenCYB_Click(object sender, EventArgs e)
@@ -448,7 +393,7 @@ namespace 金证统一账户测试账户生成器
                 // 建立WebService连接
                 if (kess == null)
                 {
-                    kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
                 kess.openCyb2ZD(user, cbxOpenType.SelectedValue.ToString(), dtpCybSignDate.Text);
@@ -466,36 +411,30 @@ namespace 金证统一账户测试账户生成器
         {
             resultForm.Show();
 
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            try
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
-                        Response response = kess.validateIdCode(user);
+                Response response = kess.validateIdCode(user);
 
-                        // 返回结果
-                        if (response.getValue("ID_CODE_CHKRLT") == "一致")
-                        {
-                            resultForm.Append("公安校验通过");
-                        }
-                        else
-                        {
-                            resultForm.Append("公安校验未通过：" + response.getValue("ID_CODE_CHKRLT"));
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append(ex.Message);
-                    }
-                }));
-            });
+                // 返回结果
+                if (response.getValue("ID_CODE_CHKRLT") == "一致")
+                {
+                    resultForm.Append("公安校验通过");
+                }
+                else
+                {
+                    resultForm.Append("公安校验未通过：" + response.getValue("ID_CODE_CHKRLT"));
+                }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -503,100 +442,81 @@ namespace 金证统一账户测试账户生成器
 
             resultForm.Show();
 
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            try
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
-                        openSZACode();
+                openSZACode();
 
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append(ex.Message);
-                    }
-                }));
-            });
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         private void btnRegisterSZAStkAcct_Click(object sender, EventArgs e)
         {
             resultForm.Show();
-
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            try
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
-                        registerSZACode();
+                registerSZACode();
 
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append("股东账号加挂失败：" + ex.Message);
-                    }
-                }));
-            });
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("股东账号加挂失败：" + ex.Message);
+            }
         }
 
         private void btnOpenAccountByOneClick_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
-            // 异步方式调用WebService查询
-            Task task = Task.Run(() =>
+            try
             {
-                this.Invoke((MethodInvoker)(() => {
-                    try
-                    {
-                        // 建立WebService连接
-                        if (kess == null)
-                        {
-                            kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
-                        }
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
-                        // 使用当前用户信息
-                        saveUserInfo();
+                // 使用当前用户信息
+                saveUserInfo();
 
-                        openCustCode();
+                openCustCode();
 
-                        openCuacctCode();
+                openCuacctCode();
 
-                        mdfUserPassword();
+                mdfUserPassword();
 
-                        syncSurveyAns2Kbss();
+                syncSurveyAns2Kbss();
 
-                        openYMTCode();
+                openYMTCode();
 
-                        openSHACode();
+                openSHACode();
 
-                        registerSHACode();
+                registerSHACode();
 
-                        openSZACode();
+                openSZACode();
 
-                        registerSZACode();
+                registerSZACode();
 
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append(ex.Message);
-                    }
-                }));
-            });
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         /// <summary>
@@ -731,7 +651,7 @@ namespace 金证统一账户测试账户生成器
                 // 建立WebService连接
                 if (kess == null)
                 {
-                    kess = new Kess(Properties.Settings.Default.operatorId, Properties.Settings.Default.operatorPassword, Properties.Settings.Default.channel, Properties.Settings.Default.webservice);
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
                 Response response = kess.queryCYB(user);
@@ -743,7 +663,7 @@ namespace 金证统一账户测试账户生成器
                 cbxCybSignCls.ValueMember = "value";
                 cbxCybSignCls.DataSource = signClsList.DataTable;
                 string signcls = response.getValue("SIGN_CLS");
-                if (signClsList.IndexOf(signcls)==-1)
+                if (signClsList.IndexOf(signcls) == -1)
                 {
                     throw new Exception("返回的签约类别SIGN_CLS字段值 " + signcls + " 无效");
                 }

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!--2.4 查询操作员机构列表-->
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//机构类型：@-全部0-内部机构1-银行2-登记公司3-基金公司4-期货公司-->
+    <ORG_TYPE></ORG_TYPE>
+    <!--//权限标识：0-无权限1-有权限其他-不关心权限-->
+    <RIGHT_FLAG></RIGHT_FLAG>
+  </data>
+</request>

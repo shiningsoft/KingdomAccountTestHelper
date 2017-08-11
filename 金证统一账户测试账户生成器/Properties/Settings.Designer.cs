@@ -38,36 +38,36 @@ namespace 金证统一账户测试账户生成器.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("90019")]
-        public string operatorId {
+        public string 操作员代码 {
             get {
-                return ((string)(this["operatorId"]));
+                return ((string)(this["操作员代码"]));
             }
             set {
-                this["operatorId"] = value;
+                this["操作员代码"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("888888")]
-        public string operatorPassword {
+        public string 操作员密码 {
             get {
-                return ((string)(this["operatorPassword"]));
+                return ((string)(this["操作员密码"]));
             }
             set {
-                this["operatorPassword"] = value;
+                this["操作员密码"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("8")]
-        public string channel {
+        public string 操作渠道 {
             get {
-                return ((string)(this["channel"]));
+                return ((string)(this["操作渠道"]));
             }
             set {
-                this["channel"] = value;
+                this["操作渠道"] = value;
             }
         }
     }
