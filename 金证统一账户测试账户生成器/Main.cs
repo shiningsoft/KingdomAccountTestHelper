@@ -407,7 +407,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                kess.openCyb2ZD(user, cbxOpenType.SelectedValue.ToString(), dtpCybSignDate.Text);
+                kess.openCyb2ZD(user, cbxOpenType.SelectedValue.ToString(), dtpCybSignDate.Text,timeout:Settings.Default.中登超时时间);
                 resultForm.Append("中登创业板开通成功");
                 kess.openCyb2KBSS(user, Dict.OPEN_TYPE.T加2, dtpCybSignDate.Text, dtpCybSignDate.Text);
                 resultForm.Append("系统内创业板协议签署成功");
@@ -676,7 +676,7 @@ namespace 金证统一账户测试账户生成器
                 }
 
                 // 根据股东账号查询创业板信息
-                Response response = kess.queryCYB(tbxSZAcct.Text.Trim());
+                Response response = kess.queryCYB(tbxSZAcct.Text.Trim(), Settings.Default.中登超时时间);
 
                 tbxCybSignDate.Text = response.getValue("SIGN_DATE");
 
@@ -710,17 +710,17 @@ namespace 金证统一账户测试账户生成器
             System.Diagnostics.Process.Start(path);
         }
 
-        private frmSettings settings;
+        private frmSettings frmSettings;
         private void 设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (settings==null||settings.IsDisposed)
+            if (frmSettings==null||frmSettings.IsDisposed)
             {
-                settings = new frmSettings();
-                settings.Show();
+                frmSettings = new frmSettings();
+                frmSettings.Show();
             }
             else
             {
-                settings.Activate();
+                frmSettings.Activate();
             }
         }
     }

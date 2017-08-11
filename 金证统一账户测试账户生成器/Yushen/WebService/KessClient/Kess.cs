@@ -608,7 +608,7 @@ namespace Yushen.WebService.KessClient
                 timeout: timeout
                 );
 
-            Response response = searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.证券账户开立);
+            Response response = searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.证券账户开立, timeout:timeout);
 
             // 判断返回的操作结果是否异常
             string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
@@ -626,7 +626,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public Response queryCYB(string TRDACCT) // TODO:: 测试入参只保留深圳A股账号是否可行？
+        public Response queryCYB(string TRDACCT, int timeout = 30) // TODO:: 测试入参只保留深圳A股账号是否可行？
         {
             // 前置条件判断
             if (TRDACCT == "")
@@ -651,7 +651,7 @@ namespace Yushen.WebService.KessClient
                                     TRDACCT: TRDACCT    // 深圳A股账号
                                 );
             // 获取中登处理结果
-            Response rspsStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo);
+            Response rspsStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo,timeout:timeout);
 
             // 判断返回的操作结果是否异常
             if (rspsStkAcctBizInfo.length == 1 && rspsStkAcctBizInfo.getValue("RTN_ERR_CODE") != "0000")
@@ -672,7 +672,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SIGN_CLS">签约类别</param>
         /// <param name="SIGN_DATE">签约日期</param>
         /// <returns></returns>
-        public void openCyb2ZD(User user,string SIGN_CLS, string SIGN_DATE)
+        public void openCyb2ZD(User user,string SIGN_CLS, string SIGN_DATE,int timeout=30)
         {
             // 前置条件判断
             if (user.id_code == "")
@@ -728,7 +728,7 @@ namespace Yushen.WebService.KessClient
                 );
 
             // 获取中登处理结果
-            Response responseStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护, TRDACCT: user.szacct);
+            Response responseStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护, TRDACCT: user.szacct,timeout:timeout);
 
             // 中登处理是否成功
             if (responseStkAcctBizInfo.flag!="1")
