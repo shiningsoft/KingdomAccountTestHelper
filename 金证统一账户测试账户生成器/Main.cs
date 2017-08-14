@@ -768,11 +768,25 @@ namespace 金证统一账户测试账户生成器
         private void btnCreateIDCardImg_Click(object sender, EventArgs e)
         {
             saveUserInfo();
-
-            createIdCardImg(user.user_name, user.sex, user.nationality, user.birthday, user.id_addr, user.id_code);
+            createIdCardImgFaceSide(user.user_name, user.sex, user.nationality, user.birthday, user.id_addr, user.id_code);
         }
 
-        private void createIdCardImg(string name, string sex, string nationality, string birthday, string addr, string idno)
+        private void btnCreateIDCardImgBackSide_Click(object sender, EventArgs e)
+        {
+            saveUserInfo();
+            createIdCardImgBackSide(user.id_iss_agcy, user.id_beg_date, user.id_exp_date);
+        }
+
+        /// <summary>
+        /// 生成身份证正面照图片
+        /// </summary>
+        /// <param name="name">姓名</param>
+        /// <param name="sex">性别</param>
+        /// <param name="nationality">民族</param>
+        /// <param name="birthday">生日</param>
+        /// <param name="addr">证件地址</param>
+        /// <param name="idno">证件号码</param>
+        private void createIdCardImgFaceSide(string name, string sex, string nationality, string birthday, string addr, string idno)
         {
             Dict.SEX dicSex = new Dict.SEX();
             sex = dicSex.getNameByValue(sex).Replace("性", "");
@@ -809,8 +823,41 @@ namespace 金证统一账户测试账户生成器
                 g.DrawString(idno, new Font("黑体", 20), Brushes.Black, new PointF(750, 960));    // 身份证号码
                 g.Flush();
             }
-            image.Save(Environment.CurrentDirectory + @"\idcard1.jpg");
-            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\idcard1.jpg");
+            image.Save(Environment.CurrentDirectory + @"\身份证正面.jpg");
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\身份证正面.jpg");
+        }
+
+        /// <summary>
+        /// 生成身份证照片反面
+        /// </summary>
+        /// <param name="ID_ISS_AGCY">发证机关</param>
+        /// <param name="ID_BEG_DATE">开始日期，YYYYMMDD格式</param>
+        /// <param name="ID_EXP_DATE">结束日期，YYYYMMDD格式，30001231表示长期</param>
+        private void createIdCardImgBackSide(string ID_ISS_AGCY, string ID_BEG_DATE, string ID_EXP_DATE)
+        {
+            string iddate = "";
+            ID_BEG_DATE = ID_BEG_DATE.Substring(0, 4) + "." + ID_BEG_DATE.Substring(4, 2) + "." + ID_BEG_DATE.Substring(6, 2);
+
+            if (ID_EXP_DATE == "30001231")
+            {
+                iddate = ID_BEG_DATE + "-" + "长期";
+            }
+            else
+            {
+                iddate = ID_BEG_DATE + "-" + ID_EXP_DATE.Substring(0, 4) + "." + ID_EXP_DATE.Substring(4, 2) + "." + ID_EXP_DATE.Substring(6, 2);
+            }
+            
+
+            Image image;// 具体这张图是从文件读取还是从picturebox什么的获取你来指定
+            image = Resources.样本身份证反面;
+            using (Graphics g = Graphics.FromImage(image))
+            {
+                g.DrawString(ID_ISS_AGCY, new Font("黑体", 13), Brushes.Black, new PointF(800, 860));
+                g.DrawString(iddate, new Font("黑体", 13), Brushes.Black, new PointF(800, 1000));
+                g.Flush();
+            }
+            image.Save(Environment.CurrentDirectory + @"\身份证背面.jpg");
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\身份证背面.jpg");
         }
     }
 }

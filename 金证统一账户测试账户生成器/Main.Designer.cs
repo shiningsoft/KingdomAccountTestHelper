@@ -55,6 +55,8 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnCreateIDCardImgBackSide = new System.Windows.Forms.Button();
+            this.btnCreateIDCardImgFaceSide = new System.Windows.Forms.Button();
             this.cbxCybSignCls = new System.Windows.Forms.ComboBox();
             this.tbxCybSignDate = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -127,25 +129,18 @@ namespace 金证统一账户测试账户生成器
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
-            this.btnCreateIDCardImg = new System.Windows.Forms.Button();
-            this.menuStrip.SuspendLayout();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
             // 
-            this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
-            this.设置ToolStripMenuItem,
-            this.关于ToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
-            this.menuStrip.Size = new System.Drawing.Size(950, 25);
+            this.menuStrip.Size = new System.Drawing.Size(950, 24);
             this.menuStrip.TabIndex = 8;
             this.menuStrip.Text = "menuStrip";
             // 
@@ -269,7 +264,8 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.btnCreateIDCardImg);
+            this.tabPage1.Controls.Add(this.btnCreateIDCardImgBackSide);
+            this.tabPage1.Controls.Add(this.btnCreateIDCardImgFaceSide);
             this.tabPage1.Controls.Add(this.cbxCybSignCls);
             this.tabPage1.Controls.Add(this.tbxCybSignDate);
             this.tabPage1.Controls.Add(this.label25);
@@ -345,6 +341,26 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnCreateIDCardImgBackSide
+            // 
+            this.btnCreateIDCardImgBackSide.Location = new System.Drawing.Point(812, 198);
+            this.btnCreateIDCardImgBackSide.Name = "btnCreateIDCardImgBackSide";
+            this.btnCreateIDCardImgBackSide.Size = new System.Drawing.Size(100, 23);
+            this.btnCreateIDCardImgBackSide.TabIndex = 84;
+            this.btnCreateIDCardImgBackSide.Text = "生成身份证背面";
+            this.btnCreateIDCardImgBackSide.UseVisualStyleBackColor = true;
+            this.btnCreateIDCardImgBackSide.Click += new System.EventHandler(this.btnCreateIDCardImgBackSide_Click);
+            // 
+            // btnCreateIDCardImgFaceSide
+            // 
+            this.btnCreateIDCardImgFaceSide.Location = new System.Drawing.Point(812, 171);
+            this.btnCreateIDCardImgFaceSide.Name = "btnCreateIDCardImgFaceSide";
+            this.btnCreateIDCardImgFaceSide.Size = new System.Drawing.Size(100, 23);
+            this.btnCreateIDCardImgFaceSide.TabIndex = 83;
+            this.btnCreateIDCardImgFaceSide.Text = "生成身份证正面";
+            this.btnCreateIDCardImgFaceSide.UseVisualStyleBackColor = true;
+            this.btnCreateIDCardImgFaceSide.Click += new System.EventHandler(this.btnCreateIDCardImg_Click);
             // 
             // cbxCybSignCls
             // 
@@ -999,12 +1015,9 @@ namespace 金证统一账户测试账户生成器
             // 
             // statusStrip1
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripStatusLabelCurrentServer,
-            this.currentUser});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 507);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 511);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(950, 26);
+            this.statusStrip1.Size = new System.Drawing.Size(950, 22);
             this.statusStrip1.TabIndex = 75;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -1021,15 +1034,12 @@ namespace 金证统一账户测试账户生成器
             this.currentUser.Size = new System.Drawing.Size(48, 21);
             this.currentUser.Text = "用户：";
             // 
-            // btnCreateIDCardImg
+            // button1
             // 
-            this.btnCreateIDCardImg.Location = new System.Drawing.Point(812, 171);
-            this.btnCreateIDCardImg.Name = "btnCreateIDCardImg";
-            this.btnCreateIDCardImg.Size = new System.Drawing.Size(100, 23);
-            this.btnCreateIDCardImg.TabIndex = 83;
-            this.btnCreateIDCardImg.Text = "生成身份证正面";
-            this.btnCreateIDCardImg.UseVisualStyleBackColor = true;
-            this.btnCreateIDCardImg.Click += new System.EventHandler(this.btnCreateIDCardImg_Click);
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
             // 
             // Main
             // 
@@ -1045,16 +1055,12 @@ namespace 金证统一账户测试账户生成器
             this.ShowIcon = false;
             this.Text = "金证统一账户测试账户生成器";
             this.Load += new System.EventHandler(this.Main_Load);
-            this.menuStrip.ResumeLayout(false);
-            this.menuStrip.PerformLayout();
             this.tabPageGetDict.ResumeLayout(false);
             this.tabPageGetDict.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1148,7 +1154,9 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.TextBox tbxCybSignDate;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.ComboBox cbxCybSignCls;
-        private System.Windows.Forms.Button btnCreateIDCardImg;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCreateIDCardImgBackSide;
+        private System.Windows.Forms.Button btnCreateIDCardImgFaceSide;
     }
 }
 
