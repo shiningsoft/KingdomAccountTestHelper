@@ -859,5 +859,18 @@ namespace 金证统一账户测试账户生成器
             image.Save(Environment.CurrentDirectory + @"\身份证背面.jpg");
             System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\身份证背面.jpg");
         }
+
+        private void cbxLongTerm_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxLongTerm.Checked)
+            {
+                id_exp_date.Enabled = false;
+                id_exp_date.Value = DateTime.Parse("3000-12-31");
+            }
+            else
+            {
+                id_exp_date.Enabled = true;
+            }
+        }
     }
 }

@@ -130,6 +130,7 @@ namespace 金证统一账户测试账户生成器
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
+            this.cbxLongTerm = new System.Windows.Forms.CheckBox();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
@@ -264,6 +265,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbxLongTerm);
             this.tabPage1.Controls.Add(this.btnCreateIDCardImgBackSide);
             this.tabPage1.Controls.Add(this.btnCreateIDCardImgFaceSide);
             this.tabPage1.Controls.Add(this.cbxCybSignCls);
@@ -1041,6 +1043,17 @@ namespace 金证统一账户测试账户生成器
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
+            // cbxLongTerm
+            // 
+            this.cbxLongTerm.AutoSize = true;
+            this.cbxLongTerm.Location = new System.Drawing.Point(311, 122);
+            this.cbxLongTerm.Name = "cbxLongTerm";
+            this.cbxLongTerm.Size = new System.Drawing.Size(48, 16);
+            this.cbxLongTerm.TabIndex = 85;
+            this.cbxLongTerm.Text = "长期";
+            this.cbxLongTerm.UseVisualStyleBackColor = true;
+            this.cbxLongTerm.CheckedChanged += new System.EventHandler(this.cbxLongTerm_CheckedChanged);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1157,6 +1170,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCreateIDCardImgBackSide;
         private System.Windows.Forms.Button btnCreateIDCardImgFaceSide;
+        private System.Windows.Forms.CheckBox cbxLongTerm;
     }
 }
 
