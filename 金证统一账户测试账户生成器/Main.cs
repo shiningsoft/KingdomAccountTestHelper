@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Dict = Yushen.WebService.KessClient.Dict;
 using System.Data;
 using 金证统一账户测试账户生成器.Properties;
+using System.Drawing;
 
 namespace 金证统一账户测试账户生成器
 {
@@ -492,6 +493,14 @@ namespace 金证统一账户测试账户生成器
 
         private void btnOpenAccountByOneClick_Click(object sender, EventArgs e)
         {
+            openAllAccount();
+        }
+
+        /// <summary>
+        /// 一次性开立所有账户
+        /// </summary>
+        private void openAllAccount()
+        {
             resultForm.Show();
 
             try
@@ -514,6 +523,8 @@ namespace 金证统一账户测试账户生成器
                 syncSurveyAns2Kbss();
 
                 openYMTCode();
+                //Task task = new Task(openYMTCode);
+                //task.Start();
 
                 openSHACode();
 
@@ -536,10 +547,25 @@ namespace 金证统一账户测试账户生成器
         private void openCustCode()
         {
             // 开客户号
-            user.cust_code = kess.createCustomerCode(user);
-            user.user_code = user.cust_code;
-            resultForm.Append("客户号开立成功：" + user.cust_code);
-            tbxCustCode.Text = user.cust_code;
+            try
+            {
+                user.cust_code = kess.createCustomerCode(user);
+                user.user_code = user.cust_code;
+                Action action = () =>
+                {
+                    resultForm.Append("客户号开立成功：" + user.cust_code);
+                    tbxCustCode.Text = user.cust_code;
+                };
+                this.Invoke(action);
+            }
+            catch (Exception ex)
+            {
+                Action action = () =>
+                {
+                    resultForm.Append("客户号开立失败：" + ex.Message);
+                };
+                this.Invoke(action);
+            }
         }
 
         /// <summary>
@@ -591,20 +617,35 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private void openYMTCode()
         {
-            // 开一码通
-            Response response = kess.openYMTAcct(user.user_type, user.user_fname, user.id_type, user.id_code, user.int_org, user.cust_code, user.birthday, user.id_beg_date, user.id_exp_date, user.citizenship, user.id_addr, user.id_addr, user.zip_code, user.occu_type, user.nationality, user.education, user.tel, user.mobile_tel, user.sex);
-            if (response.length > 2)
+            try
             {
-                throw new Exception("该客户有" + response.length.ToString() + "个一码通账号");
+                // 开一码通
+                Response response = kess.openYMTAcct(user.user_type, user.user_fname, user.id_type, user.id_code, user.int_org, user.cust_code, user.birthday, user.id_beg_date, user.id_exp_date, user.citizenship, user.id_addr, user.id_addr, user.zip_code, user.occu_type, user.nationality, user.education, user.tel, user.mobile_tel, user.sex);
+                if (response.length > 2)
+                {
+                    throw new Exception("该客户有" + response.length.ToString() + "个一码通账号");
+                }
+                else if (response.length == 0)
+                {
+                    throw new Exception("没有返回一码通账号列表");
+                }
+                Action action = () =>
+                {
+                    string ymtCode = response.getValue("YMT_CODE");
+                    resultForm.Append("一码通账号开立成功：" + response.getValue("YMT_CODE"));
+                    user.ymt_code = ymtCode;
+                    tbxYMTCode.Text = ymtCode;
+                };
+                this.Invoke(action);
             }
-            else if (response.length == 0)
+            catch (Exception ex)
             {
-                throw new Exception("没有返回一码通账号列表");
+                Action action = () =>
+                {
+                    resultForm.Append("一码通账号开立失败：" + ex.Message);
+                };
+                this.Invoke(action);
             }
-            string ymtCode = response.getValue("YMT_CODE");
-            resultForm.Append("一码通账号开立成功：" + response.getValue("YMT_CODE"));
-            user.ymt_code = ymtCode;
-            tbxYMTCode.Text = ymtCode;
         }
 
         /// <summary>
@@ -722,6 +763,54 @@ namespace 金证统一账户测试账户生成器
             {
                 frmSettings.Activate();
             }
+        }
+
+        private void btnCreateIDCardImg_Click(object sender, EventArgs e)
+        {
+            saveUserInfo();
+
+            createIdCardImg(user.user_name, user.sex, user.nationality, user.birthday, user.id_addr, user.id_code);
+        }
+
+        private void createIdCardImg(string name, string sex, string nationality, string birthday, string addr, string idno)
+        {
+            Dict.SEX dicSex = new Dict.SEX();
+            sex = dicSex.getNameByValue(sex).Replace("性", "");
+
+            Dict.NATIONALITY dicNatinality = new Dict.NATIONALITY();
+            nationality = dicNatinality.getNameByValue(nationality).Replace("族","");
+
+            birthday = birthday.Substring(0, 4) + "      " + int.Parse(birthday.Substring(4, 2)).ToString() + "      " + int.Parse(birthday.Substring(6, 2)).ToString();
+
+            // 超长地址自动换行
+            int wordNumberInOneLine = 13;   // 每行字符数
+
+            int lineCnt = (int)Math.Ceiling((double)addr.Length / (double)wordNumberInOneLine); // 计算行数
+            string newAddr = "";
+            for (int i = 0; i < lineCnt; i++)
+            {
+                int leftLength = addr.Length - i * wordNumberInOneLine;
+                newAddr += addr.Substring(0 + i * wordNumberInOneLine, leftLength < wordNumberInOneLine ? leftLength : wordNumberInOneLine);
+                if (i < lineCnt - 1)
+                {
+                    newAddr += Environment.NewLine;
+                }
+            }
+
+            Image image;// 具体这张图是从文件读取还是从picturebox什么的获取你来指定
+            image = Resources.样本身份证正面;
+            using (Graphics g = Graphics.FromImage(image))
+            {
+                g.DrawString(name, new Font("黑体", 13), Brushes.Black, new PointF(400, 220));    // 姓名
+                g.DrawString(sex, new Font("黑体", 13), Brushes.Black, new PointF(400, 360));    // 性别
+                g.DrawString(nationality, new Font("黑体", 13), Brushes.Black, new PointF(800, 360));    // 民族
+                g.DrawString(birthday, new Font("黑体", 13), Brushes.Black, new PointF(400, 500));  // 出生年月日
+                g.DrawString(newAddr, new Font("黑体", 13), Brushes.Black, new PointF(400, 630));    // 住址
+                g.DrawString(idno, new Font("黑体", 20), Brushes.Black, new PointF(750, 960));    // 身份证号码
+                g.Flush();
+            }
+            image.Save(Environment.CurrentDirectory + @"\idcard1.jpg");
+            System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\idcard1.jpg");
         }
     }
 }

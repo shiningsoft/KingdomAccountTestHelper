@@ -59,5 +59,15 @@ namespace 金证统一账户测试账户生成器.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 样本身份证正面 {
+            get {
+                object obj = ResourceManager.GetObject("样本身份证正面", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

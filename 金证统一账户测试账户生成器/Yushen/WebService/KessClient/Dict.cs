@@ -402,8 +402,8 @@ namespace Yushen.WebService.KessClient.Dict
     /// </summary>
     class SEX : Dict
     {
-        public const string 男性 = "0";
-        public const string 女性 = "1";
+        public const string 男 = "0";
+        public const string 女 = "1";
         public const string 其他 = "2";
     }
 
@@ -1377,7 +1377,7 @@ namespace Yushen.WebService.KessClient.Dict
                     return FiledList[i].Name;
                 }
             }
-            return "";
+            throw new Exception("找不到" + value + "对应的字典项");
         }
     }
 }

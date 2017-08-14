@@ -138,6 +138,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="logo.ico" />
+    <None Include="Resources\样本身份证正面.jpg" />
     <Content Include="Yushen\WebService\KessClient\Xml\listStkPbuOrg.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\mdfControlLerInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
