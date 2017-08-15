@@ -270,12 +270,16 @@ namespace Yushen.Util
         #endregion
 
         /// <summary>
-        /// 15位号码转18位
+        /// 15位身份证号码转18位
         /// </summary>
         /// <param name="perIDSrc"></param>
         /// <returns></returns>
         public static string per15To18(string perIDSrc)
         {
+            if (perIDSrc.Length != 15)
+            {
+                throw new Exception(perIDSrc + "不是15位身份证号码");
+            }
             int iS = 0;
 
             //加权因子常数  
@@ -303,6 +307,20 @@ namespace Yushen.Util
             perIDNew += LastCode.Substring(iY, 1);
 
             return perIDNew;
+        }
+
+        /// <summary>
+        /// 18位身份证号码转15位
+        /// </summary>
+        /// <param name="idno"></param>
+        /// <returns></returns>
+        public static string per18To15(string idno)
+        {
+            if (idno.Length != 18)
+            {
+                throw new Exception(idno + "不是18位身份证号码");
+            }
+            return idno.Substring(0, 6) + idno.Substring(8, 9);
         }
     }
 

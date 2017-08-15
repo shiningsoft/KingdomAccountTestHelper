@@ -765,6 +765,11 @@ namespace 金证统一账户测试账户生成器
 
         private void btnCreateIDCardImg_Click(object sender, EventArgs e)
         {
+            if (id_code.Text.Length != 18)
+            {
+                resultForm.Append("只支持生成18位身份证的正面照。");
+                return;
+            }
             saveUserInfo();
             createIdCardImgFaceSide(user.user_name, user.sex, user.nationality, user.birthday, user.id_addr, user.id_code);
         }
@@ -906,6 +911,24 @@ namespace 金证统一账户测试账户生成器
             catch (Exception ex)
             {
                 resultForm.Append("上海证券账户" + user.shacct + "指定交易失败：" + ex.Message);
+            }
+        }
+
+        private void cbxShortIdNo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbxShortIdNo.Checked)
+            {
+                if (id_code.Text.Length == 18)
+                {
+                    id_code.Text = IDCardNumber.per18To15(id_code.Text);
+                }
+            }
+            else
+            {
+                if (id_code.Text.Length == 15)
+                {
+                    id_code.Text = IDCardNumber.per15To18(id_code.Text);
+                }
             }
         }
     }

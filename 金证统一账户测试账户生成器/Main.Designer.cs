@@ -998,11 +998,11 @@ namespace 金证统一账户测试账户生成器
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 42);
+            this.label4.Location = new System.Drawing.Point(21, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 12);
+            this.label4.Size = new System.Drawing.Size(77, 12);
             this.label4.TabIndex = 11;
-            this.label4.Text = "证件号码：";
+            this.label4.Text = "身份证号码：";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label2
@@ -1087,6 +1087,7 @@ namespace 金证统一账户测试账户生成器
             this.cbxShortIdNo.TabIndex = 87;
             this.cbxShortIdNo.Text = "15位";
             this.cbxShortIdNo.UseVisualStyleBackColor = true;
+            this.cbxShortIdNo.CheckedChanged += new System.EventHandler(this.cbxShortIdNo_CheckedChanged);
             // 
             // Main
             // 
