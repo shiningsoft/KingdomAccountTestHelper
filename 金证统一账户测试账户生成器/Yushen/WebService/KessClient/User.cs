@@ -135,9 +135,13 @@ namespace Yushen.WebService.KessClient
                     throwException(value.ToString() + "身份证格式不正确");
                 }
 
-                if (id_type == "00")
+                if (id_type == "00" && value.Length == 18)
                 {
                     this.birthday = value.Substring(6, 8);
+                }
+                else if (id_type == "00" && value.Length == 15)
+                {
+                    this.birthday = "19" + value.Substring(6, 6);
                 }
 
                 _id_code = value;
