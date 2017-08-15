@@ -142,6 +142,8 @@ namespace 金证统一账户测试账户生成器
             cbxOpenType.ValueMember = "value";
             cbxOpenType.DataSource = openTypeList.DataTable;
 
+            dtpCybSignDate.Value = DateTime.Now;
+
             try
             {
                 // 初始化WebService连接
