@@ -707,12 +707,6 @@ namespace 金证统一账户测试账户生成器
 
                 // 清空显示
                 tbxCybSignDate.Text = "";
-                if (cbxCybSignCls.DataSource!=null)
-                {
-                    DataTable dt = (DataTable)cbxCybSignCls.DataSource;
-                    dt.Rows.Clear();
-                    cbxCybSignCls.DataSource = dt;
-                }
 
                 // 根据股东账号查询创业板信息
                 Response response = kess.queryCYB(tbxSZAcct.Text.Trim(), Settings.Default.中登超时时间);
@@ -721,15 +715,6 @@ namespace 金证统一账户测试账户生成器
 
                 Dict.SIGN_CLS signClsList = new Dict.SIGN_CLS();
                 tbxCybSignDate.Text += "；" + signClsList.getNameByValue(response.getValue("SIGN_CLS"));
-                //string signcls = response.getValue("SIGN_CLS");
-                //if (signClsList.IndexOf(signcls) == -1)
-                //{
-                //    throw new Exception("返回的签约类别SIGN_CLS字段值 " + signcls + " 无效");
-                //}
-                //cbxCybSignCls.DisplayMember = "name";
-                //cbxCybSignCls.ValueMember = "value";
-                //cbxCybSignCls.DataSource = signClsList.DataTable;
-                //cbxCybSignCls.SelectedValue = signcls;
             }
             catch (Exception ex)
             {
