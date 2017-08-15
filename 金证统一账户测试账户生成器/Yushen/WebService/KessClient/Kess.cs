@@ -984,5 +984,139 @@ namespace Yushen.WebService.KessClient
             }
             // free native resources if there are any. 
         }
+
+        /// <summary>
+        /// 机构交易单元查询
+        /// 实现2.56 机构交易单元查询
+        /// </summary>
+        /// <param name="STKBD">交易版块DD[STKBD]</param>
+        /// <param name="INT_ORG">内部机构</param>
+        /// <param name="STKPBU_TYPE">交易单元类型，默认为0：普通交易单元</param>
+        /// <returns></returns>
+        public Response listStkPbuOrg(string STKBD, string INT_ORG, string STKPBU_TYPE = "0")
+        {
+            // 前置条件判断
+            if (STKBD == "")
+            {
+                string message = "交易板块不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (INT_ORG == "")
+            {
+                string message = "内部机构不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (INT_ORG == "")
+            {
+                string message = "交易单元类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "listStkPbuOrg");
+            request.setAttr("STKBD", STKBD); // 交易版块DD[STKBD]
+            request.setAttr("INT_ORG", INT_ORG); // 内部机构
+            request.setAttr("STKPBU_TYPE", STKPBU_TYPE); // 交易单元类型
+
+            // 调用WebService获取返回值
+            Response response = new Response(this.invoke(request));
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
+        /// <summary>
+        /// 证券账户指定交易
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码</param>
+        /// <param name="STKPBU">交易单元</param>
+        /// <param name="STKBD">交易板块DD[STKBD]</param>
+        /// <param name="TRDACCT">交易账户</param>
+        /// <param name="TREG_STATUS">交易指定状态0-撤指定1-指定</param>
+        /// <param name="BREG_STATUS">交易指定状态0-撤指定1-指定</param>
+        /// <param name="FIRMID">代理商号</param>
+        /// <returns></returns>
+        public bool stkTrdacctBind(
+            string CUST_CODE,
+            string STKPBU,
+            string STKBD,
+            string TRDACCT,
+            string TREG_STATUS,
+            string BREG_STATUS,
+            string FIRMID = ""
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (STKPBU == "")
+            {
+                string message = "交易单元不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (STKBD == "")
+            {
+                string message = "交易板块不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (TRDACCT == "")
+            {
+                string message = "交易账户不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (TREG_STATUS == "")
+            {
+                string message = "交易指定状态TREG_STATUS不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (BREG_STATUS == "")
+            {
+                string message = "交易指定状态BREG_STATUS不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "stkTrdacctBind");
+            request.setAttr("CUST_CODE", CUST_CODE); // 客户代码
+            request.setAttr("STKBD", STKBD); // 交易板块DD[STKBD]
+            request.setAttr("STKPBU", STKPBU); // 交易单元
+            request.setAttr("TRDACCT", TRDACCT); // 交易账户
+            request.setAttr("TREG_STATUS", TREG_STATUS); // 交易指定状态0-撤指定1-指定
+            request.setAttr("BREG_STATUS", BREG_STATUS); // 交易指定状态0-撤指定1-指定
+            request.setAttr("FIRMID", FIRMID); // 代理商号
+
+            // 调用WebService获取返回值
+            Response response = new Response(this.invoke(request));
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return true;
+        }
     }
 }

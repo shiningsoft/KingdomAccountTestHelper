@@ -23,22 +23,6 @@ namespace 金证统一账户测试账户生成器
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            resultForm.Clear();
-            resultForm.Show();
-
-            // 建立WebService连接
-            if (kess == null)
-            {
-                kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-            }
-
-            saveUserInfo();
-
-            openCustCode();
-        }
-
         private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -60,6 +44,11 @@ namespace 金证统一账户测试账户生成器
 
         }
 
+        /// <summary>
+        /// 查询数据字典
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button2_Click(object sender, EventArgs e)
         {
             try
@@ -872,6 +861,44 @@ namespace 金证统一账户测试账户生成器
             else
             {
                 id_exp_date.Enabled = true;
+            }
+        }
+
+        private void btnOpenUserCode_Click(object sender, EventArgs e)
+        {
+            resultForm.Clear();
+            resultForm.Show();
+
+            // 建立WebService连接
+            if (kess == null)
+            {
+                kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+            }
+
+            saveUserInfo();
+
+            openCustCode();
+        }
+
+        private void btnBindSHAcct_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response response = kess.listStkPbuOrg(Dict.STKBD.上海A股, "19");
+                resultForm.Append("交易单元为：" + response.getValue("STKPBU"));
+                kess.stkTrdacctBind(
+                    user.cust_code, 
+                    response.getValue("STKPBU"), 
+                    Dict.STKBD.上海A股, 
+                    user.shacct, 
+                    Dict.TREG_STATUS.已指定, 
+                    Dict.BREG_STATUS.已指定
+                );
+                resultForm.Append("上海证券账户" + user.shacct + "指定交易成功");
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("上海证券账户" + user.shacct + "指定交易失败：" + ex.Message);
             }
         }
     }

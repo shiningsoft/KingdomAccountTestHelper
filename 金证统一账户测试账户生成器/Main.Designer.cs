@@ -131,6 +131,7 @@ namespace 金证统一账户测试账户生成器
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnBindSHAcct = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -272,6 +273,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnBindSHAcct);
             this.tabPage1.Controls.Add(this.cbxLongTerm);
             this.tabPage1.Controls.Add(this.btnCreateIDCardImgBackSide);
             this.tabPage1.Controls.Add(this.btnCreateIDCardImgFaceSide);
@@ -1009,7 +1011,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenUserCode.TabIndex = 0;
             this.btnOpenUserCode.Text = "开客户号";
             this.btnOpenUserCode.UseVisualStyleBackColor = true;
-            this.btnOpenUserCode.Click += new System.EventHandler(this.button1_Click);
+            this.btnOpenUserCode.Click += new System.EventHandler(this.btnOpenUserCode_Click);
             // 
             // label3
             // 
@@ -1063,6 +1065,16 @@ namespace 金证统一账户测试账户生成器
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
+            // 
+            // btnBindSHAcct
+            // 
+            this.btnBindSHAcct.Location = new System.Drawing.Point(423, 326);
+            this.btnBindSHAcct.Name = "btnBindSHAcct";
+            this.btnBindSHAcct.Size = new System.Drawing.Size(100, 23);
+            this.btnBindSHAcct.TabIndex = 86;
+            this.btnBindSHAcct.Text = "指定交易";
+            this.btnBindSHAcct.UseVisualStyleBackColor = true;
+            this.btnBindSHAcct.Click += new System.EventHandler(this.btnBindSHAcct_Click);
             // 
             // Main
             // 
@@ -1185,6 +1197,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Button btnCreateIDCardImgBackSide;
         private System.Windows.Forms.Button btnCreateIDCardImgFaceSide;
         private System.Windows.Forms.CheckBox cbxLongTerm;
+        private System.Windows.Forms.Button btnBindSHAcct;
     }
 }
 

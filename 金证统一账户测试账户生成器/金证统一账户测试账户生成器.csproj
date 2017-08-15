@@ -143,7 +143,9 @@
     <Content Include="logo.ico" />
     <None Include="Resources\样本身份证正面.jpg" />
     <None Include="Resources\样本身份证反面.jpg" />
-    <Content Include="Yushen\WebService\KessClient\Xml\listStkPbuOrg.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\listStkPbuOrg.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\mdfControlLerInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -151,34 +153,34 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\openStkTrdAcct.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\Util\AreaCodeInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\getCommonParams.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\getDictData.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\getCubsbLog.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\cubsbScOpenAcct.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\onSearchNewZD.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\openStkAcctByNewZD.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\openYMTAcct.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\searchStkAcctBizInfo.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\searchStkAcctBizInfoEx.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -187,12 +189,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Yushen\WebService\KessClient\Xml\signAgreement.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\signAgreement.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\stkTrdacctBind.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\syncSurveyAns2Kbss.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\validateIdCode.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -265,34 +269,34 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Yushen\WebService\KessClient\Xml\mdfUserPassword.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\openYMTAcctByKbss.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\operatorLogin.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\queryCustBasicInfoList.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\getUserInfoById.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\openCustomer.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\openCuacct.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\mdfUserExtInfo.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\submitStkAcctBizOpReq2NewZD.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\listCuacct.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>
