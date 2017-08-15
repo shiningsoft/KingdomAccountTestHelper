@@ -59,7 +59,6 @@ namespace 金证统一账户测试账户生成器
             this.cbxLongTerm = new System.Windows.Forms.CheckBox();
             this.btnCreateIDCardImgBackSide = new System.Windows.Forms.Button();
             this.btnCreateIDCardImgFaceSide = new System.Windows.Forms.Button();
-            this.cbxCybSignCls = new System.Windows.Forms.ComboBox();
             this.tbxCybSignDate = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -279,7 +278,6 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Controls.Add(this.cbxLongTerm);
             this.tabPage1.Controls.Add(this.btnCreateIDCardImgBackSide);
             this.tabPage1.Controls.Add(this.btnCreateIDCardImgFaceSide);
-            this.tabPage1.Controls.Add(this.cbxCybSignCls);
             this.tabPage1.Controls.Add(this.tbxCybSignDate);
             this.tabPage1.Controls.Add(this.label25);
             this.tabPage1.Controls.Add(this.label24);
@@ -395,16 +393,6 @@ namespace 金证统一账户测试账户生成器
             this.btnCreateIDCardImgFaceSide.Text = "生成身份证正面";
             this.btnCreateIDCardImgFaceSide.UseVisualStyleBackColor = true;
             this.btnCreateIDCardImgFaceSide.Click += new System.EventHandler(this.btnCreateIDCardImg_Click);
-            // 
-            // cbxCybSignCls
-            // 
-            this.cbxCybSignCls.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCybSignCls.FormattingEnabled = true;
-            this.cbxCybSignCls.Location = new System.Drawing.Point(635, 355);
-            this.cbxCybSignCls.Name = "cbxCybSignCls";
-            this.cbxCybSignCls.Size = new System.Drawing.Size(100, 20);
-            this.cbxCybSignCls.TabIndex = 82;
-            this.cbxCybSignCls.Visible = false;
             // 
             // tbxCybSignDate
             // 
@@ -1205,7 +1193,6 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox tbxCybSignDate;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.ComboBox cbxCybSignCls;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCreateIDCardImgBackSide;
         private System.Windows.Forms.Button btnCreateIDCardImgFaceSide;
