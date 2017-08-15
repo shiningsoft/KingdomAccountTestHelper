@@ -217,7 +217,7 @@ namespace Yushen.Util
         }
 
         #region 身份证解析方法
-        private IDCardNumber(string idCardNumber)
+        public IDCardNumber(string idCardNumber)
         {
             this._cardnumber = idCardNumber;
             _analysis();
@@ -227,6 +227,7 @@ namespace Yushen.Util
         /// </summary>
         private void _analysis()
         {
+            int flag = _cardnumber.Length == 18 ? 0 : 2;
             //取省份，地区，区县
             string provCode = _cardnumber.Substring(0, 2).PadRight(6, '0');
             string areaCode = _cardnumber.Substring(0, 4).PadRight(6, '0');
@@ -242,12 +243,16 @@ namespace Yushen.Util
                 if (_province != null && _area != null && _city != null) break;
             }
             //取年龄
-            string ageCode = _cardnumber.Substring(6, 8);
+            string ageCode = _cardnumber.Substring(6, 8 - flag);
             try
             {
-                int year = Convert.ToInt16(ageCode.Substring(0, 4));
-                int month = Convert.ToInt16(ageCode.Substring(4, 2));
-                int day = Convert.ToInt16(ageCode.Substring(6, 2));
+                int year = Convert.ToInt16(ageCode.Substring(0, 4 - flag));
+                if (flag==2)
+                {
+                    year += 1900;
+                }
+                int month = Convert.ToInt16(ageCode.Substring(4 - flag, 2));
+                int day = Convert.ToInt16(ageCode.Substring(6 - flag, 2));
                 _age = new DateTime(year, month, day);
             }
             catch
@@ -255,7 +260,7 @@ namespace Yushen.Util
                 throw new Exception("非法的出生日期");
             }
             //取性别
-            string orderCode = _cardnumber.Substring(14, 3);
+            string orderCode = _cardnumber.Substring(14 - flag, 3);
             this._sex = Convert.ToInt16(orderCode) % 2 == 0 ? 1 : 0;
             //生成Javascript对象
             _json = @"prov:'{0}',area:'{1}',city:'{2}',year:{3},month:{4},day:{5},sex:{6},number:'{7}'";
@@ -263,6 +268,42 @@ namespace Yushen.Util
             _json = "{" + _json + "}";
         }
         #endregion
+
+        /// <summary>
+        /// 15位号码转18位
+        /// </summary>
+        /// <param name="perIDSrc"></param>
+        /// <returns></returns>
+        public static string per15To18(string perIDSrc)
+        {
+            int iS = 0;
+
+            //加权因子常数  
+            int[] iW = new int[] { 7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2 };
+            //校验码常数  
+            string LastCode = "10X98765432";
+            //新身份证号  
+            string perIDNew;
+
+            perIDNew = perIDSrc.Substring(0, 6);
+            //填在第6位及第7位上填上‘1’，‘9’两个数字  
+            perIDNew += "19";
+
+            perIDNew += perIDSrc.Substring(6, 9);
+
+            //进行加权求和  
+            for (int i = 0; i < 17; i++)
+            {
+                iS += int.Parse(perIDNew.Substring(i, 1)) * iW[i];
+            }
+
+            //取模运算，得到模值  
+            int iY = iS % 11;
+            //从LastCode中取得以模为索引号的值，加到身份证的最后一位，即为新身份证号。  
+            perIDNew += LastCode.Substring(iY, 1);
+
+            return perIDNew;
+        }
     }
 
 }

@@ -159,8 +159,15 @@ namespace 金证统一账户测试账户生成器
         private void reCreateUserInfo()
         {
             user_name.Text = Generator.CreateChineseName();
-            IDCardNumber idcard = IDCardNumber.Random();
-            id_code.Text = idcard.CardNumber;
+            if (cbxShortIdNo.Checked)
+            {
+                id_code.Text = Generator.CreateIdNO(15);
+            }
+            else
+            {
+                id_code.Text = Generator.CreateIdNO(18);
+            }
+            IDCardNumber idcard = new IDCardNumber(id_code.Text);
 
             sex.SelectedValue = idcard.Sex.ToString();
             risk_level.SelectedValue = Dict.RiskTestLevel.积极型;

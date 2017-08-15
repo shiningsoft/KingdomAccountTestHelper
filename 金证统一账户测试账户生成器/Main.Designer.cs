@@ -55,6 +55,7 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnBindSHAcct = new System.Windows.Forms.Button();
             this.cbxLongTerm = new System.Windows.Forms.CheckBox();
             this.btnCreateIDCardImgBackSide = new System.Windows.Forms.Button();
             this.btnCreateIDCardImgFaceSide = new System.Windows.Forms.Button();
@@ -131,7 +132,7 @@ namespace 金证统一账户测试账户生成器
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.btnBindSHAcct = new System.Windows.Forms.Button();
+            this.cbxShortIdNo = new System.Windows.Forms.CheckBox();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -273,6 +274,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbxShortIdNo);
             this.tabPage1.Controls.Add(this.btnBindSHAcct);
             this.tabPage1.Controls.Add(this.cbxLongTerm);
             this.tabPage1.Controls.Add(this.btnCreateIDCardImgBackSide);
@@ -352,6 +354,16 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btnBindSHAcct
+            // 
+            this.btnBindSHAcct.Location = new System.Drawing.Point(423, 326);
+            this.btnBindSHAcct.Name = "btnBindSHAcct";
+            this.btnBindSHAcct.Size = new System.Drawing.Size(100, 23);
+            this.btnBindSHAcct.TabIndex = 86;
+            this.btnBindSHAcct.Text = "指定交易";
+            this.btnBindSHAcct.UseVisualStyleBackColor = true;
+            this.btnBindSHAcct.Click += new System.EventHandler(this.btnBindSHAcct_Click);
             // 
             // cbxLongTerm
             // 
@@ -895,7 +907,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.id_code.Location = new System.Drawing.Point(104, 39);
             this.id_code.Name = "id_code";
-            this.id_code.Size = new System.Drawing.Size(261, 21);
+            this.id_code.Size = new System.Drawing.Size(200, 21);
             this.id_code.TabIndex = 10;
             // 
             // user_name
@@ -1066,15 +1078,15 @@ namespace 金证统一账户测试账户生成器
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
-            // btnBindSHAcct
+            // cbxShortIdNo
             // 
-            this.btnBindSHAcct.Location = new System.Drawing.Point(423, 326);
-            this.btnBindSHAcct.Name = "btnBindSHAcct";
-            this.btnBindSHAcct.Size = new System.Drawing.Size(100, 23);
-            this.btnBindSHAcct.TabIndex = 86;
-            this.btnBindSHAcct.Text = "指定交易";
-            this.btnBindSHAcct.UseVisualStyleBackColor = true;
-            this.btnBindSHAcct.Click += new System.EventHandler(this.btnBindSHAcct_Click);
+            this.cbxShortIdNo.AutoSize = true;
+            this.cbxShortIdNo.Location = new System.Drawing.Point(310, 41);
+            this.cbxShortIdNo.Name = "cbxShortIdNo";
+            this.cbxShortIdNo.Size = new System.Drawing.Size(48, 16);
+            this.cbxShortIdNo.TabIndex = 87;
+            this.cbxShortIdNo.Text = "15位";
+            this.cbxShortIdNo.UseVisualStyleBackColor = true;
             // 
             // Main
             // 
@@ -1198,6 +1210,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Button btnCreateIDCardImgFaceSide;
         private System.Windows.Forms.CheckBox cbxLongTerm;
         private System.Windows.Forms.Button btnBindSHAcct;
+        private System.Windows.Forms.CheckBox cbxShortIdNo;
     }
 }
 

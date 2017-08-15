@@ -102,12 +102,22 @@ namespace Yushen.Util
         }
 
         /// <summary>
-        /// 随机生成一个18位身份证号码
+        /// 随机生成一个身份证号码
+        /// 默认生成18位身份证号码，也可以选择生成15位
         /// </summary>
+        /// <param name="length">身份证号码长度，默认18位。</param>
         /// <returns></returns>
-        public static string CreateIdNO()
+        public static string CreateIdNO(int length = 18)
         {
-            return IDCardNumber.Random().CardNumber;
+            if (length == 15)
+            {
+                string idno = IDCardNumber.Random().CardNumber;
+                return idno.Substring(0,6) + idno.Substring(8,9);
+            }
+            else
+            {
+                return IDCardNumber.Random().CardNumber;
+            }
         }
     }
 }
