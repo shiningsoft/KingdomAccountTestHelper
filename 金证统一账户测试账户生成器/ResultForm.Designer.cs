@@ -63,6 +63,7 @@
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.infoBox);
             this.Name = "ResultForm";
+            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "执行结果";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ResultForm_FormClosing);

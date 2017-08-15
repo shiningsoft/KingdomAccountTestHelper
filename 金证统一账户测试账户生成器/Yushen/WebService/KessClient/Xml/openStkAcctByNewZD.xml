@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?> 
 <!--
-功能说明：2.121 中登开立股东账户。 
+2.121 中登开立股东账户。 
 注1：此接口需OEM“KBSS一码通非现场业务”的授权才能使用； 
 注2：该接口调用时，请确保OPEN_TYPE、ACCT_TYPE和STKBD的关系要对应正确 如要开立深A信用股东卡，则OPEN_TYPE=3，ACCT_TYPE=24，STKBD=00； 
 注3：若开信用股东账户，需OEM：KBSS融资融券非现场业务 的授权方可使用此接口。
