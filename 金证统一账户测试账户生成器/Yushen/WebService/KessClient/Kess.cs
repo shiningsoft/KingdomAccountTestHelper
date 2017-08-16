@@ -865,7 +865,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="regkeyId"></param>
         /// <returns></returns>
-        public Response getCommonParams(string regkeyId)
+        private Response getCommonParams(string regkeyId)
         {
             Request request = new Request(this.operatorId, "getCommonParams");
             request.setAttr("REGKEY_ID", regkeyId);

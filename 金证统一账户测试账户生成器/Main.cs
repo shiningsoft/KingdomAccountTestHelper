@@ -977,5 +977,17 @@ namespace 金证统一账户测试账户生成器
                 resultForm.Append(ex.Message);
             }
         }
+
+        private void btnQueryCommonParams_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tbxCommonParamValue.Text = kess.getSingleCommonParamValue(tbxCommonParamKey.Text.Trim());
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("公共参数查询失败：" + ex.Message);
+            }
+        }
     }
 }
