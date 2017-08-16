@@ -185,7 +185,8 @@ namespace 金证统一账户测试账户生成器
             occu_type.SelectedValue = Dict.OCCU_EXTYPE.行政企事业单位工人;
             citizenship.SelectedValue = Dict.CITIZENSHIP.中国;
             education.SelectedIndex = Generator.CreateRandomInteger(0, education.Items.Count);
-            bank_code.SelectedIndex = Generator.CreateRandomInteger(0, bank_code.Items.Count);
+            // bank_code.SelectedIndex = Generator.CreateRandomInteger(0, bank_code.Items.Count);   // 随机选中三方银行
+            bank_code.SelectedValue = Dict.BankCode.工商银行;
             cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
 
             saveUserInfo();
