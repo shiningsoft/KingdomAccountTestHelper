@@ -8,6 +8,7 @@ using Dict = Yushen.WebService.KessClient.Dict;
 using System.Data;
 using 金证统一账户测试账户生成器.Properties;
 using System.Drawing;
+using System.IO;
 
 namespace 金证统一账户测试账户生成器
 {
@@ -146,11 +147,21 @@ namespace 金证统一账户测试账户生成器
                 resultForm.Append("初始化失败：" + ex.Message);
             }
 
+            // 生成随机用户信息
             reCreateUserInfo();
 
+            // 更新状态栏信息
             Uri uri = new Uri(Settings.Default.webservice);
             toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port;
             currentUser.Text = "用户：" + Settings.Default.操作员代码;
+
+            // 初始化测试工具下拉列表
+            DirectoryInfo folder = new DirectoryInfo(Request.xmlPath);
+            foreach (FileInfo file in folder.GetFiles("*.xml"))
+            {
+                cbxMethonList.Items.Add(file.Name.Replace(file.Extension,""));
+            }
+
         }
 
         /// <summary>
@@ -939,12 +950,12 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
-                Request request = new Request(Settings.Default.操作员代码, tbxMethonName.Text, false);
+                Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, false);
                 tbxRequest.Text = Formatter.formatXml(request.xml);
             }
             catch (NotImplementedException)
             {
-                resultForm.Append("不支持的WebService方法：" + tbxMethonName.Text);
+                resultForm.Append("不支持的WebService方法：" + cbxMethonList.Text);
             }
             catch (Exception ex)
             {
@@ -956,7 +967,7 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
-                Request request = new Request(Settings.Default.操作员代码, tbxMethonName.Text, tbxRequest.Text);
+                Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, tbxRequest.Text);
                 Response response = kess.invoke(request);
                 tbxResponse.Text = response.xml;
             }

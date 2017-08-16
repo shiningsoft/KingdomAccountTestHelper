@@ -190,7 +190,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Yushen\WebService\KessClient\Xml\signAgreement.xml">
+    <Content Include="Yushen\WebService\KessClient\Xml\searchSignAgreement.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\stkTrdacctBind.xml">

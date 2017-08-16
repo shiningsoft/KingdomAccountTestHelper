@@ -134,11 +134,11 @@ namespace 金证统一账户测试账户生成器
             this.button1 = new System.Windows.Forms.Button();
             this.tpgTest = new System.Windows.Forms.TabPage();
             this.btnLoadRequestXml = new System.Windows.Forms.Button();
-            this.tbxMethonName = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.btnExecute = new System.Windows.Forms.Button();
             this.tbxRequest = new System.Windows.Forms.TextBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
+            this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -1087,11 +1087,11 @@ namespace 金证统一账户测试账户生成器
             // 
             // tpgTest
             // 
+            this.tpgTest.Controls.Add(this.cbxMethonList);
             this.tpgTest.Controls.Add(this.tbxResponse);
             this.tpgTest.Controls.Add(this.tbxRequest);
             this.tpgTest.Controls.Add(this.btnExecute);
             this.tpgTest.Controls.Add(this.btnLoadRequestXml);
-            this.tpgTest.Controls.Add(this.tbxMethonName);
             this.tpgTest.Controls.Add(this.label26);
             this.tpgTest.Location = new System.Drawing.Point(4, 22);
             this.tpgTest.Name = "tpgTest";
@@ -1103,21 +1103,13 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnLoadRequestXml
             // 
-            this.btnLoadRequestXml.Location = new System.Drawing.Point(359, 7);
+            this.btnLoadRequestXml.Location = new System.Drawing.Point(346, 6);
             this.btnLoadRequestXml.Name = "btnLoadRequestXml";
             this.btnLoadRequestXml.Size = new System.Drawing.Size(100, 23);
             this.btnLoadRequestXml.TabIndex = 11;
             this.btnLoadRequestXml.Text = "加载请求参数";
             this.btnLoadRequestXml.UseVisualStyleBackColor = true;
             this.btnLoadRequestXml.Click += new System.EventHandler(this.btnLoadRequestXml_Click);
-            // 
-            // tbxMethonName
-            // 
-            this.tbxMethonName.Location = new System.Drawing.Point(75, 8);
-            this.tbxMethonName.Name = "tbxMethonName";
-            this.tbxMethonName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxMethonName.Size = new System.Drawing.Size(278, 21);
-            this.tbxMethonName.TabIndex = 13;
             // 
             // label26
             // 
@@ -1130,7 +1122,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnExecute
             // 
-            this.btnExecute.Location = new System.Drawing.Point(467, 6);
+            this.btnExecute.Location = new System.Drawing.Point(452, 6);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(100, 23);
             this.btnExecute.TabIndex = 16;
@@ -1155,6 +1147,14 @@ namespace 金证统一账户测试账户生成器
             this.tbxResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxResponse.Size = new System.Drawing.Size(460, 413);
             this.tbxResponse.TabIndex = 18;
+            // 
+            // cbxMethonList
+            // 
+            this.cbxMethonList.FormattingEnabled = true;
+            this.cbxMethonList.Location = new System.Drawing.Point(75, 8);
+            this.cbxMethonList.Name = "cbxMethonList";
+            this.cbxMethonList.Size = new System.Drawing.Size(265, 20);
+            this.cbxMethonList.TabIndex = 19;
             // 
             // Main
             // 
@@ -1282,11 +1282,11 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.CheckBox cbxShortIdNo;
         private System.Windows.Forms.TabPage tpgTest;
         private System.Windows.Forms.Button btnLoadRequestXml;
-        private System.Windows.Forms.TextBox tbxMethonName;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox tbxResponse;
         private System.Windows.Forms.TextBox tbxRequest;
         private System.Windows.Forms.Button btnExecute;
+        private System.Windows.Forms.ComboBox cbxMethonList;
     }
 }
 

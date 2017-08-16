@@ -13,7 +13,7 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 存放XML文件的相对路径
         /// </summary>
-        string xmlPath = "Yushen/WebService/KessClient/Xml/";
+        public static string xmlPath = "Yushen/WebService/KessClient/Xml/";
 
         XmlDocument xmlDoc = new XmlDocument();
 
@@ -97,8 +97,8 @@ namespace Yushen.WebService.KessClient
             {
                 XmlReaderSettings settings = new XmlReaderSettings();
                 settings.IgnoreComments = ignoreComments;// 是否忽略文档里面的注释
-                xmlPath = xmlPath + methonName + ".xml";
-                XmlReader reader = XmlReader.Create(@xmlPath, settings);
+                string path = xmlPath + methonName + ".xml";
+                XmlReader reader = XmlReader.Create(path, settings);
                 xmlDoc.Load(reader);
                 reader.Close();
             }
