@@ -219,7 +219,7 @@ namespace 金证统一账户测试账户生成器
             user.bank_code = bank_code.SelectedValue.ToString();
             user.zip_code = zip_code.Text.Trim();
             user.sex = sex.SelectedValue.ToString();
-            user.int_org = "19";
+            user.int_org = Settings.Default.开户营业部;
             user.cust_cls = Dict.CUST_CLS.标准客户;
             user.cust_type = Dict.CUST_TYPE.普通;
             user.channels = Dict.CHANNEL.柜台系统 + Dict.CHANNEL.电话委托 + Dict.CHANNEL.网上委托 + Dict.CHANNEL.手机炒股;
@@ -699,7 +699,7 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private void bindSHAcct()
         {
-            Response response = kess.listStkPbuOrg(Dict.STKBD.上海A股, "19");
+            Response response = kess.listStkPbuOrg(Dict.STKBD.上海A股, Settings.Default.开户营业部);
             kess.stkTrdacctBind(
                 user.cust_code,
                 response.getValue("STKPBU"),

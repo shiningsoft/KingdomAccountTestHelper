@@ -245,18 +245,18 @@ namespace 金证统一账户测试账户生成器
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(7, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(7, 35);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(905, 415);
+            this.dataGridView1.Size = new System.Drawing.Size(905, 413);
             this.dataGridView1.TabIndex = 11;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(363, 5);
+            this.button2.Location = new System.Drawing.Point(346, 6);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(100, 23);
             this.button2.TabIndex = 8;
             this.button2.Text = "查询";
             this.button2.UseVisualStyleBackColor = true;
@@ -264,16 +264,16 @@ namespace 金证统一账户测试账户生成器
             // 
             // dictName
             // 
-            this.dictName.Location = new System.Drawing.Point(79, 6);
+            this.dictName.Location = new System.Drawing.Point(75, 8);
             this.dictName.Name = "dictName";
             this.dictName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dictName.Size = new System.Drawing.Size(278, 21);
+            this.dictName.Size = new System.Drawing.Size(265, 21);
             this.dictName.TabIndex = 10;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(20, 11);
+            this.label14.Location = new System.Drawing.Point(16, 11);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(53, 12);
             this.label14.TabIndex = 9;
@@ -1114,7 +1114,7 @@ namespace 金证统一账户测试账户生成器
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(16, 13);
+            this.label26.Location = new System.Drawing.Point(16, 11);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(53, 12);
             this.label26.TabIndex = 12;

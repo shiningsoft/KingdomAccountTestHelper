@@ -82,5 +82,17 @@ namespace 金证统一账户测试账户生成器.Properties {
                 this["中登超时时间"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("19")]
+        public string 开户营业部 {
+            get {
+                return ((string)(this["开户营业部"]));
+            }
+            set {
+                this["开户营业部"] = value;
+            }
+        }
     }
 }
