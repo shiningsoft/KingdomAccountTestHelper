@@ -641,6 +641,7 @@ namespace Yushen.WebService.KessClient
 
         /// <summary>
         /// 发起一步式签约
+        /// 尚未完成
         /// </summary>
         /// <param name="OP_TYPE">操作类型OP_TYPE为0时表示券商发起银证开户一步式，为1时表示券商发起预指定，即两步式中的第一步，为2时BANK_ACCT、FUND_AUTH_DATA、BANK_AUTH_DATA均传空。</param>
         /// <param name="CUST_CODE">客户代码</param>
@@ -743,16 +744,22 @@ namespace Yushen.WebService.KessClient
             try
             {
                 logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
+
+                // 调用WebService接口，获取返回值
                 result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
+
                 logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
 
-                // 操作员已经退出的时候，先重新登录然后再次执行
+                // 检查是否提示操作员已经退出。如果操作员已经退出，则先重新登录然后再次执行
                 if (result.IndexOf("<prompt>您必须先登陆，才能进行其它操作。</prompt>") > -1)
                 {
                     this.operatorLogin();
 
                     logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
+
+                    // 调用WebService接口，获取返回值
                     result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
+
                     logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
                 }
             }
