@@ -217,7 +217,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("NEW_ID_CODE", NEW_ID_CODE);
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -301,7 +301,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "0" && response.flag != "1")
@@ -363,7 +363,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -442,7 +442,7 @@ namespace Yushen.WebService.KessClient
                 }
 
                 // 调用WebService获取返回值
-                response = new Response(this.invoke(request));
+                response = this.invoke(request);
 
                 // 判断返回的操作结果是否异常
                 if (response.flag != "1")
@@ -494,7 +494,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("SERIAL_NO", SERIAL_NO);
             
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
                 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -593,7 +593,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("EMAIL_CHK_FLAG", user.email_chk_flag); // 邮箱校验标识（非必传）
             request.setAttr("FIN_EDU_FLAG", user.fin_edu_flag); // 金融相关专业学历校验标识（非必传）
 
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -629,7 +629,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("FUND_TYPE", FUND_TYPE);
             request.setAttr("OP_REMARK", OP_REMARK);
 
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -671,7 +671,7 @@ namespace Yushen.WebService.KessClient
             //request.setAttr("SMS_NO", SMS_NO);
             request.setAttr("CUBSB_TYPE", "16"); // 券商发起-银证开户
 
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -697,7 +697,7 @@ namespace Yushen.WebService.KessClient
             Request request = new Request(this.operatorId, "getCubsbLog");
             request.setAttr("SERIAL_NO", SERIAL_NO); 
 
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -719,7 +719,7 @@ namespace Yushen.WebService.KessClient
             Request request = new Request(this.operatorId, "queryCustBasicInfoList");
             request.setAttr("USER_CODE", userCode);
 
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -735,7 +735,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public string invoke(Request request)
+        public Response invoke(Request request)
         {
             string result = "";
 
@@ -763,7 +763,7 @@ namespace Yushen.WebService.KessClient
                 throw new Exception(message);
             }
 
-            return result;
+            return new Response(result);
         }
         
         /// <summary>
@@ -880,7 +880,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("CHECK_RES_RIGHT", CHECK_RES_RIGHT); // 检查资源权限
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")

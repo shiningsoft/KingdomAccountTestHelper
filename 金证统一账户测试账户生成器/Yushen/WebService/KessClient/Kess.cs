@@ -81,7 +81,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("PASSWORD", this.password);
             request.setAttr("F_CHANNEL", this.channel);
 
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             if (response.flag == "0" && response.prompt.IndexOf("用户已登陆，不用重复登陆") == -1)
             {
@@ -105,7 +105,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="NATIONALITY"></param>
         public string createCustomerCode(User user)
         {
-            Response response = new Response(this.getUserInfoById(user.id_code));
+            Response response = this.getUserInfoById(user.id_code);
             if (response.length == 0 || this.getSingleCommonParamValue("OPEN_CUST_CHECK_ID_FLAG") == "1")
             {
                 response = this.openCustomer(user);
@@ -170,7 +170,7 @@ namespace Yushen.WebService.KessClient
             Request request = new Request(this.operatorId, "listCuacct");
             request.setAttr("USER_CODE", user.cust_code);    // 客户名称
 
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
             if (response.flag != "0" && response.flag != "1")
             {
                 string msg = "操作失败：" + response.prompt;
@@ -216,7 +216,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("USE_SCOPE", USE_SCOPE);    // 设置交易密码
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -279,7 +279,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("SURVEY_CELLS", cells);
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -420,7 +420,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -478,7 +478,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -534,7 +534,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag == "1")
@@ -675,17 +675,21 @@ namespace Yushen.WebService.KessClient
         public void openCyb2ZD(User user,string SIGN_CLS, string SIGN_DATE,int timeout=30)
         {
             // 前置条件判断
-            if (user.id_code == "")
+            if (user.cust_code == "")
             {
-                throw new Exception("证件代码不能为空");
+                throw new Exception("客户号不能为空");
+            }
+            if (user.szacct == "")
+            {
+                throw new Exception("深A账户不能为空");
+            }
+            if (SIGN_DATE == "")
+            {
+                throw new Exception("签署日期不能为空");
             }
             if (SIGN_CLS == "")
             {
                 throw new Exception("签约类别不能为空");
-            }
-            if (SIGN_DATE == "")
-            {
-                throw new Exception("签约日期不能为空");
             }
 
             // 初始化请求
@@ -702,12 +706,12 @@ namespace Yushen.WebService.KessClient
                 CHK_STATUS: Dict.CHK_STATUS.已通过,
                 NET_SERVICE: Dict.NET_SERVICE.否,
                 ACCT_OPENTYPE: "",  // 必须送空值
-                SIGN_CLS: SIGN_CLS,
-                SIGN_DATE: SIGN_DATE,
-                // 以上参数不要随意修改
                 CUST_CODE: user.cust_code,
                 YMT_CODE: user.ymt_code,
                 TRDACCT: user.szacct,
+                SIGN_CLS: SIGN_CLS,
+                SIGN_DATE: SIGN_DATE,
+                // 以上参数不要随意修改
                 CUST_FNAME: user.user_fname,
                 USER_TYPE: user.user_type,
                 ID_TYPE: user.id_type,
@@ -764,17 +768,17 @@ namespace Yushen.WebService.KessClient
             {
                 throw new Exception("深A账户不能为空");
             }
-            if (user.cust_code == "")
+            if (OPEN_TYPE == "")
             {
-                throw new Exception("客户号不能为空");
+                throw new Exception("开通类别不能为空");
             }
-            if (user.cust_code == "")
+            if (SIGN_DATE == "")
             {
-                throw new Exception("客户号不能为空");
+                throw new Exception("签署日期不能为空");
             }
-            if (user.cust_code == "")
+            if (EFT_DATE == "")
             {
-                throw new Exception("客户号不能为空");
+                throw new Exception("生效日期不能为空");
             }
 
             // 初始化请求
@@ -866,7 +870,7 @@ namespace Yushen.WebService.KessClient
             Request request = new Request(this.operatorId, "getCommonParams");
             request.setAttr("REGKEY_ID", regkeyId);
 
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             if (response.flag != "1")
             {
@@ -895,7 +899,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("DD_ID", dictName);
             request.setAttr("INT_ORG", "0");
 
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             if(response.flag != "1")
             {
@@ -912,13 +916,13 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public string getUserInfoById(string id)
+        public Response getUserInfoById(string id)
         {
             Request request = new Request(this.operatorId, "getUserInfoById");
             request.setAttr("ID_CODE", id);
 
-            Response response = new Response(this.invoke(request));
-            return response.xml;
+            Response response = this.invoke(request);
+            return response;
         }
 
         /// <summary>
@@ -953,7 +957,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("BIRTHDAY", user.birthday);
             
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1") 
@@ -1022,7 +1026,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("STKPBU_TYPE", STKPBU_TYPE); // 交易单元类型
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -1099,7 +1103,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("FIRMID", FIRMID); // 代理商号
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -1187,7 +1191,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = new Response(this.invoke(request));
+            Response response = this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")

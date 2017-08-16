@@ -942,7 +942,7 @@ namespace 金证统一账户测试账户生成器
                 Request request = new Request(Settings.Default.操作员代码, tbxMethonName.Text, false);
                 tbxRequest.Text = Formatter.formatXml(request.xml);
             }
-            catch (NotImplementedException ex)
+            catch (NotImplementedException)
             {
                 resultForm.Append("不支持的WebService方法：" + tbxMethonName.Text);
             }
@@ -957,7 +957,7 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 Request request = new Request(Settings.Default.操作员代码, tbxMethonName.Text, tbxRequest.Text);
-                Response response = new Response(kess.invoke(request));
+                Response response = kess.invoke(request);
                 tbxResponse.Text = response.xml;
             }
             catch (Exception ex)

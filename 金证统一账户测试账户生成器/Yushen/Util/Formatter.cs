@@ -24,8 +24,9 @@ namespace Yushen.Util
                 writer.Formatting = Formatting.Indented;
                 doc.WriteContentTo(writer);
             }
+            // 删除空白内容节点的换行
             string str = sw.ToString();
-            Regex regex = new Regex("^( *)<(.*)>\r\n *</(.*)>", RegexOptions.Multiline);
+            Regex regex = new Regex(@"^( *)<(\w*)>\r\n *</(.*)>", RegexOptions.Multiline);
             str = regex.Replace(str, "$1<$2></$3>");
             return str;
         }
