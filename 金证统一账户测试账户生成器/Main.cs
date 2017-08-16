@@ -986,7 +986,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                resultForm.Append("公共参数查询失败：" + ex.Message);
+                resultForm.Append(ex.Message);
             }
         }
     }
