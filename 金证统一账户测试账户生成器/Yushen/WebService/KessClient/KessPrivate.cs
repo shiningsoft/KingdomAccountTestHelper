@@ -735,25 +735,25 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        private string invoke(Request request)
+        public string invoke(Request request)
         {
             string result = "";
 
             // 利用反射调用WebService的成员函数
             try
             {
-                logger.Info("调用Webservice功能<" + request.operateName + ">|" + request.xml);
-                result = (string)this.kessClientType.GetMethod(request.operateName).Invoke(this.kessClient, new object[] { request.xml });
-                logger.Info("响应Webservice功能<" + request.operateName + ">|" + result);
+                logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
+                result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
+                logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
 
                 // 操作员已经退出的时候，先重新登录然后再次执行
                 if (result.IndexOf("<prompt>您必须先登陆，才能进行其它操作。</prompt>") > -1)
                 {
                     this.operatorLogin();
 
-                    logger.Info("调用Webservice功能<" + request.operateName + ">|" + request.xml);
-                    result = (string)this.kessClientType.GetMethod(request.operateName).Invoke(this.kessClient, new object[] { request.xml });
-                    logger.Info("响应Webservice功能<" + request.operateName + ">|" + result);
+                    logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
+                    result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
+                    logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
                 }
             }
             catch (Exception ex)

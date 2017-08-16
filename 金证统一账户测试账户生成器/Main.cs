@@ -521,8 +521,6 @@ namespace 金证统一账户测试账户生成器
                 syncSurveyAns2Kbss();
 
                 openYMTCode();
-                //Task task = new Task(openYMTCode);
-                //task.Start();
 
                 openSHACode();
 
@@ -615,35 +613,20 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private void openYMTCode()
         {
-            try
+            // 开一码通
+            Response response = kess.openYMTAcct(user.user_type, user.user_fname, user.id_type, user.id_code, user.int_org, user.cust_code, user.birthday, user.id_beg_date, user.id_exp_date, user.citizenship, user.id_addr, user.id_addr, user.zip_code, user.occu_type, user.nationality, user.education, user.tel, user.mobile_tel, user.sex);
+            if (response.length > 2)
             {
-                // 开一码通
-                Response response = kess.openYMTAcct(user.user_type, user.user_fname, user.id_type, user.id_code, user.int_org, user.cust_code, user.birthday, user.id_beg_date, user.id_exp_date, user.citizenship, user.id_addr, user.id_addr, user.zip_code, user.occu_type, user.nationality, user.education, user.tel, user.mobile_tel, user.sex);
-                if (response.length > 2)
-                {
-                    throw new Exception("该客户有" + response.length.ToString() + "个一码通账号");
-                }
-                else if (response.length == 0)
-                {
-                    throw new Exception("没有返回一码通账号列表");
-                }
-                Action action = () =>
-                {
-                    string ymtCode = response.getValue("YMT_CODE");
-                    resultForm.Append("一码通账号开立成功：" + response.getValue("YMT_CODE"));
-                    user.ymt_code = ymtCode;
-                    tbxYMTCode.Text = ymtCode;
-                };
-                this.Invoke(action);
+                throw new Exception("该客户有" + response.length.ToString() + "个一码通账号");
             }
-            catch (Exception ex)
+            else if (response.length == 0)
             {
-                Action action = () =>
-                {
-                    resultForm.Append("一码通账号开立失败：" + ex.Message);
-                };
-                this.Invoke(action);
+                throw new Exception("没有返回一码通账号列表");
             }
+            string ymtCode = response.getValue("YMT_CODE");
+            resultForm.Append("一码通账号开立成功：" + response.getValue("YMT_CODE"));
+            user.ymt_code = ymtCode;
+            tbxYMTCode.Text = ymtCode;
         }
 
         /// <summary>
@@ -914,6 +897,37 @@ namespace 金证统一账户测试账户生成器
                 {
                     id_code.Text = IDCardNumber.per15To18(id_code.Text);
                 }
+            }
+        }
+
+        private void btnLoadRequestXml_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Request request = new Request(Settings.Default.操作员代码, tbxMethonName.Text, false);
+                tbxRequest.Text = Formatter.formatXml(request.xml);
+            }
+            catch (NotImplementedException ex)
+            {
+                resultForm.Append("不支持的WebService方法：" + tbxMethonName.Text);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+        }
+
+        private void btnExecute_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Request request = new Request(Settings.Default.操作员代码, tbxMethonName.Text, tbxRequest.Text);
+                Response response = new Response(kess.invoke(request));
+                tbxResponse.Text = response.xml;
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
             }
         }
     }

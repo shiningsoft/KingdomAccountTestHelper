@@ -55,6 +55,7 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbxShortIdNo = new System.Windows.Forms.CheckBox();
             this.btnBindSHAcct = new System.Windows.Forms.Button();
             this.cbxLongTerm = new System.Windows.Forms.CheckBox();
             this.btnCreateIDCardImgBackSide = new System.Windows.Forms.Button();
@@ -131,13 +132,20 @@ namespace 金证统一账户测试账户生成器
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.cbxShortIdNo = new System.Windows.Forms.CheckBox();
+            this.tpgTest = new System.Windows.Forms.TabPage();
+            this.btnLoadRequestXml = new System.Windows.Forms.Button();
+            this.tbxMethonName = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.btnExecute = new System.Windows.Forms.Button();
+            this.tbxRequest = new System.Windows.Forms.TextBox();
+            this.tbxResponse = new System.Windows.Forms.TextBox();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.tpgTest.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -353,6 +361,17 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
+            // cbxShortIdNo
+            // 
+            this.cbxShortIdNo.AutoSize = true;
+            this.cbxShortIdNo.Location = new System.Drawing.Point(310, 41);
+            this.cbxShortIdNo.Name = "cbxShortIdNo";
+            this.cbxShortIdNo.Size = new System.Drawing.Size(48, 16);
+            this.cbxShortIdNo.TabIndex = 87;
+            this.cbxShortIdNo.Text = "15位";
+            this.cbxShortIdNo.UseVisualStyleBackColor = true;
+            this.cbxShortIdNo.CheckedChanged += new System.EventHandler(this.cbxShortIdNo_CheckedChanged);
+            // 
             // btnBindSHAcct
             // 
             this.btnBindSHAcct.Location = new System.Drawing.Point(423, 326);
@@ -565,7 +584,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(812, 36);
+            this.btnLogin.Location = new System.Drawing.Point(812, 37);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(100, 23);
             this.btnLogin.TabIndex = 63;
@@ -1029,6 +1048,7 @@ namespace 金证统一账户测试账户生成器
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPageGetDict);
+            this.tabControl1.Controls.Add(this.tpgTest);
             this.tabControl1.Location = new System.Drawing.Point(12, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1066,16 +1086,76 @@ namespace 金证统一账户测试账户生成器
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
-            // cbxShortIdNo
+            // tpgTest
             // 
-            this.cbxShortIdNo.AutoSize = true;
-            this.cbxShortIdNo.Location = new System.Drawing.Point(310, 41);
-            this.cbxShortIdNo.Name = "cbxShortIdNo";
-            this.cbxShortIdNo.Size = new System.Drawing.Size(48, 16);
-            this.cbxShortIdNo.TabIndex = 87;
-            this.cbxShortIdNo.Text = "15位";
-            this.cbxShortIdNo.UseVisualStyleBackColor = true;
-            this.cbxShortIdNo.CheckedChanged += new System.EventHandler(this.cbxShortIdNo_CheckedChanged);
+            this.tpgTest.Controls.Add(this.tbxResponse);
+            this.tpgTest.Controls.Add(this.tbxRequest);
+            this.tpgTest.Controls.Add(this.btnExecute);
+            this.tpgTest.Controls.Add(this.btnLoadRequestXml);
+            this.tpgTest.Controls.Add(this.tbxMethonName);
+            this.tpgTest.Controls.Add(this.label26);
+            this.tpgTest.Location = new System.Drawing.Point(4, 22);
+            this.tpgTest.Name = "tpgTest";
+            this.tpgTest.Padding = new System.Windows.Forms.Padding(3);
+            this.tpgTest.Size = new System.Drawing.Size(918, 454);
+            this.tpgTest.TabIndex = 2;
+            this.tpgTest.Text = "接口测试工具";
+            this.tpgTest.UseVisualStyleBackColor = true;
+            // 
+            // btnLoadRequestXml
+            // 
+            this.btnLoadRequestXml.Location = new System.Drawing.Point(359, 7);
+            this.btnLoadRequestXml.Name = "btnLoadRequestXml";
+            this.btnLoadRequestXml.Size = new System.Drawing.Size(100, 23);
+            this.btnLoadRequestXml.TabIndex = 11;
+            this.btnLoadRequestXml.Text = "加载请求参数";
+            this.btnLoadRequestXml.UseVisualStyleBackColor = true;
+            this.btnLoadRequestXml.Click += new System.EventHandler(this.btnLoadRequestXml_Click);
+            // 
+            // tbxMethonName
+            // 
+            this.tbxMethonName.Location = new System.Drawing.Point(75, 8);
+            this.tbxMethonName.Name = "tbxMethonName";
+            this.tbxMethonName.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxMethonName.Size = new System.Drawing.Size(278, 21);
+            this.tbxMethonName.TabIndex = 13;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(16, 13);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(53, 12);
+            this.label26.TabIndex = 12;
+            this.label26.Text = "接口名：";
+            // 
+            // btnExecute
+            // 
+            this.btnExecute.Location = new System.Drawing.Point(467, 6);
+            this.btnExecute.Name = "btnExecute";
+            this.btnExecute.Size = new System.Drawing.Size(100, 23);
+            this.btnExecute.TabIndex = 16;
+            this.btnExecute.Text = "执行请求";
+            this.btnExecute.UseVisualStyleBackColor = true;
+            this.btnExecute.Click += new System.EventHandler(this.btnExecute_Click);
+            // 
+            // tbxRequest
+            // 
+            this.tbxRequest.Location = new System.Drawing.Point(6, 35);
+            this.tbxRequest.Multiline = true;
+            this.tbxRequest.Name = "tbxRequest";
+            this.tbxRequest.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxRequest.Size = new System.Drawing.Size(440, 413);
+            this.tbxRequest.TabIndex = 17;
+            // 
+            // tbxResponse
+            // 
+            this.tbxResponse.Location = new System.Drawing.Point(452, 35);
+            this.tbxResponse.Multiline = true;
+            this.tbxResponse.Name = "tbxResponse";
+            this.tbxResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxResponse.Size = new System.Drawing.Size(460, 413);
+            this.tbxResponse.TabIndex = 18;
             // 
             // Main
             // 
@@ -1101,6 +1181,8 @@ namespace 金证统一账户测试账户生成器
             this.tabControl1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.tpgTest.ResumeLayout(false);
+            this.tpgTest.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1199,6 +1281,13 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.CheckBox cbxLongTerm;
         private System.Windows.Forms.Button btnBindSHAcct;
         private System.Windows.Forms.CheckBox cbxShortIdNo;
+        private System.Windows.Forms.TabPage tpgTest;
+        private System.Windows.Forms.Button btnLoadRequestXml;
+        private System.Windows.Forms.TextBox tbxMethonName;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox tbxResponse;
+        private System.Windows.Forms.TextBox tbxRequest;
+        private System.Windows.Forms.Button btnExecute;
     }
 }
 

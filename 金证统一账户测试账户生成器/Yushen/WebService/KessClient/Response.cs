@@ -215,28 +215,6 @@ namespace Yushen.WebService.KessClient
             return ds;
         }
 
-        /// <summary>
-        /// 通过XML字符串创建DataTable对象
-        /// </summary>
-        /// <param name="xmlString"></param>
-        private DataTable createDataTableFromXmlString(string xmlString)
-        {
-            DataTable dt = new DataTable();
-            using (StringReader xmlSR = new StringReader(xmlString))
-            {
-                // 读取xml到DataSet
-                // XmlReadMode.InferTypedSchema：忽视任何内联架构，从数据推断出强类型架构并加载数据。如果无法推断，则解释成字符串数据
-                XmlTextReader xr = new XmlTextReader(xmlSR);
-                dt.ReadXml(xmlSR);
-            }
-
-            if (dt == null)
-            {
-                throw new Exception("DataSet读取XML失败");
-            }
-            return dt;
-        }
-
         public DataSet DataSet
         {
             get

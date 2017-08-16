@@ -6,9 +6,9 @@
   </auth>
   <data>
     <!--//操作类型OP_TYPE为0时表示券商发起银证开户一步式，为1时表示券商发起预指定，即两步式中的第一步，为2时BANK_ACCT、FUND_AUTH_DATA、BANK_AUTH_DATA均传空。-->
-    <OP_TYPE>0</OP_TYPE>
+    <OP_TYPE></OP_TYPE>
     <!--//货币代码DD[CURRENCY]-->
-    <CURRENCY>0</CURRENCY>
+    <CURRENCY></CURRENCY>
     <!--//客户代码-->
     <CUST_CODE></CUST_CODE>
     <!--//资金代码-->
@@ -29,8 +29,8 @@
     <SERIAL_NO></SERIAL_NO>
     <!--//短信验证码-->
     <SMS_NO></SMS_NO>
-    <!--//银证类型-->
-    <CUBSB_TYPE></CUBSB_TYPE>
+    <!--备注：以下参数为《农行、建行三方存管电子签约业务》附加的入参，如果不使用此电子签约业务的，则忽略这些参数。且OP_TYPE=0时使用。
+    操作类型OP_TYPE为2时表示券商发起存管签约，即两步式中的第二步。-->
     <!--//股东账户（可选）-->
     <TRDACCT></TRDACCT>
     <!--//银行代码-->
@@ -47,6 +47,6 @@
     <AGREEMENT_CA></AGREEMENT_CA>
     <!--//协议备注信息-->
     <AGREEMENT_REMARK></AGREEMENT_REMARK>
-    <!--备注：青绿色背景标识的参数为《农行、建行三方存管电子签约业务》附加的入参，如果不使用此电子签约业务的，则忽略这些参数。且OP_TYPE=0时使用。//操作类型OP_TYPE为2时表示券商发起存管签约，即两步式中的第二步。-->
+    
   </data>
 </request>

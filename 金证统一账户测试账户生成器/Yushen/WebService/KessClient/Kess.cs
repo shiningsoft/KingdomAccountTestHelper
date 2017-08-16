@@ -1118,5 +1118,93 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return true;
         }
+
+        /// <summary>
+        /// 2.61 券商发起银证开户、预指定和存管签约
+        /// </summary>
+        /// <param name="OP_TYPE">操作类型OP_TYPE为0时表示券商发起银证开户一步式，为1时表示券商发起预指定，即两步式中的第一步，为2时BANK_ACCT、FUND_AUTH_DATA、BANK_AUTH_DATA均传空。</param>
+        /// <param name="CURRENCY">货币代码DD[CURRENCY]</param>
+        /// <param name="CUST_CODE">客户代码</param>
+        /// <param name="CUACCT_CODE">资金代码</param>
+        /// <param name="BANK_ACCT_CODE">银行账户卡号</param>
+        /// <param name="EXT_ORG">外部机构</param>
+        /// <param name="BANK_ACCT">外部银行账户</param>
+        /// <param name="FUND_AUTH_DATA">资金密码</param>
+        /// <param name="CUBSB_TYPE">银证业务类型DD[CUBSB_TYPE]</param>
+        /// <param name="BANK_AUTH_DATA">银行密码</param>
+        /// <param name="SERIAL_NO">流水序号</param>
+        /// <param name="SMS_NO">短信验证码</param>
+        /// <returns></returns>
+        public bool cubsbScOpenAcct(
+                string OP_TYPE,
+                string CUST_CODE,
+                string CUACCT_CODE,
+                string BANK_ACCT_CODE = "",
+                string EXT_ORG = "",
+                string BANK_ACCT = "",
+                string FUND_AUTH_DATA = "",
+                string CUBSB_TYPE = "",
+                string BANK_AUTH_DATA = "",
+                string SERIAL_NO = "",
+                string CURRENCY = Dict.CURRENCY.人民币,
+                string SMS_NO = ""
+            )
+        {
+            // 前置条件判断
+            if (OP_TYPE == "")
+            {
+                string message = "操作类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (CUACCT_CODE == "")
+            {
+                string message = "资金代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (CURRENCY == "")
+            {
+                string message = "货币类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "cubsbScOpenAcct");
+            request.setAttr("OP_TYPE", OP_TYPE); // 操作类型
+            request.setAttr("CURRENCY", CURRENCY); // 货币代码DD[CURRENCY]
+            request.setAttr("CUST_CODE", CUST_CODE); // 客户代码
+            request.setAttr("CUACCT_CODE", CUACCT_CODE); // 资金代码
+            request.setAttr("BANK_ACCT_CODE", BANK_ACCT_CODE); // 银行账户卡号
+            request.setAttr("EXT_ORG", EXT_ORG); // 外部机构
+            request.setAttr("BANK_ACCT", BANK_ACCT); // 外部银行账户
+            request.setAttr("FUND_AUTH_DATA", FUND_AUTH_DATA); // 资金密码
+            request.setAttr("CUBSB_TYPE", CUBSB_TYPE); // 银证业务类型DD[CUBSB_TYPE]
+            request.setAttr("BANK_AUTH_DATA", BANK_AUTH_DATA); // 银行密码
+            request.setAttr("SERIAL_NO", SERIAL_NO); // 流水序号
+            request.setAttr("SMS_NO", SMS_NO); // 短信验证码
+
+
+            // 调用WebService获取返回值
+            Response response = new Response(this.invoke(request));
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return true;
+        }
     }
 }
