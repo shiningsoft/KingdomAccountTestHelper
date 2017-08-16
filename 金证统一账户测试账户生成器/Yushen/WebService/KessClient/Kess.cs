@@ -1052,7 +1052,7 @@ namespace Yushen.WebService.KessClient
             string STKBD,
             string TRDACCT,
             string TREG_STATUS,
-            string BREG_STATUS,
+            string BREG_STATUS = "",
             string FIRMID = ""
             )
         {
@@ -1084,12 +1084,6 @@ namespace Yushen.WebService.KessClient
             if (TREG_STATUS == "")
             {
                 string message = "交易指定状态TREG_STATUS不能为空";
-                logger.Error(message);
-                throw new Exception(message);
-            }
-            if (BREG_STATUS == "")
-            {
-                string message = "交易指定状态BREG_STATUS不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
@@ -1137,13 +1131,13 @@ namespace Yushen.WebService.KessClient
         /// <returns></returns>
         public bool cubsbScOpenAcct(
                 string OP_TYPE,
-                string CUST_CODE,
                 string CUACCT_CODE,
+                string EXT_ORG,
+                string CUST_CODE = "",
                 string BANK_ACCT_CODE = "",
-                string EXT_ORG = "",
                 string BANK_ACCT = "",
                 string FUND_AUTH_DATA = "",
-                string CUBSB_TYPE = "",
+                string CUBSB_TYPE = Dict.CUBSB_TYPE.存管,
                 string BANK_AUTH_DATA = "",
                 string SERIAL_NO = "",
                 string CURRENCY = Dict.CURRENCY.人民币,
@@ -1157,9 +1151,9 @@ namespace Yushen.WebService.KessClient
                 logger.Error(message);
                 throw new Exception(message);
             }
-            if (CUST_CODE == "")
+            if (EXT_ORG == "")
             {
-                string message = "客户代码不能为空";
+                string message = "银行代码不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }

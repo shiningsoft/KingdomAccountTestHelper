@@ -220,7 +220,20 @@ namespace 金证统一账户测试账户生成器
 
         private void btnBankSign_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
+                signBank();
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("预指定失败：" + ex.Message);
+            }
         }
 
         private void btnSubmitRiskTest_Click(object sender, EventArgs e)
@@ -520,6 +533,8 @@ namespace 金证统一账户测试账户生成器
 
                 syncSurveyAns2Kbss();
 
+                signBank();
+
                 openYMTCode();
 
                 openSHACode();
@@ -529,6 +544,8 @@ namespace 金证统一账户测试账户生成器
                 openSZACode();
 
                 registerSZACode();
+
+                bindSHAcct();
 
             }
             catch (Exception ex)
@@ -596,6 +613,18 @@ namespace 金证统一账户测试账户生成器
         }
 
         /// <summary>
+        /// 预指定三方存管
+        /// </summary>
+        private void signBank()
+        {
+            bool result = kess.cubsbScOpenAcct("1", user.cuacct_code, bank_code.SelectedValue.ToString());
+            if (result)
+            {
+                resultForm.Append("三方存管预指定成功");
+            }
+        }
+
+        /// <summary>
         /// 提交风险测评
         /// </summary>
         private void syncSurveyAns2Kbss()
@@ -651,6 +680,22 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("沪A股东账号加挂成功");
             }
+        }
+
+        /// <summary>
+        /// 上海账户指定交易
+        /// </summary>
+        private void bindSHAcct()
+        {
+            Response response = kess.listStkPbuOrg(Dict.STKBD.上海A股, "19");
+            kess.stkTrdacctBind(
+                user.cust_code,
+                response.getValue("STKPBU"),
+                Dict.STKBD.上海A股,
+                user.shacct,
+                Dict.TREG_STATUS.首日指定
+            );
+            resultForm.Append("上海证券账户" + user.shacct + "指定交易成功" + "，交易单元为：" + response.getValue("STKPBU"));
         }
 
         /// <summary>
@@ -864,17 +909,7 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
-                Response response = kess.listStkPbuOrg(Dict.STKBD.上海A股, "19");
-                resultForm.Append("交易单元为：" + response.getValue("STKPBU"));
-                kess.stkTrdacctBind(
-                    user.cust_code, 
-                    response.getValue("STKPBU"), 
-                    Dict.STKBD.上海A股, 
-                    user.shacct, 
-                    Dict.TREG_STATUS.已指定, 
-                    Dict.BREG_STATUS.已指定
-                );
-                resultForm.Append("上海证券账户" + user.shacct + "指定交易成功");
+                bindSHAcct();
             }
             catch (Exception ex)
             {
