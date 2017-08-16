@@ -754,7 +754,7 @@ namespace 金证统一账户测试账户生成器
             this.btnBankSign.Name = "btnBankSign";
             this.btnBankSign.Size = new System.Drawing.Size(100, 23);
             this.btnBankSign.TabIndex = 43;
-            this.btnBankSign.Text = "预指定三方存管";
+            this.btnBankSign.Text = "三方存管预指定";
             this.btnBankSign.UseVisualStyleBackColor = true;
             this.btnBankSign.Click += new System.EventHandler(this.btnBankSign_Click);
             // 
