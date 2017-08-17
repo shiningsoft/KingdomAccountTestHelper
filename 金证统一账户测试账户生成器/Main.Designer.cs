@@ -43,9 +43,6 @@ namespace 金证统一账户测试账户生成器
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.新开账户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.数据字典查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -159,7 +156,6 @@ namespace 金证统一账户测试账户生成器
             // 
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
-            this.toolStripMenuItem2,
             this.设置ToolStripMenuItem,
             this.关于ToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
@@ -183,28 +179,6 @@ namespace 金证统一账户测试账户生成器
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
-            // toolStripMenuItem2
-            // 
-            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.新开账户ToolStripMenuItem,
-            this.数据字典查询ToolStripMenuItem});
-            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(44, 21);
-            this.toolStripMenuItem2.Text = "功能";
-            // 
-            // 新开账户ToolStripMenuItem
-            // 
-            this.新开账户ToolStripMenuItem.Name = "新开账户ToolStripMenuItem";
-            this.新开账户ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.新开账户ToolStripMenuItem.Text = "新开账户";
-            this.新开账户ToolStripMenuItem.Click += new System.EventHandler(this.新开随机账户ToolStripMenuItem_Click);
-            // 
-            // 数据字典查询ToolStripMenuItem
-            // 
-            this.数据字典查询ToolStripMenuItem.Name = "数据字典查询ToolStripMenuItem";
-            this.数据字典查询ToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.数据字典查询ToolStripMenuItem.Text = "数据字典查询";
-            // 
             // 设置ToolStripMenuItem
             // 
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
@@ -224,7 +198,7 @@ namespace 金证统一账户测试账户生成器
             // 关于ToolStripMenuItem1
             // 
             this.关于ToolStripMenuItem1.Name = "关于ToolStripMenuItem1";
-            this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
+            this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
             this.关于ToolStripMenuItem1.Text = "关于";
             this.关于ToolStripMenuItem1.Click += new System.EventHandler(this.关于ToolStripMenuItem1_Click);
             // 
@@ -1263,9 +1237,6 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem 新开账户ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 数据字典查询ToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPageGetDict;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox dictName;

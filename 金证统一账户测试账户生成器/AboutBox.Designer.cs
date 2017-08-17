@@ -136,7 +136,6 @@
             this.textBoxDescription.Size = new System.Drawing.Size(271, 116);
             this.textBoxDescription.TabIndex = 23;
             this.textBoxDescription.TabStop = false;
-            this.textBoxDescription.Text = "于申\r\n国元证券股份有限公司\r\n信息技术总部";
             // 
             // okButton
             // 

@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
 [assembly: AssemblyTitle("金证统一账户测试账户生成器")]
-[assembly: AssemblyDescription("仅限用于测试环境，切勿在正式环境使用。")]
+[assembly: AssemblyDescription("仅限用于测试环境，切勿在正式环境使用。\r\n基于WebService接口实现。\r\n作者QQ：200795578")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("国元证券股份有限公司")]
+[assembly: AssemblyCompany("国元证券股份有限公司信息技术总部")]
 [assembly: AssemblyProduct("金证统一账户测试账户生成器")]
 [assembly: AssemblyCopyright("于申 Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]

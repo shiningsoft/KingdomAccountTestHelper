@@ -139,7 +139,7 @@ namespace 金证统一账户测试账户生成器
                 // 初始化WebService连接
                 if (kess == null)
                 {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                    // kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
             }
             catch (Exception ex)
@@ -369,6 +369,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
+                saveUserInfo();
                 Response response = kess.queryStkAcct(user);
                 resultForm.Append("该客户有" + response.length.ToString() + "个股东卡号");
                 foreach (DataRow ds in response.DataSet.Tables["row"].Rows)
