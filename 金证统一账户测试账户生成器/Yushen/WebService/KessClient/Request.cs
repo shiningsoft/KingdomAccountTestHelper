@@ -73,6 +73,14 @@ namespace Yushen.WebService.KessClient
             {
                 nodelist[1].InnerText = img;
             }
+            else if (nodelist.Count == 1)
+            {
+                throw new Exception("缺少第二个data元素，无法添加图片数据");
+            }
+            else
+            {
+                throw new Exception("存在多个data元素");
+            }
         }
 
         /// <summary>
