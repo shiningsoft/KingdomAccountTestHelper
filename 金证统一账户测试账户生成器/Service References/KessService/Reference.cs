@@ -1255,6 +1255,16 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openYMTAcctByKbssResponse EndopenYMTAcctByKbss(System.IAsyncResult result);
         
+        // CODEGEN: 消息 uploadImgStringNoBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.uploadImgStringNoBizResponse uploadImgStringNoBiz(金证统一账户测试账户生成器.KessService.uploadImgStringNoBizRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginuploadImgStringNoBiz(金证统一账户测试账户生成器.KessService.uploadImgStringNoBizRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.uploadImgStringNoBizResponse EnduploadImgStringNoBiz(System.IAsyncResult result);
+        
         // CODEGEN: 消息 searchAcctFrtBizLogRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
@@ -6909,6 +6919,44 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         public openYMTAcctByKbssResponse(string openYMTAcctByKbssReturn) {
             this.openYMTAcctByKbssReturn = openYMTAcctByKbssReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgStringNoBiz", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class uploadImgStringNoBizRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
+        public string in1;
+        
+        public uploadImgStringNoBizRequest() {
+        }
+        
+        public uploadImgStringNoBizRequest(string in0, string in1) {
+            this.in0 = in0;
+            this.in1 = in1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgStringNoBizResponse", WrapperNamespace="http://60.173.222.38:52310/kess/services/KessService", IsWrapped=true)]
+    public partial class uploadImgStringNoBizResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string uploadImgStringNoBizReturn;
+        
+        public uploadImgStringNoBizResponse() {
+        }
+        
+        public uploadImgStringNoBizResponse(string uploadImgStringNoBizReturn) {
+            this.uploadImgStringNoBizReturn = uploadImgStringNoBizReturn;
         }
     }
     
@@ -14170,6 +14218,25 @@ namespace 金证统一账户测试账户生成器.KessService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class uploadImgStringNoBizCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public uploadImgStringNoBizCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class searchAcctFrtBizLogCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
@@ -17652,6 +17719,12 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         private System.Threading.SendOrPostCallback onopenYMTAcctByKbssCompletedDelegate;
         
+        private BeginOperationDelegate onBeginuploadImgStringNoBizDelegate;
+        
+        private EndOperationDelegate onEnduploadImgStringNoBizDelegate;
+        
+        private System.Threading.SendOrPostCallback onuploadImgStringNoBizCompletedDelegate;
+        
         private BeginOperationDelegate onBeginsearchAcctFrtBizLogDelegate;
         
         private EndOperationDelegate onEndsearchAcctFrtBizLogDelegate;
@@ -18782,6 +18855,8 @@ namespace 金证统一账户测试账户生成器.KessService {
         public event System.EventHandler<openYMTAcctByNewZDCompletedEventArgs> openYMTAcctByNewZDCompleted;
         
         public event System.EventHandler<openYMTAcctByKbssCompletedEventArgs> openYMTAcctByKbssCompleted;
+        
+        public event System.EventHandler<uploadImgStringNoBizCompletedEventArgs> uploadImgStringNoBizCompleted;
         
         public event System.EventHandler<searchAcctFrtBizLogCompletedEventArgs> searchAcctFrtBizLogCompleted;
         
@@ -27873,6 +27948,81 @@ namespace 金证统一账户测试账户生成器.KessService {
             }
             base.InvokeAsync(this.onBeginopenYMTAcctByKbssDelegate, new object[] {
                         in0}, this.onEndopenYMTAcctByKbssDelegate, this.onopenYMTAcctByKbssCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.uploadImgStringNoBizResponse 金证统一账户测试账户生成器.KessService.KessService.uploadImgStringNoBiz(金证统一账户测试账户生成器.KessService.uploadImgStringNoBizRequest request) {
+            return base.Channel.uploadImgStringNoBiz(request);
+        }
+        
+        public string uploadImgStringNoBiz(string in0, string in1) {
+            金证统一账户测试账户生成器.KessService.uploadImgStringNoBizRequest inValue = new 金证统一账户测试账户生成器.KessService.uploadImgStringNoBizRequest();
+            inValue.in0 = in0;
+            inValue.in1 = in1;
+            金证统一账户测试账户生成器.KessService.uploadImgStringNoBizResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).uploadImgStringNoBiz(inValue);
+            return retVal.uploadImgStringNoBizReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginuploadImgStringNoBiz(金证统一账户测试账户生成器.KessService.uploadImgStringNoBizRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginuploadImgStringNoBiz(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginuploadImgStringNoBiz(string in0, string in1, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.uploadImgStringNoBizRequest inValue = new 金证统一账户测试账户生成器.KessService.uploadImgStringNoBizRequest();
+            inValue.in0 = in0;
+            inValue.in1 = in1;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginuploadImgStringNoBiz(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.uploadImgStringNoBizResponse 金证统一账户测试账户生成器.KessService.KessService.EnduploadImgStringNoBiz(System.IAsyncResult result) {
+            return base.Channel.EnduploadImgStringNoBiz(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EnduploadImgStringNoBiz(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.uploadImgStringNoBizResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EnduploadImgStringNoBiz(result);
+            return retVal.uploadImgStringNoBizReturn;
+        }
+        
+        private System.IAsyncResult OnBeginuploadImgStringNoBiz(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            string in1 = ((string)(inValues[1]));
+            return this.BeginuploadImgStringNoBiz(in0, in1, callback, asyncState);
+        }
+        
+        private object[] OnEnduploadImgStringNoBiz(System.IAsyncResult result) {
+            string retVal = this.EnduploadImgStringNoBiz(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnuploadImgStringNoBizCompleted(object state) {
+            if ((this.uploadImgStringNoBizCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.uploadImgStringNoBizCompleted(this, new uploadImgStringNoBizCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void uploadImgStringNoBizAsync(string in0, string in1) {
+            this.uploadImgStringNoBizAsync(in0, in1, null);
+        }
+        
+        public void uploadImgStringNoBizAsync(string in0, string in1, object userState) {
+            if ((this.onBeginuploadImgStringNoBizDelegate == null)) {
+                this.onBeginuploadImgStringNoBizDelegate = new BeginOperationDelegate(this.OnBeginuploadImgStringNoBiz);
+            }
+            if ((this.onEnduploadImgStringNoBizDelegate == null)) {
+                this.onEnduploadImgStringNoBizDelegate = new EndOperationDelegate(this.OnEnduploadImgStringNoBiz);
+            }
+            if ((this.onuploadImgStringNoBizCompletedDelegate == null)) {
+                this.onuploadImgStringNoBizCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnuploadImgStringNoBizCompleted);
+            }
+            base.InvokeAsync(this.onBeginuploadImgStringNoBizDelegate, new object[] {
+                        in0,
+                        in1}, this.onEnduploadImgStringNoBizDelegate, this.onuploadImgStringNoBizCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]

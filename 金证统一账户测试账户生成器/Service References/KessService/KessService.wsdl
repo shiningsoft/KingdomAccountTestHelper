@@ -1231,6 +1231,13 @@
   <wsdl:message name="trxCalendarQueryResponse">
     <wsdl:part name="trxCalendarQueryReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="uploadImgStringNoBizResponse">
+    <wsdl:part name="uploadImgStringNoBizReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadImgStringNoBizRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+    <wsdl:part name="in1" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="listHkTzxxInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
@@ -2105,6 +2112,10 @@
     <wsdl:operation name="openYMTAcctByKbss" parameterOrder="in0">
       <wsdl:input name="openYMTAcctByKbssRequest" message="impl:openYMTAcctByKbssRequest" />
       <wsdl:output name="openYMTAcctByKbssResponse" message="impl:openYMTAcctByKbssResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadImgStringNoBiz" parameterOrder="in0 in1">
+      <wsdl:input name="uploadImgStringNoBizRequest" message="impl:uploadImgStringNoBizRequest" />
+      <wsdl:output name="uploadImgStringNoBizResponse" message="impl:uploadImgStringNoBizResponse" />
     </wsdl:operation>
     <wsdl:operation name="searchAcctFrtBizLog" parameterOrder="in0">
       <wsdl:input name="searchAcctFrtBizLogRequest" message="impl:searchAcctFrtBizLogRequest" />
@@ -3799,6 +3810,15 @@
       </wsdl:input>
       <wsdl:output name="openYMTAcctByKbssResponse">
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadImgStringNoBiz">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="uploadImgStringNoBizRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="uploadImgStringNoBizResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:52310/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="searchAcctFrtBizLog">
