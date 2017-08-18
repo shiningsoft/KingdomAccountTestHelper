@@ -14,10 +14,12 @@ namespace 金证统一账户测试账户生成器
 {
     public partial class Main : Form
     {
-        private Kess kess;
-        private static Logger logger = LogManager.GetCurrentClassLogger();
+        Kess kess;
+        static Logger logger = LogManager.GetCurrentClassLogger();
         ResultForm resultForm = new ResultForm();
-        private User user;
+        User user;
+        AboutBox aboutBox;
+        frmSettings frmSettings;
 
         public Main()
         {
@@ -36,8 +38,15 @@ namespace 金证统一账户测试账户生成器
 
         private void 关于ToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            AboutBox aboutBox = new AboutBox();
-            aboutBox.Show();
+            if (aboutBox == null || aboutBox.IsDisposed)
+            {
+                aboutBox = new AboutBox();
+                aboutBox.Show();
+            }
+            else
+            {
+                aboutBox.Activate();
+            }
         }
 
         private void 新开随机账户ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -134,18 +143,18 @@ namespace 金证统一账户测试账户生成器
 
             dtpCybSignDate.Value = DateTime.Now;
 
-            try
-            {
-                // 初始化WebService连接
-                if (kess == null)
-                {
-                    // kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-                }
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append("初始化失败：" + ex.Message);
-            }
+            //try
+            //{
+            //    // 初始化WebService连接
+            //    if (kess == null)
+            //    {
+            //        kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    resultForm.Append("初始化失败：" + ex.Message);
+            //}
 
             // 生成随机用户信息
             reCreateUserInfo();
@@ -775,7 +784,6 @@ namespace 金证统一账户测试账户生成器
             System.Diagnostics.Process.Start(path);
         }
 
-        private frmSettings frmSettings;
         private void 设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (frmSettings==null||frmSettings.IsDisposed)
@@ -826,19 +834,7 @@ namespace 金证统一账户测试账户生成器
             birthday = birthday.Substring(0, 4) + "      " + int.Parse(birthday.Substring(4, 2)).ToString() + "      " + int.Parse(birthday.Substring(6, 2)).ToString();
 
             // 超长地址自动换行
-            int wordNumberInOneLine = 13;   // 每行字符数
-
-            int lineCnt = (int)Math.Ceiling((double)addr.Length / (double)wordNumberInOneLine); // 计算行数
-            string newAddr = "";
-            for (int i = 0; i < lineCnt; i++)
-            {
-                int leftLength = addr.Length - i * wordNumberInOneLine;
-                newAddr += addr.Substring(0 + i * wordNumberInOneLine, leftLength < wordNumberInOneLine ? leftLength : wordNumberInOneLine);
-                if (i < lineCnt - 1)
-                {
-                    newAddr += Environment.NewLine;
-                }
-            }
+            string newAddr = Formatter.lineWarp(addr, 13);
 
             Image image;// 具体这张图是从文件读取还是从picturebox什么的获取你来指定
             image = Resources.样本身份证正面;
