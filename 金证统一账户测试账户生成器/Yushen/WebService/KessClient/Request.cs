@@ -47,10 +47,11 @@ namespace Yushen.WebService.KessClient
             this.methonName = operateName;
         }
 
-        /**
-         * 根据关键字设置某个值的属性
-         * 
-         **/
+        /// <summary>
+        /// 根据关键字设置某个值的属性
+        /// </summary>
+        /// <param name="name">字段名</param>
+        /// <param name="value">字段值</param>
         public void setAttr(string name, string value)
         {
             XmlNode node = xmlDoc.SelectSingleNode("/request/data/" + name);
@@ -59,6 +60,19 @@ namespace Yushen.WebService.KessClient
                 throw new Exception("找不到属性：" + name);
             }
             node.InnerText = value;
+        }
+
+        /// <summary>
+        /// 为请求增加第二个参数，用于图片上传接口。
+        /// </summary>
+        /// <param name="img">img是将图片转化为byte[]再用BASE64编码的字符串。</param>
+        public void addImg(string img)
+        {
+            XmlNodeList nodelist = xmlDoc.SelectNodes("/request/data");
+            if (nodelist.Count == 2)
+            {
+                nodelist[1].InnerText = img;
+            }
         }
 
         /// <summary>
