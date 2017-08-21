@@ -20,5 +20,26 @@
     <Setting Name="开户营业部" Type="System.String" Scope="User">
       <Value Profile="(Default)">19</Value>
     </Setting>
+    <Setting Name="Cols" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20</Value>
+    </Setting>
+    <Setting Name="保守型" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5|5|4|1|4|1|1|1|1|5|1|1|1|1|1|5|5|3|1|5</Value>
+    </Setting>
+    <Setting Name="谨慎型" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5|5|1|1|4|1|1|1|1|5|1|1|1|1|1|1|1|3|3|5</Value>
+    </Setting>
+    <Setting Name="稳健型" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2|2|2|2|2|2|2|2|2|2|2|2|2|2|2|2|3|2|2|2</Value>
+    </Setting>
+    <Setting Name="积极型" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2|2|1|2|1|3|3|4|2|4|3|5|4|4|4|1|1|1|3|4</Value>
+    </Setting>
+    <Setting Name="激进型" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1|5|1|2|3|4|3|2|5|3|3|4|4|4|3|1|1|1|3|1</Value>
+    </Setting>
+    <Setting Name="SURVEY_SN" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

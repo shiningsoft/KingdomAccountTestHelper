@@ -55,12 +55,8 @@ namespace Yushen.Util
         {
             int namelength = 0;
             namelength = rnd.Next(minLength, maxLength);
-            firstName = firstName.Replace("\n", "");
-            firstName = firstName.Replace("\r", "");
-            firstName = firstName.Replace(" ", "");
-            lastName = lastName.Replace("\r", "");
-            lastName = lastName.Replace("\n", "");
-            lastName = lastName.Replace(" ", "");
+            firstName = firstName.Replace("\n", "").Replace("\r", "").Replace(" ", "");
+            lastName = lastName.Replace("\n", "").Replace("\r", "").Replace(" ", "");
             string name = "";
             string[] FirstName = firstName.Split(',');
             string[] LastName = lastName.Split(',');
@@ -93,9 +89,7 @@ namespace Yushen.Util
         /// <returns></returns>
         public static string CreateRandomNation()
         {
-            nationName = nationName.Replace("\n", "");
-            nationName = nationName.Replace("\r", "");
-            nationName = nationName.Replace(" ", "");
+            nationName = nationName.Replace("\n", "").Replace("\r", "").Replace(" ", "");
             string[] nationname = nationName.Split(',');
             string nation = nationname[rnd.Next(0, 55)];
             return nation;

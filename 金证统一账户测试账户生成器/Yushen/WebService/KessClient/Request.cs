@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Xml;
 
 namespace Yushen.WebService.KessClient
@@ -16,6 +17,11 @@ namespace Yushen.WebService.KessClient
         public static string xmlPath = "Yushen/WebService/KessClient/Xml/";
 
         XmlDocument xmlDoc = new XmlDocument();
+
+        /// <summary>
+        /// 图片附件，上传照片时作为第二个参数使用。
+        /// </summary>
+        Image img;
 
         /// <summary>
         /// 创建Request对象

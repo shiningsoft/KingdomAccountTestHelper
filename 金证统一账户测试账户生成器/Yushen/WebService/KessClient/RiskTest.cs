@@ -6,9 +6,11 @@ using System.Threading.Tasks;
 
 namespace Yushen.WebService.KessClient
 {
-    class RiskTest
+    public class RiskTest
     {
         public List<RiskLevel> riskLevelList = new List<RiskLevel>();
+
+        public static string survey_sn = "1";
 
         public static string cols = "1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20";
 

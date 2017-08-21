@@ -397,7 +397,10 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 // 建立WebService连接
-                kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
 
                 if (kess.operatorLogin())
                 {
@@ -652,7 +655,33 @@ namespace 金证统一账户测试账户生成器
         private void syncSurveyAns2Kbss()
         {
             // 提交风险测评
-            bool result = kess.syncSurveyAns2Kbss(user, risk_level.SelectedValue.ToString());
+            string cols = Settings.Default.Cols;
+            string cells = "";
+            switch (risk_level.SelectedValue.ToString())
+            {
+                case "A":
+                    cells = Settings.Default.保守型;
+                    break;
+                case "B":
+                    cells = Settings.Default.谨慎型;
+                    break;
+                case "C":
+                    cells = Settings.Default.稳健型;
+                    break;
+                case "D":
+                    cells = Settings.Default.积极型;
+                    break;
+                case "E":
+                    cells = Settings.Default.激进型;
+                    break;
+
+                default:
+                    string message = "风险等级" + risk_level.SelectedValue.ToString() + "不存在";
+                    logger.Error(message);
+                    throw new Exception(message);
+            }
+
+            bool result = kess.syncSurveyAns2Kbss(user, cols, cells);
             if (result)
             {
                 resultForm.Append("提交风险测评成功");
@@ -774,14 +803,28 @@ namespace 金证统一账户测试账户生成器
 
         private void btnOpenLogFile_Click(object sender, EventArgs e)
         {
-            string path = Environment.CurrentDirectory + @"\logs\" + DateTime.Now.ToString("yyyy-MM-dd") + @".log";
-            System.Diagnostics.Process.Start(path);
+            try
+            {
+                string path = Environment.CurrentDirectory + @"\logs\" + DateTime.Now.ToString("yyyy-MM-dd") + @".log";
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         private void btnOpenLogFolder_Click(object sender, EventArgs e)
         {
-            string path = Environment.CurrentDirectory + @"\logs\";
-            System.Diagnostics.Process.Start(path);
+            try
+            {
+                string path = Environment.CurrentDirectory + @"\logs\";
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         private void 设置ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -873,8 +916,7 @@ namespace 金证统一账户测试账户生成器
             }
             
 
-            Image image;// 具体这张图是从文件读取还是从picturebox什么的获取你来指定
-            image = Resources.样本身份证反面;
+            Image image = Resources.样本身份证反面;
             using (Graphics g = Graphics.FromImage(image))
             {
                 g.DrawString(ID_ISS_AGCY, new Font("黑体", 13), Brushes.Black, new PointF(800, 860));
@@ -965,6 +1007,11 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
                 Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, tbxRequest.Text);
                 Response response = kess.invoke(request);
                 tbxResponse.Text = response.xml;

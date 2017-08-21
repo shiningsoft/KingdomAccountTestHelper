@@ -1,6 +1,7 @@
 ﻿using NLog;
 using System;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Threading;
 

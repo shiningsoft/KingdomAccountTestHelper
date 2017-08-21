@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Yushen.WebService.KessClient
 {
-    class RiskLevel
+    public class RiskLevel
     {
         private string _name;
         private string _value;

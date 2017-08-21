@@ -35,8 +35,8 @@ namespace Yushen.Util
         /// <summary>
         /// 超长字符串自动换行
         /// </summary>
-        /// <param name="str"></param>
-        /// <param name="letterNumber"></param>
+        /// <param name="str">需要换行的字符串</param>
+        /// <param name="letterNumber">每行字符数量</param>
         /// <returns></returns>
         public static string lineWarp(string str, int letterNumber)
         {

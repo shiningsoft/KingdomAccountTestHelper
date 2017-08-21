@@ -111,6 +111,7 @@
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="Yushen\Util\Formatter.cs" />
+    <Compile Include="Yushen\Util\ImageHelper.cs" />
     <Compile Include="Yushen\WebService\KessClient\Dict.cs" />
     <Compile Include="Yushen\WebService\KessClient\RiskLevel.cs" />
     <Compile Include="Customer.cs" />
@@ -145,6 +146,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="logo.ico" />
+    <Content Include="Yushen\WebService\KessClient\Xml\uploadImgStringNoBiz.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="Resources\样本身份证正面.jpg" />
     <None Include="Resources\样本身份证反面.jpg" />
     <Content Include="Yushen\WebService\KessClient\Xml\listStkPbuOrg.xml">

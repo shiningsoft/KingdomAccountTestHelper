@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+2.125 影像上传(无关联业务)，影像信息为用BASE64编码的字符串
+注：影像数据最大不能超过2M，否则账户系统报错并返回 且实际测试1MB的图片上传通常需要1秒左右，并发多可能会阻塞，建议非交易时间调用此接口
+需要两个参数，第二个参数img是将图片转化为byte[]再用BASE64编码的字符串。
+-->
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//影像类别021是正面免冠照，022身份证正反面，02c是银行卡照-->
+    <IMG_CLS>021</IMG_CLS>
+    <!--//用户代码-->
+    <USER_CODE></USER_CODE>
+    <!--//证件号码-->
+    <ID_CODE></ID_CODE>
+    <!--//内部机构(必填)-->
+    <INT_ORG></INT_ORG>
+    <!--//现场采集标志-->
+    <GATHER_FLAG></GATHER_FLAG>
+    <!--//审核标志0不审，1审核-->
+    <AUDIT_FLAG></AUDIT_FLAG>
+    <!--//影像编码（第一次上传影像，必须填写字符串”null”，其它情况必须传对应的编码）-->
+    <IMG_SN></IMG_SN>
+  </data>
+</request>

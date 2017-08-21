@@ -233,10 +233,11 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 同步风险测评答案到统一账户系统
         /// </summary>
-        /// <param name="user"></param>
-        /// <param name="riskLevel"></param>
+        /// <param name="user">用户信息对象</param>
+        /// <param name="SURVEY_COLS">问题序号列字符串</param>
+        /// <param name="SURVEY_CELLS">答案序号列字符串</param>
         /// <returns></returns>
-        public bool syncSurveyAns2Kbss(User user, string riskLevel)
+        public bool syncSurveyAns2Kbss(User user, string SURVEY_COLS, string SURVEY_CELLS, string SURVEY_SN="1")
         {
             // 前置条件判断
             if (user.cust_code == "")
@@ -249,34 +250,9 @@ namespace Yushen.WebService.KessClient
             // 初始化请求
             Request request = new Request(this.operatorId, "syncSurveyAns2Kbss");
             request.setAttr("USER_CODE", user.cust_code);    // 客户名称
-            request.setAttr("SURVEY_SN", "1");
-            request.setAttr("SURVEY_COLS", RiskTest.cols);
-
-            string cells="";
-            switch (riskLevel)
-            {
-                case "A":
-                    cells = RiskTest.cells_A;
-                    break;
-                case "B":
-                    cells = RiskTest.cells_B;
-                    break;
-                case "C":
-                    cells = RiskTest.cells_C;
-                    break;
-                case "D":
-                    cells = RiskTest.cells_D;
-                    break;
-                case "E":
-                    cells = RiskTest.cells_E;
-                    break;
-
-                default:
-                    string message = "风险等级" + riskLevel + "不存在";
-                    logger.Error(message);
-                    throw new Exception(message);
-            }
-            request.setAttr("SURVEY_CELLS", cells);
+            request.setAttr("SURVEY_SN", SURVEY_SN);
+            request.setAttr("SURVEY_COLS", SURVEY_COLS);
+            request.setAttr("SURVEY_CELLS", SURVEY_CELLS);
 
             // 调用WebService获取返回值
             Response response = this.invoke(request);
@@ -626,7 +602,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public Response queryCYB(string TRDACCT, int timeout = 30) // TODO:: 测试入参只保留深圳A股账号是否可行？
+        public Response queryCYB(string TRDACCT, int timeout = 30)
         {
             // 前置条件判断
             if (TRDACCT == "")

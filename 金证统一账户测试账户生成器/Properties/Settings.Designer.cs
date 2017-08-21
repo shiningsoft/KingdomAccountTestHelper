@@ -94,5 +94,89 @@ namespace 金证统一账户测试账户生成器.Properties {
                 this["开户营业部"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|16|17|18|19|20")]
+        public string Cols {
+            get {
+                return ((string)(this["Cols"]));
+            }
+            set {
+                this["Cols"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5|5|4|1|4|1|1|1|1|5|1|1|1|1|1|5|5|3|1|5")]
+        public string 保守型 {
+            get {
+                return ((string)(this["保守型"]));
+            }
+            set {
+                this["保守型"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5|5|1|1|4|1|1|1|1|5|1|1|1|1|1|1|1|3|3|5")]
+        public string 谨慎型 {
+            get {
+                return ((string)(this["谨慎型"]));
+            }
+            set {
+                this["谨慎型"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2|2|2|2|2|2|2|2|2|2|2|2|2|2|2|2|3|2|2|2")]
+        public string 稳健型 {
+            get {
+                return ((string)(this["稳健型"]));
+            }
+            set {
+                this["稳健型"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("2|2|1|2|1|3|3|4|2|4|3|5|4|4|4|1|1|1|3|4")]
+        public string 积极型 {
+            get {
+                return ((string)(this["积极型"]));
+            }
+            set {
+                this["积极型"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1|5|1|2|3|4|3|2|5|3|3|4|4|4|3|1|1|1|3|1")]
+        public string 激进型 {
+            get {
+                return ((string)(this["激进型"]));
+            }
+            set {
+                this["激进型"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1")]
+        public string SURVEY_SN {
+            get {
+                return ((string)(this["SURVEY_SN"]));
+            }
+            set {
+                this["SURVEY_SN"] = value;
+            }
+        }
     }
 }
