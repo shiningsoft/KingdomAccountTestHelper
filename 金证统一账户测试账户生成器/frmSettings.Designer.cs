@@ -46,6 +46,8 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpNormal = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbxSurveySN = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.btnResetRiskSettings = new System.Windows.Forms.Button();
             this.tbxCellsE = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -59,8 +61,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbxCols = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbxSurveySN = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpNormal.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -255,6 +255,23 @@
             this.tabPage2.Text = "风险测评";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // tbxSurveySN
+            // 
+            this.tbxSurveySN.Location = new System.Drawing.Point(137, 13);
+            this.tbxSurveySN.Name = "tbxSurveySN";
+            this.tbxSurveySN.Size = new System.Drawing.Size(458, 21);
+            this.tbxSurveySN.TabIndex = 0;
+            this.tbxSurveySN.Text = "1";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(30, 16);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(101, 12);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "问卷序号（SN）：";
+            // 
             // btnResetRiskSettings
             // 
             this.btnResetRiskSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -362,23 +379,6 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "题目序列（Cols）：";
             // 
-            // tbxSurveySN
-            // 
-            this.tbxSurveySN.Location = new System.Drawing.Point(137, 13);
-            this.tbxSurveySN.Name = "tbxSurveySN";
-            this.tbxSurveySN.Size = new System.Drawing.Size(458, 21);
-            this.tbxSurveySN.TabIndex = 0;
-            this.tbxSurveySN.Text = "1";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(30, 16);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(101, 12);
-            this.label14.TabIndex = 21;
-            this.label14.Text = "问卷序号（SN）：";
-            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -388,6 +388,7 @@
             this.Controls.Add(this.accept);
             this.Controls.Add(this.cancel);
             this.Name = "frmSettings";
+            this.ShowIcon = false;
             this.Text = "设置";
             this.Load += new System.EventHandler(this.frmSettings_Load);
             this.tabControl1.ResumeLayout(false);
