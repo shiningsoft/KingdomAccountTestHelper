@@ -48,7 +48,7 @@ namespace 金证统一账户测试账户生成器
             this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPageGetDict = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnQueryDict = new System.Windows.Forms.Button();
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -102,7 +102,7 @@ namespace 金证统一账户测试账户生成器
             this.label15 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnRecreateUserinfo = new System.Windows.Forms.Button();
             this.id_exp_date = new System.Windows.Forms.DateTimePicker();
             this.id_beg_date = new System.Windows.Forms.DateTimePicker();
             this.label13 = new System.Windows.Forms.Label();
@@ -198,14 +198,14 @@ namespace 金证统一账户测试账户生成器
             // 关于ToolStripMenuItem1
             // 
             this.关于ToolStripMenuItem1.Name = "关于ToolStripMenuItem1";
-            this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
             this.关于ToolStripMenuItem1.Text = "关于";
             this.关于ToolStripMenuItem1.Click += new System.EventHandler(this.关于ToolStripMenuItem1_Click);
             // 
             // tabPageGetDict
             // 
             this.tabPageGetDict.Controls.Add(this.dataGridView1);
-            this.tabPageGetDict.Controls.Add(this.button2);
+            this.tabPageGetDict.Controls.Add(this.btnQueryDict);
             this.tabPageGetDict.Controls.Add(this.dictName);
             this.tabPageGetDict.Controls.Add(this.label14);
             this.tabPageGetDict.Location = new System.Drawing.Point(4, 22);
@@ -233,15 +233,15 @@ namespace 金证统一账户测试账户生成器
             this.dataGridView1.Size = new System.Drawing.Size(905, 413);
             this.dataGridView1.TabIndex = 12;
             // 
-            // button2
+            // btnQueryDict
             // 
-            this.button2.Location = new System.Drawing.Point(346, 6);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(100, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "查询";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnQueryDict.Location = new System.Drawing.Point(346, 6);
+            this.btnQueryDict.Name = "btnQueryDict";
+            this.btnQueryDict.Size = new System.Drawing.Size(100, 23);
+            this.btnQueryDict.TabIndex = 11;
+            this.btnQueryDict.Text = "查询";
+            this.btnQueryDict.UseVisualStyleBackColor = true;
+            this.btnQueryDict.Click += new System.EventHandler(this.btnQueryDict_Click);
             // 
             // dictName
             // 
@@ -312,7 +312,7 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.password);
-            this.tabPage1.Controls.Add(this.button3);
+            this.tabPage1.Controls.Add(this.btnRecreateUserinfo);
             this.tabPage1.Controls.Add(this.id_exp_date);
             this.tabPage1.Controls.Add(this.id_beg_date);
             this.tabPage1.Controls.Add(this.label13);
@@ -717,7 +717,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenSHAStkAcct.TabIndex = 46;
             this.btnOpenSHAStkAcct.Text = "新开";
             this.btnOpenSHAStkAcct.UseVisualStyleBackColor = true;
-            this.btnOpenSHAStkAcct.Click += new System.EventHandler(this.btnOpenStockAccount_Click);
+            this.btnOpenSHAStkAcct.Click += new System.EventHandler(this.btnOpenSHAStkAcct_Click);
             // 
             // btnQueryStockAccount
             // 
@@ -816,15 +816,15 @@ namespace 金证统一账户测试账户生成器
             this.password.TabIndex = 33;
             this.password.Text = "111111";
             // 
-            // button3
+            // btnRecreateUserinfo
             // 
-            this.button3.Location = new System.Drawing.Point(812, 10);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(100, 23);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "重新生成客户";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnRecreateUserinfo.Location = new System.Drawing.Point(812, 10);
+            this.btnRecreateUserinfo.Name = "btnRecreateUserinfo";
+            this.btnRecreateUserinfo.Size = new System.Drawing.Size(100, 23);
+            this.btnRecreateUserinfo.TabIndex = 32;
+            this.btnRecreateUserinfo.Text = "重新生成客户";
+            this.btnRecreateUserinfo.UseVisualStyleBackColor = true;
+            this.btnRecreateUserinfo.Click += new System.EventHandler(this.btnRecreateUserinfo_Click);
             // 
             // id_exp_date
             // 
@@ -1238,11 +1238,11 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
         private System.Windows.Forms.TabPage tabPageGetDict;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnQueryDict;
         private System.Windows.Forms.TextBox dictName;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnRecreateUserinfo;
         private System.Windows.Forms.DateTimePicker id_exp_date;
         private System.Windows.Forms.DateTimePicker id_beg_date;
         private System.Windows.Forms.Label label13;

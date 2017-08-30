@@ -59,16 +59,13 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        async private void button2_Click(object sender, EventArgs e)
+        async private void btnQueryDict_Click(object sender, EventArgs e)
         {
+            btnQueryDict.Enabled = false;
+
             try
             {
                 dictName.Text = dictName.Text.ToUpper().Trim();
-                // 建立WebService连接
-                if (kess == null)
-                {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-                }
 
                 try
                 {
@@ -95,6 +92,8 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append(ex.Message);
             }
+
+            btnQueryDict.Enabled = true;
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -249,69 +248,59 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnRecreateUserinfo_Click(object sender, EventArgs e)
         {
+            btnRecreateUserinfo.Enabled = false;
+
             reCreateUserInfo();
+
+            btnRecreateUserinfo.Enabled = true;
         }
 
         private async void btnBankSign_Click(object sender, EventArgs e)
         {
+            btnBankSign.Enabled = false;
             try
             {
-                // 建立WebService连接
-                if (kess == null)
-                {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-                }
-
                 await signBank(bank_code.SelectedValue.ToString());
             }
             catch (Exception ex)
             {
                 resultForm.Append("预指定失败：" + ex.Message);
             }
+            btnBankSign.Enabled = true;
         }
 
         private async void btnSubmitRiskTest_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
+            btnSubmitRiskTest.Enabled = false;
 
             try
             {
-                // 建立WebService连接
-                if (kess == null)
-                {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-                }
-
                 await syncSurveyAns2Kbss(risk_level.SelectedValue.ToString());
-
             }
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
             }
+
+            btnSubmitRiskTest.Enabled = true;
         }
 
         private async void btnSetPassword_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
+            btnSetPassword.Enabled = false;
 
             try
             {
-                // 建立WebService连接
-                if (kess == null)
-                {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-                }
-
                 await mdfUserPassword();
-
             }
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
             }
+
+            btnSetPassword.Enabled = true;
         }
 
         /// <summary>
@@ -321,90 +310,68 @@ namespace 金证统一账户测试账户生成器
         /// <param name="e"></param>
         private async void btnOpenCuacct_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
+            btnOpenCuacct.Enabled = false;
 
             try
             {
-                // 建立WebService连接
-                if (kess == null)
-                {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-                }
-
                 await openCuacctCode();
             }
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
             }
+
+            btnOpenCuacct.Enabled = true;
         }
 
         private async void btnOpenYMT_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
+            btnOpenYMT.Enabled = false;
 
             try
             {
-                // 建立WebService连接
-                if (kess == null)
-                {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-                }
-
                 await openYMTCode();
-
             }
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
             }
+
+            btnOpenYMT.Enabled = true;
         }
 
-        private async void btnOpenStockAccount_Click(object sender, EventArgs e)
+        private async void btnOpenSHAStkAcct_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
-
+            btnOpenSHAStkAcct.Enabled = false;
             try
             {
-                // 建立WebService连接
-                if (kess == null)
-                {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-                }
-
                 await openSHACode();
-
             }
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
             }
+            btnOpenSHAStkAcct.Enabled = true;
         }
 
         private async void btnQueryStockAccount_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
-
+            btnQueryStockAccount.Enabled = false;
             try
             {
-                // 建立WebService连接
-                if (kess == null)
-                {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-                }
-
                 saveUserInfo();
                 Response response = await kess.queryStkAcct(user);
                 resultForm.Append("该客户有" + response.length.ToString() + "个股东卡号");
                 foreach (DataRow ds in response.DataSet.Tables["row"].Rows)
                 {
-                    // resultForm.Append("该客户有" + response.length.ToString() + "个股东卡号");
+                    // TODO: 显示股东账户信息，卡号、市场、状态等
                 }
             }
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
             }
+            btnQueryStockAccount.Enabled = true;
         }
 
         private async void btnLogin_Click(object sender, EventArgs e)
@@ -451,6 +418,7 @@ namespace 金证统一账户测试账户生成器
 
         private async void btnOpenCYB_Click(object sender, EventArgs e)
         {
+            btnOpenCYB.Enabled = false;
             try
             {
                 // 建立WebService连接
@@ -468,11 +436,12 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("创业板开通失败：" + ex.Message);
             }
+            btnOpenCYB.Enabled = true;
         }
 
         private async void btnValidateId_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
+            btnValidateId.Enabled = false;
 
             try
             {
@@ -498,12 +467,13 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append(ex.Message);
             }
+
+            btnValidateId.Enabled = true;
         }
 
         private async void btnOpenSZAStkAcct_Click(object sender, EventArgs e)
         {
-
-            resultForm.Show();
+            btnOpenSZAStkAcct.Enabled = false;
 
             try
             {
@@ -520,11 +490,13 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append(ex.Message);
             }
+
+            btnOpenSZAStkAcct.Enabled = true;
         }
 
         private async void btnRegisterSZAStkAcct_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
+            btnRegisterSZAStkAcct.Enabled = false;
             try
             {
                 // 建立WebService连接
@@ -540,20 +512,23 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("股东账号加挂失败：" + ex.Message);
             }
+            btnRegisterSZAStkAcct.Enabled = true;
         }
 
-        private void btnOpenAccountByOneClick_Click(object sender, EventArgs e)
+        private async void btnOpenAccountByOneClick_Click(object sender, EventArgs e)
         {
-            openAllAccount();
+            btnOpenAccountByOneClick.Enabled = false;
+
+            await openAllAccount();
+
+            btnOpenAccountByOneClick.Enabled = true;
         }
 
         /// <summary>
         /// 一次性开立所有账户
         /// </summary>
-        async private void openAllAccount()
+        async private Task openAllAccount()
         {
-            resultForm.Show();
-
             try
             {
                 // 建立WebService连接
@@ -793,7 +768,7 @@ namespace 金证统一账户测试账户生成器
 
         private async void btnQueryCYB_Click(object sender, EventArgs e)
         {
-            resultForm.Show();
+            btnQueryCYB.Enabled = false;
             try
             {
                 // 建立WebService连接
@@ -817,6 +792,7 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("创业板查询失败：" + ex.Message);
             }
+            btnQueryCYB.Enabled = true;
         }
 
         private void btnOpenLogFile_Click(object sender, EventArgs e)
@@ -973,6 +949,8 @@ namespace 金证统一账户测试账户生成器
 
         async private void btnOpenUserCode_Click(object sender, EventArgs e)
         {
+            btnOpenUserCode.Enabled = false;
+
             try
             {
                 // 建立WebService连接
@@ -989,10 +967,14 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append(ex.Message);
             }
+
+            btnOpenUserCode.Enabled = true;
         }
 
         private async void btnBindSHAcct_Click(object sender, EventArgs e)
         {
+            btnBindSHAcct.Enabled = false;
+
             try
             {
                 await bindSHAcct();
@@ -1001,6 +983,8 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("上海证券账户" + user.shacct + "指定交易失败：" + ex.Message);
             }
+
+            btnBindSHAcct.Enabled = true;
         }
 
         private void cbxShortIdNo_CheckedChanged(object sender, EventArgs e)
