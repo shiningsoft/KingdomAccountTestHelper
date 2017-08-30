@@ -725,7 +725,7 @@ namespace 金证统一账户测试账户生成器
             this.btnQueryStockAccount.Name = "btnQueryStockAccount";
             this.btnQueryStockAccount.Size = new System.Drawing.Size(100, 23);
             this.btnQueryStockAccount.TabIndex = 45;
-            this.btnQueryStockAccount.Text = "股东账户查询";
+            this.btnQueryStockAccount.Text = "证券账户查询";
             this.btnQueryStockAccount.UseVisualStyleBackColor = true;
             this.btnQueryStockAccount.Click += new System.EventHandler(this.btnQueryStockAccount_Click);
             // 

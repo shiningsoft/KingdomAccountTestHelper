@@ -361,10 +361,24 @@ namespace 金证统一账户测试账户生成器
             {
                 saveUserInfo();
                 Response response = await kess.queryStkAcct(user);
-                resultForm.Append("该客户有" + response.length.ToString() + "个股东卡号");
-                foreach (DataRow ds in response.DataSet.Tables["row"].Rows)
+                resultForm.Append("该客户有" + response.length.ToString() + "个证券账户");
+
+                if (response.length > 0)
                 {
-                    // TODO: 显示股东账户信息，卡号、市场、状态等
+                    // 显示所有股东账户的信息，包括卡号、市场、状态等
+                    Dict.ACCT_TYPE acctTypeList = new Dict.ACCT_TYPE();
+                    Dict.ACCT_STATUS acctStatusList = new Dict.ACCT_STATUS();
+                    foreach (DataRow ds in response.DataSet.Tables["row"].Rows)
+                    {
+                        string acctType = acctTypeList.getNameByValue(ds["ACCT_TYPE"].ToString());
+                        // string status = acctStatusList.getNameByValue(ds["ACCT_STATUS"].ToString());
+
+                        resultForm.Append(
+                            acctType + "：" + ds["TRDACCT"].ToString() + 
+                            "，状态：" + ds["ACCT_STATUS"].ToString() + 
+                            "，一码通号：" + ds["YMT_CODE"].ToString()
+                        );
+                    }
                 }
             }
             catch (Exception ex)

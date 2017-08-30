@@ -82,6 +82,20 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 
+    /// </summary>
+    class ACCT_STATUS : Dict
+    {
+        public const string 正常 = "00";
+        public const string 挂失 = "01";
+        public const string 冻结 = "02";
+        public const string 休眠 = "03";
+        public const string 注销 = "04";
+        public const string 禁买 = "05";
+        public const string 禁卖 = "06";
+    }
+
+    /// <summary>
     /// 操作类型
     /// 用于中登业务,一般情况都送0（增加）
     /// </summary>
