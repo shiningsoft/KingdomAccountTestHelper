@@ -198,40 +198,55 @@ namespace 金证统一账户测试账户生成器
             bank_code.SelectedValue = Dict.BankCode.工商银行;
             cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
 
-            saveUserInfo();
+            try
+            {
+                saveUserInfo();
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         /// <summary>
         /// 保存当前用户信息到User对象
         /// </summary>
-        private void saveUserInfo()
+        private bool saveUserInfo()
         {
-            user = new User();
-            user.user_type = Dict.USER_TYPE.个人;
-            user.user_name = user_name.Text.Trim();
-            user.user_fname = user_name.Text.Trim();
-            user.id_type = Dict.ID_TYPE.身份证;
-            user.id_code = id_code.Text.Trim();
-            user.id_addr = id_addr.Text.Trim();
-            user.id_iss_agcy = id_iss_agcy.Text.Trim();
-            user.id_beg_date = id_beg_date.Text.Trim();
-            user.id_exp_date = id_exp_date.Text.Trim();
-            user.linktel_order = Dict.LINKTEL_ORDER.手机;
-            user.linkaddr_order = Dict.LINKADDR_ORDER.家庭地址;
-            user.address = id_addr.Text.Trim();
-            user.citizenship = citizenship.SelectedValue.ToString();
-            user.nationality = nationality.SelectedValue.ToString();
-            user.password = password.Text.Trim();
-            user.mobile_tel = mobile_tel.Text.Trim();
-            user.occu_type = occu_type.SelectedValue.ToString();
-            user.education = education.SelectedValue.ToString();
-            user.bank_code = bank_code.SelectedValue.ToString();
-            user.zip_code = zip_code.Text.Trim();
-            user.sex = sex.SelectedValue.ToString();
-            user.int_org = Settings.Default.开户营业部;
-            user.cust_cls = Dict.CUST_CLS.标准客户;
-            user.cust_type = Dict.CUST_TYPE.普通;
-            user.channels = Dict.CHANNEL.柜台系统 + Dict.CHANNEL.电话委托 + Dict.CHANNEL.网上委托 + Dict.CHANNEL.手机炒股;
+            try
+            {
+                user = new User();
+                user.user_type = Dict.USER_TYPE.个人;
+                user.user_name = user_name.Text.Trim();
+                user.user_fname = user_name.Text.Trim();
+                user.id_type = Dict.ID_TYPE.身份证;
+                user.id_code = id_code.Text.Trim();
+                user.id_addr = id_addr.Text.Trim();
+                user.id_iss_agcy = id_iss_agcy.Text.Trim();
+                user.id_beg_date = id_beg_date.Text.Trim();
+                user.id_exp_date = id_exp_date.Text.Trim();
+                user.linktel_order = Dict.LINKTEL_ORDER.手机;
+                user.linkaddr_order = Dict.LINKADDR_ORDER.家庭地址;
+                user.address = id_addr.Text.Trim();
+                user.citizenship = citizenship.SelectedValue.ToString();
+                user.nationality = nationality.SelectedValue.ToString();
+                user.password = password.Text.Trim();
+                user.mobile_tel = mobile_tel.Text.Trim();
+                user.occu_type = occu_type.SelectedValue.ToString();
+                user.education = education.SelectedValue.ToString();
+                user.bank_code = bank_code.SelectedValue.ToString();
+                user.zip_code = zip_code.Text.Trim();
+                user.sex = sex.SelectedValue.ToString();
+                user.int_org = Settings.Default.开户营业部;
+                user.cust_cls = Dict.CUST_CLS.标准客户;
+                user.cust_type = Dict.CUST_TYPE.普通;
+                user.channels = Dict.CHANNEL.柜台系统 + Dict.CHANNEL.电话委托 + Dict.CHANNEL.网上委托 + Dict.CHANNEL.手机炒股;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("保存用户信息失败：" + ex.Message);
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -845,19 +860,32 @@ namespace 金证统一账户测试账户生成器
 
         private void btnCreateIDCardImg_Click(object sender, EventArgs e)
         {
-            if (id_code.Text.Length != 18)
+            try
             {
-                resultForm.Append("只支持生成18位身份证的正面照。");
-                return;
+                if (id_code.Text.Length != 18)
+                {
+                    throw new Exception("只支持生成18位身份证的正面照。");
+                }
+                saveUserInfo();
+                createIdCardImgFaceSide(user.user_name, user.sex, user.nationality, user.birthday, user.id_addr, user.id_code);
             }
-            saveUserInfo();
-            createIdCardImgFaceSide(user.user_name, user.sex, user.nationality, user.birthday, user.id_addr, user.id_code);
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         private void btnCreateIDCardImgBackSide_Click(object sender, EventArgs e)
         {
-            saveUserInfo();
-            createIdCardImgBackSide(user.id_iss_agcy, user.id_beg_date, user.id_exp_date);
+            try
+            {
+                saveUserInfo();
+                createIdCardImgBackSide(user.id_iss_agcy, user.id_beg_date, user.id_exp_date);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         /// <summary>
@@ -945,18 +973,22 @@ namespace 金证统一账户测试账户生成器
 
         async private void btnOpenUserCode_Click(object sender, EventArgs e)
         {
-            resultForm.Clear();
-            resultForm.Show();
-
-            // 建立WebService连接
-            if (kess == null)
+            try
             {
-                kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                // 建立WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
+
+                saveUserInfo();
+
+                await openCustCode();
             }
-
-            saveUserInfo();
-
-            await openCustCode();
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
 
         private async void btnBindSHAcct_Click(object sender, EventArgs e)
@@ -973,19 +1005,26 @@ namespace 金证统一账户测试账户生成器
 
         private void cbxShortIdNo_CheckedChanged(object sender, EventArgs e)
         {
-            if (cbxShortIdNo.Checked)
+            try
             {
-                if (id_code.Text.Length == 18)
+                if (cbxShortIdNo.Checked)
                 {
-                    id_code.Text = IDCardNumber.per18To15(id_code.Text);
+                    if (id_code.Text.Length == 18)
+                    {
+                        id_code.Text = IDCardNumber.per18To15(id_code.Text);
+                    }
+                }
+                else
+                {
+                    if (id_code.Text.Length == 15)
+                    {
+                        id_code.Text = IDCardNumber.per15To18(id_code.Text);
+                    }
                 }
             }
-            else
+            catch (Exception ex)
             {
-                if (id_code.Text.Length == 15)
-                {
-                    id_code.Text = IDCardNumber.per15To18(id_code.Text);
-                }
+                resultForm.Append(ex.Message);
             }
         }
 

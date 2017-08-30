@@ -454,7 +454,7 @@ namespace Yushen.WebService.KessClient
             while (result == false)
             {
                 // 延时处理
-                Thread.Sleep(sleepInterval);
+                await Task.Delay(sleepInterval);
 
                 // 计算是否超时
                 currentCostTime += sleepInterval;

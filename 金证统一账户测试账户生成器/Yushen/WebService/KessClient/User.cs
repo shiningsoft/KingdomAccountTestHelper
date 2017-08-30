@@ -127,12 +127,16 @@ namespace Yushen.WebService.KessClient
             {
                 if (id_type == null)
                 {
-                    throwException("设置证件号码之前必须先设置证件类别");
+                    string message = "设置证件号码之前必须先设置证件类别";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
 
                 if (id_type == "00" && !Validator.IsIDCard(value))
                 {
-                    throwException(value.ToString() + "身份证格式不正确");
+                    string message = value.ToString() + "身份证格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
 
                 if (id_type == "00" && value.Length == 18)
@@ -203,7 +207,9 @@ namespace Yushen.WebService.KessClient
             {
                 if (!Validator.IsInteger(value))
                 {
-                    throwException(value.ToString() + "证件有效日期格式不正确");
+                    string message = value.ToString() + "证件有效日期格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
                 _id_exp_date = value;
             }
@@ -302,7 +308,9 @@ namespace Yushen.WebService.KessClient
             {
                 if (!Validator.IsInteger(value))
                 {
-                    throwException(value.ToString() + "证件开始日期格式不正确");
+                    string message = value.ToString() + "证件开始日期格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
                 _id_beg_date = value;
             }
@@ -325,7 +333,9 @@ namespace Yushen.WebService.KessClient
             {
                 if (!Validator.IsPostalcode(value))
                 {
-                    throwException(value.ToString() + "证件邮编格式不正确");
+                    string message = value.ToString() + "证件邮编格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
                 _id_zip_code = value;
             }
@@ -367,7 +377,9 @@ namespace Yushen.WebService.KessClient
             {
                 if (!Validator.IsPostalcode(value))
                 {
-                    throwException(value.ToString() + "邮政编码格式不正确");
+                    string message = value.ToString() + "邮政编码格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
                 _zip_code = value;
             }
@@ -409,7 +421,9 @@ namespace Yushen.WebService.KessClient
             {
                 if (!Validator.IsTelephone(value))
                 {
-                    throwException(value.ToString() + "联系电话格式不正确");
+                    string message = value.ToString() + "联系电话格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
                 _tel = value;
             }
@@ -432,7 +446,9 @@ namespace Yushen.WebService.KessClient
             {
                 if (!Validator.IsFax(value))
                 {
-                    throwException(value.ToString() + "传真电话格式不正确");
+                    string message = value.ToString() + "传真电话格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
                 _fax = value;
             }
@@ -455,7 +471,9 @@ namespace Yushen.WebService.KessClient
             {
                 if (!Validator.IsEmail(value))
                 {
-                    throwException(value.ToString() + "电子邮箱格式不正确");
+                    string message = value.ToString() + "电子邮箱格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
                 _email = value;
             }
@@ -478,7 +496,9 @@ namespace Yushen.WebService.KessClient
             {
                 if (!Validator.IsMobile(value))
                 {
-                    throwException(value.ToString() + "手机号格式不正确");
+                    string message = value.ToString() + "手机号格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
                 _mobile_tel = value;
             }
@@ -578,7 +598,9 @@ namespace Yushen.WebService.KessClient
             {
                 if (!Validator.IsInteger(value))
                 {
-                    throwException(value.ToString() + "出生日期格式不正确");
+                    string message = value.ToString() + "出生日期格式不正确";
+                    logger.Error(message);
+                    throw new Exception(message);
                 }
                 _birthday = value;
             }
@@ -1673,38 +1695,6 @@ namespace Yushen.WebService.KessClient
         /// 日志记录器
         /// </summary>
         protected static Logger logger = LogManager.GetCurrentClassLogger();
-
-        protected void throwException(string message)
-        {
-            logger.Error(message);
-            throw new Exception(message);
-        }
-
-        /// <summary>
-        /// 开立客户号
-        /// </summary>
-        //public void createCustomerCode()
-        //{
-        //    Response response;
-        //    response = new Response(kess.getUserInfoById(id_code));
-        //    if (response.length == 0 || kess.getSingleCommonParamValue("OPEN_CUST_CHECK_ID_FLAG") == "1")
-        //    {
-        //        response = kess.openCustomer(user_name, id_code, id_iss_agcy, id_beg_date, id_exp_date, citizenship, nationality);
-        //        this.user_code = response.getSingleNodeText("/response/record/row/USER_CODE");
-        //    }
-        //    else
-        //    {
-        //        throwException("系统不允许同一证件开多个客户代码");
-        //    }
-        //}
-
-        /// <summary>
-        /// 开资金账号
-        /// </summary>
-        //public void createCuacctCode()
-        //{
-        //    Response response;
-        //    // response = new Response(kess.qu);
-        //}
+        
     }
 }
