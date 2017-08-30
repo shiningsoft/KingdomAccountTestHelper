@@ -4,6 +4,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Threading;
+using System.Threading.Tasks;
 
 namespace Yushen.WebService.KessClient
 {
@@ -56,6 +57,26 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
+        /// <summary>
+        /// 创建WebService实例
+        /// </summary>
+        private void CreateInstance()
+        {
+            // 创建实例
+            if (this.kessClient == null)
+            {
+                // 利用反射建立WebService的实例
+                this.kessClientType = Type.GetType(this.kessClassName);
+                this.kessClient = Activator.CreateInstance(this.kessClientType, new object[] { "KessService", this.kessWebserviceURL });
+
+                if (this.kessClient == null)
+                {
+                    string message = "WebService连接失败：" + this.kessWebserviceURL;
+                    logger.Error(message);
+                    throw new Exception(message);
+                }
+            }
+        }
 
         /// <summary>
         /// 报送中登业务，并查询返回结果
@@ -108,7 +129,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="NEW_ID_CODE">新证件号码（非必输）</param>
         /// <param name="timeout">超时时间</param>
         /// <returns>业务流水号</returns>
-        private string submitStkAcctBizOpReq2NewZD(
+        async private Task<string> submitStkAcctBizOpReq2NewZD(
                     string OPERATOR_TYPE,
                     string ACCTBIZ_EXCODE,
                     string YMT_CODE = "",
@@ -218,7 +239,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("NEW_ID_CODE", NEW_ID_CODE);
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -256,7 +277,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="CITIZENSHIP">国籍（非必传）DD[CITIZENSHIP]</param>
         /// <param name="REMARK">备用字段（非必传）</param>
         /// <returns></returns>
-        private Response openStkAcctByNewZD(
+        async private Task<Response> openStkAcctByNewZD(
                 string OPEN_TYPE,
                 string NEW_OPEN_FLAG,
                 string USER_TYPE,
@@ -302,7 +323,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "0" && response.flag != "1")
@@ -325,7 +346,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="TRDACCT"></param>
         /// <param name="TRDACCT_NAME"></param>
         /// <returns></returns>
-        private bool openStkTrdAcct(User user, string STKBD = "", string TRDACCT = "", string TRDACCT_NAME = "")
+        async private Task<bool> openStkTrdAcct(User user, string STKBD = "", string TRDACCT = "", string TRDACCT_NAME = "")
         {
             // 前置条件判断
             if (user.cust_code == "")
@@ -364,7 +385,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -394,7 +415,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="timeout">超时时间，单位：秒</param>
         /// <param name="interval">每次轮询的间隔时间，单位：秒</param>
         /// <returns></returns>
-        private Response searchStkAcctBizInfo(
+        async private Task<Response> searchStkAcctBizInfo(
             string SERIAL_NO, 
             string ACCTBIZ_EXCODE = "", 
             string ACCT_TYPE = "", 
@@ -443,7 +464,7 @@ namespace Yushen.WebService.KessClient
                 }
 
                 // 调用WebService获取返回值
-                response = this.invoke(request);
+                response = await this.invoke(request);
 
                 // 判断返回的操作结果是否异常
                 if (response.flag != "1")
@@ -478,7 +499,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="SERIAL_NO"></param>
         /// <returns></returns>
-        private Response searchStkAcctBizInfoEx(
+        async private Task<Response> searchStkAcctBizInfoEx(
            string SERIAL_NO
         )
         {
@@ -495,7 +516,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("SERIAL_NO", SERIAL_NO);
             
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
                 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -514,7 +535,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        private Response openCustomer(User user)
+        async private Task<Response> openCustomer(User user)
         {
             Request request = new Request(this.operatorId, "openCustomer");
             request.setAttr("USER_NAME", user.user_name); // 客户名称（必传）
@@ -594,7 +615,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("EMAIL_CHK_FLAG", user.email_chk_flag); // 邮箱校验标识（非必传）
             request.setAttr("FIN_EDU_FLAG", user.fin_edu_flag); // 金融相关专业学历校验标识（非必传）
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -617,7 +638,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="FUND_TYPE">帐户类型（非必传）</param>
         /// <param name="OP_REMARK">备注信息（非必传）</param>
         /// <returns></returns>
-        private Response openCuacct(string USER_CODE, string CUACCT_CLS="z",string CUACCT_LVL="0",string CUACCT_GRP="0",string CURRENCY = "0",string INT_ORG="",string CUACCT_CODE="",string FUND_TYPE="",string OP_REMARK="")
+        async private Task<Response> openCuacct(string USER_CODE, string CUACCT_CLS="z",string CUACCT_LVL="0",string CUACCT_GRP="0",string CURRENCY = "0",string INT_ORG="",string CUACCT_CODE="",string FUND_TYPE="",string OP_REMARK="")
         {
             Request request = new Request(this.operatorId, "openCuacct");
             request.setAttr("USER_CODE", USER_CODE);
@@ -630,7 +651,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("FUND_TYPE", FUND_TYPE);
             request.setAttr("OP_REMARK", OP_REMARK);
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -657,7 +678,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="CUBSB_TYPE">银证业务类型DD[CUBSB_TYPE]</param>
         /// <param name="CURRENCY"></param>
         /// <returns></returns>
-        private Response cubsbScOpenAcctOneStep( string CUST_CODE, string CUACCT_CODE,string BANK_ACCT_CODE, string EXT_ORG="",string BANK_ACCT="",string BANK_AUTH_DATA="", string FUND_AUTH_DATA = "", string SERIAL_NO="", string SMS_NO="", string OP_TYPE = "0", string CUBSB_TYPE = "16", string CURRENCY = "0")
+        async private Task<Response> cubsbScOpenAcctOneStep( string CUST_CODE, string CUACCT_CODE,string BANK_ACCT_CODE, string EXT_ORG="",string BANK_ACCT="",string BANK_AUTH_DATA="", string FUND_AUTH_DATA = "", string SERIAL_NO="", string SMS_NO="", string OP_TYPE = "0", string CUBSB_TYPE = "16", string CURRENCY = "0")
         {
             Request request = new Request(this.operatorId, "cubsbScOpenAcct");
             request.setAttr("OP_TYPE", "0");
@@ -673,7 +694,7 @@ namespace Yushen.WebService.KessClient
             //request.setAttr("SMS_NO", SMS_NO);
             request.setAttr("CUBSB_TYPE", "16"); // 券商发起-银证开户
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -694,12 +715,12 @@ namespace Yushen.WebService.KessClient
         /// <param name="EXT_ORG"></param>
         /// <param name="INT_ORG"></param>
         /// <returns></returns>
-        private Response getCubsbLog(string SERIAL_NO,string OCCUR_DATE,string CURRENCY, string CUACCT_CODE,string EXT_ORG,string INT_ORG)
+        async private Task<Response> getCubsbLog(string SERIAL_NO,string OCCUR_DATE,string CURRENCY, string CUACCT_CODE,string EXT_ORG,string INT_ORG)
         {
             Request request = new Request(this.operatorId, "getCubsbLog");
             request.setAttr("SERIAL_NO", SERIAL_NO); 
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -716,12 +737,12 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="userCode">客户代码</param>
         /// <returns></returns>
-        private Response queryCustBasicInfoList(string userCode)
+        async private Task<Response> queryCustBasicInfoList(string userCode)
         {
             Request request = new Request(this.operatorId, "queryCustBasicInfoList");
             request.setAttr("USER_CODE", userCode);
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
             if (response.flag != "1")
             {
                 string message = "操作失败：" + response.prompt;
@@ -737,41 +758,44 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public Response invoke(Request request)
+        async public Task<Response> invoke(Request request)
         {
-            string result = "";
-
-            // 利用反射调用WebService的成员函数
-            try
+            return await Task.Run(async () =>
             {
-                logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
+                string result = "";
 
-                // 调用WebService接口，获取返回值
-                result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
-
-                logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
-
-                // 检查是否提示操作员已经退出。如果操作员已经退出，则先重新登录然后再次执行
-                if (result.IndexOf("<prompt>您必须先登陆，才能进行其它操作。</prompt>") > -1)
+                // 利用反射调用WebService的成员函数
+                try
                 {
-                    this.operatorLogin();
-
                     logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
 
                     // 调用WebService接口，获取返回值
                     result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
 
                     logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
-                }
-            }
-            catch (Exception ex)
-            {
-                string message = "WebService调用失败：" + this.kessWebserviceURL +" "+ ex.Message;
-                logger.Error(message);
-                throw new Exception(message);
-            }
 
-            return new Response(result);
+                    // 检查是否提示操作员已经退出。如果操作员已经退出，则先重新登录然后再次执行
+                    if (result.IndexOf("<prompt>您必须先登陆，才能进行其它操作。</prompt>") > -1)
+                    {
+                        await this.operatorLogin();
+
+                        logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
+
+                        // 调用WebService接口，获取返回值
+                        result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
+
+                        logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    string message = "WebService调用失败：" + this.kessWebserviceURL + " " + ex.Message;
+                    logger.Error(message);
+                    throw new Exception(message);
+                }
+
+                return new Response(result);
+            });
         }
         
         /// <summary>
@@ -825,7 +849,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SETT_DEALLOG">是否处理报送流水</param>
         /// <param name="CHECK_RES_RIGHT">检查资源权限</param>
         /// <returns></returns>
-        private Response setCustAgreement(
+        async private Task<Response> setCustAgreement(
             string OPERATION_TYPE = "",
             string CUST_CODE = "",
             string CUST_AGMT_TYPE = "",
@@ -888,7 +912,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("CHECK_RES_RIGHT", CHECK_RES_RIGHT); // 检查资源权限
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using Dict = Yushen.WebService.KessClient.Dict;
 
 namespace Yushen.WebService.KessClient
@@ -40,18 +41,9 @@ namespace Yushen.WebService.KessClient
                 this.kessWebserviceURL = kessWebserviceURL;
             }
 
-            // 利用反射建立WebService的实例
-            this.kessClientType = Type.GetType(this.kessClassName);
-            this.kessClient = Activator.CreateInstance(this.kessClientType, new object[] { "KessService", this.kessWebserviceURL });
-            if (this.kessClient == null)
-            {
-                string message = "WebService连接失败：" + this.kessWebserviceURL;
-                logger.Error(message);
-                throw new Exception(message);
-            }
-
+            this.CreateInstance();
             // 操作员登录
-            this.operatorLogin();
+            // await this.operatorLogin();
         }
 
         /// <summary>
@@ -59,8 +51,11 @@ namespace Yushen.WebService.KessClient
         /// 登陆成功返回true，登录失败抛出异常
         /// </summary>
         /// <returns></returns>
-        public bool operatorLogin(string operatorId = "", string password = "")
+        async public Task<bool> operatorLogin(string operatorId = "", string password = "")
         {
+            this.CreateInstance();
+
+            // 开始登陆
             if (operatorId != "")
             {
                 if (password != "")
@@ -81,7 +76,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("PASSWORD", this.password);
             request.setAttr("F_CHANNEL", this.channel);
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             if (response.flag == "0" && response.prompt.IndexOf("用户已登陆，不用重复登陆") == -1)
             {
@@ -103,12 +98,12 @@ namespace Yushen.WebService.KessClient
         /// <param name="ID_EXP_DATE"></param>
         /// <param name="CITIZENSHIP"></param>
         /// <param name="NATIONALITY"></param>
-        public string createCustomerCode(User user)
+        async public Task<string> createCustomerCode(User user)
         {
-            Response response = this.getUserInfoById(user.id_code);
-            if (response.length == 0 || this.getSingleCommonParamValue("OPEN_CUST_CHECK_ID_FLAG") == "1")
+            Response response = await this.getUserInfoById(user.id_code);
+            if (response.length == 0 || await this.getSingleCommonParamValue("OPEN_CUST_CHECK_ID_FLAG") == "1")
             {
-                response = this.openCustomer(user);
+                response = await this.openCustomer(user);
                 return response.getValue("USER_CODE");
             }
             else
@@ -122,18 +117,18 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public string openCuacctCode(User user)
+        async public Task<string> openCuacctCode(User user)
         {
-            Response response = this.listCuacct(user);
+            Response response = await this.listCuacct(user);
             // 判断是否已经开立过资金账号
             if (response.length == 0)
             {
-                bool useUserCodeAsCuacctCode = this.getSingleCommonParamValue("CUST_CUACCT_SHARE_SERIAL") == "1" ? true : false;
+                bool useUserCodeAsCuacctCode = await this.getSingleCommonParamValue("CUST_CUACCT_SHARE_SERIAL") == "1" ? true : false;
                 if (useUserCodeAsCuacctCode)
                 {
                     user.cuacct_code = user.cust_code;
                 }
-                response = this.openCuacct(user.cust_code,"z");
+                response = await this.openCuacct(user.cust_code,"z");
             }
             else if (response.length > 0)
             {
@@ -159,7 +154,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public Response listCuacct(User user)
+        async public Task<Response> listCuacct(User user)
         {
             if (user.cust_code == "")
             {
@@ -170,7 +165,7 @@ namespace Yushen.WebService.KessClient
             Request request = new Request(this.operatorId, "listCuacct");
             request.setAttr("USER_CODE", user.cust_code);    // 客户名称
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
             if (response.flag != "0" && response.flag != "1")
             {
                 string msg = "操作失败：" + response.prompt;
@@ -180,9 +175,9 @@ namespace Yushen.WebService.KessClient
             return response;
         }
 
-        public void bankSign(User user)
+        async public Task bankSign(User user)
         {
-            this.cubsbScOpenAcctOneStep(user.cust_code, user.cuacct_code, user.bank_acct_code);
+            await this.cubsbScOpenAcctOneStep(user.cust_code, user.cuacct_code, user.bank_acct_code);
         }
 
         /// <summary>
@@ -191,7 +186,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="user">用户信息</param>
         /// <param name="OPERATION_TYPE">操作类型，0增加密码，1修改密码，3重置密码</param>
         /// <returns></returns>
-        public bool mdfUserPassword(User user, string USE_SCOPE, string OPERATION_TYPE="0")
+        async public Task<bool> mdfUserPassword(User user, string USE_SCOPE, string OPERATION_TYPE="0")
         {
             // 前置条件判断
             if (user.cust_code == "")
@@ -216,7 +211,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("USE_SCOPE", USE_SCOPE);    // 设置交易密码
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -237,7 +232,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SURVEY_COLS">问题序号列字符串</param>
         /// <param name="SURVEY_CELLS">答案序号列字符串</param>
         /// <returns></returns>
-        public bool syncSurveyAns2Kbss(User user, string SURVEY_COLS, string SURVEY_CELLS, string SURVEY_SN="1")
+        async public Task<bool> syncSurveyAns2Kbss(User user, string SURVEY_COLS, string SURVEY_CELLS, string SURVEY_SN="1")
         {
             // 前置条件判断
             if (user.cust_code == "")
@@ -255,7 +250,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("SURVEY_CELLS", SURVEY_CELLS);
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -311,7 +306,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="ID_ADDR2">证件2地址（机构必传）</param>
         /// <param name="ACCT_OPENTYPE">开户方式(必传)DD[ACCT_OPENTYPE]</param>
         /// <returns></returns>
-        public Response openYMTAcct(string USER_TYPE,
+        async public Task<Response> openYMTAcct(string USER_TYPE,
                                     string CUST_FNAME,
                                     string ID_TYPE,
                                     string ID_CODE,
@@ -396,7 +391,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -418,7 +413,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="ACCT_TYPE">证券账户类别(非必输)11:沪A，21:深A。DD[ACCT_TYPE]</param>
         /// <param name="ACCTBIZ_EXCODE">账户代理业务(非必输)DD[ACCTBIZ_EXCODE]默认为07-证券账户查询</param>
         /// <returns></returns>
-        public Response onSearchNewZD(User user,string ACCT_TYPE = "", string ACCTBIZ_EXCODE = Dict.ACCTBIZ_EXCODE.证券账户查询)
+        async public Task<Response> onSearchNewZD(User user,string ACCT_TYPE = "", string ACCTBIZ_EXCODE = Dict.ACCTBIZ_EXCODE.证券账户查询)
         {
             // 前置条件判断
             if (user.user_type=="")
@@ -454,7 +449,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -474,7 +469,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="user"></param>
         /// <param name="ACCT_TYPE">证券账户类别(非必输)11:沪A，21:深A。DD[ACCT_TYPE]</param>
         /// <returns></returns>
-        public Response queryStkAcct(User user, string ACCT_TYPE = "")
+        async public Task<Response> queryStkAcct(User user, string ACCT_TYPE = "")
         {
             // 前置条件判断
             if (user.user_type == "")
@@ -510,7 +505,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag == "1")
@@ -544,7 +539,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="ACCT_TYPE">证券账户类别(非必输)11:沪A，21:深A。DD[ACCT_TYPE]</param>
         /// <param name="timeout">超时时间，单位为秒</param>
         /// <returns></returns>
-        public Response openStkAcct(User user, string ACCT_TYPE, int timeout = 30)
+        async public Task<Response> openStkAcct(User user, string ACCT_TYPE, int timeout = 30)
         {
             // 前置条件判断
             if (user.ymt_code=="")
@@ -555,7 +550,7 @@ namespace Yushen.WebService.KessClient
             // 初始化请求
 
             // 调用WebService获取返回值
-            string serialNo = this.submitStkAcctBizOpReq2NewZD(
+            string serialNo = await this.submitStkAcctBizOpReq2NewZD(
                 OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
                 ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.证券账户开立,
                 ACCT_TYPE: ACCT_TYPE,
@@ -584,7 +579,7 @@ namespace Yushen.WebService.KessClient
                 timeout: timeout
                 );
 
-            Response response = searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.证券账户开立, timeout:timeout);
+            Response response = await searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.证券账户开立, timeout:timeout);
 
             // 判断返回的操作结果是否异常
             string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
@@ -602,7 +597,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user"></param>
         /// <returns></returns>
-        public Response queryCYB(string TRDACCT, int timeout = 30)
+        async public Task<Response> queryCYB(string TRDACCT, int timeout = 30)
         {
             // 前置条件判断
             if (TRDACCT == "")
@@ -614,7 +609,7 @@ namespace Yushen.WebService.KessClient
 
             // 调用WebService获取返回值
             // 发送中登请求
-            string serialNo = this.submitStkAcctBizOpReq2NewZD(
+            string serialNo = await this.submitStkAcctBizOpReq2NewZD(
                                     OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
                                     ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
                                     ACCTBIZ_CLS: Dict.AcctBiz_CLS.创业板_查询,
@@ -627,7 +622,7 @@ namespace Yushen.WebService.KessClient
                                     TRDACCT: TRDACCT    // 深圳A股账号
                                 );
             // 获取中登处理结果
-            Response rspsStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo,timeout:timeout);
+            Response rspsStkAcctBizInfo = await this.searchStkAcctBizInfo(serialNo,timeout:timeout);
 
             // 判断返回的操作结果是否异常
             if (rspsStkAcctBizInfo.length == 1 && rspsStkAcctBizInfo.getValue("RTN_ERR_CODE") != "0000")
@@ -636,7 +631,7 @@ namespace Yushen.WebService.KessClient
             }
 
             // 通过扩展信息查询接口获取创业板签署信息
-            Response response = this.searchStkAcctBizInfoEx(serialNo);
+            Response response = await this.searchStkAcctBizInfoEx(serialNo);
 
             return response;
         }
@@ -648,7 +643,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SIGN_CLS">签约类别</param>
         /// <param name="SIGN_DATE">签约日期</param>
         /// <returns></returns>
-        public void openCyb2ZD(User user,string SIGN_CLS, string SIGN_DATE,int timeout=30)
+        async public Task openCyb2ZD(User user,string SIGN_CLS, string SIGN_DATE,int timeout=30)
         {
             // 前置条件判断
             if (user.cust_code == "")
@@ -672,7 +667,7 @@ namespace Yushen.WebService.KessClient
 
             // 调用WebService获取返回值
             // 发送中登请求
-            string serialNo = this.submitStkAcctBizOpReq2NewZD(
+            string serialNo = await this.submitStkAcctBizOpReq2NewZD(
                 OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
                 ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
                 PROPER_CLS: Dict.PROPER_CLS.创业板,
@@ -708,7 +703,7 @@ namespace Yushen.WebService.KessClient
                 );
 
             // 获取中登处理结果
-            Response responseStkAcctBizInfo = this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护, TRDACCT: user.szacct,timeout:timeout);
+            Response responseStkAcctBizInfo = await this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护, TRDACCT: user.szacct,timeout:timeout);
 
             // 中登处理是否成功
             if (responseStkAcctBizInfo.flag!="1")
@@ -728,7 +723,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SIGN_DATE">签署日期，空值表示当天</param>
         /// <param name="EFT_DATE">生效日期，空值表示当天</param>
         /// <returns></returns>
-        public void openCyb2KBSS(
+        async public Task openCyb2KBSS(
             User user,
             string OPEN_TYPE,
             string SIGN_DATE="",
@@ -760,7 +755,7 @@ namespace Yushen.WebService.KessClient
             // 初始化请求
 
             // 调用WebService获取返回值
-            Response response = this.setCustAgreement(
+            Response response = await this.setCustAgreement(
                 OPERATION_TYPE: "0",
                 CUST_CODE: user.cust_code,
                 CUACCT_CODE: user.cuacct_code,
@@ -788,9 +783,9 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="regkeyId"></param>
         /// <returns></returns>
-        public string getSingleCommonParamValue(string regkeyId)
+        async public Task<string> getSingleCommonParamValue(string regkeyId)
         {
-            Response response = this.getCommonParams(regkeyId);
+            Response response = await this.getCommonParams(regkeyId);
 
             if (response.length > 1)
             {
@@ -806,11 +801,11 @@ namespace Yushen.WebService.KessClient
         /// 加挂上海股东户
         /// </summary>
         /// <param name="user"></param>
-        public bool registerSHAStkTrdAcct(User user)
+        public async Task<bool> registerSHAStkTrdAcct(User user)
         {
             try
             {
-                openStkTrdAcct(user, Dict.STKBD.上海A股, user.shacct, "上海A股");
+                await openStkTrdAcct(user, Dict.STKBD.上海A股, user.shacct, "上海A股");
                 return true;
             }
             catch (Exception)
@@ -823,11 +818,11 @@ namespace Yushen.WebService.KessClient
         /// 加挂深圳股东户
         /// </summary>
         /// <param name="user"></param>
-        public bool registerSZAStkTrdAcct(User user)
+        public async Task<bool> registerSZAStkTrdAcct(User user)
         {
             try
             {
-                openStkTrdAcct(user, Dict.STKBD.深圳A股, user.szacct, "深圳A股");
+                await openStkTrdAcct(user, Dict.STKBD.深圳A股, user.szacct, "深圳A股");
                 return true;
             }
             catch (Exception)
@@ -841,12 +836,12 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="regkeyId"></param>
         /// <returns></returns>
-        private Response getCommonParams(string regkeyId)
+        async private Task<Response> getCommonParams(string regkeyId)
         {
             Request request = new Request(this.operatorId, "getCommonParams");
             request.setAttr("REGKEY_ID", regkeyId);
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             if (response.flag != "1")
             {
@@ -863,7 +858,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="dictName">字典项名称</param>
         /// <returns></returns>
-        public Response getDictData(string dictName)
+        async public Task<Response> getDictData(string dictName)
         {
             if (dictName=="")
             {
@@ -875,7 +870,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("DD_ID", dictName);
             request.setAttr("INT_ORG", "0");
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             if(response.flag != "1")
             {
@@ -892,12 +887,12 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public Response getUserInfoById(string id)
+        async public Task<Response> getUserInfoById(string id)
         {
             Request request = new Request(this.operatorId, "getUserInfoById");
             request.setAttr("ID_CODE", id);
 
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
             return response;
         }
 
@@ -906,7 +901,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="user">用户对象</param>
         /// <returns></returns>
-        public Response validateIdCode(User user)
+        async public Task<Response> validateIdCode(User user)
         {
             // 前置条件判断
             if (user.id_code == "")
@@ -933,7 +928,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("BIRTHDAY", user.birthday);
             
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1") 
@@ -973,7 +968,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="INT_ORG">内部机构</param>
         /// <param name="STKPBU_TYPE">交易单元类型，默认为0：普通交易单元</param>
         /// <returns></returns>
-        public Response listStkPbuOrg(string STKBD, string INT_ORG, string STKPBU_TYPE = "0")
+        async public Task<Response> listStkPbuOrg(string STKBD, string INT_ORG, string STKPBU_TYPE = "0")
         {
             // 前置条件判断
             if (STKBD == "")
@@ -1002,7 +997,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("STKPBU_TYPE", STKPBU_TYPE); // 交易单元类型
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -1026,7 +1021,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="BREG_STATUS">交易指定状态0-撤指定1-指定</param>
         /// <param name="FIRMID">代理商号</param>
         /// <returns></returns>
-        public bool stkTrdacctBind(
+        async public Task<bool> stkTrdacctBind(
             string CUST_CODE,
             string STKPBU,
             string STKBD,
@@ -1079,7 +1074,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("FIRMID", FIRMID); // 代理商号
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
@@ -1109,7 +1104,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SERIAL_NO">流水序号</param>
         /// <param name="SMS_NO">短信验证码</param>
         /// <returns></returns>
-        public bool cubsbScOpenAcct(
+        async public Task<bool> cubsbScOpenAcct(
                 string OP_TYPE,
                 string CUACCT_CODE,
                 string EXT_ORG,
@@ -1167,7 +1162,7 @@ namespace Yushen.WebService.KessClient
 
 
             // 调用WebService获取返回值
-            Response response = this.invoke(request);
+            Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
             if (response.flag != "1")

@@ -59,7 +59,7 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void button2_Click(object sender, EventArgs e)
+        async private void button2_Click(object sender, EventArgs e)
         {
             try
             {
@@ -72,7 +72,7 @@ namespace 金证统一账户测试账户生成器
 
                 try
                 {
-                    Response response = kess.getDictData(dictName.Text);
+                    Response response = await kess.getDictData(dictName.Text);
                     dataGridView1.DataSource = response.DataSet.Tables["row"];
                     if (dataGridView1.ColumnCount >= 2)
                     {
@@ -143,18 +143,18 @@ namespace 金证统一账户测试账户生成器
 
             dtpCybSignDate.Value = DateTime.Now;
 
-            //try
-            //{
-            //    // 初始化WebService连接
-            //    if (kess == null)
-            //    {
-            //        kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    resultForm.Append("初始化失败：" + ex.Message);
-            //}
+            try
+            {
+                // 初始化WebService连接
+                if (kess == null)
+                {
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("初始化失败：" + ex.Message);
+            }
 
             // 生成随机用户信息
             reCreateUserInfo();
@@ -239,7 +239,7 @@ namespace 金证统一账户测试账户生成器
             reCreateUserInfo();
         }
 
-        private void btnBankSign_Click(object sender, EventArgs e)
+        private async void btnBankSign_Click(object sender, EventArgs e)
         {
             try
             {
@@ -249,7 +249,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                signBank();
+                await signBank(bank_code.SelectedValue.ToString());
             }
             catch (Exception ex)
             {
@@ -257,7 +257,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnSubmitRiskTest_Click(object sender, EventArgs e)
+        private async void btnSubmitRiskTest_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
@@ -269,7 +269,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                syncSurveyAns2Kbss();
+                await syncSurveyAns2Kbss(risk_level.SelectedValue.ToString());
 
             }
             catch (Exception ex)
@@ -278,7 +278,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnSetPassword_Click(object sender, EventArgs e)
+        private async void btnSetPassword_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
@@ -290,7 +290,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                mdfUserPassword();
+                await mdfUserPassword();
 
             }
             catch (Exception ex)
@@ -304,7 +304,7 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void btnOpenCuacct_Click(object sender, EventArgs e)
+        private async void btnOpenCuacct_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
@@ -316,7 +316,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                openCuacctCode();
+                await openCuacctCode();
             }
             catch (Exception ex)
             {
@@ -324,7 +324,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnOpenYMT_Click(object sender, EventArgs e)
+        private async void btnOpenYMT_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
@@ -336,7 +336,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                openYMTCode();
+                await openYMTCode();
 
             }
             catch (Exception ex)
@@ -345,7 +345,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnOpenStockAccount_Click(object sender, EventArgs e)
+        private async void btnOpenStockAccount_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
@@ -357,7 +357,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                openSHACode();
+                await openSHACode();
 
             }
             catch (Exception ex)
@@ -366,7 +366,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnQueryStockAccount_Click(object sender, EventArgs e)
+        private async void btnQueryStockAccount_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
@@ -379,7 +379,7 @@ namespace 金证统一账户测试账户生成器
                 }
 
                 saveUserInfo();
-                Response response = kess.queryStkAcct(user);
+                Response response = await kess.queryStkAcct(user);
                 resultForm.Append("该客户有" + response.length.ToString() + "个股东卡号");
                 foreach (DataRow ds in response.DataSet.Tables["row"].Rows)
                 {
@@ -392,7 +392,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private async void btnLogin_Click(object sender, EventArgs e)
         {
             try
             {
@@ -402,7 +402,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                if (kess.operatorLogin())
+                if (await kess.operatorLogin())
                 {
                     resultForm.Show();
                     resultForm.Append("操作员登录成功");
@@ -414,7 +414,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnRegisterStockAccount_Click(object sender, EventArgs e)
+        private async void btnRegisterStockAccount_Click(object sender, EventArgs e)
         {
             resultForm.Show();
             try
@@ -425,7 +425,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                registerSHACode();
+                await registerSHACode();
 
             }
             catch (Exception ex)
@@ -434,7 +434,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnOpenCYB_Click(object sender, EventArgs e)
+        private async void btnOpenCYB_Click(object sender, EventArgs e)
         {
             try
             {
@@ -444,9 +444,9 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                kess.openCyb2ZD(user, cbxOpenType.SelectedValue.ToString(), dtpCybSignDate.Text,timeout:Settings.Default.中登超时时间);
+                await kess.openCyb2ZD(user, cbxOpenType.SelectedValue.ToString(), dtpCybSignDate.Text, timeout: Settings.Default.中登超时时间);
                 resultForm.Append("中登创业板开通成功");
-                kess.openCyb2KBSS(user, Dict.OPEN_TYPE.T加2, dtpCybSignDate.Text, dtpCybSignDate.Text);
+                await kess.openCyb2KBSS(user, Dict.OPEN_TYPE.T加2, dtpCybSignDate.Text, dtpCybSignDate.Text);
                 resultForm.Append("系统内创业板协议签署成功");
             }
             catch (Exception ex)
@@ -455,7 +455,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnValidateId_Click(object sender, EventArgs e)
+        private async void btnValidateId_Click(object sender, EventArgs e)
         {
             resultForm.Show();
 
@@ -467,7 +467,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                Response response = kess.validateIdCode(user);
+                Response response = await kess.validateIdCode(user);
 
                 // 返回结果
                 if (response.getValue("ID_CODE_CHKRLT") == "一致")
@@ -485,7 +485,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnOpenSZAStkAcct_Click(object sender, EventArgs e)
+        private async void btnOpenSZAStkAcct_Click(object sender, EventArgs e)
         {
 
             resultForm.Show();
@@ -498,7 +498,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                openSZACode();
+                await openSZACode();
 
             }
             catch (Exception ex)
@@ -507,7 +507,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnRegisterSZAStkAcct_Click(object sender, EventArgs e)
+        private async void btnRegisterSZAStkAcct_Click(object sender, EventArgs e)
         {
             resultForm.Show();
             try
@@ -518,7 +518,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                registerSZACode();
+                await registerSZACode();
 
             }
             catch (Exception ex)
@@ -535,7 +535,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 一次性开立所有账户
         /// </summary>
-        private void openAllAccount()
+        async private void openAllAccount()
         {
             resultForm.Show();
 
@@ -550,27 +550,27 @@ namespace 金证统一账户测试账户生成器
                 // 使用当前用户信息
                 saveUserInfo();
 
-                openCustCode();
+                await openCustCode();
 
-                openCuacctCode();
+                await openCuacctCode();
 
-                mdfUserPassword();
+                await mdfUserPassword();
 
-                syncSurveyAns2Kbss();
+                await syncSurveyAns2Kbss(risk_level.SelectedValue.ToString());
 
-                signBank();
+                await signBank(bank_code.SelectedValue.ToString());
 
-                openYMTCode();
+                await openYMTCode();
 
-                openSHACode();
+                await openSHACode();
 
-                registerSHACode();
+                await registerSHACode();
 
-                openSZACode();
+                await openSZACode();
 
-                registerSZACode();
+                await registerSZACode();
 
-                bindSHAcct();
+                await bindSHAcct();
 
             }
             catch (Exception ex)
@@ -582,37 +582,29 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 开客户号
         /// </summary>
-        private void openCustCode()
+        private async Task openCustCode()
         {
             // 开客户号
             try
             {
-                user.cust_code = kess.createCustomerCode(user);
+                user.cust_code = await kess.createCustomerCode(user);
                 user.user_code = user.cust_code;
-                Action action = () =>
-                {
-                    resultForm.Append("客户号开立成功：" + user.cust_code);
-                    tbxCustCode.Text = user.cust_code;
-                };
-                this.Invoke(action);
+                resultForm.Append("客户号开立成功：" + user.cust_code);
+                tbxCustCode.Text = user.cust_code;
             }
             catch (Exception ex)
             {
-                Action action = () =>
-                {
-                    resultForm.Append("客户号开立失败：" + ex.Message);
-                };
-                this.Invoke(action);
+                resultForm.Append("客户号开立失败：" + ex.Message);
             }
         }
 
         /// <summary>
         /// 开资金号
         /// </summary>
-        private void openCuacctCode()
+        private async Task openCuacctCode()
         {
             // 开资金号
-            user.cuacct_code = kess.openCuacctCode(user);
+            user.cuacct_code = await kess.openCuacctCode(user);
             resultForm.Append("资金账号开立成功：" + user.cuacct_code);
             tbxCuacct.Text = user.cuacct_code;
         }
@@ -620,17 +612,17 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 设置交易和资金密码
         /// </summary>
-        private void mdfUserPassword()
+        private async Task mdfUserPassword()
         {
             // 设置交易密码
-            bool result = kess.mdfUserPassword(user, Dict.USE_SCOPE.登录和交易, Dict.OPERATION_TYPE.增加密码);
+            bool result = await kess.mdfUserPassword(user, Dict.USE_SCOPE.登录和交易, Dict.OPERATION_TYPE.增加密码);
             if (result)
             {
                 resultForm.Append("添加交易密码成功，新密码：" + user.password);
             }
 
             // 设置资金密码
-            result = kess.mdfUserPassword(user, Dict.USE_SCOPE.资金业务, Dict.OPERATION_TYPE.增加密码);
+            result = await kess.mdfUserPassword(user, Dict.USE_SCOPE.资金业务, Dict.OPERATION_TYPE.增加密码);
             if (result)
             {
                 resultForm.Append("添加资金密码成功，新密码：" + user.password);
@@ -640,9 +632,9 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 预指定三方存管
         /// </summary>
-        private void signBank()
+        private async Task signBank(string bank_code)
         {
-            bool result = kess.cubsbScOpenAcct("1", user.cuacct_code, bank_code.SelectedValue.ToString());
+            bool result = await kess.cubsbScOpenAcct("1", user.cuacct_code, bank_code);
             if (result)
             {
                 resultForm.Append("三方存管预指定成功");
@@ -652,12 +644,12 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 提交风险测评
         /// </summary>
-        private void syncSurveyAns2Kbss()
+        private async Task syncSurveyAns2Kbss(string riskLevel)
         {
             // 提交风险测评
             string cols = Settings.Default.Cols;
             string cells = "";
-            switch (risk_level.SelectedValue.ToString())
+            switch (riskLevel)
             {
                 case "A":
                     cells = Settings.Default.保守型;
@@ -681,41 +673,52 @@ namespace 金证统一账户测试账户生成器
                     throw new Exception(message);
             }
 
-            bool result = kess.syncSurveyAns2Kbss(user, cols, cells);
+            bool result = await kess.syncSurveyAns2Kbss(user, cols, cells);
             if (result)
             {
-                resultForm.Append("提交风险测评成功");
+                Action action = () =>
+                {
+                    resultForm.Append("提交风险测评成功");
+                };
+                this.Invoke(action);
             }
         }
 
         /// <summary>
         /// 开一码通
         /// </summary>
-        private void openYMTCode()
+        private async Task openYMTCode()
         {
-            // 开一码通
-            Response response = kess.openYMTAcct(user.user_type, user.user_fname, user.id_type, user.id_code, user.int_org, user.cust_code, user.birthday, user.id_beg_date, user.id_exp_date, user.citizenship, user.id_addr, user.id_addr, user.zip_code, user.occu_type, user.nationality, user.education, user.tel, user.mobile_tel, user.sex);
-            if (response.length > 2)
+            try
             {
-                throw new Exception("该客户有" + response.length.ToString() + "个一码通账号");
+                // 开一码通
+                Response response = await kess.openYMTAcct(user.user_type, user.user_fname, user.id_type, user.id_code, user.int_org, user.cust_code, user.birthday, user.id_beg_date, user.id_exp_date, user.citizenship, user.id_addr, user.id_addr, user.zip_code, user.occu_type, user.nationality, user.education, user.tel, user.mobile_tel, user.sex);
+                if (response.length > 2)
+                {
+                    throw new Exception("该客户有" + response.length.ToString() + "个一码通账号");
+                }
+                else if (response.length == 0)
+                {
+                    throw new Exception("没有返回一码通账号列表");
+                }
+                string ymtCode = response.getValue("YMT_CODE");
+                resultForm.Append("一码通账号开立成功：" + response.getValue("YMT_CODE"));
+                user.ymt_code = ymtCode;
+                tbxYMTCode.Text = ymtCode;
             }
-            else if (response.length == 0)
+            catch (Exception ex)
             {
-                throw new Exception("没有返回一码通账号列表");
+                throw new Exception("一码通账号开立失败：" + ex.Message);
             }
-            string ymtCode = response.getValue("YMT_CODE");
-            resultForm.Append("一码通账号开立成功：" + response.getValue("YMT_CODE"));
-            user.ymt_code = ymtCode;
-            tbxYMTCode.Text = ymtCode;
         }
 
         /// <summary>
         /// 新开沪A账户
         /// </summary>
-        private void openSHACode()
+        async private Task openSHACode()
         {
             // 新开沪A账户
-            Response response = kess.openStkAcct(user, Dict.ACCT_TYPE.沪市A股账户);
+            Response response = await kess.openStkAcct(user, Dict.ACCT_TYPE.沪市A股账户);
             user.shacct = response.getValue("TRDACCT");
             resultForm.Append("沪A股东账号开立成功：" + user.shacct);
             tbxSHAcct.Text = user.shacct;
@@ -724,10 +727,10 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 加挂沪A账户
         /// </summary>
-        private void registerSHACode()
+        private async Task registerSHACode()
         {
             // 加挂沪A账户
-            if (kess.registerSHAStkTrdAcct(user))
+            if (await kess.registerSHAStkTrdAcct(user))
             {
                 resultForm.Append("沪A股东账号加挂成功");
             }
@@ -736,10 +739,10 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 上海账户指定交易
         /// </summary>
-        private void bindSHAcct()
+        private async Task bindSHAcct()
         {
-            Response response = kess.listStkPbuOrg(Dict.STKBD.上海A股, Settings.Default.开户营业部);
-            kess.stkTrdacctBind(
+            Response response = await kess.listStkPbuOrg(Dict.STKBD.上海A股, Settings.Default.开户营业部);
+            await kess.stkTrdacctBind(
                 user.cust_code,
                 response.getValue("STKPBU"),
                 Dict.STKBD.上海A股,
@@ -752,10 +755,10 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 新开深A账户
         /// </summary>
-        private void openSZACode()
+        private async Task openSZACode()
         {
             // 新开深A账户
-            Response response = kess.openStkAcct(user, Dict.ACCT_TYPE.深市A股账户);
+            Response response = await kess.openStkAcct(user, Dict.ACCT_TYPE.深市A股账户);
             user.szacct = response.getValue("TRDACCT");
             resultForm.Append("深A股东账号开立成功：" + user.szacct);
             tbxSZAcct.Text = user.szacct;
@@ -764,16 +767,16 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 加挂深A账户
         /// </summary>
-        private void registerSZACode()
+        private async Task registerSZACode()
         {
             // 加挂深A账户
-            if (kess.registerSZAStkTrdAcct(user))
+            if (await kess.registerSZAStkTrdAcct(user))
             {
                 resultForm.Append("深A股东账号加挂成功");
             }
         }
 
-        private void btnQueryCYB_Click(object sender, EventArgs e)
+        private async void btnQueryCYB_Click(object sender, EventArgs e)
         {
             resultForm.Show();
             try
@@ -788,7 +791,7 @@ namespace 金证统一账户测试账户生成器
                 tbxCybSignDate.Text = "";
 
                 // 根据股东账号查询创业板信息
-                Response response = kess.queryCYB(tbxSZAcct.Text.Trim(), Settings.Default.中登超时时间);
+                Response response = await kess.queryCYB(tbxSZAcct.Text.Trim(), Settings.Default.中登超时时间);
 
                 tbxCybSignDate.Text = response.getValue("SIGN_DATE");
 
@@ -940,7 +943,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnOpenUserCode_Click(object sender, EventArgs e)
+        async private void btnOpenUserCode_Click(object sender, EventArgs e)
         {
             resultForm.Clear();
             resultForm.Show();
@@ -953,14 +956,14 @@ namespace 金证统一账户测试账户生成器
 
             saveUserInfo();
 
-            openCustCode();
+            await openCustCode();
         }
 
-        private void btnBindSHAcct_Click(object sender, EventArgs e)
+        private async void btnBindSHAcct_Click(object sender, EventArgs e)
         {
             try
             {
-                bindSHAcct();
+                await bindSHAcct();
             }
             catch (Exception ex)
             {
@@ -1003,7 +1006,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnExecute_Click(object sender, EventArgs e)
+        private async void btnExecute_Click(object sender, EventArgs e)
         {
             try
             {
@@ -1013,7 +1016,7 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
                 Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, tbxRequest.Text);
-                Response response = kess.invoke(request);
+                Response response = await kess.invoke(request);
                 tbxResponse.Text = response.xml;
             }
             catch (Exception ex)
@@ -1022,11 +1025,11 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnQueryCommonParams_Click(object sender, EventArgs e)
+        private async void btnQueryCommonParams_Click(object sender, EventArgs e)
         {
             try
             {
-                tbxCommonParamValue.Text = kess.getSingleCommonParamValue(tbxCommonParamKey.Text.Trim());
+                tbxCommonParamValue.Text = await kess.getSingleCommonParamValue(tbxCommonParamKey.Text.Trim());
             }
             catch (Exception ex)
             {
