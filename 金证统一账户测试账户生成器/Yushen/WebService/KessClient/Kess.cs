@@ -9,7 +9,6 @@ namespace Yushen.WebService.KessClient
     /// </summary>
     public partial class Kess : IDisposable
     {
-        
         /// <summary>
         /// 字典项，金证Win版柜台系统
         /// </summary>
