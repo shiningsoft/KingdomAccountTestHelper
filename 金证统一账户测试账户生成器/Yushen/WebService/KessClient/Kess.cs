@@ -977,7 +977,10 @@ namespace Yushen.WebService.KessClient
         {
             if (disposing)
             {
-                this.kessClientType.GetMethod("Close").Invoke(this.kessClientList[0].executor, new object[] { });
+                for (int i = 0; i < kessClientList.Count; i++)
+                {
+                    this.kessClientType.GetMethod("Close").Invoke(this.kessClientList[i].executor, new object[] { });
+                }
             }
             // free native resources if there are any. 
         }

@@ -828,21 +828,24 @@ namespace Yushen.WebService.KessClient
                 // 查找可用的执行器
                 for (int i = 0; i < kessClientList.Count; i++)
                 {
-                    if (kessClientList[i].available == true)
+                    lock (kessClientList[i])
                     {
-                        kessClientList[i].available = false;
-                        index = i;
-                        break;
+                        if (kessClientList[i].available == true)
+                        {
+                            kessClientList[i].available = false;
+                            index = i;
+                            break;
+                        }
                     }
                 }
 
                 // 无可用时延迟再试
                 if (index == -1)
                 {
-                    await Task.Delay(500);
+                    await Task.Delay(10);
                 }
             }
-
+                                                                                                                                                                                                                                                                                                                                                                                                                  
             // 请求队列数-1
             _requestQueueCount--;
             
@@ -858,11 +861,9 @@ namespace Yushen.WebService.KessClient
 
                 // 调用WebService接口，获取返回值
                 string result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(kessClientList[index].executor, new object[] { request.xml });
-
-                Task.Delay(1000);
-
+                
                 //获取stopWatch从开始到现在的时间差，单位是毫秒
-                long diff = stopWatch.ElapsedMilliseconds; 
+                long diff = stopWatch.ElapsedMilliseconds;
                 stopWatch.Stop();   //停止计时
 
                 logger.Info("执行器" + index.ToString() + "响应Webservice功能<" + request.methonName + ">，耗时" + diff.ToString() + "毫秒|" + result);
