@@ -142,6 +142,7 @@ namespace 金证统一账户测试账户生成器
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
+            this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -1170,7 +1171,8 @@ namespace 金证统一账户测试账户生成器
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCurrentServer,
-            this.currentUser});
+            this.currentUser,
+            this.requestQueueCount});
             this.statusStrip1.Location = new System.Drawing.Point(0, 507);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(950, 26);
@@ -1196,6 +1198,13 @@ namespace 金证统一账户测试账户生成器
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
+            // 
+            // requestQueueCount
+            // 
+            this.requestQueueCount.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.requestQueueCount.Name = "requestQueueCount";
+            this.requestQueueCount.Size = new System.Drawing.Size(96, 21);
+            this.requestQueueCount.Text = "请求队列长度：";
             // 
             // Main
             // 
@@ -1333,6 +1342,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.TextBox tbxCommonParamValue;
         private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.ToolStripStatusLabel requestQueueCount;
     }
 }
 

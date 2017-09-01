@@ -112,6 +112,7 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Yushen\Util\Formatter.cs" />
     <Compile Include="Yushen\Util\ImageHelper.cs" />
+    <Compile Include="Yushen\WebService\KessClient\KessClient.cs" />
     <Compile Include="Yushen\WebService\KessClient\Dict.cs" />
     <Compile Include="Yushen\WebService\KessClient\RiskLevel.cs" />
     <Compile Include="Customer.cs" />

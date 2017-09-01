@@ -20,6 +20,19 @@ namespace Yushen.WebService.KessClient
         public static string UnixCounter = "Uinx";
 
         /// <summary>
+        /// 同时发起的WebService请求的最大数量，超过则必须等待
+        /// </summary>
+        public int maxWebserviceConnections = 5;
+
+        public int webserviceConnectionsNum
+        {
+            get
+            {
+                return _webserviceConnectionsNum;
+            }
+        }
+
+        /// <summary>
         /// 构造函数
         /// </summary>
         /// <param name="operatorId">操作员代码</param>
@@ -43,6 +56,17 @@ namespace Yushen.WebService.KessClient
             this.CreateInstance();
             // 操作员登录
             // await this.operatorLogin();
+        }
+
+        /// <summary>
+        /// 请求队列长度
+        /// </summary>
+        public int requestQueueCount
+        {
+            get
+            {
+                return _requestQueueCount;
+            }
         }
 
         /// <summary>
@@ -953,8 +977,7 @@ namespace Yushen.WebService.KessClient
         {
             if (disposing)
             {
-                // free managed resources  
-                this.kessClientType.GetMethod("Close").Invoke(this.kessClient, new object[] { });
+                this.kessClientType.GetMethod("Close").Invoke(this.kessClientList[0].executor, new object[] { });
             }
             // free native resources if there are any. 
         }

@@ -20,6 +20,7 @@ namespace 金证统一账户测试账户生成器
         User user;
         AboutBox aboutBox;
         frmSettings frmSettings;
+        Timer timerRefreshQueue;
 
         public Main()
         {
@@ -170,6 +171,22 @@ namespace 金证统一账户测试账户生成器
                 cbxMethonList.Items.Add(file.Name.Replace(file.Extension,""));
             }
 
+            timerRefreshQueue = new Timer();
+            timerRefreshQueue.Interval = 100;
+            timerRefreshQueue.Tick += TimerRefreshQueue_Tick;
+            timerRefreshQueue.Start();
+        }
+        
+        /// <summary>
+        /// 刷新当前请求队列长度
+        /// </summary>
+        /// <returns></returns>
+        private async void TimerRefreshQueue_Tick(object sender, EventArgs e)
+        {
+            await Task.Run(()=>
+            {
+                requestQueueCount.Text = "请求队列长度：" + kess.requestQueueCount.ToString() + "，当前并发：" + kess.webserviceConnectionsNum.ToString();
+            });
         }
 
         /// <summary>

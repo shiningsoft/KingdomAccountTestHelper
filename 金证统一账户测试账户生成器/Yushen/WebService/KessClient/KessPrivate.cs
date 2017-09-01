@@ -1,6 +1,8 @@
 ﻿using NLog;
 using System;
+using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Threading;
@@ -30,7 +32,12 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 用于建立反射调用WebService
         /// </summary>
-        private object kessClient;
+        // private object kessClient;
+
+        /// <summary>
+        /// 用于建立反射调用WebService
+        /// </summary>
+        private List<KessClient> kessClientList = new List<KessClient>();
 
         /// <summary>
         /// 用于建立反射调用WebService
@@ -58,18 +65,36 @@ namespace Yushen.WebService.KessClient
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
+        /// 当前正在发起的WebService连接数量
+        /// </summary>
+        private int _webserviceConnectionsNum = 0;
+
+        /// <summary>
+        /// 存储当前排队中的请求的数量
+        /// </summary>
+        private int _requestQueueCount = 0;
+
+        /// <summary>
         /// 创建WebService实例
         /// </summary>
         private void CreateInstance()
         {
             // 创建实例
-            if (this.kessClient == null)
+            if (this.kessClientList.Count == 0)
             {
                 // 利用反射建立WebService的实例
                 this.kessClientType = Type.GetType(this.kessClassName);
-                this.kessClient = Activator.CreateInstance(this.kessClientType, new object[] { "KessService", this.kessWebserviceURL });
 
-                if (this.kessClient == null)
+                // 创建多个WebService执行器，并加入List
+                for (int i = 0; i < maxWebserviceConnections; i++)
+                {
+                    KessClient kessClient = new KessClient();
+                    kessClient.executor = Activator.CreateInstance(this.kessClientType, new object[] { "KessService", this.kessWebserviceURL });
+                    kessClient.available = true;
+                    kessClientList.Add(kessClient);
+                }
+
+                if (this.kessClientList.Count == 0)
                 {
                     string message = "WebService连接失败：" + this.kessWebserviceURL;
                     logger.Error(message);
@@ -793,14 +818,58 @@ namespace Yushen.WebService.KessClient
         /// <returns></returns>
         async private Task<string> execute(Request request)
         {
+            // 请求队列数+1
+            _requestQueueCount++;
+
+            int index = -1;
+
+            while (index == -1)
+            {
+                // 查找可用的执行器
+                for (int i = 0; i < kessClientList.Count; i++)
+                {
+                    if (kessClientList[i].available == true)
+                    {
+                        kessClientList[i].available = false;
+                        index = i;
+                        break;
+                    }
+                }
+
+                // 无可用时延迟再试
+                if (index == -1)
+                {
+                    await Task.Delay(500);
+                }
+            }
+
+            // 请求队列数-1
+            _requestQueueCount--;
+            
             return await Task.Run(() =>
             {
-                logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
+                _webserviceConnectionsNum += 1;
+
+                logger.Info("执行器" + index.ToString() + "调用Webservice功能<" + request.methonName + ">|" + request.xml);
+
+                //创建一个Stopwatch实例，用于计算Webservice请求花费的时间
+                Stopwatch stopWatch = new Stopwatch();
+                stopWatch.Start();
 
                 // 调用WebService接口，获取返回值
-                string result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
+                string result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(kessClientList[index].executor, new object[] { request.xml });
 
-                logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
+                Task.Delay(1000);
+
+                //获取stopWatch从开始到现在的时间差，单位是毫秒
+                long diff = stopWatch.ElapsedMilliseconds; 
+                stopWatch.Stop();   //停止计时
+
+                logger.Info("执行器" + index.ToString() + "响应Webservice功能<" + request.methonName + ">，耗时" + diff.ToString() + "毫秒|" + result);
+
+                _webserviceConnectionsNum -= 1;
+
+                kessClientList[index].available = true;
 
                 return result;
             }).ConfigureAwait(false);
