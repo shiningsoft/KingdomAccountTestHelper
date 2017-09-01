@@ -760,44 +760,52 @@ namespace Yushen.WebService.KessClient
         /// <returns></returns>
         async public Task<Response> invoke(Request request)
         {
-            return await Task.Run(async () =>
+            string result = "";
+
+            try
             {
-                string result = "";
-
                 // 利用反射调用WebService的成员函数
-                try
+                result = await execute(request);
+
+                // 检查是否提示操作员已经退出。如果操作员已经退出，则先重新登录然后再次执行
+                if (result.IndexOf("<prompt>您必须先登陆，才能进行其它操作。</prompt>") > -1)
                 {
-                    logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
+                    await this.operatorLogin();
 
-                    // 调用WebService接口，获取返回值
-                    result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
-
-                    logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
-
-                    // 检查是否提示操作员已经退出。如果操作员已经退出，则先重新登录然后再次执行
-                    if (result.IndexOf("<prompt>您必须先登陆，才能进行其它操作。</prompt>") > -1)
-                    {
-                        await this.operatorLogin();
-
-                        logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
-
-                        // 调用WebService接口，获取返回值
-                        result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
-
-                        logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
-                    }
+                    result = await execute(request);
                 }
-                catch (Exception ex)
-                {
-                    string message = "WebService调用失败：" + this.kessWebserviceURL + " " + ex.Message;
-                    logger.Error(message);
-                    throw new Exception(message);
-                }
+            }
+            catch (Exception ex)
+            {
+                string message = "WebService调用失败：" + this.kessWebserviceURL + " " + ex.Message;
+                logger.Error(message);
+                throw new Exception(message);
+            }
 
-                return new Response(result);
-            });
+            return new Response(result);
         }
         
+        /// <summary>
+        /// 异步方式调用WebService
+        /// </summary>
+        /// <param name="methonName"></param>
+        /// <param name="xml"></param>
+        /// <returns></returns>
+        async private Task<string> execute(Request request)
+        {
+            return await Task.Run(() =>
+            {
+                logger.Info("调用Webservice功能<" + request.methonName + ">|" + request.xml);
+
+                // 调用WebService接口，获取返回值
+                string result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(this.kessClient, new object[] { request.xml });
+
+                logger.Info("响应Webservice功能<" + request.methonName + ">|" + result);
+
+                return result;
+            }).ConfigureAwait(false);
+        }
+
         /// <summary>
         /// 通过XML字符串创建DataSet对象
         /// </summary>
