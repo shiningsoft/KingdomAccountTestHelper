@@ -22,9 +22,12 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 同时发起的WebService请求的最大数量，超过则必须等待
         /// </summary>
-        public int maxWebserviceConnections = 5;
+        public int maxConnections = 5;
 
-        public int webserviceConnectionsNum
+        /// <summary>
+        /// 当前并发数量
+        /// </summary>
+        public int activeConnectionsNum
         {
             get
             {

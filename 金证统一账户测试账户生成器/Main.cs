@@ -185,7 +185,7 @@ namespace 金证统一账户测试账户生成器
         {
             await Task.Run(()=>
             {
-                requestQueueCount.Text = "请求队列长度：" + kess.requestQueueCount.ToString() + "，当前并发：" + kess.webserviceConnectionsNum.ToString();
+                requestQueueCount.Text = "请求队列长度：" + kess.requestQueueCount.ToString() + "，当前并发：" + kess.activeConnectionsNum.ToString();
             });
         }
 

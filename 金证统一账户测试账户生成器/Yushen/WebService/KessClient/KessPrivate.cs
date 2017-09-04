@@ -86,7 +86,7 @@ namespace Yushen.WebService.KessClient
                 this.kessClientType = Type.GetType(this.kessClassName);
 
                 // 创建多个WebService执行器，并加入List
-                for (int i = 0; i < maxWebserviceConnections; i++)
+                for (int i = 0; i < maxConnections; i++)
                 {
                     KessClient kessClient = new KessClient();
                     kessClient.executor = Activator.CreateInstance(this.kessClientType, new object[] { "KessService", this.kessWebserviceURL });
@@ -821,11 +821,12 @@ namespace Yushen.WebService.KessClient
             // 请求队列数+1
             _requestQueueCount++;
 
+            // 可用执行器的索引号
             int index = -1;
 
+            // 查找可用的执行器
             while (index == -1)
             {
-                // 查找可用的执行器
                 for (int i = 0; i < kessClientList.Count; i++)
                 {
                     lock (kessClientList[i])
@@ -845,8 +846,8 @@ namespace Yushen.WebService.KessClient
                     await Task.Delay(10);
                 }
             }
-                                                                                                                                                                                                                                                                                                                                                                                                                  
-            // 请求队列数-1
+                                                            
+            // 找到可用的执行器之后，请求队列数-1
             _requestQueueCount--;
             
             return await Task.Run(() =>
