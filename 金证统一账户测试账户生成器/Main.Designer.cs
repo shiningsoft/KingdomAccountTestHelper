@@ -1203,8 +1203,8 @@ namespace 金证统一账户测试账户生成器
             // 
             this.requestQueueCount.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.requestQueueCount.Name = "requestQueueCount";
-            this.requestQueueCount.Size = new System.Drawing.Size(96, 21);
-            this.requestQueueCount.Text = "请求队列长度：";
+            this.requestQueueCount.Size = new System.Drawing.Size(182, 21);
+            this.requestQueueCount.Text = "请求队列长度：0，当前并发：0";
             // 
             // Main
             // 
