@@ -417,7 +417,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.dtpCybSignDate.CustomFormat = "yyyyMMdd";
             this.dtpCybSignDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCybSignDate.Location = new System.Drawing.Point(670, 36);
+            this.dtpCybSignDate.Location = new System.Drawing.Point(670, 39);
             this.dtpCybSignDate.Name = "dtpCybSignDate";
             this.dtpCybSignDate.Size = new System.Drawing.Size(100, 21);
             this.dtpCybSignDate.TabIndex = 18;
@@ -435,7 +435,7 @@ namespace 金证统一账户测试账户生成器
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(563, 41);
+            this.label23.Location = new System.Drawing.Point(563, 42);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(101, 12);
             this.label23.TabIndex = 76;

@@ -1095,10 +1095,13 @@ namespace 金证统一账户测试账户生成器
             refreshMethonList();
         }
 
+        /// <summary>
+        /// 初始化测试工具下拉列表
+        /// </summary>
         private void refreshMethonList()
         {
             cbxMethonList.Items.Clear();
-            // 初始化测试工具下拉列表
+
             DirectoryInfo folder = new DirectoryInfo(Request.xmlPath);
             foreach (FileInfo file in folder.GetFiles("*.xml"))
             {
