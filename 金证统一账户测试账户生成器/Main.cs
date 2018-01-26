@@ -29,16 +29,6 @@ namespace 金证统一账户测试账户生成器
 
         private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void 关于ToolStripMenuItem1_Click(object sender, EventArgs e)
-        {
             if (aboutBox == null || aboutBox.IsDisposed)
             {
                 aboutBox = new AboutBox();
@@ -50,9 +40,9 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void 新开随机账户ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
 
         /// <summary>
@@ -165,11 +155,7 @@ namespace 金证统一账户测试账户生成器
             currentUser.Text = "用户：" + Settings.Default.操作员代码;
 
             // 初始化测试工具下拉列表
-            DirectoryInfo folder = new DirectoryInfo(Request.xmlPath);
-            foreach (FileInfo file in folder.GetFiles("*.xml"))
-            {
-                cbxMethonList.Items.Add(file.Name.Replace(file.Extension,""));
-            }
+            refreshMethonList();
 
             timerRefreshQueue = new Timer();
             timerRefreshQueue.Interval = 100;
@@ -1045,18 +1031,14 @@ namespace 金证统一账户测试账户生成器
 
         private void btnLoadRequestXml_Click(object sender, EventArgs e)
         {
+            string path = System.IO.Path.Combine(Environment.CurrentDirectory, Request.xmlPath);
             try
             {
-                Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, false);
-                tbxRequest.Text = Formatter.formatXml(request.xml);
-            }
-            catch (NotImplementedException)
-            {
-                resultForm.Append("不支持的WebService方法：" + cbxMethonList.Text);
+                System.Diagnostics.Process.Start(path);
             }
             catch (Exception ex)
             {
-                resultForm.Append(ex.Message);
+                resultForm.Append(ex.Message + "：" + path);
             }
         }
 
@@ -1088,6 +1070,39 @@ namespace 金证统一账户测试账户生成器
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
+            }
+        }
+
+        private void cbxMethonList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, false);
+                tbxRequest.Text = Formatter.formatXml(request.xml);
+            }
+            catch (NotImplementedException)
+            {
+                resultForm.Append("不支持的WebService方法：" + cbxMethonList.Text);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+        }
+
+        private void btnRefreshMethonList_Click(object sender, EventArgs e)
+        {
+            refreshMethonList();
+        }
+
+        private void refreshMethonList()
+        {
+            cbxMethonList.Items.Clear();
+            // 初始化测试工具下拉列表
+            DirectoryInfo folder = new DirectoryInfo(Request.xmlPath);
+            foreach (FileInfo file in folder.GetFiles("*.xml"))
+            {
+                cbxMethonList.Items.Add(file.Name.Replace(file.Extension, ""));
             }
         }
     }

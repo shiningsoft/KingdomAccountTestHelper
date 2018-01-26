@@ -45,7 +45,6 @@ namespace 金证统一账户测试账户生成器
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPageGetDict = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnQueryDict = new System.Windows.Forms.Button();
@@ -132,6 +131,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxCommonParamKey = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.tpgTest = new System.Windows.Forms.TabPage();
+            this.btnRefreshMethonList = new System.Windows.Forms.Button();
             this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
             this.tbxRequest = new System.Windows.Forms.TextBox();
@@ -141,8 +141,8 @@ namespace 金证统一账户测试账户生成器
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -189,19 +189,10 @@ namespace 金证统一账户测试账户生成器
             // 
             // 关于ToolStripMenuItem
             // 
-            this.关于ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.关于ToolStripMenuItem1});
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             this.关于ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.关于ToolStripMenuItem.Text = "帮助";
+            this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
-            // 
-            // 关于ToolStripMenuItem1
-            // 
-            this.关于ToolStripMenuItem1.Name = "关于ToolStripMenuItem1";
-            this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(100, 22);
-            this.关于ToolStripMenuItem1.Text = "关于";
-            this.关于ToolStripMenuItem1.Click += new System.EventHandler(this.关于ToolStripMenuItem1_Click);
             // 
             // tabPageGetDict
             // 
@@ -1098,6 +1089,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tpgTest
             // 
+            this.tpgTest.Controls.Add(this.btnRefreshMethonList);
             this.tpgTest.Controls.Add(this.cbxMethonList);
             this.tpgTest.Controls.Add(this.tbxResponse);
             this.tpgTest.Controls.Add(this.tbxRequest);
@@ -1112,6 +1104,16 @@ namespace 金证统一账户测试账户生成器
             this.tpgTest.Text = "接口测试工具";
             this.tpgTest.UseVisualStyleBackColor = true;
             // 
+            // btnRefreshMethonList
+            // 
+            this.btnRefreshMethonList.Location = new System.Drawing.Point(558, 6);
+            this.btnRefreshMethonList.Name = "btnRefreshMethonList";
+            this.btnRefreshMethonList.Size = new System.Drawing.Size(100, 23);
+            this.btnRefreshMethonList.TabIndex = 20;
+            this.btnRefreshMethonList.Text = "重新加载列表";
+            this.btnRefreshMethonList.UseVisualStyleBackColor = true;
+            this.btnRefreshMethonList.Click += new System.EventHandler(this.btnRefreshMethonList_Click);
+            // 
             // cbxMethonList
             // 
             this.cbxMethonList.FormattingEnabled = true;
@@ -1119,6 +1121,7 @@ namespace 金证统一账户测试账户生成器
             this.cbxMethonList.Name = "cbxMethonList";
             this.cbxMethonList.Size = new System.Drawing.Size(265, 20);
             this.cbxMethonList.TabIndex = 19;
+            this.cbxMethonList.SelectedIndexChanged += new System.EventHandler(this.cbxMethonList_SelectedIndexChanged);
             // 
             // tbxResponse
             // 
@@ -1140,7 +1143,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnExecute
             // 
-            this.btnExecute.Location = new System.Drawing.Point(452, 6);
+            this.btnExecute.Location = new System.Drawing.Point(346, 6);
             this.btnExecute.Name = "btnExecute";
             this.btnExecute.Size = new System.Drawing.Size(100, 23);
             this.btnExecute.TabIndex = 16;
@@ -1150,11 +1153,11 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnLoadRequestXml
             // 
-            this.btnLoadRequestXml.Location = new System.Drawing.Point(346, 6);
+            this.btnLoadRequestXml.Location = new System.Drawing.Point(452, 6);
             this.btnLoadRequestXml.Name = "btnLoadRequestXml";
             this.btnLoadRequestXml.Size = new System.Drawing.Size(100, 23);
             this.btnLoadRequestXml.TabIndex = 11;
-            this.btnLoadRequestXml.Text = "加载请求参数";
+            this.btnLoadRequestXml.Text = "打开接口目录";
             this.btnLoadRequestXml.UseVisualStyleBackColor = true;
             this.btnLoadRequestXml.Click += new System.EventHandler(this.btnLoadRequestXml_Click);
             // 
@@ -1192,19 +1195,19 @@ namespace 金证统一账户测试账户生成器
             this.currentUser.Size = new System.Drawing.Size(48, 21);
             this.currentUser.Text = "用户：";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            // 
             // requestQueueCount
             // 
             this.requestQueueCount.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
             this.requestQueueCount.Name = "requestQueueCount";
             this.requestQueueCount.Size = new System.Drawing.Size(182, 21);
             this.requestQueueCount.Text = "请求队列长度：0，当前并发：0";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
             // 
             // Main
             // 
@@ -1245,7 +1248,6 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
         private System.Windows.Forms.TabPage tabPageGetDict;
         private System.Windows.Forms.Button btnQueryDict;
         private System.Windows.Forms.TextBox dictName;
@@ -1343,6 +1345,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.TextBox tbxCommonParamValue;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ToolStripStatusLabel requestQueueCount;
+        private System.Windows.Forms.Button btnRefreshMethonList;
     }
 }
 

@@ -861,7 +861,12 @@ namespace Yushen.WebService.KessClient
                 stopWatch.Start();
 
                 // 调用WebService接口，获取返回值
-                string result = (string)this.kessClientType.GetMethod(request.methonName).Invoke(kessClientList[index].executor, new object[] { request.xml });
+                System.Reflection.MethodInfo method = this.kessClientType.GetMethod(request.methonName);
+                if (method == null)
+                {
+                    throw new Exception("“" + request.methonName + "”接口不存在！");
+                }
+                string result = (string)method.Invoke(kessClientList[index].executor, new object[] { request.xml });
                 
                 //获取stopWatch从开始到现在的时间差，单位是毫秒
                 long diff = stopWatch.ElapsedMilliseconds;
