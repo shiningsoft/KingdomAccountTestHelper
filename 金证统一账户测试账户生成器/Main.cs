@@ -87,7 +87,7 @@ namespace 金证统一账户测试账户生成器
             btnQueryDict.Enabled = true;
         }
 
-        private void Main_Load(object sender, EventArgs e)
+        private async void Main_Load(object sender, EventArgs e)
         {
             // 初始化风险评级选项
             // RiskTest riskTest = new RiskTest();
@@ -149,9 +149,25 @@ namespace 金证统一账户测试账户生成器
             // 生成随机用户信息
             reCreateUserInfo();
 
+            toolStripStatusLabelCurrentServer.Text = "当前环境：获取环境信息中，请稍候......";
+
             // 更新状态栏信息
+            string serverName = "";
+            try
+            {
+                serverName = await kess.getSingleCommonParamValue("SERVER_NAME");
+                if (serverName.IndexOf("测试")==-1)
+                {
+                    resultForm.Append("服务器公共参数（SERVER_NAME）中未检测到目标字符“测试”，请确认是否在测试环境中运行！");
+                }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+
             Uri uri = new Uri(Settings.Default.webservice);
-            toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port;
+            toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + serverName;
             currentUser.Text = "用户：" + Settings.Default.操作员代码;
 
             // 初始化测试工具下拉列表
@@ -1065,7 +1081,7 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
-                tbxCommonParamValue.Text = await kess.getSingleCommonParamValue(tbxCommonParamKey.Text.Trim());
+                tbxCommonParamValue.Text = await kess.getSingleCommonParamValue(tbxCommonParamKey.Text.Trim().ToUpper());
             }
             catch (Exception ex)
             {
