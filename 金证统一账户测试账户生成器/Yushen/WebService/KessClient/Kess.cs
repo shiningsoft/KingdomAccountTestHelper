@@ -1206,5 +1206,199 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return true;
         }
+
+        /// <summary>
+        /// 2.58 用户扩展信息维护
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码</param>
+        /// <param name="OPERATION_TYPE">操作类型0—增加，1—修改，2—删除。</param>
+        /// <param name="WORKPLACE">工作地点</param>
+        /// <param name="INCOME">家庭收入</param>
+        /// <param name="TRADE">行业类型DD-[CIF_TRADE]</param>
+        /// <param name="VOCATION">职业通过数据指点查询具体值</param>
+        /// <param name="PRACTICE_DATE">从业日期</param>
+        /// <param name="INDUS_TYPE">行业代码DD-[INDUS_TYPE]</param>
+        /// <param name="CERTIFICATE_TYPE">资格证书种类</param>
+        /// <param name="CERTIFICATE_NO">资格证书号</param>
+        /// <param name="OCCU_TYPE">职业代码</param>
+        /// <param name="POSITION">职位</param>
+        /// <param name="WORKING_TEL">公司电话</param>
+        /// <param name="WORKING_FAX">公司传真</param>
+        /// <param name="INDUS_GB">国标行业大类</param>
+        /// <param name="INDUS_GB_SUB">国标行业子类</param>
+        /// <param name="OCCU_GB">国标职业大类</param>
+        /// <param name="OCCU_GB_SUB">国标职业子类</param>
+        /// <param name="OCCUPATION">手输职业</param>
+        /// <param name="LINKMAN_NO">联系人编号</param>
+        /// <param name="LINKMAN">第二联系人姓名</param>
+        /// <param name="LINKMAN_ID_TYPE">证件类别</param>
+        /// <param name="LINKMAN_ID">证件号码</param>
+        /// <param name="LINKMAN_TEL">第二联系人电话</param>
+        /// <param name="LINKMAN_EMAIL">EMAIL地址</param>
+        /// <param name="LINKMAN_ADDR">通信地址</param>
+        /// <param name="LINKMAN_ZIP">邮政编码</param>
+        /// <param name="IME_TYPE"></param>
+        /// <param name="IME_NAME"></param>
+        /// <param name="IS_SALE_CUST">营销确认</param>
+        /// <param name="DELIVER_FLAG">邮寄对账单</param>
+        /// <param name="SMS_SERVICE">短信服务</param>
+        /// <param name="WLT_CARD_NO">卡号</param>
+        /// <param name="COMMENDER_NAME">推荐人姓名</param>
+        /// <param name="COMMENDER_ID_TYPE">推荐人证件类型</param>
+        /// <param name="COMMENDER_ID_NO">推荐人证件号码</param>
+        /// <param name="EN_PRODUCT_CODE">拥有本公司以外的产品</param>
+        /// <param name="QUALITY_TYPE">品质类型</param>
+        /// <param name="PRIVACY_LEVEL">隐私级别DD[PRIVACY_LEVEL]</param>
+        /// <param name="OPEN_ORDER_ID">开户合同号</param>
+        /// <param name="BSB_ID_TYPE">签约客户证件类型</param>
+        /// <param name="BSB_ID_CODE">签约客户证件号码</param>
+        /// <param name="BSB_ID_EXP_DATE">签约证件有效期</param>
+        /// <param name="BSB_USER_FNAME">签约客户姓名</param>
+        /// <param name="APPT_SOURCE">预约来源</param>
+        /// <param name="ACCT_MANAGER">客户经理</param>
+        /// <param name="LINGKINDS_ORDER">首选联系人方式</param>
+        /// <param name="FISL_EMAIL">信用电邮</param>
+        /// <param name="SALESSTAFF_CODE">营销人员编码</param>
+        /// <param name="SALESSTAFF_NAME">营销人员姓名</param>
+        /// <param name="OTHER_REMARK">其他备注</param>
+        /// <param name="SPEC_REMARK">操作/特殊备注</param>
+        /// <returns></returns>
+        async public Task<bool> mdfUserExtInfo(
+            string CUST_CODE = "", //客户代码 
+            string OPERATION_TYPE = "", //操作类型0—增加，1—修改，2—删除。 
+            string WORKPLACE = "", //工作地点 
+            string INCOME = "", //家庭收入 
+            string TRADE = "", //行业类型DD-[CIF_TRADE] 
+            string VOCATION = "", //职业通过数据指点查询具体值 
+            string PRACTICE_DATE = "", //从业日期 
+            string INDUS_TYPE = "", //行业代码DD-[INDUS_TYPE] 
+            string CERTIFICATE_TYPE = "", //资格证书种类 
+            string CERTIFICATE_NO = "", //资格证书号 
+            string OCCU_TYPE = "", //职业代码 
+            string POSITION = "", //职位 
+            string WORKING_TEL = "", //公司电话 
+            string WORKING_FAX = "", //公司传真 
+            string INDUS_GB = "", //国标行业大类 
+            string INDUS_GB_SUB = "", //国标行业子类 
+            string OCCU_GB = "", //国标职业大类 
+            string OCCU_GB_SUB = "", //国标职业子类 
+            string OCCUPATION = "", //手输职业 
+            string LINKMAN_NO = "", //联系人编号 
+            string LINKMAN = "", //第二联系人姓名 
+            string LINKMAN_ID_TYPE = "", //证件类别 
+            string LINKMAN_ID = "", //证件号码 
+            string LINKMAN_TEL = "", //第二联系人电话 
+            string LINKMAN_EMAIL = "", //EMAIL地址 
+            string LINKMAN_ADDR = "", //通信地址 
+            string LINKMAN_ZIP = "", //邮政编码 
+            string IME_TYPE = "", // 
+            string IME_NAME = "", // 
+            string IS_SALE_CUST = "", //营销确认 
+            string DELIVER_FLAG = "", //邮寄对账单 
+            string SMS_SERVICE = "", //短信服务 
+            string WLT_CARD_NO = "", //卡号 
+            string COMMENDER_NAME = "", //推荐人姓名 
+            string COMMENDER_ID_TYPE = "", //推荐人证件类型 
+            string COMMENDER_ID_NO = "", //推荐人证件号码 
+            string EN_PRODUCT_CODE = "", //拥有本公司以外的产品 
+            string QUALITY_TYPE = "", //品质类型 
+            string PRIVACY_LEVEL = "", //隐私级别DD[PRIVACY_LEVEL] 
+            string OPEN_ORDER_ID = "", //开户合同号 
+            string BSB_ID_TYPE = "", //签约客户证件类型 
+            string BSB_ID_CODE = "", //签约客户证件号码 
+            string BSB_ID_EXP_DATE = "", //签约证件有效期 
+            string BSB_USER_FNAME = "", //签约客户姓名 
+            string APPT_SOURCE = "", //预约来源 
+            string ACCT_MANAGER = "", //客户经理 
+            string LINGKINDS_ORDER = "", //首选联系人方式 
+            string FISL_EMAIL = "", //信用电邮 
+            string SALESSTAFF_CODE = "", //营销人员编码 
+            string SALESSTAFF_NAME = "", //营销人员姓名 
+            string OTHER_REMARK = "", //其他备注 
+            string SPEC_REMARK = "" //操作/特殊备注 
+        )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户号不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (OPERATION_TYPE == "")
+            {
+                string message = "操作类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "mdfUserExtInfo");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码
+            request.setAttr("OPERATION_TYPE", OPERATION_TYPE); //操作类型0—增加，1—修改，2—删除。
+            request.setAttr("WORKPLACE", WORKPLACE); //工作地点
+            request.setAttr("INCOME", INCOME); //家庭收入
+            request.setAttr("TRADE", TRADE); //行业类型DD-[CIF_TRADE]
+            request.setAttr("VOCATION", VOCATION); //职业通过数据指点查询具体值
+            request.setAttr("PRACTICE_DATE", PRACTICE_DATE); //从业日期
+            request.setAttr("INDUS_TYPE", INDUS_TYPE); //行业代码DD-[INDUS_TYPE]
+            request.setAttr("CERTIFICATE_TYPE", CERTIFICATE_TYPE); //资格证书种类
+            request.setAttr("CERTIFICATE_NO", CERTIFICATE_NO); //资格证书号
+            request.setAttr("OCCU_TYPE", OCCU_TYPE); //职业代码
+            request.setAttr("POSITION", POSITION); //职位
+            request.setAttr("WORKING_TEL", WORKING_TEL); //公司电话
+            request.setAttr("WORKING_FAX", WORKING_FAX); //公司传真
+            request.setAttr("INDUS_GB", INDUS_GB); //国标行业大类
+            request.setAttr("INDUS_GB_SUB", INDUS_GB_SUB); //国标行业子类
+            request.setAttr("OCCU_GB", OCCU_GB); //国标职业大类
+            request.setAttr("OCCU_GB_SUB", OCCU_GB_SUB); //国标职业子类
+            request.setAttr("OCCUPATION", OCCUPATION); //手输职业
+            request.setAttr("LINKMAN_NO", LINKMAN_NO); //联系人编号
+            request.setAttr("LINKMAN", LINKMAN); //第二联系人姓名
+            request.setAttr("LINKMAN_ID_TYPE", LINKMAN_ID_TYPE); //证件类别
+            request.setAttr("LINKMAN_ID", LINKMAN_ID); //证件号码
+            request.setAttr("LINKMAN_TEL", LINKMAN_TEL); //第二联系人电话
+            request.setAttr("LINKMAN_EMAIL", LINKMAN_EMAIL); //EMAIL地址
+            request.setAttr("LINKMAN_ADDR", LINKMAN_ADDR); //通信地址
+            request.setAttr("LINKMAN_ZIP", LINKMAN_ZIP); //邮政编码
+            request.setAttr("IS_SALE_CUST", IS_SALE_CUST); //营销确认
+            request.setAttr("DELIVER_FLAG", DELIVER_FLAG); //邮寄对账单
+            request.setAttr("SMS_SERVICE", SMS_SERVICE); //短信服务
+            request.setAttr("WLT_CARD_NO", WLT_CARD_NO); //卡号
+            request.setAttr("COMMENDER_NAME", COMMENDER_NAME); //推荐人姓名
+            request.setAttr("COMMENDER_ID_TYPE", COMMENDER_ID_TYPE); //推荐人证件类型
+            request.setAttr("COMMENDER_ID_NO", COMMENDER_ID_NO); //推荐人证件号码
+            request.setAttr("EN_PRODUCT_CODE", EN_PRODUCT_CODE); //拥有本公司以外的产品
+            request.setAttr("QUALITY_TYPE", QUALITY_TYPE); //品质类型
+            request.setAttr("PRIVACY_LEVEL", PRIVACY_LEVEL); //隐私级别DD[PRIVACY_LEVEL]
+            request.setAttr("OPEN_ORDER_ID", OPEN_ORDER_ID); //开户合同号
+            request.setAttr("BSB_ID_TYPE", BSB_ID_TYPE); //签约客户证件类型
+            request.setAttr("BSB_ID_CODE", BSB_ID_CODE); //签约客户证件号码
+            request.setAttr("BSB_ID_EXP_DATE", BSB_ID_EXP_DATE); //签约证件有效期
+            request.setAttr("BSB_USER_FNAME", BSB_USER_FNAME); //签约客户姓名
+            request.setAttr("APPT_SOURCE", APPT_SOURCE); //预约来源
+            request.setAttr("ACCT_MANAGER", ACCT_MANAGER); //客户经理
+            request.setAttr("LINGKINDS_ORDER", LINGKINDS_ORDER); //首选联系人方式
+            request.setAttr("FISL_EMAIL", FISL_EMAIL); //信用电邮
+            request.setAttr("SALESSTAFF_CODE", SALESSTAFF_CODE); //营销人员编码
+            request.setAttr("SALESSTAFF_NAME", SALESSTAFF_NAME); //营销人员姓名
+            request.setAttr("OTHER_REMARK", OTHER_REMARK); //其他备注
+            request.setAttr("SPEC_REMARK", SPEC_REMARK); //操作/特殊备注
+
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return true;
+        }
     }
 }

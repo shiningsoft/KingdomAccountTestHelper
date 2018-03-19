@@ -262,8 +262,12 @@ namespace 金证统一账户测试账户生成器
                 user.occu_type = occu_type.SelectedValue.ToString();
                 if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.其他)
                 {
+                    if (cbxOccupation.Text == "")
+                    {
+                        throw new Exception("当职业为其他时，手输职业不能为空！");
+                    }
                     // 职业为其他时保存手输职业
-                    user.occupation = cbxOccupation.SelectedValue.ToString();
+                    user.occupation = cbxOccupation.Text;
                 }
                 user.education = education.SelectedValue.ToString();
                 user.bank_code = bank_code.SelectedValue.ToString();
@@ -628,6 +632,13 @@ namespace 金证统一账户测试账户生成器
                 user.user_code = user.cust_code;
                 resultForm.Append("客户号开立成功：" + user.cust_code);
                 tbxCustCode.Text = user.cust_code;
+
+                if (user.occupation!="")
+                {
+                    await kess.mdfUserExtInfo(CUST_CODE: user.cust_code, OPERATION_TYPE: "0",OCCUPATION: user.occupation);
+                    resultForm.Append("手输职业更新成功：" + user.occupation);
+                }
+
             }
             catch (Exception ex)
             {

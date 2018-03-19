@@ -86,7 +86,7 @@ namespace Yushen.WebService.KessClient
                 Console.WriteLine(match);
             }
 
-            str = regex.Replace(str, "request.setAttr(\"$2\", $2), //$1");
+            str = regex.Replace(str, "request.setAttr(\"$2\", $2); //$1");
 
             return str;
         }

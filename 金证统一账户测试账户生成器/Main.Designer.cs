@@ -370,7 +370,7 @@ namespace 金证统一账户测试账户生成器
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(65, 12);
             this.label29.TabIndex = 82;
-            this.label29.Text = "其他职业：";
+            this.label29.Text = "手输职业：";
             this.label29.Visible = false;
             // 
             // cbxShortIdNo
@@ -1335,6 +1335,7 @@ namespace 金证统一账户测试账户生成器
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
             this.Name = "Main";
