@@ -65,7 +65,7 @@ namespace Yushen.WebService.KessClient
                 Console.WriteLine(match);
             }
 
-            str = regex.Replace(str, "string $2 = \"\", //$1 \n");
+            str = regex.Replace(str, "string $2 = \"\", //$1");
 
             return str;
         }
