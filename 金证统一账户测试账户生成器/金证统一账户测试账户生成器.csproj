@@ -24,7 +24,7 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>36</ApplicationRevision>
+    <ApplicationRevision>37</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -137,7 +137,7 @@
     <Compile Include="Yushen\WebService\KessClient\Response.cs" />
     <Compile Include="Yushen\WebService\KessClient\Request.cs" />
     <Compile Include="Yushen\WebService\KessClient\Kess.cs" />
-    <Compile Include="Yushen\WebService\KessClient\xmlFormatter.cs" />
+    <Compile Include="Yushen\Util\xmlFormatter.cs" />
     <Compile Include="Yushen\WebService\Webservice.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>

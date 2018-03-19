@@ -866,7 +866,7 @@ namespace 金证统一账户测试账户生成器
             this.id_exp_date.Name = "id_exp_date";
             this.id_exp_date.Size = new System.Drawing.Size(200, 21);
             this.id_exp_date.TabIndex = 5;
-            this.id_exp_date.Value = new System.DateTime(2020, 12, 31, 0, 0, 0, 0);
+            this.id_exp_date.Value = new System.DateTime(2027, 1, 1, 0, 0, 0, 0);
             // 
             // id_beg_date
             // 
