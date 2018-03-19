@@ -1537,6 +1537,25 @@ namespace Yushen.WebService.KessClient
             }
         }
         /// <summary>
+        ///（私有）手输职业（非必传）
+        /// </summary>
+        private string _occupation = "";
+        /// <summary>
+        ///当前职业（非必传）
+        /// </summary>
+        public string occupation
+        {
+            get
+            {
+                return _occupation;
+            }
+
+            set
+            {
+                _occupation = value;
+            }
+        }
+        /// <summary>
         ///（私有）手机校验标识（非必传）
         /// </summary>
         private string _tel_chk_flag = "";

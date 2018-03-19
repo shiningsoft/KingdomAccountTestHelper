@@ -51,6 +51,8 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.cbxOccupation = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
             this.cbxShortIdNo = new System.Windows.Forms.CheckBox();
             this.btnBindSHAcct = new System.Windows.Forms.Button();
             this.cbxLongTerm = new System.Windows.Forms.CheckBox();
@@ -143,6 +145,13 @@ namespace 金证统一账户测试账户生成器
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tbXmlStr = new System.Windows.Forms.TextBox();
+            this.convert2params = new System.Windows.Forms.Button();
+            this.convert2setAttr = new System.Windows.Forms.Button();
+            this.convert2memo = new System.Windows.Forms.Button();
+            this.btnPreProccess = new System.Windows.Forms.Button();
+            this.btnSaveXmlStr = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -151,6 +160,7 @@ namespace 金证统一账户测试账户生成器
             this.tpgCommonParams.SuspendLayout();
             this.tpgTest.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -254,6 +264,8 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.cbxOccupation);
+            this.tabPage1.Controls.Add(this.label29);
             this.tabPage1.Controls.Add(this.cbxShortIdNo);
             this.tabPage1.Controls.Add(this.btnBindSHAcct);
             this.tabPage1.Controls.Add(this.cbxLongTerm);
@@ -333,6 +345,33 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // cbxOccupation
+            // 
+            this.cbxOccupation.FormattingEnabled = true;
+            this.cbxOccupation.Items.AddRange(new object[] {
+            "专业技术人员",
+            "一般工商业、服务业人员",
+            "农、林、牧、渔、水利业生产人员",
+            "生产、运输设备操作人员及有关人员",
+            "自由职业者",
+            "艺术品收藏、拍卖等从业人员",
+            "娱乐场所、博彩、影视等从业人员"});
+            this.cbxOccupation.Location = new System.Drawing.Point(634, 120);
+            this.cbxOccupation.Name = "cbxOccupation";
+            this.cbxOccupation.Size = new System.Drawing.Size(136, 20);
+            this.cbxOccupation.TabIndex = 83;
+            this.cbxOccupation.Visible = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(563, 122);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(65, 12);
+            this.label29.TabIndex = 82;
+            this.label29.Text = "其他职业：";
+            this.label29.Visible = false;
             // 
             // cbxShortIdNo
             // 
@@ -545,6 +584,7 @@ namespace 金证统一账户测试账户生成器
             this.occu_type.Name = "occu_type";
             this.occu_type.Size = new System.Drawing.Size(100, 20);
             this.occu_type.TabIndex = 14;
+            this.occu_type.SelectedIndexChanged += new System.EventHandler(this.occu_type_SelectedIndexChanged);
             // 
             // nationality
             // 
@@ -1022,6 +1062,7 @@ namespace 金证统一账户测试账户生成器
             this.tabControl1.Controls.Add(this.tabPageGetDict);
             this.tabControl1.Controls.Add(this.tpgCommonParams);
             this.tabControl1.Controls.Add(this.tpgTest);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 28);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1209,6 +1250,83 @@ namespace 金证统一账户测试账户生成器
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnSaveXmlStr);
+            this.tabPage2.Controls.Add(this.btnPreProccess);
+            this.tabPage2.Controls.Add(this.convert2memo);
+            this.tabPage2.Controls.Add(this.convert2setAttr);
+            this.tabPage2.Controls.Add(this.convert2params);
+            this.tabPage2.Controls.Add(this.tbXmlStr);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(918, 454);
+            this.tabPage2.TabIndex = 5;
+            this.tabPage2.Text = "XML格式化工具";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // tbXmlStr
+            // 
+            this.tbXmlStr.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbXmlStr.Location = new System.Drawing.Point(6, 36);
+            this.tbXmlStr.Multiline = true;
+            this.tbXmlStr.Name = "tbXmlStr";
+            this.tbXmlStr.Size = new System.Drawing.Size(906, 412);
+            this.tbXmlStr.TabIndex = 0;
+            // 
+            // convert2params
+            // 
+            this.convert2params.Location = new System.Drawing.Point(245, 7);
+            this.convert2params.Name = "convert2params";
+            this.convert2params.Size = new System.Drawing.Size(94, 23);
+            this.convert2params.TabIndex = 1;
+            this.convert2params.Text = "转成入参";
+            this.convert2params.UseVisualStyleBackColor = true;
+            this.convert2params.Click += new System.EventHandler(this.convert2params_Click);
+            // 
+            // convert2setAttr
+            // 
+            this.convert2setAttr.Location = new System.Drawing.Point(345, 7);
+            this.convert2setAttr.Name = "convert2setAttr";
+            this.convert2setAttr.Size = new System.Drawing.Size(94, 23);
+            this.convert2setAttr.TabIndex = 2;
+            this.convert2setAttr.Text = "转成setAttr";
+            this.convert2setAttr.UseVisualStyleBackColor = true;
+            this.convert2setAttr.Click += new System.EventHandler(this.convert2setAttr_Click);
+            // 
+            // convert2memo
+            // 
+            this.convert2memo.Location = new System.Drawing.Point(445, 7);
+            this.convert2memo.Name = "convert2memo";
+            this.convert2memo.Size = new System.Drawing.Size(94, 23);
+            this.convert2memo.TabIndex = 3;
+            this.convert2memo.Text = "转成注释";
+            this.convert2memo.UseVisualStyleBackColor = true;
+            this.convert2memo.Click += new System.EventHandler(this.convert2memo_Click);
+            // 
+            // btnPreProccess
+            // 
+            this.btnPreProccess.Location = new System.Drawing.Point(6, 7);
+            this.btnPreProccess.Name = "btnPreProccess";
+            this.btnPreProccess.Size = new System.Drawing.Size(94, 23);
+            this.btnPreProccess.TabIndex = 4;
+            this.btnPreProccess.Text = "预处理";
+            this.btnPreProccess.UseVisualStyleBackColor = true;
+            this.btnPreProccess.Click += new System.EventHandler(this.btnPreProccess_Click);
+            // 
+            // btnSaveXmlStr
+            // 
+            this.btnSaveXmlStr.Location = new System.Drawing.Point(106, 7);
+            this.btnSaveXmlStr.Name = "btnSaveXmlStr";
+            this.btnSaveXmlStr.Size = new System.Drawing.Size(94, 23);
+            this.btnSaveXmlStr.TabIndex = 5;
+            this.btnSaveXmlStr.Text = "保存";
+            this.btnSaveXmlStr.UseVisualStyleBackColor = true;
+            this.btnSaveXmlStr.Click += new System.EventHandler(this.btnSaveXmlStr_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1237,6 +1355,8 @@ namespace 金证统一账户测试账户生成器
             this.tpgTest.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1346,6 +1466,15 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ToolStripStatusLabel requestQueueCount;
         private System.Windows.Forms.Button btnRefreshMethonList;
+        private System.Windows.Forms.ComboBox cbxOccupation;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button convert2setAttr;
+        private System.Windows.Forms.Button convert2params;
+        private System.Windows.Forms.TextBox tbXmlStr;
+        private System.Windows.Forms.Button convert2memo;
+        private System.Windows.Forms.Button btnPreProccess;
+        private System.Windows.Forms.Button btnSaveXmlStr;
     }
 }
 

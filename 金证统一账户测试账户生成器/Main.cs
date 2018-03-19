@@ -21,6 +21,7 @@ namespace 金证统一账户测试账户生成器
         AboutBox aboutBox;
         frmSettings frmSettings;
         Timer timerRefreshQueue;
+        xmlFormatter xmlFormatter = new xmlFormatter();
 
         public Main()
         {
@@ -131,6 +132,13 @@ namespace 金证统一账户测试账户生成器
             cbxOpenType.ValueMember = "value";
             cbxOpenType.DataSource = openTypeList.DataTable;
 
+            /*
+            Dict.OCCUPATION occupationList = new Dict.OCCUPATION();
+            cbxOccupation.DisplayMember = "name";
+            cbxOccupation.ValueMember = "value";
+            cbxOccupation.DataSource = occupationList.DataTable;
+            */
+
             dtpCybSignDate.Value = DateTime.Now;
 
             try
@@ -215,6 +223,7 @@ namespace 金证统一账户测试账户生成器
             // bank_code.SelectedIndex = Generator.CreateRandomInteger(0, bank_code.Items.Count);   // 随机选中三方银行
             bank_code.SelectedValue = Dict.BankCode.工商银行;
             cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
+            cbxOccupation.ResetText();
 
             try
             {
@@ -251,6 +260,11 @@ namespace 金证统一账户测试账户生成器
                 user.password = password.Text.Trim();
                 user.mobile_tel = mobile_tel.Text.Trim();
                 user.occu_type = occu_type.SelectedValue.ToString();
+                if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.其他)
+                {
+                    // 职业为其他时保存手输职业
+                    user.occupation = cbxOccupation.SelectedValue.ToString();
+                }
                 user.education = education.SelectedValue.ToString();
                 user.bank_code = bank_code.SelectedValue.ToString();
                 user.zip_code = zip_code.Text.Trim();
@@ -1123,6 +1137,50 @@ namespace 金证统一账户测试账户生成器
             {
                 cbxMethonList.Items.Add(file.Name.Replace(file.Extension, ""));
             }
+        }
+
+        /// <summary>
+        /// 选中其他职业时，显示手输职业下拉框
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void occu_type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.其他)
+            {
+                label29.Visible = true;
+                cbxOccupation.Visible = true;
+            }
+            else
+            {
+                label29.Visible = false;
+                cbxOccupation.Visible = false;
+            }
+        }
+
+        private void btnPreProccess_Click(object sender, EventArgs e)
+        {
+            tbXmlStr.Text = xmlFormatter.preProccess(tbXmlStr.Text);
+        }
+
+        private void convert2params_Click(object sender, EventArgs e)
+        {
+            tbXmlStr.Text = xmlFormatter.getParams();
+        }
+
+        private void convert2setAttr_Click(object sender, EventArgs e)
+        {
+            tbXmlStr.Text = xmlFormatter.getSetAttr();
+        }
+
+        private void convert2memo_Click(object sender, EventArgs e)
+        {
+            tbXmlStr.Text = xmlFormatter.getMemo();
+        }
+
+        private void btnSaveXmlStr_Click(object sender, EventArgs e)
+        {
+            xmlFormatter.xmlstr = tbXmlStr.Text;
         }
     }
 }

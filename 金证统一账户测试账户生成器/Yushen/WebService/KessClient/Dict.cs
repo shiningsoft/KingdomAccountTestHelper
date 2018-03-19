@@ -82,7 +82,7 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
-    /// 
+    /// 资产账户状态
     /// </summary>
     class ACCT_STATUS : Dict
     {
@@ -93,6 +93,20 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 注销 = "04";
         public const string 禁买 = "05";
         public const string 禁卖 = "06";
+    }
+
+    /// <summary>
+    /// 手输职业
+    /// </summary>
+    class OCCUPATION : Dict
+    {
+        public const string 专业技术人员 = "专业技术人员";
+        public const string 一般工商业服务业人员 = "一般工商业、服务业人员";
+        public const string 农林牧渔水利业生产人员 = "农、林、牧、渔、水利业生产人员";
+        public const string 生产运输设备操作人员及有关人员 = "生产、运输设备操作人员及有关人员";
+        public const string 自由职业者 = "自由职业者";
+        public const string 艺术品收藏拍卖等从业人员 = "艺术品收藏、拍卖等从业人员";
+        public const string 娱乐场所博彩影视等从业人员 = "娱乐场所、博彩、影视等从业人员";
     }
 
     /// <summary>

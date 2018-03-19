@@ -130,7 +130,9 @@ namespace Yushen.WebService.KessClient
             if (response.length == 0 || await this.getSingleCommonParamValue("OPEN_CUST_CHECK_ID_FLAG") == "1")
             {
                 response = await this.openCustomer(user);
-                return response.getValue("USER_CODE");
+                string usercode = response.getValue("USER_CODE");
+                // response = await this;
+                return usercode;
             }
             else
             {
@@ -1038,6 +1040,7 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return response;
         }
+
         /// <summary>
         /// 证券账户指定交易
         /// </summary>
