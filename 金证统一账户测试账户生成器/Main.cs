@@ -90,6 +90,16 @@ namespace 金证统一账户测试账户生成器
 
         private async void Main_Load(object sender, EventArgs e)
         {
+            try
+            {
+                tsslVersion.Text = "当前版本：" + System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
+            }
+            catch (System.Deployment.Application.InvalidDeploymentException ex)
+            {
+                tsslVersion.Text = "未部署状态，无法获取当前版本";
+                Console.WriteLine(ex.Message.ToString());
+            }
+
             // 初始化风险评级选项
             // RiskTest riskTest = new RiskTest();
             Dict.RiskTestLevel levelList = new Dict.RiskTestLevel();
@@ -632,17 +642,21 @@ namespace 金证统一账户测试账户生成器
                 user.user_code = user.cust_code;
                 resultForm.Append("客户号开立成功：" + user.cust_code);
                 tbxCustCode.Text = user.cust_code;
-
-                if (user.occupation!="")
-                {
-                    await kess.mdfUserExtInfo(CUST_CODE: user.cust_code, OPERATION_TYPE: "0",OCCUPATION: user.occupation);
-                    resultForm.Append("手输职业更新成功：" + user.occupation);
-                }
-
             }
             catch (Exception ex)
             {
                 resultForm.Append("客户号开立失败：" + ex.Message);
+            }
+
+            // 更新职业
+            try
+            {
+                await kess.mdfUserExtInfo(CUST_CODE: user.cust_code, OPERATION_TYPE: "0", OCCU_TYPE: user.occu_type, OCCUPATION: user.occupation);
+                resultForm.Append("用户扩展信息更新成功！");
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("用户扩展信息更新失败！" + ex.Message);
             }
         }
 

@@ -156,7 +156,7 @@ namespace Yushen.WebService.KessClient
                 {
                     user.cuacct_code = user.cust_code;
                 }
-                response = await this.openCuacct(user.cust_code,"z");
+                response = await this.openCuacct(USER_CODE: user.cust_code, CUACCT_CLS:"z");
             }
             else if (response.length > 0)
             {

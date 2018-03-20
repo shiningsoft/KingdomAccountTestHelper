@@ -140,18 +140,19 @@ namespace 金证统一账户测试账户生成器
             this.btnExecute = new System.Windows.Forms.Button();
             this.btnLoadRequestXml = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnSaveXmlStr = new System.Windows.Forms.Button();
+            this.btnPreProccess = new System.Windows.Forms.Button();
+            this.convert2memo = new System.Windows.Forms.Button();
+            this.convert2setAttr = new System.Windows.Forms.Button();
+            this.convert2params = new System.Windows.Forms.Button();
+            this.tbXmlStr = new System.Windows.Forms.TextBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tbXmlStr = new System.Windows.Forms.TextBox();
-            this.convert2params = new System.Windows.Forms.Button();
-            this.convert2setAttr = new System.Windows.Forms.Button();
-            this.convert2memo = new System.Windows.Forms.Button();
-            this.btnPreProccess = new System.Windows.Forms.Button();
-            this.btnSaveXmlStr = new System.Windows.Forms.Button();
+            this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -159,8 +160,8 @@ namespace 金证统一账户测试账户生成器
             this.tabControl1.SuspendLayout();
             this.tpgCommonParams.SuspendLayout();
             this.tpgTest.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip
@@ -1211,12 +1212,90 @@ namespace 金证统一账户测试账户生成器
             this.label26.TabIndex = 12;
             this.label26.Text = "接口名：";
             // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.btnSaveXmlStr);
+            this.tabPage2.Controls.Add(this.btnPreProccess);
+            this.tabPage2.Controls.Add(this.convert2memo);
+            this.tabPage2.Controls.Add(this.convert2setAttr);
+            this.tabPage2.Controls.Add(this.convert2params);
+            this.tabPage2.Controls.Add(this.tbXmlStr);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(918, 454);
+            this.tabPage2.TabIndex = 5;
+            this.tabPage2.Text = "XML格式化工具";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // btnSaveXmlStr
+            // 
+            this.btnSaveXmlStr.Location = new System.Drawing.Point(106, 7);
+            this.btnSaveXmlStr.Name = "btnSaveXmlStr";
+            this.btnSaveXmlStr.Size = new System.Drawing.Size(94, 23);
+            this.btnSaveXmlStr.TabIndex = 5;
+            this.btnSaveXmlStr.Text = "保存";
+            this.btnSaveXmlStr.UseVisualStyleBackColor = true;
+            this.btnSaveXmlStr.Click += new System.EventHandler(this.btnSaveXmlStr_Click);
+            // 
+            // btnPreProccess
+            // 
+            this.btnPreProccess.Location = new System.Drawing.Point(6, 7);
+            this.btnPreProccess.Name = "btnPreProccess";
+            this.btnPreProccess.Size = new System.Drawing.Size(94, 23);
+            this.btnPreProccess.TabIndex = 4;
+            this.btnPreProccess.Text = "预处理";
+            this.btnPreProccess.UseVisualStyleBackColor = true;
+            this.btnPreProccess.Click += new System.EventHandler(this.btnPreProccess_Click);
+            // 
+            // convert2memo
+            // 
+            this.convert2memo.Location = new System.Drawing.Point(445, 7);
+            this.convert2memo.Name = "convert2memo";
+            this.convert2memo.Size = new System.Drawing.Size(94, 23);
+            this.convert2memo.TabIndex = 3;
+            this.convert2memo.Text = "转成注释";
+            this.convert2memo.UseVisualStyleBackColor = true;
+            this.convert2memo.Click += new System.EventHandler(this.convert2memo_Click);
+            // 
+            // convert2setAttr
+            // 
+            this.convert2setAttr.Location = new System.Drawing.Point(345, 7);
+            this.convert2setAttr.Name = "convert2setAttr";
+            this.convert2setAttr.Size = new System.Drawing.Size(94, 23);
+            this.convert2setAttr.TabIndex = 2;
+            this.convert2setAttr.Text = "转成setAttr";
+            this.convert2setAttr.UseVisualStyleBackColor = true;
+            this.convert2setAttr.Click += new System.EventHandler(this.convert2setAttr_Click);
+            // 
+            // convert2params
+            // 
+            this.convert2params.Location = new System.Drawing.Point(245, 7);
+            this.convert2params.Name = "convert2params";
+            this.convert2params.Size = new System.Drawing.Size(94, 23);
+            this.convert2params.TabIndex = 1;
+            this.convert2params.Text = "转成入参";
+            this.convert2params.UseVisualStyleBackColor = true;
+            this.convert2params.Click += new System.EventHandler(this.convert2params_Click);
+            // 
+            // tbXmlStr
+            // 
+            this.tbXmlStr.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbXmlStr.Location = new System.Drawing.Point(6, 36);
+            this.tbXmlStr.Multiline = true;
+            this.tbXmlStr.Name = "tbXmlStr";
+            this.tbXmlStr.Size = new System.Drawing.Size(906, 412);
+            this.tbXmlStr.TabIndex = 0;
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabelCurrentServer,
             this.currentUser,
-            this.requestQueueCount});
+            this.requestQueueCount,
+            this.tsslVersion});
             this.statusStrip1.Location = new System.Drawing.Point(0, 507);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(950, 26);
@@ -1250,82 +1329,13 @@ namespace 金证统一账户测试账户生成器
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
-            // tabPage2
+            // tsslVersion
             // 
-            this.tabPage2.Controls.Add(this.btnSaveXmlStr);
-            this.tabPage2.Controls.Add(this.btnPreProccess);
-            this.tabPage2.Controls.Add(this.convert2memo);
-            this.tabPage2.Controls.Add(this.convert2setAttr);
-            this.tabPage2.Controls.Add(this.convert2params);
-            this.tabPage2.Controls.Add(this.tbXmlStr);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(918, 454);
-            this.tabPage2.TabIndex = 5;
-            this.tabPage2.Text = "XML格式化工具";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // tbXmlStr
-            // 
-            this.tbXmlStr.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbXmlStr.Location = new System.Drawing.Point(6, 36);
-            this.tbXmlStr.Multiline = true;
-            this.tbXmlStr.Name = "tbXmlStr";
-            this.tbXmlStr.Size = new System.Drawing.Size(906, 412);
-            this.tbXmlStr.TabIndex = 0;
-            // 
-            // convert2params
-            // 
-            this.convert2params.Location = new System.Drawing.Point(245, 7);
-            this.convert2params.Name = "convert2params";
-            this.convert2params.Size = new System.Drawing.Size(94, 23);
-            this.convert2params.TabIndex = 1;
-            this.convert2params.Text = "转成入参";
-            this.convert2params.UseVisualStyleBackColor = true;
-            this.convert2params.Click += new System.EventHandler(this.convert2params_Click);
-            // 
-            // convert2setAttr
-            // 
-            this.convert2setAttr.Location = new System.Drawing.Point(345, 7);
-            this.convert2setAttr.Name = "convert2setAttr";
-            this.convert2setAttr.Size = new System.Drawing.Size(94, 23);
-            this.convert2setAttr.TabIndex = 2;
-            this.convert2setAttr.Text = "转成setAttr";
-            this.convert2setAttr.UseVisualStyleBackColor = true;
-            this.convert2setAttr.Click += new System.EventHandler(this.convert2setAttr_Click);
-            // 
-            // convert2memo
-            // 
-            this.convert2memo.Location = new System.Drawing.Point(445, 7);
-            this.convert2memo.Name = "convert2memo";
-            this.convert2memo.Size = new System.Drawing.Size(94, 23);
-            this.convert2memo.TabIndex = 3;
-            this.convert2memo.Text = "转成注释";
-            this.convert2memo.UseVisualStyleBackColor = true;
-            this.convert2memo.Click += new System.EventHandler(this.convert2memo_Click);
-            // 
-            // btnPreProccess
-            // 
-            this.btnPreProccess.Location = new System.Drawing.Point(6, 7);
-            this.btnPreProccess.Name = "btnPreProccess";
-            this.btnPreProccess.Size = new System.Drawing.Size(94, 23);
-            this.btnPreProccess.TabIndex = 4;
-            this.btnPreProccess.Text = "预处理";
-            this.btnPreProccess.UseVisualStyleBackColor = true;
-            this.btnPreProccess.Click += new System.EventHandler(this.btnPreProccess_Click);
-            // 
-            // btnSaveXmlStr
-            // 
-            this.btnSaveXmlStr.Location = new System.Drawing.Point(106, 7);
-            this.btnSaveXmlStr.Name = "btnSaveXmlStr";
-            this.btnSaveXmlStr.Size = new System.Drawing.Size(94, 23);
-            this.btnSaveXmlStr.TabIndex = 5;
-            this.btnSaveXmlStr.Text = "保存";
-            this.btnSaveXmlStr.UseVisualStyleBackColor = true;
-            this.btnSaveXmlStr.Click += new System.EventHandler(this.btnSaveXmlStr_Click);
+            this.tsslVersion.Name = "tsslVersion";
+            this.tsslVersion.Size = new System.Drawing.Size(637, 21);
+            this.tsslVersion.Spring = true;
+            this.tsslVersion.Text = "当前版本：";
+            this.tsslVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Main
             // 
@@ -1354,10 +1364,10 @@ namespace 金证统一账户测试账户生成器
             this.tpgCommonParams.PerformLayout();
             this.tpgTest.ResumeLayout(false);
             this.tpgTest.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1476,6 +1486,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Button convert2memo;
         private System.Windows.Forms.Button btnPreProccess;
         private System.Windows.Forms.Button btnSaveXmlStr;
+        private System.Windows.Forms.ToolStripStatusLabel tsslVersion;
     }
 }
 
