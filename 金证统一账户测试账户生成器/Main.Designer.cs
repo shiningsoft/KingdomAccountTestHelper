@@ -362,7 +362,6 @@ namespace 金证统一账户测试账户生成器
             this.cbxOccupation.Name = "cbxOccupation";
             this.cbxOccupation.Size = new System.Drawing.Size(136, 20);
             this.cbxOccupation.TabIndex = 83;
-            this.cbxOccupation.Visible = false;
             // 
             // label29
             // 
@@ -372,7 +371,6 @@ namespace 金证统一账户测试账户生成器
             this.label29.Size = new System.Drawing.Size(65, 12);
             this.label29.TabIndex = 82;
             this.label29.Text = "手输职业：";
-            this.label29.Visible = false;
             // 
             // cbxShortIdNo
             // 

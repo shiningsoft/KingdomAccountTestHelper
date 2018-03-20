@@ -270,15 +270,11 @@ namespace 金证统一账户测试账户生成器
                 user.password = password.Text.Trim();
                 user.mobile_tel = mobile_tel.Text.Trim();
                 user.occu_type = occu_type.SelectedValue.ToString();
-                if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.其他)
+                if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.其他 && cbxOccupation.Text == "")
                 {
-                    if (cbxOccupation.Text == "")
-                    {
-                        throw new Exception("当职业为其他时，手输职业不能为空！");
-                    }
-                    // 职业为其他时保存手输职业
-                    user.occupation = cbxOccupation.Text;
+                    throw new Exception("当职业为其他时，手输职业不能为空！");
                 }
+                user.occupation = cbxOccupation.Text;
                 user.education = education.SelectedValue.ToString();
                 user.bank_code = bank_code.SelectedValue.ToString();
                 user.zip_code = zip_code.Text.Trim();
@@ -1163,24 +1159,10 @@ namespace 金证统一账户测试账户生成器
                 cbxMethonList.Items.Add(file.Name.Replace(file.Extension, ""));
             }
         }
-
-        /// <summary>
-        /// 选中其他职业时，显示手输职业下拉框
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        
         private void occu_type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.其他)
-            {
-                label29.Visible = true;
-                cbxOccupation.Visible = true;
-            }
-            else
-            {
-                label29.Visible = false;
-                cbxOccupation.Visible = false;
-            }
+
         }
 
         private void btnPreProccess_Click(object sender, EventArgs e)
