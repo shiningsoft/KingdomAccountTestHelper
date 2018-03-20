@@ -355,6 +355,36 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.querySurveyIndexResponse EndquerySurveyIndex(System.IAsyncResult result);
         
+        // CODEGEN: 消息 uploadImgStringRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.uploadImgStringResponse uploadImgString(金证统一账户测试账户生成器.KessService.uploadImgStringRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginuploadImgString(金证统一账户测试账户生成器.KessService.uploadImgStringRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.uploadImgStringResponse EnduploadImgString(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 downloadImgStringRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.downloadImgStringResponse downloadImgString(金证统一账户测试账户生成器.KessService.downloadImgStringRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BegindownloadImgString(金证统一账户测试账户生成器.KessService.downloadImgStringRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.downloadImgStringResponse EnddownloadImgString(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 downloadImgStringByImgClsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsResponse downloadImgStringByImgCls(金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BegindownloadImgStringByImgCls(金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsResponse EnddownloadImgStringByImgCls(System.IAsyncResult result);
+        
         // CODEGEN: 消息 openCustomerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
@@ -1084,6 +1114,16 @@ namespace 金证统一账户测试账户生成器.KessService {
         System.IAsyncResult BeginqueryInvestProInfo(金证统一账户测试账户生成器.KessService.queryInvestProInfoRequest request, System.AsyncCallback callback, object asyncState);
         
         金证统一账户测试账户生成器.KessService.queryInvestProInfoResponse EndqueryInvestProInfo(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 setInvestProInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.setInvestProInfoResponse setInvestProInfo(金证统一账户测试账户生成器.KessService.setInvestProInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginsetInvestProInfo(金证统一账户测试账户生成器.KessService.setInvestProInfoRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.setInvestProInfoResponse EndsetInvestProInfo(System.IAsyncResult result);
         
         // CODEGEN: 消息 queryToConfirmRiskSurveyResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
@@ -2285,6 +2325,16 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getBizSerialNoResponse EndgetBizSerialNo(System.IAsyncResult result);
         
+        // CODEGEN: 消息 uploadImgFileRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.uploadImgFileResponse uploadImgFile(金证统一账户测试账户生成器.KessService.uploadImgFileRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginuploadImgFile(金证统一账户测试账户生成器.KessService.uploadImgFileRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.uploadImgFileResponse EnduploadImgFile(System.IAsyncResult result);
+        
         // CODEGEN: 消息 getUserImgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
@@ -2294,6 +2344,16 @@ namespace 金证统一账户测试账户生成器.KessService {
         System.IAsyncResult BegingetUserImgInfo(金证统一账户测试账户生成器.KessService.getUserImgInfoRequest request, System.AsyncCallback callback, object asyncState);
         
         金证统一账户测试账户生成器.KessService.getUserImgInfoResponse EndgetUserImgInfo(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 downloadImgFileRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.downloadImgFileResponse downloadImgFile(金证统一账户测试账户生成器.KessService.downloadImgFileRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BegindownloadImgFile(金证统一账户测试账户生成器.KessService.downloadImgFileRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.downloadImgFileResponse EnddownloadImgFile(System.IAsyncResult result);
         
         // CODEGEN: 消息 bjhgCustApplyCheckRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
@@ -2704,6 +2764,136 @@ namespace 金证统一账户测试账户生成器.KessService {
         System.IAsyncResult BeginqueryCustSurvey(金证统一账户测试账户生成器.KessService.queryCustSurveyRequest request, System.AsyncCallback callback, object asyncState);
         
         金证统一账户测试账户生成器.KessService.queryCustSurveyResponse EndqueryCustSurvey(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 queryApptCustInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.queryApptCustInfoResponse queryApptCustInfo(金证统一账户测试账户生成器.KessService.queryApptCustInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginqueryApptCustInfo(金证统一账户测试账户生成器.KessService.queryApptCustInfoRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.queryApptCustInfoResponse EndqueryApptCustInfo(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 queryApptCustBaseInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExResponse queryApptCustBaseInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginqueryApptCustBaseInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExResponse EndqueryApptCustBaseInfoEx(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 queryApptCustInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.queryApptCustInfoExResponse queryApptCustInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustInfoExRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginqueryApptCustInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustInfoExRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.queryApptCustInfoExResponse EndqueryApptCustInfoEx(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 mdfApptBCInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.mdfApptBCInfoResponse mdfApptBCInfo(金证统一账户测试账户生成器.KessService.mdfApptBCInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginmdfApptBCInfo(金证统一账户测试账户生成器.KessService.mdfApptBCInfoRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.mdfApptBCInfoResponse EndmdfApptBCInfo(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 queryApptBCInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.queryApptBCInfoResponse queryApptBCInfo(金证统一账户测试账户生成器.KessService.queryApptBCInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginqueryApptBCInfo(金证统一账户测试账户生成器.KessService.queryApptBCInfoRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.queryApptBCInfoResponse EndqueryApptBCInfo(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 querySurveyExclInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.querySurveyExclInfoResponse querySurveyExclInfo(金证统一账户测试账户生成器.KessService.querySurveyExclInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginquerySurveyExclInfo(金证统一账户测试账户生成器.KessService.querySurveyExclInfoRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.querySurveyExclInfoResponse EndquerySurveyExclInfo(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 checkCustAgmtLimitRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.checkCustAgmtLimitResponse checkCustAgmtLimit(金证统一账户测试账户生成器.KessService.checkCustAgmtLimitRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BegincheckCustAgmtLimit(金证统一账户测试账户生成器.KessService.checkCustAgmtLimitRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.checkCustAgmtLimitResponse EndcheckCustAgmtLimit(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 queryApptOrgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.queryApptOrgInfoResponse queryApptOrgInfo(金证统一账户测试账户生成器.KessService.queryApptOrgInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginqueryApptOrgInfo(金证统一账户测试账户生成器.KessService.queryApptOrgInfoRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.queryApptOrgInfoResponse EndqueryApptOrgInfo(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 addBizTrailRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.addBizTrailResponse addBizTrail(金证统一账户测试账户生成器.KessService.addBizTrailRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginaddBizTrail(金证统一账户测试账户生成器.KessService.addBizTrailRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.addBizTrailResponse EndaddBizTrail(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 qryCustBizRiskResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.qryCustBizRiskResultResponse qryCustBizRiskResult(金证统一账户测试账户生成器.KessService.qryCustBizRiskResultRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginqryCustBizRiskResult(金证统一账户测试账户生成器.KessService.qryCustBizRiskResultRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.qryCustBizRiskResultResponse EndqryCustBizRiskResult(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 mdfCustRiskProprightRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.mdfCustRiskProprightResponse mdfCustRiskPropright(金证统一账户测试账户生成器.KessService.mdfCustRiskProprightRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginmdfCustRiskPropright(金证统一账户测试账户生成器.KessService.mdfCustRiskProprightRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.mdfCustRiskProprightResponse EndmdfCustRiskPropright(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 mdfCustNraTaxInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoResponse mdfCustNraTaxInfo(金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginmdfCustNraTaxInfo(金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoResponse EndmdfCustNraTaxInfo(System.IAsyncResult result);
+        
+        // CODEGEN: 消息 qryCustNraTaxInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
+        金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoResponse qryCustNraTaxInfo(金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoRequest request);
+        
+        [System.ServiceModel.OperationContractAttribute(AsyncPattern=true, Action="", ReplyAction="*")]
+        System.IAsyncResult BeginqryCustNraTaxInfo(金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoRequest request, System.AsyncCallback callback, object asyncState);
+        
+        金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoResponse EndqryCustNraTaxInfo(System.IAsyncResult result);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -3859,6 +4049,112 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         public querySurveyIndexResponse(string querySurveyIndexReturn) {
             this.querySurveyIndexReturn = querySurveyIndexReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgString", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class uploadImgStringRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=1)]
+        public string in1;
+        
+        public uploadImgStringRequest() {
+        }
+        
+        public uploadImgStringRequest(string in0, string in1) {
+            this.in0 = in0;
+            this.in1 = in1;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgStringResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class uploadImgStringResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string uploadImgStringReturn;
+        
+        public uploadImgStringResponse() {
+        }
+        
+        public uploadImgStringResponse(string uploadImgStringReturn) {
+            this.uploadImgStringReturn = uploadImgStringReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgString", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class downloadImgStringRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public downloadImgStringRequest() {
+        }
+        
+        public downloadImgStringRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgStringResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class downloadImgStringResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string downloadImgStringReturn;
+        
+        public downloadImgStringResponse() {
+        }
+        
+        public downloadImgStringResponse(string downloadImgStringReturn) {
+            this.downloadImgStringReturn = downloadImgStringReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgStringByImgCls", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class downloadImgStringByImgClsRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public downloadImgStringByImgClsRequest() {
+        }
+        
+        public downloadImgStringByImgClsRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgStringByImgClsResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class downloadImgStringByImgClsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string downloadImgStringByImgClsReturn;
+        
+        public downloadImgStringByImgClsResponse() {
+        }
+        
+        public downloadImgStringByImgClsResponse(string downloadImgStringByImgClsReturn) {
+            this.downloadImgStringByImgClsReturn = downloadImgStringByImgClsReturn;
         }
     }
     
@@ -6347,6 +6643,40 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setInvestProInfo", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class setInvestProInfoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public setInvestProInfoRequest() {
+        }
+        
+        public setInvestProInfoRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setInvestProInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class setInvestProInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string setInvestProInfoReturn;
+        
+        public setInvestProInfoResponse() {
+        }
+        
+        public setInvestProInfoResponse(string setInvestProInfoReturn) {
+            this.setInvestProInfoReturn = setInvestProInfoReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="queryToConfirmRiskSurveyResult", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
     public partial class queryToConfirmRiskSurveyResultRequest {
         
@@ -6946,7 +7276,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgStringNoBizResponse", WrapperNamespace="http://60.173.222.38:52310/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgStringNoBizResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
     public partial class uploadImgStringNoBizResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10431,6 +10761,40 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgFile", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class uploadImgFileRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public uploadImgFileRequest() {
+        }
+        
+        public uploadImgFileRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgFileResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class uploadImgFileResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string uploadImgFileReturn;
+        
+        public uploadImgFileResponse() {
+        }
+        
+        public uploadImgFileResponse(string uploadImgFileReturn) {
+            this.uploadImgFileReturn = uploadImgFileReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getUserImgInfo", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
     public partial class getUserImgInfoRequest {
         
@@ -10459,6 +10823,40 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         public getUserImgInfoResponse(string getUserImgInfoReturn) {
             this.getUserImgInfoReturn = getUserImgInfoReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgFile", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class downloadImgFileRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public downloadImgFileRequest() {
+        }
+        
+        public downloadImgFileRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgFileResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class downloadImgFileResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string downloadImgFileReturn;
+        
+        public downloadImgFileResponse() {
+        }
+        
+        public downloadImgFileResponse(string downloadImgFileReturn) {
+            this.downloadImgFileReturn = downloadImgFileReturn;
         }
     }
     
@@ -11856,6 +12254,448 @@ namespace 金证统一账户测试账户生成器.KessService {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustInfo", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class queryApptCustInfoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public queryApptCustInfoRequest() {
+        }
+        
+        public queryApptCustInfoRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class queryApptCustInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string queryApptCustInfoReturn;
+        
+        public queryApptCustInfoResponse() {
+        }
+        
+        public queryApptCustInfoResponse(string queryApptCustInfoReturn) {
+            this.queryApptCustInfoReturn = queryApptCustInfoReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustBaseInfoEx", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class queryApptCustBaseInfoExRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public queryApptCustBaseInfoExRequest() {
+        }
+        
+        public queryApptCustBaseInfoExRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustBaseInfoExResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class queryApptCustBaseInfoExResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string queryApptCustBaseInfoExReturn;
+        
+        public queryApptCustBaseInfoExResponse() {
+        }
+        
+        public queryApptCustBaseInfoExResponse(string queryApptCustBaseInfoExReturn) {
+            this.queryApptCustBaseInfoExReturn = queryApptCustBaseInfoExReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustInfoEx", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class queryApptCustInfoExRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public queryApptCustInfoExRequest() {
+        }
+        
+        public queryApptCustInfoExRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustInfoExResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class queryApptCustInfoExResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string queryApptCustInfoExReturn;
+        
+        public queryApptCustInfoExResponse() {
+        }
+        
+        public queryApptCustInfoExResponse(string queryApptCustInfoExReturn) {
+            this.queryApptCustInfoExReturn = queryApptCustInfoExReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfApptBCInfo", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class mdfApptBCInfoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public mdfApptBCInfoRequest() {
+        }
+        
+        public mdfApptBCInfoRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfApptBCInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class mdfApptBCInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string mdfApptBCInfoReturn;
+        
+        public mdfApptBCInfoResponse() {
+        }
+        
+        public mdfApptBCInfoResponse(string mdfApptBCInfoReturn) {
+            this.mdfApptBCInfoReturn = mdfApptBCInfoReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptBCInfo", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class queryApptBCInfoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public queryApptBCInfoRequest() {
+        }
+        
+        public queryApptBCInfoRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptBCInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class queryApptBCInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string queryApptBCInfoReturn;
+        
+        public queryApptBCInfoResponse() {
+        }
+        
+        public queryApptBCInfoResponse(string queryApptBCInfoReturn) {
+            this.queryApptBCInfoReturn = queryApptBCInfoReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySurveyExclInfo", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class querySurveyExclInfoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public querySurveyExclInfoRequest() {
+        }
+        
+        public querySurveyExclInfoRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySurveyExclInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class querySurveyExclInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string querySurveyExclInfoReturn;
+        
+        public querySurveyExclInfoResponse() {
+        }
+        
+        public querySurveyExclInfoResponse(string querySurveyExclInfoReturn) {
+            this.querySurveyExclInfoReturn = querySurveyExclInfoReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="checkCustAgmtLimit", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class checkCustAgmtLimitRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public checkCustAgmtLimitRequest() {
+        }
+        
+        public checkCustAgmtLimitRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="checkCustAgmtLimitResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class checkCustAgmtLimitResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string checkCustAgmtLimitReturn;
+        
+        public checkCustAgmtLimitResponse() {
+        }
+        
+        public checkCustAgmtLimitResponse(string checkCustAgmtLimitReturn) {
+            this.checkCustAgmtLimitReturn = checkCustAgmtLimitReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptOrgInfo", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class queryApptOrgInfoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public queryApptOrgInfoRequest() {
+        }
+        
+        public queryApptOrgInfoRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptOrgInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class queryApptOrgInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string queryApptOrgInfoReturn;
+        
+        public queryApptOrgInfoResponse() {
+        }
+        
+        public queryApptOrgInfoResponse(string queryApptOrgInfoReturn) {
+            this.queryApptOrgInfoReturn = queryApptOrgInfoReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="addBizTrail", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class addBizTrailRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public addBizTrailRequest() {
+        }
+        
+        public addBizTrailRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="addBizTrailResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class addBizTrailResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string addBizTrailReturn;
+        
+        public addBizTrailResponse() {
+        }
+        
+        public addBizTrailResponse(string addBizTrailReturn) {
+            this.addBizTrailReturn = addBizTrailReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustBizRiskResult", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class qryCustBizRiskResultRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public qryCustBizRiskResultRequest() {
+        }
+        
+        public qryCustBizRiskResultRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustBizRiskResultResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class qryCustBizRiskResultResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string qryCustBizRiskResultReturn;
+        
+        public qryCustBizRiskResultResponse() {
+        }
+        
+        public qryCustBizRiskResultResponse(string qryCustBizRiskResultReturn) {
+            this.qryCustBizRiskResultReturn = qryCustBizRiskResultReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustRiskPropright", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class mdfCustRiskProprightRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public mdfCustRiskProprightRequest() {
+        }
+        
+        public mdfCustRiskProprightRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustRiskProprightResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class mdfCustRiskProprightResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string mdfCustRiskProprightReturn;
+        
+        public mdfCustRiskProprightResponse() {
+        }
+        
+        public mdfCustRiskProprightResponse(string mdfCustRiskProprightReturn) {
+            this.mdfCustRiskProprightReturn = mdfCustRiskProprightReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustNraTaxInfo", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class mdfCustNraTaxInfoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public mdfCustNraTaxInfoRequest() {
+        }
+        
+        public mdfCustNraTaxInfoRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustNraTaxInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class mdfCustNraTaxInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string mdfCustNraTaxInfoReturn;
+        
+        public mdfCustNraTaxInfoResponse() {
+        }
+        
+        public mdfCustNraTaxInfoResponse(string mdfCustNraTaxInfoReturn) {
+            this.mdfCustNraTaxInfoReturn = mdfCustNraTaxInfoReturn;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustNraTaxInfo", WrapperNamespace="http://impl.service.wsdl.kess.szkingdom.com", IsWrapped=true)]
+    public partial class qryCustNraTaxInfoRequest {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string in0;
+        
+        public qryCustNraTaxInfoRequest() {
+        }
+        
+        public qryCustNraTaxInfoRequest(string in0) {
+            this.in0 = in0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustNraTaxInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    public partial class qryCustNraTaxInfoResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
+        public string qryCustNraTaxInfoReturn;
+        
+        public qryCustNraTaxInfoResponse() {
+        }
+        
+        public qryCustNraTaxInfoResponse(string qryCustNraTaxInfoReturn) {
+            this.qryCustNraTaxInfoReturn = qryCustNraTaxInfoReturn;
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public interface KessServiceChannel : 金证统一账户测试账户生成器.KessService.KessService, System.ServiceModel.IClientChannel {
     }
@@ -12494,6 +13334,63 @@ namespace 金证统一账户测试账户生成器.KessService {
         private object[] results;
         
         public querySurveyIndexCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class uploadImgStringCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public uploadImgStringCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class downloadImgStringCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public downloadImgStringCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class downloadImgStringByImgClsCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public downloadImgStringByImgClsCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -13881,6 +14778,25 @@ namespace 金证统一账户测试账户生成器.KessService {
         private object[] results;
         
         public queryInvestProInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class setInvestProInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public setInvestProInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -16175,11 +17091,49 @@ namespace 金证统一账户测试账户生成器.KessService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class uploadImgFileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public uploadImgFileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class getUserImgInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
         
         private object[] results;
         
         public getUserImgInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class downloadImgFileCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public downloadImgFileCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
                 base(exception, cancelled, userState) {
             this.results = results;
         }
@@ -16973,6 +17927,253 @@ namespace 金证统一账户测试账户生成器.KessService {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class queryApptCustInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public queryApptCustInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class queryApptCustBaseInfoExCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public queryApptCustBaseInfoExCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class queryApptCustInfoExCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public queryApptCustInfoExCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class mdfApptBCInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public mdfApptBCInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class queryApptBCInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public queryApptBCInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class querySurveyExclInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public querySurveyExclInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class checkCustAgmtLimitCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public checkCustAgmtLimitCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class queryApptOrgInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public queryApptOrgInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class addBizTrailCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public addBizTrailCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class qryCustBizRiskResultCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public qryCustBizRiskResultCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class mdfCustRiskProprightCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public mdfCustRiskProprightCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class mdfCustNraTaxInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public mdfCustNraTaxInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    public partial class qryCustNraTaxInfoCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        public qryCustNraTaxInfoCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        public string Result {
+            get {
+                base.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     public partial class KessServiceClient : System.ServiceModel.ClientBase<金证统一账户测试账户生成器.KessService.KessService>, 金证统一账户测试账户生成器.KessService.KessService {
         
         private BeginOperationDelegate onBegincreateDirectoryDelegate;
@@ -17178,6 +18379,24 @@ namespace 金证统一账户测试账户生成器.KessService {
         private EndOperationDelegate onEndquerySurveyIndexDelegate;
         
         private System.Threading.SendOrPostCallback onquerySurveyIndexCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginuploadImgStringDelegate;
+        
+        private EndOperationDelegate onEnduploadImgStringDelegate;
+        
+        private System.Threading.SendOrPostCallback onuploadImgStringCompletedDelegate;
+        
+        private BeginOperationDelegate onBegindownloadImgStringDelegate;
+        
+        private EndOperationDelegate onEnddownloadImgStringDelegate;
+        
+        private System.Threading.SendOrPostCallback ondownloadImgStringCompletedDelegate;
+        
+        private BeginOperationDelegate onBegindownloadImgStringByImgClsDelegate;
+        
+        private EndOperationDelegate onEnddownloadImgStringByImgClsDelegate;
+        
+        private System.Threading.SendOrPostCallback ondownloadImgStringByImgClsCompletedDelegate;
         
         private BeginOperationDelegate onBeginopenCustomerDelegate;
         
@@ -17616,6 +18835,12 @@ namespace 金证统一账户测试账户生成器.KessService {
         private EndOperationDelegate onEndqueryInvestProInfoDelegate;
         
         private System.Threading.SendOrPostCallback onqueryInvestProInfoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginsetInvestProInfoDelegate;
+        
+        private EndOperationDelegate onEndsetInvestProInfoDelegate;
+        
+        private System.Threading.SendOrPostCallback onsetInvestProInfoCompletedDelegate;
         
         private BeginOperationDelegate onBeginqueryToConfirmRiskSurveyResultDelegate;
         
@@ -18337,11 +19562,23 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         private System.Threading.SendOrPostCallback ongetBizSerialNoCompletedDelegate;
         
+        private BeginOperationDelegate onBeginuploadImgFileDelegate;
+        
+        private EndOperationDelegate onEnduploadImgFileDelegate;
+        
+        private System.Threading.SendOrPostCallback onuploadImgFileCompletedDelegate;
+        
         private BeginOperationDelegate onBegingetUserImgInfoDelegate;
         
         private EndOperationDelegate onEndgetUserImgInfoDelegate;
         
         private System.Threading.SendOrPostCallback ongetUserImgInfoCompletedDelegate;
+        
+        private BeginOperationDelegate onBegindownloadImgFileDelegate;
+        
+        private EndOperationDelegate onEnddownloadImgFileDelegate;
+        
+        private System.Threading.SendOrPostCallback ondownloadImgFileCompletedDelegate;
         
         private BeginOperationDelegate onBeginbjhgCustApplyCheckDelegate;
         
@@ -18589,6 +19826,84 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         private System.Threading.SendOrPostCallback onqueryCustSurveyCompletedDelegate;
         
+        private BeginOperationDelegate onBeginqueryApptCustInfoDelegate;
+        
+        private EndOperationDelegate onEndqueryApptCustInfoDelegate;
+        
+        private System.Threading.SendOrPostCallback onqueryApptCustInfoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginqueryApptCustBaseInfoExDelegate;
+        
+        private EndOperationDelegate onEndqueryApptCustBaseInfoExDelegate;
+        
+        private System.Threading.SendOrPostCallback onqueryApptCustBaseInfoExCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginqueryApptCustInfoExDelegate;
+        
+        private EndOperationDelegate onEndqueryApptCustInfoExDelegate;
+        
+        private System.Threading.SendOrPostCallback onqueryApptCustInfoExCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginmdfApptBCInfoDelegate;
+        
+        private EndOperationDelegate onEndmdfApptBCInfoDelegate;
+        
+        private System.Threading.SendOrPostCallback onmdfApptBCInfoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginqueryApptBCInfoDelegate;
+        
+        private EndOperationDelegate onEndqueryApptBCInfoDelegate;
+        
+        private System.Threading.SendOrPostCallback onqueryApptBCInfoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginquerySurveyExclInfoDelegate;
+        
+        private EndOperationDelegate onEndquerySurveyExclInfoDelegate;
+        
+        private System.Threading.SendOrPostCallback onquerySurveyExclInfoCompletedDelegate;
+        
+        private BeginOperationDelegate onBegincheckCustAgmtLimitDelegate;
+        
+        private EndOperationDelegate onEndcheckCustAgmtLimitDelegate;
+        
+        private System.Threading.SendOrPostCallback oncheckCustAgmtLimitCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginqueryApptOrgInfoDelegate;
+        
+        private EndOperationDelegate onEndqueryApptOrgInfoDelegate;
+        
+        private System.Threading.SendOrPostCallback onqueryApptOrgInfoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginaddBizTrailDelegate;
+        
+        private EndOperationDelegate onEndaddBizTrailDelegate;
+        
+        private System.Threading.SendOrPostCallback onaddBizTrailCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginqryCustBizRiskResultDelegate;
+        
+        private EndOperationDelegate onEndqryCustBizRiskResultDelegate;
+        
+        private System.Threading.SendOrPostCallback onqryCustBizRiskResultCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginmdfCustRiskProprightDelegate;
+        
+        private EndOperationDelegate onEndmdfCustRiskProprightDelegate;
+        
+        private System.Threading.SendOrPostCallback onmdfCustRiskProprightCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginmdfCustNraTaxInfoDelegate;
+        
+        private EndOperationDelegate onEndmdfCustNraTaxInfoDelegate;
+        
+        private System.Threading.SendOrPostCallback onmdfCustNraTaxInfoCompletedDelegate;
+        
+        private BeginOperationDelegate onBeginqryCustNraTaxInfoDelegate;
+        
+        private EndOperationDelegate onEndqryCustNraTaxInfoDelegate;
+        
+        private System.Threading.SendOrPostCallback onqryCustNraTaxInfoCompletedDelegate;
+        
         public KessServiceClient() {
         }
         
@@ -18675,6 +19990,12 @@ namespace 金证统一账户测试账户生成器.KessService {
         public event System.EventHandler<operatorInfoCompletedEventArgs> operatorInfoCompleted;
         
         public event System.EventHandler<querySurveyIndexCompletedEventArgs> querySurveyIndexCompleted;
+        
+        public event System.EventHandler<uploadImgStringCompletedEventArgs> uploadImgStringCompleted;
+        
+        public event System.EventHandler<downloadImgStringCompletedEventArgs> downloadImgStringCompleted;
+        
+        public event System.EventHandler<downloadImgStringByImgClsCompletedEventArgs> downloadImgStringByImgClsCompleted;
         
         public event System.EventHandler<openCustomerCompletedEventArgs> openCustomerCompleted;
         
@@ -18821,6 +20142,8 @@ namespace 金证统一账户测试账户生成器.KessService {
         public event System.EventHandler<queryRiskSurveyResultCompletedEventArgs> queryRiskSurveyResultCompleted;
         
         public event System.EventHandler<queryInvestProInfoCompletedEventArgs> queryInvestProInfoCompleted;
+        
+        public event System.EventHandler<setInvestProInfoCompletedEventArgs> setInvestProInfoCompleted;
         
         public event System.EventHandler<queryToConfirmRiskSurveyResultCompletedEventArgs> queryToConfirmRiskSurveyResultCompleted;
         
@@ -19062,7 +20385,11 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         public event System.EventHandler<getBizSerialNoCompletedEventArgs> getBizSerialNoCompleted;
         
+        public event System.EventHandler<uploadImgFileCompletedEventArgs> uploadImgFileCompleted;
+        
         public event System.EventHandler<getUserImgInfoCompletedEventArgs> getUserImgInfoCompleted;
+        
+        public event System.EventHandler<downloadImgFileCompletedEventArgs> downloadImgFileCompleted;
         
         public event System.EventHandler<bjhgCustApplyCheckCompletedEventArgs> bjhgCustApplyCheckCompleted;
         
@@ -19145,6 +20472,32 @@ namespace 金证统一账户测试账户生成器.KessService {
         public event System.EventHandler<queryPubStkCompletedEventArgs> queryPubStkCompleted;
         
         public event System.EventHandler<queryCustSurveyCompletedEventArgs> queryCustSurveyCompleted;
+        
+        public event System.EventHandler<queryApptCustInfoCompletedEventArgs> queryApptCustInfoCompleted;
+        
+        public event System.EventHandler<queryApptCustBaseInfoExCompletedEventArgs> queryApptCustBaseInfoExCompleted;
+        
+        public event System.EventHandler<queryApptCustInfoExCompletedEventArgs> queryApptCustInfoExCompleted;
+        
+        public event System.EventHandler<mdfApptBCInfoCompletedEventArgs> mdfApptBCInfoCompleted;
+        
+        public event System.EventHandler<queryApptBCInfoCompletedEventArgs> queryApptBCInfoCompleted;
+        
+        public event System.EventHandler<querySurveyExclInfoCompletedEventArgs> querySurveyExclInfoCompleted;
+        
+        public event System.EventHandler<checkCustAgmtLimitCompletedEventArgs> checkCustAgmtLimitCompleted;
+        
+        public event System.EventHandler<queryApptOrgInfoCompletedEventArgs> queryApptOrgInfoCompleted;
+        
+        public event System.EventHandler<addBizTrailCompletedEventArgs> addBizTrailCompleted;
+        
+        public event System.EventHandler<qryCustBizRiskResultCompletedEventArgs> qryCustBizRiskResultCompleted;
+        
+        public event System.EventHandler<mdfCustRiskProprightCompletedEventArgs> mdfCustRiskProprightCompleted;
+        
+        public event System.EventHandler<mdfCustNraTaxInfoCompletedEventArgs> mdfCustNraTaxInfoCompleted;
+        
+        public event System.EventHandler<qryCustNraTaxInfoCompletedEventArgs> qryCustNraTaxInfoCompleted;
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         金证统一账户测试账户生成器.KessService.createDirectoryResponse 金证统一账户测试账户生成器.KessService.KessService.createDirectory(金证统一账户测试账户生成器.KessService.createDirectoryRequest request) {
@@ -21558,6 +22911,223 @@ namespace 金证统一账户测试账户生成器.KessService {
             }
             base.InvokeAsync(this.onBeginquerySurveyIndexDelegate, new object[] {
                         in0}, this.onEndquerySurveyIndexDelegate, this.onquerySurveyIndexCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.uploadImgStringResponse 金证统一账户测试账户生成器.KessService.KessService.uploadImgString(金证统一账户测试账户生成器.KessService.uploadImgStringRequest request) {
+            return base.Channel.uploadImgString(request);
+        }
+        
+        public string uploadImgString(string in0, string in1) {
+            金证统一账户测试账户生成器.KessService.uploadImgStringRequest inValue = new 金证统一账户测试账户生成器.KessService.uploadImgStringRequest();
+            inValue.in0 = in0;
+            inValue.in1 = in1;
+            金证统一账户测试账户生成器.KessService.uploadImgStringResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).uploadImgString(inValue);
+            return retVal.uploadImgStringReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginuploadImgString(金证统一账户测试账户生成器.KessService.uploadImgStringRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginuploadImgString(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginuploadImgString(string in0, string in1, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.uploadImgStringRequest inValue = new 金证统一账户测试账户生成器.KessService.uploadImgStringRequest();
+            inValue.in0 = in0;
+            inValue.in1 = in1;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginuploadImgString(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.uploadImgStringResponse 金证统一账户测试账户生成器.KessService.KessService.EnduploadImgString(System.IAsyncResult result) {
+            return base.Channel.EnduploadImgString(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EnduploadImgString(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.uploadImgStringResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EnduploadImgString(result);
+            return retVal.uploadImgStringReturn;
+        }
+        
+        private System.IAsyncResult OnBeginuploadImgString(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            string in1 = ((string)(inValues[1]));
+            return this.BeginuploadImgString(in0, in1, callback, asyncState);
+        }
+        
+        private object[] OnEnduploadImgString(System.IAsyncResult result) {
+            string retVal = this.EnduploadImgString(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnuploadImgStringCompleted(object state) {
+            if ((this.uploadImgStringCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.uploadImgStringCompleted(this, new uploadImgStringCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void uploadImgStringAsync(string in0, string in1) {
+            this.uploadImgStringAsync(in0, in1, null);
+        }
+        
+        public void uploadImgStringAsync(string in0, string in1, object userState) {
+            if ((this.onBeginuploadImgStringDelegate == null)) {
+                this.onBeginuploadImgStringDelegate = new BeginOperationDelegate(this.OnBeginuploadImgString);
+            }
+            if ((this.onEnduploadImgStringDelegate == null)) {
+                this.onEnduploadImgStringDelegate = new EndOperationDelegate(this.OnEnduploadImgString);
+            }
+            if ((this.onuploadImgStringCompletedDelegate == null)) {
+                this.onuploadImgStringCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnuploadImgStringCompleted);
+            }
+            base.InvokeAsync(this.onBeginuploadImgStringDelegate, new object[] {
+                        in0,
+                        in1}, this.onEnduploadImgStringDelegate, this.onuploadImgStringCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.downloadImgStringResponse 金证统一账户测试账户生成器.KessService.KessService.downloadImgString(金证统一账户测试账户生成器.KessService.downloadImgStringRequest request) {
+            return base.Channel.downloadImgString(request);
+        }
+        
+        public string downloadImgString(string in0) {
+            金证统一账户测试账户生成器.KessService.downloadImgStringRequest inValue = new 金证统一账户测试账户生成器.KessService.downloadImgStringRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.downloadImgStringResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).downloadImgString(inValue);
+            return retVal.downloadImgStringReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BegindownloadImgString(金证统一账户测试账户生成器.KessService.downloadImgStringRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegindownloadImgString(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BegindownloadImgString(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.downloadImgStringRequest inValue = new 金证统一账户测试账户生成器.KessService.downloadImgStringRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BegindownloadImgString(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.downloadImgStringResponse 金证统一账户测试账户生成器.KessService.KessService.EnddownloadImgString(System.IAsyncResult result) {
+            return base.Channel.EnddownloadImgString(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EnddownloadImgString(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.downloadImgStringResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EnddownloadImgString(result);
+            return retVal.downloadImgStringReturn;
+        }
+        
+        private System.IAsyncResult OnBegindownloadImgString(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BegindownloadImgString(in0, callback, asyncState);
+        }
+        
+        private object[] OnEnddownloadImgString(System.IAsyncResult result) {
+            string retVal = this.EnddownloadImgString(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OndownloadImgStringCompleted(object state) {
+            if ((this.downloadImgStringCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.downloadImgStringCompleted(this, new downloadImgStringCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void downloadImgStringAsync(string in0) {
+            this.downloadImgStringAsync(in0, null);
+        }
+        
+        public void downloadImgStringAsync(string in0, object userState) {
+            if ((this.onBegindownloadImgStringDelegate == null)) {
+                this.onBegindownloadImgStringDelegate = new BeginOperationDelegate(this.OnBegindownloadImgString);
+            }
+            if ((this.onEnddownloadImgStringDelegate == null)) {
+                this.onEnddownloadImgStringDelegate = new EndOperationDelegate(this.OnEnddownloadImgString);
+            }
+            if ((this.ondownloadImgStringCompletedDelegate == null)) {
+                this.ondownloadImgStringCompletedDelegate = new System.Threading.SendOrPostCallback(this.OndownloadImgStringCompleted);
+            }
+            base.InvokeAsync(this.onBegindownloadImgStringDelegate, new object[] {
+                        in0}, this.onEnddownloadImgStringDelegate, this.ondownloadImgStringCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsResponse 金证统一账户测试账户生成器.KessService.KessService.downloadImgStringByImgCls(金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsRequest request) {
+            return base.Channel.downloadImgStringByImgCls(request);
+        }
+        
+        public string downloadImgStringByImgCls(string in0) {
+            金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsRequest inValue = new 金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).downloadImgStringByImgCls(inValue);
+            return retVal.downloadImgStringByImgClsReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BegindownloadImgStringByImgCls(金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegindownloadImgStringByImgCls(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BegindownloadImgStringByImgCls(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsRequest inValue = new 金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BegindownloadImgStringByImgCls(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsResponse 金证统一账户测试账户生成器.KessService.KessService.EnddownloadImgStringByImgCls(System.IAsyncResult result) {
+            return base.Channel.EnddownloadImgStringByImgCls(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EnddownloadImgStringByImgCls(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EnddownloadImgStringByImgCls(result);
+            return retVal.downloadImgStringByImgClsReturn;
+        }
+        
+        private System.IAsyncResult OnBegindownloadImgStringByImgCls(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BegindownloadImgStringByImgCls(in0, callback, asyncState);
+        }
+        
+        private object[] OnEnddownloadImgStringByImgCls(System.IAsyncResult result) {
+            string retVal = this.EnddownloadImgStringByImgCls(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OndownloadImgStringByImgClsCompleted(object state) {
+            if ((this.downloadImgStringByImgClsCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.downloadImgStringByImgClsCompleted(this, new downloadImgStringByImgClsCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void downloadImgStringByImgClsAsync(string in0) {
+            this.downloadImgStringByImgClsAsync(in0, null);
+        }
+        
+        public void downloadImgStringByImgClsAsync(string in0, object userState) {
+            if ((this.onBegindownloadImgStringByImgClsDelegate == null)) {
+                this.onBegindownloadImgStringByImgClsDelegate = new BeginOperationDelegate(this.OnBegindownloadImgStringByImgCls);
+            }
+            if ((this.onEnddownloadImgStringByImgClsDelegate == null)) {
+                this.onEnddownloadImgStringByImgClsDelegate = new EndOperationDelegate(this.OnEnddownloadImgStringByImgCls);
+            }
+            if ((this.ondownloadImgStringByImgClsCompletedDelegate == null)) {
+                this.ondownloadImgStringByImgClsCompletedDelegate = new System.Threading.SendOrPostCallback(this.OndownloadImgStringByImgClsCompleted);
+            }
+            base.InvokeAsync(this.onBegindownloadImgStringByImgClsDelegate, new object[] {
+                        in0}, this.onEnddownloadImgStringByImgClsDelegate, this.ondownloadImgStringByImgClsCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -26741,6 +28311,77 @@ namespace 金证统一账户测试账户生成器.KessService {
             }
             base.InvokeAsync(this.onBeginqueryInvestProInfoDelegate, new object[] {
                         in0}, this.onEndqueryInvestProInfoDelegate, this.onqueryInvestProInfoCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.setInvestProInfoResponse 金证统一账户测试账户生成器.KessService.KessService.setInvestProInfo(金证统一账户测试账户生成器.KessService.setInvestProInfoRequest request) {
+            return base.Channel.setInvestProInfo(request);
+        }
+        
+        public string setInvestProInfo(string in0) {
+            金证统一账户测试账户生成器.KessService.setInvestProInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.setInvestProInfoRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.setInvestProInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).setInvestProInfo(inValue);
+            return retVal.setInvestProInfoReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginsetInvestProInfo(金证统一账户测试账户生成器.KessService.setInvestProInfoRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginsetInvestProInfo(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginsetInvestProInfo(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.setInvestProInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.setInvestProInfoRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginsetInvestProInfo(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.setInvestProInfoResponse 金证统一账户测试账户生成器.KessService.KessService.EndsetInvestProInfo(System.IAsyncResult result) {
+            return base.Channel.EndsetInvestProInfo(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndsetInvestProInfo(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.setInvestProInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndsetInvestProInfo(result);
+            return retVal.setInvestProInfoReturn;
+        }
+        
+        private System.IAsyncResult OnBeginsetInvestProInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginsetInvestProInfo(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndsetInvestProInfo(System.IAsyncResult result) {
+            string retVal = this.EndsetInvestProInfo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnsetInvestProInfoCompleted(object state) {
+            if ((this.setInvestProInfoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.setInvestProInfoCompleted(this, new setInvestProInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void setInvestProInfoAsync(string in0) {
+            this.setInvestProInfoAsync(in0, null);
+        }
+        
+        public void setInvestProInfoAsync(string in0, object userState) {
+            if ((this.onBeginsetInvestProInfoDelegate == null)) {
+                this.onBeginsetInvestProInfoDelegate = new BeginOperationDelegate(this.OnBeginsetInvestProInfo);
+            }
+            if ((this.onEndsetInvestProInfoDelegate == null)) {
+                this.onEndsetInvestProInfoDelegate = new EndOperationDelegate(this.OnEndsetInvestProInfo);
+            }
+            if ((this.onsetInvestProInfoCompletedDelegate == null)) {
+                this.onsetInvestProInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnsetInvestProInfoCompleted);
+            }
+            base.InvokeAsync(this.onBeginsetInvestProInfoDelegate, new object[] {
+                        in0}, this.onEndsetInvestProInfoDelegate, this.onsetInvestProInfoCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -35268,6 +36909,77 @@ namespace 金证统一账户测试账户生成器.KessService {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.uploadImgFileResponse 金证统一账户测试账户生成器.KessService.KessService.uploadImgFile(金证统一账户测试账户生成器.KessService.uploadImgFileRequest request) {
+            return base.Channel.uploadImgFile(request);
+        }
+        
+        public string uploadImgFile(string in0) {
+            金证统一账户测试账户生成器.KessService.uploadImgFileRequest inValue = new 金证统一账户测试账户生成器.KessService.uploadImgFileRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.uploadImgFileResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).uploadImgFile(inValue);
+            return retVal.uploadImgFileReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginuploadImgFile(金证统一账户测试账户生成器.KessService.uploadImgFileRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginuploadImgFile(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginuploadImgFile(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.uploadImgFileRequest inValue = new 金证统一账户测试账户生成器.KessService.uploadImgFileRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginuploadImgFile(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.uploadImgFileResponse 金证统一账户测试账户生成器.KessService.KessService.EnduploadImgFile(System.IAsyncResult result) {
+            return base.Channel.EnduploadImgFile(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EnduploadImgFile(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.uploadImgFileResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EnduploadImgFile(result);
+            return retVal.uploadImgFileReturn;
+        }
+        
+        private System.IAsyncResult OnBeginuploadImgFile(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginuploadImgFile(in0, callback, asyncState);
+        }
+        
+        private object[] OnEnduploadImgFile(System.IAsyncResult result) {
+            string retVal = this.EnduploadImgFile(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnuploadImgFileCompleted(object state) {
+            if ((this.uploadImgFileCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.uploadImgFileCompleted(this, new uploadImgFileCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void uploadImgFileAsync(string in0) {
+            this.uploadImgFileAsync(in0, null);
+        }
+        
+        public void uploadImgFileAsync(string in0, object userState) {
+            if ((this.onBeginuploadImgFileDelegate == null)) {
+                this.onBeginuploadImgFileDelegate = new BeginOperationDelegate(this.OnBeginuploadImgFile);
+            }
+            if ((this.onEnduploadImgFileDelegate == null)) {
+                this.onEnduploadImgFileDelegate = new EndOperationDelegate(this.OnEnduploadImgFile);
+            }
+            if ((this.onuploadImgFileCompletedDelegate == null)) {
+                this.onuploadImgFileCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnuploadImgFileCompleted);
+            }
+            base.InvokeAsync(this.onBeginuploadImgFileDelegate, new object[] {
+                        in0}, this.onEnduploadImgFileDelegate, this.onuploadImgFileCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         金证统一账户测试账户生成器.KessService.getUserImgInfoResponse 金证统一账户测试账户生成器.KessService.KessService.getUserImgInfo(金证统一账户测试账户生成器.KessService.getUserImgInfoRequest request) {
             return base.Channel.getUserImgInfo(request);
         }
@@ -35336,6 +37048,77 @@ namespace 金证统一账户测试账户生成器.KessService {
             }
             base.InvokeAsync(this.onBegingetUserImgInfoDelegate, new object[] {
                         in0}, this.onEndgetUserImgInfoDelegate, this.ongetUserImgInfoCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.downloadImgFileResponse 金证统一账户测试账户生成器.KessService.KessService.downloadImgFile(金证统一账户测试账户生成器.KessService.downloadImgFileRequest request) {
+            return base.Channel.downloadImgFile(request);
+        }
+        
+        public string downloadImgFile(string in0) {
+            金证统一账户测试账户生成器.KessService.downloadImgFileRequest inValue = new 金证统一账户测试账户生成器.KessService.downloadImgFileRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.downloadImgFileResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).downloadImgFile(inValue);
+            return retVal.downloadImgFileReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BegindownloadImgFile(金证统一账户测试账户生成器.KessService.downloadImgFileRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegindownloadImgFile(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BegindownloadImgFile(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.downloadImgFileRequest inValue = new 金证统一账户测试账户生成器.KessService.downloadImgFileRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BegindownloadImgFile(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.downloadImgFileResponse 金证统一账户测试账户生成器.KessService.KessService.EnddownloadImgFile(System.IAsyncResult result) {
+            return base.Channel.EnddownloadImgFile(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EnddownloadImgFile(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.downloadImgFileResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EnddownloadImgFile(result);
+            return retVal.downloadImgFileReturn;
+        }
+        
+        private System.IAsyncResult OnBegindownloadImgFile(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BegindownloadImgFile(in0, callback, asyncState);
+        }
+        
+        private object[] OnEnddownloadImgFile(System.IAsyncResult result) {
+            string retVal = this.EnddownloadImgFile(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OndownloadImgFileCompleted(object state) {
+            if ((this.downloadImgFileCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.downloadImgFileCompleted(this, new downloadImgFileCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void downloadImgFileAsync(string in0) {
+            this.downloadImgFileAsync(in0, null);
+        }
+        
+        public void downloadImgFileAsync(string in0, object userState) {
+            if ((this.onBegindownloadImgFileDelegate == null)) {
+                this.onBegindownloadImgFileDelegate = new BeginOperationDelegate(this.OnBegindownloadImgFile);
+            }
+            if ((this.onEnddownloadImgFileDelegate == null)) {
+                this.onEnddownloadImgFileDelegate = new EndOperationDelegate(this.OnEnddownloadImgFile);
+            }
+            if ((this.ondownloadImgFileCompletedDelegate == null)) {
+                this.ondownloadImgFileCompletedDelegate = new System.Threading.SendOrPostCallback(this.OndownloadImgFileCompleted);
+            }
+            base.InvokeAsync(this.onBegindownloadImgFileDelegate, new object[] {
+                        in0}, this.onEnddownloadImgFileDelegate, this.ondownloadImgFileCompletedDelegate, userState);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -38247,6 +40030,929 @@ namespace 金证统一账户测试账户生成器.KessService {
             }
             base.InvokeAsync(this.onBeginqueryCustSurveyDelegate, new object[] {
                         in0}, this.onEndqueryCustSurveyDelegate, this.onqueryCustSurveyCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptCustInfoResponse 金证统一账户测试账户生成器.KessService.KessService.queryApptCustInfo(金证统一账户测试账户生成器.KessService.queryApptCustInfoRequest request) {
+            return base.Channel.queryApptCustInfo(request);
+        }
+        
+        public string queryApptCustInfo(string in0) {
+            金证统一账户测试账户生成器.KessService.queryApptCustInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptCustInfoRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.queryApptCustInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).queryApptCustInfo(inValue);
+            return retVal.queryApptCustInfoReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginqueryApptCustInfo(金证统一账户测试账户生成器.KessService.queryApptCustInfoRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginqueryApptCustInfo(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginqueryApptCustInfo(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.queryApptCustInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptCustInfoRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginqueryApptCustInfo(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptCustInfoResponse 金证统一账户测试账户生成器.KessService.KessService.EndqueryApptCustInfo(System.IAsyncResult result) {
+            return base.Channel.EndqueryApptCustInfo(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndqueryApptCustInfo(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.queryApptCustInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndqueryApptCustInfo(result);
+            return retVal.queryApptCustInfoReturn;
+        }
+        
+        private System.IAsyncResult OnBeginqueryApptCustInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginqueryApptCustInfo(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndqueryApptCustInfo(System.IAsyncResult result) {
+            string retVal = this.EndqueryApptCustInfo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnqueryApptCustInfoCompleted(object state) {
+            if ((this.queryApptCustInfoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.queryApptCustInfoCompleted(this, new queryApptCustInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void queryApptCustInfoAsync(string in0) {
+            this.queryApptCustInfoAsync(in0, null);
+        }
+        
+        public void queryApptCustInfoAsync(string in0, object userState) {
+            if ((this.onBeginqueryApptCustInfoDelegate == null)) {
+                this.onBeginqueryApptCustInfoDelegate = new BeginOperationDelegate(this.OnBeginqueryApptCustInfo);
+            }
+            if ((this.onEndqueryApptCustInfoDelegate == null)) {
+                this.onEndqueryApptCustInfoDelegate = new EndOperationDelegate(this.OnEndqueryApptCustInfo);
+            }
+            if ((this.onqueryApptCustInfoCompletedDelegate == null)) {
+                this.onqueryApptCustInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnqueryApptCustInfoCompleted);
+            }
+            base.InvokeAsync(this.onBeginqueryApptCustInfoDelegate, new object[] {
+                        in0}, this.onEndqueryApptCustInfoDelegate, this.onqueryApptCustInfoCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExResponse 金证统一账户测试账户生成器.KessService.KessService.queryApptCustBaseInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExRequest request) {
+            return base.Channel.queryApptCustBaseInfoEx(request);
+        }
+        
+        public string queryApptCustBaseInfoEx(string in0) {
+            金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).queryApptCustBaseInfoEx(inValue);
+            return retVal.queryApptCustBaseInfoExReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginqueryApptCustBaseInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginqueryApptCustBaseInfoEx(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginqueryApptCustBaseInfoEx(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginqueryApptCustBaseInfoEx(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExResponse 金证统一账户测试账户生成器.KessService.KessService.EndqueryApptCustBaseInfoEx(System.IAsyncResult result) {
+            return base.Channel.EndqueryApptCustBaseInfoEx(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndqueryApptCustBaseInfoEx(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndqueryApptCustBaseInfoEx(result);
+            return retVal.queryApptCustBaseInfoExReturn;
+        }
+        
+        private System.IAsyncResult OnBeginqueryApptCustBaseInfoEx(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginqueryApptCustBaseInfoEx(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndqueryApptCustBaseInfoEx(System.IAsyncResult result) {
+            string retVal = this.EndqueryApptCustBaseInfoEx(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnqueryApptCustBaseInfoExCompleted(object state) {
+            if ((this.queryApptCustBaseInfoExCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.queryApptCustBaseInfoExCompleted(this, new queryApptCustBaseInfoExCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void queryApptCustBaseInfoExAsync(string in0) {
+            this.queryApptCustBaseInfoExAsync(in0, null);
+        }
+        
+        public void queryApptCustBaseInfoExAsync(string in0, object userState) {
+            if ((this.onBeginqueryApptCustBaseInfoExDelegate == null)) {
+                this.onBeginqueryApptCustBaseInfoExDelegate = new BeginOperationDelegate(this.OnBeginqueryApptCustBaseInfoEx);
+            }
+            if ((this.onEndqueryApptCustBaseInfoExDelegate == null)) {
+                this.onEndqueryApptCustBaseInfoExDelegate = new EndOperationDelegate(this.OnEndqueryApptCustBaseInfoEx);
+            }
+            if ((this.onqueryApptCustBaseInfoExCompletedDelegate == null)) {
+                this.onqueryApptCustBaseInfoExCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnqueryApptCustBaseInfoExCompleted);
+            }
+            base.InvokeAsync(this.onBeginqueryApptCustBaseInfoExDelegate, new object[] {
+                        in0}, this.onEndqueryApptCustBaseInfoExDelegate, this.onqueryApptCustBaseInfoExCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptCustInfoExResponse 金证统一账户测试账户生成器.KessService.KessService.queryApptCustInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustInfoExRequest request) {
+            return base.Channel.queryApptCustInfoEx(request);
+        }
+        
+        public string queryApptCustInfoEx(string in0) {
+            金证统一账户测试账户生成器.KessService.queryApptCustInfoExRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptCustInfoExRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.queryApptCustInfoExResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).queryApptCustInfoEx(inValue);
+            return retVal.queryApptCustInfoExReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginqueryApptCustInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustInfoExRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginqueryApptCustInfoEx(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginqueryApptCustInfoEx(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.queryApptCustInfoExRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptCustInfoExRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginqueryApptCustInfoEx(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptCustInfoExResponse 金证统一账户测试账户生成器.KessService.KessService.EndqueryApptCustInfoEx(System.IAsyncResult result) {
+            return base.Channel.EndqueryApptCustInfoEx(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndqueryApptCustInfoEx(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.queryApptCustInfoExResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndqueryApptCustInfoEx(result);
+            return retVal.queryApptCustInfoExReturn;
+        }
+        
+        private System.IAsyncResult OnBeginqueryApptCustInfoEx(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginqueryApptCustInfoEx(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndqueryApptCustInfoEx(System.IAsyncResult result) {
+            string retVal = this.EndqueryApptCustInfoEx(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnqueryApptCustInfoExCompleted(object state) {
+            if ((this.queryApptCustInfoExCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.queryApptCustInfoExCompleted(this, new queryApptCustInfoExCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void queryApptCustInfoExAsync(string in0) {
+            this.queryApptCustInfoExAsync(in0, null);
+        }
+        
+        public void queryApptCustInfoExAsync(string in0, object userState) {
+            if ((this.onBeginqueryApptCustInfoExDelegate == null)) {
+                this.onBeginqueryApptCustInfoExDelegate = new BeginOperationDelegate(this.OnBeginqueryApptCustInfoEx);
+            }
+            if ((this.onEndqueryApptCustInfoExDelegate == null)) {
+                this.onEndqueryApptCustInfoExDelegate = new EndOperationDelegate(this.OnEndqueryApptCustInfoEx);
+            }
+            if ((this.onqueryApptCustInfoExCompletedDelegate == null)) {
+                this.onqueryApptCustInfoExCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnqueryApptCustInfoExCompleted);
+            }
+            base.InvokeAsync(this.onBeginqueryApptCustInfoExDelegate, new object[] {
+                        in0}, this.onEndqueryApptCustInfoExDelegate, this.onqueryApptCustInfoExCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.mdfApptBCInfoResponse 金证统一账户测试账户生成器.KessService.KessService.mdfApptBCInfo(金证统一账户测试账户生成器.KessService.mdfApptBCInfoRequest request) {
+            return base.Channel.mdfApptBCInfo(request);
+        }
+        
+        public string mdfApptBCInfo(string in0) {
+            金证统一账户测试账户生成器.KessService.mdfApptBCInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.mdfApptBCInfoRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.mdfApptBCInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).mdfApptBCInfo(inValue);
+            return retVal.mdfApptBCInfoReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginmdfApptBCInfo(金证统一账户测试账户生成器.KessService.mdfApptBCInfoRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginmdfApptBCInfo(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginmdfApptBCInfo(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.mdfApptBCInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.mdfApptBCInfoRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginmdfApptBCInfo(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.mdfApptBCInfoResponse 金证统一账户测试账户生成器.KessService.KessService.EndmdfApptBCInfo(System.IAsyncResult result) {
+            return base.Channel.EndmdfApptBCInfo(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndmdfApptBCInfo(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.mdfApptBCInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndmdfApptBCInfo(result);
+            return retVal.mdfApptBCInfoReturn;
+        }
+        
+        private System.IAsyncResult OnBeginmdfApptBCInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginmdfApptBCInfo(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndmdfApptBCInfo(System.IAsyncResult result) {
+            string retVal = this.EndmdfApptBCInfo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnmdfApptBCInfoCompleted(object state) {
+            if ((this.mdfApptBCInfoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.mdfApptBCInfoCompleted(this, new mdfApptBCInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void mdfApptBCInfoAsync(string in0) {
+            this.mdfApptBCInfoAsync(in0, null);
+        }
+        
+        public void mdfApptBCInfoAsync(string in0, object userState) {
+            if ((this.onBeginmdfApptBCInfoDelegate == null)) {
+                this.onBeginmdfApptBCInfoDelegate = new BeginOperationDelegate(this.OnBeginmdfApptBCInfo);
+            }
+            if ((this.onEndmdfApptBCInfoDelegate == null)) {
+                this.onEndmdfApptBCInfoDelegate = new EndOperationDelegate(this.OnEndmdfApptBCInfo);
+            }
+            if ((this.onmdfApptBCInfoCompletedDelegate == null)) {
+                this.onmdfApptBCInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnmdfApptBCInfoCompleted);
+            }
+            base.InvokeAsync(this.onBeginmdfApptBCInfoDelegate, new object[] {
+                        in0}, this.onEndmdfApptBCInfoDelegate, this.onmdfApptBCInfoCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptBCInfoResponse 金证统一账户测试账户生成器.KessService.KessService.queryApptBCInfo(金证统一账户测试账户生成器.KessService.queryApptBCInfoRequest request) {
+            return base.Channel.queryApptBCInfo(request);
+        }
+        
+        public string queryApptBCInfo(string in0) {
+            金证统一账户测试账户生成器.KessService.queryApptBCInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptBCInfoRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.queryApptBCInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).queryApptBCInfo(inValue);
+            return retVal.queryApptBCInfoReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginqueryApptBCInfo(金证统一账户测试账户生成器.KessService.queryApptBCInfoRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginqueryApptBCInfo(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginqueryApptBCInfo(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.queryApptBCInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptBCInfoRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginqueryApptBCInfo(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptBCInfoResponse 金证统一账户测试账户生成器.KessService.KessService.EndqueryApptBCInfo(System.IAsyncResult result) {
+            return base.Channel.EndqueryApptBCInfo(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndqueryApptBCInfo(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.queryApptBCInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndqueryApptBCInfo(result);
+            return retVal.queryApptBCInfoReturn;
+        }
+        
+        private System.IAsyncResult OnBeginqueryApptBCInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginqueryApptBCInfo(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndqueryApptBCInfo(System.IAsyncResult result) {
+            string retVal = this.EndqueryApptBCInfo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnqueryApptBCInfoCompleted(object state) {
+            if ((this.queryApptBCInfoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.queryApptBCInfoCompleted(this, new queryApptBCInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void queryApptBCInfoAsync(string in0) {
+            this.queryApptBCInfoAsync(in0, null);
+        }
+        
+        public void queryApptBCInfoAsync(string in0, object userState) {
+            if ((this.onBeginqueryApptBCInfoDelegate == null)) {
+                this.onBeginqueryApptBCInfoDelegate = new BeginOperationDelegate(this.OnBeginqueryApptBCInfo);
+            }
+            if ((this.onEndqueryApptBCInfoDelegate == null)) {
+                this.onEndqueryApptBCInfoDelegate = new EndOperationDelegate(this.OnEndqueryApptBCInfo);
+            }
+            if ((this.onqueryApptBCInfoCompletedDelegate == null)) {
+                this.onqueryApptBCInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnqueryApptBCInfoCompleted);
+            }
+            base.InvokeAsync(this.onBeginqueryApptBCInfoDelegate, new object[] {
+                        in0}, this.onEndqueryApptBCInfoDelegate, this.onqueryApptBCInfoCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.querySurveyExclInfoResponse 金证统一账户测试账户生成器.KessService.KessService.querySurveyExclInfo(金证统一账户测试账户生成器.KessService.querySurveyExclInfoRequest request) {
+            return base.Channel.querySurveyExclInfo(request);
+        }
+        
+        public string querySurveyExclInfo(string in0) {
+            金证统一账户测试账户生成器.KessService.querySurveyExclInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.querySurveyExclInfoRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.querySurveyExclInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).querySurveyExclInfo(inValue);
+            return retVal.querySurveyExclInfoReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginquerySurveyExclInfo(金证统一账户测试账户生成器.KessService.querySurveyExclInfoRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginquerySurveyExclInfo(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginquerySurveyExclInfo(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.querySurveyExclInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.querySurveyExclInfoRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginquerySurveyExclInfo(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.querySurveyExclInfoResponse 金证统一账户测试账户生成器.KessService.KessService.EndquerySurveyExclInfo(System.IAsyncResult result) {
+            return base.Channel.EndquerySurveyExclInfo(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndquerySurveyExclInfo(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.querySurveyExclInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndquerySurveyExclInfo(result);
+            return retVal.querySurveyExclInfoReturn;
+        }
+        
+        private System.IAsyncResult OnBeginquerySurveyExclInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginquerySurveyExclInfo(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndquerySurveyExclInfo(System.IAsyncResult result) {
+            string retVal = this.EndquerySurveyExclInfo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnquerySurveyExclInfoCompleted(object state) {
+            if ((this.querySurveyExclInfoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.querySurveyExclInfoCompleted(this, new querySurveyExclInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void querySurveyExclInfoAsync(string in0) {
+            this.querySurveyExclInfoAsync(in0, null);
+        }
+        
+        public void querySurveyExclInfoAsync(string in0, object userState) {
+            if ((this.onBeginquerySurveyExclInfoDelegate == null)) {
+                this.onBeginquerySurveyExclInfoDelegate = new BeginOperationDelegate(this.OnBeginquerySurveyExclInfo);
+            }
+            if ((this.onEndquerySurveyExclInfoDelegate == null)) {
+                this.onEndquerySurveyExclInfoDelegate = new EndOperationDelegate(this.OnEndquerySurveyExclInfo);
+            }
+            if ((this.onquerySurveyExclInfoCompletedDelegate == null)) {
+                this.onquerySurveyExclInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnquerySurveyExclInfoCompleted);
+            }
+            base.InvokeAsync(this.onBeginquerySurveyExclInfoDelegate, new object[] {
+                        in0}, this.onEndquerySurveyExclInfoDelegate, this.onquerySurveyExclInfoCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.checkCustAgmtLimitResponse 金证统一账户测试账户生成器.KessService.KessService.checkCustAgmtLimit(金证统一账户测试账户生成器.KessService.checkCustAgmtLimitRequest request) {
+            return base.Channel.checkCustAgmtLimit(request);
+        }
+        
+        public string checkCustAgmtLimit(string in0) {
+            金证统一账户测试账户生成器.KessService.checkCustAgmtLimitRequest inValue = new 金证统一账户测试账户生成器.KessService.checkCustAgmtLimitRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.checkCustAgmtLimitResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).checkCustAgmtLimit(inValue);
+            return retVal.checkCustAgmtLimitReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BegincheckCustAgmtLimit(金证统一账户测试账户生成器.KessService.checkCustAgmtLimitRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BegincheckCustAgmtLimit(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BegincheckCustAgmtLimit(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.checkCustAgmtLimitRequest inValue = new 金证统一账户测试账户生成器.KessService.checkCustAgmtLimitRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BegincheckCustAgmtLimit(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.checkCustAgmtLimitResponse 金证统一账户测试账户生成器.KessService.KessService.EndcheckCustAgmtLimit(System.IAsyncResult result) {
+            return base.Channel.EndcheckCustAgmtLimit(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndcheckCustAgmtLimit(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.checkCustAgmtLimitResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndcheckCustAgmtLimit(result);
+            return retVal.checkCustAgmtLimitReturn;
+        }
+        
+        private System.IAsyncResult OnBegincheckCustAgmtLimit(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BegincheckCustAgmtLimit(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndcheckCustAgmtLimit(System.IAsyncResult result) {
+            string retVal = this.EndcheckCustAgmtLimit(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OncheckCustAgmtLimitCompleted(object state) {
+            if ((this.checkCustAgmtLimitCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.checkCustAgmtLimitCompleted(this, new checkCustAgmtLimitCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void checkCustAgmtLimitAsync(string in0) {
+            this.checkCustAgmtLimitAsync(in0, null);
+        }
+        
+        public void checkCustAgmtLimitAsync(string in0, object userState) {
+            if ((this.onBegincheckCustAgmtLimitDelegate == null)) {
+                this.onBegincheckCustAgmtLimitDelegate = new BeginOperationDelegate(this.OnBegincheckCustAgmtLimit);
+            }
+            if ((this.onEndcheckCustAgmtLimitDelegate == null)) {
+                this.onEndcheckCustAgmtLimitDelegate = new EndOperationDelegate(this.OnEndcheckCustAgmtLimit);
+            }
+            if ((this.oncheckCustAgmtLimitCompletedDelegate == null)) {
+                this.oncheckCustAgmtLimitCompletedDelegate = new System.Threading.SendOrPostCallback(this.OncheckCustAgmtLimitCompleted);
+            }
+            base.InvokeAsync(this.onBegincheckCustAgmtLimitDelegate, new object[] {
+                        in0}, this.onEndcheckCustAgmtLimitDelegate, this.oncheckCustAgmtLimitCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptOrgInfoResponse 金证统一账户测试账户生成器.KessService.KessService.queryApptOrgInfo(金证统一账户测试账户生成器.KessService.queryApptOrgInfoRequest request) {
+            return base.Channel.queryApptOrgInfo(request);
+        }
+        
+        public string queryApptOrgInfo(string in0) {
+            金证统一账户测试账户生成器.KessService.queryApptOrgInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptOrgInfoRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.queryApptOrgInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).queryApptOrgInfo(inValue);
+            return retVal.queryApptOrgInfoReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginqueryApptOrgInfo(金证统一账户测试账户生成器.KessService.queryApptOrgInfoRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginqueryApptOrgInfo(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginqueryApptOrgInfo(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.queryApptOrgInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.queryApptOrgInfoRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginqueryApptOrgInfo(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.queryApptOrgInfoResponse 金证统一账户测试账户生成器.KessService.KessService.EndqueryApptOrgInfo(System.IAsyncResult result) {
+            return base.Channel.EndqueryApptOrgInfo(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndqueryApptOrgInfo(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.queryApptOrgInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndqueryApptOrgInfo(result);
+            return retVal.queryApptOrgInfoReturn;
+        }
+        
+        private System.IAsyncResult OnBeginqueryApptOrgInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginqueryApptOrgInfo(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndqueryApptOrgInfo(System.IAsyncResult result) {
+            string retVal = this.EndqueryApptOrgInfo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnqueryApptOrgInfoCompleted(object state) {
+            if ((this.queryApptOrgInfoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.queryApptOrgInfoCompleted(this, new queryApptOrgInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void queryApptOrgInfoAsync(string in0) {
+            this.queryApptOrgInfoAsync(in0, null);
+        }
+        
+        public void queryApptOrgInfoAsync(string in0, object userState) {
+            if ((this.onBeginqueryApptOrgInfoDelegate == null)) {
+                this.onBeginqueryApptOrgInfoDelegate = new BeginOperationDelegate(this.OnBeginqueryApptOrgInfo);
+            }
+            if ((this.onEndqueryApptOrgInfoDelegate == null)) {
+                this.onEndqueryApptOrgInfoDelegate = new EndOperationDelegate(this.OnEndqueryApptOrgInfo);
+            }
+            if ((this.onqueryApptOrgInfoCompletedDelegate == null)) {
+                this.onqueryApptOrgInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnqueryApptOrgInfoCompleted);
+            }
+            base.InvokeAsync(this.onBeginqueryApptOrgInfoDelegate, new object[] {
+                        in0}, this.onEndqueryApptOrgInfoDelegate, this.onqueryApptOrgInfoCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.addBizTrailResponse 金证统一账户测试账户生成器.KessService.KessService.addBizTrail(金证统一账户测试账户生成器.KessService.addBizTrailRequest request) {
+            return base.Channel.addBizTrail(request);
+        }
+        
+        public string addBizTrail(string in0) {
+            金证统一账户测试账户生成器.KessService.addBizTrailRequest inValue = new 金证统一账户测试账户生成器.KessService.addBizTrailRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.addBizTrailResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).addBizTrail(inValue);
+            return retVal.addBizTrailReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginaddBizTrail(金证统一账户测试账户生成器.KessService.addBizTrailRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginaddBizTrail(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginaddBizTrail(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.addBizTrailRequest inValue = new 金证统一账户测试账户生成器.KessService.addBizTrailRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginaddBizTrail(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.addBizTrailResponse 金证统一账户测试账户生成器.KessService.KessService.EndaddBizTrail(System.IAsyncResult result) {
+            return base.Channel.EndaddBizTrail(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndaddBizTrail(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.addBizTrailResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndaddBizTrail(result);
+            return retVal.addBizTrailReturn;
+        }
+        
+        private System.IAsyncResult OnBeginaddBizTrail(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginaddBizTrail(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndaddBizTrail(System.IAsyncResult result) {
+            string retVal = this.EndaddBizTrail(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnaddBizTrailCompleted(object state) {
+            if ((this.addBizTrailCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.addBizTrailCompleted(this, new addBizTrailCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void addBizTrailAsync(string in0) {
+            this.addBizTrailAsync(in0, null);
+        }
+        
+        public void addBizTrailAsync(string in0, object userState) {
+            if ((this.onBeginaddBizTrailDelegate == null)) {
+                this.onBeginaddBizTrailDelegate = new BeginOperationDelegate(this.OnBeginaddBizTrail);
+            }
+            if ((this.onEndaddBizTrailDelegate == null)) {
+                this.onEndaddBizTrailDelegate = new EndOperationDelegate(this.OnEndaddBizTrail);
+            }
+            if ((this.onaddBizTrailCompletedDelegate == null)) {
+                this.onaddBizTrailCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnaddBizTrailCompleted);
+            }
+            base.InvokeAsync(this.onBeginaddBizTrailDelegate, new object[] {
+                        in0}, this.onEndaddBizTrailDelegate, this.onaddBizTrailCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.qryCustBizRiskResultResponse 金证统一账户测试账户生成器.KessService.KessService.qryCustBizRiskResult(金证统一账户测试账户生成器.KessService.qryCustBizRiskResultRequest request) {
+            return base.Channel.qryCustBizRiskResult(request);
+        }
+        
+        public string qryCustBizRiskResult(string in0) {
+            金证统一账户测试账户生成器.KessService.qryCustBizRiskResultRequest inValue = new 金证统一账户测试账户生成器.KessService.qryCustBizRiskResultRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.qryCustBizRiskResultResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).qryCustBizRiskResult(inValue);
+            return retVal.qryCustBizRiskResultReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginqryCustBizRiskResult(金证统一账户测试账户生成器.KessService.qryCustBizRiskResultRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginqryCustBizRiskResult(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginqryCustBizRiskResult(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.qryCustBizRiskResultRequest inValue = new 金证统一账户测试账户生成器.KessService.qryCustBizRiskResultRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginqryCustBizRiskResult(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.qryCustBizRiskResultResponse 金证统一账户测试账户生成器.KessService.KessService.EndqryCustBizRiskResult(System.IAsyncResult result) {
+            return base.Channel.EndqryCustBizRiskResult(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndqryCustBizRiskResult(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.qryCustBizRiskResultResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndqryCustBizRiskResult(result);
+            return retVal.qryCustBizRiskResultReturn;
+        }
+        
+        private System.IAsyncResult OnBeginqryCustBizRiskResult(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginqryCustBizRiskResult(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndqryCustBizRiskResult(System.IAsyncResult result) {
+            string retVal = this.EndqryCustBizRiskResult(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnqryCustBizRiskResultCompleted(object state) {
+            if ((this.qryCustBizRiskResultCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.qryCustBizRiskResultCompleted(this, new qryCustBizRiskResultCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void qryCustBizRiskResultAsync(string in0) {
+            this.qryCustBizRiskResultAsync(in0, null);
+        }
+        
+        public void qryCustBizRiskResultAsync(string in0, object userState) {
+            if ((this.onBeginqryCustBizRiskResultDelegate == null)) {
+                this.onBeginqryCustBizRiskResultDelegate = new BeginOperationDelegate(this.OnBeginqryCustBizRiskResult);
+            }
+            if ((this.onEndqryCustBizRiskResultDelegate == null)) {
+                this.onEndqryCustBizRiskResultDelegate = new EndOperationDelegate(this.OnEndqryCustBizRiskResult);
+            }
+            if ((this.onqryCustBizRiskResultCompletedDelegate == null)) {
+                this.onqryCustBizRiskResultCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnqryCustBizRiskResultCompleted);
+            }
+            base.InvokeAsync(this.onBeginqryCustBizRiskResultDelegate, new object[] {
+                        in0}, this.onEndqryCustBizRiskResultDelegate, this.onqryCustBizRiskResultCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.mdfCustRiskProprightResponse 金证统一账户测试账户生成器.KessService.KessService.mdfCustRiskPropright(金证统一账户测试账户生成器.KessService.mdfCustRiskProprightRequest request) {
+            return base.Channel.mdfCustRiskPropright(request);
+        }
+        
+        public string mdfCustRiskPropright(string in0) {
+            金证统一账户测试账户生成器.KessService.mdfCustRiskProprightRequest inValue = new 金证统一账户测试账户生成器.KessService.mdfCustRiskProprightRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.mdfCustRiskProprightResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).mdfCustRiskPropright(inValue);
+            return retVal.mdfCustRiskProprightReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginmdfCustRiskPropright(金证统一账户测试账户生成器.KessService.mdfCustRiskProprightRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginmdfCustRiskPropright(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginmdfCustRiskPropright(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.mdfCustRiskProprightRequest inValue = new 金证统一账户测试账户生成器.KessService.mdfCustRiskProprightRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginmdfCustRiskPropright(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.mdfCustRiskProprightResponse 金证统一账户测试账户生成器.KessService.KessService.EndmdfCustRiskPropright(System.IAsyncResult result) {
+            return base.Channel.EndmdfCustRiskPropright(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndmdfCustRiskPropright(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.mdfCustRiskProprightResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndmdfCustRiskPropright(result);
+            return retVal.mdfCustRiskProprightReturn;
+        }
+        
+        private System.IAsyncResult OnBeginmdfCustRiskPropright(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginmdfCustRiskPropright(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndmdfCustRiskPropright(System.IAsyncResult result) {
+            string retVal = this.EndmdfCustRiskPropright(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnmdfCustRiskProprightCompleted(object state) {
+            if ((this.mdfCustRiskProprightCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.mdfCustRiskProprightCompleted(this, new mdfCustRiskProprightCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void mdfCustRiskProprightAsync(string in0) {
+            this.mdfCustRiskProprightAsync(in0, null);
+        }
+        
+        public void mdfCustRiskProprightAsync(string in0, object userState) {
+            if ((this.onBeginmdfCustRiskProprightDelegate == null)) {
+                this.onBeginmdfCustRiskProprightDelegate = new BeginOperationDelegate(this.OnBeginmdfCustRiskPropright);
+            }
+            if ((this.onEndmdfCustRiskProprightDelegate == null)) {
+                this.onEndmdfCustRiskProprightDelegate = new EndOperationDelegate(this.OnEndmdfCustRiskPropright);
+            }
+            if ((this.onmdfCustRiskProprightCompletedDelegate == null)) {
+                this.onmdfCustRiskProprightCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnmdfCustRiskProprightCompleted);
+            }
+            base.InvokeAsync(this.onBeginmdfCustRiskProprightDelegate, new object[] {
+                        in0}, this.onEndmdfCustRiskProprightDelegate, this.onmdfCustRiskProprightCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoResponse 金证统一账户测试账户生成器.KessService.KessService.mdfCustNraTaxInfo(金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoRequest request) {
+            return base.Channel.mdfCustNraTaxInfo(request);
+        }
+        
+        public string mdfCustNraTaxInfo(string in0) {
+            金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).mdfCustNraTaxInfo(inValue);
+            return retVal.mdfCustNraTaxInfoReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginmdfCustNraTaxInfo(金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginmdfCustNraTaxInfo(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginmdfCustNraTaxInfo(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginmdfCustNraTaxInfo(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoResponse 金证统一账户测试账户生成器.KessService.KessService.EndmdfCustNraTaxInfo(System.IAsyncResult result) {
+            return base.Channel.EndmdfCustNraTaxInfo(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndmdfCustNraTaxInfo(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndmdfCustNraTaxInfo(result);
+            return retVal.mdfCustNraTaxInfoReturn;
+        }
+        
+        private System.IAsyncResult OnBeginmdfCustNraTaxInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginmdfCustNraTaxInfo(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndmdfCustNraTaxInfo(System.IAsyncResult result) {
+            string retVal = this.EndmdfCustNraTaxInfo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnmdfCustNraTaxInfoCompleted(object state) {
+            if ((this.mdfCustNraTaxInfoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.mdfCustNraTaxInfoCompleted(this, new mdfCustNraTaxInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void mdfCustNraTaxInfoAsync(string in0) {
+            this.mdfCustNraTaxInfoAsync(in0, null);
+        }
+        
+        public void mdfCustNraTaxInfoAsync(string in0, object userState) {
+            if ((this.onBeginmdfCustNraTaxInfoDelegate == null)) {
+                this.onBeginmdfCustNraTaxInfoDelegate = new BeginOperationDelegate(this.OnBeginmdfCustNraTaxInfo);
+            }
+            if ((this.onEndmdfCustNraTaxInfoDelegate == null)) {
+                this.onEndmdfCustNraTaxInfoDelegate = new EndOperationDelegate(this.OnEndmdfCustNraTaxInfo);
+            }
+            if ((this.onmdfCustNraTaxInfoCompletedDelegate == null)) {
+                this.onmdfCustNraTaxInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnmdfCustNraTaxInfoCompleted);
+            }
+            base.InvokeAsync(this.onBeginmdfCustNraTaxInfoDelegate, new object[] {
+                        in0}, this.onEndmdfCustNraTaxInfoDelegate, this.onmdfCustNraTaxInfoCompletedDelegate, userState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoResponse 金证统一账户测试账户生成器.KessService.KessService.qryCustNraTaxInfo(金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoRequest request) {
+            return base.Channel.qryCustNraTaxInfo(request);
+        }
+        
+        public string qryCustNraTaxInfo(string in0) {
+            金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoRequest();
+            inValue.in0 = in0;
+            金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).qryCustNraTaxInfo(inValue);
+            return retVal.qryCustNraTaxInfoReturn;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.IAsyncResult 金证统一账户测试账户生成器.KessService.KessService.BeginqryCustNraTaxInfo(金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoRequest request, System.AsyncCallback callback, object asyncState) {
+            return base.Channel.BeginqryCustNraTaxInfo(request, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public System.IAsyncResult BeginqryCustNraTaxInfo(string in0, System.AsyncCallback callback, object asyncState) {
+            金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoRequest inValue = new 金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoRequest();
+            inValue.in0 = in0;
+            return ((金证统一账户测试账户生成器.KessService.KessService)(this)).BeginqryCustNraTaxInfo(inValue, callback, asyncState);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoResponse 金证统一账户测试账户生成器.KessService.KessService.EndqryCustNraTaxInfo(System.IAsyncResult result) {
+            return base.Channel.EndqryCustNraTaxInfo(result);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        public string EndqryCustNraTaxInfo(System.IAsyncResult result) {
+            金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoResponse retVal = ((金证统一账户测试账户生成器.KessService.KessService)(this)).EndqryCustNraTaxInfo(result);
+            return retVal.qryCustNraTaxInfoReturn;
+        }
+        
+        private System.IAsyncResult OnBeginqryCustNraTaxInfo(object[] inValues, System.AsyncCallback callback, object asyncState) {
+            string in0 = ((string)(inValues[0]));
+            return this.BeginqryCustNraTaxInfo(in0, callback, asyncState);
+        }
+        
+        private object[] OnEndqryCustNraTaxInfo(System.IAsyncResult result) {
+            string retVal = this.EndqryCustNraTaxInfo(result);
+            return new object[] {
+                    retVal};
+        }
+        
+        private void OnqryCustNraTaxInfoCompleted(object state) {
+            if ((this.qryCustNraTaxInfoCompleted != null)) {
+                InvokeAsyncCompletedEventArgs e = ((InvokeAsyncCompletedEventArgs)(state));
+                this.qryCustNraTaxInfoCompleted(this, new qryCustNraTaxInfoCompletedEventArgs(e.Results, e.Error, e.Cancelled, e.UserState));
+            }
+        }
+        
+        public void qryCustNraTaxInfoAsync(string in0) {
+            this.qryCustNraTaxInfoAsync(in0, null);
+        }
+        
+        public void qryCustNraTaxInfoAsync(string in0, object userState) {
+            if ((this.onBeginqryCustNraTaxInfoDelegate == null)) {
+                this.onBeginqryCustNraTaxInfoDelegate = new BeginOperationDelegate(this.OnBeginqryCustNraTaxInfo);
+            }
+            if ((this.onEndqryCustNraTaxInfoDelegate == null)) {
+                this.onEndqryCustNraTaxInfoDelegate = new EndOperationDelegate(this.OnEndqryCustNraTaxInfo);
+            }
+            if ((this.onqryCustNraTaxInfoCompletedDelegate == null)) {
+                this.onqryCustNraTaxInfoCompletedDelegate = new System.Threading.SendOrPostCallback(this.OnqryCustNraTaxInfoCompleted);
+            }
+            base.InvokeAsync(this.onBeginqryCustNraTaxInfoDelegate, new object[] {
+                        in0}, this.onEndqryCustNraTaxInfoDelegate, this.onqryCustNraTaxInfoCompletedDelegate, userState);
         }
     }
 }

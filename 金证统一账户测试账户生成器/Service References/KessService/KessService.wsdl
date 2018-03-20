@@ -73,6 +73,9 @@
   <wsdl:message name="operatorInfoResponse">
     <wsdl:part name="operatorInfoReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="queryApptBCInfoResponse">
+    <wsdl:part name="queryApptBCInfoReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="searchDateTimeRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
@@ -119,6 +122,9 @@
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="openNewStkAccRunTimeRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="queryApptBCInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="mdfCreditRecordRequest">
@@ -310,8 +316,14 @@
   <wsdl:message name="qryCreditRecordResponse">
     <wsdl:part name="qryCreditRecordReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="downloadImgStringByImgClsRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="operUserImgReCordInfoResponse">
     <wsdl:part name="operUserImgReCordInfoReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="mdfApptBCInfoResponse">
+    <wsdl:part name="mdfApptBCInfoReturn" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="mdfUserGuardianInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
@@ -324,6 +336,9 @@
   </wsdl:message>
   <wsdl:message name="openYMTAcctByNewZDResponse">
     <wsdl:part name="openYMTAcctByNewZDReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="setInvestProInfoRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="custInfoToOTCSysResponse">
     <wsdl:part name="custInfoToOTCSysReturn" type="soapenc:string" />
@@ -346,6 +361,9 @@
   <wsdl:message name="operFislCdtApplRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="addBizTrailRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="listCreditLevelResponse">
     <wsdl:part name="listCreditLevelReturn" type="soapenc:string" />
   </wsdl:message>
@@ -355,8 +373,15 @@
   <wsdl:message name="getUserOccuInfoResponse">
     <wsdl:part name="getUserOccuInfoReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="downloadImgFileResponse">
+    <wsdl:part name="downloadImgFileReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="webSendSmsResponse">
     <wsdl:part name="webSendSmsReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadImgStringRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+    <wsdl:part name="in1" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="closeCustomerResponse">
     <wsdl:part name="closeCustomerReturn" type="soapenc:string" />
@@ -394,8 +419,14 @@
   <wsdl:message name="queryAccountInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="uploadImgFileRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="operOtcAcctResponse">
     <wsdl:part name="operOtcAcctReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="querySurveyExclInfoRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="searchUserImgInfoResponse">
     <wsdl:part name="searchUserImgInfoReturn" type="soapenc:string" />
@@ -447,6 +478,13 @@
   </wsdl:message>
   <wsdl:message name="mdfPartnerInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadImgStringNoBizRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+    <wsdl:part name="in1" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="mdfCustRiskProprightResponse">
+    <wsdl:part name="mdfCustRiskProprightReturn" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="queryCustTradeAuthorityResponse">
     <wsdl:part name="queryCustTradeAuthorityReturn" type="soapenc:string" />
@@ -517,6 +555,9 @@
   <wsdl:message name="refuseWitnessRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="downloadImgStringRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="restoreCustomerResponse">
     <wsdl:part name="restoreCustomerReturn" type="soapenc:string" />
   </wsdl:message>
@@ -555,6 +596,9 @@
   </wsdl:message>
   <wsdl:message name="operatorLoginResponse">
     <wsdl:part name="operatorLoginReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="addBizTrailResponse">
+    <wsdl:part name="addBizTrailReturn" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="saveVideoInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
@@ -742,11 +786,17 @@
   <wsdl:message name="bjhgCustApplyCheckResponse">
     <wsdl:part name="bjhgCustApplyCheckReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="queryApptCustInfoExResponse">
+    <wsdl:part name="queryApptCustInfoExReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="openYMTAcctByNewZDRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="listCustRevisitInfoResponse">
     <wsdl:part name="listCustRevisitInfoReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="querySurveyExclInfoResponse">
+    <wsdl:part name="querySurveyExclInfoReturn" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="refuseWitnessResponse">
     <wsdl:part name="refuseWitnessReturn" type="soapenc:string" />
@@ -774,6 +824,9 @@
   </wsdl:message>
   <wsdl:message name="queryCustLinkInfoResponse">
     <wsdl:part name="queryCustLinkInfoReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="uploadImgFileResponse">
+    <wsdl:part name="uploadImgFileReturn" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="mdfCustCreditStatusResponse">
     <wsdl:part name="mdfCustCreditStatusReturn" type="soapenc:string" />
@@ -814,6 +867,9 @@
   <wsdl:message name="activateCubsbScResponse">
     <wsdl:part name="activateCubsbScReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="uploadImgStringResponse">
+    <wsdl:part name="uploadImgStringReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="queryCustAgreementResponse">
     <wsdl:part name="queryCustAgreementReturn" type="soapenc:string" />
   </wsdl:message>
@@ -831,6 +887,9 @@
   </wsdl:message>
   <wsdl:message name="searchSignAgreementResponse">
     <wsdl:part name="searchSignAgreementReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="downloadImgFileRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="listFislInterestGroupInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
@@ -871,6 +930,9 @@
   <wsdl:message name="mdfPartnerInfoResponse">
     <wsdl:part name="mdfPartnerInfoReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="mdfApptBCInfoRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="queryCustAssetsInfoResponse">
     <wsdl:part name="queryCustAssetsInfoReturn" type="soapenc:string" />
   </wsdl:message>
@@ -887,6 +949,9 @@
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="modifyFrtBizStatusRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="mdfCustRiskProprightRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="mdfUserExtInfoRequest">
@@ -910,6 +975,9 @@
   <wsdl:message name="operRecommenderInfoResponse">
     <wsdl:part name="operRecommenderInfoReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="mdfCustNraTaxInfoResponse">
+    <wsdl:part name="mdfCustNraTaxInfoReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="getCubsbLogResponse">
     <wsdl:part name="getCubsbLogReturn" type="soapenc:string" />
   </wsdl:message>
@@ -923,6 +991,9 @@
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="searchStkAcctBizInfoExRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="queryApptOrgInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="custInfoToBankAcctRequest">
@@ -982,6 +1053,9 @@
   <wsdl:message name="operatorInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="qryCustNraTaxInfoResponse">
+    <wsdl:part name="qryCustNraTaxInfoReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="queryCustInfoByCuacctRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
@@ -1013,6 +1087,9 @@
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="operRecommenderInfoRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="qryCustBizRiskResultRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="qryFislAttrResponse">
@@ -1079,6 +1156,9 @@
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="workBoardScZDRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="checkCustAgmtLimitRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="closeCustomerRequest">
@@ -1207,6 +1287,9 @@
   <wsdl:message name="operRelaInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="checkCustAgmtLimitResponse">
+    <wsdl:part name="checkCustAgmtLimitReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="queryZDImgQcParaResponse">
     <wsdl:part name="queryZDImgQcParaReturn" type="soapenc:string" />
   </wsdl:message>
@@ -1233,10 +1316,6 @@
   </wsdl:message>
   <wsdl:message name="uploadImgStringNoBizResponse">
     <wsdl:part name="uploadImgStringNoBizReturn" type="soapenc:string" />
-  </wsdl:message>
-  <wsdl:message name="uploadImgStringNoBizRequest">
-    <wsdl:part name="in0" type="soapenc:string" />
-    <wsdl:part name="in1" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="listHkTzxxInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
@@ -1268,6 +1347,9 @@
   <wsdl:message name="syncSurveyAns2KbssResponse">
     <wsdl:part name="syncSurveyAns2KbssReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="queryApptOrgInfoResponse">
+    <wsdl:part name="queryApptOrgInfoReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="openUserImgInfoResponse">
     <wsdl:part name="openUserImgInfoReturn" type="soapenc:string" />
   </wsdl:message>
@@ -1286,6 +1368,9 @@
   <wsdl:message name="onSearchZDRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="setInvestProInfoResponse">
+    <wsdl:part name="setInvestProInfoReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="operBoodsBizInfoResponse">
     <wsdl:part name="operBoodsBizInfoReturn" type="soapenc:string" />
   </wsdl:message>
@@ -1297,6 +1382,9 @@
   </wsdl:message>
   <wsdl:message name="decryptByAESResponse">
     <wsdl:part name="decryptByAESReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="queryApptCustInfoExRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="queryCustTradeAuthorityRequest">
     <wsdl:part name="in0" type="soapenc:string" />
@@ -1314,6 +1402,9 @@
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="openCustomerRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="queryApptCustBaseInfoExRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="qrySurveyRatingStdRequest">
@@ -1343,13 +1434,16 @@
   <wsdl:message name="queryOpenAccountProgressRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
-  <wsdl:message name="getMenuAutorityRequest">
-    <wsdl:part name="in0" type="soapenc:string" />
-  </wsdl:message>
   <wsdl:message name="queryCustContractInfoResponse">
     <wsdl:part name="queryCustContractInfoReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="getMenuAutorityRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="getWebBizLogRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="mdfCustNraTaxInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="queryCustCreditApplRequest">
@@ -1402,6 +1496,9 @@
   </wsdl:message>
   <wsdl:message name="mdfControlLerInfoResponse">
     <wsdl:part name="mdfControlLerInfoReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="downloadImgStringResponse">
+    <wsdl:part name="downloadImgStringReturn" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="queryUserRiskDetailInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
@@ -1457,6 +1554,9 @@
   <wsdl:message name="operBlackListInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="qryCustBizRiskResultResponse">
+    <wsdl:part name="qryCustBizRiskResultReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="restoreCustomerRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
@@ -1471,6 +1571,9 @@
   </wsdl:message>
   <wsdl:message name="getCubsbContractResponse">
     <wsdl:part name="getCubsbContractReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="queryApptCustBaseInfoExResponse">
+    <wsdl:part name="queryApptCustBaseInfoExReturn" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="modifyCustInfoTableResponse">
     <wsdl:part name="modifyCustInfoTableReturn" type="soapenc:string" />
@@ -1507,6 +1610,9 @@
   </wsdl:message>
   <wsdl:message name="cubsbScOpenAcctResponse">
     <wsdl:part name="cubsbScOpenAcctReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="qryCustNraTaxInfoRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="openFislCuacctResponse">
     <wsdl:part name="openFislCuacctReturn" type="soapenc:string" />
@@ -1550,6 +1656,9 @@
   <wsdl:message name="queryToConfirmRiskSurveyResultResponse">
     <wsdl:part name="queryToConfirmRiskSurveyResultReturn" type="soapenc:string" />
   </wsdl:message>
+  <wsdl:message name="queryApptCustInfoResponse">
+    <wsdl:part name="queryApptCustInfoReturn" type="soapenc:string" />
+  </wsdl:message>
   <wsdl:message name="queryOrgInfoListResponse">
     <wsdl:part name="queryOrgInfoListReturn" type="soapenc:string" />
   </wsdl:message>
@@ -1560,6 +1669,12 @@
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="setMainTrdacctRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="downloadImgStringByImgClsResponse">
+    <wsdl:part name="downloadImgStringByImgClsReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="queryApptCustInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="queryFislChiefInfoResponse">
@@ -1752,6 +1867,18 @@
     <wsdl:operation name="querySurveyIndex" parameterOrder="in0">
       <wsdl:input name="querySurveyIndexRequest" message="impl:querySurveyIndexRequest" />
       <wsdl:output name="querySurveyIndexResponse" message="impl:querySurveyIndexResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadImgString" parameterOrder="in0 in1">
+      <wsdl:input name="uploadImgStringRequest" message="impl:uploadImgStringRequest" />
+      <wsdl:output name="uploadImgStringResponse" message="impl:uploadImgStringResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadImgString" parameterOrder="in0">
+      <wsdl:input name="downloadImgStringRequest" message="impl:downloadImgStringRequest" />
+      <wsdl:output name="downloadImgStringResponse" message="impl:downloadImgStringResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadImgStringByImgCls" parameterOrder="in0">
+      <wsdl:input name="downloadImgStringByImgClsRequest" message="impl:downloadImgStringByImgClsRequest" />
+      <wsdl:output name="downloadImgStringByImgClsResponse" message="impl:downloadImgStringByImgClsResponse" />
     </wsdl:operation>
     <wsdl:operation name="openCustomer" parameterOrder="in0">
       <wsdl:input name="openCustomerRequest" message="impl:openCustomerRequest" />
@@ -2044,6 +2171,10 @@
     <wsdl:operation name="queryInvestProInfo" parameterOrder="in0">
       <wsdl:input name="queryInvestProInfoRequest" message="impl:queryInvestProInfoRequest" />
       <wsdl:output name="queryInvestProInfoResponse" message="impl:queryInvestProInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="setInvestProInfo" parameterOrder="in0">
+      <wsdl:input name="setInvestProInfoRequest" message="impl:setInvestProInfoRequest" />
+      <wsdl:output name="setInvestProInfoResponse" message="impl:setInvestProInfoResponse" />
     </wsdl:operation>
     <wsdl:operation name="queryToConfirmRiskSurveyResult" parameterOrder="in0">
       <wsdl:input name="queryToConfirmRiskSurveyResultRequest" message="impl:queryToConfirmRiskSurveyResultRequest" />
@@ -2525,9 +2656,17 @@
       <wsdl:input name="getBizSerialNoRequest" message="impl:getBizSerialNoRequest" />
       <wsdl:output name="getBizSerialNoResponse" message="impl:getBizSerialNoResponse" />
     </wsdl:operation>
+    <wsdl:operation name="uploadImgFile" parameterOrder="in0">
+      <wsdl:input name="uploadImgFileRequest" message="impl:uploadImgFileRequest" />
+      <wsdl:output name="uploadImgFileResponse" message="impl:uploadImgFileResponse" />
+    </wsdl:operation>
     <wsdl:operation name="getUserImgInfo" parameterOrder="in0">
       <wsdl:input name="getUserImgInfoRequest" message="impl:getUserImgInfoRequest" />
       <wsdl:output name="getUserImgInfoResponse" message="impl:getUserImgInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="downloadImgFile" parameterOrder="in0">
+      <wsdl:input name="downloadImgFileRequest" message="impl:downloadImgFileRequest" />
+      <wsdl:output name="downloadImgFileResponse" message="impl:downloadImgFileResponse" />
     </wsdl:operation>
     <wsdl:operation name="bjhgCustApplyCheck" parameterOrder="in0">
       <wsdl:input name="bjhgCustApplyCheckRequest" message="impl:bjhgCustApplyCheckRequest" />
@@ -2692,6 +2831,58 @@
     <wsdl:operation name="queryCustSurvey" parameterOrder="in0">
       <wsdl:input name="queryCustSurveyRequest" message="impl:queryCustSurveyRequest" />
       <wsdl:output name="queryCustSurveyResponse" message="impl:queryCustSurveyResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryApptCustInfo" parameterOrder="in0">
+      <wsdl:input name="queryApptCustInfoRequest" message="impl:queryApptCustInfoRequest" />
+      <wsdl:output name="queryApptCustInfoResponse" message="impl:queryApptCustInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryApptCustBaseInfoEx" parameterOrder="in0">
+      <wsdl:input name="queryApptCustBaseInfoExRequest" message="impl:queryApptCustBaseInfoExRequest" />
+      <wsdl:output name="queryApptCustBaseInfoExResponse" message="impl:queryApptCustBaseInfoExResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryApptCustInfoEx" parameterOrder="in0">
+      <wsdl:input name="queryApptCustInfoExRequest" message="impl:queryApptCustInfoExRequest" />
+      <wsdl:output name="queryApptCustInfoExResponse" message="impl:queryApptCustInfoExResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="mdfApptBCInfo" parameterOrder="in0">
+      <wsdl:input name="mdfApptBCInfoRequest" message="impl:mdfApptBCInfoRequest" />
+      <wsdl:output name="mdfApptBCInfoResponse" message="impl:mdfApptBCInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryApptBCInfo" parameterOrder="in0">
+      <wsdl:input name="queryApptBCInfoRequest" message="impl:queryApptBCInfoRequest" />
+      <wsdl:output name="queryApptBCInfoResponse" message="impl:queryApptBCInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="querySurveyExclInfo" parameterOrder="in0">
+      <wsdl:input name="querySurveyExclInfoRequest" message="impl:querySurveyExclInfoRequest" />
+      <wsdl:output name="querySurveyExclInfoResponse" message="impl:querySurveyExclInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="checkCustAgmtLimit" parameterOrder="in0">
+      <wsdl:input name="checkCustAgmtLimitRequest" message="impl:checkCustAgmtLimitRequest" />
+      <wsdl:output name="checkCustAgmtLimitResponse" message="impl:checkCustAgmtLimitResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="queryApptOrgInfo" parameterOrder="in0">
+      <wsdl:input name="queryApptOrgInfoRequest" message="impl:queryApptOrgInfoRequest" />
+      <wsdl:output name="queryApptOrgInfoResponse" message="impl:queryApptOrgInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="addBizTrail" parameterOrder="in0">
+      <wsdl:input name="addBizTrailRequest" message="impl:addBizTrailRequest" />
+      <wsdl:output name="addBizTrailResponse" message="impl:addBizTrailResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="qryCustBizRiskResult" parameterOrder="in0">
+      <wsdl:input name="qryCustBizRiskResultRequest" message="impl:qryCustBizRiskResultRequest" />
+      <wsdl:output name="qryCustBizRiskResultResponse" message="impl:qryCustBizRiskResultResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="mdfCustRiskPropright" parameterOrder="in0">
+      <wsdl:input name="mdfCustRiskProprightRequest" message="impl:mdfCustRiskProprightRequest" />
+      <wsdl:output name="mdfCustRiskProprightResponse" message="impl:mdfCustRiskProprightResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="mdfCustNraTaxInfo" parameterOrder="in0">
+      <wsdl:input name="mdfCustNraTaxInfoRequest" message="impl:mdfCustNraTaxInfoRequest" />
+      <wsdl:output name="mdfCustNraTaxInfoResponse" message="impl:mdfCustNraTaxInfoResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="qryCustNraTaxInfo" parameterOrder="in0">
+      <wsdl:input name="qryCustNraTaxInfoRequest" message="impl:qryCustNraTaxInfoRequest" />
+      <wsdl:output name="qryCustNraTaxInfoResponse" message="impl:qryCustNraTaxInfoResponse" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="KessServiceSoapBinding" type="impl:KessService">
@@ -2999,6 +3190,33 @@
         <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output name="querySurveyIndexResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="uploadImgString">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="uploadImgStringRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="uploadImgStringResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadImgString">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadImgStringRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="downloadImgStringResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadImgStringByImgCls">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadImgStringByImgClsRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="downloadImgStringByImgClsResponse">
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
@@ -3659,6 +3877,15 @@
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="setInvestProInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="setInvestProInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="setInvestProInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="queryToConfirmRiskSurveyResult">
       <wsdlsoap:operation soapAction="" />
       <wsdl:input name="queryToConfirmRiskSurveyResultRequest">
@@ -3818,7 +4045,7 @@
         <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output name="uploadImgStringNoBizResponse">
-        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:52310/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
     <wsdl:operation name="searchAcctFrtBizLog">
@@ -4739,12 +4966,30 @@
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="uploadImgFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="uploadImgFileRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="uploadImgFileResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="getUserImgInfo">
       <wsdlsoap:operation soapAction="" />
       <wsdl:input name="getUserImgInfoRequest">
         <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output name="getUserImgInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadImgFile">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadImgFileRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="downloadImgFileResponse">
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
@@ -5114,6 +5359,123 @@
         <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output name="queryCustSurveyResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryApptCustInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="queryApptCustInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="queryApptCustInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryApptCustBaseInfoEx">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="queryApptCustBaseInfoExRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="queryApptCustBaseInfoExResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryApptCustInfoEx">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="queryApptCustInfoExRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="queryApptCustInfoExResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mdfApptBCInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="mdfApptBCInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="mdfApptBCInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryApptBCInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="queryApptBCInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="queryApptBCInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="querySurveyExclInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="querySurveyExclInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="querySurveyExclInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCustAgmtLimit">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="checkCustAgmtLimitRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="checkCustAgmtLimitResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="queryApptOrgInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="queryApptOrgInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="queryApptOrgInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addBizTrail">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="addBizTrailRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="addBizTrailResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qryCustBizRiskResult">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="qryCustBizRiskResultRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="qryCustBizRiskResultResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mdfCustRiskPropright">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="mdfCustRiskProprightRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="mdfCustRiskProprightResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="mdfCustNraTaxInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="mdfCustNraTaxInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="mdfCustNraTaxInfoResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="qryCustNraTaxInfo">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="qryCustNraTaxInfoRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="qryCustNraTaxInfoResponse">
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
