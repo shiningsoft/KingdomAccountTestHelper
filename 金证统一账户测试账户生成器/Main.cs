@@ -149,6 +149,15 @@ namespace 金证统一账户测试账户生成器
             cbxOccupation.DataSource = occupationList.DataTable;
             */
 
+            if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
+            {
+                cbxOccupation.Enabled = false;
+            }
+            else
+            {
+                cbxOccupation.Enabled = true;
+            }
+            
             dtpCybSignDate.Value = DateTime.Now;
 
             try
@@ -227,22 +236,13 @@ namespace 金证统一账户测试账户生成器
 
             sex.SelectedValue = idcard.Sex.ToString();
             risk_level.SelectedValue = Dict.RiskTestLevel.积极型;
-            occu_type.SelectedValue = Dict.OCCU_EXTYPE.行政企事业单位工人;
+            occu_type.SelectedValue = Dict.OCCU_EXTYPE.其他;
             citizenship.SelectedValue = Dict.CITIZENSHIP.中国;
             education.SelectedIndex = Generator.CreateRandomInteger(0, education.Items.Count);
             // bank_code.SelectedIndex = Generator.CreateRandomInteger(0, bank_code.Items.Count);   // 随机选中三方银行
             bank_code.SelectedValue = Dict.BankCode.工商银行;
             cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
-            cbxOccupation.ResetText();
-
-            try
-            {
-                saveUserInfo();
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append(ex.Message);
-            }
+            cbxOccupation.Text = "专业技术人员";
         }
 
         /// <summary>
@@ -1162,7 +1162,15 @@ namespace 金证统一账户测试账户生成器
         
         private void occu_type_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
+            {
+                cbxOccupation.ResetText();
+                cbxOccupation.Enabled = false;
+            }
+            else
+            {
+                cbxOccupation.Enabled = true;
+            }
         }
 
         private void btnPreProccess_Click(object sender, EventArgs e)

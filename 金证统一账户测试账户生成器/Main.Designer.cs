@@ -151,8 +151,8 @@ namespace 金证统一账户测试账户生成器
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
-            this.button1 = new System.Windows.Forms.Button();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -1320,13 +1320,6 @@ namespace 金证统一账户测试账户生成器
             this.requestQueueCount.Size = new System.Drawing.Size(182, 21);
             this.requestQueueCount.Text = "请求队列长度：0，当前并发：0";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 0;
-            // 
             // tsslVersion
             // 
             this.tsslVersion.Name = "tsslVersion";
@@ -1334,6 +1327,13 @@ namespace 金证统一账户测试账户生成器
             this.tsslVersion.Spring = true;
             this.tsslVersion.Text = "当前版本：";
             this.tsslVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
             // 
             // Main
             // 
