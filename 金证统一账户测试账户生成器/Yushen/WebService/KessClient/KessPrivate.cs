@@ -74,6 +74,9 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         private int _requestQueueCount = 0;
 
+        //创建一个Stopwatch实例，用于计算Webservice请求花费的时间
+        private Stopwatch stopWatch = new Stopwatch();
+
         /// <summary>
         /// 创建WebService实例
         /// </summary>
@@ -856,9 +859,7 @@ namespace Yushen.WebService.KessClient
 
                 logger.Info("执行器" + index.ToString() + "调用Webservice功能<" + request.methonName + ">|" + request.xml);
 
-                //创建一个Stopwatch实例，用于计算Webservice请求花费的时间
-                Stopwatch stopWatch = new Stopwatch();
-                stopWatch.Start();
+                stopWatch.Restart();
 
                 // 调用WebService接口，获取返回值
                 System.Reflection.MethodInfo method = this.kessClientType.GetMethod(request.methonName);

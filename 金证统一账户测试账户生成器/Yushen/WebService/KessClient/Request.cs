@@ -63,7 +63,7 @@ namespace Yushen.WebService.KessClient
             XmlNode node = xmlDoc.SelectSingleNode("/request/data/" + name);
             if (node == null)
             {
-                throw new Exception("找不到属性：" + name);
+                throw new Exception("在" + methonName + "的xml模板文件中找不到属性：" + name);
             }
             node.InnerText = value;
         }

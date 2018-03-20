@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Dict = Yushen.WebService.KessClient.Dict;
 
 namespace Yushen.WebService.KessClient
 {
@@ -50,15 +49,8 @@ namespace Yushen.WebService.KessClient
             {
                 this.kessWebserviceURL = kessWebserviceURL;
             }
-
-            if (kessWebserviceURL != "")
-            {
-                this.kessWebserviceURL = kessWebserviceURL;
-            }
-
+            
             this.CreateInstance();
-            // 操作员登录
-            // await this.operatorLogin();
         }
 
         /// <summary>

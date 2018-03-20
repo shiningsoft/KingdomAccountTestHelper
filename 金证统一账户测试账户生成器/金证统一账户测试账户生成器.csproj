@@ -152,6 +152,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
+    <None Include="ClassDiagram1.cd" />
     <None Include="Resources\样本身份证正面.jpg" />
     <None Include="Resources\样本身份证反面.jpg" />
     <Content Include="Yushen\WebService\KessClient\Xml\listStkPbuOrg.xml">
