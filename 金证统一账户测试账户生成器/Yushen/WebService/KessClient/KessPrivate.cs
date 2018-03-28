@@ -666,11 +666,11 @@ namespace Yushen.WebService.KessClient
         /// <param name="FUND_TYPE">帐户类型（非必传）</param>
         /// <param name="OP_REMARK">备注信息（非必传）</param>
         /// <returns></returns>
-        async private Task<Response> openCuacct(string USER_CODE, string CUACCT_CLS="z",string CUACCT_LVL="0",string CUACCT_GRP="0",string CURRENCY = "0",string INT_ORG="",string CUACCT_CODE="",string FUND_TYPE="",string OP_REMARK="")
+        async private Task<Response> openCuacct(string USER_CODE, string CUACCT_CLS="",string CUACCT_LVL="0",string CUACCT_GRP="0",string CURRENCY = "0",string INT_ORG="",string CUACCT_CODE="",string FUND_TYPE="",string OP_REMARK="")
         {
             Request request = new Request(this.operatorId, "openCuacct");
             request.setAttr("USER_CODE", USER_CODE);
-            request.setAttr("CUACCT_CLS", CUACCT_CLS);
+            if( CUACCT_CLS != "" ) request.setAttr("CUACCT_CLS", CUACCT_CLS);
             request.setAttr("CUACCT_LVL", CUACCT_LVL);
             request.setAttr("CUACCT_GRP", CUACCT_GRP);
             request.setAttr("CURRENCY", CURRENCY);

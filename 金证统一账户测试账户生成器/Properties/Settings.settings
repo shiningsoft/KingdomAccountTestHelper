@@ -41,5 +41,14 @@
     <Setting Name="SURVEY_SN" Type="System.String" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
+    <Setting Name="默认开通的操作渠道" Type="System.String" Scope="User">
+      <Value Profile="(Default)">028a</Value>
+    </Setting>
+    <Setting Name="默认开通的资产账户类别" Type="System.String" Scope="User">
+      <Value Profile="(Default)">z</Value>
+    </Setting>
+    <Setting Name="默认开通的银行类型" Type="System.String" Scope="User">
+      <Value Profile="(Default)">5200</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

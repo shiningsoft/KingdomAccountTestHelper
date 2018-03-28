@@ -51,6 +51,10 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbCuacct_cls = new System.Windows.Forms.TextBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.tbChannels = new System.Windows.Forms.TextBox();
+            this.label30 = new System.Windows.Forms.Label();
             this.cbxOccupation = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
             this.cbxShortIdNo = new System.Windows.Forms.CheckBox();
@@ -153,8 +157,6 @@ namespace 金证统一账户测试账户生成器
             this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.label30 = new System.Windows.Forms.Label();
-            this.tbChannels = new System.Windows.Forms.TextBox();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -267,6 +269,8 @@ namespace 金证统一账户测试账户生成器
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.tbCuacct_cls);
+            this.tabPage1.Controls.Add(this.label31);
             this.tabPage1.Controls.Add(this.tbChannels);
             this.tabPage1.Controls.Add(this.label30);
             this.tabPage1.Controls.Add(this.cbxOccupation);
@@ -350,6 +354,38 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tbCuacct_cls
+            // 
+            this.tbCuacct_cls.Location = new System.Drawing.Point(670, 147);
+            this.tbCuacct_cls.Name = "tbCuacct_cls";
+            this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
+            this.tbCuacct_cls.TabIndex = 87;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(575, 150);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(89, 12);
+            this.label31.TabIndex = 86;
+            this.label31.Text = "资产账户类别：";
+            // 
+            // tbChannels
+            // 
+            this.tbChannels.Location = new System.Drawing.Point(670, 173);
+            this.tbChannels.Name = "tbChannels";
+            this.tbChannels.Size = new System.Drawing.Size(100, 21);
+            this.tbChannels.TabIndex = 85;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Location = new System.Drawing.Point(599, 176);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(65, 12);
+            this.label30.TabIndex = 84;
+            this.label30.Text = "操作渠道：";
             // 
             // cbxOccupation
             // 
@@ -1339,23 +1375,6 @@ namespace 金证统一账户测试账户生成器
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(563, 175);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(65, 12);
-            this.label30.TabIndex = 84;
-            this.label30.Text = "操作渠道：";
-            // 
-            // tbChannels
-            // 
-            this.tbChannels.Location = new System.Drawing.Point(634, 173);
-            this.tbChannels.Name = "tbChannels";
-            this.tbChannels.Size = new System.Drawing.Size(100, 21);
-            this.tbChannels.TabIndex = 85;
-            this.tbChannels.Text = "028a";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1370,6 +1389,7 @@ namespace 金证统一账户测试账户生成器
             this.Name = "Main";
             this.ShowIcon = false;
             this.Text = "金证统一账户测试账户生成器";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
@@ -1508,6 +1528,8 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripStatusLabel tsslVersion;
         private System.Windows.Forms.TextBox tbChannels;
         private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.TextBox tbCuacct_cls;
+        private System.Windows.Forms.Label label31;
     }
 }
 

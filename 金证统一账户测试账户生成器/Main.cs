@@ -132,7 +132,12 @@ namespace 金证统一账户测试账户生成器
             citizenship.ValueMember = "value";
             citizenship.DataSource = citizenshipList.DataTable;
 
-            Dict.BankCode bankCodeList = new Dict.BankCode();
+            //Dict.BankCode bankCodeList = new Dict.BankCode();
+            //bank_code.DisplayMember = "name";
+            //bank_code.ValueMember = "value";
+            //bank_code.DataSource = bankCodeList.DataTable;
+
+            Dict.CustomDict bankCodeList = new Dict.CustomDict("bankcode");
             bank_code.DisplayMember = "name";
             bank_code.ValueMember = "value";
             bank_code.DataSource = bankCodeList.DataTable;
@@ -141,6 +146,9 @@ namespace 金证统一账户测试账户生成器
             cbxOpenType.DisplayMember = "name";
             cbxOpenType.ValueMember = "value";
             cbxOpenType.DataSource = openTypeList.DataTable;
+
+            tbChannels.Text = Settings.Default.默认开通的操作渠道;
+            tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
 
             /*
             Dict.OCCUPATION occupationList = new Dict.OCCUPATION();
@@ -240,7 +248,8 @@ namespace 金证统一账户测试账户生成器
             citizenship.SelectedValue = Dict.CITIZENSHIP.中国;
             education.SelectedIndex = Generator.CreateRandomInteger(0, education.Items.Count);
             // bank_code.SelectedIndex = Generator.CreateRandomInteger(0, bank_code.Items.Count);   // 随机选中三方银行
-            bank_code.SelectedValue = Dict.BankCode.工商银行;
+            // bank_code.SelectedValue = Dict.BankCode.工商银行;
+            bank_code.SelectedValue = Settings.Default.默认开通的银行类型;
             cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
             cbxOccupation.Text = "专业技术人员";
         }
@@ -661,6 +670,7 @@ namespace 金证统一账户测试账户生成器
         private async Task openCuacctCode()
         {
             // 开资金号
+            user.cuacct_cls = tbCuacct_cls.Text.Trim();
             user.cuacct_code = await kess.openCuacctCode(user);
             resultForm.Append("资金账号开立成功：" + user.cuacct_code);
             tbxCuacct.Text = user.cuacct_code;
@@ -1195,6 +1205,14 @@ namespace 金证统一账户测试账户生成器
         private void btnSaveXmlStr_Click(object sender, EventArgs e)
         {
             xmlFormatter.xmlstr = tbXmlStr.Text;
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.默认开通的资产账户类别 = tbCuacct_cls.Text.Trim();
+            Settings.Default.默认开通的操作渠道 = tbChannels.Text.Trim();
+            Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
+            Settings.Default.Save();
         }
     }
 }

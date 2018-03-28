@@ -178,5 +178,41 @@ namespace 金证统一账户测试账户生成器.Properties {
                 this["SURVEY_SN"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("028a")]
+        public string 默认开通的操作渠道 {
+            get {
+                return ((string)(this["默认开通的操作渠道"]));
+            }
+            set {
+                this["默认开通的操作渠道"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("z")]
+        public string 默认开通的资产账户类别 {
+            get {
+                return ((string)(this["默认开通的资产账户类别"]));
+            }
+            set {
+                this["默认开通的资产账户类别"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("5200")]
+        public string 默认开通的银行类型 {
+            get {
+                return ((string)(this["默认开通的银行类型"]));
+            }
+            set {
+                this["默认开通的银行类型"] = value;
+            }
+        }
     }
 }

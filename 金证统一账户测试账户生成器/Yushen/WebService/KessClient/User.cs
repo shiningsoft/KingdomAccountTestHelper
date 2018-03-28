@@ -1632,6 +1632,10 @@ namespace Yushen.WebService.KessClient
             }
         }
         /// <summary>
+        /// 资产账户类别
+        /// </summary>
+        public string cuacct_cls = "";
+        /// <summary>
         ///（私有）资金账号
         /// </summary>
         private string _cuacct_code = "";
