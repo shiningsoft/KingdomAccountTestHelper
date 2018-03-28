@@ -282,7 +282,7 @@ namespace 金证统一账户测试账户生成器
                 user.int_org = Settings.Default.开户营业部;
                 user.cust_cls = Dict.CUST_CLS.标准客户;
                 user.cust_type = Dict.CUST_TYPE.普通;
-                user.channels = Dict.CHANNEL.柜台系统 + Dict.CHANNEL.电话委托 + Dict.CHANNEL.网上委托 + Dict.CHANNEL.手机炒股;
+                user.channels = tbChannels.Text.Trim();
                 return true;
             }
             catch (Exception ex)
@@ -648,7 +648,6 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 await kess.mdfUserExtInfo(CUST_CODE: user.cust_code, OPERATION_TYPE: "0", OCCU_TYPE: user.occu_type, OCCUPATION: user.occupation);
-                resultForm.Append("用户扩展信息更新成功！");
             }
             catch (Exception ex)
             {
