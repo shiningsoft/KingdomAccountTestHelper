@@ -157,6 +157,7 @@ namespace 金证统一账户测试账户生成器
             this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
+            this.修改数据字典ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -173,6 +174,7 @@ namespace 金证统一账户测试账户生成器
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1,
             this.设置ToolStripMenuItem,
+            this.修改数据字典ToolStripMenuItem,
             this.关于ToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -1375,6 +1377,13 @@ namespace 金证统一账户测试账户生成器
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
+            // 修改数据字典ToolStripMenuItem
+            // 
+            this.修改数据字典ToolStripMenuItem.Name = "修改数据字典ToolStripMenuItem";
+            this.修改数据字典ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
+            this.修改数据字典ToolStripMenuItem.Text = "修改数据字典";
+            this.修改数据字典ToolStripMenuItem.Click += new System.EventHandler(this.修改数据字典ToolStripMenuItem_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1530,6 +1539,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.TextBox tbCuacct_cls;
         private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.ToolStripMenuItem 修改数据字典ToolStripMenuItem;
     }
 }
 

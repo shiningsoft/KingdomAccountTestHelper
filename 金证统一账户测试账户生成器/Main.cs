@@ -137,7 +137,7 @@ namespace 金证统一账户测试账户生成器
             //bank_code.ValueMember = "value";
             //bank_code.DataSource = bankCodeList.DataTable;
 
-            Dict.CustomDict bankCodeList = new Dict.CustomDict("bankcode");
+            Dict.CustomDict bankCodeList = new Dict.CustomDict("存管银行");
             bank_code.DisplayMember = "name";
             bank_code.ValueMember = "value";
             bank_code.DataSource = bankCodeList.DataTable;
@@ -1213,6 +1213,32 @@ namespace 金证统一账户测试账户生成器
             Settings.Default.默认开通的操作渠道 = tbChannels.Text.Trim();
             Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
             Settings.Default.Save();
+        }
+
+        private void btnModifyCustomDict_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = Environment.CurrentDirectory + @"\CustomDict\";
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+        }
+
+        private void 修改数据字典ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = Environment.CurrentDirectory + @"\CustomDict\";
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
         }
     }
 }
