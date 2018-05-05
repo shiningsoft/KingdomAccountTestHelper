@@ -257,7 +257,7 @@ namespace 金证统一账户测试账户生成器
             bank_code.SelectedValue = Settings.Default.默认开通的银行类型;
             cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
             cbxOccupation.Text = "专业技术人员";
-            cbxCubsbScOpenAcctOpType.SelectedValue = Dict.CubsbScOpenAcctOpType.预指定;
+            //cbxCubsbScOpenAcctOpType.SelectedValue = Dict.CubsbScOpenAcctOpType.预指定;
 
             saveUserInfo();
         }
