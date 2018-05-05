@@ -131,6 +131,11 @@ namespace 金证统一账户测试账户生成器
             citizenship.DisplayMember = "name";
             citizenship.ValueMember = "value";
             citizenship.DataSource = citizenshipList.DataTable;
+            
+            Dict.CubsbScOpenAcctOpType cubsbScOpenAcctOpTypeList = new Dict.CubsbScOpenAcctOpType();
+            cbxCubsbScOpenAcctOpType.DisplayMember = "name";
+            cbxCubsbScOpenAcctOpType.ValueMember = "value";
+            cbxCubsbScOpenAcctOpType.DataSource = cubsbScOpenAcctOpTypeList.DataTable;
 
             //Dict.BankCode bankCodeList = new Dict.BankCode();
             //bank_code.DisplayMember = "name";
@@ -252,6 +257,9 @@ namespace 金证统一账户测试账户生成器
             bank_code.SelectedValue = Settings.Default.默认开通的银行类型;
             cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
             cbxOccupation.Text = "专业技术人员";
+            cbxCubsbScOpenAcctOpType.SelectedValue = Dict.CubsbScOpenAcctOpType.预指定;
+
+            saveUserInfo();
         }
 
         /// <summary>
@@ -314,7 +322,7 @@ namespace 金证统一账户测试账户生成器
             btnBankSign.Enabled = false;
             try
             {
-                await signBank(bank_code.SelectedValue.ToString());
+                await signBank();
             }
             catch (Exception ex)
             {
@@ -614,7 +622,7 @@ namespace 金证统一账户测试账户生成器
 
                 await syncSurveyAns2Kbss(risk_level.SelectedValue.ToString());
 
-                await signBank(bank_code.SelectedValue.ToString());
+                await signBank();
 
                 await openYMTCode();
 
@@ -647,20 +655,20 @@ namespace 金证统一账户测试账户生成器
                 user.user_code = user.cust_code;
                 resultForm.Append("客户号开立成功：" + user.cust_code);
                 tbxCustCode.Text = user.cust_code;
+
+                // 更新职业
+                try
+                {
+                    await kess.mdfUserExtInfo(CUST_CODE: user.cust_code, OPERATION_TYPE: "0", OCCU_TYPE: user.occu_type, OCCUPATION: user.occupation);
+                }
+                catch (Exception ex)
+                {
+                    resultForm.Append("用户扩展信息更新失败！" + ex.Message);
+                }
             }
             catch (Exception ex)
             {
                 resultForm.Append("客户号开立失败：" + ex.Message);
-            }
-
-            // 更新职业
-            try
-            {
-                await kess.mdfUserExtInfo(CUST_CODE: user.cust_code, OPERATION_TYPE: "0", OCCU_TYPE: user.occu_type, OCCUPATION: user.occupation);
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append("用户扩展信息更新失败！" + ex.Message);
             }
         }
 
@@ -699,12 +707,27 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 预指定三方存管
         /// </summary>
-        private async Task signBank(string bank_code)
+        private async Task signBank()
         {
-            bool result = await kess.cubsbScOpenAcct("1", user.cuacct_code, bank_code);
-            if (result)
+            bool result = false;
+
+            if (cbxCubsbScOpenAcctOpType.SelectedValue.ToString() == Dict.CubsbScOpenAcctOpType.预指定)
             {
-                resultForm.Append("三方存管预指定成功");
+                result = await kess.cubsbScOpenAcct("1", user.cuacct_code, bank_code.SelectedValue.ToString());
+
+                if (result)
+                {
+                    resultForm.Append("三方存管预指定成功");
+                }
+            }
+            else if (cbxCubsbScOpenAcctOpType.SelectedValue.ToString() == Dict.CubsbScOpenAcctOpType.一步式)
+            {
+                result = await kess.cubsbScOpenAcct("0", user.cuacct_code, bank_code.SelectedValue.ToString(), user.cust_code, tbxBankAcctCode.Text.Trim());
+
+                if (result)
+                {
+                    resultForm.Append("三方存管一步式签约成功");
+                }
             }
         }
 
@@ -1238,6 +1261,18 @@ namespace 金证统一账户测试账户生成器
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
+            }
+        }
+
+        private void cbxCubsbScOpenAcctOpType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxCubsbScOpenAcctOpType.SelectedValue.ToString() == Dict.CubsbScOpenAcctOpType.一步式)
+            {
+                tbxBankAcctCode.Enabled = true;
+            }
+            else if(cbxCubsbScOpenAcctOpType.SelectedValue.ToString() == Dict.CubsbScOpenAcctOpType.预指定)
+            {
+                tbxBankAcctCode.Enabled = false;
             }
         }
     }

@@ -23,6 +23,15 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 银证开户操作类型
+    /// </summary>
+    class CubsbScOpenAcctOpType : Dict
+    {
+        public const string 一步式 = "0";
+        public const string 预指定 = "1";
+    }
+
+    /// <summary>
     /// 银行代码
     /// </summary>
     class BankCode : Dict

@@ -28,6 +28,7 @@ namespace Yushen.Util.Tests
         public void IsMobileTest()
         {
             Assert.IsTrue(Validator.IsMobile("18655958868"));
+            Assert.IsFalse(Validator.IsMobile("08655958868"));
             Assert.IsFalse(Validator.IsMobile("18655958868123456"));
             Assert.IsFalse(Validator.IsMobile("62207837"));
             Assert.IsFalse(Validator.IsMobile("abc"));
