@@ -142,7 +142,7 @@ namespace Yushen.Util
                 ms.Close();
                 return bmp;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 return null;
             }
