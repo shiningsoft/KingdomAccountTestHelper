@@ -52,6 +52,10 @@ namespace 金证统一账户测试账户生成器
             this.dictName = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tbxBankAcctCode = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.cbxCubsbScOpenAcctOpType = new System.Windows.Forms.ComboBox();
+            this.label32 = new System.Windows.Forms.Label();
             this.tbCuacct_cls = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.tbChannels = new System.Windows.Forms.TextBox();
@@ -158,10 +162,6 @@ namespace 金证统一账户测试账户生成器
             this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
-            this.cbxCubsbScOpenAcctOpType = new System.Windows.Forms.ComboBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.tbxBankAcctCode = new System.Windows.Forms.TextBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.menuStrip.SuspendLayout();
             this.tabPageGetDict.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -371,6 +371,46 @@ namespace 金证统一账户测试账户生成器
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "新开账户";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tbxBankAcctCode
+            // 
+            this.tbxBankAcctCode.Enabled = false;
+            this.tbxBankAcctCode.Location = new System.Drawing.Point(634, 200);
+            this.tbxBankAcctCode.Name = "tbxBankAcctCode";
+            this.tbxBankAcctCode.Size = new System.Drawing.Size(157, 21);
+            this.tbxBankAcctCode.TabIndex = 91;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(564, 203);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(65, 12);
+            this.label33.TabIndex = 90;
+            this.label33.Text = "银行卡号：";
+            // 
+            // cbxCubsbScOpenAcctOpType
+            // 
+            this.cbxCubsbScOpenAcctOpType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCubsbScOpenAcctOpType.FormattingEnabled = true;
+            this.cbxCubsbScOpenAcctOpType.Items.AddRange(new object[] {
+            "预指定",
+            "一步式"});
+            this.cbxCubsbScOpenAcctOpType.Location = new System.Drawing.Point(457, 173);
+            this.cbxCubsbScOpenAcctOpType.Name = "cbxCubsbScOpenAcctOpType";
+            this.cbxCubsbScOpenAcctOpType.Size = new System.Drawing.Size(100, 20);
+            this.cbxCubsbScOpenAcctOpType.TabIndex = 88;
+            this.cbxCubsbScOpenAcctOpType.SelectedIndexChanged += new System.EventHandler(this.cbxCubsbScOpenAcctOpType_SelectedIndexChanged);
+            // 
+            // label32
+            // 
+            this.label32.AutoSize = true;
+            this.label32.Location = new System.Drawing.Point(386, 176);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(65, 12);
+            this.label32.TabIndex = 89;
+            this.label32.Text = "存管类型：";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // tbCuacct_cls
             // 
@@ -1392,46 +1432,6 @@ namespace 金证统一账户测试账户生成器
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 0;
             // 
-            // cbxCubsbScOpenAcctOpType
-            // 
-            this.cbxCubsbScOpenAcctOpType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCubsbScOpenAcctOpType.FormattingEnabled = true;
-            this.cbxCubsbScOpenAcctOpType.Items.AddRange(new object[] {
-            "预指定",
-            "一步式"});
-            this.cbxCubsbScOpenAcctOpType.Location = new System.Drawing.Point(457, 173);
-            this.cbxCubsbScOpenAcctOpType.Name = "cbxCubsbScOpenAcctOpType";
-            this.cbxCubsbScOpenAcctOpType.Size = new System.Drawing.Size(100, 20);
-            this.cbxCubsbScOpenAcctOpType.TabIndex = 88;
-            this.cbxCubsbScOpenAcctOpType.SelectedIndexChanged += new System.EventHandler(this.cbxCubsbScOpenAcctOpType_SelectedIndexChanged);
-            // 
-            // label32
-            // 
-            this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(386, 176);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(65, 12);
-            this.label32.TabIndex = 89;
-            this.label32.Text = "存管类型：";
-            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // tbxBankAcctCode
-            // 
-            this.tbxBankAcctCode.Enabled = false;
-            this.tbxBankAcctCode.Location = new System.Drawing.Point(634, 200);
-            this.tbxBankAcctCode.Name = "tbxBankAcctCode";
-            this.tbxBankAcctCode.Size = new System.Drawing.Size(157, 21);
-            this.tbxBankAcctCode.TabIndex = 91;
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(564, 203);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(65, 12);
-            this.label33.TabIndex = 90;
-            this.label33.Text = "银行卡号：";
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1443,6 +1443,7 @@ namespace 金证统一账户测试账户生成器
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.ShowIcon = false;
             this.Text = "金证统一账户测试账户生成器";
