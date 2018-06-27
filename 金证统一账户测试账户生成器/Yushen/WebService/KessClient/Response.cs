@@ -190,7 +190,7 @@ namespace Yushen.WebService.KessClient
             }
             catch (Exception ex)
             {
-                throw new Exception("读取response内容失败：" + ex.Message);
+                throw new Exception("无法将Response解析为XML文件：" + ex.Message + "，请检查返回结果中是否包含&等未转义的特殊字符？");
             }
         }
         
