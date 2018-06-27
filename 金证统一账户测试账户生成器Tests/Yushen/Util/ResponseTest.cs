@@ -65,7 +65,7 @@ namespace 金证统一账户测试账户生成器Tests.Yushen.Util
             //
             // TODO:  在此处添加测试逻辑
             //
-            string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><response><result><flag>0</flag><prompt>L1100123:板块[00]股东账号[0027969684]已签署过[1e] 存托凭证&创新企业股票权限 协议</prompt><length>0</length></result><record></record></response>";
+            string xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><response><result><flag>0</flag><prompt>L1100123:板块[00]股东账号[0027969684]已签署过[1e] 存托凭证&amp;创新企业股票权限 协议</prompt><length>0</length></result><record></record></response>";
             Response response = new Response(xml);
         }
     }

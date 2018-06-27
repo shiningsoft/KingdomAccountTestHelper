@@ -192,7 +192,7 @@ namespace 金证统一账户测试账户生成器
             toolStripStatusLabelCurrentServer.Text = "当前环境：获取环境信息中，请稍候......";
 
             // 更新状态栏信息
-            string serverName = "";
+            string serverName = "未能获取服务器名称";
             try
             {
                 serverName = await kess.getSingleCommonParamValue("SERVER_NAME");
