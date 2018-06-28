@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Windows.Forms;
 
 namespace 金证统一账户测试账户生成器
@@ -15,7 +13,7 @@ namespace 金证统一账户测试账户生成器
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new frmFramework());
         }
     }
 }

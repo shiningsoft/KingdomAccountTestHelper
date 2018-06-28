@@ -1,6 +1,6 @@
 ﻿namespace 金证统一账户测试账户生成器
 {
-    partial class ResultForm
+    partial class frmResultForm
     {
         /// <summary>
         /// Required designer variable.

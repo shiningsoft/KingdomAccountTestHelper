@@ -69,7 +69,7 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\logo.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
@@ -99,17 +99,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutBox.cs">
+    <Compile Include="Forms\frmAboutBox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutBox.Designer.cs">
-      <DependentUpon>AboutBox.cs</DependentUpon>
+    <Compile Include="Forms\frmAboutBox.Designer.cs">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSettings.cs">
+    <Compile Include="Forms\frmCommonParamQuery.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSettings.Designer.cs">
+    <Compile Include="Forms\frmCommonParamQuery.Designer.cs">
+      <DependentUpon>frmCommonParamQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmDictQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmDictQuery.Designer.cs">
+      <DependentUpon>frmDictQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSettings.Designer.cs">
       <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNewAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNewAccount.Designer.cs">
+      <DependentUpon>frmNewAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmFramework.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmFramework.Designer.cs">
+      <DependentUpon>frmFramework.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmWebServiceInterfaceTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWebServiceInterfaceTest.Designer.cs">
+      <DependentUpon>frmWebServiceInterfaceTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="Yushen\Util\Formatter.cs" />
@@ -118,12 +148,11 @@
     <Compile Include="Yushen\WebService\KessClient\KessClient.cs" />
     <Compile Include="Yushen\WebService\KessClient\Dict.cs" />
     <Compile Include="Yushen\WebService\KessClient\RiskLevel.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="ResultForm.cs">
+    <Compile Include="Forms\frmResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ResultForm.Designer.cs">
-      <DependentUpon>ResultForm.cs</DependentUpon>
+    <Compile Include="Forms\frmResultForm.Designer.cs">
+      <DependentUpon>frmResultForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Yushen\WebService\KessClient\RiskTest.cs" />
     <Compile Include="Service References\KessService\Reference.cs">
@@ -142,23 +171,22 @@
     <Compile Include="Yushen\WebService\KessClient\Kess.cs" />
     <Compile Include="Yushen\Util\xmlFormatter.cs" />
     <Compile Include="Yushen\WebService\Webservice.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="Forms\frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
-      <DependentUpon>Main.cs</DependentUpon>
+    <Compile Include="Forms\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="CustomDict\存管银行.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="logo.ico" />
+    <Content Include="Resources\logo.ico" />
     <Content Include="Yushen\WebService\KessClient\Xml\uploadImgStringNoBiz.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>
     </Content>
-    <None Include="ClassDiagram1.cd" />
     <None Include="Resources\样本身份证正面.jpg" />
     <None Include="Resources\样本身份证反面.jpg" />
     <Content Include="Yushen\WebService\KessClient\Xml\listStkPbuOrg.xml">
@@ -222,17 +250,32 @@
     <Content Include="Yushen\WebService\KessClient\Xml\queryOperatorOrgList.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EmbeddedResource Include="AboutBox.resx">
-      <DependentUpon>AboutBox.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmAboutBox.resx">
+      <DependentUpon>frmAboutBox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSettings.resx">
+    <EmbeddedResource Include="Forms\frmCommonParamQuery.resx">
+      <DependentUpon>frmCommonParamQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmDictQuery.resx">
+      <DependentUpon>frmDictQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ResultForm.resx">
-      <DependentUpon>ResultForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmNewAccount.resx">
+      <DependentUpon>frmNewAccount.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Main.resx">
-      <DependentUpon>Main.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmFramework.resx">
+      <DependentUpon>frmFramework.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmResultForm.resx">
+      <DependentUpon>frmResultForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWebServiceInterfaceTest.resx">
+      <DependentUpon>frmWebServiceInterfaceTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

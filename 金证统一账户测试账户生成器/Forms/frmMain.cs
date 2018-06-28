@@ -12,17 +12,17 @@ using Dict = Yushen.WebService.KessClient.Dict;
 
 namespace 金证统一账户测试账户生成器
 {
-    public partial class Main : Form
+    public partial class frmMain : Form
     {
-        Kess kess;
-        static Logger logger = LogManager.GetCurrentClassLogger();
-        ResultForm resultForm = new ResultForm();
+        public Kess kess;
+        public static Logger logger = LogManager.GetCurrentClassLogger();
+        public frmResultForm resultForm = new frmResultForm();
         User user;
-        AboutBox aboutBox;
+        frmAboutBox aboutBox;
         frmSettings frmSettings;
         Timer timerRefreshQueue;
 
-        public Main()
+        public frmMain()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace 金证统一账户测试账户生成器
         {
             if (aboutBox == null || aboutBox.IsDisposed)
             {
-                aboutBox = new AboutBox();
+                aboutBox = new frmAboutBox();
                 aboutBox.Show();
             }
             else

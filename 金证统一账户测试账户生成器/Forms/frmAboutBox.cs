@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace 金证统一账户测试账户生成器
 {
-    partial class AboutBox : Form
+    partial class frmAboutBox : Form
     {
-        public AboutBox()
+        public frmAboutBox()
         {
             InitializeComponent();
             this.Text = String.Format("关于 {0}", AssemblyTitle);

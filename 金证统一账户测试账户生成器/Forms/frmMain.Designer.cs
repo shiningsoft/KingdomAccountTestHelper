@@ -7,7 +7,7 @@ using System.IO;
 
 namespace 金证统一账户测试账户生成器
 {
-    partial class Main
+    partial class frmMain
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -39,7 +39,7 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
