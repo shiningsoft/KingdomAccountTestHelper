@@ -14,9 +14,7 @@ namespace 金证统一账户测试账户生成器Tests.Yushen.Util
     {
         public ResponseTest()
         {
-            //
-            //TODO:  在此处添加构造函数逻辑
-            //
+
         }
 
         private TestContext testContextInstance;

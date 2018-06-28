@@ -60,6 +60,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // menuStrip
             // 
+            this.menuStrip.AllowMerge = false;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiFunction,
             this.设置ToolStripMenuItem,
@@ -77,18 +78,18 @@ namespace 金证统一账户测试账户生成器
             this.toolStripSeparator1,
             this.退出ToolStripMenuItem});
             this.tsmiFunction.Name = "tsmiFunction";
-            this.tsmiFunction.Size = new System.Drawing.Size(44, 21);
-            this.tsmiFunction.Text = "功能";
+            this.tsmiFunction.Size = new System.Drawing.Size(68, 21);
+            this.tsmiFunction.Text = "功能列表";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(97, 6);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -186,7 +187,6 @@ namespace 金证统一账户测试账户生成器
             this.Name = "frmFramework";
             this.ShowIcon = false;
             this.Text = "金证统一账户测试账户生成器";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();

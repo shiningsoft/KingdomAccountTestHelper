@@ -10,52 +10,31 @@ namespace 金证统一账户测试账户生成器
 {
     public partial class frmFramework : Form
     {
+        /// <summary>
+        /// 金证接口调用工具
+        /// </summary>
         public Kess kess;
         public static Logger logger = LogManager.GetCurrentClassLogger();
         public frmResultForm resultForm = new frmResultForm();
         frmAboutBox aboutBox;
         frmSettings frmSettings;
-        List<Form> forms = new List<Form> { };
-        Dictionary<string, Form> dicForms = new Dictionary<string, Form>();
+        Dictionary<string, Form> forms = new Dictionary<string, Form>();
         Timer timerRefreshQueue;
-
-        frmNewAccount frmNewAccount;
 
         public frmFramework()
         {
             InitializeComponent();
         }
 
-        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (aboutBox == null || aboutBox.IsDisposed)
-            {
-                aboutBox = new frmAboutBox();
-                aboutBox.Show();
-            }
-            else
-            {
-                aboutBox.Activate();
-            }
-        }
-
-        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-
         private async void Main_Load(object sender, EventArgs e)
         {
-
-            frmNewAccount = new frmNewAccount(this);
-            dicForms.Add("新开账户", new frmNewAccount(this));
-            dicForms.Add("数据字典查询", new frmDictQuery(this));
-            dicForms.Add("公共参数查询", new frmCommonParamQuery(this));
-            dicForms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
+            forms.Add("新开账户", new frmNewAccount(this));
+            forms.Add("数据字典查询", new frmDictQuery(this));
+            forms.Add("公共参数查询", new frmCommonParamQuery(this));
+            forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
 
             int i = 0;
-            foreach (var form in dicForms)
+            foreach (var form in forms)
             {
                 form.Value.TopLevel = false;  // 非顶级窗口  
                 form.Value.FormBorderStyle = FormBorderStyle.None;  // 不显示标题栏  
@@ -126,14 +105,14 @@ namespace 金证统一账户测试账户生成器
         private void Item_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem item = (ToolStripMenuItem)sender;
-            if (dicForms[item.Text] == null || dicForms[item.Text].IsDisposed)
+            if (forms[item.Text] == null || forms[item.Text].IsDisposed)
             {
                 MessageBox.Show(item.Text + "窗体未创建或已关闭", "错误提示");
                 return;
             }
             panel.Controls.Clear();  // 清空原有的控件  
-            panel.Controls.Add(dicForms[item.Text]);  // 添加新窗体  
-            dicForms[item.Text].Show();
+            panel.Controls.Add(forms[item.Text]);  // 添加新窗体  
+            forms[item.Text].Show();
         }
 
         /// <summary>
@@ -148,6 +127,11 @@ namespace 金证统一账户测试账户生成器
             });
         }
         
+        /// <summary>
+        /// 显示设置窗口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void 设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (frmSettings==null||frmSettings.IsDisposed)
@@ -160,26 +144,40 @@ namespace 金证统一账户测试账户生成器
                 frmSettings.Activate();
             }
         }
-        
-        
-        private void Main_FormClosing(object sender, FormClosingEventArgs e)
-        {
 
+        /// <summary>
+        /// 显示关于窗口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (aboutBox == null || aboutBox.IsDisposed)
+            {
+                aboutBox = new frmAboutBox();
+                aboutBox.Show();
+            }
+            else
+            {
+                aboutBox.Activate();
+            }
         }
 
-        private void btnModifyCustomDict_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 退出程序
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string path = Environment.CurrentDirectory + @"\CustomDict\";
-                System.Diagnostics.Process.Start(path);
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append(ex.Message);
-            }
+            Close();
         }
-
+        
+        /// <summary>
+        /// 打开用户自定义数据字典的所在文件夹
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void 修改数据字典ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try

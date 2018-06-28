@@ -21,7 +21,7 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 图片附件，上传照片时作为第二个参数使用。
         /// </summary>
-        Image img;
+        // Image img;
 
         /// <summary>
         /// 创建Request对象
