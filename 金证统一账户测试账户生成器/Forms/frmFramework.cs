@@ -190,5 +190,17 @@ namespace 金证统一账户测试账户生成器
                 resultForm.Append(ex.Message);
             }
         }
+
+        private void tsmiFunction_MouseHover(object sender, EventArgs e)
+        {
+            if (sender is ToolStripDropDownItem)
+            {
+                ToolStripDropDownItem item = sender as ToolStripDropDownItem;
+                if (item.HasDropDownItems && !item.DropDown.Visible)
+                {
+                    item.ShowDropDown();
+                }
+            }
+        }
     }
 }
