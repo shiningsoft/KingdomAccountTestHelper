@@ -1,14 +1,14 @@
-﻿using System;
+﻿using NLog;
+using System;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Yushen.Util;
 using Yushen.WebService.KessClient;
-using NLog;
-using System.Threading.Tasks;
-using Dict = Yushen.WebService.KessClient.Dict;
-using System.Data;
 using 金证统一账户测试账户生成器.Properties;
-using System.Drawing;
-using System.IO;
+using Dict = Yushen.WebService.KessClient.Dict;
 
 namespace 金证统一账户测试账户生成器
 {
@@ -21,7 +21,6 @@ namespace 金证统一账户测试账户生成器
         AboutBox aboutBox;
         frmSettings frmSettings;
         Timer timerRefreshQueue;
-        xmlFormatter xmlFormatter = new xmlFormatter();
 
         public Main()
         {
@@ -1204,32 +1203,7 @@ namespace 金证统一账户测试账户生成器
                 cbxOccupation.Enabled = true;
             }
         }
-
-        private void btnPreProccess_Click(object sender, EventArgs e)
-        {
-            tbXmlStr.Text = xmlFormatter.preProccess(tbXmlStr.Text);
-        }
-
-        private void convert2params_Click(object sender, EventArgs e)
-        {
-            tbXmlStr.Text = xmlFormatter.getParams();
-        }
-
-        private void convert2setAttr_Click(object sender, EventArgs e)
-        {
-            tbXmlStr.Text = xmlFormatter.getSetAttr();
-        }
-
-        private void convert2memo_Click(object sender, EventArgs e)
-        {
-            tbXmlStr.Text = xmlFormatter.getMemo();
-        }
-
-        private void btnSaveXmlStr_Click(object sender, EventArgs e)
-        {
-            xmlFormatter.xmlstr = tbXmlStr.Text;
-        }
-
+        
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
             Settings.Default.默认开通的资产账户类别 = tbCuacct_cls.Text.Trim();
