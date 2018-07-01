@@ -181,10 +181,8 @@ namespace 金证统一账户测试账户生成器
             this.Controls.Add(this.panel);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip;
-            this.MaximizeBox = false;
             this.Name = "frmFramework";
             this.ShowIcon = false;
             this.Text = "金证统一账户测试账户生成器";

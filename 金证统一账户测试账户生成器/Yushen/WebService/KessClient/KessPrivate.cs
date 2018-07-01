@@ -763,7 +763,7 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="userCode">客户代码</param>
         /// <returns></returns>
-        async private Task<Response> queryCustBasicInfoList(string userCode)
+        async public Task<Response> queryCustBasicInfoList(string userCode)
         {
             Request request = new Request(this.operatorId, "queryCustBasicInfoList");
             request.setAttr("USER_CODE", userCode);

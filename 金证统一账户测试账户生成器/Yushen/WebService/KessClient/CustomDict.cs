@@ -4,12 +4,15 @@ using System.Xml;
 
 namespace Yushen.WebService.KessClient.Dict
 {
-
     /// <summary>
     /// 自定义数据字典，可用XML进行配置
     /// </summary>
     class CustomDict : Dict
     {
+        /// <summary>
+        /// 自定义数据字典，可用XML文件进行配置
+        /// </summary>
+        /// <param name="DictName">字典名称，即Xml文件名称</param>
         public CustomDict(string DictName)
         {
             try

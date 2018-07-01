@@ -117,6 +117,12 @@
     <Compile Include="Forms\frmDictQuery.Designer.cs">
       <DependentUpon>frmDictQuery.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmExistAccount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmExistAccount.Designer.cs">
+      <DependentUpon>frmExistAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmSettings.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,12 @@
     </Content>
     <Content Include="logo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\listOfStkTrdAcct.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryAccountInfo.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\uploadImgStringNoBiz.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -254,6 +266,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmDictQuery.resx">
       <DependentUpon>frmDictQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmExistAccount.resx">
+      <DependentUpon>frmExistAccount.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSettings.resx">
       <DependentUpon>frmSettings.cs</DependentUpon>

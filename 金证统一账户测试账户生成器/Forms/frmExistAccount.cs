@@ -12,7 +12,7 @@ using Dict = Yushen.WebService.KessClient.Dict;
 
 namespace 金证统一账户测试账户生成器
 {
-    public partial class frmNewAccount : Form
+    public partial class frmExistAccount : Form
     {
         frmFramework frmFramework;
 
@@ -35,16 +35,15 @@ namespace 金证统一账户测试账户生成器
 
         User user;
 
-        public frmNewAccount(frmFramework form)
+        public frmExistAccount(frmFramework form)
         {
             frmFramework = form;
             InitializeComponent();
-        } 
-        
+        }
+
         private void Main_Load(object sender, EventArgs e)
         {
             // 初始化风险评级选项
-            // RiskTest riskTest = new RiskTest();
             Dict.RiskTestLevel levelList = new Dict.RiskTestLevel();
             risk_level.DisplayMember = "name";
             risk_level.ValueMember = "value";
@@ -79,12 +78,7 @@ namespace 金证统一账户测试账户生成器
             cbxCubsbScOpenAcctOpType.DisplayMember = "name";
             cbxCubsbScOpenAcctOpType.ValueMember = "value";
             cbxCubsbScOpenAcctOpType.DataSource = cubsbScOpenAcctOpTypeList.DataTable;
-
-            //Dict.BankCode bankCodeList = new Dict.BankCode();
-            //bank_code.DisplayMember = "name";
-            //bank_code.ValueMember = "value";
-            //bank_code.DataSource = bankCodeList.DataTable;
-
+            
             Dict.CustomDict bankCodeList = new Dict.CustomDict("存管银行");
             bank_code.DisplayMember = "name";
             bank_code.ValueMember = "value";
@@ -97,14 +91,7 @@ namespace 金证统一账户测试账户生成器
 
             tbChannels.Text = Settings.Default.默认开通的操作渠道;
             tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
-
-            /*
-            Dict.OCCUPATION occupationList = new Dict.OCCUPATION();
-            cbxOccupation.DisplayMember = "name";
-            cbxOccupation.ValueMember = "value";
-            cbxOccupation.DataSource = occupationList.DataTable;
-            */
-
+            
             if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
             {
                 cbxOccupation.Enabled = false;
@@ -115,43 +102,8 @@ namespace 金证统一账户测试账户生成器
             }
             
             dtpCybSignDate.Value = DateTime.Now;
-            
-            // 生成随机用户信息
-            reCreateUserInfo();
-            
         }
         
-        /// <summary>
-        /// 随机生成用户信息
-        /// </summary>
-        private void reCreateUserInfo()
-        {
-            user_name.Text = Generator.CreateChineseName();
-            if (cbxShortIdNo.Checked)
-            {
-                id_code.Text = Generator.CreateIdNO(15);
-            }
-            else
-            {
-                id_code.Text = Generator.CreateIdNO(18);
-            }
-            IDCardNumber idcard = new IDCardNumber(id_code.Text);
-
-            sex.SelectedValue = idcard.Sex.ToString();
-            risk_level.SelectedValue = Dict.RiskTestLevel.积极型;
-            occu_type.SelectedValue = Dict.OCCU_EXTYPE.其他;
-            citizenship.SelectedValue = Dict.CITIZENSHIP.中国;
-            education.SelectedIndex = Generator.CreateRandomInteger(0, education.Items.Count);
-            // bank_code.SelectedIndex = Generator.CreateRandomInteger(0, bank_code.Items.Count);   // 随机选中三方银行
-            // bank_code.SelectedValue = Dict.BankCode.工商银行;
-            bank_code.SelectedValue = Settings.Default.默认开通的银行类型;
-            cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
-            cbxOccupation.Text = "专业技术人员";
-            //cbxCubsbScOpenAcctOpType.SelectedValue = Dict.CubsbScOpenAcctOpType.预指定;
-
-            saveUserInfo();
-        }
-
         /// <summary>
         /// 保存当前用户信息到User对象
         /// </summary>
@@ -160,6 +112,7 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 user = new User();
+                user.cust_code = tbxCustCode.Text.Trim();
                 user.user_type = Dict.USER_TYPE.个人;
                 user.user_name = user_name.Text.Trim();
                 user.user_fname = user_name.Text.Trim();
@@ -196,15 +149,6 @@ namespace 金证统一账户测试账户生成器
             {
                 throw new Exception("保存用户信息失败：" + ex.Message);
             }
-        }
-
-        private void btnRecreateUserinfo_Click(object sender, EventArgs e)
-        {
-            btnRecreateUserinfo.Enabled = false;
-
-            reCreateUserInfo();
-
-            btnRecreateUserinfo.Enabled = true;
         }
 
         private async void btnBankSign_Click(object sender, EventArgs e)
@@ -383,33 +327,7 @@ namespace 金证统一账户测试账户生成器
             }
             btnOpenCYB.Enabled = true;
         }
-
-        private async void btnValidateId_Click(object sender, EventArgs e)
-        {
-            btnValidateId.Enabled = false;
-
-            try
-            {
-                Response response = await kess.validateIdCode(user);
-
-                // 返回结果
-                if (response.getValue("ID_CODE_CHKRLT") == "一致")
-                {
-                    resultForm.Append("公安校验通过");
-                }
-                else
-                {
-                    resultForm.Append("公安校验未通过：" + response.getValue("ID_CODE_CHKRLT"));
-                }
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append(ex.Message);
-            }
-
-            btnValidateId.Enabled = true;
-        }
-
+        
         private async void btnOpenSZAStkAcct_Click(object sender, EventArgs e)
         {
             btnOpenSZAStkAcct.Enabled = false;
@@ -884,41 +802,80 @@ namespace 金证统一账户测试账户生成器
             image.Save(Environment.CurrentDirectory + @"\身份证背面.jpg");
             System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\身份证背面.jpg");
         }
-
-        /// <summary>
-        /// 身份证是否为长期有效
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void cbxLongTerm_CheckedChanged(object sender, EventArgs e)
+        
+        async private void btnQueryByUserCode_Click(object sender, EventArgs e)
         {
-            if (cbxLongTerm.Checked)
-            {
-                id_exp_date.Enabled = false;
-                id_exp_date.Value = DateTime.Parse("3000-12-31");
-            }
-            else
-            {
-                id_exp_date.Enabled = true;
-            }
-        }
-
-        async private void btnOpenUserCode_Click(object sender, EventArgs e)
-        {
-            btnOpenUserCode.Enabled = false;
+            btnQueryByUserCode.Enabled = false;
 
             try
             {
+                Response response = await kess.queryCustBasicInfoList(tbxCustCode.Text.Trim());
+                user_name.Text = response.getValue("user_name");
+                id_code.Text = response.getValue("id_code");
+                id_iss_agcy.Text = response.getValue("id_iss_agcy");
+                id_beg_date.Text = response.getValue("id_beg_date");
+                id_exp_date.Text = response.getValue("id_exp_date");
+                id_addr.Text = response.getValue("id_addr");
+                zip_code.Text = response.getValue("zip_code");
+                address.Text = response.getValue("address");
+                mobile_tel.Text = response.getValue("mobile_tel");
+                citizenship.SelectedValue = response.getValue("citizenship");
+                nationality.SelectedValue = response.getValue("NATIONALITY");
+                sex.SelectedValue = response.getValue("sex");
+                education.SelectedValue = response.getValue("education");
+
                 saveUserInfo();
 
-                await openCustCode();
+                // 查询资金账号
+                response = await kess.queryAccountInfo(tbxCustCode.Text.Trim());
+                resultForm.Append("客户号下找到" + response.length.ToString() + "个资金账号。");
+
+                if (response.length > 1)
+                {
+                    throw new Exception("不支持多个资金账号，停止处理。");
+                }
+                if (response.length == 0)
+                {
+                    throw new Exception("客户号下没有开立资金账号，停止处理。");
+                }
+                tbxCuacct.Text = response.getValue("CUACCT_CODE");
+
+                // 查询一码通
+                //response = await kess.queryYMT(id_code.Text.Trim());
+                //resultForm.Append(response.xml);
+
+                // 查询系统内股东账号
+                response = await kess.listOfStkTrdAcct(tbxCustCode.Text.Trim());
+                resultForm.Append("客户号下找到" + response.length.ToString() + "个股东账号。");
+
+                if (response.length > 0)
+                {
+                    // 显示所有股东账户的信息，包括卡号、市场、状态等
+                    Dict.STKBD stkbdList = new Dict.STKBD();
+                    Dict.TRDACCT_EXCLS trdAcctExclsList = new Dict.TRDACCT_EXCLS();
+                    Dict.TRDACCT_STATUS trdAcctStatusList = new Dict.TRDACCT_STATUS();
+                    foreach (DataRow ds in response.DataSet.Tables["row"].Rows)
+                    {
+                        string stkbd = stkbdList.getNameByValue(ds["STKBD"].ToString());
+                        string trdAcctExcls = trdAcctExclsList.getNameByValue(ds["TRDACCT_EXCLS"].ToString());
+                        string status = trdAcctStatusList.getNameByValue(ds["TRDACCT_STATUS"].ToString());
+
+                        resultForm.Append(
+                            "交易版块：" + stkbd +
+                            "，交易账户：" + ds["TRDACCT"].ToString() +
+                            "，账户类别：" + trdAcctExcls +
+                            "，账户状态：" + status
+                        );
+                    }
+                }
+                
             }
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
             }
 
-            btnOpenUserCode.Enabled = true;
+            btnQueryByUserCode.Enabled = true;
         }
 
         private async void btnBindSHAcct_Click(object sender, EventArgs e)
@@ -936,32 +893,7 @@ namespace 金证统一账户测试账户生成器
 
             btnBindSHAcct.Enabled = true;
         }
-
-        private void cbxShortIdNo_CheckedChanged(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cbxShortIdNo.Checked)
-                {
-                    if (id_code.Text.Length == 18)
-                    {
-                        id_code.Text = IDCardNumber.per18To15(id_code.Text);
-                    }
-                }
-                else
-                {
-                    if (id_code.Text.Length == 15)
-                    {
-                        id_code.Text = IDCardNumber.per15To18(id_code.Text);
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append(ex.Message);
-            }
-        }
-
+        
         private void btnLoadRequestXml_Click(object sender, EventArgs e)
         {
             string path = System.IO.Path.Combine(Environment.CurrentDirectory, Request.xmlPath);
@@ -1006,6 +938,11 @@ namespace 金证统一账户测试账户生成器
             {
                 tbxBankAcctCode.Enabled = false;
             }
+        }
+
+        private void frmExistAccount_Shown(object sender, EventArgs e)
+        {
+            tbxCustCode.Focus();
         }
     }
 }

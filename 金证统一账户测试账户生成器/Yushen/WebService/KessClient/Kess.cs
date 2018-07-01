@@ -1392,5 +1392,127 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return true;
         }
+
+        /// <summary>
+        /// 证券账户指定交易
+        /// </summary>
+        /// <param name="USER_CODE">客户代码，必要参数</param>
+        /// <param name="CUACCT_CODE">资产账户</param>
+        /// <returns></returns>
+        async public Task<Response> queryAccountInfo(
+            string USER_CODE, //客户代码
+            string CUACCT_CODE = "" //资产账户
+            )
+        {
+            // 前置条件判断
+            if (USER_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "queryAccountInfo");
+            request.setAttr("USER_CODE", USER_CODE); //客户代码必要参数
+            request.setAttr("CUACCT_CODE", CUACCT_CODE); //资产账户
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
+
+        /// <summary>
+        /// 一码通信息查询
+        /// </summary>
+        /// <param name="id_code">身份证号码</param>
+        /// <returns></returns>
+        async public Task<Response> queryYMT(string id_code, int timeout = 30)
+        {
+            // 前置条件判断
+            if (id_code == "")
+            {
+                throw new Exception("身份证号码不能为空");
+            }
+
+            // 初始化请求
+
+            // 调用WebService获取返回值
+            // 发送中登请求
+            string serialNo = await this.submitStkAcctBizOpReq2NewZD(
+                                    OPERATOR_TYPE: Dict.OPERATOR_TYPE.增加,
+                                    ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.一码通账户查询,
+                                    ID_TYPE: Dict.ID_TYPE.身份证,
+                                    ID_CODE: id_code,
+                                    CHK_STATUS: Dict.CHK_STATUS.已通过,
+                                    PROPER_CLS: "",  // 适当性类别必须为空
+                                    ACCT_OPENTYPE: ""  // 必须送空值
+                                );
+            // 获取中登处理结果
+            Response rspsStkAcctBizInfo = await this.searchStkAcctBizInfo(serialNo, timeout: timeout);
+
+            // 判断返回的操作结果是否异常
+            if (rspsStkAcctBizInfo.length == 1 && rspsStkAcctBizInfo.getValue("RTN_ERR_CODE") != "0000")
+            {
+                throw new Exception("中登返回错误：" + rspsStkAcctBizInfo.getValue("RTN_ERR_CODE") + "，错误信息：" + rspsStkAcctBizInfo.getValue("RETURN_MSG"));
+            }
+            
+            return rspsStkAcctBizInfo;
+        }
+
+
+        /// <summary>
+        /// 证券账户查询
+        /// 实现2.53 证券账户查询
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码</param>
+        /// <param name="STKBD">交易版块10-沪A11-沪B等，见数据字典DD[STKBD]</param>
+        /// <param name="TRDACCT">股东账户</param>
+        /// <returns></returns>
+        async public Task<Response> listOfStkTrdAcct(
+                string CUST_CODE, //客户代码
+                string STKBD = "", //交易版块10-沪A11-沪B等，见数据字典DD[STKBD]
+                string TRDACCT = "" //股东账户
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "listOfStkTrdAcct");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码
+            request.setAttr("STKBD", STKBD); //交易版块10-沪A11-沪B等，见数据字典DD[STKBD]
+            request.setAttr("TRDACCT", TRDACCT); //股东账户
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
+
     }
 }

@@ -29,6 +29,7 @@ namespace 金证统一账户测试账户生成器
         private async void Main_Load(object sender, EventArgs e)
         {
             forms.Add("新开账户", new frmNewAccount(this));
+            forms.Add("存量账户处理", new frmExistAccount(this));
             forms.Add("数据字典查询", new frmDictQuery(this));
             forms.Add("公共参数查询", new frmCommonParamQuery(this));
             forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
@@ -44,7 +45,7 @@ namespace 金证统一账户测试账户生成器
                 item.Click += Item_Click;
                 tsmiFunction.DropDownItems.Insert(i, item);
 
-                if (i==0)
+                if (i==1)
                 {
                     item.PerformClick();
                 }
@@ -113,6 +114,7 @@ namespace 金证统一账户测试账户生成器
             panel.Controls.Clear();  // 清空原有的控件  
             panel.Controls.Add(forms[item.Text]);  // 添加新窗体  
             forms[item.Text].Show();
+            Text = "金证统一账户测试账户生成器 - " + item.Text;
         }
 
         /// <summary>

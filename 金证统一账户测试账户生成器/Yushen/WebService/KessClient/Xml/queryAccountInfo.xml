@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!--2.13 查询账户信息（账户系统）-->
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//客户代码 必要参数-->
+    <USER_CODE></USER_CODE>
+    <!--//资产账户-->
+    <CUACCT_CODE></CUACCT_CODE>
+  </data>
+</request>

@@ -713,6 +713,24 @@ namespace Yushen.WebService.KessClient.Dict
     }
 
     /// <summary>
+    /// 交易账户类别
+    /// </summary>
+    class TRDACCT_EXCLS : Dict
+    {
+        public const string 个人帐户 = "0";
+        public const string 机构帐户 = "1";
+        public const string 个人信用帐户 = "2";
+        public const string 机构信用帐户 = "3";
+        public const string 个人基金帐户 = "4";
+        public const string 机构基金帐户 = "5";
+        public const string 产品普通账户 = "6";
+        public const string 产品基金账户 = "7";
+        public const string 产品信用账户 = "8";
+        public const string 境外账户 = "9";
+        public const string 全部 = "@";
+    }
+
+    /// <summary>
     /// 交易指定状态
     /// </summary>
     class TREG_STATUS : Dict

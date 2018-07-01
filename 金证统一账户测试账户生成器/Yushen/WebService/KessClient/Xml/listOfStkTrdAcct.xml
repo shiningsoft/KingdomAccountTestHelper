@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<!--2.53证券账户查询-->
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data>
+    <!--//客户代码 -->
+    <CUST_CODE></CUST_CODE>
+    <!--//交易版块 10-沪A 11-沪B 等，见数据字典 DD[STKBD]  -->
+    <STKBD></STKBD>
+    <!--//股东账户 -->
+    <TRDACCT></TRDACCT>
+  </data>
+</request>

@@ -141,7 +141,7 @@ namespace Yushen.WebService.KessClient
         /// <returns></returns>
         public string getValue(string columnName)
         {
-            return getSingleNodeText("/response/record/row/" + columnName);
+            return getSingleNodeText("/response/record/row/" + columnName.ToUpper());
         }
 
         /// <summary>
