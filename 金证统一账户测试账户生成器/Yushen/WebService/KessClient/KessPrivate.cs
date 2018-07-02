@@ -504,7 +504,7 @@ namespace Yushen.WebService.KessClient
                 status = response.getValue("ACCTBIZ_STATUS");
                 if (status == Dict.ACCTBIZ_STATUS.处理失败)
                 {
-                    throw new Exception(response.getValue("RETURN_MSG"));
+                    throw new Exception("“证券账户业务信息查询”处理失败，错误信息：" + response.getValue("RETURN_MSG"));
                 }
                 else if (status == Dict.ACCTBIZ_STATUS.处理成功)
                 {
@@ -513,7 +513,7 @@ namespace Yushen.WebService.KessClient
                 }
             }
 
-            string message = "中登处理超时，未查到结果。中登流水号：" + SERIAL_NO;
+            string message = "中登处理超时，没有返回结果。中登流水号：" + SERIAL_NO;
             logger.Error(message);
             throw new Exception(message);
         }

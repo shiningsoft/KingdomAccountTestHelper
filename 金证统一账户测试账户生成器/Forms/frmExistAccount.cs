@@ -111,6 +111,30 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
+                if (citizenship.Text == "")
+                {
+                    throw new Exception("没有选择国籍");
+                }
+                if (nationality.Text == "")
+                {
+                    throw new Exception("没有选择民族");
+                }
+                if (occu_type.Text == "")
+                {
+                    throw new Exception("没有选择职业");
+                }
+                if (education.Text == "")
+                {
+                    throw new Exception("没有选择学历");
+                }
+                if (bank_code.Text == "")
+                {
+                    // throw new Exception("没有选择银行类别");
+                }
+                if (sex.Text == "")
+                {
+                    throw new Exception("没有选择性别");
+                }
                 user = new User();
                 user.cust_code = tbxCustCode.Text.Trim();
                 user.user_type = Dict.USER_TYPE.个人;
@@ -824,7 +848,7 @@ namespace 金证统一账户测试账户生成器
                 sex.SelectedValue = response.getValue("sex");
                 education.SelectedValue = response.getValue("education");
 
-                saveUserInfo();
+                // saveUserInfo();
 
                 // 查询资金账号
                 response = await kess.queryAccountInfo(tbxCustCode.Text.Trim());
@@ -841,8 +865,17 @@ namespace 金证统一账户测试账户生成器
                 tbxCuacct.Text = response.getValue("CUACCT_CODE");
 
                 // 查询一码通
-                //response = await kess.queryYMT(id_code.Text.Trim());
-                //resultForm.Append(response.xml);
+                resultForm.Append("正在发起中登查询一码通信息，请稍候。。。");
+                response = await kess.queryYMT(id_code.Text.Trim());
+                resultForm.Append("客户号下找到" + response.length.ToString() + "个一码通账号。");
+                Dict.YMT_STATUS ymtStatusList = new Dict.YMT_STATUS();
+                foreach (DataRow row in response.DataSet.Tables["row"].Rows)
+                {
+                    string ymtStatus = ymtStatusList.getNameByValue(row["YMT_STATUS"].ToString());
+                }
+                tbxYMTCode.Text = response.getValue("YMT_CODE");
+
+                resultForm.Append(response.xml);
 
                 // 查询系统内股东账号
                 response = await kess.listOfStkTrdAcct(tbxCustCode.Text.Trim());
