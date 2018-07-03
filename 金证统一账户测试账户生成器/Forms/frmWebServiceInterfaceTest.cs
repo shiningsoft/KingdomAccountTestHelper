@@ -52,7 +52,7 @@ namespace 金证统一账户测试账户生成器
 
         private void btnLoadRequestXml_Click(object sender, EventArgs e)
         {
-            string path = System.IO.Path.Combine(Environment.CurrentDirectory, Request.xmlPath);
+            string path = Path.Combine(Environment.CurrentDirectory, Request.xmlPath);
             try
             {
                 System.Diagnostics.Process.Start(path);

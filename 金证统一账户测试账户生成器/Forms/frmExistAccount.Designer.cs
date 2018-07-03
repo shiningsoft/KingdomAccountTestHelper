@@ -146,10 +146,12 @@ namespace 金证统一账户测试账户生成器
             // 
             // tbCuacct_cls
             // 
+            this.tbCuacct_cls.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的资产账户类别", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.tbCuacct_cls.Location = new System.Drawing.Point(691, 193);
             this.tbCuacct_cls.Name = "tbCuacct_cls";
             this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
             this.tbCuacct_cls.TabIndex = 87;
+            this.tbCuacct_cls.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的资产账户类别;
             // 
             // label31
             // 
@@ -162,10 +164,12 @@ namespace 金证统一账户测试账户生成器
             // 
             // tbChannels
             // 
+            this.tbChannels.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的操作渠道", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
             this.tbChannels.Location = new System.Drawing.Point(691, 219);
             this.tbChannels.Name = "tbChannels";
             this.tbChannels.Size = new System.Drawing.Size(100, 21);
             this.tbChannels.TabIndex = 85;
+            this.tbChannels.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的操作渠道;
             // 
             // label30
             // 

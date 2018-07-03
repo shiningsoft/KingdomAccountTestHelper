@@ -865,7 +865,17 @@ namespace Yushen.WebService.KessClient
                 {
                     throw new Exception("“" + request.methonName + "”接口不存在！");
                 }
-                string result = (string)method.Invoke(kessClientList[index].executor, new object[] { request.xml });
+
+                string result = "";
+                try
+                {
+                    result = (string)method.Invoke(kessClientList[index].executor, new object[] { request.xml });
+                }
+                catch (Exception)
+                {
+                    _webserviceConnectionsNum -= 1;
+                    throw;
+                }
                 
                 //获取stopWatch从开始到现在的时间差，单位是毫秒
                 long diff = stopWatch.ElapsedMilliseconds;

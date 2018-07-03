@@ -7,8 +7,11 @@ namespace 金证统一账户测试账户生成器
 {
     public partial class frmSettings : Form
     {
-        public frmSettings()
+        frmFramework frmFramework;
+
+        public frmSettings(frmFramework form)
         {
+            frmFramework = form;
             InitializeComponent();
         }
 
@@ -48,6 +51,9 @@ namespace 金证统一账户测试账户生成器
             Settings.Default.积极型 = tbxCellsD.Text;
             Settings.Default.激进型 = tbxCellsE.Text;
             Settings.Default.Save();
+
+            frmFramework.InitWebService();
+
             this.Close();
         }
 

@@ -89,8 +89,8 @@ namespace 金证统一账户测试账户生成器
             cbxOpenType.ValueMember = "value";
             cbxOpenType.DataSource = openTypeList.DataTable;
 
-            tbChannels.Text = Settings.Default.默认开通的操作渠道;
-            tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
+            //tbChannels.Text = Settings.Default.默认开通的操作渠道;
+            //tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
             
             if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
             {
@@ -167,6 +167,12 @@ namespace 金证统一账户测试账户生成器
                 user.cust_cls = Dict.CUST_CLS.标准客户;
                 user.cust_type = Dict.CUST_TYPE.普通;
                 user.channels = tbChannels.Text.Trim();
+
+                user.cust_code = tbxCustCode.Text.Trim();
+                user.ymt_code = tbxYMTCode.Text.Trim();
+                user.shacct = tbxSHAcct.Text.Trim();
+                user.szacct = tbxSZAcct.Text.Trim();
+
                 return true;
             }
             catch (Exception ex)
@@ -180,6 +186,8 @@ namespace 金证统一账户测试账户生成器
             btnBankSign.Enabled = false;
             try
             {
+                saveUserInfo();
+                user.cuacct_code = tbxCuacct.Text.Trim();
                 await signBank();
             }
             catch (Exception ex)
@@ -266,8 +274,6 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 saveUserInfo();
-                user.ymt_code = tbxYMTCode.Text.Trim();
-
                 await openSHACode();
             }
             catch (Exception ex)
@@ -333,9 +339,6 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 saveUserInfo();
-                user.cuacct_code = tbxCuacct.Text.Trim();
-                user.ymt_code = tbxYMTCode.Text.Trim();
-                user.shacct = tbxSHAcct.Text.Trim();
                 await registerSHACode();
             }
             catch (Exception ex)
@@ -368,8 +371,6 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 saveUserInfo();
-                user.ymt_code = tbxYMTCode.Text.Trim();
-
                 await openSZACode();
             }
             catch (Exception ex)
@@ -386,10 +387,6 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 saveUserInfo();
-                user.cuacct_code = tbxCuacct.Text.Trim();
-                user.ymt_code = tbxYMTCode.Text.Trim();
-                user.szacct = tbxSZAcct.Text.Trim();
-
                 await registerSZACode();
             }
             catch (Exception ex)
@@ -979,10 +976,10 @@ namespace 金证统一账户测试账户生成器
         
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Settings.Default.默认开通的资产账户类别 = tbCuacct_cls.Text.Trim();
-            Settings.Default.默认开通的操作渠道 = tbChannels.Text.Trim();
-            Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
-            Settings.Default.Save();
+            //Settings.Default.默认开通的资产账户类别 = tbCuacct_cls.Text.Trim();
+            //Settings.Default.默认开通的操作渠道 = tbChannels.Text.Trim();
+            //Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
+            //Settings.Default.Save();
         }
 
         private void cbxCubsbScOpenAcctOpType_SelectedIndexChanged(object sender, EventArgs e)

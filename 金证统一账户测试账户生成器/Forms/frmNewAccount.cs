@@ -95,8 +95,8 @@ namespace 金证统一账户测试账户生成器
             cbxOpenType.ValueMember = "value";
             cbxOpenType.DataSource = openTypeList.DataTable;
 
-            tbChannels.Text = Settings.Default.默认开通的操作渠道;
-            tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
+            //tbChannels.Text = Settings.Default.默认开通的操作渠道;
+            //tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
 
             /*
             Dict.OCCUPATION occupationList = new Dict.OCCUPATION();
@@ -990,10 +990,10 @@ namespace 金证统一账户测试账户生成器
         
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Settings.Default.默认开通的资产账户类别 = tbCuacct_cls.Text.Trim();
-            Settings.Default.默认开通的操作渠道 = tbChannels.Text.Trim();
-            Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
-            Settings.Default.Save();
+            //Settings.Default.默认开通的资产账户类别 = tbCuacct_cls.Text.Trim();
+            //Settings.Default.默认开通的操作渠道 = tbChannels.Text.Trim();
+            //Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
+            //Settings.Default.Save();
         }
 
         private void cbxCubsbScOpenAcctOpType_SelectedIndexChanged(object sender, EventArgs e)

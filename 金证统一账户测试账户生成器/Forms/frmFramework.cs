@@ -1,6 +1,7 @@
 ﻿using NLog;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Yushen.WebService.KessClient;
@@ -26,7 +27,7 @@ namespace 金证统一账户测试账户生成器
             InitializeComponent();
         }
 
-        private async void Main_Load(object sender, EventArgs e)
+        private void Main_Load(object sender, EventArgs e)
         {
             forms.Add("新开账户", new frmNewAccount(this));
             forms.Add("存量账户处理", new frmExistAccount(this));
@@ -55,6 +56,14 @@ namespace 金证统一账户测试账户生成器
             
             tsslVersion.Text = "当前版本：" + Application.ProductVersion;
 
+            InitWebService();
+        }
+
+        /// <summary>
+        /// 初始化
+        /// </summary>
+        async public void InitWebService()
+        {
             try
             {
                 // 初始化WebService连接
@@ -62,37 +71,43 @@ namespace 金证统一账户测试账户生成器
                 {
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
+
+                toolStripStatusLabelCurrentServer.Text = "当前环境：获取环境信息中，请稍候......";
+
+                // 更新状态栏信息
+                string serverName = "未能获取服务器名称";
+                try
+                {
+                    serverName = await kess.getSingleCommonParamValue("SERVER_NAME");
+                    if (serverName.IndexOf("测试") == -1)
+                    {
+                        resultForm.Append("服务器公共参数（SERVER_NAME）中未检测到目标字符“测试”，请确认是否在测试环境中运行！");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    resultForm.Append(ex.Message);
+                }
+
+                Uri uri = new Uri(Settings.Default.webservice);
+                toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + serverName;
+                currentUser.Text = "用户：" + Settings.Default.操作员代码;
+
+                timerRefreshQueue = new Timer();
+                timerRefreshQueue.Interval = 100;
+                timerRefreshQueue.Tick += TimerRefreshQueue_Tick;
+                timerRefreshQueue.Start();
+            }
+            catch (TargetInvocationException ex)
+            {
+                resultForm.Append("初始化失败：" + ex.Message + "，请检查设置是否正确或WebService接口状态是否正常？");
+                设置ToolStripMenuItem.PerformClick();
             }
             catch (Exception ex)
             {
                 resultForm.Append("初始化失败：" + ex.Message);
+                设置ToolStripMenuItem.PerformClick();
             }
-            
-            toolStripStatusLabelCurrentServer.Text = "当前环境：获取环境信息中，请稍候......";
-
-            // 更新状态栏信息
-            string serverName = "未能获取服务器名称";
-            try
-            {
-                serverName = await kess.getSingleCommonParamValue("SERVER_NAME");
-                if (serverName.IndexOf("测试")==-1)
-                {
-                    resultForm.Append("服务器公共参数（SERVER_NAME）中未检测到目标字符“测试”，请确认是否在测试环境中运行！");
-                }
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append(ex.Message);
-            }
-
-            Uri uri = new Uri(Settings.Default.webservice);
-            toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + serverName;
-            currentUser.Text = "用户：" + Settings.Default.操作员代码;
-
-            timerRefreshQueue = new Timer();
-            timerRefreshQueue.Interval = 100;
-            timerRefreshQueue.Tick += TimerRefreshQueue_Tick;
-            timerRefreshQueue.Start();
         }
 
         private void Item_Click(object sender, EventArgs e)
@@ -130,7 +145,7 @@ namespace 金证统一账户测试账户生成器
         {
             if (frmSettings==null||frmSettings.IsDisposed)
             {
-                frmSettings = new frmSettings();
+                frmSettings = new frmSettings(this);
                 frmSettings.Show();
             }
             else
@@ -195,6 +210,11 @@ namespace 金证统一账户测试账户生成器
                     item.ShowDropDown();
                 }
             }
+        }
+
+        private void frmFramework_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Settings.Default.Save();
         }
     }
 }
