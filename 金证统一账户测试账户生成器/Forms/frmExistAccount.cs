@@ -43,65 +43,72 @@ namespace 金证统一账户测试账户生成器
 
         private void Main_Load(object sender, EventArgs e)
         {
-            // 初始化风险评级选项
-            Dict.RiskTestLevel levelList = new Dict.RiskTestLevel();
-            risk_level.DisplayMember = "name";
-            risk_level.ValueMember = "value";
-            risk_level.DataSource = levelList.DataTable;
-
-            Dict.NATIONALITY nationalityList = new Dict.NATIONALITY();
-            nationality.DisplayMember = "name";
-            nationality.ValueMember = "value";
-            nationality.DataSource = nationalityList.DataTable;
-
-            Dict.SEX sexList = new Dict.SEX();
-            sex.DisplayMember = "name";
-            sex.ValueMember = "value";
-            sex.DataSource = sexList.DataTable;
-
-            Dict.OCCU_EXTYPE occuList = new Dict.OCCU_EXTYPE();
-            occu_type.DisplayMember = "name";
-            occu_type.ValueMember = "value";
-            occu_type.DataSource = occuList.DataTable;
-
-            Dict.EDUCATION eduList = new Dict.EDUCATION();
-            education.DisplayMember = "name";
-            education.ValueMember = "value";
-            education.DataSource = eduList.DataTable;
-
-            Dict.CITIZENSHIP citizenshipList = new Dict.CITIZENSHIP();
-            citizenship.DisplayMember = "name";
-            citizenship.ValueMember = "value";
-            citizenship.DataSource = citizenshipList.DataTable;
-            
-            Dict.CubsbScOpenAcctOpType cubsbScOpenAcctOpTypeList = new Dict.CubsbScOpenAcctOpType();
-            cbxCubsbScOpenAcctOpType.DisplayMember = "name";
-            cbxCubsbScOpenAcctOpType.ValueMember = "value";
-            cbxCubsbScOpenAcctOpType.DataSource = cubsbScOpenAcctOpTypeList.DataTable;
-            
-            Dict.CustomDict bankCodeList = new Dict.CustomDict("存管银行");
-            bank_code.DisplayMember = "name";
-            bank_code.ValueMember = "value";
-            bank_code.DataSource = bankCodeList.DataTable;
-
-            Dict.OPEN_TYPE openTypeList = new Dict.OPEN_TYPE();
-            cbxOpenType.DisplayMember = "name";
-            cbxOpenType.ValueMember = "value";
-            cbxOpenType.DataSource = openTypeList.DataTable;
-
-            //tbChannels.Text = Settings.Default.默认开通的操作渠道;
-            //tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
-            
-            if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
+            try
             {
-                cbxOccupation.Enabled = false;
+                // 初始化风险评级选项
+                Dict.RiskTestLevel levelList = new Dict.RiskTestLevel();
+                risk_level.DisplayMember = "name";
+                risk_level.ValueMember = "value";
+                risk_level.DataSource = levelList.DataTable;
+
+                Dict.NATIONALITY nationalityList = new Dict.NATIONALITY();
+                nationality.DisplayMember = "name";
+                nationality.ValueMember = "value";
+                nationality.DataSource = nationalityList.DataTable;
+
+                Dict.SEX sexList = new Dict.SEX();
+                sex.DisplayMember = "name";
+                sex.ValueMember = "value";
+                sex.DataSource = sexList.DataTable;
+
+                Dict.OCCU_EXTYPE occuList = new Dict.OCCU_EXTYPE();
+                occu_type.DisplayMember = "name";
+                occu_type.ValueMember = "value";
+                occu_type.DataSource = occuList.DataTable;
+
+                Dict.EDUCATION eduList = new Dict.EDUCATION();
+                education.DisplayMember = "name";
+                education.ValueMember = "value";
+                education.DataSource = eduList.DataTable;
+
+                Dict.CITIZENSHIP citizenshipList = new Dict.CITIZENSHIP();
+                citizenship.DisplayMember = "name";
+                citizenship.ValueMember = "value";
+                citizenship.DataSource = citizenshipList.DataTable;
+
+                Dict.CubsbScOpenAcctOpType cubsbScOpenAcctOpTypeList = new Dict.CubsbScOpenAcctOpType();
+                cbxCubsbScOpenAcctOpType.DisplayMember = "name";
+                cbxCubsbScOpenAcctOpType.ValueMember = "value";
+                cbxCubsbScOpenAcctOpType.DataSource = cubsbScOpenAcctOpTypeList.DataTable;
+
+                Dict.CustomDict bankCodeList = new Dict.CustomDict("存管银行");
+                bank_code.DisplayMember = "name";
+                bank_code.ValueMember = "value";
+                bank_code.DataSource = bankCodeList.DataTable;
+
+                Dict.OPEN_TYPE openTypeList = new Dict.OPEN_TYPE();
+                cbxOpenType.DisplayMember = "name";
+                cbxOpenType.ValueMember = "value";
+                cbxOpenType.DataSource = openTypeList.DataTable;
+
+                //tbChannels.Text = Settings.Default.默认开通的操作渠道;
+                //tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
+
+                if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
+                {
+                    cbxOccupation.Enabled = false;
+                }
+                else
+                {
+                    cbxOccupation.Enabled = true;
+                }
+
+                dtpCybSignDate.Value = DateTime.Now;
             }
-            else
+            catch (Exception ex)
             {
-                cbxOccupation.Enabled = true;
+                resultForm.Append("载入程序时发生异常：" + ex.Message);
             }
-            
-            dtpCybSignDate.Value = DateTime.Now;
         }
         
         /// <summary>

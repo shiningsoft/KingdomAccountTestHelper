@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.IO;
 using System.Xml;
 
 namespace Yushen.WebService.KessClient.Dict
@@ -39,6 +40,10 @@ namespace Yushen.WebService.KessClient.Dict
         {
             XmlDocument docXml = new XmlDocument();
             string file = Environment.CurrentDirectory + "\\CustomDict\\" + DictName + ".xml";
+            if (!File.Exists(file))
+            {
+                throw new Exception("自定义数据字典文件" + file + "不存在！");
+            }
             docXml.Load(file);
             XmlNodeList nodelist = docXml.GetElementsByTagName(DictName);
 
