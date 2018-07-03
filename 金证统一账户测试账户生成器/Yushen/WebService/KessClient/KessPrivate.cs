@@ -932,7 +932,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SETT_DEALLOG">是否处理报送流水</param>
         /// <param name="CHECK_RES_RIGHT">检查资源权限</param>
         /// <returns></returns>
-        async private Task<Response> setCustAgreement(
+        async public Task<Response> setCustAgreement(
             string OPERATION_TYPE = "",
             string CUST_CODE = "",
             string CUST_AGMT_TYPE = "",

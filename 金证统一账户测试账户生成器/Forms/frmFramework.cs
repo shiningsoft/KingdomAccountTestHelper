@@ -45,7 +45,7 @@ namespace 金证统一账户测试账户生成器
                 item.Click += Item_Click;
                 tsmiFunction.DropDownItems.Insert(i, item);
 
-                if (i==1)
+                if (i==0)
                 {
                     item.PerformClick();
                 }
