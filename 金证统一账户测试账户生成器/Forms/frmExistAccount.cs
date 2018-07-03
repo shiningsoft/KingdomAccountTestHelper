@@ -232,6 +232,7 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
+                saveUserInfo();
                 await openCuacctCode();
             }
             catch (Exception ex)
@@ -248,6 +249,7 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
+                saveUserInfo();
                 await openYMTCode();
             }
             catch (Exception ex)
@@ -263,6 +265,9 @@ namespace 金证统一账户测试账户生成器
             btnOpenSHAStkAcct.Enabled = false;
             try
             {
+                saveUserInfo();
+                user.ymt_code = tbxYMTCode.Text.Trim();
+
                 await openSHACode();
             }
             catch (Exception ex)
@@ -327,6 +332,10 @@ namespace 金证统一账户测试账户生成器
             resultForm.Show();
             try
             {
+                saveUserInfo();
+                user.cuacct_code = tbxCuacct.Text.Trim();
+                user.ymt_code = tbxYMTCode.Text.Trim();
+                user.shacct = tbxSHAcct.Text.Trim();
                 await registerSHACode();
             }
             catch (Exception ex)
@@ -358,6 +367,9 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
+                saveUserInfo();
+                user.ymt_code = tbxYMTCode.Text.Trim();
+
                 await openSZACode();
             }
             catch (Exception ex)
@@ -373,6 +385,11 @@ namespace 金证统一账户测试账户生成器
             btnRegisterSZAStkAcct.Enabled = false;
             try
             {
+                saveUserInfo();
+                user.cuacct_code = tbxCuacct.Text.Trim();
+                user.ymt_code = tbxYMTCode.Text.Trim();
+                user.szacct = tbxSZAcct.Text.Trim();
+
                 await registerSZACode();
             }
             catch (Exception ex)
@@ -381,16 +398,7 @@ namespace 金证统一账户测试账户生成器
             }
             btnRegisterSZAStkAcct.Enabled = true;
         }
-
-        private async void btnOpenAccountByOneClick_Click(object sender, EventArgs e)
-        {
-            btnOpenAccountByOneClick.Enabled = false;
-
-            await openAllAccount();
-
-            btnOpenAccountByOneClick.Enabled = true;
-        }
-
+        
         /// <summary>
         /// 一次性开立所有账户
         /// </summary>
@@ -833,6 +841,8 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
+                Reset();
+
                 Response response = await kess.queryCustBasicInfoList(tbxCustCode.Text.Trim());
                 user_name.Text = response.getValue("user_name");
                 id_code.Text = response.getValue("id_code");
@@ -847,11 +857,9 @@ namespace 金证统一账户测试账户生成器
                 nationality.SelectedValue = response.getValue("NATIONALITY");
                 sex.SelectedValue = response.getValue("sex");
                 education.SelectedValue = response.getValue("education");
-
-                // saveUserInfo();
-
+                
                 // 查询资金账号
-                response = await kess.queryAccountInfo(tbxCustCode.Text.Trim());
+                response = await kess.listCuacct(tbxCustCode.Text.Trim());
                 resultForm.Append("客户号下找到" + response.length.ToString() + "个资金账号。");
 
                 if (response.length > 1)
@@ -866,20 +874,23 @@ namespace 金证统一账户测试账户生成器
 
                 // 查询一码通
                 resultForm.Append("正在发起中登查询一码通信息，请稍候。。。");
-                response = await kess.queryYMT(id_code.Text.Trim());
-                resultForm.Append("客户号下找到" + response.length.ToString() + "个一码通账号。");
+                response = await kess.queryYMT(id_code.Text.Trim(), user_name.Text.Trim());
+                resultForm.Append("从中登找到该客户的" + response.length.ToString() + "个一码通账号。");
                 Dict.YMT_STATUS ymtStatusList = new Dict.YMT_STATUS();
-                foreach (DataRow row in response.DataSet.Tables["row"].Rows)
+                foreach (DataRow row in response.Rows)
                 {
                     string ymtStatus = ymtStatusList.getNameByValue(row["YMT_STATUS"].ToString());
+
+                    resultForm.Append(
+                        "一码通账号：" + response.getValue("YMT_CODE") +
+                        "，账户状态：" + ymtStatus
+                    );
                 }
                 tbxYMTCode.Text = response.getValue("YMT_CODE");
 
-                resultForm.Append(response.xml);
-
                 // 查询系统内股东账号
                 response = await kess.listOfStkTrdAcct(tbxCustCode.Text.Trim());
-                resultForm.Append("客户号下找到" + response.length.ToString() + "个股东账号。");
+                resultForm.Append("系统内找到" + response.length.ToString() + "个股东账号。");
 
                 if (response.length > 0)
                 {
@@ -887,7 +898,7 @@ namespace 金证统一账户测试账户生成器
                     Dict.STKBD stkbdList = new Dict.STKBD();
                     Dict.TRDACCT_EXCLS trdAcctExclsList = new Dict.TRDACCT_EXCLS();
                     Dict.TRDACCT_STATUS trdAcctStatusList = new Dict.TRDACCT_STATUS();
-                    foreach (DataRow ds in response.DataSet.Tables["row"].Rows)
+                    foreach (DataRow ds in response.Rows)
                     {
                         string stkbd = stkbdList.getNameByValue(ds["STKBD"].ToString());
                         string trdAcctExcls = trdAcctExclsList.getNameByValue(ds["TRDACCT_EXCLS"].ToString());
@@ -899,6 +910,14 @@ namespace 金证统一账户测试账户生成器
                             "，账户类别：" + trdAcctExcls +
                             "，账户状态：" + status
                         );
+                        if (ds["STKBD"].ToString() == Dict.STKBD.上海A股)
+                        {
+                            tbxSHAcct.Text = ds["TRDACCT"].ToString();
+                        }
+                        if (ds["STKBD"].ToString() == Dict.STKBD.深圳A股)
+                        {
+                            tbxSZAcct.Text = ds["TRDACCT"].ToString();
+                        }
                     }
                 }
                 
@@ -917,6 +936,11 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
+                saveUserInfo();
+                user.cuacct_code = tbxCuacct.Text.Trim();
+                user.ymt_code = tbxYMTCode.Text.Trim();
+                user.shacct = tbxSHAcct.Text.Trim();
+
                 await bindSHAcct();
             }
             catch (Exception ex)
@@ -929,7 +953,7 @@ namespace 金证统一账户测试账户生成器
         
         private void btnLoadRequestXml_Click(object sender, EventArgs e)
         {
-            string path = System.IO.Path.Combine(Environment.CurrentDirectory, Request.xmlPath);
+            string path = Path.Combine(Environment.CurrentDirectory, Request.xmlPath);
             try
             {
                 System.Diagnostics.Process.Start(path);
@@ -976,6 +1000,31 @@ namespace 金证统一账户测试账户生成器
         private void frmExistAccount_Shown(object sender, EventArgs e)
         {
             tbxCustCode.Focus();
+        }
+
+        /// <summary>
+        /// 清空所有信息
+        /// </summary>
+        private void Reset()
+        {
+            user_name.Text = "";
+            tbxYMTCode.Text = "";
+            tbxCuacct.Text = "";
+            tbxSHAcct.Text = "";
+            tbxSZAcct.Text = "";
+            tbxCybSignDate.Text = "";
+            tbxBankAcctCode.Text = "";
+
+            address.Text = "";
+            id_addr.Text = "";
+            id_code.Text = "";
+            id_iss_agcy.Text = "";
+            id_beg_date.Text = "";
+            id_exp_date.Text = "";
+            mobile_tel.Text = "";
+            zip_code.Text = "";
+            password.Text = "111111";
+
         }
     }
 }

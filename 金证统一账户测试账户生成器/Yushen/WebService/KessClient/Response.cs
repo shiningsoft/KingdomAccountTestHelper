@@ -215,12 +215,26 @@ namespace Yushen.WebService.KessClient
             return ds;
         }
 
+        /// <summary>
+        /// 将Response转换为数据集
+        /// </summary>
         public DataSet DataSet
         {
             get
             {
                 DataSet ds = createDataSetFromXmlString(this.xml);
                 return ds;
+            }
+        }
+
+        /// <summary>
+        /// Response的数据行集合
+        /// </summary>
+        public DataRowCollection Rows
+        {
+            get
+            {
+                return DataSet.Tables["row"].Rows;
             }
         }
 

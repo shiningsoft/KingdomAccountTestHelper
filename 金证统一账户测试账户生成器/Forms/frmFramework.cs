@@ -52,16 +52,8 @@ namespace 金证统一账户测试账户生成器
 
                 i++;
             }
-
-            try
-            {
-                tsslVersion.Text = "当前版本：" + System.Deployment.Application.ApplicationDeployment.CurrentDeployment.CurrentVersion.ToString();
-            }
-            catch (System.Deployment.Application.InvalidDeploymentException ex)
-            {
-                tsslVersion.Text = "未部署状态，无法获取当前版本";
-                Console.WriteLine(ex.Message.ToString());
-            }
+            
+            tsslVersion.Text = "当前版本：" + Application.ProductVersion;
 
             try
             {

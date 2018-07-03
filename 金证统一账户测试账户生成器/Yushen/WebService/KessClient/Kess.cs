@@ -139,7 +139,7 @@ namespace Yushen.WebService.KessClient
         /// <returns></returns>
         async public Task<string> openCuacctCode(User user)
         {
-            Response response = await this.listCuacct(user);
+            Response response = await this.listCuacct(user.cust_code);
             // 判断是否已经开立过资金账号
             if (response.length == 0)
             {
@@ -172,18 +172,18 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 查询客户资产账户
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="cust_code">客户号</param>
         /// <returns></returns>
-        async public Task<Response> listCuacct(User user)
+        async public Task<Response> listCuacct(string cust_code)
         {
-            if (user.cust_code == "")
+            if (cust_code == "")
             {
                 string message = "用户代码不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
             Request request = new Request(this.operatorId, "listCuacct");
-            request.setAttr("USER_CODE", user.cust_code);    // 客户名称
+            request.setAttr("USER_CODE", cust_code);    // 客户名称
 
             Response response = await this.invoke(request);
             if (response.flag != "0" && response.flag != "1")
@@ -1436,8 +1436,10 @@ namespace Yushen.WebService.KessClient
         /// 一码通信息查询
         /// </summary>
         /// <param name="id_code">身份证号码</param>
+        /// <param name="cust_name">姓名</param>
+        /// <param name="timeout">超时时间</param>
         /// <returns></returns>
-        async public Task<Response> queryYMT(string id_code, int timeout = 30)
+        async public Task<Response> queryYMT(string id_code, string cust_name, int timeout = 30)
         {
             // 前置条件判断
             if (id_code == "")
@@ -1454,6 +1456,7 @@ namespace Yushen.WebService.KessClient
                                     ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.一码通账户查询,
                                     ID_TYPE: Dict.ID_TYPE.身份证,
                                     ID_CODE: id_code,
+                                    CUST_FNAME: cust_name,
                                     CHK_STATUS: Dict.CHK_STATUS.已通过,
                                     PROPER_CLS: "",  // 适当性类别必须为空
                                     ACCT_OPENTYPE: ""  // 必须送空值

@@ -75,7 +75,6 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenCYB = new System.Windows.Forms.Button();
             this.tbxYMTCode = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.btnOpenAccountByOneClick = new System.Windows.Forms.Button();
             this.tbxSZAcct = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.tbxSHAcct = new System.Windows.Forms.TextBox();
@@ -456,16 +455,6 @@ namespace 金证统一账户测试账户生成器
             this.label20.TabIndex = 55;
             this.label20.Text = "一码通：";
             // 
-            // btnOpenAccountByOneClick
-            // 
-            this.btnOpenAccountByOneClick.Location = new System.Drawing.Point(105, 390);
-            this.btnOpenAccountByOneClick.Name = "btnOpenAccountByOneClick";
-            this.btnOpenAccountByOneClick.Size = new System.Drawing.Size(100, 23);
-            this.btnOpenAccountByOneClick.TabIndex = 38;
-            this.btnOpenAccountByOneClick.Text = "一键开户";
-            this.btnOpenAccountByOneClick.UseVisualStyleBackColor = true;
-            this.btnOpenAccountByOneClick.Click += new System.EventHandler(this.btnOpenAccountByOneClick_Click);
-            // 
             // tbxSZAcct
             // 
             this.tbxSZAcct.Location = new System.Drawing.Point(105, 363);
@@ -632,6 +621,7 @@ namespace 金证统一账户测试账户生成器
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(100, 21);
             this.password.TabIndex = 10;
+            this.password.Text = "111111";
             // 
             // label13
             // 
@@ -695,7 +685,6 @@ namespace 金证统一账户测试账户生成器
             this.tbxCustCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxCustCode.Size = new System.Drawing.Size(100, 21);
             this.tbxCustCode.TabIndex = 20;
-            this.tbxCustCode.Text = "200188468";
             // 
             // label11
             // 
@@ -944,7 +933,6 @@ namespace 金证统一账户测试账户生成器
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.tbxSZAcct);
-            this.Controls.Add(this.btnOpenAccountByOneClick);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -997,7 +985,6 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.TextBox tbxSHAcct;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button btnOpenAccountByOneClick;
         private System.Windows.Forms.TextBox tbxYMTCode;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button btnOpenCYB;
