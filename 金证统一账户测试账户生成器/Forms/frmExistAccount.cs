@@ -155,7 +155,7 @@ namespace 金证统一账户测试账户生成器
                 user.id_exp_date = id_exp_date.Text.Trim();
                 user.linktel_order = Dict.LINKTEL_ORDER.手机;
                 user.linkaddr_order = Dict.LINKADDR_ORDER.家庭地址;
-                user.address = id_addr.Text.Trim();
+                user.address = address.Text.Trim();
                 user.citizenship = citizenship.SelectedValue.ToString();
                 user.nationality = nationality.SelectedValue.ToString();
                 user.password = password.Text.Trim();
@@ -581,7 +581,7 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 // 开一码通
-                Response response = await kess.openYMTAcct(user.user_type, user.user_fname, user.id_type, user.id_code, user.int_org, user.cust_code, user.birthday, user.id_beg_date, user.id_exp_date, user.citizenship, user.id_addr, user.id_addr, user.zip_code, user.occu_type, user.nationality, user.education, user.tel, user.mobile_tel, user.sex);
+                Response response = await kess.openYMTAcct(user.user_type, user.user_fname, user.id_type, user.id_code, user.int_org, user.cust_code, user.birthday, user.id_beg_date, user.id_exp_date, user.citizenship, user.id_addr, user.address, user.zip_code, user.occu_type, user.nationality, user.education, user.tel, user.mobile_tel, user.sex);
                 if (response.length > 2)
                 {
                     throw new Exception("该客户有" + response.length.ToString() + "个一码通账号");
