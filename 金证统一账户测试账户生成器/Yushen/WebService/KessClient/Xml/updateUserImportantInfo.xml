@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.135	用户重要资料修改
+注1：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--用户代码-->
+    <USER_CODE></USER_CODE>
+    <!--用户名称-->
+    <USER_NAME></USER_NAME>
+    <!--证件类型-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码-->
+    <ID_CODE></ID_CODE>
+    <!--用户全称-->
+    <USER_FNAME></USER_FNAME>
+    <!--发证机关-->
+    <ID_ISS_AGCY></ID_ISS_AGCY>
+    <!--证件开始日期-->
+    <ID_BEG_DATE></ID_BEG_DATE>
+    <!--证件有效日期-->
+    <ID_EXP_DATE></ID_EXP_DATE>
+    <!--证件编码-->
+    <ID_ZIP_CODE></ID_ZIP_CODE>
+    <!--证件地址-->
+    <ID_ADDR></ID_ADDR>
+    <!--操作备注-->
+    <OP_REMARK></OP_REMARK>
+    <!--签约客户姓名-->
+    <BSB_USER_FNAME></BSB_USER_FNAME>
+    <!--签约证件类型-->
+    <BSB_ID_TYPE></BSB_ID_TYPE>
+    <!--签约证件号码-->
+    <BSB_ID_CODE></BSB_ID_CODE>
+    <!--签约证件有效日期-->
+    <BSB_ID_EXP_DATE></BSB_ID_EXP_DATE>
+    <!--税务登记证-->
+    <BUSINESS_TAX_NO></BUSINESS_TAX_NO>
+    <!--登记证有效日期-->
+    <TAX_NO_EXP_DATE></TAX_NO_EXP_DATE>
+    <!--营业执照号-->
+    <BUSINESS_LICENCE_NO></BUSINESS_LICENCE_NO>
+    <!--执照有效日期-->
+    <LICENCE_NO_EXP_DATE></LICENCE_NO_EXP_DATE>
+    <!--组织机构代码-->
+    <ORG_ID_CODE></ORG_ID_CODE>
+    <!--代码证有效日期-->
+    <ORG_ID_EXP_DATE></ORG_ID_EXP_DATE>
+    <!--组织证年检日期-->
+    <MAIN_YEAR_CHK_DATE></MAIN_YEAR_CHK_DATE>
+    <!--证件卡读卡标志-->
+    <IDCARD_READ_FLAG></IDCARD_READ_FLAG>
+    <!--出生日期/注册日期-->
+    <BIRTHDAY></BIRTHDAY>
+  </data>
+</request>

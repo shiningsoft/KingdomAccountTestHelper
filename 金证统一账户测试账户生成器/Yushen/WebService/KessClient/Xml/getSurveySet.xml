@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.156	获取试题集-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--调查表类别（非必传）DD-[SURVEY_CLS]-->
+    <SURVEY_CLS></SURVEY_CLS>
+    <!--调查表编码（非必传）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--主客观（非必传）-->
+    <SURVEY_TYPES></SURVEY_TYPES>
+    <!--网上开户所需渠道表示（非必传）-->
+    <WEB_CHANNEL></WEB_CHANNEL>
+    <!--用户类型（非必传）DD-[USER_TYPE]-->
+    <USER_TYPE></USER_TYPE>
+  </data>
+</request>

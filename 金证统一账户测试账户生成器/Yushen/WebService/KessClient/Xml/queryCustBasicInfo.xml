@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.9	查询客户基本信息（见证开户）
+功能说明：预约开户资料查询。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--开始日期可不传此值，默认为19000101-->
+    <BGN_DATE>19000101</BGN_DATE>
+    <!--结束日期可不传此值，默认为30000101-->
+    <END_DATE>30000101</END_DATE>
+    <!--预约状态-->
+    <APPT_STATUS></APPT_STATUS>
+    <!--证件类型-->
+    <ID_TYPE></ID_TYPE>
+    <!--用户类型DD[USER_TYPE]-->
+    <USER_TYPE></USER_TYPE>
+    <!--机构代码-->
+    <INT_ORG></INT_ORG>
+    <!--证件号码-->
+    <ID_CODE>610481199304093635</ID_CODE>
+    <!--预约方式-->
+    <APPT_CHNL></APPT_CHNL>
+    <!--预约业务-->
+    <APPT_BIZ></APPT_BIZ>
+    <!--客户姓名-->
+    <CUST_NAME></CUST_NAME>
+    <!--手机号-->
+    <MOBILE_TEL></MOBILE_TEL>
+    <!--复核状态-->
+    <CHK_STATUS></CHK_STATUS>
+  </data>
+</request>

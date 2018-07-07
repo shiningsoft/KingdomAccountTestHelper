@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.92	收费模板查询-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--开户来源（必传）-->
+    <OPEN_SOURCE>1</OPEN_SOURCE>
+    <!--机构代码（必传）-->
+    <ING_ORG>101</ING_ORG>
+  </data>
+</request>

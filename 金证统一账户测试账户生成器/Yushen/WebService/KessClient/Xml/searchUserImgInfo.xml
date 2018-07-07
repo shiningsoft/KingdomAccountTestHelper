@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.130	获取用户影像描述信息-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--用户角色（非必传）DD[USER_ROLE]-->
+    <USER_ROLE></USER_ROLE>
+    <!--内部机构（非必传）-->
+    <INT_ORG></INT_ORG>
+  </data>
+</request>

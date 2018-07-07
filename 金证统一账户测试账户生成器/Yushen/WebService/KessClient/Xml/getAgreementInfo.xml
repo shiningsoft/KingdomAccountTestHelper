@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.157	查询电子协议信息-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--机构代码（必传）-->
+    <INT_ORG></INT_ORG>
+    <!--电子协议类别（非必传）-->
+    <CONTRACT_TYPE></CONTRACT_TYPE>
+    <!--电子协议类型（非必传）-->
+    <CONTRACT_CLS></CONTRACT_CLS>
+    <!--版本（非必传）-->
+    <VERSION></VERSION>
+    <!--外部机构（非必传）-->
+    <EXT_ORG></EXT_ORG>
+    <!--是否可用（非必传）-->
+    <USE_FLAG></USE_FLAG>
+  </data>
+</request>

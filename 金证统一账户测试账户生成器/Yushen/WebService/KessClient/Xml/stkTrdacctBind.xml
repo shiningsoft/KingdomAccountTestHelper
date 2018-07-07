@@ -1,23 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.50 证券账户指定交易-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.50	证券账户指定交易
+注：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>31010013</OPERATOR>
   </auth>
   <data>
-    <!--//客户代码-->
+    <!--用户类型0-个人1-机构DD[USER_TYPE]-->
+    <USER_TYPE></USER_TYPE>
+    <!--客户代码-->
     <CUST_CODE></CUST_CODE>
-    <!--//交易板块DD[STKBD]-->
+    <!--交易板块DD[STKBD]-->
     <STKBD></STKBD>
-    <!--//交易单元-->
+    <!--交易单元-->
     <STKPBU></STKPBU>
-    <!--//交易账户-->
+    <!--交易账户-->
     <TRDACCT></TRDACCT>
-    <!--//交易指定状态0-撤指定1-指定-->
+    <!--交易指定状态0-未指定1-首日指定2-已指定-->
     <TREG_STATUS></TREG_STATUS>
-    <!--//交易指定状态0-撤指定1-指定-->
-    <BREG_STATUS></BREG_STATUS>
-    <!--//代理商号-->
-    <FIRMID></FIRMID>
   </data>
 </request>

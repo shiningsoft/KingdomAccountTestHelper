@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.190	客户融资融券资格申请查询
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+注2：该客户必须已经征信，否则无法查询结果
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--申请编号（非必输）-->
+    <APP_CR_SN></APP_CR_SN>
+    <!--客户代码（非必输）-->
+    <CUST_CODE></CUST_CODE>
+    <!--机构代码（非必输）-->
+    <INT_ORG></INT_ORG>
+    <!--申请类型（非必输）DD[APP_TYPE]-->
+    <APP_TYPE></APP_TYPE>
+    <!--资格申请单状态（非必输）DD[APR_STATUS]-->
+    <APR_STATUS></APR_STATUS>
+    <!--推荐人编号（非必输）-->
+    <RECM_CODE></RECM_CODE>
+    <!--预申请日期（非必输）-->
+    <APP_DATE></APP_DATE>
+    <!--开始日期（非必输）-->
+    <BGN_DATE></BGN_DATE>
+    <!--结束日期（非必输）-->
+    <END_DATE></END_DATE>
+    <!--操作员代码（非必输）-->
+    <OP_CODE></OP_CODE>
+    <!--有效天数（非必输）-->
+    <VALID_DAYS></VALID_DAYS>
+    <!--资产账户（非必输）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--过滤已签订合同状态（非必输）-->
+    <FILT_CONTRACT_STATUS></FILT_CONTRACT_STATUS>
+    <!--影像状态（非必输）-->
+    <CURR_STATUSES></CURR_STATUSES>
+    <!--资格申请单状态（非必输）-->
+    <CDP_APPL_STATUS></CDP_APPL_STATUS>
+  </data>
+</request>

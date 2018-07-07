@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.76	网上开户影像索引更新-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--证件号码（必传）-->
+    <ID_CODE>360802194009234505</ID_CODE>
+    <!--用户角色:1-客户，4-代理人DD[USER_ROLE]-->
+    <USER_ROLE>1</USER_ROLE>
+    <!--影像类别（必传）-->
+    <IMG_CLS>021</IMG_CLS>
+    <!--影像数据-->
+    <IMG_DATA></IMG_DATA>
+    <!--数据长度-->
+    <DATA_LEN></DATA_LEN>
+    <!--用户代码（必传）：未产生客户前传0-->
+    <USER_CODE>0</USER_CODE>
+    <!--内部机构-->
+    <INT_ORG></INT_ORG>
+    <!--现场采集标识-->
+    <GATHER_FLAG></GATHER_FLAG>
+    <!--审核标识-->
+    <AUDIT_FLAG></AUDIT_FLAG>
+    <!--网上业务类型（必传）0-网上自助1-视频见证2-双人见证-->
+    <WEB_BIZ>0</WEB_BIZ>
+    <!--影像编码-->
+    <IMG_SN></IMG_SN>
+    <!--外部影像索引(必传)：FILEID号-->
+    <IMG_EXINDEX></IMG_EXINDEX>
+    <!--外部影像类型-->
+    <IMG_EXCLS></IMG_EXCLS>
+    <!--影像格式-->
+    <IMG_FMT></IMG_FMT>
+    <!--影像信息-->
+    <IMG_REMARK></IMG_REMARK>
+  </data>
+</request>

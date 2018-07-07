@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.44	非现场开户资料审核（WEB）-->
+<request>
+  <auth>
+    <OPERATOR>31010013</OPERATOR>
+  </auth>
+  <data>
+    <!--流水序号（必传）-->
+    <SERIAL_NO>2013032300000001</SERIAL_NO>
+    <!--复核状态（必传）-->
+    <CHK_STATUS>8</CHK_STATUS>
+    <!--复核备注（非必传）-->
+    <CHK_REMARK>1</CHK_REMARK>
+    <!--复核操作员编号（非必传）-->
+    <ONE_USER_CODE>31010013</ONE_USER_CODE>
+    <!--审核操作员姓名（非必传）-->
+    <ONE_USER_NAME>马玉斌</ONE_USER_NAME>
+  </data>
+</request>

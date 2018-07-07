@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.35	发送短信-->
+<request>
+  <auth>
+    <OPERATOR>31010107</OPERATOR>
+  </auth>
+  <data>
+    <!--版本：1为安信版，其它值为标准版-->
+    <PRJ_VERSION></PRJ_VERSION>
+    <!--短信模板：传了此值会忽略掉SMS_TEXT字段，如果不传此字段，则会将SMS_TEXT字段发送出去。-->
+    <TEMPLATE_ID>loginRandomCode</TEMPLATE_ID>
+    <!--短信类别-->
+    <SMS_CLS>0</SMS_CLS>
+    <!--移动电话-->
+    <MOBILE_TEL>18898762136</MOBILE_TEL>
+    <!--短信内容-->
+    <SMS_TEXT>HelloWorld!</SMS_TEXT>
+    <!--以下内容为当短信模板中有#{…}字段时，将…中的字段转换为大写用参数传进去，则会用该参数值替换之，如果以下值没有传，则会在短信内容中传空。如果短信模板中是random[6]，不需要传该值，会随机产生验证码并将验证码返回。-->
+    <!--客户代码-->
+    <CUSTCODE></CUSTCODE>
+    <!--资产账户代码-->
+    <CUACCT></CUACCT>
+    <!--客户名称-->
+    <CUSTNAME></CUSTNAME>
+    <!--交易版块DD[STKBD]-->
+    <STKBD></STKBD>
+    <!--股东代码-->
+    <TRDACCT></TRDACCT>
+//
+<TACODE></TACODE><!--地址--><ADDRESS></ADDRESS>
+……
+</data>
+</request>

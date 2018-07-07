@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.18	查询风险测评题库-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <OP_USER></OP_USER>
+    <!--调查表类别-->
+    <SURVEY_CLS>0</SURVEY_CLS>
+    <!--调查表编号-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--主客观-->
+    <SURVEY_TYPE></SURVEY_TYPE>
+    <!--网上开启所需渠道表示-->
+    <WEB_CHANNEL></WEB_CHANNEL>
+  </data>
+</request>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.19	保存风险测评答案
+该接口存在性能问题，不建议继续使用，
+推荐用syncSurveyAns2Kbss + syncAnsAppSurvey2Run替代
+
+-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--预约开户流水号-->
+    <APPT_SERIAL_NO>2013010700000002</APPT_SERIAL_NO>
+    <!--调查表编码-->
+    <SURVEY_SN>1</SURVEY_SN>
+    <!--调查表栏组-->
+    <SURVEY_GR>1</SURVEY_GR>
+    <!--调查表的最大题号，有不连续的ANSWER标签时，取最大的一个，也可以固定为15。-->
+    <ANSWER_COUNT>15</ANSWER_COUNT>
+    <!--ANSWER_X标签至少有一个，表示第X题的答案，可以是不连续的多个。-->
+    <ANSWER_1>2</ANSWER_1>
+    <ANSWER_2>2</ANSWER_2>
+    <ANSWER_3>2</ANSWER_3>
+    <ANSWER_4>2</ANSWER_4>
+    <ANSWER_5>2</ANSWER_5>
+    <ANSWER_6>2</ANSWER_6>
+    <ANSWER_7>2</ANSWER_7>
+    <ANSWER_8>2</ANSWER_8>
+    <ANSWER_9>2</ANSWER_9>
+    <ANSWER_10>2</ANSWER_10>
+    <ANSWER_11>3</ANSWER_11>
+    <ANSWER_12>3</ANSWER_12>
+    <ANSWER_13>3</ANSWER_13>
+    <ANSWER_14>3</ANSWER_14>
+    <ANSWER_15>3</ANSWER_15>
+  </data>
+</request>

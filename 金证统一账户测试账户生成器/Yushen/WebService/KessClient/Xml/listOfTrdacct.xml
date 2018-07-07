@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.54	基金账户查询-->
+<request>
+  <auth>
+    <OPERATOR>31010013</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码-->
+    <CUST_CODE>310100033041</CUST_CODE>
+  </data>
+</request>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.141	沪港通行为申报（港股）
+注1：此接口需OEM“KBSS沪港通非现场业务”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--港股业务类型（必传）H63：公司收购申报业务回报H64：公开招股申报业务-->
+H65：供股行权申报业务H66：红利现金选择权申报业务
+<HK_TYPE></HK_TYPE><!--港股申报业务（必传）HCX-查询HSB-申报--><HK_DLE_TYPE></HK_DLE_TYPE><!--证券代码（必传）--><STK_CODE></STK_CODE><!--申报数量申报必送\查询不送--><DECLARE_QUAN></DECLARE_QUAN><!--公司行为代码（必传）--><ORG_NO></ORG_NO><!--交易账户（必传）--><TRDACCT></TRDACCT><!--机构编码（非必传）--><INT_ORG></INT_ORG></data>
+</request>

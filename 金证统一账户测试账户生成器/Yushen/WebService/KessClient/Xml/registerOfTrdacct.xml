@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.52	基金账户加挂
+注：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>31010107</OPERATOR>
+  </auth>
+  <data>
+    <!--资产账户代码-->
+    <CUACCT_CODE>310100033019</CUACCT_CODE>
+    <!--基金登记公司代码-->
+    <TA_CODE>6</TA_CODE>
+    <!--基金账号-->
+    <OF_ACCT>310100033020</OF_ACCT>
+    <!--账单邮寄类型-->
+    <BILL_MAIL_TYPE></BILL_MAIL_TYPE>
+    <!--分红方式-->
+    <DIV_METHOD></DIV_METHOD>
+    <!--未成年人标志-->
+    <YOUNG_FLAG></YOUNG_FLAG>
+    <!--未成年人标识-->
+    <YOUNG_ID></YOUNG_ID>
+    <!--TA凭证号-->
+    <VOUCHER_NO></VOUCHER_NO>
+    <!--备注信息-->
+    <REMARK></REMARK>
+  </data>
+</request>

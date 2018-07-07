@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.55	保证金扣除-->
+<request>
+  <auth>
+    <OPERATOR>31010013</OPERATOR>
+  </auth>
+  <data>
+    <!--SERIAL_NO的前8位-->
+    <ORDER_ID></ORDER_ID>
+    <!--资产账户-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--金额-->
+    <PAY_FEE></PAY_FEE>
+  </data>
+</request>

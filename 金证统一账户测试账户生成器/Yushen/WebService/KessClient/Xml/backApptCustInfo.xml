@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.46	预约开户结果回报-->
+<request>
+  <auth>
+    <OPERATOR>31010013</OPERATOR>
+  </auth>
+  <data>
+    <!--流水序号（必传）-->
+    <SERIAL_NO>2013032300000001</SERIAL_NO>
+    <!--客户代码（必传）-->
+    <CUST_CODE>310100033013</CUST_CODE>
+    <!--预约状态（非必传）-->
+    <APPT_STATUS>2</APPT_STATUS>
+  </data>
+</request>

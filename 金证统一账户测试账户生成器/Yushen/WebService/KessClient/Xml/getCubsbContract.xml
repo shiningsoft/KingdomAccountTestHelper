@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.37	查询客户签约信息-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE>36050</CUACCT_CODE>
+    <!--客户代码-->
+    <CUST_CODE>0</CUST_CODE>
+    <!--货币代码（非必传）-->
+    <CURRENCY>0</CURRENCY>
+    <!--查询对接融资融券系统（非必传）1-查询融资融券系统-->
+    <FISL>0</FISL>
+  </data>
+</request>

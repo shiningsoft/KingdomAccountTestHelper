@@ -1,20 +1,24 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.1 操作员登陆-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.1	操作员登陆
+功能说明：进行操作员登录，之后所有的接口调用均由此操作员操作，同时也是初始化OEM的接口。
+注1：该接口为使用WebService必须调用的接口，且必须第一个调用，否则后续接口无法使用。
+注2：该接口支持外围送入操作渠道F_CHANNEL。故F_CHANNEL有三种方式取得，第一：默认值为0；第二，web.xml配置；第三：外围送入。优先级为：外围 > 配置 > 默认值。
+注3：F_CHANNEL操作渠道在操作员退出（operatorLogout）或是tomcat关闭之前，将适用于所有接口，并且在其它接口调用时，不需要再送此参数。
+注4：该接口auth标签下的OPERATOR与data标签下的USER_CODE必须一致
+
+-->
 <request>
   <auth>
-    <!--//操作员代码（必传）-->
-    <OPERATOR></OPERATOR>
+    <OPERATOR>2507</OPERATOR>
   </auth>
   <data>
-    <!---->
-    <USER_CODE></USER_CODE>
-    <!--//操作员密码（必传）-->
-    <PASSWORD></PASSWORD>
-    <!--//操作渠道（非必传） 若传，不允许传空-->
-    <F_CHANNEL></F_CHANNEL>
-    <!--//代理IP（非必传）-->
-    <AGENT_IP></AGENT_IP>
-    <!--//打印标志（非必传） 0-支持，其他-不支持-->
-    <PRINT_FLAG></PRINT_FLAG>
+    <!--操作员代码（必传）-->
+    <USER_CODE>2507</USER_CODE>
+    <!--操作员密码（必传）-->
+    <PASSWORD>123123</PASSWORD>
+    <!--操作渠道（非必传）-->
+    <F_CHANNEL>j</F_CHANNEL>
+    <!--代理IP（非必传）-->
+    <AGENT_IP>192.168.40.118</AGENT_IP>
   </data>
 </request>

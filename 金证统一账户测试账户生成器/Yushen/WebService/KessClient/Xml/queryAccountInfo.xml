@@ -1,13 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<!--2.13 查询账户信息（账户系统）-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.13	查询账户信息（账户系统）-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>33146</OPERATOR>
   </auth>
   <data>
-    <!--//客户代码 必要参数-->
-    <USER_CODE></USER_CODE>
-    <!--//资产账户-->
-    <CUACCT_CODE></CUACCT_CODE>
+    <!--客户代码必要参数-->
+    <USER_CODE>101225901</USER_CODE>
+    <!--资产账户-->
+    <CUACCT_CODE>900000044208</CUACCT_CODE>
   </data>
 </request>

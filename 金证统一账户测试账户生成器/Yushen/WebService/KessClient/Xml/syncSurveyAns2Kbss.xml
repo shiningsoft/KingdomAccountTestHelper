@@ -1,19 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.118 同步风险测评答案至账户系统-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.119	同步风险测评答案至账户系统
+注1：若测评的调查表(SURVEY_SN)有同步交易系统的配置，则此接口将把测评信息同步至账户系统和交易系统；
+注2：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>36050</OPERATOR>
   </auth>
   <data>
-    <!--//客户代码(必输)-->
+    <!--客户代码(必输)-->
     <USER_CODE></USER_CODE>
-    <!--//调查表编码(必输)-->
-    <SURVEY_SN>1</SURVEY_SN>
-    <!--//调查表栏目（复数）(以‘|’隔开)(必输)-->
+    <!--调查表编码(必输)-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--调查表栏组(必输)-->
+    <SURVEY_GR></SURVEY_GR>
+    <!--调查表栏目（复数）(以‘|’隔开)(必输)-->
     <SURVEY_COLS></SURVEY_COLS>
-    <!--//调查表单元（复数）(以‘|’隔开)(必输)-->
+    <!--调查表单元（复数）(以‘|’隔开)(必输)-->
     <SURVEY_CELLS></SURVEY_CELLS>
-    <!--//调查表作答分值（复数）(以’|’隔开)(非必输)-->
+    <!--调查表作答分值（复数）(以’|’隔开)(非必输)-->
     <SURVEY_ANS_VALS></SURVEY_ANS_VALS>
   </data>
 </request>

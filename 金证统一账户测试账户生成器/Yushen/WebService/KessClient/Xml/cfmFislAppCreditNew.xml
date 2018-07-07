@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.149	额度管理-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--征信系数（非必传）-->
+    <CREDIT_RATIO></CREDIT_RATIO>
+    <!--操作备注（非必传）-->
+    <OP_REMARK></OP_REMARK>
+    <!--履约保障比例（非必传）-->
+    <ENSURE_RATE></ENSURE_RATE>
+    <!--履约警戒比例（非必传）-->
+    <WAR_RATE></WAR_RATE>
+    <!--罚息率（非必传）-->
+    <INT_RATE></INT_RATE>
+    <!--交易密码（非必传）-->
+    <TRD_PWD></TRD_PWD>
+  </data>
+</request>

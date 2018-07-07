@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.159	查询客户签署协议-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--协议类型（非必传）DD[CUST_AGMT_TYPE]若未输则查询全部-->
+    <CUST_AGMT_TYPE></CUST_AGMT_TYPE>
+    <!--对接远程系统（非必传）-->
+    <REMOTE_SYS></REMOTE_SYS>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+  </data>
+</request>

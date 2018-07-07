@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.191	查询客户资金权限限制
+注1：限U版使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--分支机构（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--资产账户类别（非必传）-->
+    <CUACCT_CLS></CUACCT_CLS>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--币种（非必传）-->
+    <CURRENCY></CURRENCY>
+    <!--本次查询记录数（非必传）默认为10-->
+    <R_COUNT></R_COUNT>
+    <!--账户状态（非必传）-->
+    <STATUS></STATUS>
+    <!--经纪人代码（非必传）-->
+    <BROKER></BROKER>
+    <!--三方存管标志（非必传）-->
+    <ACC_CHAR></ACC_CHAR>
+    <!--三方存管状态（非必传）-->
+    <SFCG_STATUS></SFCG_STATUS>
+    <!--开始日期（非必传）-->
+    <BGNDATE></BGNDATE>
+    <!--结束日期（非必传）-->
+    <ENDDATE></ENDDATE>
+  </data>
+</request>

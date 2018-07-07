@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.68	获取临柜业务影像采集配置-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--证件类型-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码-->
+    <ID_CODE>610481199304093635</ID_CODE>
+  </data>
+</request>

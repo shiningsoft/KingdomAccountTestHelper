@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.176	董高监信息维护
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必输）0-录入1-修改2-删除-->
+注：操作类型为1-修改时，以下四个必要参数将作为查询条件修改其它信息，本身无法被修改
+<OPERATE_TYPE></OPERATE_TYPE><!--客户代码（必输）--><CUST_CODE></CUST_CODE><!--交易账号（必输）--><TRDACCT></TRDACCT><!--证券代码（必输）--><SECU_CODE></SECU_CODE><!--数据来源（必输）--><CHIEF_SOURCE_CLS></CHIEF_SOURCE_CLS><!--席位代码（非必输）--><SEAT_CODE></SEAT_CODE><!--交易所（非必输）--><SRKEX></SRKEX><!--限售股数量（非必输）--><STRICT_NUM></STRICT_NUM><!--上市公司名称（非必输）--><MARKET_FIRM></MARKET_FIRM><!--客户职务（非必输）--><CHIEF_NAME></CHIEF_NAME><!--备注（非必输）--><REMARK></REMARK></data>
+</request>

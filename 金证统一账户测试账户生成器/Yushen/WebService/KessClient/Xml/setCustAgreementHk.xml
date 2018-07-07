@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.143	客户港股通协议维护
+注1：此接口需OEM“KBSS沪港通非现场业务”的授权才能使用；
+注2: 沪港通权限开通由公共参数PERIPHERAL_HK_CHK控制是否需要审核，0-不审核 1-审核。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-新增1-修改2-删除3-设置报送状态-->
+    <OPERATION_TYPE></OPERATION_TYPE>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易账户（必传）-->
+    <TRDACCT></TRDACCT>
+    <!--开通类型（必传）A-开通C-注销-->
+    <OPEN_FLAG></OPEN_FLAG>
+    <!--交易板块（必传）DD[STKBD]-->
+    <STKBD></STKBD>
+    <!--操作备注（非必传）-->
+    <OP_REMARK></OP_REMARK>
+  </data>
+</request>

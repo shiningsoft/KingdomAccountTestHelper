@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.127	查询临柜业务流水-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--内部机构（必传）-->
+    <INT_ORG></INT_ORG>
+    <!--临柜业务（必传）0R-自助0S-视频0T-双人-->
+    <FRT_BIZ></FRT_BIZ>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--业务状态（非必传）-->
+    <FRT_BIZ_STATUS></FRT_BIZ_STATUS>
+    <!--审计状态（非必传）-->
+    <AUDIT_STATUS></AUDIT_STATUS>
+  </data>
+</request>

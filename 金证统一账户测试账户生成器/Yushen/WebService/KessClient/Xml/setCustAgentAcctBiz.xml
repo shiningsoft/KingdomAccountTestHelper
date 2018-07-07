@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.112	客户代理关系设置（账户业务）
+注：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）（0-增加1-修改2-删除）-->
+    <OPERATION_TYPE></OPERATION_TYPE>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--用户角色（必传）DD[USER_ROLE]-->
+    <USER_ROLE></USER_ROLE>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账户组（必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--开始日期（非必传）-->
+    <BGN_DATE></BGN_DATE>
+    <!--结束日期（必传）-->
+    <END_DATE></END_DATE>
+    <!--账户业务（必传）-->
+    <ACCT_BIZES></ACCT_BIZES>
+    <!--禁止账户业务（非必传）-->
+    <EXCL_ACCT_BIZES></EXCL_ACCT_BIZES>
+  </data>
+</request>

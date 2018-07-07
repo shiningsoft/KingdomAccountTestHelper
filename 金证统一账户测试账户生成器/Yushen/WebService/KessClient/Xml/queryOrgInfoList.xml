@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.22	查询机构信息列表-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--机构编码-->
+    <ORG_CODE></ORG_CODE>
+    <!--机构类型：@-全部0-内部机构1-银行2-登记公司3-基金公司4-期货公司-->
+    <ORG_TYPE>0</ORG_TYPE>
+    <!--权限标识：0-无权限1-有权限其他-不关心权限-->
+    <RIGHT_FLAG></RIGHT_FLAG>
+  </data>
+</request>

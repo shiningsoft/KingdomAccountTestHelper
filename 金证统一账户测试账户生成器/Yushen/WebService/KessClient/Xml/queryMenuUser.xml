@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.29	查询菜单权限用户列表-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--查询类型-->
+    <!--为1表示查询某菜单的权限用户列表，只传MENU_TYPE和INT_ORGS即可-->
+    <!--为0表示查询某操作员的有权限菜单列表，只传USER_CODE和USER_ROLE即可-->
+    <QUERY_TYPE>1</QUERY_TYPE>
+    <!--菜单功能号-->
+    <MENU_CODE>201800021</MENU_CODE>
+    <!--机构代码：机构代码支持多“，”隔开-->
+    <INT_ORGS>9000</INT_ORGS>
+    <!--操作员代码-->
+    <USER_CODE>90000061</USER_CODE>
+    <!--操作员角色DD[USER_ROLE]-->
+    <USER_ROLE>2</USER_ROLE>
+  </data>
+</request>

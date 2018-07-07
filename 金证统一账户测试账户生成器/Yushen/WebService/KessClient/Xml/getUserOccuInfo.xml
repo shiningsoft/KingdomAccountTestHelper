@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.91	查询客户扩展资料（账户系统）-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <USER_CODE>30496640</USER_CODE>
+  </data>
+</request>

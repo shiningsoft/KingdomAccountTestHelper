@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.104	风险测评结果查询-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--调查表编码（非必传）（默认为1）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--用户角色（非必传）-->
+    <USER_ROLE></USER_ROLE>
+    <!--开始日期（非必传）-->
+    <BGN_DATE></BGN_DATE>
+    <!--结束日期（非必传）-->
+    <END_DATE></END_DATE>
+  </data>
+</request>

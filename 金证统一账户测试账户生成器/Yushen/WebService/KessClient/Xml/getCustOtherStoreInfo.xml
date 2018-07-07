@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.165	查询休眠另库信息-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账户代码（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--币种（非必传）-->
+    <CURRENCY></CURRENCY>
+  </data>
+</request>

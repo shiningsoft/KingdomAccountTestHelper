@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.154	查询客户股票质押式回购申请记录-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易账户（非必传）-->
+    <TRADE_ACCT></TRADE_ACCT>
+    <!--内部机构（非必传）复数，用‘，’分开-->
+    <INT_ORGS></INT_ORGS>
+    <!--交易板块（非必传）DD-[STKBD]-->
+    <STKBD></STKBD>
+    <!--操作标志（非必传）DD-[OPER_FLAG]-->
+    <OPER_FLAG></OPER_FLAG>
+    <!--申报状态（非必传）DD-[RPT_STATUS]-->
+    <RPT_STATUS></RPT_STATUS>
+    <!--融资方向（非必传）DD-[RZFX_TYPE]-->
+    <RZFX_TYPE></RZFX_TYPE>
+    <!--开始日期（非必传）-->
+    <BEGIN_DATE></BEGIN_DATE>
+    <!--结束日期（非必传）-->
+    <END_DATE></END_DATE>
+  </data>
+</request>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.188	查询融资融券利率组
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--利率组编号（非必输）-->
+    <FISL_INT_GRP_SN></FISL_INT_GRP_SN>
+    <!--利率组名称（非必输）-->
+    <GRP_NAME></GRP_NAME>
+  </data>
+</request>

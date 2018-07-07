@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.60	用户调查做答信息同步到统一账户-->
+<request>
+  <auth>
+    <OPERATOR>31010107</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码-->
+    <USER_CODE>310100033018</USER_CODE>
+    <!--客户角色DD[USER_ROLE]-->
+    <USER_ROLE>2</USER_ROLE>
+    <!--预约开户流水号-->
+    <APPT_SERIAL_NO>2013032500000007</APPT_SERIAL_NO>
+  </data>
+</request>

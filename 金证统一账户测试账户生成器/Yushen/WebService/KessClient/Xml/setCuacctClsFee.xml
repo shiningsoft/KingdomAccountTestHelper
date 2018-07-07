@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.89	资产账户费用分类设置-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--资产账户（必传）-->
+    <CUACCT_CODE>8005123125232</CUACCT_CODE>
+    <!--费用分类-->
+    <CUACCT_CLS_FEE_SN>0</CUACCT_CLS_FEE_SN>
+  </data>
+</request>

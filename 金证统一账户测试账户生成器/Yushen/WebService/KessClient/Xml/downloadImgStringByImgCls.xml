@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.34	根据客户影像类别下载影像（BASE64编码字符串传输）-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--证件类型-->
+    <ID_TYPE>00</ID_TYPE>
+    <!--证件号码-->
+    <ID_CODE>522226194809144209</ID_CODE>
+    <!--影像类别-->
+    <IMG_CLS>00</IMG_CLS>
+  </data>
+</request>

@@ -1,21 +1,25 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.120 证券账户业务信息查询（新）-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.121	证券账户业务信息查询（新）
+注1：此接口的入参SERIAL_NO为2.120的出参。
+注2：此接口为实时获取中登返回信息，根据返回参数ACCTBIZ_STATUS（0-未发送中登，1-已发送中登，2-处理成功，3-处理失败）来确定接口是否正确查询到了中登返回结果，需外围控制超时时间。在超时时间范围内，需循环调用此接口，直至获取到ACCTBIZ_STATUS=2或是3。
+
+-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>36050</OPERATOR>
   </auth>
   <data>
-    <!--//流水序号-->
+    <!--流水序号-->
     <SERIAL_NO></SERIAL_NO>
-    <!--//业务类型DD-[ACCTBIZ_EXCODE]-->
+    <!--业务类型DD-[ACCTBIZ_EXCODE]-->
     <ACCTBIZ_EXCODE></ACCTBIZ_EXCODE>
-    <!--//账户类型-->
+    <!--账户类型-->
     <ACCT_TYPE></ACCT_TYPE>
-    <!--//交易账户-->
+    <!--交易账户-->
     <TRDACCT></TRDACCT>
-    <!--//机构代码-->
+    <!--机构代码-->
     <INT_ORG></INT_ORG>
-    <!--//证件号码-->
+    <!--证件号码-->
     <ID_CODE></ID_CODE>
   </data>
 </request>

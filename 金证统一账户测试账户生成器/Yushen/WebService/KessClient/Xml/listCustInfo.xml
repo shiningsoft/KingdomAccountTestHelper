@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.80	客户资料查询-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE>30496623</CUST_CODE>
+    <!--机构代码（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--客户分类（非必传）DD[CUST_CLS]-->
+    <CUST_CLS></CUST_CLS>
+    <!--客户状态（非必传）-->
+    <CUST_STATUS></CUST_STATUS>
+    <!--信用级别（非必传）-->
+    <CREDIT_LVL></CREDIT_LVL>
+    <!--远程签署协议（非必传）-->
+    <REMOTE_PROTOCOL></REMOTE_PROTOCOL>
+    <!--客户来源（非必传）-->
+    <CUST_SOURCE></CUST_SOURCE>
+    <!--服务级别（非必传）-->
+    <SERVICE_LVL></SERVICE_LVL>
+  </data>
+</request>

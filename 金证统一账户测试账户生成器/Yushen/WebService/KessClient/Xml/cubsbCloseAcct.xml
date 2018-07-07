@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.161	券商发起银证销户
+注1：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--资产账户（必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--货币代码（必传）DD[CURRENCY]-->
+    <CURRENCY></CURRENCY>
+    <!--外部机构（必传）-->
+    <EXT_ORG></EXT_ORG>
+  </data>
+</request>

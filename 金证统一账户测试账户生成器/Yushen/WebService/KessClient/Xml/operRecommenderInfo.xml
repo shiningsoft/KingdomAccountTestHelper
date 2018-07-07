@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.178	推荐人信息维护
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-增加1-修改-->
+    <OPER_TYPE></OPER_TYPE>
+    <!--推荐人编号（必传）-->
+    <RECM_CODE></RECM_CODE>
+    <!--内部机构（非必传）新增时必传-->
+    <INT_ORG></INT_ORG>
+    <!--推荐人姓名（非必传）新增时必传-->
+    <RECM_NAME></RECM_NAME>
+    <!--岗位名称（非必传）-->
+    <POST></POST>
+    <!--推荐人状态（非必传）-->
+    <RC_STATUS></RC_STATUS>
+    <!--性别（非必传）新增时必传-->
+    <SEX></SEX>
+    <!--证件类型（非必传）新增时必传-->
+    <ID_TYPE>00</ID_TYPE>
+    <!--证件号码（非必传）新增时必传-->
+    <ID_NO>342144199109217839</ID_NO>
+    <!--有效期限开始日（非必传）-->
+    <ID_BEG_DATE></ID_BEG_DATE>
+    <!--有效期限结束日（非必传）-->
+    <ID_END_DATE></ID_END_DATE>
+    <!--电话号码（非必传）新增时必传-->
+    <TEL_NO>86-2424-12344321</TEL_NO>
+    <!--单位电话号码（非必传）-->
+    <OFFICE_TEL></OFFICE_TEL>
+    <!--移动电话（非必传）新增时必传-->
+    <MOBILE_TEL>254545</MOBILE_TEL>
+    <!--传真（非必传）新增时必传-->
+    <FAX_NO>0743-12345</FAX_NO>
+    <!--联系地址（非必传）-->
+    <ADDR></ADDR>
+    <!--邮政编码（非必传）-->
+    <ZIP_CODE></ZIP_CODE>
+    <!--备注（非必传）-->
+    <REMARK></REMARK>
+    <!--电子邮箱（非必传）新增时必传-->
+    <EMAIL>QWER@qq.com</EMAIL>
+  </data>
+</request>

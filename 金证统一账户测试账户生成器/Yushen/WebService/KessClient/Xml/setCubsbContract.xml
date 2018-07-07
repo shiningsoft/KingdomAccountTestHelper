@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.79	签约关系设置-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--用户类型DD[USER_TYPE]-->
+    <USER_TYPE></USER_TYPE>
+    <!--机构代码-->
+    <INT_ORG></INT_ORG>
+    <!--外部机构（必传）-->
+    <EXT_ORG>5000</EXT_ORG>
+    <!--存管账号（必传）-->
+    <BDMF_ACCT></BDMF_ACCT>
+    <!--客户代码（必传）-->
+    <CUST_CODE>20100002819</CUST_CODE>
+    <!--资产账号（必传）-->
+    <CUACCT_CODE>20100002819</CUACCT_CODE>
+    <!--币种（必传）DD[CURRENCY]-->
+    <CURRENCY>0</CURRENCY>
+    <!--签约状态-->
+    <CONTRACT_STATUS></CONTRACT_STATUS>
+    <!--操作类型-->
+    <OPERATION_TYPE></OPERATION_TYPE>
+    <!--银行账号-->
+    <BANKCODE></BANKCODE>
+  </data>
+</request>

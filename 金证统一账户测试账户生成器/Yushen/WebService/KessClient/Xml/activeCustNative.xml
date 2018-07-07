@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.164	不合格休眠账户激活
+注1：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--另库类型（必传）-->
+    <IN_STORE_TYPE></IN_STORE_TYPE>
+    <!--证券账户类别（必传）-->
+    <ACCT_TYPE></ACCT_TYPE>
+    <!--证券账户（必传）-->
+    <TRDACCT></TRDACCT>
+    <!--资产账户类别（非必传）-->
+    <CUACCT_CLS></CUACCT_CLS>
+    <!--资产账户级别（非必传）-->
+    <CUACCT_LVL></CUACCT_LVL>
+    <!--资产账户组别（非必传）-->
+    <CUACCT_GRP></CUACCT_GRP>
+    <!--币种（非必传）-->
+    <CURRENCY></CURRENCY>
+    <!--数量（必传）-->
+    <AMT></AMT>
+    <!--操作备注（非必传）-->
+    <OP_REMARK></OP_REMARK>
+    <!--激活级别（必传）-->
+    <OP_LEVEL></OP_LEVEL>
+  </data>
+</request>

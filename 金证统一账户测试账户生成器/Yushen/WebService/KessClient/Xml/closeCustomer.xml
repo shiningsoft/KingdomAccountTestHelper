@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.86	客户销户
+注：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE>30491411</CUST_CODE>
+    <!--操作备注(必传)-->
+    <OP_REMARK></OP_REMARK>
+  </data>
+</request>

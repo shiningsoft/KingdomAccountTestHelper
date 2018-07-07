@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.169	首次交易日期查询或中登报送-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必输）-->
+    <CUST_CODE></CUST_CODE>
+    <!--是否强制发送中登0-否1-是2-只读取本地数据第一次执行送0，如果获取到首次交易日期，之后查询送2-->
+    <IS_FORCE_SENT></IS_FORCE_SENT>
+  </data>
+</request>

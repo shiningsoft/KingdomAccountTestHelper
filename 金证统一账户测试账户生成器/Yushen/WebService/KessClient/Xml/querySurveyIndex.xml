@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.31	查询所需风险评测题库-->
+<request>
+  <auth>
+    <OPERATOR>2507</OPERATOR>
+  </auth>
+  <data></data>
+</request>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.166	查询沪港通业务流水
+注1：此接口需OEM“KBSS沪港通非现场业务”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--客户名称（非必传）-->
+    <CUST_NAME></CUST_NAME>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--机构代码（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--开通类型（非必传）-->
+    <OPEN_FLAG></OPEN_FLAG>
+    <!--申请日期（非必传）-->
+    <APPT_DATE></APPT_DATE>
+    <!--审核人（非必传）-->
+    <APR_OP_CODE></APR_OP_CODE>
+    <!--审核日期（非必传）-->
+    <APR_DATE></APR_DATE>
+    <!--申请状态（非必传）DD[REQ_STATUS]0-待审核1-审核通过2-审核不通过-->
+    <REQ_STATUS></REQ_STATUS>
+    <!--申请开始日期（非必传）默认为当天-->
+    <BEG_DATE></BEG_DATE>
+    <!--申请结束日期（非必传）默认为当天-->
+    <END_DATE></END_DATE>
+  </data>
+</request>

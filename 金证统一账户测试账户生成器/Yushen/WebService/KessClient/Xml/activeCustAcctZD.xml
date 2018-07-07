@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.102	新中登休眠激活-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作柜员-->
+    <USER_CODE>2507</USER_CODE>
+    <!--用户类型DD[USER_TYPE]-->
+    <USER_TYPE>0</USER_TYPE>
+    <!--开户方式DD[ACCT_OPENTYPE]-->
+    <ACCT_OPENTYPE>0</ACCT_OPENTYPE>
+    <!--客户代码-->
+    <CUST_CODE></CUST_CODE>
+    <!--客户全称-->
+    <CUST_FNAME></CUST_FNAME>
+    <!--证件类型-->
+    <ID_TYPE>00</ID_TYPE>
+    <!--证件号码-->
+    <ID_CODE></ID_CODE>
+    <!--账户类别DD[ACCT_TYPE]-->
+    <ACCT_TYPE>21</ACCT_TYPE>
+    <!--股东账户-->
+    <TRDACCT></TRDACCT>
+    <!--内部机构-->
+    <INT_ORG></INT_ORG>
+  </data>
+</request>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.136	证券账户登记资料维护-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易板块DD[STKBD]-->
+    <STKBD></STKBD>
+    <!--交易账户-->
+    <TRDACCT></TRDACCT>
+    <!--交易账户名称-->
+    <TRDACCT_NAME></TRDACCT_NAME>
+    <!--证件类型-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码-->
+    <ID_CODE></ID_CODE>
+    <!--交易账户类别DD[TRDACCT_EXCLS]-->
+    <TRDACCT_EXCLS></TRDACCT_EXCLS>
+    <!--发证机关-->
+    <ID_ISS_AGCY></ID_ISS_AGCY>
+    <!--证件有效日期-->
+    <ID_EXP_DATE></ID_EXP_DATE>
+    <!--操作备注-->
+    <REMARK></REMARK>
+    <!--交易单元-->
+    <STKPBU></STKPBU>
+  </data>
+</request>

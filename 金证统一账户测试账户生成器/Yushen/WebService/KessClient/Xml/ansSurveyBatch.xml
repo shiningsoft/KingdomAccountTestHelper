@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.94	用户调查表批量同步到账户系统
+注：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码-->
+    <USER_CODE>310100033018</USER_CODE>
+    <!--客户角色DD[USER_ROLE]-->
+    <USER_ROLE>2</USER_ROLE>
+    <!--预约流水号（WEB_BIZ_LOG.APP_SN或APPT_CUST_INFO.SERIAL_NO）-->
+    <APPT_SERIAL_NO>2014092200000004</APPT_SERIAL_NO>
+  </data>
+</request>

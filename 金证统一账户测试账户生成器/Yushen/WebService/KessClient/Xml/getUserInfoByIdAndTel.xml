@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.162	根据证件号码和手机号查询客户信息-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--证件号码（非必传）-->
+    <ID_CODE></ID_CODE>
+    <!--手机号码（非必传）-->
+    <MOBILE_TEL></MOBILE_TEL>
+    <!--证件类型（非必传）（复数，以’,隔开’）-->
+    <ID_TYPES></ID_TYPES>
+  </data>
+</request>

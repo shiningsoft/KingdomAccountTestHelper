@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.62	用户影像描述操作-->
+<request>
+  <auth>
+    <OPERATOR>31010107</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型-->
+    <OPERATOR_TYPE>5</OPERATOR_TYPE>
+    <!--用户代码-->
+    <USER_CODE>310100033019</USER_CODE>
+    <!--用户角色DD[USER_ROLE]-->
+    <USER_ROLE>1</USER_ROLE>
+    <!--内部机构-->
+    <INT_ORG>101</INT_ORG>
+    <!--影像类别-->
+    <IMG_CLS>000</IMG_CLS>
+    <!--影像编号-->
+    <IMG_SN>2013041200000341</IMG_SN>
+    <!--影像状态DD[IMG_STATUS]-->
+    <IMG_STATUS>0</IMG_STATUS>
+    <!--影像标签-->
+    <IMG_TAG></IMG_TAG>
+    <!--影像备注-->
+    <IMG_REMARK></IMG_REMARK>
+    <!--任务序号-->
+    <TASK_ID>2013041200000025</TASK_ID>
+    <!--影像是否需要审核标志-->
+    <AUDIT_FLAG></AUDIT_FLAG>
+    <!--板块DD[STKBD]-->
+    <STKBD></STKBD>
+    <!--证券帐户-->
+    <TRDACCT></TRDACCT>
+    <!--手工新增标志-->
+    <HAND_ADD_FLAG>0</HAND_ADD_FLAG>
+    <!--采集标志-->
+    <COLL_FLAG>1</COLL_FLAG>
+  </data>
+</request>

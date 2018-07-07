@@ -1,17 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.56 机构交易单元查询-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.56	机构证券交易单元查询-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>31010107</OPERATOR>
   </auth>
   <data>
-    <!--//操作员代码-->
-    <USER_CODE></USER_CODE>
-    <!--//交易版块DD[STKBD]-->
-    <STKBD></STKBD>
-    <!--//内部机构-->
-    <INT_ORG></INT_ORG>
-    <!--//交易单元类型-->
+    <!--用户代码-->
+    <USER_CODE>31010013</USER_CODE>
+    <!--交易版块DD[STKBD]-->
+    <STKBD>00</STKBD>
+    <!--内部机构-->
+    <INT_ORG>3101</INT_ORG>
+    <!--交易单元类型-->
     <STKPBU_TYPE></STKPBU_TYPE>
   </data>
 </request>

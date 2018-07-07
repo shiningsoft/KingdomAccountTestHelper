@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.160	自助开通委托方式-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--资金账户（必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--操作方式（非必传）DD[CHANNELS]复数以“，”隔开-->
+    <NEW_OPERWAY></NEW_OPERWAY>
+  </data>
+</request>

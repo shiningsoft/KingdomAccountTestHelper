@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.142	证券登记业务信息查询（港股）
+注1：此接口需OEM“KBSS沪港通非现场业务”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--开始日期（非必传）（默认为当天）-->
+    <BGN_DATE></BGN_DATE>
+    <!--结束日期（非必传）（默认为当天）-->
+    <END_DATE></END_DATE>
+    <!--流水序号（非必传）-->
+    <SERIAL_NO></SERIAL_NO>
+    <!--服务类型（非必传）01-公司行为03-投票业务-->
+    <SERVICE_TYPE></SERVICE_TYPE>
+    <!--清算编号（非必传）-->
+    <SETT_NO></SETT_NO>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--机构代码（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--服务名（非必传）-->
+    <SERVICE_NAME></SERVICE_NAME>
+  </data>
+</request>

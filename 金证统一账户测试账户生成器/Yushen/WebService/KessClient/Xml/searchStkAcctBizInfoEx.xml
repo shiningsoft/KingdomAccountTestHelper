@@ -1,11 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.132 证券账户业务信息拓展查询-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.133	证券账户业务信息拓展查询
+注1：此接口的入参SERIAL_NO为2.120的出参。
+
+-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>36050</OPERATOR>
   </auth>
   <data>
-    <!--//流水序号（必传）-->
+    <!--流水序号-->
     <SERIAL_NO></SERIAL_NO>
   </data>
 </request>

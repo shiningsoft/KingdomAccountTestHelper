@@ -1,29 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<!--系统内一码通账户开立-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.124	系统内一码通账户开立
+注1：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>36050</OPERATOR>
   </auth>
   <data>
-    <!--//操作类型（必传）0-增加1-修改2-删除-->
+    <!--操作类型（必传）0-增加1-修改2-删除-->
     <OPER_TYPE></OPER_TYPE>
-    <!--//客户代码（必传）-->
+    <!--客户代码（必传）-->
     <CUST_CODE></CUST_CODE>
-    <!--//客户全称（非必传）-->
+    <!--客户全称-->
     <CUST_FNAME></CUST_FNAME>
-    <!--//内部机构（非必传）-->
+    <!--内部机构-->
     <INT_ORG></INT_ORG>
-    <!--//一码通账号（必传）-->
+    <!--一码通账号（必传）-->
     <YMT_CODE></YMT_CODE>
-    <!--//新一码通账号（非必传）-->
+    <!--新一码通账号-->
     <YMT_CODE_SHT></YMT_CODE_SHT>
-    <!--//一码通状态（非必传）DD[YMT_STATUS]-->
+    <!--一码通状态DD[YMT_STATUS]-->
     <YMT_STATUS></YMT_STATUS>
-    <!--//证件类型（非必传）-->
+    <!--证件类型-->
     <ID_TYPE></ID_TYPE>
-    <!--//证件号码（非必传）-->
+    <!--证件号码-->
     <ID_CODE></ID_CODE>
-    <!--//操作备注（非必传）-->
+    <!--操作备注-->
     <REMARK></REMARK>
   </data>
 </request>

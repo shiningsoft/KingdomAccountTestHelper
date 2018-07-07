@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.146	根据资产账户查询客户信息-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）-->
+    <USER_CODE></USER_CODE>
+    <!--资产账户（必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+  </data>
+</request>

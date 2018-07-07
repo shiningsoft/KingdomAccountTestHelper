@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.99	获取三方存管电子协议列表-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--内部机构-->
+    <INT_ORG>101</INT_ORG>
+    <!--银行代码-->
+    <BANK_CODE></BANK_CODE>
+  </data>
+</request>

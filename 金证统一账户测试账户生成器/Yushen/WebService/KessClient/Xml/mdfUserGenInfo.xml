@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.90	修改用户基本信息
+注：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <USER_CODE>30496640</USER_CODE>
+    <!--邮政编码（必传）-->
+    <ZIP_CODE>112223</ZIP_CODE>
+    <!--联系地址（必传）-->
+    <ADDRESS>广东深圳</ADDRESS>
+    <!--学历-->
+    <EDUCATION></EDUCATION>
+    <!--联系电话-->
+    <TEL></TEL>
+    <!--传真电话-->
+    <FAX></FAX>
+    <!--电子邮箱-->
+    <EMAIL></EMAIL>
+    <!--移动电话-->
+    <MOBILE_TEL></MOBILE_TEL>
+    <!--国籍DD[CITIZENSHIP]-->
+    <CITIZENSHIP></CITIZENSHIP>
+    <!--民族DD[NATIONALITY]-->
+    <NATIONALITY></NATIONALITY>
+    <!--籍贯-->
+    <NATIVE_PLACE></NATIVE_PLACE>
+    <!--性别DD[SEX]-->
+    <SEX></SEX>
+    <!--出生日期-->
+    <BIRTHDAY></BIRTHDAY>
+    <!--备注信息-->
+    <REMARK></REMARK>
+    <!--发证机关-->
+    <ID_ISS_AGCY></ID_ISS_AGCY>
+    <!--证件有效日期-->
+    <ID_EXP_DATE></ID_EXP_DATE>
+    <!--证件开始日期-->
+    <ID_BEG_DATE></ID_BEG_DATE>
+    <!--证件编码-->
+    <ID_ZIP_CODE></ID_ZIP_CODE>
+    <!--证件地址-->
+    <ID_ADDR></ID_ADDR>
+    <!--婚姻状态-->
+    <MARRY></MARRY>
+    <!--兴趣爱好-->
+    <AVOCATION></AVOCATION>
+    <!--交通工具DD[VEHICLE]-->
+    <VEHICLE></VEHICLE>
+    <!--住宅所有权状况-->
+    <HOUSE_OWNER></HOUSE_OWNER>
+    <!--办工电话-->
+    <OFFICE_TEL></OFFICE_TEL>
+    <!--小灵通电话-->
+    <WELL_TEL></WELL_TEL>
+    <!--首选联系电话-->
+    <LINKTEL_ORDER></LINKTEL_ORDER>
+    <!--办工地址-->
+    <OFFICE_ADDR></OFFICE_ADDR>
+    <!--公司地址-->
+    <CORP_ADDR></CORP_ADDR>
+    <!--首选联系地址-->
+    <LINKADDR_ORDER></LINKADDR_ORDER>
+    <!--开户来源-->
+    <OPEN_SOURCE></OPEN_SOURCE>
+  </data>
+</request>

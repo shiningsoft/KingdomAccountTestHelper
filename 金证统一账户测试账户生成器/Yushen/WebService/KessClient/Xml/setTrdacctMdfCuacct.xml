@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.88	证券账户内部迁移-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--老客户代码（必传）-->
+    <CUST_CODE>30491411</CUST_CODE>
+    <!--新客户代码-->
+    <NEW_CUST_CODE></NEW_CUST_CODE>
+    <!--交易版块DD[STKBD]-->
+    <STKBD></STKBD>
+    <!--交易账户-->
+    <TRDACCT></TRDACCT>
+    <!--新资产账户(必传)-->
+    <NEW_CUACCT></NEW_CUACCT>
+    <!--操作备注-->
+    <REMARK></REMARK>
+    <!--单边修改标志-->
+    <SYNC_FLAG></SYNC_FLAG>
+  </data>
+</request>

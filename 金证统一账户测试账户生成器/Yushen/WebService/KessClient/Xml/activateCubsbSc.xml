@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.100	三方存管预约开户激活-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--内部机构-->
+    <INT_ORG>101</INT_ORG>
+    <!--分支机构-->
+    <INT_BRH></INT_BRH>
+    <!--资金帐号-->
+    <FUND_ID></FUND_ID>
+    <!--货币代码-->
+    <CURRENCY></CURRENCY>
+    <!--预约银行代码-->
+    <BANK_CODE></BANK_CODE>
+    <!--备注信息-->
+    <REMARK></REMARK>
+    <!--银行密码-->
+    <BANK_PWD></BANK_PWD>
+    <!--银行预约开户流水号-->
+    <BANK_PRESNO></BANK_PRESNO>
+    <!--签署方式-->
+    <SIGN_WAY></SIGN_WAY>
+    <!--签署日期-->
+    <SIGN_DATE></SIGN_DATE>
+    <!--协议版本-->
+    <AGREEMENT_VERSION></AGREEMENT_VERSION>
+    <!--协议编号-->
+    <AGREEMENT_SNO></AGREEMENT_SNO>
+    <!--电子证书编号-->
+    <AGREEMENT_CA></AGREEMENT_CA>
+    <!--协议备注信息-->
+    <AGREEMENT_REMARK></AGREEMENT_REMARK>
+  </data>
+</request>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.174	关联人信息维护
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必输）0-新增1-修改2-删除-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--客户代码（必输）-->
+    <CUST_CODE></CUST_CODE>
+    <!--关联人客户代码（必输）-->
+    <RC_CUST_CODE></RC_CUST_CODE>
+    <!--交易市场（非必输）-->
+    <STKEX></STKEX>
+    <!--内部机构（非必输）-->
+    <INT_ORG></INT_ORG>
+    <!--关联股东账户（非必输）-->
+    <TRDACCT></TRDACCT>
+    <!--关联用户性质（非必输）-->
+    <USER_TYPE></USER_TYPE>
+    <!--普通关联关系（非必输）-->
+    <RELAKIND_COMM></RELAKIND_COMM>
+    <!--关联人证件类型（非必输）-->
+    <ID_TYPE></ID_TYPE>
+    <!--关联人证件号码（非必输）-->
+    <ID_CODE></ID_CODE>
+    <!--关联人姓名（非必输）-->
+    <RELA_NAME></RELA_NAME>
+    <!--备注（非必输）-->
+    <REMARK></REMARK>
+  </data>
+</request>

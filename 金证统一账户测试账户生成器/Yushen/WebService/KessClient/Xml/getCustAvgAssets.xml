@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.171	查询20个交易日日均资产
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--机构代码（必传）-->
+    <INT_ORG></INT_ORG>
+  </data>
+</request>

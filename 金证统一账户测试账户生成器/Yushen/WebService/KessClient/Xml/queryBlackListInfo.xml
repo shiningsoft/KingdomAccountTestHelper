@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.173	黑名单信息查询
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--黑名单姓名（非必输）-->
+    <EUSER_NAME></EUSER_NAME>
+    <!--电话号码（非必输）-->
+    <TEL></TEL>
+    <!--禁入状态（非必输）-->
+    <EUSER_STATUS></EUSER_STATUS>
+    <!--证件类型（非必输）-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码（非必输）-->
+    <ID_CODE></ID_CODE>
+    <!--客户代码（非必输）-->
+    <CUST_CODE></CUST_CODE>
+    <!--性别（非必输）-->
+    <SEX></SEX>
+    <!--录入日期（非必输）-->
+    <OCCUR_DATE></OCCUR_DATE>
+  </data>
+</request>

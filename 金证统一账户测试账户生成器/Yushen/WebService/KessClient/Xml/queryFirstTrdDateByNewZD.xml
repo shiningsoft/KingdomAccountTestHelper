@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.170	首次交易日期中登结果查询-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必输）-->
+    <CUST_CODE></CUST_CODE>
+  </data>
+</request>

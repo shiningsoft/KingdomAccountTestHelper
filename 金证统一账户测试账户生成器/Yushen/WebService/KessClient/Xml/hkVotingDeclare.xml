@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.140	沪港通投票申报（港股）
+注1：此接口需OEM“KBSS沪港通非现场业务”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--清算编号（非必传）-->
+    <SETTNO></SETTNO>
+    <!--证券代码（必传）-->
+    <STK_CODE></STK_CODE>
+    <!--ISIN编号（非必传）-->
+    <ISIN_NO></ISIN_NO>
+    <!--公告编号（必传）-->
+    <PUB_NO></PUB_NO>
+    <!--议案编号（必传）-->
+    <BILL_NO></BILL_NO>
+    <!--赞成票数（非必传）-->
+    <UP_NO></UP_NO>
+    <!--反对票数（非必传）-->
+    <DOWN_NO></DOWN_NO>
+    <!--弃权票数（非必传）-->
+    <FREE_NO></FREE_NO>
+    <!--交易账户（必传）-->
+    <TRDACCT></TRDACCT>
+    <!--机构编码（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--股票持仓总数（非必传）-->
+    <STK_NUM></STK_NUM>
+  </data>
+</request>

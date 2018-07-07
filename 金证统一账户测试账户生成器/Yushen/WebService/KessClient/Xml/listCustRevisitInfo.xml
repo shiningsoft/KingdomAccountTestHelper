@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.138	客户征信回访记录查询-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）（提供给外围请谨慎，若不送值将查询所有客户回访信息）-->
+    <CUST_CODE></CUST_CODE>
+    <!--机构代码（非必传）-->
+    <INT_ORGS></INT_ORGS>
+    <!--回访结果（非必传）-->
+    <REVISIT_STATUSES></REVISIT_STATUSES>
+    <!--开始日期（非必传）-->
+    <BGN_DATE></BGN_DATE>
+    <!--结束日期（非必传）-->
+    <END_DATE></END_DATE>
+    <!--页码编号（非必传）-->
+    <PAGE_NO></PAGE_NO>
+    <!--记录条数（非必传）-->
+    <PAGE_COUNT></PAGE_COUNT>
+    <!--回访次序0-主回访1其它-历史回访-->
+    <ORDINAL></ORDINAL>
+  </data>
+</request>

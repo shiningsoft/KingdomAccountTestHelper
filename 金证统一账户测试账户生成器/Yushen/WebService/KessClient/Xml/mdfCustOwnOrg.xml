@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.87	客户迁移-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE>30491411</CUST_CODE>
+    <!--机构代码（必传）-->
+    <INT_ORG></INT_ORG>
+    <!--原资产账户（必传）-->
+    <OLD_CUACCT></OLD_CUACCT>
+    <!--新资产账户（必传）-->
+    <NEW_CUACCT></NEW_CUACCT>
+    <!--操作备注（必传）-->
+    <OP_REMARK></OP_REMARK>
+    <!--用户类型DD[USER_TYPE]-->
+    <USER_TYPE></USER_TYPE>
+  </data>
+</request>

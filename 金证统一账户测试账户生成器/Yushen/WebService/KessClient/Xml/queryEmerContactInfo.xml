@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.181	紧急联系人信息查询
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必输）-->
+    <CUST_CODE></CUST_CODE>
+    <!--联系人姓名（非必输）-->
+    <CRIATICALER_NAME></CRIATICALER_NAME>
+    <!--联系人电话（非必输）-->
+    <CRITICALER_TEL></CRITICALER_TEL>
+    <!--联系人类别（非必输）-->
+    <CRITICALER_TYPE></CRITICALER_TYPE>
+    <!--联系人编号（非必输）-->
+    <CRITICALER_ID></CRITICALER_ID>
+    <!--联系人手机（非必输）-->
+    <MOBILE_TEL></MOBILE_TEL>
+  </data>
+</request>

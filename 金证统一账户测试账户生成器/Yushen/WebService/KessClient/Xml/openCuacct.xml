@@ -1,27 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8" ?> 
-<!--2.43 资产账户开户-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.43	资产账户开户（生成资产账户）
+注：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>31010013</OPERATOR>
   </auth>
   <data>
-    <!--//用户代码 (必传) -->
-    <USER_CODE></USER_CODE>
-    <!--//资产账户类别（必传） DD[CUACCT_CLS] -->
-    <CUACCT_CLS>z</CUACCT_CLS>
-    <!--//资产账户级别（必传） DD[CUACCT_LVL] -->
+    <!--用户代码(必传)-->
+    <USER_CODE>310100033013</USER_CODE>
+    <!--资产账户类别（必传）DD[CUACCT_CLS]-->
+    <CUACCT_CLS>0</CUACCT_CLS>
+    <!--资产账户级别（必传）DD[CUACCT_LVL]-->
     <CUACCT_LVL>0</CUACCT_LVL>
-    <!--//资产账户组别（必传） DD[CUACCT_GRP] -->
+    <!--资产账户组别（必传）DD[CUACCT_GRP]-->
     <CUACCT_GRP>0</CUACCT_GRP>
-    <!--//货币（必传） DD[CURRENCY] -->
+    <!--货币（必传）DD[CURRENCY]-->
     <CURRENCY>0</CURRENCY>
-    <!--//内部机构（非必传） -->
-    <INT_ORG></INT_ORG>
-    <!--//资产账户（非必传） -->
-    <CUACCT_CODE></CUACCT_CODE>
-    <!--//帐户类型（非必传） -->
-    <FUND_TYPE></FUND_TYPE>
-    <!--//备注信息（非必传） -->
-    <OP_REMARK></OP_REMARK>
+    <!--内部机构（非必传）-->
+    <INT_ORG>3101</INT_ORG>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE>310100033013</CUACCT_CODE>
+    <!--帐户类型（非必传）-->
+    <FUND_TYPE>0</FUND_TYPE>
+    <!--备注信息（非必传）-->
+    <OP_REMARK>0</OP_REMARK>
   </data>
 </request>

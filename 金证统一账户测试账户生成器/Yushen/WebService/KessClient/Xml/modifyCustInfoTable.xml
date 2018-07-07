@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.39	客户扩展信息中12个字段修改-->
+<request>
+  <auth>
+    <OPERATOR>31010013</OPERATOR>
+  </auth>
+  <data>
+    <!--流水号必要参数-->
+    <SERIAL_NO></SERIAL_NO>
+    <!--证件类型必要参数-->
+    <ID_TYPE>00</ID_TYPE>
+    <!--证件号码必要参数-->
+    <ID_CODE></ID_CODE>
+    <!--以下均为可选参数，传什么改什么，不传不会修改。-->
+    <!--内部机构-->
+    <INT_ORG></INT_ORG>
+    <!--阅读状态-->
+    <READ_STATES></READ_STATES>
+    <!--资金账户-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--交易密码-->
+    <TRDACCT_PWD></TRDACCT_PWD>
+    <!--资金密码-->
+    <CUACCT_PWD></CUACCT_PWD>
+    <!--银行帐户一-->
+    <BANK_ACCT></BANK_ACCT>
+    <!--银行帐户二-->
+    <BANK_ACCT2></BANK_ACCT2>
+    <!--银行帐户三-->
+    <BANK_ACCT3></BANK_ACCT3>
+    <!--银行帐户四-->
+    <BANK_ACCT4></BANK_ACCT4>
+    <!--银行帐户五-->
+    <BANK_ACCT5></BANK_ACCT5>
+    <!--港币转账银行帐户-->
+    <BANK_ACCT_HK></BANK_ACCT_HK>
+    <!--美元转账银行帐户-->
+    <BANK_ACCT_US></BANK_ACCT_US>
+  </data>
+</request>

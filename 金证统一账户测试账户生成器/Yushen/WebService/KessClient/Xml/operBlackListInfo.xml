@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.172	黑名单信息维护
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-增加1-修改2-删除-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--证件类型（非必传）-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码（非必传）-->
+    <ID_CODE></ID_CODE>
+    <!--客户名称（非必传）-->
+    <EUSER_NAME></EUSER_NAME>
+    <!--禁入者序号（非必传）-->
+    <EUSER_SEQ_NO></EUSER_SEQ_NO>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--风险类型（非必传）DD[RISK_FLAG]-->
+    <RISK_FLAG></RISK_FLAG>
+    <!--违约原因（非必传）-->
+    <RISK_REASON></RISK_REASON>
+    <!--违约日期（非必传）-->
+    <RISK_DATE></RISK_DATE>
+    <!--曾用名（非必传）-->
+    <EUSER_ONAME></EUSER_ONAME>
+    <!--别名（非必传）-->
+    <EUSER_BYNAME></EUSER_BYNAME>
+    <!--头衔或称谓（非必传）-->
+    <EUSER_TITLE></EUSER_TITLE>
+    <!--宗教或其它称谓（非必传）-->
+    <EUSER_OTHER_TITLE></EUSER_OTHER_TITLE>
+    <!--保留字段1（非必传）-->
+    <REMAIN1></REMAIN1>
+    <!--保留字段2（非必传）-->
+    <REMAIN2></REMAIN2>
+    <!--职业类型（非必传）-->
+    <OCCU_TYPE></OCCU_TYPE>
+    <!--出生日期（非必传）-->
+    <BIRTHDAY></BIRTHDAY>
+    <!--性别（非必传）-->
+    <SEX></SEX>
+    <!--通讯地址（非必传）-->
+    <ADDRESS></ADDRESS>
+    <!--邮政编码（非必传）-->
+    <ZIP_CODE></ZIP_CODE>
+    <!--电话号码（非必传）-->
+    <TEL></TEL>
+    <!--传真号码（非必传）-->
+    <FAX></FAX>
+    <!--电子邮件（非必传）-->
+    <EMAIL></EMAIL>
+    <!--国籍（非必传）-->
+    <CITIZENSHIP></CITIZENSHIP>
+    <!--禁入状态（必传）-->
+    <EUSER_STATUS></EUSER_STATUS>
+    <!--录入名单日期（非必传）-->
+    <OCCUR_DATE></OCCUR_DATE>
+    <!--备注信息（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

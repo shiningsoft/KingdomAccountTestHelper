@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.40	视频信息保存-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--视频文件，包含坐席和客户端两个，使用逗号分隔，坐席在前-->
+    <VIDEO_FILENAME>*.mp4,*.mp4</VIDEO_FILENAME>
+    <!--视频录制长度-->
+    <VIDEO_RUNTIME>00:00</VIDEO_RUNTIME>
+    <!--视频录制时间-->
+    <VIDEO_TIME></VIDEO_TIME>
+  </data>
+</request>

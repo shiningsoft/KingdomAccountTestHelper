@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.64	查询公用外部机构-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--货币代码（必传）DD[CURRENCY]-->
+    <CURRENCY>0</CURRENCY>
+    <!--内部机构（必传）-->
+    <INT_ORG></INT_ORG>
+    <!--银证业务类型（必传）DD[CUBSB_TYPE]0-转账1-存管2-银衍-->
+    <CUBSB_TYPE></CUBSB_TYPE>
+  </data>
+</request>

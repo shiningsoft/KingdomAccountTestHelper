@@ -1,15 +1,15 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--查询用户基本资料-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.12	查询用户基本资料-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>2507</OPERATOR>
   </auth>
   <data>
-    <!--//用户角色（非必传） DD[USER_ROLE] -->
+    <!--用户角色（非必传）DD[USER_ROLE]-->
     <USER_ROLE></USER_ROLE>
-    <!--//用户代码（必传） -->
-    <USER_CODE></USER_CODE>
-    <!-- //操作类型（非必传） 1-获取拓展信息 -->
+    <!--用户代码（必传）-->
+    <USER_CODE>2518</USER_CODE>
+    <!--操作类型（非必传）1-获取拓展信息-->
     <OP_TYPE>0</OP_TYPE>
   </data>
 </request>

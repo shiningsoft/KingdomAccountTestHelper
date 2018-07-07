@@ -1,13 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.26 获取数据字典-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.26	获取数据字典-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>33146</OPERATOR>
   </auth>
-  <data>
-    <!--//字典标识（必传）-->
-    <DD_ID ></DD_ID >
-    <!--//机构代码（必传）-->
-    <INT_ORG></INT_ORG>
-  </data>
+  <data></data>
 </request>

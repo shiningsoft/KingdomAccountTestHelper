@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.15	见证开户基本资料登记和修改-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型：0表示登记预约开户资料，1表示修改预约开户资料-->
+    <OP_TYPE>1</OP_TYPE>
+    <!--当前日期-->
+    <OCCUR_DATE>20130107</OCCUR_DATE>
+    <!--当前时间-->
+    <OCCUR_TIME>2013-01-0708:52:56.950634</OCCUR_TIME>
+    <!--预约流水号-->
+    <SERIAL_NO>2013010700000002</SERIAL_NO>
+    <!--预约方式DD[APPT_CHNL]-->
+    <APPT_CHNL>4</APPT_CHNL>
+    <!--预约业务DD[APPT_BIZ]-->
+    <APPT_BIZ>8</APPT_BIZ>
+    <!--预约状态-->
+    <APPT_STATUS>0</APPT_STATUS>
+    <!--有效日期-->
+    <EXP_DATE>20140107</EXP_DATE>
+    <!--内部机构-->
+    <INT_ORG>9000</INT_ORG>
+    <!--客户代码-->
+    <CUST_CODE>0</CUST_CODE>
+    <!--客户姓名-->
+    <CUST_NAME>b</CUST_NAME>
+    <!--客户全称-->
+    <CUST_FNAME></CUST_FNAME>
+    <!--资产账户-->
+    <CUACCT_CODE>0</CUACCT_CODE>
+    <!--用户类型DD[USER_TYPE]-->
+    <USER_TYPE>0</USER_TYPE>
+    <!--证件类型DD[ID_TYPE]-->
+    <ID_TYPE>00</ID_TYPE>
+    <!--证件号码-->
+    <ID_CODE>23071419830710138X</ID_CODE>
+    <!--发证机关-->
+    <ID_ISS_AGCY>b</ID_ISS_AGCY>
+    <!--证件开始日期-->
+    <ID_BEG_DATE>20130101</ID_BEG_DATE>
+    <!--证件有效日期-->
+    <ID_EXP_DATE>20180101</ID_EXP_DATE>
+    <!--证件邮编-->
+    <ID_ZIP_CODE></ID_ZIP_CODE>
+    <!--证件地址-->
+    <ID_ADDR>b</ID_ADDR>
+    <!--邮政编码-->
+    <ZIP_CODE></ZIP_CODE>
+    <!--联系地址-->
+    <ADDRESS></ADDRESS>
+    <!--联系电话-->
+    <TEL></TEL>
+    <!--传真电话-->
+    <FAX></FAX>
+    <!--移动电话-->
+    <MOBILE_TEL></MOBILE_TEL>
+    <!--电子邮箱-->
+    <EMAIL></EMAIL>
+    <!--国籍DD[CITIZENSHIP]-->
+    <CITIZENSHIP>CHN</CITIZENSHIP>
+    <!--籍贯/注册地-->
+    <NATIVE_PLACE></NATIVE_PLACE>
+    <!--出生/注册日期-->
+    <BIRTHDAY>19830710</BIRTHDAY>
+    <!--民族DD[NATIONALITY]-->
+    <NATIONALITY>00</NATIONALITY>
+    <!--学历DD[EDUCATION]-->
+    <EDUCATION></EDUCATION>
+    <!--性别DD[SEX]-->
+    <SEX>1</SEX>
+    <!--法人代表-->
+    <LEGAL_REP></LEGAL_REP>
+    <!--法人代表证件号码-->
+    <LEGAL_REP_ID_CODE></LEGAL_REP_ID_CODE>
+    <!--联系人-->
+    <LINKMAN></LINKMAN>
+    <!--联系人证件号码-->
+    <LINKMAN_ID_CODE></LINKMAN_ID_CODE>
+    <!--联系人电话-->
+    <LINKMAN_TEL></LINKMAN_TEL>
+    <!--联系人邮编-->
+    <LINKMAN_ZIP></LINKMAN_ZIP>
+    <!--联系人地址-->
+    <LINKMAN_ADDRESS></LINKMAN_ADDRESS>
+    <!--备注信息-->
+    <REMARK></REMARK>
+    <!--复核申请序号-->
+    <CHK_APP_SN>0</CHK_APP_SN>
+    <!--复核状态-->
+    <CHK_STATUS>0</CHK_STATUS>
+    <!--复核备注-->
+    <CHK_REMARK></CHK_REMARK>
+    <!--银证业务序号-->
+    <CUBSB_LOG_SN>0</CUBSB_LOG_SN>
+    <!--处理日期-->
+    <PROC_DATE>0</PROC_DATE>
+    <!--处理备注-->
+    <PROC_REMARK></PROC_REMARK>
+    <!--办公电话-->
+    <OFFICE_TEL></OFFICE_TEL>
+    <!--小灵通电话-->
+    <WELL_TEL></WELL_TEL>
+    <!--首选联系电话DD[LINKTEL_ORDER]-->
+    <LINKTEL_ORDER></LINKTEL_ORDER>
+    <!--办公地址-->
+    <OFFICE_ADDR></OFFICE_ADDR>
+    <!--公司地址-->
+    <CORP_ADDR></CORP_ADDR>
+    <!--首选联系地址DD[LINKADDR_ORDER]-->
+    <LINKADDR_ORDER></LINKADDR_ORDER>
+    <!--外部机构-->
+    <EXT_ORG>5200</EXT_ORG>
+    <!--银行账户-->
+    <BANK_ACCT></BANK_ACCT>
+    <!--存管账户-->
+    <BDMF_ACCT></BDMF_ACCT>
+    <!--职业类型DD[OCCU_EXTYPE]-->
+    <OCCU_TYPE></OCCU_TYPE>
+    <!--职业DD[CIF_VOCATION]-->
+    <VOCATION></VOCATION>
+    <!--行业类型DD[CIF_TRADE]-->
+    <TRADE></TRADE>
+    <!--工作单位-->
+    <WORKPLACE></WORKPLACE>
+    <!--见证时间-->
+    <OPEN_TIME></OPEN_TIME>
+    <!--见证派单状态-->
+    <ORDER_STATE>3</ORDER_STATE>
+    <!--见证开户人员代码-->
+    <F_USER_CODE>0</F_USER_CODE>
+    <!--付费模式-->
+    <PAY_MODE></PAY_MODE>
+    <!--审核日期-->
+    <CHK_DATE>0</CHK_DATE>
+    <!--审核结果-->
+    <CHK_RESULT></CHK_RESULT>
+    <!--开户阶段-->
+    <WEB_PHASE>07</WEB_PHASE>
+    <!--操作员姓名-->
+    <OP_NAME>李小盾</OP_NAME>
+    <!--见证开发人员名称-->
+    <F_USER_NAME></F_USER_NAME>
+    <!--视频编码-->
+    <VIDEO_SN>0</VIDEO_SN>
+    <!--影像编码-->
+    <IMG_SNS></IMG_SNS>
+    <!--一审提交日期-->
+    <CHK_ONE_TIME></CHK_ONE_TIME>
+    <!--资料提交时间-->
+    <SUBMIT_TIME></SUBMIT_TIME>
+    <!--二审提交状态-->
+    <CHK_TWO_STATUS></CHK_TWO_STATUS>
+    <!--二审提交时间-->
+    <CHK_TWO_TIME></CHK_TWO_TIME>
+//
+<RE_OCCUR_DATE>20130107</RE_OCCUR_DATE>
+//
+<ONE_USER_CODE>0</ONE_USER_CODE>
+//
+<ONE_USER_NAME></ONE_USER_NAME>
+//
+<TWO_USER_CODE>0</TWO_USER_CODE>
+//
+<TWO_USER_NAME></TWO_USER_NAME><!--银行二--><EXT_ORG2>0</EXT_ORG2><!--银行三--><EXT_ORG3>0</EXT_ORG3><!--银行四--><EXT_ORG4>0</EXT_ORG4><!--银行五--><EXT_ORG5>0</EXT_ORG5><!--银行帐户二--><BANK_ACCT2></BANK_ACCT2><!--银行帐户三--><BANK_ACCT3></BANK_ACCT3><!--银行帐户四--><BANK_ACCT4></BANK_ACCT4><!--银行帐户五--><BANK_ACCT5></BANK_ACCT5><!--操作渠道(委托方式)DD[CHANNEL]--><CHANNEL>1</CHANNEL><!--预约来源DD[APPT_SOURCE]--><APPT_SOURCE></APPT_SOURCE><!--客户经理--><ACCT_MANAGER></ACCT_MANAGER><!--开通协议DD[CUST_AGMT_TYPE]--><CUST_AGMT_TYPE></CUST_AGMT_TYPE><!--交易市场开户(预约)DD[APPT_OPEN_ACCT]--><APPT_OPEN_ACCT></APPT_OPEN_ACCT><!--深A账户--><SECUSZA></SECUSZA><!--深B账户--><SECUSZB></SECUSZB><!--沪A账户--><SECUSHA></SECUSHA><!--沪B账户--><SECUSHB></SECUSHB><!--深基金--><SECUSZJ></SECUSZJ><!--沪基金--><SECUSHJ></SECUSHJ>
+//
+<APPT_REMARK></APPT_REMARK><!--短信服务--><SMS_SERVICE></SMS_SERVICE><!--邮寄对帐单--><DELIVER_FLAG></DELIVER_FLAG><!--营销确认--><IS_SALE_CUST></IS_SALE_CUST><!--卡号--><WLT_CARD_NO></WLT_CARD_NO><!--推荐人姓名--><COMMENDER_NAME></COMMENDER_NAME><!--推荐人证件类型--><COMMENDER_ID_TYPE></COMMENDER_ID_TYPE><!--推荐人证件号码--><COMMENDER_ID_NO></COMMENDER_ID_NO><!--婚姻状况DD[MARRY]--><MARRIAGE></MARRIAGE><!--兴趣爱好DD[AVOCATION]--><INTEREST></INTEREST><!--出行首选交通工具DD[VEHICLE]--><TRAFFIC_PREFER></TRAFFIC_PREFER><!--住宅所有权状况DD[HOUSE_OWNER]--><RESIDENCE></RESIDENCE><!--年收入DD[INCOME]--><INCOME></INCOME><!--拥有本公司以外的产品DD[EN_PRODUCT_CODE]--><EN_PRODUCT_CODE></EN_PRODUCT_CODE><!--法人证件有效期--><LEGAL_ID_EXP_DATE>0</LEGAL_ID_EXP_DATE><!--代理人名称--><USER_NAME_AGENT></USER_NAME_AGENT><!--代理人证件类型--><ID_CODE_AGENT></ID_CODE_AGENT><!--代理人证件有效期--><ID_EXP_DATE_AGENT>0</ID_EXP_DATE_AGENT>
+//
+<SALESSTAFF_CODE></SALESSTAFF_CODE>
+//
+<SALESSTAFF_NAME></SALESSTAFF_NAME><!--基金账户信息--><OF_TRDACCTS></OF_TRDACCTS><!--资金密码--><CUACCT_PWD></CUACCT_PWD><!--交易密码--><TRDACCT_PWD></TRDACCT_PWD><!--港币转账银行--><EXT_ORG_HK>0</EXT_ORG_HK><!--美元转账银行--><EXT_ORG_US>0</EXT_ORG_US><!--港币转账银行帐户--><BANK_ACCT_HK></BANK_ACCT_HK><!--美元转账银行帐户--><BANK_ACCT_US></BANK_ACCT_US><!--客户类型DD[CUST_TYPE]--><CUST_TYPE></CUST_TYPE><!--客户分类DD[CUST_CLS]--><CUST_CLS></CUST_CLS><!--客户来源--><CUST_SOURCE></CUST_SOURCE><!--信用等级--><CREDIT_LVL></CREDIT_LVL><!--服务等级--><SERVICE_LVL></SERVICE_LVL><!--远程协议--><REMOTE_PROTOCOL></REMOTE_PROTOCOL><!--风险因素--><RISK_FACTOR></RISK_FACTOR><!--反洗钱等级--><QUALITY_TYPE></QUALITY_TYPE><!--开户合同号--><OPEN_ORDER_ID></OPEN_ORDER_ID><!--隐私级别DD[PRIVACY_LEVEL]--><PRIVACY_LEVEL></PRIVACY_LEVEL><!--阅读状态--><READ_STATES>[{"inputType":"1","level1":"1"}]</READ_STATES><!--邮寄方式--><MAIL_TYPE></MAIL_TYPE><!--利率编码组--><INT_RATE_SNS></INT_RATE_SNS><!--负债利率编码组--><DR_RATE_GRPS></DR_RATE_GRPS><!--投资产品信息--><PDT_INFO></PDT_INFO><!--收费信息--><FEE></FEE><!--佣金费率--><FEE_RATE></FEE_RATE><!--见证地点2013/6/6新增--><MEET_ADDRESS></MEET_ADDRESS><!--机构或产品类别--><SZORG_TYPE></SZORG_TYPE><!--国有属性--><NATINAL_ATTR></NATINAL_ATTR><!--上市属性--><LISTED_ATTR></LISTED_ATTR><!--资产属性--><CAPITAL_ATTR></CAPITAL_ATTR></data>
+</request>

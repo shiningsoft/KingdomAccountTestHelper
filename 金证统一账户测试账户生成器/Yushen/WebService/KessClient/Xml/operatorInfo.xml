@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.30	操作员资料查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作员代码-->
+    <OP_CODE>33146</OP_CODE>
+    <!--机构代码-->
+    <INT_ORG>9000</INT_ORG>
+    <!--操作员类别-->
+    <OP_CLS></OP_CLS>
+    <!--操作员状态-->
+    <OP_STATUS></OP_STATUS>
+  </data>
+</request>

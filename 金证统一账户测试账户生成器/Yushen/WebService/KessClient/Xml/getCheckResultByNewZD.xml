@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.167	获取中登校验结果
+注1：该接口将获取到中登校验结果，同时会获取到中登返回的影像信息；
+注2：此接口需OEM“KBSS中登身份信息校验”授权才能使用，且需基于账户系统2380版本。
+注3：接口返回数据以Base64进行编码，外围需先进行解码，再解析数据
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户名称（必传）-->
+    <CUST_FNAME></CUST_FNAME>
+    <!--证件类型（必传）-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码（必传）-->
+    <ID_CODE></ID_CODE>
+  </data>
+</request>

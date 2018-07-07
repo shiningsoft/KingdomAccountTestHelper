@@ -1,124 +1,68 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<!--2.58 用户扩展信息维护-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.58	用户扩展信息维护-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>31010107</OPERATOR>
   </auth>
   <data>
-    <!--//客户代码-->
-    <CUST_CODE></CUST_CODE>
-    <!--//操作类型0—增加，1—修改-->
+    <!--客户代码-->
+    <CUST_CODE>31010107</CUST_CODE>
+    <!--操作类型0—增加，1—修改，2—删除。-->
     <OPERATION_TYPE>0</OPERATION_TYPE>
-    <!--//同步子系统-->
-    <SUBSYS></SUBSYS>
-    <!--//是否校验-->
-    <CHECK></CHECK>
-    <!--//用户职业信息如下：-->
-    <!--//工作地点-->
+    <!--用户职业信息如下：-->
+    <!--工作地点-->
     <WORKPLACE></WORKPLACE>
-    <!--//家庭收入-->
+    <!--家庭收入-->
     <INCOME></INCOME>
-    <!--//行业类型DD-[CIF_TRADE]-->
+    <!--行业类型DD-[CIF_TRADE]-->
     <TRADE></TRADE>
-    <!--//职业通过数据指点查询具体值-->
+    <!--职业通过数据指点查询具体值-->
     <VOCATION></VOCATION>
-    <!--//从业日期-->
+    <!--从业日期-->
     <PRACTICE_DATE></PRACTICE_DATE>
-    <!--//行业代码DD-[INDUS_TYPE]-->
+    <!--行业代码DD-[INDUS_TYPE]-->
     <INDUS_TYPE></INDUS_TYPE>
-    <!--//资格证书种类-->
+    <!--资格证书种类-->
     <CERTIFICATE_TYPE></CERTIFICATE_TYPE>
-    <!--//资格证书号-->
+    <!--资格证书号-->
     <CERTIFICATE_NO></CERTIFICATE_NO>
-    <!--//职业代码-->
+    <!--职业代码-->
     <OCCU_TYPE></OCCU_TYPE>
-    <!--//职位-->
+    <!--职位-->
     <POSITION></POSITION>
-    <!--//公司电话-->
+    <!--公司电话-->
     <WORKING_TEL></WORKING_TEL>
-    <!--//公司传真-->
+    <!--公司传真-->
     <WORKING_FAX></WORKING_FAX>
-    <!--//国标行业大类-->
+    <!--国标行业大类-->
     <INDUS_GB></INDUS_GB>
-    <!--//国标行业子类-->
+    <!--国标行业子类-->
     <INDUS_GB_SUB></INDUS_GB_SUB>
-    <!--//国标职业大类-->
+    <!--国标职业大类-->
     <OCCU_GB></OCCU_GB>
-    <!--//国标职业子类-->
+    <!--国标职业子类-->
     <OCCU_GB_SUB></OCCU_GB_SUB>
-    <!--//手输职业-->
+    <!--手输职业-->
     <OCCUPATION></OCCUPATION>
-    <!--//用户联系人信息：-->
-    <!--//联系人编号-->
+    <!--用户联系人信息：-->
+    <!--联系人编号-->
     <LINKMAN_NO></LINKMAN_NO>
-    <!--//第二联系人姓名-->
+    <!--第二联系人姓名-->
     <LINKMAN></LINKMAN>
-    <!--//联系人关系-->
-    <LINKMAN_RELA></LINKMAN_RELA>
-    <!--//证件类别-->
+    <!--证件类别-->
     <LINKMAN_ID_TYPE></LINKMAN_ID_TYPE>
-    <!--//证件号码-->
+    <!--证件号码-->
     <LINKMAN_ID></LINKMAN_ID>
-    <!--//联系人性别-->
-    <LINKMAN_SEX></LINKMAN_SEX>
-    <!--//第二联系人电话-->
+    <!--第二联系人电话-->
     <LINKMAN_TEL></LINKMAN_TEL>
-    <!--//第二联系人手机号-->
-    <LINKMAN_MOBILE_TEL></LINKMAN_MOBILE_TEL>
-    <!--//EMAIL地址-->
+    <!--EMAIL地址-->
     <LINKMAN_EMAIL></LINKMAN_EMAIL>
-    <!--//通信地址-->
+    <!--通信地址-->
     <LINKMAN_ADDR></LINKMAN_ADDR>
-    <!--//邮政编码-->
+    <!--邮政编码-->
     <LINKMAN_ZIP></LINKMAN_ZIP>
-    <!--//联系人标示-->
-    <LINKMAN_FLAG></LINKMAN_FLAG>
-    <!--//用户拓展信息：-->
-    <!--//营销确认-->
-    <IS_SALE_CUST></IS_SALE_CUST>
-    <!--//邮寄对账单-->
-    <DELIVER_FLAG></DELIVER_FLAG>
-    <!--//短信服务-->
-    <SMS_SERVICE></SMS_SERVICE>
-    <!--//卡号-->
-    <WLT_CARD_NO></WLT_CARD_NO>
-    <!--//推荐人姓名-->
-    <COMMENDER_NAME></COMMENDER_NAME>
-    <!--//推荐人证件类型-->
-    <COMMENDER_ID_TYPE></COMMENDER_ID_TYPE>
-    <!--//推荐人证件号码-->
-    <COMMENDER_ID_NO></COMMENDER_ID_NO>
-    <!--//拥有本公司以外的产品-->
-    <EN_PRODUCT_CODE></EN_PRODUCT_CODE>
-    <!--//品质类型-->
-    <QUALITY_TYPE></QUALITY_TYPE>
-    <!--//隐私级别DD[PRIVACY_LEVEL]-->
-    <PRIVACY_LEVEL></PRIVACY_LEVEL>
-    <!--//开户合同号-->
-    <OPEN_ORDER_ID></OPEN_ORDER_ID>
-    <!--//签约客户证件类型-->
-    <BSB_ID_TYPE></BSB_ID_TYPE>
-    <!--//签约客户证件号码-->
-    <BSB_ID_CODE></BSB_ID_CODE>
-    <!--//签约证件有效期-->
-    <BSB_ID_EXP_DATE></BSB_ID_EXP_DATE>
-    <!--//签约客户姓名-->
-    <BSB_USER_FNAME></BSB_USER_FNAME>
-    <!--//预约来源-->
-    <APPT_SOURCE></APPT_SOURCE>
-    <!--//客户经理-->
-    <ACCT_MANAGER></ACCT_MANAGER>
-    <!--//首选联系人方式-->
-    <LINGKINDS_ORDER></LINGKINDS_ORDER>
-    <!--//信用电邮-->
-    <FISL_EMAIL></FISL_EMAIL>
-    <!--//营销人员编码-->
-    <SALESSTAFF_CODE></SALESSTAFF_CODE>
-    <!--//营销人员姓名-->
-    <SALESSTAFF_NAME></SALESSTAFF_NAME>
-    <!--//其他备注-->
-    <OTHER_REMARK></OTHER_REMARK>
-    <!--//操作/特殊备注-->
-    <SPEC_REMARK></SPEC_REMARK>
-  </data>
+//
+<IME_TYPE></IME_TYPE>
+//
+<IME_NAME></IME_NAME><!--用户拓展信息：--><!--营销确认--><IS_SALE_CUST></IS_SALE_CUST><!--邮寄对账单--><DELIVER_FLAG></DELIVER_FLAG><!--短信服务--><SMS_SERVICE></SMS_SERVICE><!--卡号--><WLT_CARD_NO></WLT_CARD_NO><!--推荐人姓名--><COMMENDER_NAME></COMMENDER_NAME><!--推荐人证件类型--><COMMENDER_ID_TYPE></COMMENDER_ID_TYPE><!--推荐人证件号码--><COMMENDER_ID_NO></COMMENDER_ID_NO><!--拥有本公司以外的产品--><EN_PRODUCT_CODE></EN_PRODUCT_CODE><!--品质类型--><QUALITY_TYPE></QUALITY_TYPE><!--隐私级别DD[PRIVACY_LEVEL]--><PRIVACY_LEVEL></PRIVACY_LEVEL><!--开户合同号--><OPEN_ORDER_ID></OPEN_ORDER_ID><!--签约客户证件类型--><BSB_ID_TYPE></BSB_ID_TYPE><!--签约客户证件号码--><BSB_ID_CODE></BSB_ID_CODE><!--签约证件有效期--><BSB_ID_EXP_DATE></BSB_ID_EXP_DATE><!--签约客户姓名--><BSB_USER_FNAME></BSB_USER_FNAME><!--预约来源--><APPT_SOURCE></APPT_SOURCE><!--客户经理--><ACCT_MANAGER></ACCT_MANAGER><!--首选联系人方式--><LINGKINDS_ORDER></LINGKINDS_ORDER><!--信用电邮--><FISL_EMAIL></FISL_EMAIL><!--营销人员编码--><SALESSTAFF_CODE></SALESSTAFF_CODE><!--营销人员姓名--><SALESSTAFF_NAME></SALESSTAFF_NAME><!--其他备注--><OTHER_REMARK></OTHER_REMARK><!--操作/特殊备注--><SPEC_REMARK></SPEC_REMARK></data>
 </request>

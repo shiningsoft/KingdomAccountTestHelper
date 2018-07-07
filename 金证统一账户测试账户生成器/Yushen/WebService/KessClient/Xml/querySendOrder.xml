@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.38	派单资料查询-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--开始日期默认是19000101，可不传-->
+    <BGN_DATE>19000101</BGN_DATE>
+    <!--结束日期默认是30000101，可不传-->
+    <END_DATE>30000101</END_DATE>
+    <!--预约开户流水号-->
+    <APP_SN>2013041600000021</APP_SN>
+  </data>
+</request>

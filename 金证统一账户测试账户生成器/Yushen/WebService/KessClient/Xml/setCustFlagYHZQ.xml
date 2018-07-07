@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.63	设置客户标示-->
+<request>
+  <auth>
+    <OPERATOR>31010107</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型-->
+    <OPERATION_TYPE>0</OPERATION_TYPE>
+    <!--客户代码-->
+    <CUST_CODE>310100033019</CUST_CODE>
+    <!--资金账户-->
+    <CUACCT_CODE>310100033019</CUACCT_CODE>
+    <!--客户标示ID-->
+    <CUST_FLAG_ID>b</CUST_FLAG_ID>
+    <!--客户标示值-->
+    <CUST_FLAG_VAL>0</CUST_FLAG_VAL>
+  </data>
+</request>

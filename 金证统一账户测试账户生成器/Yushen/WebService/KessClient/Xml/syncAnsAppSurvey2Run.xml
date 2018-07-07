@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.134	同步风险测评到集中交易系统
+注1：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型0-增加1-修改2-删除-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--用户代码-->
+    <USER_CODE></USER_CODE>
+    <!--用户角色DD[USER_ROLE]-->
+    <USER_ROLE></USER_ROLE>
+    <!--调查表编码-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--调查表分值-->
+    <SURVEY_SCORE></SURVEY_SCORE>
+    <!--评级级别-->
+    <RATING_LVL></RATING_LVL>
+    <!--评级日期-->
+    <RATING_DATE></RATING_DATE>
+    <!--次序-->
+    <ORDINAL></ORDINAL>
+    <!--可共用类别-->
+    <SHARE_SURVEY_CLSES></SHARE_SURVEY_CLSES>
+    <!--调查表类别-->
+    <SURVEY_CLS></SURVEY_CLS>
+    <!--主客观-->
+    <SURVEY_TYPE></SURVEY_TYPE>
+  </data>
+</request>

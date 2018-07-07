@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.189	客户融资融券资格申请
+注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必输）0-增加1-修改2-删除-->
+    <OPERATOR_TYPE>0</OPERATOR_TYPE>
+    <!--客户代码（必输）-->
+    <CUST_CODE>10100564258</CUST_CODE>
+    <!--申请编号（非必输）-->
+    <APP_CR_SN></APP_CR_SN>
+    <!--机构代码（非必输）-->
+    <INT_ORG>101</INT_ORG>
+    <!--币种（非必输）-->
+    <CURRENCY>0</CURRENCY>
+    <!--申请类型（非必输）0-首次额度申请2-额度申请调整3-重新征信申请-->
+    <APP_TYPE>0</APP_TYPE>
+    <!--资格申请单状态（非必输）DD[APR_STATUS]-->
+    <APR_STATUS>1</APR_STATUS>
+    <!--预申请融资金额（非必输）-->
+    <APP_FI_CREDIT>123.00</APP_FI_CREDIT>
+    <!--预申请融券金额（非必输）-->
+    <APP_SL_CREDIT>234.00</APP_SL_CREDIT>
+    <!--总额度（非必输）-->
+    <APP_TOT_CREDIT>357</APP_TOT_CREDIT>
+    <!--申请利率组编号（非必输）-->
+    <APP_FISL_INT_GRP_SN>1</APP_FISL_INT_GRP_SN>
+    <!--预申请融资利率（非必输）-->
+    <APP_FI_INT_RATE>0.10000000</APP_FI_INT_RATE>
+    <!--预申请融券利率（非必输）-->
+    <APP_SL_INT_RATE>0.10000000</APP_SL_INT_RATE>
+    <!--客户金融总资产（非必输）-->
+    <CUST_FIN_ASSET>357</CUST_FIN_ASSET>
+    <!--客户总资产（非必输）-->
+    <CUST_TOT_ASSET>357</CUST_TOT_ASSET>
+    <!--推荐人编号（非必输）-->
+    <RECM_CODE>11</RECM_CODE>
+    <!--有效天数（非必输）-->
+    <VALID_DAYS>180</VALID_DAYS>
+    <!--资产账户代码（非必输）-->
+    <CUACCT_CODE>10100564258</CUACCT_CODE>
+    <!--担保物总价值（非必输）-->
+    <PLEDGE_VALUE>357</PLEDGE_VALUE>
+    <!--备注（非必输）-->
+    <REMARK></REMARK>
+    <!--附件（非必输）-->
+    <ATTACH_LISTS>1</ATTACH_LISTS>
+    <!--托管账户资产（非必输）-->
+    <CUST_TRU_ASSET></CUST_TRU_ASSET>
+    <!--财务净资产（非必输）-->
+    <FIN_NET_ASSET>345</FIN_NET_ASSET>
+    <!--平仓预案（非必输）-->
+    <SCHEME_ID></SCHEME_ID>
+  </data>
+</request>

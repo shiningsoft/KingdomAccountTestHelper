@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.77	网上开户补增用户影像信息-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-增加，1-修改，2删除-->
+    <OPERATOR_TYPE>0</OPERATOR_TYPE>
+    <!--用户代码(必传)-->
+    <USER_CODE>181123670</USER_CODE>
+    <!--用户角色(必传)1-个人4-代理人DD[USER_ROLE]-->
+    <USER_ROLE>1</USER_ROLE>
+    <!--内部机构-->
+    <INT_ORG></INT_ORG>
+    <!--影像类别（必传）-->
+    <IMG_CLS>021</IMG_CLS>
+    <!--影像编号(必传)-->
+    <IMG_SN>2014021200000001</IMG_SN>
+    <!--影像状态DD[IMG_STATUS]-->
+    <IMG_STATUS></IMG_STATUS>
+    <!--影像标签-->
+    <IMG_TAG></IMG_TAG>
+    <!--影像备注-->
+    <IMG_REMARK></IMG_REMARK>
+    <!--影像是否需要审核标志-->
+    <AUDIT_FLAG></AUDIT_FLAG>
+    <!--板块DD[STKBD]-->
+    <STKBD></STKBD>
+    <!--证券账户-->
+    <TRDACCT></TRDACCT>
+    <!--手工新增标志-->
+    <HAND_ADD_FLAG></HAND_ADD_FLAG>
+    <!--采集标志-->
+    <COLL_FLAG></COLL_FLAG>
+  </data>
+</request>

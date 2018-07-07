@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.151	电子协议签署
+注1：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--流水号，如果有签署该协议，传入流水号做修改-->
+    <SERIAL_NO></SERIAL_NO>
+    <!--协议所属机构-->
+    <SIGN_ORG></SIGN_ORG>
+    <!--电子协议类别-->
+    <CONTRACT_CLS></CONTRACT_CLS>
+    <!--版本号-->
+    <VERSION></VERSION>
+    <!--证件类型-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码-->
+    <ID_CODE></ID_CODE>
+    <!--验签文本-->
+    <SIGN_TEXT></SIGN_TEXT>
+    <!--验签之后文本-->
+    <STRING></STRING>
+  </data>
+</request>

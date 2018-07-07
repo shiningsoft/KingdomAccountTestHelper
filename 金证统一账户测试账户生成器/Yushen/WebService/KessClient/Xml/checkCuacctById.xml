@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.115	根据证件类型和号码查询是否已开资金账号及状态-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--证件类型（必传）-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码（必传）-->
+    <ID_CODE></ID_CODE>
+  </data>
+</request>

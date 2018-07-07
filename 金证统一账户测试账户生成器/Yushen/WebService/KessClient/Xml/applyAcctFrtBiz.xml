@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.128	临柜业务任务申请-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--内部机构（必传）-->
+    <INT_ORG></INT_ORG>
+    <!--临柜业务（必传）-->
+    <FRT_BIZ></FRT_BIZ>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--客户名称（必传）-->
+    <CUST_NAME></CUST_NAME>
+    <!--业务状态（非必传）-->
+    <FRT_BIZ_STATUS></FRT_BIZ_STATUS>
+  </data>
+</request>

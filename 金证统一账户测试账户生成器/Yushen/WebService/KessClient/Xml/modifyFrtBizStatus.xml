@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.72	临柜任务流状态调整-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--在客户影像信息全部同步完成后调用（只需调用一次）-->
+    <!--客户代码-->
+    <CUST_CODE>00</CUST_CODE>
+  </data>
+</request>

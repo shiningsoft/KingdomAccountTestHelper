@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.3	查询操作员菜单列表-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--固定传1-->
+    <PRJ_VERSION>1</PRJ_VERSION>
+    <!--0表示获取管理员菜单1表示获取客户菜单空值取全部-->
+    <MENU_TYPE>1</MENU_TYPE>
+  </data>
+</request>

@@ -1,12 +1,12 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.57 公共参数查询-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.57	公共参数查询-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>31010107</OPERATOR>
   </auth>
   <data>
-    <!--//公共参数ID @ 表示全部 -->
-    <REGKEY_ID></REGKEY_ID>
-    <LEVEL>99</LEVEL>
-  </data>
+    <!--公共参数ID@表示全部-->
+    <REGKEY_ID>PAY_FEE_ACCT</REGKEY_ID>
+//
+<LEVEL>99</LEVEL></data>
 </request>

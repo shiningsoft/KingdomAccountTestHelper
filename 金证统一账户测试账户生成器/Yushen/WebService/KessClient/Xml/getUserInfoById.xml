@@ -1,15 +1,13 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.36 通过身份证查找客户 -->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.36	通过身份证查找客户-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>31010013</OPERATOR>
   </auth>
   <data>
-    <!--//证件类型（必传）00：身份证 -->
+    <!--证件类型（必传）-->
     <ID_TYPE>00</ID_TYPE>
-    <!-- //证件号码（必传） -->
-    <ID_CODE></ID_CODE>
-    <!--//用户角色（非必传） -->
-    <USER_ROLES></USER_ROLES>
+    <!--证件号码（必传）-->
+    <ID_CODE>341100194302153014</ID_CODE>
   </data>
 </request>

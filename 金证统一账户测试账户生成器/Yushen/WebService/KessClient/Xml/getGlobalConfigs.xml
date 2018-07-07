@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.67	获取非现场开户全局配置参数-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--暂时没有入参-->
+  </data>
+</request>

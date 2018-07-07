@@ -1,59 +1,55 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.59 客户协议维护-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.59	客户协议维护-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>31010107</OPERATOR>
   </auth>
   <data>
-    <!--//操作类型0-增加1-修改2-删除-->
+    <!--操作类型0-增加1-修改2-删除-->
     <OPERATION_TYPE></OPERATION_TYPE>
-    <!--//客户代码-->
+    <!--客户代码-->
     <CUST_CODE></CUST_CODE>
-    <!--//协议类型DD[CUST_AGMT_TYPE]-->
+    <!--协议类型DD[CUST_AGMT_TYPE]-->
     <CUST_AGMT_TYPE></CUST_AGMT_TYPE>
-    <!--//有效截止日期-->
+    <!--有效截止日期-->
     <EXP_DATE></EXP_DATE>
-    <!--//生效日期-->
+    <!--生效日期-->
     <EFT_DATE></EFT_DATE>
-    <!--//操作备注-->
+    <!--操作备注-->
     <OP_REMARK></OP_REMARK>
-    <!--//交易账户-->
+    <!--交易账户-->
     <TRDACCT></TRDACCT>
-    <!--//交易板块DD[STKBD]-->
+    <!--交易板块DD[STKBD]-->
     <STKBD></STKBD>
-    <!--//开通类型0-T+02-T+25-T+5A-->
+    <!--开通类型0-T+02-T+25-T+5A-->
     <OPEN_TYPE></OPEN_TYPE>
-    <!--//w版开通类型0-T+02-T+25-T+5-->
+    <!--w版开通类型0-T+02-T+25-T+5-->
     <OPEN_TYPE_WIN></OPEN_TYPE_WIN>
-    <!--//签署地0-本证券公司1-其它证券公司-->
+    <!--签署地0-本证券公司1-其它证券公司-->
     <SIGN_PLACE></SIGN_PLACE>
-    <!--//是否重新申报1-重新申报-->
+    <!--是否重新申报1-重新申报-->
     <REDO_FLAG></REDO_FLAG>
-    <!--//报送状态0-未报,1-已报,9-报送失败-->
-    <DEAL_STATUS></DEAL_STATUS>
-    <!--//签署日期-->
+    <!--报送状态0-待报1-正报2-申报成功3-申报失败-->
+    <DEAL_STATUS>0</DEAL_STATUS>
+    <!--签署日期-->
     <SIGN_DATE></SIGN_DATE>
-    <!--//任务流序号-->
+    <!--任务流序号-->
     <FRT_BIZ_SN></FRT_BIZ_SN>
-    <!--//批次号-->
+    <!--批次号-->
     <BATCHNO></BATCHNO>
-    <!--//报送时间-->
+    <!--报送时间-->
     <APPLY_DATE></APPLY_DATE>
-    <!--//应答原因-->
+    <!--应答原因-->
     <RETURN_MSG></RETURN_MSG>
-    <!--//对接远程系统-->
+    <!--对接远程系统-->
     <REMOTE_SYS></REMOTE_SYS>
-    <!--//开通类型-->
+    <!--开通类型-->
     <ACCT_TYPE></ACCT_TYPE>
-    <!--//资产账户-->
+    <!--资产账户-->
     <CUACCT_CODE></CUACCT_CODE>
-    <!--//协议操作标志-->
+    <!--协议操作标志-->
     <AGMT_OPER_FLAG></AGMT_OPER_FLAG>
-    <!--//申请标志-->
+    <!--申请标志-->
     <OPEN_FLAG></OPEN_FLAG>
-    <!--//是否处理报送流水-->
-    <SETT_DEALLOG></SETT_DEALLOG>
-    <!--//检查资源权限-->
-    <CHECK_RES_RIGHT></CHECK_RES_RIGHT>
   </data>
 </request>

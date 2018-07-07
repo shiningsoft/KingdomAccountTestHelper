@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.152	证券账户销户（系统内）
+注1：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易板块（必传）-->
+    <STKBD></STKBD>
+    <!--交易账户（必传）-->
+    <TRDACCT></TRDACCT>
+    <!--销户原因（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

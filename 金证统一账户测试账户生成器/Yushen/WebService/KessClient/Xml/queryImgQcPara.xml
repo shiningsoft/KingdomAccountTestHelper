@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.23	查询客户影像采集参数列表-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--影像类别-->
+    <IMG_CLS>075</IMG_CLS>
+  </data>
+</request>

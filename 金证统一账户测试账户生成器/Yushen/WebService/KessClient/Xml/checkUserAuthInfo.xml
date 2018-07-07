@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.158	用户认证信息校验
+注1：用户代码和资产账户至少输入一个，若都输入，以客户代码为准。
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--用户代码（非必传）-->
+    <USER_CODE></USER_CODE>
+    <!--资产账户（非必传）注：用户代码未输时，资产账户必输-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--认证数据（必传）-->
+    <AUTH_DATA></AUTH_DATA>
+    <!--用户角色（非必传）DD[USER_ROLE]默认为1-客户-->
+    <USER_ROLE>1</USER_ROLE>
+    <!--使用范围（非必传）DD[USE_SCOPE]默认为0-登录/交易-->
+    <USE_SCOPE>0</USE_SCOPE>
+    <!--认证类型（非必传）DD[AUTH_TYPE]默认为0–密码-->
+    <AUTH_TYPE>0</AUTH_TYPE>
+  </data>
+</request>

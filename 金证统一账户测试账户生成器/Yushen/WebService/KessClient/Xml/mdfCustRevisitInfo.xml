@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.137	客户征信回访记录信息维护-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--机构代码（必传）-->
+    <INT_ORG></INT_ORG>
+    <!--操作渠道（必传）0-柜台非0-外围-->
+    <CHANNEL></CHANNEL>
+    <!--回访坐席-->
+    <REVISIT_SEAT></REVISIT_SEAT>
+    <!--回访日期-->
+    <REVISIT_DATE></REVISIT_DATE>
+    <!--回访状态-->
+    <REVISIT_STATUS></REVISIT_STATUS>
+    <!--回访摘要-->
+    <REVISIT_SUMMARY></REVISIT_SUMMARY>
+    <!--回访备注-->
+    <REMARK></REMARK>
+  </data>
+</request>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.117	交易日历查询-->
+<request>
+  <auth>
+    <OPERATOR>11843</OPERATOR>
+  </auth>
+  <data>
+    <!--帐套编号（非必传）-->
+    <BOOKSET></BOOKSET>
+    <!--日期（非必传）（默认为当天）-->
+    <PHYSICAL_DATE></PHYSICAL_DATE>
+    <!--查询模式（非必传）1–查询T+n清算日其它–查询当前日的日历表-->
+    <QUERY_FLAG></QUERY_FLAG>
+    <!--T+n日（非必传）正数表示T+n日负数表示T-n日-->
+    <DIFF_DAYS></DIFF_DAYS>
+  </data>
+</request>

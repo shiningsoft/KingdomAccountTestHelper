@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.192	查询客户交易权限
+注1：限U版使用
+
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--机构代码（非必传）-->
+    <INT_ORG></INT_ORG>
+  </data>
+</request>

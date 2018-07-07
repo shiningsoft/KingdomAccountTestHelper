@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.66	实时获取证券账户状态-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码-->
+    <CUST_CODE>36050</CUST_CODE>
+    <!--市场板块DD[STKBD]-->
+    <STKBD>0</STKBD>
+    <!--股东代码-->
+    <TRDACCT></TRDACCT>
+    <!--资产账户-->
+    <CUACCT_CODE></CUACCT_CODE>
+  </data>
+</request>
