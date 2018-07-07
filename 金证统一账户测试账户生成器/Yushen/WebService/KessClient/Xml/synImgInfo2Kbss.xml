@@ -29,6 +29,6 @@
     <!--其他以此类推-->
     <PARAM1>abc</PARAM1>
     <PARAM2>abc</PARAM2>
-…
+    <!--……-->
 </data>
 </request>

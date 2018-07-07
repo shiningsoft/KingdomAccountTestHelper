@@ -73,11 +73,11 @@
             this.tbxResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxResponse.Location = new System.Drawing.Point(3, 3);
+            this.tbxResponse.Location = new System.Drawing.Point(3, 19);
             this.tbxResponse.Multiline = true;
             this.tbxResponse.Name = "tbxResponse";
             this.tbxResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxResponse.Size = new System.Drawing.Size(516, 554);
+            this.tbxResponse.Size = new System.Drawing.Size(517, 538);
             this.tbxResponse.TabIndex = 25;
             // 
             // btnExecute
@@ -126,7 +126,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tbxResponse);
             this.splitContainer1.Size = new System.Drawing.Size(1018, 560);
-            this.splitContainer1.SplitterDistance = 492;
+            this.splitContainer1.SplitterDistance = 491;
             this.splitContainer1.TabIndex = 28;
             // 
             // lbInterfaceTitle
@@ -158,7 +158,7 @@
             this.dgvParams.RowHeadersWidth = 100;
             this.dgvParams.RowTemplate.Height = 23;
             this.dgvParams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvParams.Size = new System.Drawing.Size(486, 538);
+            this.dgvParams.Size = new System.Drawing.Size(485, 538);
             this.dgvParams.TabIndex = 0;
             // 
             // ColumnName

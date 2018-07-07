@@ -246,6 +246,7 @@ namespace 金证统一账户测试账户生成器
             this.MainMenuStrip = this.menuStrip;
             this.Name = "frmFramework";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "金证统一账户测试账户生成器";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFramework_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);

@@ -22,5 +22,16 @@
 提交后台信息为：
 OperType[0]+OperType[1]+OperType[2]+OperType[3]+OperType[4]+OperType[51]+OperType[6]+OperType[7]+OperType[8],9位字符。
 如：12220000，只修改客户代码信息和状态，资金帐户和股东账户等信息不变-->
-<OPERATION_TYPE>022222222</OPERATION_TYPE><!--资产账户（必输）--><CUACCT_CODE>10100165492</CUACCT_CODE><!--深圳交易账户（非必输）--><TRDACCTSZ></TRDACCTSZ><!--上海交易账户（非必输）--><TRDACCTSH></TRDACCTSH><!--信用交易密码（非必输）--><FISL_TRD_AUTH_DATA>123123</FISL_TRD_AUTH_DATA><!--是否同步密码（非必输）0-同步其它-不同步U版使用--><SYNC_AUTH></SYNC_AUTH></data>
+    <OPERATION_TYPE>022222222</OPERATION_TYPE>
+    <!--资产账户（必输）-->
+    <CUACCT_CODE>10100165492</CUACCT_CODE>
+    <!--深圳交易账户（非必输）-->
+    <TRDACCTSZ></TRDACCTSZ>
+    <!--上海交易账户（非必输）-->
+    <TRDACCTSH></TRDACCTSH>
+    <!--信用交易密码（非必输）-->
+    <FISL_TRD_AUTH_DATA>123123</FISL_TRD_AUTH_DATA>
+    <!--是否同步密码（非必输）0-同步其它-不同步U版使用-->
+    <SYNC_AUTH></SYNC_AUTH>
+  </data>
 </request>

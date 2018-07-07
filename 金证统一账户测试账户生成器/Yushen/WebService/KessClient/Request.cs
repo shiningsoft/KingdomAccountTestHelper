@@ -130,6 +130,26 @@ namespace Yushen.WebService.KessClient
             }
         }
 
+
+        /// <summary>
+        /// 返回请求的备注说明
+        /// </summary>
+        public string comment
+        {
+            get
+            {
+                if (xmlDoc.ChildNodes[1].NodeType == XmlNodeType.Comment)
+                {
+                    string[] comments = xmlDoc.ChildNodes[1].InnerText.Trim().Split('\n');
+                    return xmlDoc.ChildNodes[1].InnerText.Substring(comments[0].Length);
+                }
+                else
+                {
+                    return "没有注明接口名称";
+                }
+            }
+        }
+
         /// <summary>
         /// 设置本次请求的操作员
         /// </summary>

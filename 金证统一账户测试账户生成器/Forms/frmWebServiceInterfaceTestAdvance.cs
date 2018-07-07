@@ -99,6 +99,7 @@ namespace 金证统一账户测试账户生成器
             {
                 request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, false);
                 lbInterfaceTitle.Text = "接口名称：" + request.title;
+                
                 XmlNodeList dataList = request.data.ChildNodes;
                 XmlNode node;
 

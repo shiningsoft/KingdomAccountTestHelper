@@ -76,7 +76,28 @@
     <EMAIL></EMAIL>
     <!--传真电话-->
     <FAX></FAX>
-    <!--业务类型（非必传）（创业板开通或查询时必输，01-开通03-查询；-->
-使用信息维护时必输，01-新增，02-撤销，03-查询；中登身份校验时必输，01-简项查询，无照片返回，02-简项查询，有照片返回）
-<ACCTBIZ_CLS></ACCTBIZ_CLS><!--首次交易日期（非必传）--><FIRST_TRD_DATE></FIRST_TRD_DATE><!--适当性类别（非必传）1-创业板2-全国中小企业股份转让系统9-其它--><PROPER_CLS></PROPER_CLS><!--签约类别（非必传）0-T+0开通2-T+2开通5-T+5开通A-无需在本公司签署风险揭示书DD[SIGN_CLS]--><SIGN_CLS></SIGN_CLS><!--签约日期（非必传）--><SIGN_DATE></SIGN_DATE><!--生效日期（非必传）--><EFT_DATE></EFT_DATE><!--报送标志（非必传）--><UNTRD_FLAG></UNTRD_FLAG><!--重发标志--><PESEND_FLAG></PESEND_FLAG><!--新客户名称（非必输）--><NEW_CUST_FNAME></NEW_CUST_FNAME><!--新证件类型（非必输）--><NEW_ID_TYPE></NEW_ID_TYPE><!--新证件号码（非必输）--><NEW_ID_CODE></NEW_ID_CODE></data>
+    <!--业务类型（非必传）（创业板开通或查询时必输，01-开通03-查询；
+    使用信息维护时必输，01-新增，02-撤销，03-查询；中登身份校验时必输，01-简项查询，无照片返回，02-简项查询，有照片返回）-->
+    <ACCTBIZ_CLS></ACCTBIZ_CLS>
+    <!--首次交易日期（非必传）-->
+    <FIRST_TRD_DATE></FIRST_TRD_DATE>
+    <!--适当性类别（非必传）1-创业板2-全国中小企业股份转让系统9-其它-->
+    <PROPER_CLS></PROPER_CLS>
+    <!--签约类别（非必传）0-T+0开通2-T+2开通5-T+5开通A-无需在本公司签署风险揭示书DD[SIGN_CLS]-->
+    <SIGN_CLS></SIGN_CLS>
+    <!--签约日期（非必传）-->
+    <SIGN_DATE></SIGN_DATE>
+    <!--生效日期（非必传）-->
+    <EFT_DATE></EFT_DATE>
+    <!--报送标志（非必传）-->
+    <UNTRD_FLAG></UNTRD_FLAG>
+    <!--重发标志-->
+    <PESEND_FLAG></PESEND_FLAG>
+    <!--新客户名称（非必输）-->
+    <NEW_CUST_FNAME></NEW_CUST_FNAME>
+    <!--新证件类型（非必输）-->
+    <NEW_ID_TYPE></NEW_ID_TYPE>
+    <!--新证件号码（非必输）-->
+    <NEW_ID_CODE></NEW_ID_CODE>
+  </data>
 </request>
