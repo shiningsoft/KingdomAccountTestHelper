@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--2.191	查询客户资金权限限制
 注1：限U版使用
-
 -->
 <request>
   <auth>

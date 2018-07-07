@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--2.163	新中登休眠账户激活
 注1：此接口需OEM“KBSS一码通非现场业务”的授权才能使用。
-
 -->
 <request>
   <auth>

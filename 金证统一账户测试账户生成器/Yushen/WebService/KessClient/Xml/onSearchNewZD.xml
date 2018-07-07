@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--2.95	新中登实时查询
 注：此接口需OEM“KBSS一码通非现场业务”的授权才能使用。
-
 -->
 <request>
   <auth>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--2.181	紧急联系人信息查询
 注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
-
 -->
 <request>
   <auth>

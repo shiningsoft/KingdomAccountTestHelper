@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--2.124	系统内一码通账户开立
 注1：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
-
 -->
 <request>
   <auth>

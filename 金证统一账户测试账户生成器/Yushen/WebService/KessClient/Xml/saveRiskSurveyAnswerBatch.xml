@@ -3,7 +3,6 @@
 该接口存在性能问题，不建议继续使用，
 推荐用syncSurveyAns2Kbss + syncAnsAppSurvey2Run替代
 注：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
-
 -->
 <request>
   <auth>

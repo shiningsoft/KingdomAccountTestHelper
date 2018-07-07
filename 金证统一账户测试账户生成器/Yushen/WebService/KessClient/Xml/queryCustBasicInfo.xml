@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--2.9	查询客户基本信息（见证开户）
 功能说明：预约开户资料查询。
-
 -->
 <request>
   <auth>

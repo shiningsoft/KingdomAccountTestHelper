@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--2.83	资产账户销户恢复
 注：此接口需OEM“KBSS网上开户标准版接口”的授权才能使用。
-
 -->
 <request>
   <auth>

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--2.53	证券账户查询
 功能说明：查询系统内的股东账户，与中登无关。
-
 -->
 <request>
   <auth>
