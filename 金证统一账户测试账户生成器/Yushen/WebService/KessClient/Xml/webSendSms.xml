@@ -26,8 +26,8 @@
     <STKBD></STKBD>
     <!--股东代码-->
     <TRDACCT></TRDACCT>
-//
-<TACODE></TACODE><!--地址--><ADDRESS></ADDRESS>
-……
+    <TACODE></TACODE>
+    <!--地址-->
+    <ADDRESS></ADDRESS>
 </data>
 </request>

@@ -10,7 +10,8 @@
     <OPERATOR>36050</OPERATOR>
   </auth>
   <data>
-    <!--操作类型（必传）0-增加1-修改2-删除一般情况都送0<<OPERATOR_TYPE></OPERATOR_TYPE>-->
+    <!--操作类型（必传）0-增加1-修改2-删除一般情况都送0-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
     <!--账户业务代码（必传）DD-[ACCTBIZ_EXCODE]-->
     <ACCTBIZ_EXCODE></ACCTBIZ_EXCODE>
     <!--一码通号码（非必传）-->

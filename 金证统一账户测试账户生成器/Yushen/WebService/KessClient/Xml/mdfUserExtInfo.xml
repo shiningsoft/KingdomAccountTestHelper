@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--2.58	用户扩展信息维护-->
+    <!--2.58	用户扩展信息维护-->
 <request>
   <auth>
     <OPERATOR>31010107</OPERATOR>
@@ -61,8 +61,53 @@
     <LINKMAN_ADDR></LINKMAN_ADDR>
     <!--邮政编码-->
     <LINKMAN_ZIP></LINKMAN_ZIP>
-//
-<IME_TYPE></IME_TYPE>
-//
-<IME_NAME></IME_NAME><!--用户拓展信息：--><!--营销确认--><IS_SALE_CUST></IS_SALE_CUST><!--邮寄对账单--><DELIVER_FLAG></DELIVER_FLAG><!--短信服务--><SMS_SERVICE></SMS_SERVICE><!--卡号--><WLT_CARD_NO></WLT_CARD_NO><!--推荐人姓名--><COMMENDER_NAME></COMMENDER_NAME><!--推荐人证件类型--><COMMENDER_ID_TYPE></COMMENDER_ID_TYPE><!--推荐人证件号码--><COMMENDER_ID_NO></COMMENDER_ID_NO><!--拥有本公司以外的产品--><EN_PRODUCT_CODE></EN_PRODUCT_CODE><!--品质类型--><QUALITY_TYPE></QUALITY_TYPE><!--隐私级别DD[PRIVACY_LEVEL]--><PRIVACY_LEVEL></PRIVACY_LEVEL><!--开户合同号--><OPEN_ORDER_ID></OPEN_ORDER_ID><!--签约客户证件类型--><BSB_ID_TYPE></BSB_ID_TYPE><!--签约客户证件号码--><BSB_ID_CODE></BSB_ID_CODE><!--签约证件有效期--><BSB_ID_EXP_DATE></BSB_ID_EXP_DATE><!--签约客户姓名--><BSB_USER_FNAME></BSB_USER_FNAME><!--预约来源--><APPT_SOURCE></APPT_SOURCE><!--客户经理--><ACCT_MANAGER></ACCT_MANAGER><!--首选联系人方式--><LINGKINDS_ORDER></LINGKINDS_ORDER><!--信用电邮--><FISL_EMAIL></FISL_EMAIL><!--营销人员编码--><SALESSTAFF_CODE></SALESSTAFF_CODE><!--营销人员姓名--><SALESSTAFF_NAME></SALESSTAFF_NAME><!--其他备注--><OTHER_REMARK></OTHER_REMARK><!--操作/特殊备注--><SPEC_REMARK></SPEC_REMARK></data>
+    <IME_TYPE></IME_TYPE>
+    <IME_NAME></IME_NAME>
+    <!--用户拓展信息：-->
+    <!--营销确认-->
+    <IS_SALE_CUST></IS_SALE_CUST>
+    <!--邮寄对账单-->
+    <DELIVER_FLAG></DELIVER_FLAG>
+    <!--短信服务-->
+    <SMS_SERVICE></SMS_SERVICE>
+    <!--卡号-->
+    <WLT_CARD_NO></WLT_CARD_NO>
+    <!--推荐人姓名-->
+    <COMMENDER_NAME></COMMENDER_NAME>
+    <!--推荐人证件类型-->
+    <COMMENDER_ID_TYPE></COMMENDER_ID_TYPE>
+    <!--推荐人证件号码-->
+    <COMMENDER_ID_NO></COMMENDER_ID_NO>
+    <!--拥有本公司以外的产品-->
+    <EN_PRODUCT_CODE></EN_PRODUCT_CODE>
+    <!--品质类型-->
+    <QUALITY_TYPE></QUALITY_TYPE>
+    <!--隐私级别DD[PRIVACY_LEVEL]-->
+    <PRIVACY_LEVEL></PRIVACY_LEVEL>
+    <!--开户合同号-->
+    <OPEN_ORDER_ID></OPEN_ORDER_ID>
+    <!--签约客户证件类型-->
+    <BSB_ID_TYPE></BSB_ID_TYPE>
+    <!--签约客户证件号码-->
+    <BSB_ID_CODE></BSB_ID_CODE>
+    <!--签约证件有效期-->
+    <BSB_ID_EXP_DATE></BSB_ID_EXP_DATE>
+    <!--签约客户姓名-->
+    <BSB_USER_FNAME></BSB_USER_FNAME>
+    <!--预约来源-->
+    <APPT_SOURCE></APPT_SOURCE>
+    <!--客户经理-->
+    <ACCT_MANAGER></ACCT_MANAGER>
+    <!--首选联系人方式-->
+    <LINGKINDS_ORDER></LINGKINDS_ORDER>
+    <!--信用电邮-->
+    <FISL_EMAIL></FISL_EMAIL>
+    <!--营销人员编码-->
+    <SALESSTAFF_CODE></SALESSTAFF_CODE>
+    <!--营销人员姓名-->
+    <SALESSTAFF_NAME></SALESSTAFF_NAME>
+    <!--其他备注-->
+    <OTHER_REMARK></OTHER_REMARK>
+    <!--操作/特殊备注-->
+    <SPEC_REMARK></SPEC_REMARK></data>
 </request>

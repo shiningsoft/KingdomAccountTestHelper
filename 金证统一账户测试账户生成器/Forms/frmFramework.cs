@@ -300,5 +300,21 @@ namespace 金证统一账户测试账户生成器
                 resultForm.Append(ex.Message);
             }
         }
+
+        async private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (await kess.operatorLogout())
+                {
+                    resultForm.Show();
+                    resultForm.Append("操作员退出成功");
+                }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("操作员登录失败：" + ex.Message);
+            }
+        }
     }
 }

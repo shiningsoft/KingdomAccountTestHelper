@@ -106,6 +106,27 @@ namespace Yushen.WebService.KessClient
             return true;
         }
 
+
+        /// <summary>
+        /// 操作员退出
+        /// 退出成功返回true，退出失败抛出异常
+        /// </summary>
+        /// <returns></returns>
+        async public Task<bool> operatorLogout()
+        {
+            Request request = new Request(this.operatorId, "operatorLogout");
+            Response response = await this.invoke(request);
+
+            if (response.flag == "0")
+            {
+                string message = "用户退出失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            return true;
+        }
+
         /// <summary>
         /// 按照金证标准流程开立客户号
         /// </summary>
@@ -303,7 +324,6 @@ namespace Yushen.WebService.KessClient
         /// <param name="ADDRESS">联系地址（必传）</param>
         /// <param name="ZIP_CODE">邮政编码（必传）</param>
         /// <param name="OCCU_TYPE">职业类型（必传）</param>
-        /// <param name="NATIONALITY">民族（必传）</param>
         /// <param name="EDUCATION">学历（个人必传）</param>
         /// <param name="TEL">联系电话（必传）</param>
         /// <param name="MOBILE_TEL">移动电话（必传）</param>
@@ -340,7 +360,6 @@ namespace Yushen.WebService.KessClient
                                     string ADDRESS,
                                     string ZIP_CODE,
                                     string OCCU_TYPE,
-                                    string NATIONALITY,
                                     string EDUCATION,
                                     string TEL,
                                     string MOBILE_TEL,
@@ -386,7 +405,6 @@ namespace Yushen.WebService.KessClient
             request.setAttr("ADDRESS", ADDRESS);
             request.setAttr("ZIP_CODE", ZIP_CODE);
             request.setAttr("OCCU_TYPE", OCCU_TYPE);
-            request.setAttr("NATIONALITY", NATIONALITY);
             request.setAttr("EDUCATION", EDUCATION);
             request.setAttr("TEL", TEL);
             request.setAttr("MOBILE_TEL", MOBILE_TEL);
@@ -1118,28 +1136,24 @@ namespace Yushen.WebService.KessClient
         /// <param name="CURRENCY">货币代码DD[CURRENCY]</param>
         /// <param name="CUST_CODE">客户代码</param>
         /// <param name="CUACCT_CODE">资金代码</param>
-        /// <param name="BANK_ACCT_CODE">银行账户卡号</param>
+        /// <param name="BANK_CUACCT_CODE">客户代码</param>
         /// <param name="EXT_ORG">外部机构</param>
         /// <param name="BANK_ACCT">外部银行账户</param>
         /// <param name="FUND_AUTH_DATA">资金密码</param>
         /// <param name="CUBSB_TYPE">银证业务类型DD[CUBSB_TYPE]</param>
         /// <param name="BANK_AUTH_DATA">银行密码</param>
-        /// <param name="SERIAL_NO">流水序号</param>
-        /// <param name="SMS_NO">短信验证码</param>
         /// <returns></returns>
         async public Task<bool> cubsbScOpenAcct(
-                string OP_TYPE,
-                string CUACCT_CODE,
-                string EXT_ORG,
-                string CUST_CODE = "",
-                string BANK_ACCT_CODE = "",
-                string BANK_ACCT = "",
-                string FUND_AUTH_DATA = "",
-                string CUBSB_TYPE = Dict.CUBSB_TYPE.存管,
-                string BANK_AUTH_DATA = "",
-                string SERIAL_NO = "",
-                string CURRENCY = Dict.CURRENCY.人民币,
-                string SMS_NO = ""
+                string OP_TYPE = "", //操作类型OP_TYPE为0时表示券商发起银证开户一步式，为1时表示券商发起预指定，即两步式中的第一步，为2时BANK_ACCT、FUND_AUTH_DATA、BANK_AUTH_DATA均传空。
+                string CURRENCY = "", //货币代码DD[CURRENCY]
+                string CUST_CODE = "", //客户代码
+                string CUACCT_CODE = "", //资金代码
+                string BANK_CUACCT_CODE = "", //客户代码
+                string EXT_ORG = "", //外部机构
+                string BANK_ACCT = "", //外部银行账户
+                string FUND_AUTH_DATA = "", //资金密码
+                string CUBSB_TYPE = "1", //银证业务类型DD[CUBSB_TYPE]
+                string BANK_AUTH_DATA = "" //银行密码
             )
         {
             // 前置条件判断
@@ -1170,19 +1184,16 @@ namespace Yushen.WebService.KessClient
 
             // 初始化请求
             Request request = new Request(this.operatorId, "cubsbScOpenAcct");
-            request.setAttr("OP_TYPE", OP_TYPE); // 操作类型
-            request.setAttr("CURRENCY", CURRENCY); // 货币代码DD[CURRENCY]
-            request.setAttr("CUST_CODE", CUST_CODE); // 客户代码
-            request.setAttr("CUACCT_CODE", CUACCT_CODE); // 资金代码
-            request.setAttr("BANK_ACCT_CODE", BANK_ACCT_CODE); // 银行账户卡号
-            request.setAttr("EXT_ORG", EXT_ORG); // 外部机构
-            request.setAttr("BANK_ACCT", BANK_ACCT); // 外部银行账户
-            request.setAttr("FUND_AUTH_DATA", FUND_AUTH_DATA); // 资金密码
-            request.setAttr("CUBSB_TYPE", CUBSB_TYPE); // 银证业务类型DD[CUBSB_TYPE]
-            request.setAttr("BANK_AUTH_DATA", BANK_AUTH_DATA); // 银行密码
-            request.setAttr("SERIAL_NO", SERIAL_NO); // 流水序号
-            request.setAttr("SMS_NO", SMS_NO); // 短信验证码
-
+            request.setAttr("OP_TYPE", OP_TYPE); //操作类型OP_TYPE为0时表示券商发起银证开户一步式，为1时表示券商发起预指定，即两步式中的第一步，为2时BANK_ACCT、FUND_AUTH_DATA、BANK_AUTH_DATA均传空。
+            request.setAttr("CURRENCY", CURRENCY); //货币代码DD[CURRENCY]
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码
+            request.setAttr("CUACCT_CODE", CUACCT_CODE); //资金代码
+            request.setAttr("BANK_CUACCT_CODE", BANK_CUACCT_CODE); //客户代码
+            request.setAttr("EXT_ORG", EXT_ORG); //外部机构
+            request.setAttr("BANK_ACCT", BANK_ACCT); //外部银行账户
+            request.setAttr("FUND_AUTH_DATA", FUND_AUTH_DATA); //资金密码
+            request.setAttr("CUBSB_TYPE", CUBSB_TYPE); //银证业务类型DD[CUBSB_TYPE]
+            request.setAttr("BANK_AUTH_DATA", BANK_AUTH_DATA); //银行密码
 
             // 调用WebService获取返回值
             Response response = await this.invoke(request);
