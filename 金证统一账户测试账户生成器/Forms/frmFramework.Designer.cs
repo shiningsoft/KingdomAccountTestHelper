@@ -42,10 +42,14 @@ namespace 金证统一账户测试账户生成器
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFramework));
             this.menuStrip = new System.Windows.Forms.MenuStrip();
             this.tsmiFunction = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.查看当前日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.打开日志目录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改数据字典ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
@@ -54,6 +58,8 @@ namespace 金证统一账户测试账户生成器
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.自定义数据字典ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -63,8 +69,8 @@ namespace 金证统一账户测试账户生成器
             this.menuStrip.AllowMerge = false;
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiFunction,
+            this.toolStripMenuItem1,
             this.设置ToolStripMenuItem,
-            this.修改数据字典ToolStripMenuItem,
             this.关于ToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
@@ -75,6 +81,8 @@ namespace 金证统一账户测试账户生成器
             // tsmiFunction
             // 
             this.tsmiFunction.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator2,
+            this.toolStripMenuItem2,
             this.toolStripSeparator1,
             this.退出ToolStripMenuItem});
             this.tsmiFunction.Name = "tsmiFunction";
@@ -82,31 +90,61 @@ namespace 金证统一账户测试账户生成器
             this.tsmiFunction.Text = "功能列表";
             this.tsmiFunction.MouseHover += new System.EventHandler(this.tsmiFunction_MouseHover);
             // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(152, 22);
+            this.toolStripMenuItem2.Text = "操作员登录";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.tsmiOperatorLogin_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(97, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(149, 6);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.查看当前日志ToolStripMenuItem,
+            this.打开日志目录ToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(44, 21);
+            this.toolStripMenuItem1.Text = "日志";
+            // 
+            // 查看当前日志ToolStripMenuItem
+            // 
+            this.查看当前日志ToolStripMenuItem.Name = "查看当前日志ToolStripMenuItem";
+            this.查看当前日志ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.查看当前日志ToolStripMenuItem.Text = "查看当前日志";
+            this.查看当前日志ToolStripMenuItem.Click += new System.EventHandler(this.查看当前日志ToolStripMenuItem_Click);
+            // 
+            // 打开日志目录ToolStripMenuItem
+            // 
+            this.打开日志目录ToolStripMenuItem.Name = "打开日志目录ToolStripMenuItem";
+            this.打开日志目录ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.打开日志目录ToolStripMenuItem.Text = "打开日志目录";
+            this.打开日志目录ToolStripMenuItem.Click += new System.EventHandler(this.打开日志目录ToolStripMenuItem_Click);
+            // 
             // 设置ToolStripMenuItem
             // 
+            this.设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.自定义数据字典ToolStripMenuItem,
+            this.系统设置ToolStripMenuItem});
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
             this.设置ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.设置ToolStripMenuItem.Text = "设置";
-            this.设置ToolStripMenuItem.Click += new System.EventHandler(this.设置ToolStripMenuItem_Click);
-            // 
-            // 修改数据字典ToolStripMenuItem
-            // 
-            this.修改数据字典ToolStripMenuItem.Name = "修改数据字典ToolStripMenuItem";
-            this.修改数据字典ToolStripMenuItem.Size = new System.Drawing.Size(92, 21);
-            this.修改数据字典ToolStripMenuItem.Text = "修改数据字典";
-            this.修改数据字典ToolStripMenuItem.Click += new System.EventHandler(this.修改数据字典ToolStripMenuItem_Click);
+            this.设置ToolStripMenuItem.Text = "选项";
             // 
             // 关于ToolStripMenuItem
             // 
@@ -173,6 +211,20 @@ namespace 金证统一账户测试账户生成器
             this.panel.Size = new System.Drawing.Size(926, 476);
             this.panel.TabIndex = 76;
             // 
+            // 自定义数据字典ToolStripMenuItem
+            // 
+            this.自定义数据字典ToolStripMenuItem.Name = "自定义数据字典ToolStripMenuItem";
+            this.自定义数据字典ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.自定义数据字典ToolStripMenuItem.Text = "自定义数据字典";
+            this.自定义数据字典ToolStripMenuItem.Click += new System.EventHandler(this.自定义数据字典ToolStripMenuItem_Click);
+            // 
+            // 系统设置ToolStripMenuItem
+            // 
+            this.系统设置ToolStripMenuItem.Name = "系统设置ToolStripMenuItem";
+            this.系统设置ToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.系统设置ToolStripMenuItem.Text = "系统设置";
+            this.系统设置ToolStripMenuItem.Click += new System.EventHandler(this.系统设置ToolStripMenuItem_Click);
+            // 
             // frmFramework
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -209,9 +261,15 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripStatusLabel requestQueueCount;
         private System.Windows.Forms.ToolStripStatusLabel tsslVersion;
-        private System.Windows.Forms.ToolStripMenuItem 修改数据字典ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 查看当前日志ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 打开日志目录ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem 自定义数据字典ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 系统设置ToolStripMenuItem;
     }
 }
 

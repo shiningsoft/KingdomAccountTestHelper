@@ -217,5 +217,88 @@ namespace 金证统一账户测试账户生成器
         {
             Settings.Default.Save();
         }
+
+        /// <summary>
+        /// 查看当前日志
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void 查看当前日志ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = Environment.CurrentDirectory + @"\logs\" + DateTime.Now.ToString("yyyy-MM-dd") + @".log";
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 打开日志文件夹
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void 打开日志目录ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = Environment.CurrentDirectory + @"\logs\";
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 操作员登录
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        async private void tsmiOperatorLogin_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (await kess.operatorLogin())
+                {
+                    resultForm.Show();
+                    resultForm.Append("操作员登录成功");
+                }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("操作员登录失败：" + ex.Message);
+            }
+        }
+
+        private void 系统设置ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (frmSettings == null || frmSettings.IsDisposed)
+            {
+                frmSettings = new frmSettings(this);
+                frmSettings.Show();
+            }
+            else
+            {
+                frmSettings.Activate();
+            }
+        }
+
+        private void 自定义数据字典ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string path = Environment.CurrentDirectory + @"\CustomDict\";
+                System.Diagnostics.Process.Start(path);
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+        }
     }
 }

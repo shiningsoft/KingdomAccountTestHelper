@@ -344,23 +344,7 @@ namespace 金证统一账户测试账户生成器
             }
             btnQueryStockAccount.Enabled = true;
         }
-
-        private async void btnLogin_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (await kess.operatorLogin())
-                {
-                    resultForm.Show();
-                    resultForm.Append("操作员登录成功");
-                }
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append("操作员登录失败：" + ex.Message);
-            }
-        }
-
+        
         private async void btnRegisterStockAccount_Click(object sender, EventArgs e)
         {
             resultForm.Show();
@@ -848,7 +832,7 @@ namespace 金证统一账户测试账户生成器
             image = Resources.样本身份证正面;
             using (Graphics g = Graphics.FromImage(image))
             {
-                g.DrawString(name, new Font("黑体", 13), Brushes.Black, new PointF(400, 220));    // 姓名
+                g.DrawString(name, new Font("黑体", 18), Brushes.Black, new PointF(400, 220));    // 姓名
                 g.DrawString(sex, new Font("黑体", 13), Brushes.Black, new PointF(400, 360));    // 性别
                 g.DrawString(nationality, new Font("黑体", 13), Brushes.Black, new PointF(800, 360));    // 民族
                 g.DrawString(birthday, new Font("黑体", 13), Brushes.Black, new PointF(400, 500));  // 出生年月日

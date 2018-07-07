@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--2.2操作员退出-->
+<request>
+  <auth>
+    <OPERATOR></OPERATOR>
+  </auth>
+  <data></data>
+</request>
