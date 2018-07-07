@@ -141,6 +141,12 @@
     <Compile Include="Forms\frmFramework.Designer.cs">
       <DependentUpon>frmFramework.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmWebServiceInterfaceTestAdvance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmWebServiceInterfaceTestAdvance.Designer.cs">
+      <DependentUpon>frmWebServiceInterfaceTestAdvance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmWebServiceInterfaceTest.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -282,6 +288,9 @@
     <EmbeddedResource Include="Forms\frmResultForm.resx">
       <DependentUpon>frmResultForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmWebServiceInterfaceTestAdvance.resx">
+      <DependentUpon>frmWebServiceInterfaceTestAdvance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmWebServiceInterfaceTest.resx">
       <DependentUpon>frmWebServiceInterfaceTest.cs</DependentUpon>
     </EmbeddedResource>
@@ -356,6 +365,7 @@
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\openCuacct.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\mdfUserExtInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

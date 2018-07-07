@@ -101,6 +101,36 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
+        /// 返回Data节点
+        /// </summary>
+        public XmlNode data
+        {
+            get
+            {
+                return xmlDoc.GetElementsByTagName("data")[0];
+            }
+        }
+
+        /// <summary>
+        /// 返回请求的标题
+        /// </summary>
+        public string title
+        {
+            get
+            {
+                if (xmlDoc.ChildNodes[1].NodeType==XmlNodeType.Comment)
+                {
+                    string[] comments = xmlDoc.ChildNodes[1].InnerText.Trim().Split('\n');
+                    return comments[0];
+                }
+                else
+                {
+                    return "没有注明接口名称";
+                }
+            }
+        }
+
+        /// <summary>
         /// 设置本次请求的操作员
         /// </summary>
         /// <param name="id"></param>
