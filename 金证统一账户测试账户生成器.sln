@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "金证统一账户测试账
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xml格式化工具", "Xml格式化工具\Xml格式化工具.csproj", "{430CEEE5-D2D0-4AF0-889E-B57C585C4DF3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Request文件生成工具", "Request文件生成工具\Request文件生成工具.csproj", "{A441BA0B-3A99-4353-BB2C-44C147FED8EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{430CEEE5-D2D0-4AF0-889E-B57C585C4DF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{430CEEE5-D2D0-4AF0-889E-B57C585C4DF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{430CEEE5-D2D0-4AF0-889E-B57C585C4DF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A441BA0B-3A99-4353-BB2C-44C147FED8EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A441BA0B-3A99-4353-BB2C-44C147FED8EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A441BA0B-3A99-4353-BB2C-44C147FED8EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A441BA0B-3A99-4353-BB2C-44C147FED8EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

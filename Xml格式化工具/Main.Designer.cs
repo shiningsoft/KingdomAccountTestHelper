@@ -95,6 +95,7 @@
             this.tbXmlStr.Location = new System.Drawing.Point(12, 41);
             this.tbXmlStr.Multiline = true;
             this.tbXmlStr.Name = "tbXmlStr";
+            this.tbXmlStr.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbXmlStr.Size = new System.Drawing.Size(960, 475);
             this.tbXmlStr.TabIndex = 6;
             // 
