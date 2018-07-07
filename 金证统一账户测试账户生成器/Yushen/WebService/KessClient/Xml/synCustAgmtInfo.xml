@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.256	客户签署协议信息同步-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--调查表编码（必传）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--用户角色（必传）-->
+    <USER_ROLE></USER_ROLE>
+    <!--客户协议类型（非必传）-->
+    <CUST_AGMT_TYPE></CUST_AGMT_TYPE>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--客户总资产（非必传）-->
+    <CUST_RANGE></CUST_RANGE>
+  </data>
+</request>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.246	受益人信息查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--受益人编号（非必传）-->
+    <BENEFICIARY_NO></BENEFICIARY_NO>
+  </data>
+</request>

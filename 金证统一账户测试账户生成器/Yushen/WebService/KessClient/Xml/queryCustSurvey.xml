@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.261	用户调查查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--试题编码（必传）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--用户角色（必传）-->
+    <USER_ROLE></USER_ROLE>
+    <!--版本（非必传）-->
+    <VERSION></VERSION>
+  </data>
+</request>

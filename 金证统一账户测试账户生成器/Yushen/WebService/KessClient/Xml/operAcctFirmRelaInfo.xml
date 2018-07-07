@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.202	账户公司关联人信息维护-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-增加，1-修改，2删除-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--用户名称（非必传）-->
+    <RELA_NAME></RELA_NAME>
+    <!--客户代码（非必传）-->
+    <RELA_CUST_CODE></RELA_CUST_CODE>
+    <!--关联关系（非必传）-->
+    <RELAKIND_COMM></RELAKIND_COMM>
+    <!--证件类型（必传）-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码（必传）-->
+    <ID_CODE></ID_CODE>
+    <!--关联人电话（非必传）-->
+    <RELA_TEL></RELA_TEL>
+    <!--备注（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

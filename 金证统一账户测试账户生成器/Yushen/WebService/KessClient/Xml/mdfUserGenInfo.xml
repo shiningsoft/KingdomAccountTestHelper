@@ -13,59 +13,77 @@
     <ZIP_CODE>112223</ZIP_CODE>
     <!--联系地址（必传）-->
     <ADDRESS>广东深圳</ADDRESS>
-    <!--学历-->
+    <!--电子邮箱（非必传，同步到融资融券的时候必传）-->
+    <FISL_EMAIL></FISL_EMAIL>
+    <!--学历（非必传）-->
     <EDUCATION></EDUCATION>
-    <!--联系电话-->
+    <!--联系电话（非必传）-->
     <TEL></TEL>
-    <!--传真电话-->
+    <!--传真电话（非必传）-->
     <FAX></FAX>
-    <!--电子邮箱-->
+    <!--电子邮箱（非必传）-->
     <EMAIL></EMAIL>
-    <!--移动电话-->
+    <!--移动电话（非必传）-->
     <MOBILE_TEL></MOBILE_TEL>
-    <!--国籍DD[CITIZENSHIP]-->
+    <!--国籍DD[CITIZENSHIP]（非必传）-->
     <CITIZENSHIP></CITIZENSHIP>
-    <!--民族DD[NATIONALITY]-->
+    <!--民族DD[NATIONALITY]（非必传）-->
     <NATIONALITY></NATIONALITY>
-    <!--籍贯-->
+    <!--籍贯（非必传）-->
     <NATIVE_PLACE></NATIVE_PLACE>
-    <!--性别DD[SEX]-->
+    <!--性别DD[SEX]（非必传）-->
     <SEX></SEX>
-    <!--出生日期-->
+    <!--出生日期（非必传）-->
     <BIRTHDAY></BIRTHDAY>
-    <!--备注信息-->
+    <!--备注信息（非必传）-->
     <REMARK></REMARK>
-    <!--发证机关-->
+    <!--发证机关（非必传）-->
     <ID_ISS_AGCY></ID_ISS_AGCY>
-    <!--证件有效日期-->
+    <!--证件有效日期（非必传）-->
     <ID_EXP_DATE></ID_EXP_DATE>
-    <!--证件开始日期-->
+    <!--证件开始日期（非必传）-->
     <ID_BEG_DATE></ID_BEG_DATE>
-    <!--证件编码-->
+    <!--证件编码（非必传）-->
     <ID_ZIP_CODE></ID_ZIP_CODE>
-    <!--证件地址-->
+    <!--证件地址（非必传）-->
     <ID_ADDR></ID_ADDR>
-    <!--婚姻状态-->
+    <!--婚姻状态（非必传）-->
     <MARRY></MARRY>
-    <!--兴趣爱好-->
+    <!--兴趣爱好（非必传）-->
     <AVOCATION></AVOCATION>
-    <!--交通工具DD[VEHICLE]-->
+    <!--交通工具DD[VEHICLE]（非必传）-->
     <VEHICLE></VEHICLE>
-    <!--住宅所有权状况-->
+    <!--住宅所有权状况（非必传）-->
     <HOUSE_OWNER></HOUSE_OWNER>
-    <!--办工电话-->
+    <!--办工电话（非必传）-->
     <OFFICE_TEL></OFFICE_TEL>
-    <!--小灵通电话-->
+    <!--小灵通电话（非必传）-->
     <WELL_TEL></WELL_TEL>
-    <!--首选联系电话-->
+    <!--首选联系电话（非必传）-->
     <LINKTEL_ORDER></LINKTEL_ORDER>
-    <!--办工地址-->
+    <!--办工地址（非必传）-->
     <OFFICE_ADDR></OFFICE_ADDR>
-    <!--公司地址-->
+    <!--公司地址（非必传）-->
     <CORP_ADDR></CORP_ADDR>
-    <!--首选联系地址-->
+    <!--首选联系地址（非必传）-->
     <LINKADDR_ORDER></LINKADDR_ORDER>
-    <!--开户来源-->
+    <!--开户来源（非必传）-->
     <OPEN_SOURCE></OPEN_SOURCE>
+    <!--同步子系统（非必传）-->
+    <SUBSYS></SUBSYS>
+    <!--风险要素（非必传）-->
+    <RISK_FACTOR></RISK_FACTOR>
+    <!--开户规范（非必传）-->
+    <CRITERION></CRITERION>
+    <!--客户分类（非必传）-->
+    <CUST_CLS></CUST_CLS>
+    <!--手机校验标识（非必传）-->
+    <TEL_CHK_FLAG></TEL_CHK_FLAG>
+    <!--邮箱校验标识（非必传）-->
+    <EMAIL_CHK_FLAG></EMAIL_CHK_FLAG>
+    <!--金融相关专业学历校验标识（非必传）-->
+    <FIN_EDU_FLAG></FIN_EDU_FLAG>
+    <!--职业（非必传）-->
+    <VOCATION></VOCATION>
   </data>
 </request>

@@ -5,6 +5,7 @@
     <OPERATOR>33146</OPERATOR>
   </auth>
   <data>
+    <!--其他配置字段名对应APPT_EXTEND_CFG里面的FIELD_CODE-->
     <!--操作类型：0表示登记预约开户资料，1表示修改预约开户资料-->
     <OP_TYPE>1</OP_TYPE>
     <!--当前日期-->

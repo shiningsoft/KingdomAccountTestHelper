@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.217	证券账户转托管-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--交易账户（必传）-->
+    <TRDACCT></TRDACCT>
+    <!--交易板块（必传）DD[STKBD]-->
+    <STKBD></STKBD>
+    <!--证券代码（非必传）-->
+    <STK_CODE></STK_CODE>
+    <!--权益类别(非必传)-->
+    <ETTLM_TYPE></ETTLM_TYPE>
+    <!--权益编号(非必传)-->
+    <ETTLM_NO></ETTLM_NO>
+    <!--上市状态（非必传）-->
+    <LIST_STATUS></LIST_STATUS>
+  </data>
+</request>

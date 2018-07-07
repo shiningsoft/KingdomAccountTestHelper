@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.211	债券合格投资者信息查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--开始日期（非必传）-->
+    <BGN_DATE></BGN_DATE>
+    <!--结束日期（非必传）-->
+    <END_DATE></END_DATE>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--内部机构（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--证件类型（非必传）-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码（非必传）-->
+    <ID_DODE></ID_DODE>
+    <!--风险认知书签署日期（非必传）-->
+    <SIGN_DATE></SIGN_DATE>
+    <!--开户日期（非必传）-->
+    <OPEN_DATE></OPEN_DATE>
+    <!--销户日期（非必传）-->
+    <CLOSE_DATE></CLOSE_DATE>
+    <!--开通类型（非必传）-->
+    <OPEN_TYPE></OPEN_TYPE>
+    <!--申报状态（非必传）-->
+    <RPT_STATUS></RPT_STATUS>
+  </data>
+</request>

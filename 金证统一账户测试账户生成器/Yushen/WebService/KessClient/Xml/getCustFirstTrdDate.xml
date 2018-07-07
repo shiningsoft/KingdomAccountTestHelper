@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--2.169	首次交易日期查询或中登报送-->
+<!--2.168	首次交易日期查询或中登报送-->
 <request>
   <auth>
     <OPERATOR>36050</OPERATOR>
@@ -7,7 +7,15 @@
   <data>
     <!--客户代码（必输）-->
     <CUST_CODE></CUST_CODE>
-    <!--是否强制发送中登0-否1-是2-只读取本地数据第一次执行送0，如果获取到首次交易日期，之后查询送2-->
+    <!--用户类型（非必输）-->
+    <USER_TYPE></USER_TYPE>
+    <!--用户全称（非必输）-->
+    <USER_FNAME></USER_FNAME>
+    <!--证件类型（非必输）-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码（非必输）-->
+    <ID_CODE></ID_CODE>
+    <!--是否强制发送中登（非必输）0-否1-是2-只读取本地数据第一次执行送0，如果获取到首次交易日期，之后查询送2-->
     <IS_FORCE_SENT></IS_FORCE_SENT>
   </data>
 </request>

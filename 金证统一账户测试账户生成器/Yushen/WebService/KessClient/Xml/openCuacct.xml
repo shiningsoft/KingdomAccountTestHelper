@@ -8,22 +8,42 @@
   </auth>
   <data>
     <!--用户代码(必传)-->
-    <USER_CODE>310100033013</USER_CODE>
-    <!--资产账户类别（必传）DD[CUACCT_CLS]-->
-    <CUACCT_CLS>0</CUACCT_CLS>
-    <!--资产账户级别（必传）DD[CUACCT_LVL]-->
-    <CUACCT_LVL>0</CUACCT_LVL>
-    <!--资产账户组别（必传）DD[CUACCT_GRP]-->
-    <CUACCT_GRP>0</CUACCT_GRP>
-    <!--货币（必传）DD[CURRENCY]-->
-    <CURRENCY>0</CURRENCY>
-    <!--内部机构（非必传）-->
-    <INT_ORG>3101</INT_ORG>
+    <USER_CODE></USER_CODE>
     <!--资产账户（非必传）-->
-    <CUACCT_CODE>310100033013</CUACCT_CODE>
-    <!--帐户类型（非必传）-->
-    <FUND_TYPE>0</FUND_TYPE>
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--内部机构（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--资产账户属性（必传）-->
+    <CUACCT_ATTR></CUACCT_ATTR>
+    <!--资产账户类别（必传）DD[CUACCT_CLS]-->
+    <CUACCT_CLS></CUACCT_CLS>
+    <!--资产账户级别（必传）DD[CUACCT_LVL]-->
+    <CUACCT_LVL></CUACCT_LVL>
+    <!--资产账户组别（必传）DD[CUACCT_GRP]-->
+    <CUACCT_GRP></CUACCT_GRP>
+    <!--货币（必传）DD[CURRENCY]-->
+    <CURRENCY></CURRENCY>
+    <!--利率编码（非必传）-->
+    <INT_RATE_SN></INT_RATE_SN>
     <!--备注信息（非必传）-->
-    <OP_REMARK>0</OP_REMARK>
+    <OP_REMARK></OP_REMARK>
+    <!--校验标志（非必传）-->
+    <CHK_RIGHT_FLAG></CHK_RIGHT_FLAG>
+    <!--帐户类型（非必传）-->
+    <FUND_TYPE></FUND_TYPE>
+    <!--负债利率编码（非必传）-->
+    <DR_RATE_GRP></DR_RATE_GRP>
+    <!--对账单提供方式（非必传）-->
+    <BILL_PRO_WAY></BILL_PRO_WAY>
+    <!--同步子系统（非必传）-->
+    <SUBSYS></SUBSYS>
+    <!--设置资金权限限制标志（非必传）-->
+    <LMT_FLAG></LMT_FLAG>
+    <!--同步子系统串（非必传）-->
+    <SUBSYSS></SUBSYSS>
+    <!--顶点标志（非必传）-->
+    <DDFLAG></DDFLAG>
+    <!--OTC理财标识（非必传）-->
+    <OTC_FMAN_FLAG></OTC_FMAN_FLAG>
   </data>
 </request>

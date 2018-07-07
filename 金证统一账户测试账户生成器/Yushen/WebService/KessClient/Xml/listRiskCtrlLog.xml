@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.276	查询协议失效状态流水-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--失效状态（非必传）-->
+    <INVALID_STATUS></INVALID_STATUS>
+    <!--开始日期（非必传）-->
+    <BEGIN_DATE></BEGIN_DATE>
+    <!--结束日期（非必传）-->
+    <END_DATE></END_DATE>
+    <!--字典标志（非必传）-->
+    <DICT_FLAG></DICT_FLAG>
+    <!--机构代码（非必传）-->
+    <INT_ORGS></INT_ORGS>
+  </data>
+</request>

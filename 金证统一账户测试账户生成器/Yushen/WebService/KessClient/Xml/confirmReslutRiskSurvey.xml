@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.108	预测评设置-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--调查表编码（调查表类别则必传）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--调查表类别（非必传）-->
+    <SURVEY_CLS></SURVEY_CLS>
+    <!--调查表分值（非必传）-->
+    <SURVEY_SCORE></SURVEY_SCORE>
+    <!--评级级别（非必传）-->
+    <RATING_LVL></RATING_LVL>
+    <!--评级日期（非必传）-->
+    <RATING_DATE></RATING_DATE>
+    <!--生效日期（非必传）-->
+    <EFFECTIVE_DATE></EFFECTIVE_DATE>
+    <!--备注信息（非必传）-->
+    <REMARK></REMARK>
+    <!--是否通过（非必传）-->
+    <CHK_RESULT></CHK_RESULT>
+    <!--提醒次数（非必传）-->
+    <NOTE_TIMES></NOTE_TIMES>
+    <!--投资期限（非必传）-->
+    <INVEST_LMT></INVEST_LMT>
+    <!--投资品种（非必传）-->
+    <INVEST_PRO></INVEST_PRO>
+    <!--交易密码（非必传）-->
+    <TRDPSW></TRDPSW>
+    <!--版本号（非必传）-->
+    <VERSION></VERSION>
+    <!--试题题目串（非必传）-->
+    <SURVEY_COLS></SURVEY_COLS>
+    <!--试题答案串（非必传）-->
+    <SURVEY_CELLS></SURVEY_CELLS>
+  </data>
+</request>

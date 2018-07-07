@@ -16,7 +16,7 @@
     <!--客户代码-->
     <CUST_CODE></CUST_CODE>
     <!--客户全称-->
-    <CUST_FNAME>00</CUST_FNAME>
+    <CUST_FNAME></CUST_FNAME>
     <!--证件类型-->
     <ID_TYPE>00</ID_TYPE>
     <!--证件号码-->

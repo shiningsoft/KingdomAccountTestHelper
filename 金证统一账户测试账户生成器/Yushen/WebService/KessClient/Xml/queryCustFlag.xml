@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.249	查询客户标志-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--客户标示（非必传）DD[CUST_FLAG_ID]-->
+    <CUST_FLAG_ID></CUST_FLAG_ID>
+  </data>
+</request>

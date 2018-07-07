@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.274	一码通查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--一码通账号（非必传）-->
+    <YMT_CODE></YMT_CODE>
+  </data>
+</request>

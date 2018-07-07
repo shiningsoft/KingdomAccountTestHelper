@@ -9,6 +9,8 @@
     <SURVEY_CLS></SURVEY_CLS>
     <!--调查表编码（非必传）-->
     <SURVEY_SN></SURVEY_SN>
+    <!--版本（非必传）不送默认最新版本-->
+    <VERSION></VERSION>
     <!--主客观（非必传）-->
     <SURVEY_TYPES></SURVEY_TYPES>
     <!--网上开户所需渠道表示（非必传）-->

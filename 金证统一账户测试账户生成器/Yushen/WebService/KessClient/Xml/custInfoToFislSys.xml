@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--2.186	客户资料同步至融资融券系统
+<!--2.185	客户资料同步至融资融券系统
 注1：此接口功能需OEM“KBSS融资融券非现场业务”的授权才能使用
 -->
 <request>
@@ -33,5 +33,7 @@ OperType[0]+OperType[1]+OperType[2]+OperType[3]+OperType[4]+OperType[51]+OperTyp
     <FISL_TRD_AUTH_DATA>123123</FISL_TRD_AUTH_DATA>
     <!--是否同步密码（非必输）0-同步其它-不同步U版使用-->
     <SYNC_AUTH></SYNC_AUTH>
+    <!--操作渠道（非必输）-->
+    <CHANNELS></CHANNELS>
   </data>
 </request>

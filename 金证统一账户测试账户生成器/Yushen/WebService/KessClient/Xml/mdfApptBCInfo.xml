@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.265	预约用户受益人/控制人信息维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--流水序号（必传）-->
+    <SERIAL_NO></SERIAL_NO>
+    <!--操作类型（必传）-->
+    <OPERATION_TYPE></OPERATION_TYPE>
+    <!--控制人类型还是受益人类型（必传）B—受益人C—控制人-->
+    <BC_TYPE></BC_TYPE>
+    <!--受益人/控制人编号（必传）新增的时候不用传-->
+    <BC_NUM></BC_NUM>
+    <!--受益人/控制人名称（非必传）-->
+    <BC_NAME></BC_NAME>
+    <!--受益人/控制人证件类型（非必传）DD[ID_TYPE]-->
+    <BC_ID_TYPE></BC_ID_TYPE>
+    <!--受益人/控制人证件号码（非必传）-->
+    <BC_ID_CODE></BC_ID_CODE>
+    <!--受益人/控制人证件有效期（非必传）-->
+    <BC_ID_EXP_DATE></BC_ID_EXP_DATE>
+    <!--受益人电话号码（非必传）-->
+    <BC_TEL></BC_TEL>
+    <!--受益人/控制人邮箱（非必传）-->
+    <BC_EMAIL></BC_EMAIL>
+    <!--与受益人/控制人关系（非必传）DD[RELATION]-->
+    <BC_RELATION></BC_RELATION>
+    <!--备注（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

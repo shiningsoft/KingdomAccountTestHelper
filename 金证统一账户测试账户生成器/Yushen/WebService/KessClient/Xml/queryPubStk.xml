@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.260	上市公司股东股票表查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--证券交易所（非必传）-->
+    <STKEX></STKEX>
+    <!--上市公司名称（非必传）-->
+    <PUB_NAME></PUB_NAME>
+    <!--证券代码（非必传）-->
+    <STK_CODE></STK_CODE>
+    <!--股票数量（非必传）-->
+    <STK_NUM></STK_NUM>
+    <!--持股比例（非必传）-->
+    <STKCODE_SCALE></STKCODE_SCALE>
+  </data>
+</request>

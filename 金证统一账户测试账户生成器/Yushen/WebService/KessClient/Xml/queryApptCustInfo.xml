@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.262	预约开户资料查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--开始日期（必传）-->
+    <BGN_DATE></BGN_DATE>
+    <!--结束日期（必传）-->
+    <END_DATE></END_DATE>
+    <!--复核状态（非必传）DD[CHK_STATUS]-->
+    <CHK_STATUS></CHK_STATUS>
+    <!--用户类型（非必传）DD[USER_TYPE]-->
+    <USER_TYPE></USER_TYPE>
+    <!--预约业务（必传）DD[APPT_BIZ]-->
+    <APPT_BIZ></APPT_BIZ>
+    <!--预约方式（必传）DD[APPT_CHNL]-->
+    <APPT_CHNL></APPT_CHNL>
+    <!--预约状态（非必传）DD[APPT_STATUS]复数@表示所有-->
+    <APPT_STATUS></APPT_STATUS>
+    <!--复核状态（非必传）-->
+    <CHK_STATUS></CHK_STATUS>
+    <!--证件号码（非必传）-->
+    <ID_CODE></ID_CODE>
+  </data>
+</request>

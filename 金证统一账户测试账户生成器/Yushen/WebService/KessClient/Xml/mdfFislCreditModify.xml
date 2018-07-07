@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.273	额度变更申请信息变更-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）（0:增加1:修改2:删除）-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--申请编号（非必传）-->
+    <APP_SN></APP_SN>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--机构代码（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--更改融资额度（非必传）-->
+    <APP_FI_CREDIT></APP_FI_CREDIT>
+    <!--更改融券额度（非必传）-->
+    <APP_SL_CREDIT></APP_SL_CREDIT>
+    <!--更改总额度（非必传）-->
+    <APP_TOT_CREDIT></APP_TOT_CREDIT>
+    <!--更改额度系数（非必传）-->
+    <APP_CREDIT_DEGREE></APP_CREDIT_DEGREE>
+    <!--更改征信级别（非必传）-->
+    <APP_CDT_LEVEL_SN></APP_CDT_LEVEL_SN>
+    <!--更改前融资额度（非必传）-->
+    <BEFOR_FI_CREDIT></BEFOR_FI_CREDIT>
+    <!--更改前融券额度（非必传）-->
+    <BEFOR_SL_CREDIT></BEFOR_SL_CREDIT>
+    <!--更改前总额度（非必传）-->
+    <BEFOR_TOT_CREDIT></BEFOR_TOT_CREDIT>
+    <!--更改前额度系数（非必传）-->
+    <BEFOR_CREDIT_DEGREE></BEFOR_CREDIT_DEGREE>
+    <!--更改前征信级别（非必传）-->
+    <BEFOR_CDT_LEVEL_SN></BEFOR_CDT_LEVEL_SN>
+    <!--变更类型（非必传）-->
+    <APP_MDF_TYPE></APP_MDF_TYPE>
+    <!--申请状态（非必传）-->
+    <APP_MDF_STATUS></APP_MDF_STATUS>
+    <!--影像任务流水序号（非必传）-->
+    <SERIAL_NO></SERIAL_NO>
+    <!--备注（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

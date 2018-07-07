@@ -29,7 +29,7 @@
     <SIGN_PLACE></SIGN_PLACE>
     <!--是否重新申报1-重新申报-->
     <REDO_FLAG></REDO_FLAG>
-    <!--报送状态0-待报1-正报2-申报成功3-申报失败-->
+    <!--报送状态0-未报,1-已报,9-报送失败-->
     <DEAL_STATUS>0</DEAL_STATUS>
     <!--签署日期-->
     <SIGN_DATE></SIGN_DATE>
@@ -51,5 +51,9 @@
     <AGMT_OPER_FLAG></AGMT_OPER_FLAG>
     <!--申请标志-->
     <OPEN_FLAG></OPEN_FLAG>
+    <!--是否处理报送流水-->
+    <SETT_DEALLOG></SETT_DEALLOG>
+    <!--检查资源权限-->
+    <CHECK_RES_RIGHT></CHECK_RES_RIGHT>
   </data>
 </request>

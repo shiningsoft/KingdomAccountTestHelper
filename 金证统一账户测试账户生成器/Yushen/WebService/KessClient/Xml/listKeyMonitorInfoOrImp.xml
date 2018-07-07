@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.277	重点监管账户名单查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账号（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--证券账号（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--一码通账号（非必传）-->
+    <YMT_CODE></YMT_CODE>
+    <!--用户名称（非必传）-->
+    <USER_NAME></USER_NAME>
+    <!--证件类型（非必传）-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码（非必传）-->
+    <ID_CODE></ID_CODE>
+  </data>
+</request>

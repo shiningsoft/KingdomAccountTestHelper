@@ -7,27 +7,21 @@
     <OPERATOR>36050</OPERATOR>
   </auth>
   <data>
-    <!--操作类型0-增加1-修改2-删除-->
+    <!--操作类型（必输）0-增加1-修改2-删除-->
     <OPERATOR_TYPE></OPERATOR_TYPE>
-    <!--用户代码-->
+    <!--用户代码（必输）-->
     <USER_CODE></USER_CODE>
-    <!--用户角色DD[USER_ROLE]-->
-    <USER_ROLE></USER_ROLE>
-    <!--调查表编码-->
+    <!--调查表编码（非必输）-->
     <SURVEY_SN></SURVEY_SN>
-    <!--调查表分值-->
+    <!--调查表分值（非必输）-->
     <SURVEY_SCORE></SURVEY_SCORE>
-    <!--评级级别-->
+    <!--评级级别（必输）-->
     <RATING_LVL></RATING_LVL>
-    <!--评级日期-->
+    <!--评级日期（非必输）-->
     <RATING_DATE></RATING_DATE>
-    <!--次序-->
-    <ORDINAL></ORDINAL>
-    <!--可共用类别-->
+    <!--可共用类别（非必输）-->
     <SHARE_SURVEY_CLSES></SHARE_SURVEY_CLSES>
-    <!--调查表类别-->
+    <!--调查表类别（非必输）-->
     <SURVEY_CLS></SURVEY_CLS>
-    <!--主客观-->
-    <SURVEY_TYPE></SURVEY_TYPE>
   </data>
 </request>

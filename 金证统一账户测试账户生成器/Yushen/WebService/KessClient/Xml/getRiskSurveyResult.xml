@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.109	批量答题-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--调查表编码（必传）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--用户代码（非必传）-->
+    <USER_CODE></USER_CODE>
+    <!--调查表栏目（复数）（必传）-->
+    <SURVEY_COL></SURVEY_COL>
+    <!--调查表单元（复数）（必传）-->
+    <SURVEY_CELLS></SURVEY_CELLS>
+    <!--版本（非必传）-->
+    <VERSION></VERSION>
+  </data>
+</request>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--2.91	查询客户扩展资料（账户系统）-->
+<!--2.91	查询客户职业信息-->
 <request>
   <auth>
     <OPERATOR>36050</OPERATOR>
@@ -7,5 +7,7 @@
   <data>
     <!--客户代码（必传）-->
     <USER_CODE>30496640</USER_CODE>
+    <!--出参类型（非必传）-->
+    <OUTPUT_TYPE>30496640</OUTPUT_TYPE>
   </data>
 </request>

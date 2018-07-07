@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.210	债券合格投资者信息维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）-->
+    <OPER_TYPE></OPER_TYPE>
+    <!--开通类型（非必传）-->
+    <OPEN_TYPE></OPEN_TYPE>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--交易账户名称（非必传）-->
+    <TRDACCT_NAME></TRDACCT_NAME>
+    <!--内部机构（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--证件类型（非必传）-->
+    <ID_TYPE></ID_TYPE>
+    <!--证件号码（非必传）-->
+    <ID_CODE></ID_CODE>
+    <!--风险认知书签署日期（非必传）-->
+    <SIGN_DATE></SIGN_DATE>
+    <!--开户如期（非必传）-->
+    <OPEN_DATE></OPEN_DATE>
+    <!--销户日期（非必传）-->
+    <CLOSE_DATE></CLOSE_DATE>
+    <!--申报状态（非必传）-->
+    <RPT_STATUS></RPT_STATUS>
+    <!--总资产（非必传）-->
+    <ASSET_VAL></ASSET_VAL>
+    <!--投资人名称（非必传）-->
+    <TZRMC></TZRMC>
+    <!--联系人姓名（非必传）-->
+    <LINKMAN_NAME></LINKMAN_NAME>
+    <!--联系人电话（非必传）-->
+    <LINKMAN_TEL></LINKMAN_TEL>
+    <!--联系人邮箱（非必传）-->
+    <LINKMAN_EMAIL></LINKMAN_EMAIL>
+    <!--备注信息（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

@@ -5,7 +5,7 @@
     <OPERATOR>36050</OPERATOR>
   </auth>
   <data>
-    <!--操作类型（必传）0：增加；1：修改；2：删除；3：修改影像状态；5：离柜开户-->
+    <!--操作类型（必传）0-增加1-修改2-删除3-修改影像状态5-离柜开户-->
     <OPERATOR_TYPE></OPERATOR_TYPE>
     <!--用户代码（必传）-->
     <USER_CODE></USER_CODE>

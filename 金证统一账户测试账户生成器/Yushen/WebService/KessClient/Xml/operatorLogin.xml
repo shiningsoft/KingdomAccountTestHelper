@@ -15,9 +15,11 @@
     <USER_CODE>2507</USER_CODE>
     <!--操作员密码（必传）-->
     <PASSWORD>123123</PASSWORD>
-    <!--操作渠道（非必传）-->
+    <!--操作渠道（非必传）若传，不允许传空-->
     <F_CHANNEL>j</F_CHANNEL>
     <!--代理IP（非必传）-->
     <AGENT_IP>192.168.40.118</AGENT_IP>
+    <!--打印标志（非必传）0-支持，其他-不支持-->
+    <PRINT_FLAG></PRINT_FLAG>
   </data>
 </request>

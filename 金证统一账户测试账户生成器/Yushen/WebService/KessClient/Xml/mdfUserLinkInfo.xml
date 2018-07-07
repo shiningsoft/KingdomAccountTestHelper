@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.230	用户联系信息修改-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--邮政编码（非必传）-->
+    <ZIP_CODE></ZIP_CODE>
+    <!--联系地址（非必传）-->
+    <ADDRESS></ADDRESS>
+    <!--联系电话（非必传）-->
+    <TEL></TEL>
+    <!--传真电话（非必传）-->
+    <FAX></FAX>
+    <!--电子邮箱（非必传）-->
+    <EMAIL></EMAIL>
+    <!--移动电话（非必传）-->
+    <MOBILE_TEL></MOBILE_TEL>
+    <!--证件编码（非必传）-->
+    <ID_ZIP_CODE></ID_ZIP_CODE>
+    <!--备注信息（非必传）-->
+    <REMARK></REMARK>
+    <!--手机校验标识（非必传）-->
+    <TEL_CHK_FLAG></TEL_CHK_FLAG>
+    <!--邮箱校验标识（非必传）-->
+    <EMAIL_CHK_FLAG></EMAIL_CHK_FLAG>
+    <!--办公地址（非必传）-->
+    <OFFICE_ADDR></OFFICE_ADDR>
+  </data>
+</request>

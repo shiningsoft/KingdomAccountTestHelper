@@ -20,6 +20,6 @@
     <!--调查表单元（复数）（必传），如：答案1，答案1.1（多选题以逗号分开）|答案2，答案2.1|...-->
     <SURVEY_CELLS>1,1|2|1</SURVEY_CELLS>
     <!--调查表做答分值（复数）（非必传）-->
-    <SURVEY_ANS_VALS>101</SURVEY_ANS_VALS>
+    <SURVEY_ANS_VALS>1|0|1</SURVEY_ANS_VALS>
   </data>
 </request>

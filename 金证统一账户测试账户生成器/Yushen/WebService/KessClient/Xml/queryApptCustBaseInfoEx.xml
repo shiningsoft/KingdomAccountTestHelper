@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.263	预约开户基本扩展资料查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--流水序号（必传）-->
+    <SERIAL_NO></SERIAL_NO>
+  </data>
+</request>

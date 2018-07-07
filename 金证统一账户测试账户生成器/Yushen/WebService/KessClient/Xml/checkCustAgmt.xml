@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.255	客户签署协议检查-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户协议类型（非必传）-->
+    <CUST_AGMT_TYPE></CUST_AGMT_TYPE>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--交易账户类别（非必传）-->
+    <TRDACCT_EXCLS></TRDACCT_EXCLS>
+    <!--开户期限（非必传）-->
+    <OPEN_DATES></OPEN_DATES>
+    <!--投资期限（非必传）-->
+    <TRADE_DATES></TRADE_DATES>
+    <!--证券账户资产（非必传）-->
+    <ASSET_RANGE></ASSET_RANGE>
+    <!--客户总资产（非必传）-->
+    <CUST_RANGE></CUST_RANGE>
+    <!--调查表分值（非必传）-->
+    <SURVEY_SCORE></SURVEY_SCORE>
+  </data>
+</request>

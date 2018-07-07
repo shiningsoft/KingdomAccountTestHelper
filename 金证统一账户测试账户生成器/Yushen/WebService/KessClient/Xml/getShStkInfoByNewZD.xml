@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.216	获取客户在中登的沪A股东账户信息-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--用户类型（必传）DD[USER_TYPE]-->
+    <USER_TYPE></USER_TYPE>
+    <!--客户名称（必传）-->
+    <CUST_FNAME></CUST_FNAME>
+    <!--证件类型（必传）-->
+    <ID_TYPE>00</ID_TYPE>
+    <!--证件号码（必传）-->
+    <ID_CODE>410106198312206187</ID_CODE>
+    <!--机构代码（必传）-->
+    <INT_ORG>101</INT_ORG>
+    <!--账户代理业务(非必输)DD[ACCTBIZ_EXCODE]默认为07-证券账户查询-->
+    <ACCTBIZ_EXCODE>07</ACCTBIZ_EXCODE>
+    <!--证券账户类别(非必输)DD[ACCT_TYPE]-->
+    <ACCT_TYPE>11</ACCT_TYPE>
+  </data>
+</request>

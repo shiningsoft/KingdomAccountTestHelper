@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.200	客户拓展资料查询-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--表字段代码（必传），一次只能查询一种资料
+LINKMAN_INFO-联系人资料
+CORP_INFO-公司资料
+EXTEND_INFO-拓展资料
+OCCUPATION_INFO-职业资料
+PARTNER_INFO-合伙人
+GUARDIAN_INFO-监护人
+BENEFICIARY_INFO-受益人-->
+    <FLD_CODE>LINKMAN_INFO</FLD_CODE>
+  </data>
+</request>

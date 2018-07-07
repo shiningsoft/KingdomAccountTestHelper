@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.208	客户资料同步到银行账户-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作用户代码（必传）-->
+    <F_OP_USER></F_OP_USER>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--货币代码（非必传）-->
+    <CURRENCY></CURRENCY>
+    <!--外部机构（非必传）-->
+    <EXT_ORG></EXT_ORG>
+    <!--备注（非必传）-->
+    <OP_REMARK></OP_REMARK>
+    <!--资金认证数据（非必传）-->
+    <FUND_AUTH_DATA></FUND_AUTH_DATA>
+    <!--银行认证数据（非必传）-->
+    <BANK_AUTH_DATA></BANK_AUTH_DATA>
+  </data>
+</request>

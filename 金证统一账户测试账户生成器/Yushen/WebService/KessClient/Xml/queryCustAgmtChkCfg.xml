@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.254	客户签署协议检查配置查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户协议类型（非必传）DD[CUST_AGMT_TYPE]-->
+    <CUST_AGMT_TYPE></CUST_AGMT_TYPE>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--交易账户类别（非必传）DD[TRDACCT_EXCLS]-->
+    <TRDACCT_EXCLS></TRDACCT_EXCLS>
+  </data>
+</request>

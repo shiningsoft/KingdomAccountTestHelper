@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.192	券商发起同步利息归本-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账户（必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--币种（必传）-->
+    <CURRENCY>0</CURRENCY>
+    <!--外部机构（非必传）-->
+    <EXT_ORG></EXT_ORG>
+    <!--备注（非必传）-->
+    <OP_REMARK></OP_REMARK>
+  </data>
+</request>

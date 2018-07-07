@@ -215,6 +215,7 @@
     <Content Include="Yushen\WebService\KessClient\Xml\backApptCustInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\bjhgCustApplyCheck.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\cfmFislAppCreditNew.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -224,6 +225,8 @@
     <Content Include="Yushen\WebService\KessClient\Xml\checkCuacctById.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\checkCustAgmt.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\checkCustAgmtLimit.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\checkUserAuthInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -236,9 +239,12 @@
     <Content Include="Yushen\WebService\KessClient\Xml\closeCustomer.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\closeOfTrdacct.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\closeStkTrdacct.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\commonBizToNewZD.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\confirmReslutRiskSurvey.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\contractActionOrCancel.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -251,15 +257,18 @@
     <Content Include="Yushen\WebService\KessClient\Xml\cubsbScOpenAcctNoSql.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\cubsbScSyncInterest.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\custCodeStatus.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\custCreditAppl.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\custInfoToBankAcct.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\custInfoToFislSys.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\custInfoToOTCSys.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\decryptByAES.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -305,12 +314,17 @@
     <Content Include="Yushen\WebService\KessClient\Xml\getImgScanConfigs.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\getLinkmanInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\getPartnerInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\getRiskSurveyResult.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\getShStkInfoByNewZD.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\getStkTregStatus.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\getSurveySet.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\getUserExtInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\getUserInfoByIdAndTel.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -326,6 +340,7 @@
     <Content Include="Yushen\WebService\KessClient\Xml\hkVotingDeclare.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\listBoodsBizInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\listCreditLevel.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -344,12 +359,14 @@
     <Content Include="Yushen\WebService\KessClient\Xml\listHkYwhbInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\listKeyMonitorInfoOrImp.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\listOfStkTrdAcct.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\listOfTrdacct.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\listRiskCtrlLog.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\listStkPleRepurApp.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -362,24 +379,47 @@
     <Content Include="Yushen\WebService\KessClient\Xml\maintainUserImportantInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\manageCOFMContract.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfApptBCInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfCreditRecord.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfCriticalContact.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfCustAssetsInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfCustChannel.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfCustInvestExpInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfCustLinkInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfCustNraTaxInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\mdfCustOwnOrg.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\mdfCustRevisitInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfCustRiskPropright.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfFislAttr.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfFislCreditModify.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\mdfOrgExtInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\mdfOtherInfoCust.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfPartnerInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfProductInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfPubStk.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfRelaPubCom.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfStkRestricted.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfTaAcctInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfUserBasicCorpInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\mdfUserGeneralInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\mdfUserGenInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfUserGuardianInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfUserLinkInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfUserLinkmanInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\mdfUserOccupationInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\modifyCustInfoTable.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -416,6 +456,7 @@
     <Content Include="Yushen\WebService\KessClient\Xml\openYMTAcctByNewZD.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\operAcctFirmRelaInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\operatorInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -425,6 +466,7 @@
     <Content Include="Yushen\WebService\KessClient\Xml\operBlackListInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\operBoodsBizInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\operCustFislCdtAppl.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -440,27 +482,49 @@
     <Content Include="Yushen\WebService\KessClient\Xml\operFislChiefInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\operOtcAcct.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\operOtcCustPayer.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\operProManagerInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\operRecommenderInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\operRelaInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\operUntrdBizHk.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\operUserImgReCordInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\qryCreditRecord.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\qryCustInvestExpInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\qryCustNraTaxInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\qryFislAttr.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\qryLinkmanInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\qryProManagerInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\qrySurveyRatingStd.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\qryUntrdBizHk.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryAccountInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryAcctFirmRelaInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryApptBCInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryApptCustBaseInfoEx.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryApptCustInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryApptCustInfoEx.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryApptOrgInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryBjhgCustApplyCheck.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryBlackListInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\queryClientBasicInfoAccount.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryControllerInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryCustAgmtChkCfg.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryCustAgreement.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryCustAssetsInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryCustBasicInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -476,12 +540,16 @@
     <Content Include="Yushen\WebService\KessClient\Xml\queryCustFislCdtFlow.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryCustFlag.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryCustFlagInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryCustFundAuthority.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\queryCustInfoByCuacct.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryCustLinkInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryCustSurvey.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryCustTradeAuthority.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -497,9 +565,11 @@
     <Content Include="Yushen\WebService\KessClient\Xml\queryHkBizInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryHkBizLog.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryImgQcPara.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryInvestProInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryMenuUser.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -515,12 +585,17 @@
     <Content Include="Yushen\WebService\KessClient\Xml\queryOrgInfoList.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryOtcAcctInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryOtcCustPayerInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryProductInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryPubStk.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryRecommenderInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\queryRelaInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryRelaPubCom.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryRiskSurvey.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -536,9 +611,17 @@
     <Content Include="Yushen\WebService\KessClient\Xml\querySendOrder.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\queryStkRestricted.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryStkYmt.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\querySurveyExclInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\querySurveyIndex.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\querySurveyRatingStdMX.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryToConfirmRiskSurveyResult.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryUserBeneficiaryInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryUserGuardianInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\queryUserRiskDetailInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\queryZDImgQcPara.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -587,6 +670,7 @@
     <Content Include="Yushen\WebService\KessClient\Xml\searchUserImgInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\setChkCustAgmtStatus.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\setCuacctClsFee.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -611,6 +695,10 @@
     <Content Include="Yushen\WebService\KessClient\Xml\setCustFlagYHZQ.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\setCustOtherFlag.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\setInvestProInfo.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\setMainCuacct.xml" />
+    <Content Include="Yushen\WebService\KessClient\Xml\setMainTrdacct.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\setTrdacctMdfCuacct.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -620,9 +708,11 @@
     <Content Include="Yushen\WebService\KessClient\Xml\stkPleRepurApp.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\stkTrdacctTranAll.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\syncAnsAppSurvey2Run.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\synCustAgmtInfo.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\synImgInfo2Kbss.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -638,9 +728,11 @@
     <Content Include="Yushen\WebService\KessClient\Xml\updateUserImportantInfo.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\uploadImg.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\uploadImgNoBiz.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Yushen\WebService\KessClient\Xml\uploadImgString.xml" />
     <Content Include="Yushen\WebService\KessClient\Xml\uploadImgStringNoBiz.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <SubType>Designer</SubType>

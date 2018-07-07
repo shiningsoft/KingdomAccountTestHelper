@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.212	适当性管理信息维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）-->
+    <OPER_TYPE></OPER_TYPE>
+    <!--内部机构（必传）-->
+    <INT_ORG></INT_ORG>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易板块（必传）-->
+    <STKBD></STKBD>
+    <!--交易账户（必传）-->
+    <TRDACCT></TRDACCT>
+    <!--交易账户名称（非必传）-->
+    <TRDACCT_NAME></TRDACCT_NAME>
+    <!--签署日期（非必传）-->
+    <SIGN_DATE></SIGN_DATE>
+    <!--营业部编码（非必传）-->
+    <ORG_CODE></ORG_CODE>
+    <!--申报状态（非必传）-->
+    <RPT_STATUS></RPT_STATUS>
+    <!--账户类型（非必传）-->
+    <ACCT_TYPE></ACCT_TYPE>
+    <!--申请日期（非必传）-->
+    <APPT_DATE></APPT_DATE>
+    <!--操作渠道（非必传）-->
+    <CHANNEL></CHANNEL>
+    <!--备注信息（非必传）-->
+    <REMARK></REMARK>
+    <!--注册或实缴资本（非必传）-->
+    <REGISTORTRUE_FUND></REGISTORTRUE_FUND>
+    <!--金融产品或资本（非必传）-->
+    <ISFINANCIAL></ISFINANCIAL>
+    <!--日终资产（非必传）-->
+    <TOTAL_ASSET></TOTAL_ASSET>
+    <!--首签/转签（非必传）-->
+    <ISFIRSTSIGN></ISFIRSTSIGN>
+    <!--首次交易日（非必传）-->
+    <FIRST_TRD_DATE></FIRST_TRD_DATE>
+    <!--特殊标志（非必传）-->
+    <OPER_FLAG></OPER_FLAG>
+  </data>
+</request>

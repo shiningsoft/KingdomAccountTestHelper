@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.107	预测评查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--用户代码（非必传）-->
+    <USER_CODE></USER_CODE>
+    <!--调查表编码（非必传）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--开始日期（非必传）-->
+    <BGN_DATE></BGN_DATE>
+    <!--结束日期（非必传）-->
+    <END_DATE></END_DATE>
+    <!--是否通过（非必传）-->
+    <CHK_RESULTS></CHK_RESULTS>
+    <!--过滤提交次数（非必传）-->
+    <FILTER_NOTETIMES></FILTER_NOTETIMES>
+    <!--调查表类别（非必传）-->
+    <SURVEY_CLSES></SURVEY_CLSES>
+  </data>
+</request>

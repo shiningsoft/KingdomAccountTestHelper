@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.268	客户签署协议准入条件-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--客户协议类型（必传）-->
+    <CUST_AGMT_TYPE></CUST_AGMT_TYPE>
+    <!--交易板块（必传）-->
+    <STKBD></STKBD>
+    <!--交易账户类别（必传）-->
+    <TRDACCT_EXCLS></TRDACCT_EXCLS>
+  </data>
+</request>

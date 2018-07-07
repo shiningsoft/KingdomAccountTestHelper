@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--2.143	客户港股通协议维护
-注1：此接口需OEM“KBSS沪港通非现场业务”的授权才能使用；
-注2: 沪港通权限开通由公共参数PERIPHERAL_HK_CHK控制是否需要审核，0-不审核 1-审核。
--->
+<!--2.143	客户港股通协议维护-->
 <request>
   <auth>
     <OPERATOR>36050</OPERATOR>
@@ -16,9 +13,30 @@
     <TRDACCT></TRDACCT>
     <!--开通类型（必传）A-开通C-注销-->
     <OPEN_FLAG></OPEN_FLAG>
-    <!--交易板块（必传）DD[STKBD]-->
+    <!--交易板块（非必传）DD[STKBD]00-深港通，10-沪港通-->
     <STKBD></STKBD>
-    <!--操作备注（非必传）-->
-    <OP_REMARK></OP_REMARK>
+    <!--协议类型（非必传）-->
+    <CUST_AGMT_TYPE></CUST_AGMT_TYPE>
+    <!--有效截止日期（非必传）-->
+    <!--未填有效截止日期,默认为30001231-->
+    <EXP_DATE></EXP_DATE>
+    <!--生效日期（非必传）-->
+    <!--未填生效日期,默认为当天-->
+    <EFT_DATE></EFT_DATE>
+    <!--客户名称（非必传）-->
+    <CUST_NAME></CUST_NAME>
+    <!--申请日期（非必传）-->
+    <APPT_DATE></APPT_DATE>
+    <!--审核人（非必传）-->
+    <APR_OP_CODE></APR_OP_CODE>
+    <!--审核日期（非必传）-->
+    <APR_DATE></APR_DATE>
+    <!--审核状态（非必传）-->
+    <REQ_STATUS></REQ_STATUS>
+    <!--开户来源（非必传）-->
+    <OPEN_SOURCE></OPEN_SOURCE>
+    <!--是否开通港股通协议（非必传）-->
+    <!--0-不开通1-开通2-强制开通（即是否直接操作流水表）-->
+    <OPEN_HK></OPEN_HK>
   </data>
 </request>

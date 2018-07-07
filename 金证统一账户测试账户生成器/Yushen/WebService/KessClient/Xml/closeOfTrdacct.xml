@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.218	基金账户销户-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--资产账户代码（必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--基金登记公司代码（必传）-->
+    <TA_CODE></TA_CODE>
+    <!--备注信息（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

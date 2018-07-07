@@ -11,37 +11,37 @@
     <OPERATOR>36050</OPERATOR>
   </auth>
   <data>
-    <!--业务类型0-A股账户开户1-基金账户开户2-B股账户开户3-信用账户开户-->
+    <!--业务类型（必传）0-A股账户开户1-基金账户开户2-B股账户开户3-信用账户开户-->
     <OPEN_TYPE></OPEN_TYPE>
-    <!--新开户标志0-已有1-新开-->
+    <!--新开户标志（必传）0-已有1-新开-->
     <NEW_OPEN_FLAG></NEW_OPEN_FLAG>
-    <!--交易板块DD[STKBD]-->
+    <!--交易板块（非必传）DD[STKBD]-->
     <STKBD></STKBD>
-    <!--客户类别DD[USER_TYPE]-->
+    <!--客户类别（必传）DD[USER_TYPE]-->
     <USER_TYPE></USER_TYPE>
-    <!--客户名称-->
+    <!--客户名称（非必传）-->
     <CUST_FNAME></CUST_FNAME>
     <!--一码通代码（必传）-->
     <YMT_CODE></YMT_CODE>
-    <!--证券账户类别-->
+    <!--证券账户类别（非必传）-->
     <ACCT_TYPE></ACCT_TYPE>
-    <!--证件类型-->
+    <!--证件类型（必传）-->
     <ID_TYPE></ID_TYPE>
-    <!--证件号码-->
+    <!--证件号码（必传）-->
     <ID_CODE></ID_CODE>
-    <!--机构编码-->
+    <!--机构编码（非必传）-->
     <INT_ORG></INT_ORG>
-    <!--开户方式DD[ACCT_OPENTYPE]-->
+    <!--开户方式（必传）DD[ACCT_OPENTYPE]-->
     <ACCT_OPENTYPE></ACCT_OPENTYPE>
-    <!--证券账户号码-->
+    <!--证券账户号码（非必传）-->
     <TRDACCT></TRDACCT>
-    <!--配号证券账户号码沪深A股信用证券账户开户时必填，沪市衍生品合约账户开户时必填，深市衍生品合约账户开户时必填，其他无需填写-->
+    <!--配号证券账户号码（非必传）沪深A股信用证券账户开户时必填，沪市衍生品合约账户开户时必填，深市衍生品合约账户开户时必填，其他无需填写-->
     <TRDACCT_EX></TRDACCT_EX>
-    <!--交易单元-->
+    <!--交易单元（非必传）-->
     <STKPBU></STKPBU>
-    <!--指定结算参与人-->
+    <!--指定结算参与人（非必传）-->
     <FIRMID></FIRMID>
-    <!--国籍DD[CITIZENSHIP]-->
+    <!--国籍（非必传）DD[CITIZENSHIP]-->
     <CITIZENSHIP></CITIZENSHIP>
     <!--备用字段（非必传）-->
     <REMARK></REMARK>

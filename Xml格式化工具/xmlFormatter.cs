@@ -112,5 +112,26 @@ namespace Yushen.Util
 
             return str;
         }
+
+        /// <summary>
+        /// 转换成标准Xml格式
+        /// </summary>
+        /// <returns></returns>
+        public string getXml()
+        {
+            string str = this.xmlstr;
+
+            regex = new Regex(@"//(.*)<(.*)>(.*)</.*>");
+
+            Console.WriteLine(regex.ToString() + "匹配了" + regex.Matches(str).Count.ToString() + "次：");
+            foreach (Match match in regex.Matches(str))
+            {
+                Console.WriteLine(match);
+            }
+
+            str = regex.Replace(str, "<!--$1-->\r\n<$2>$3</$2>");
+
+            return str;
+        }
     }
 }

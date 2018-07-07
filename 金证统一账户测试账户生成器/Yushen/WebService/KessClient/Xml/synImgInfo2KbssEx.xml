@@ -19,16 +19,16 @@
     <ID_CODE></ID_CODE>
     <!--资产账户-->
     <CUACCT_CODE></CUACCT_CODE>
-    <!--临柜业务-->
+    <!--临柜业务（必输）-->
     <FRT_BIZ></FRT_BIZ>
     <!--客户姓名-->
     <CUST_NAME></CUST_NAME>
     <!--业务私有数据-->
     <BIZ_DATA></BIZ_DATA>
-    <!--影像编号（以”,”隔开）-->
+    <!--影像编号（必输）（多个影像编号以”,”隔开）-->
     <IMG_SNS></IMG_SNS>
-    <!--影像类别-->
-    <IMG_CLS></IMG_CLS>
+    <!--影像类别（必输）（多个影响类别以”,”隔开）影响类别与影响编号必须一一对应-->
+    <IMG_CLSES></IMG_CLSES>
     <!--用户代码-->
     <USER_CODE></USER_CODE>
     <!--操作类型-->

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.238	紧急联系人项目表维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0增加1修改2删除-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--联系人编号（必传）-->
+    <CRITICALER_ID></CRITICALER_ID>
+    <!--联系人姓名（必传）-->
+    <CRITICALER_NAME></CRITICALER_NAME>
+    <!--联系人电话（必传）-->
+    <CRITICALER_TEL></CRITICALER_TEL>
+    <!--联系人类别（必传）-->
+    <CRITICALER_TYPE></CRITICALER_TYPE>
+    <!--联系手机（必传）-->
+    <MOBILE_TEL></MOBILE_TEL>
+    <!--备注（必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

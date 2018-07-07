@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.213	适当性管理信息查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--内部机构（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--账户类型（非必传）-->
+    <ACCT_TYPE></ACCT_TYPE>
+    <!--申报状态（非必传）-->
+    <RPT_STATUS></RPT_STATUS>
+    <!--签署开始日期（非必传）-->
+    <SIGN_BGN_DATE></SIGN_BGN_DATE>
+    <!--签署结束日期（非必传）-->
+    <SIGN_END_DATE></SIGN_END_DATE>
+  </data>
+</request>

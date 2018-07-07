@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.247	客户激活标志信息查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--开始日期（非必传）-->
+    <BGN_DATE></BGN_DATE>
+    <!--结束日期（非必传）-->
+    <END_DATE></END_DATE>
+    <!--机构代码（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--客户标示ID（非必传）-->
+    <CUST_FLAG_ID></CUST_FLAG_ID>
+    <!--客户标示值（非必传）-->
+    <CUST_FLAG_VAL></CUST_FLAG_VAL>
+    <!--开户来源（非必传）-->
+    <OPEN_SOURCE></OPEN_SOURCE>
+    <!--操作标志（非必传）-->
+    <OP_FLAG></OP_FLAG>
+  </data>
+</request>

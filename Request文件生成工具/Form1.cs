@@ -42,7 +42,7 @@ namespace Request文件生成工具
                 string partFunction = part.Substring(mcFunction.Index, mcParamsInTitle.Index - mcFunction.Index);
                 string partParamsIn = part.Substring(mcParamsInTitle.Index, mcParamsOutTitle.Index - mcParamsInTitle.Index).Replace(" ", "");
 
-                Regex rxFunctionName = new Regex(@"\s(\w+)\s?\(String xml\)");
+                Regex rxFunctionName = new Regex(@"\s(\w+)\s?\(String xml");
                 Match functionName = rxFunctionName.Match(partFunction);
 
                 string comment = "";
@@ -78,9 +78,27 @@ namespace Request文件生成工具
                         body = body.Replace("<auth>\r\n<data>", "</auth>\r\n<data>");
                     }
 
+                    // 有些节点缺少/，需要加上
+                    MatchCollection mcNode = Regex.Matches(body, "<(.+?)>.*?<(.+?)>");
+                    int j = mcNode.Count;
+                    for (; j > 0; j--)
+                    {
+                        Match match = mcNode[j - 1];
+                        if (match.Groups[1].Value == match.Groups[2].Value)
+                        {
+                            Console.WriteLine("发现未关闭的节点：" + match.Groups[0].Value);
+                            body = body.Insert(match.Groups[2].Index, "/");
+                        }
+                    }
+
                     try
                     {
-                        string file = Path.Combine(Environment.CurrentDirectory, functionName.Groups[1].Value.Trim() + ".xml");
+                        string path = Path.Combine(Environment.CurrentDirectory, "xmlfiles");
+                        if (!Directory.Exists(path))
+                        {
+                            Directory.CreateDirectory(path);
+                        }
+                        string file = Path.Combine(path, functionName.Groups[1].Value.Trim() + ".xml");
                         File.WriteAllText(file, formatXml(body));
                     }
                     catch (XmlException ex)
@@ -95,7 +113,7 @@ namespace Request文件生成工具
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            btnPreProccess.PerformClick();
+
         }
 
         /// <summary>

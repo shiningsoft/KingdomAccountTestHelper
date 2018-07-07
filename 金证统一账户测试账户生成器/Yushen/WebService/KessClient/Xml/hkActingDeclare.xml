@@ -20,5 +20,6 @@
     <!--交易账户（必传）-->
     <TRDACCT></TRDACCT>
     <!--机构编码（非必传）-->
-    <INT_ORG></INT_ORG></data>
+    <INT_ORG></INT_ORG>
+  </data>
 </request>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.226	客户投资经验信息表维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）'0'-增加，'1'-修改-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--固定收益类产品首次交易日（非必传）-->
+    <FIX_INCOME_PRO_TRD_DATE></FIX_INCOME_PRO_TRD_DATE>
+    <!--固定收益类产品投资经验校验标识（非必传）-->
+    <FIX_INCOME_PRO_FLAG></FIX_INCOME_PRO_FLAG>
+    <!--权益类产品首次交易日（非必传）-->
+    <EQUITY_PRO_TRD_DATE></EQUITY_PRO_TRD_DATE>
+    <!--权益类产品投资经验校验标识（非必传）-->
+    <EQUITY_PRO_FLAG></EQUITY_PRO_FLAG>
+    <!--衍生品类产品首次交易日（非必传）-->
+    <DERI_PRO_TRD_DATE></DERI_PRO_TRD_DATE>
+    <!--衍生品类产品投资经验校验标识（非必传）-->
+    <DERI_PRO_FLAG></DERI_PRO_FLAG>
+    <!--高风险类产品首次交易日（非必传）-->
+    <HIGHRISK_PRO_TRD_DATE></HIGHRISK_PRO_TRD_DATE>
+    <!--高风险类产品投资经验校验标识（非必传）-->
+    <HIGHRISK_PRO_FLAG></HIGHRISK_PRO_FLAG>
+    <!--基金类首次交易日期（非必传）-->
+    <FUND_TRD_DATE></FUND_TRD_DATE>
+    <!--基金类投资经验校验标识（非必传）-->
+    <FUND_FLAG></FUND_FLAG>
+  </data>
+</request>

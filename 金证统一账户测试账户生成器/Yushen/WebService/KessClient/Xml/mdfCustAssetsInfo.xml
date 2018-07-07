@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.240	客户资产信息维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-新增1-修改-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--系统内资产更新日期（非必传）-->
+    <SYSIN_UPD_DATE></SYSIN_UPD_DATE>
+    <!--系统外证券资产（非必传）-->
+    <SYSOUT_SEC_ASS></SYSOUT_SEC_ASS>
+    <!--系统外证券资产校验标识（非必传）-->
+    <SYSOUT_SEC_ASS_FLAG></SYSOUT_SEC_ASS_FLAG>
+    <!--系统外金融资产（非必传）-->
+    <SYSOUT_FIN_ASS></SYSOUT_FIN_ASS>
+    <!--系统外金融资产校验标识（非必传）-->
+    <SYSOUT_FIN_ASS_FLAG></SYSOUT_FIN_ASS_FLAG>
+    <!--系统外资产更新日期（非必传）-->
+    <SYSOUT_UPD_DATE></SYSOUT_UPD_DATE>
+    <!--系统标识（非必传）-->
+    <SYS_FLAG></SYS_FLAG>
+  </data>
+</request>

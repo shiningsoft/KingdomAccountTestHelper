@@ -1,29 +1,29 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<!--2.234 受益人信息维护-->
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.234	受益人信息维护-->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>33146</OPERATOR>
   </auth>
   <data>
-    <!--//用户代码（必传）-->
+    <!--用户代码（必传）-->
     <USER_CODE></USER_CODE>
-    <!--//操作类型（必传）-->
+    <!--操作类型（必传）-->
     <OPERATION_TYPE></OPERATION_TYPE>
-    <!--//受益人编号（必传）-->
+    <!--受益人编号（必传）-->
     <BENEFICIARY_NO></BENEFICIARY_NO>
-    <!--//受益人名称（非必传）-->
+    <!--受益人名称（非必传）-->
     <BENEFICIARY_NAME></BENEFICIARY_NAME>
-    <!--//受益人证件类型（非必传）-->
+    <!--受益人证件类型（非必传）-->
     <BENEFICIARY_ID_TYPE></BENEFICIARY_ID_TYPE>
-    <!--//受益人证件号码（非必传）-->
+    <!--受益人证件号码（非必传）-->
     <BENEFICIARY_ID></BENEFICIARY_ID>
-    <!--//受益人证件有效期（非必传）-->
+    <!--受益人证件有效期（非必传）-->
     <BENEFICIARY_EXP_DATE></BENEFICIARY_EXP_DATE>
-    <!--//受益人电话号码（非必传）-->
+    <!--受益人电话号码（非必传）-->
     <BENEFICIARY_TEL></BENEFICIARY_TEL>
-    <!--//收益人关系（非必传）-->
+    <!--收益人关系（非必传）-->
     <BENEFICIARY_RELA></BENEFICIARY_RELA>
-    <!--//备注（非必传）-->
+    <!--备注（非必传）-->
     <OP_REMARK></OP_REMARK>
   </data>
 </request>

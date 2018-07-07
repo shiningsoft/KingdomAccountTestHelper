@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.267	测评试题互斥信息查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--测评编号（非必传）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--测评试题号（非必传）-->
+    <SURVEY_COL></SURVEY_COL>
+    <!--测试答案（非必传）-->
+    <SURVEY_CELL></SURVEY_CELL>
+    <!--互斥试题号（非必传）-->
+    <EXCL_SURVEY_COL></EXCL_SURVEY_COL>
+    <!--互斥答案（非必传）-->
+    <EXCL_SURVEY_CELLS></EXCL_SURVEY_CELLS>
+  </data>
+</request>

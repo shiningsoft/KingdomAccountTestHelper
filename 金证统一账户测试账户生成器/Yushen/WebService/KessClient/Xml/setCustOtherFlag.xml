@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.231	设置客户其他标示-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）-->
+    <OPERATION_TYPE></OPERATION_TYPE>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--客户标示ID（必传）DD[CUST_FLAG_ID]-->
+    <CUST_FLAG_ID></CUST_FLAG_ID>
+    <!--客户标示值（非必传）DD[CUST_FLAG_VAL]-->
+    <CUST_FLAG_VAL></CUST_FLAG_VAL>
+    <!--操作渠道（复数）（非必传）DD[CHANNEL]-->
+    <CHANNELS></CHANNELS>
+    <!--备注（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

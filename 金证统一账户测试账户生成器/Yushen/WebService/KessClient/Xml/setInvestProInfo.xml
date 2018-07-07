@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.106	投资者适当性信息设置-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--客户号（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--投资者分类（非必传）-->
+    <INVESTOR_TYPE></INVESTOR_TYPE>
+    <!--签署日期（非必传）-->
+    <SIGN_DATE></SIGN_DATE>
+    <!--到期日期（非必传）-->
+    <EXP_DATE></EXP_DATE>
+    <!--投资期限（非必传）DD[INVEST_LMT]-->
+    <INVEST_LMT></INVEST_LMT>
+    <!--投资品种（非必传）DD[INVEST_PRO]-->
+    <INVEST_PRO></INVEST_PRO>
+    <!--备注（非必传）-->
+    <REMARK></REMARK>
+    <!--子系统（非必传）-->
+    <SUB_SYS></SUB_SYS>
+    <!--内部机构（非必传）-->
+    <REMARK_LOG></REMARK_LOG>
+    <!--专业投资者分类（非必传）DD[PROF_INVESTOR_TYPE]-->
+    <PROF_INVESTOR_TYPE></PROF_INVESTOR_TYPE>
+    <!--专业投资者来源（非必传）DD[PROF_INVESTOR_SOURCE]-->
+    <PROF_INVESTOR_SOURCE></PROF_INVESTOR_SOURCE>
+    <!--专业投资者确认日期（非必传）-->
+    <PROF_SIGN_DATE></PROF_SIGN_DATE>
+    <!--专业投资者到期日期（非必传）-->
+    <PROF_EXP_DATE></PROF_EXP_DATE>
+    <!--预期收益（非必传）-->
+    <EXPECT_INCOME></EXPECT_INCOME>
+    <!--最低风险等级原因（非必传）-->
+    <CUST_LASTRISK_REASON></CUST_LASTRISK_REASON>
+  </data>
+</request>

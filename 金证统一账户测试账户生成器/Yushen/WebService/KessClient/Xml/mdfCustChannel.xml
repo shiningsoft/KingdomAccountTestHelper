@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.199	客户可操作渠道修改-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--操作渠道（必传）DD[CHANNEL]-->
+    <CHANNELS></CHANNELS>
+    <!--操作备注（必传）-->
+    <OP_REMARK></OP_REMARK>
+    <!--操作类型（必传）0-增加1-减少-->
+    <OP_TYPE></OP_TYPE>
+    <!--资产账户代码（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--同步子系统（非必传）DD[SUBSYS]默认为3-交易系统-->
+    <SUBSYS></SUBSYS>
+  </data>
+</request>

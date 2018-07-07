@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.32	影像上传（BASE64编码字符串传输）
+该接口存在性能问题，不建议继续使用，推荐用uploadImgStringNoBiz替代
+-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--影像类别021是正面免冠照，022身份证正反面，02c是银行卡照-->
+    <IMG_CLS>021</IMG_CLS>
+    <!--用户代码-->
+    <USER_CODE>33146</USER_CODE>
+    <!--网上业务类型(0=自助开户,1=视频见证，2=双人见证)-->
+    <WEB_BIZ>1</WEB_BIZ>
+    <!--证件号码-->
+    <ID_CODE>220204195605105527</ID_CODE>
+    <!--内部机构(必填)-->
+    <INT_ORG></INT_ORG>
+    <!--现场采集标志-->
+    <GATHER_FLAG></GATHER_FLAG>
+    <!--审核标志-->
+    <AUDIT_FLAG></AUDIT_FLAG>
+    <!--影像编码（第一次上传影像，必须填写字符串”null”，其它情况必须传对应的编码）-->
+    <IMG_SN>2013011600000020</IMG_SN>
+  </data>
+</request>

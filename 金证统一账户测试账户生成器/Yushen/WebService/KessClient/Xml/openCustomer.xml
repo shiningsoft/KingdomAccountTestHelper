@@ -129,6 +129,8 @@
     <OPEN_AGENT>1</OPEN_AGENT>
     <!--主体身份（非必传）-->
     <SUBJECT_IDENTITY>1</SUBJECT_IDENTITY>
+    <!--年收入（非必传）-->
+    <INCOME></INCOME>
     <!--境内外身份（非必传）-->
     <INOUTSIDE_IDENTITY>1</INOUTSIDE_IDENTITY>
     <!--特殊身份（非必传）-->
@@ -145,5 +147,17 @@
     <IDCARD_READ_FLAG>1</IDCARD_READ_FLAG>
     <!--主证件年检日期（非必传）-->
     <MAIN_YEAR_CHK_DATE>1</MAIN_YEAR_CHK_DATE>
+    <!--工作单位（非必传）-->
+    <WORKPLACE></WORKPLACE>
+    <!--行业类型（非必传）-->
+    <TRADE></TRADE>
+    <!--当前职业（非必传）-->
+    <OCCU_TYPE></OCCU_TYPE>
+    <!--手机校验标识（非必传）-->
+    <TEL_CHK_FLAG></TEL_CHK_FLAG>
+    <!--邮箱校验标识（非必传）-->
+    <EMAIL_CHK_FLAG></EMAIL_CHK_FLAG>
+    <!--金融相关专业学历校验标识（非必传）-->
+    <FIN_EDU_FLAG></FIN_EDU_FLAG>
   </data>
 </request>

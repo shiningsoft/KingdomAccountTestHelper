@@ -36,6 +36,8 @@
     <ZIP_CODE></ZIP_CODE>
     <!--职业类型（必传）-->
     <OCCU_TYPE></OCCU_TYPE>
+    <!--民族（必传）-->
+    <NATIONALITY></NATIONALITY>
     <!--学历（个人必传）-->
     <EDUCATION></EDUCATION>
     <!--联系电话（必传）-->

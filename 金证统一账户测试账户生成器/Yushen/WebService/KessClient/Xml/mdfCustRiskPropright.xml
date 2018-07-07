@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.270	客户风险揭示书签署标识维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--风险揭示书签署标识（必传）DD[RISK_PROPRIGHT]-->
+    <RISK_PROPRIGHT></RISK_PROPRIGHT>
+  </data>
+</request>

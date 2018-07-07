@@ -38,5 +38,10 @@ namespace Xml格式化工具
             xmlFormatter.xmlstr = tbXmlStr.Text;
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            tbXmlStr.Text = xmlFormatter.getXml();
+            Clipboard.SetText(tbXmlStr.Text);
+        }
     }
 }

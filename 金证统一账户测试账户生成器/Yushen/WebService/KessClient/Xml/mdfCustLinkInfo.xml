@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.232	客户联系资料表维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-增加1-修改2-删除-->
+    <OPER_TYPE></OPER_TYPE>
+    <!--联系资料序号（非必传）操作类型为‘修改’或‘删除’时，此字段必送-->
+    <LINK_NO></LINK_NO>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--客户姓名（非必传）-->
+    <CUST_NAME></CUST_NAME>
+    <!--联系方式类型（非必传）DD[EXT_LINK_TYPE]-->
+    <EXT_LINK_TYPE></EXT_LINK_TYPE>
+    <!--联系地址（非必传）-->
+    <EXT_LINK_ADDR></EXT_LINK_ADDR>
+    <!--邮政编码（非必传）-->
+    <EXT_LINK_ZIP_CODE></EXT_LINK_ZIP_CODE>
+    <!--手机号（非必传）-->
+    <EXT_LINK_MOBILE></EXT_LINK_MOBILE>
+    <!--固定电话（非必传）-->
+    <EXT_LINK_TEL></EXT_LINK_TEL>
+    <!--电子邮箱（非必传）-->
+    <EXT_LINK_EMAIL></EXT_LINK_EMAIL>
+    <!--传真（非必传）-->
+    <EXT_LINK_FAX></EXT_LINK_FAX>
+    <!--备注（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

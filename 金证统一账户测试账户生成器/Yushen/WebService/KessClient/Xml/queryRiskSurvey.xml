@@ -5,14 +5,19 @@
     <OPERATOR>33146</OPERATOR>
   </auth>
   <data>
-    <OP_USER></OP_USER>
     <!--调查表类别-->
     <SURVEY_CLS>0</SURVEY_CLS>
     <!--调查表编号-->
     <SURVEY_SN></SURVEY_SN>
+    <!--调查表编码-->
+    <SURVEY_SN></SURVEY_SN>
     <!--主客观-->
     <SURVEY_TYPE></SURVEY_TYPE>
-    <!--网上开启所需渠道表示-->
-    <WEB_CHANNEL></WEB_CHANNEL>
+    <!--网上开户所需渠道表示-->
+    <SURVEY_TYPE></SURVEY_TYPE>
+    <!--用户类型-->
+    <USER_TYPE></USER_TYPE>
+    <!--版本号-->
+    <VERSION></VERSION>
   </data>
 </request>

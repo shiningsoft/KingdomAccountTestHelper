@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.207	基金账户资料变更-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--资产账户（必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--基金登记公司代码（必传）-->
+    <TA_CODE></TA_CODE>
+    <!--账单邮寄类型（非必传）-->
+    <BILL_MAIL_TYPE></BILL_MAIL_TYPE>
+    <!--分红方式（非必传）-->
+    <DIV_METHOD></DIV_METHOD>
+    <!--未成年人标志（非必传）-->
+    <YOUNG_FLAG></YOUNG_FLAG>
+    <!--未成年人标识（非必传）-->
+    <YOUNG_ID></YOUNG_ID>
+    <!--备注信息（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

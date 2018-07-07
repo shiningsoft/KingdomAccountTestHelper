@@ -23,11 +23,11 @@
     <!--客户名称-->
     <CUSTNAME></CUSTNAME>
     <!--交易版块DD[STKBD]-->
-    <STKBD></STKBD>
+    <!--<STKBD></STKBD>-->
     <!--股东代码-->
     <TRDACCT></TRDACCT>
     <TACODE></TACODE>
     <!--地址-->
     <ADDRESS></ADDRESS>
-</data>
+  </data>
 </request>

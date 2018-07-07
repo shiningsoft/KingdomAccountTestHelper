@@ -5,9 +5,15 @@
     <OPERATOR>33146</OPERATOR>
   </auth>
   <data>
-    <!--客户代码必要参数-->
-    <USER_CODE>101225901</USER_CODE>
-    <!--资产账户-->
-    <CUACCT_CODE>900000044208</CUACCT_CODE>
+    <!--客户代码（非必传）-->
+    <USER_CODE></USER_CODE>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--查询接融资融券系统（非必传）-->
+    <FISL></FISL>
+    <!--查询U版融资融券资产账户状态（非必传）-->
+    <QUERY_UFISL_STATUS></QUERY_UFISL_STATUS>
+    <!--查询交易系统（非必传）-->
+    <TRADEFLAG></TRADEFLAG>
   </data>
 </request>

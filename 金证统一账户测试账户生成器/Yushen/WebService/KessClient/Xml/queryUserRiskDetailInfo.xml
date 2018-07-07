@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.224	客户风险测评作答详细信息查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--试题分类（非必传）-->
+    <SURVEY_CLS></SURVEY_CLS>
+    <!--试题编码（非必传）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--主客观（非必传）-->
+    <SURVEY_TYPE></SURVEY_TYPE>
+  </data>
+</request>

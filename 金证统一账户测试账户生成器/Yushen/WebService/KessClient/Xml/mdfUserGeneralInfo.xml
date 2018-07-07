@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--2.147	用户普通资料修改-->
+<!--2.148	用户普通资料修改-->
 <request>
   <auth>
     <OPERATOR>36050</OPERATOR>
@@ -7,6 +7,10 @@
   <data>
     <!--用户代码（必传）-->
     <USER_CODE></USER_CODE>
+    <!--邮政编码（必传）-->
+    <ZIP_CODE></ZIP_CODE>
+    <!--联系地址（必传）-->
+    <ADDRESS></ADDRESS>
     <!--联系电话（非必传）-->
     <TEL></TEL>
     <!--传真电话（非必传）-->
@@ -63,5 +67,79 @@
     <CHG_SPEC_REMARK_FLAG></CHG_SPEC_REMARK_FLAG>
     <!--开户来源（非必传）-->
     <OPEN_SOURCE></OPEN_SOURCE>
+    <!--同步子系统（非必传）-->
+    <SUBSYS></SUBSYS>
+    <!--风险要素（非必传）-->
+    <RISK_FACTOR></RISK_FACTOR>
+    <!--开户规范（非必传）-->
+    <CRITERION></CRITERION>
+    <!--客户分类（非必传）-->
+    <CUST_CLS></CUST_CLS>
+    <!--电子邮箱（非必传）-->
+    <FISL_EMAIL></FISL_EMAIL>
+    <!--国有属性（非必传）-->
+    <NATIONAL_ATTR></NATIONAL_ATTR>
+    <!--上市属性（非必传）-->
+    <LISTED_ATTR></LISTED_ATTR>
+    <!--资本属性（非必传）-->
+    <CAPITAL_ATTR></CAPITAL_ATTR>
+    <!--境内外身份（非必传）-->
+    <INOUTSIDE_IDENTITY></INOUTSIDE_IDENTITY>
+    <!--行业类型（非必传）-->
+    <TRADE></TRADE>
+    <!--注册资金（非必传）-->
+    <REGISTER_FUND></REGISTER_FUND>
+    <!--企业类型（非必传）-->
+    <CORP_TYPE></CORP_TYPE>
+    <!--法人代表名称（非必传）-->
+    <LEGAL_REP></LEGAL_REP>
+    <!--法人类型（非必传）-->
+    <LEGAL_REP_TYPE></LEGAL_REP_TYPE>
+    <!--法人代表证件类型（非必传）-->
+    <LEGAL_REP_ID_TYPE></LEGAL_REP_ID_TYPE>
+    <!--法人代表证件号码（非必传）-->
+    <LEGAL_REP_ID_CODE></LEGAL_REP_ID_CODE>
+    <!--法人证件有效期（非必传）-->
+    <LEGAL_REP_ID_EXP_DATE></LEGAL_REP_ID_EXP_DATE>
+    <!--法人性别（非必传）-->
+    <LEGAL_SEX></LEGAL_SEX>
+    <!--法人国籍（非必传）-->
+    <LEGAL_CITIZENSHIP></LEGAL_CITIZENSHIP>
+    <!--控股人（非必传）-->
+    <CONTROLLER></CONTROLLER>
+    <!--客户级别（非必传）-->
+    <CUST_LVL></CUST_LVL>
+    <!--隐私级别（非必传）-->
+    <PRIVACY_LVL></PRIVACY_LVL>
+    <!--一码通账户（非必传）-->
+    <YMT_CODE></YMT_CODE>
+    <!--是否开通短信提示(证券业务)（非必传）-->
+    <STK_SMS_SERVICE></STK_SMS_SERVICE>
+    <!--是否开通网络服务(证券业务)（非必传）-->
+    <STK_NET_SERVICE></STK_NET_SERVICE>
+    <!--是否开通短信服务(贵金属业务)（非必传）-->
+    <GOLD_SMS_SERVICE></GOLD_SMS_SERVICE>
+    <!--国税登记证号码（非必传）-->
+    <BUSINESS_TAX_NO></BUSINESS_TAX_NO>
+    <!--国税登记证有效日期（非必传）-->
+    <TAX_NO_EXP_DATE></TAX_NO_EXP_DATE>
+    <!--地税登记号码（非必传）-->
+    <LAND_TAX_NO></LAND_TAX_NO>
+    <!--地税登记有效日期（非必传）-->
+    <LAND_TAX_NO_EXP_DATE></LAND_TAX_NO_EXP_DATE>
+    <!--年收入（非必传）-->
+    <INCOME></INCOME>
+    <!--主营范围（非必传）-->
+    <MAIN_RANGE></MAIN_RANGE>
+    <!--辅营范围（非必传）-->
+    <ASS_RANGE></ASS_RANGE>
+    <!--公司网址（非必传）-->
+    <WEB_SITE></WEB_SITE>
+    <!--公司市值估值（非必传）-->
+    <MARKET_VALUE></MARKET_VALUE>
+    <!--信用账单提供方式（非必传）-->
+    <CREDIT_BILL_CHNL></CREDIT_BILL_CHNL>
+    <!--未成年标志（非必传）-->
+    <MINOR_FLAG></MINOR_FLAG>
   </data>
 </request>

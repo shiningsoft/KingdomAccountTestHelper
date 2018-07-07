@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.222	报价回购资质审核查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易账户（非必传）-->
+    <TRADE_ACCT></TRADE_ACCT>
+    <!--内部机构（非必传）-->
+    <INT_ORGS></INT_ORGS>
+    <!--市场（非必传）-->
+    <STKBD></STKBD>
+    <!--审核状态（非必传）0-已审核待开通，1-已审核待注销，2-已开通，3-已注销-->
+    <CHECK_STATUS></CHECK_STATUS>
+    <!--申报状态（非必传）DD[BJHG_RPT_STATUS]-->
+    <RPT_STATUS></RPT_STATUS>
+    <!--账户类型（非必传）DD[BJHG_ACCT_TYPE]-->
+    <ACCT_TYPE></ACCT_TYPE>
+    <!--开始日期（非必传）-->
+    <BEGIN_DATE></BEGIN_DATE>
+    <!--结束日期（非必传）-->
+    <END_DATE></END_DATE>
+    <!--指定交易状态（非必传）DD[TREG_STATUS]-->
+    <TREG_STATUS></TREG_STATUS>
+  </data>
+</request>

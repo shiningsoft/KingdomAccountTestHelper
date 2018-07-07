@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.239	合伙人资料维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-增加1-修改2-删除-->
+    <OPERATION_TYPE></OPERATION_TYPE>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--合伙人序号（非必传）-->
+    <PARTNER_NO></PARTNER_NO>
+    <!--机构名称（非必传）-->
+    <ORG_NAME></ORG_NAME>
+    <!--企业类型（非必传）-->
+    <ENTERPRISE_TYPE></ENTERPRISE_TYPE>
+    <!--姓名或名称（非必传）-->
+    <PARTNER_NAME></PARTNER_NAME>
+    <!--国籍或地区（非必传）-->
+    <AREA></AREA>
+    <!--证件类别（非必传）-->
+    <PID_TYPE></PID_TYPE>
+    <!--证件号码（非必传）-->
+    <PID_CODE></PID_CODE>
+    <!--证件有效期（非必传）-->
+    <ID_DATE></ID_DATE>
+    <!--承担责任方式（非必传）-->
+    <LIAB_TYPE></LIAB_TYPE>
+    <!--操作备注（非必传）-->
+    <OP_REMARK></OP_REMARK>
+  </data>
+</request>

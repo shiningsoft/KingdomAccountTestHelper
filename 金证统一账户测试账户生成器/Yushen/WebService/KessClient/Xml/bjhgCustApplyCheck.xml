@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.221	创新业务（报价回购）客户资质审核-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--交易板块（必传）-->
+    <STKBD></STKBD>
+    <!--交易账号（必传）-->
+    <TRDACCT></TRDACCT>
+    <!--账户名称（非必传）-->
+    <TRDACCT_NAME></TRDACCT_NAME>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--开户期限（非必传）DD[OPENED_DATES]-->
+    <OPENED_DATES></OPENED_DATES>
+    <!--资产范围（非必传）DD[FUNDASSET_RANGE]-->
+    <CUST_FUNDASSET_RANGE></CUST_FUNDASSET_RANGE>
+    <!--审核状态（非必传）0-开通1-注销-->
+    <CHECK_STATUS></CHECK_STATUS>
+    <!--备注信息（非必传）-->
+    <REMARK></REMARK>
+    <!--操作方式（非必传）0审核开通1审核注销-->
+    <OPER_KIND></OPER_KIND>
+    <!--账户类型（非必传）DD[BJHG_ACCT_TYPE]-->
+    <ACCT_TYPE></ACCT_TYPE>
+  </data>
+</request>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.196	支付账号维护
+注：此接口需OEM“KBSSOTC非现场业务”的授权，并且暂时不能使用
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-增加1-修改2-删除3-更新-->
+    <OPER_TYPE></OPER_TYPE>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账户（必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--银行代码（非必传）-->
+    <BANK_CODE></BANK_CODE>
+    <!--银行账号（非必传）-->
+    <BANK_ACCT></BANK_ACCT>
+    <!--账户状态（非必传）-->
+    <ACCT_STAT></ACCT_STAT>
+    <!--支付方式（非必传）-->
+    <PAY_WAY></PAY_WAY>
+    <!--支付机构（非必传）-->
+    <PAY_ORG></PAY_ORG>
+    <!--支付账号（非必传）-->
+    <PAY_ACCT></PAY_ACCT>
+    <!--银行账户类别（非必传）-->
+    <BANK_ACCT_TYPE></BANK_ACCT_TYPE>
+    <!--币种（非必传）PAY_WAY=3时必送-->
+    <CURRENCY></CURRENCY>
+    <!--银行资金密码（非必传）PAY_WAY=3时必送-->
+    <BANK_PWD></BANK_PWD>
+    <!--同步标志（非必传）1-不同步其它-同步至OTC系统-->
+    <SYN_FLAG></SYN_FLAG>
+    <!--同步子系统（非必传）,账户系统中对各系统编号，对接资金系统时必送-->
+    <SUBSYS></SUBSYS>
+    <!--资金密码（非必传）,对接资金系统保证金支付维护必送-->
+    <CUACCT_FUND_PWD></CUACCT_FUND_PWD>
+  </data>
+</request>

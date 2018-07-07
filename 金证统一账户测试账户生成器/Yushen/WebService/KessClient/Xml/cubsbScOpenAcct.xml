@@ -4,7 +4,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR></OPERATOR>
+    <OPERATOR>31010107</OPERATOR>
   </auth>
   <data>
     <!--操作类型OP_TYPE为0时表示券商发起银证开户一步式，为1时表示券商发起预指定，即两步式中的第一步，为2时BANK_ACCT、FUND_AUTH_DATA、BANK_AUTH_DATA均传空。-->
@@ -15,8 +15,8 @@
     <CUST_CODE></CUST_CODE>
     <!--资金代码-->
     <CUACCT_CODE></CUACCT_CODE>
-    <!--客户代码-->
-    <BANK_CUACCT_CODE></BANK_CUACCT_CODE>
+    <!--银行账户卡号-->
+    <BANK_ACCT_CODE></BANK_ACCT_CODE>
     <!--外部机构-->
     <EXT_ORG></EXT_ORG>
     <!--外部银行账户-->
@@ -24,9 +24,15 @@
     <!--资金密码-->
     <FUND_AUTH_DATA></FUND_AUTH_DATA>
     <!--银证业务类型DD[CUBSB_TYPE]-->
-    <CUBSB_TYPE></CUBSB_TYPE>
+    <CUBSB_TYPE>1</CUBSB_TYPE>
     <!--银行密码-->
     <BANK_AUTH_DATA></BANK_AUTH_DATA>
+    <!--流水序号-->
+    <SERIAL_NO></SERIAL_NO>
+    <!--短信验证码-->
+    <SMS_NO></SMS_NO>
+    <!--银证类型-->
+    <CUBSB_TYPE></CUBSB_TYPE>
     <!--股东账户（可选）-->
     <TRDACCT></TRDACCT>
     <!--银行代码-->

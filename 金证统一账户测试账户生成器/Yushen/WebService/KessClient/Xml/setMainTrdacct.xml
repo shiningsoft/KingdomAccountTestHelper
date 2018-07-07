@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.220	主股东账户设置-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资金账户（必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--原交易账户（非必传）-->
+    <OLD_TRDACCT></OLD_TRDACCT>
+    <!--原交易板块（非必传）-->
+    <OLD_STKBD></OLD_STKBD>
+    <!--原交易账户序号（非必传）-->
+    <OLD_TRDACCT_SN></OLD_TRDACCT_SN>
+  </data>
+</request>

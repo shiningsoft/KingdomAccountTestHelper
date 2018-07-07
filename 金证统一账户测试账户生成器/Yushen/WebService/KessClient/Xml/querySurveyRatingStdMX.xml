@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.223	查询测评等级设置情况-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--试题分类（必传）-->
+    <SURVEY_SN></SURVEY_SN>
+    <!--评级级别（必传）-->
+    <RATING_LVL></RATING_LVL>
+  </data>
+</request>

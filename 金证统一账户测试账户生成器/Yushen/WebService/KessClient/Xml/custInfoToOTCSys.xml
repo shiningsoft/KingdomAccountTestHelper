@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.198	客户资料同步OTC系统
+注：此接口需OEM“KBSSOTC非现场业务”的授权，并且暂时不能使用
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）0-新增，1-修改-2不处理六位,分别为客户资料，资产账户，风险测评，电子约定书、密码、适当性资料。如：六个资料都同步的时候送：‘000000’，只同步客户资料时送：‘022222’-->
+    <OPERATION_TYPE></OPERATION_TYPE>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账户（复数）（非必传）资产账户用‘，’隔开-->
+    <CUACCT_CODES></CUACCT_CODES>
+    <!--会话凭证（非必传）-->
+    <OTC_SESSION></OTC_SESSION>
+    <!--电子约定书标识（非必传）-->
+    <AGREEMENT_ID></AGREEMENT_ID>
+    <!--产品大类（非必传）-->
+    <INST_TYPE></INST_TYPE>
+    <!--产品子类（非必传）-->
+    <INST_CLS></INST_CLS>
+    <!--操作渠道（非必传）-->
+    <CHANNELS></CHANNELS>
+    <!--支付机构（非必传）-->
+    <PAY_ORG></PAY_ORG>
+    <!--银行账户类别（非必传）-->
+    <BANK_ACCT_TYPE></BANK_ACCT_TYPE>
+    <!--客户密码（非必传）-->
+    <PASSWORD></PASSWORD>
+    <!--资金密码（非必传）-->
+    <FUND_PWD></FUND_PWD>
+    <!--银行账号（非必传）-->
+    <BANK_ACCT></BANK_ACCT>
+    <!--资本属性（非必传）,中投同步恒生OTC需要-->
+    <CAPITAL_ATTR></CAPITAL_ATTR>
+    <!--负责人电话号码（非必传）-->
+    <RESPONSIBILITY_REP_TEL></RESPONSIBILITY_REP_TEL>
+    <!--资金卡号（非必传）-->
+    <FUND_ACCT></FUND_ACCT>
+    <!--银行代码（非必传）-->
+    <BANK_NO></BANK_NO>
+    <!--内部机构（非必传）-->
+    <INT_ORG></INT_ORG>
+  </data>
+</request>

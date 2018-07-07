@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.233	监护人信息维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--用户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--操作类型（必传）-->
+    <OPERATION_TYPE></OPERATION_TYPE>
+    <!--监护人编号（必传）-->
+    <GUARDIAN_NO></GUARDIAN_NO>
+    <!--监护人名称（非必传）-->
+    <GUARDIAN_NAME></GUARDIAN_NAME>
+    <!--监护人证件类型（非必传）-->
+    <GUARDIAN_ID_TYPE></GUARDIAN_ID_TYPE>
+    <!--监护人证件号码（非必传）-->
+    <GUARDIAN_ID></GUARDIAN_ID>
+    <!--监护人证件有效期（非必传）-->
+    <GUARDIAN_EXP_DATE></GUARDIAN_EXP_DATE>
+    <!--监护人电话号码（非必传）-->
+    <GUARDIAN_TEL></GUARDIAN_TEL>
+    <!--与股东关系（非必传）-->
+    <GUARDIAN_RELA></GUARDIAN_RELA>
+    <!--备注（非必传）-->
+    <OP_REMARK></OP_REMARK>
+  </data>
+</request>

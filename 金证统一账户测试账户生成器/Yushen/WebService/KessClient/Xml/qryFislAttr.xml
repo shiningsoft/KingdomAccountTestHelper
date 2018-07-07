@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.204	融资融券自动授信标志查询
+注1：此接口需OEM“KBSS融资融券非现场业务”的授权；
+注2：此接口仅限国元证券使用
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--内部机构（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--自动授信标志（非必传）0-清算后不自动授信1-清算后自动授信-->
+    <AUTO_CDT_FLAG></AUTO_CDT_FLAG>
+  </data>
+</request>

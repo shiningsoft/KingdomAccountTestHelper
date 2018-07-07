@@ -823,7 +823,7 @@ namespace 金证统一账户测试账户生成器
             Dict.NATIONALITY dicNatinality = new Dict.NATIONALITY();
             nationality = dicNatinality.getNameByValue(nationality).Replace("族","");
 
-            birthday = birthday.Substring(0, 4) + "      " + int.Parse(birthday.Substring(4, 2)).ToString() + "      " + int.Parse(birthday.Substring(6, 2)).ToString();
+            birthday = birthday.Substring(0, 4) + "     " + int.Parse(birthday.Substring(4, 2)).ToString() + "    " + int.Parse(birthday.Substring(6, 2)).ToString();
 
             // 超长地址自动换行
             string newAddr = Formatter.lineWarp(addr, 13);
@@ -832,12 +832,12 @@ namespace 金证统一账户测试账户生成器
             image = Resources.样本身份证正面;
             using (Graphics g = Graphics.FromImage(image))
             {
-                g.DrawString(name, new Font("黑体", 18), Brushes.Black, new PointF(400, 220));    // 姓名
-                g.DrawString(sex, new Font("黑体", 13), Brushes.Black, new PointF(400, 360));    // 性别
-                g.DrawString(nationality, new Font("黑体", 13), Brushes.Black, new PointF(800, 360));    // 民族
-                g.DrawString(birthday, new Font("黑体", 13), Brushes.Black, new PointF(400, 500));  // 出生年月日
-                g.DrawString(newAddr, new Font("黑体", 13), Brushes.Black, new PointF(400, 630));    // 住址
-                g.DrawString(idno, new Font("黑体", 20), Brushes.Black, new PointF(750, 960));    // 身份证号码
+                g.DrawString(name, new Font("黑体", 18), Brushes.Black, new PointF(370, 220));    // 姓名
+                g.DrawString(sex, new Font("黑体", 15), Brushes.Black, new PointF(370, 360));    // 性别
+                g.DrawString(nationality, new Font("黑体", 15), Brushes.Black, new PointF(740, 360));    // 民族
+                g.DrawString(birthday, new Font("黑体", 15), Brushes.Black, new PointF(370, 500));  // 出生年月日
+                g.DrawString(newAddr, new Font("黑体", 15), Brushes.Black, new PointF(370, 630));    // 住址
+                g.DrawString(idno, new Font("黑体", 20), Brushes.Black, new PointF(630, 990));    // 身份证号码
                 g.Flush();
             }
             image.Save(Environment.CurrentDirectory + @"\身份证正面.jpg");

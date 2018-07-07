@@ -7,21 +7,67 @@
     <OPERATOR>33146</OPERATOR>
   </auth>
   <data>
-    <!--流水号，如果有签署该协议，传入流水号做修改-->
+    <!--流水号（非必传），如果有签署该协议，传入流水号做修改-->
     <SERIAL_NO></SERIAL_NO>
-    <!--协议所属机构-->
+    <!--协议所属机构（必传）-->
     <SIGN_ORG></SIGN_ORG>
-    <!--电子协议类别-->
+    <!--电子协议类别（必传）-->
     <CONTRACT_CLS></CONTRACT_CLS>
-    <!--版本号-->
+    <!--机构代码（非必传）-->
+    <INT_ORG></INT_ORG>
+    <!--版本号（必传）-->
     <VERSION></VERSION>
-    <!--证件类型-->
+    <!--证件类型（非必传）-->
     <ID_TYPE></ID_TYPE>
-    <!--证件号码-->
+    <!--证件号码（非必传）-->
     <ID_CODE></ID_CODE>
-    <!--验签文本-->
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--签署类型（非必传）-->
+    <SIGN_TYPE></SIGN_TYPE>
+    <!--签署内容附加（非必传）-->
+    <SIGN_EXINFO></SIGN_EXINFO>
+    <!--签名内容（非必传）-->
     <SIGN_TEXT></SIGN_TEXT>
-    <!--验签之后文本-->
+    <!--验签（非必传）-->
     <STRING></STRING>
+    <!--起始日期（非必传）-->
+    <EFT_DATE></EFT_DATE>
+    <!--结束日期（非必传）-->
+    <EXP_DATE></EXP_DATE>
+    <!--产品大类（非必传）-->
+    <INST_TYPE></INST_TYPE>
+    <!--产品子类（非必传）-->
+    <INST_CLS></INST_CLS>
+    <!--发行人代码（非必传）-->
+    <ISS_CODE></ISS_CODE>
+    <!--产品代码（非必传）-->
+    <INST_CODE></INST_CODE>
+    <!--产品编码（非必传）-->
+    <INST_ID></INST_ID>
+    <!--电子合同编号（非必传）-->
+    <EC_NO></EC_NO>
+    <!--是否同步OTC（非必传）-->
+    <!--送1同步，否则不同步-->
+    <CONTRACT_OTC></CONTRACT_OTC>
+    <!--电子协议书标识（非必传）-->
+    <AGREEMENT_ID></AGREEMENT_ID>
+    <!--交易密码（非必传）-->
+    <TRDACCTPWD></TRDACCTPWD>
+    <!--顶点标志（非必传）-->
+    <DDFLAG></DDFLAG>
+    <!--顶点机构（非必传）-->
+    <DDORG></DDORG>
+    <!--操作类型（非必传）-->
+    <!--1|开通;2|关闭-->
+    <DDOPTYPE></DDOPTYPE>
+    <!--阅读标志（非必传）-->
+    <!--0|阅读；1|签约-->
+    <DDREADFLAG></DDREADFLAG>
+    <!--签约行为（非必传）-->
+    <!--A'表示增加记录，'D'标示取消记录-->
+    <EC_ACTION></EC_ACTION>
+    <!--备注-->
+    <REMARK></REMARK>
   </data>
 </request>

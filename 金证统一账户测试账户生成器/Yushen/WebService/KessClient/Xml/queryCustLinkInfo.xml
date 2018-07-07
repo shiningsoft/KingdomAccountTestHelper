@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.244	客户备用联系资料查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--联系资料序号（非必传）-->
+    <LINK_NO></LINK_NO>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--客户姓名（非必传）-->
+    <CUST_NAME></CUST_NAME>
+    <!--联系方式类型（非必传）-->
+    <EXT_LINK_TYPE></EXT_LINK_TYPE>
+    <!--邮政编码（非必传）-->
+    <EXT_LINK_ZIP_CODE></EXT_LINK_ZIP_CODE>
+    <!--手机号（非必传）-->
+    <EXT_LINK_MOBILE></EXT_LINK_MOBILE>
+    <!--电子邮箱（非必传）-->
+    <EXT_LINK_EMAIL></EXT_LINK_EMAIL>
+    <!--传真（非必传）-->
+    <EXT_LINK_FAX></EXT_LINK_FAX>
+  </data>
+</request>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.243	限售股信息表维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--证券交易所（非必传）-->
+    <STKEX></STKEX>
+    <!--交易板块（非必传）-->
+    <STKBD></STKBD>
+    <!--交易账户（非必传）-->
+    <TRDACCT></TRDACCT>
+    <!--交易单元（非必传）-->
+    <STKPBU></STKPBU>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--证券代码（非必传）-->
+    <STK_CODE></STK_CODE>
+    <!--证券可用数量（非必传）-->
+    <STK_AVL></STK_AVL>
+    <!--是否解禁（非必传）-->
+    <REMOVE_FORBID_FLAG></REMOVE_FORBID_FLAG>
+    <!--上市公司名称（非必传）-->
+    <PUB_COM_NAME></PUB_COM_NAME>
+    <!--市值（非必传）-->
+    <MARKET_PRICE></MARKET_PRICE>
+    <!--记录序号（非必传）-->
+    <REC_SN></REC_SN>
+    <!--交易日期（非必传）-->
+    <TRD_DATE></TRD_DATE>
+  </data>
+</request>

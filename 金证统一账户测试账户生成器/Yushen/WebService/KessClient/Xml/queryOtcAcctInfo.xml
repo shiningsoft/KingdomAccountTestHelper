@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.195	登记账号查询
+注：此接口需OEM“KBSSOTC非现场业务”的授权，并且暂时不能使用
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--登记机构（非必传）-->
+    <OTC_CODE></OTC_CODE>
+    <!--交易账号（非必传）-->
+    <TRANS_ACCT></TRANS_ACCT>
+    <!--产品子类（非必传）-->
+    <INST_CLS></INST_CLS>
+  </data>
+</request>

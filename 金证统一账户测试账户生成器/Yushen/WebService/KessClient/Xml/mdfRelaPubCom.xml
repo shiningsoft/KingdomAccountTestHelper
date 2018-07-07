@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.257	上市公司关联人信息表维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）-->
+    <OPERATOR_TYPE></OPERATOR_TYPE>
+    <!--交易市场（必传）-->
+    <STKEX></STKEX>
+    <!--内部机构（必传）-->
+    <INT_ORG></INT_ORG>
+    <!--证券代码（必传）-->
+    <STK_CODE></STK_CODE>
+    <!--证券名称（非必传）-->
+    <STK_NAME></STK_NAME>
+    <!--交易账户（必传）-->
+    <TRDACCT></TRDACCT>
+    <!--信用股东账户（非必传）-->
+    <CREDIT_TRDACCT></CREDIT_TRDACCT>
+    <!--账户名称（非必传）-->
+    <TRDACCT_NAME></TRDACCT_NAME>
+    <!--上市公司关联关系（非必传）-->
+    <RELAKIND_PUBCOM></RELAKIND_PUBCOM>
+    <!--用户性质（非必传）-->
+    <USER_TYPE></USER_TYPE>
+    <!--数据来源（非必传）-->
+    <DATA_SOURCE></DATA_SOURCE>
+    <!--更新日期（非必传）-->
+    <UPD_DATE></UPD_DATE>
+    <!--备注（非必传）-->
+    <REMARK></REMARK>
+  </data>
+</request>

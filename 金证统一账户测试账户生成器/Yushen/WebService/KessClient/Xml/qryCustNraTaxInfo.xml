@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.272	非居民金融账户涉税信息查询-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--是否控制人（0非控制人,默认为0,1控制人）（非必传）-->
+    <CTRL_FLAG></CTRL_FLAG>
+    <!--控制人编号（非必传）-->
+    <CTRL_NO></CTRL_NO>
+    <!--国籍（非必传）-->
+    <CITIZENSHIP></CITIZENSHIP>
+    <!--纳税人识别号（非必传）-->
+    <TAXPAYER_IDNO></TAXPAYER_IDNO>
+    <!--流水序号（非必传）-->
+    <SERIAL_NO></SERIAL_NO>
+  </data>
+</request>

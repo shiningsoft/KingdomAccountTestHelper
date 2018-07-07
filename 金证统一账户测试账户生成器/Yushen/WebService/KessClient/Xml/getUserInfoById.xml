@@ -9,5 +9,9 @@
     <ID_TYPE>00</ID_TYPE>
     <!--证件号码（必传）-->
     <ID_CODE>341100194302153014</ID_CODE>
+    <!--用户角色（非必传）-->
+    <USER_ROLES>1</USER_ROLES>
+    <!--预约资料检查标志（非必传）1-检测预约信息-->
+    <CHK_APPT_FLAG>1</CHK_APPT_FLAG>
   </data>
 </request>

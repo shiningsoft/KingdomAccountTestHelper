@@ -11,21 +11,21 @@
     <OPER_TYPE></OPER_TYPE>
     <!--客户代码（必传）-->
     <CUST_CODE></CUST_CODE>
-    <!--客户全称-->
+    <!--客户全称（非必传）-->
     <CUST_FNAME></CUST_FNAME>
-    <!--内部机构-->
+    <!--内部机构（非必传）-->
     <INT_ORG></INT_ORG>
     <!--一码通账号（必传）-->
     <YMT_CODE></YMT_CODE>
-    <!--新一码通账号-->
+    <!--新一码通账号（非必传）-->
     <YMT_CODE_SHT></YMT_CODE_SHT>
-    <!--一码通状态DD[YMT_STATUS]-->
+    <!--一码通状态（非必传）DD[YMT_STATUS]-->
     <YMT_STATUS></YMT_STATUS>
-    <!--证件类型-->
+    <!--证件类型（非必传）-->
     <ID_TYPE></ID_TYPE>
-    <!--证件号码-->
+    <!--证件号码（非必传）-->
     <ID_CODE></ID_CODE>
-    <!--操作备注-->
+    <!--操作备注（非必传）-->
     <REMARK></REMARK>
   </data>
 </request>

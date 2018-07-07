@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.201	合伙人资料查询-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <USER_CODE></USER_CODE>
+    <!--合伙人序号（非必传）-->
+    <PARTNER_NO></PARTNER_NO>
+  </data>
+</request>

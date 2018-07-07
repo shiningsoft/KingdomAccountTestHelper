@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.228	客户诚信记录信息维护-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--操作类型（必传）-->
+    <OPER_TYPE></OPER_TYPE>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--诚信记录编号（非必传）-->
+    <RECORD_NUM></RECORD_NUM>
+    <!--诚信记录来源（非必传）DD[RECORD_SOURCE]-->
+    <RECORD_SOURCE></RECORD_SOURCE>
+    <!--诚信记录内容（非必传）-->
+    <RECORD_TXT></RECORD_TXT>
+    <!--加扣分（非必传）加分项直接填写分数，扣分项填负分，例如-25-->
+    <RECORD_SCORE></RECORD_SCORE>
+  </data>
+</request>

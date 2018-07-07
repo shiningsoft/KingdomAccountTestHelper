@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--2.197	支付账号查询
+注：此接口需OEM“KBSSOTC非现场业务”的授权，并且暂时不能使用
+-->
+<request>
+  <auth>
+    <OPERATOR>36050</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--支付机构（非必传）-->
+    <PAY_ORG></PAY_ORG>
+    <!--支付账号（非必传）-->
+    <PAY_ACCT></PAY_ACCT>
+  </data>
+</request>

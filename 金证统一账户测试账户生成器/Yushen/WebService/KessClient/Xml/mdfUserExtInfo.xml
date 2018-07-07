@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-    <!--2.58	用户扩展信息维护-->
+<!--2.58	用户扩展信息维护-->
 <request>
   <auth>
     <OPERATOR>31010107</OPERATOR>
@@ -7,8 +7,12 @@
   <data>
     <!--客户代码-->
     <CUST_CODE>31010107</CUST_CODE>
-    <!--操作类型0—增加，1—修改，2—删除。-->
+    <!--操作类型0—增加，1—修改-->
     <OPERATION_TYPE>0</OPERATION_TYPE>
+    <!--同步子系统-->
+    <SUBSYS></SUBSYS>
+    <!--是否校验-->
+    <CHECK></CHECK>
     <!--用户职业信息如下：-->
     <!--工作地点-->
     <WORKPLACE></WORKPLACE>
@@ -49,20 +53,26 @@
     <LINKMAN_NO></LINKMAN_NO>
     <!--第二联系人姓名-->
     <LINKMAN></LINKMAN>
+    <!--联系人关系-->
+    <LINKMAN_RELA></LINKMAN_RELA>
     <!--证件类别-->
     <LINKMAN_ID_TYPE></LINKMAN_ID_TYPE>
     <!--证件号码-->
     <LINKMAN_ID></LINKMAN_ID>
+    <!--联系人性别-->
+    <LINKMAN_SEX></LINKMAN_SEX>
     <!--第二联系人电话-->
     <LINKMAN_TEL></LINKMAN_TEL>
+    <!--第二联系人手机号-->
+    <LINKMAN_MOBILE_TEL></LINKMAN_MOBILE_TEL>
     <!--EMAIL地址-->
     <LINKMAN_EMAIL></LINKMAN_EMAIL>
     <!--通信地址-->
     <LINKMAN_ADDR></LINKMAN_ADDR>
     <!--邮政编码-->
     <LINKMAN_ZIP></LINKMAN_ZIP>
-    <IME_TYPE></IME_TYPE>
-    <IME_NAME></IME_NAME>
+    <!--联系人标示-->
+    <LINKMAN_FLAG></LINKMAN_FLAG>
     <!--用户拓展信息：-->
     <!--营销确认-->
     <IS_SALE_CUST></IS_SALE_CUST>
@@ -109,5 +119,6 @@
     <!--其他备注-->
     <OTHER_REMARK></OTHER_REMARK>
     <!--操作/特殊备注-->
-    <SPEC_REMARK></SPEC_REMARK></data>
+    <SPEC_REMARK></SPEC_REMARK>
+  </data>
 </request>
