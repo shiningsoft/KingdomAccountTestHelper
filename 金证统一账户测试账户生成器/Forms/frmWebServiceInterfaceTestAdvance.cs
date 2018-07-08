@@ -1,6 +1,7 @@
 ﻿using NLog;
 using System;
 using System.Data;
+using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Xml;
@@ -144,6 +145,55 @@ namespace 金证统一账户测试账户生成器
             refreshMethonList();
 
             cbxMethonList.Focus();
+        }
+        
+        /// <summary>
+        /// 查询数据字典
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        async public void queryDictionary(string dictName)
+        {
+            lbQueryDictStatus.Text = "正在查询：" + dictName;
+            lbQueryDictStatus.Visible = true;
+
+            dictName = dictName.ToUpper().Trim();
+
+            try
+            {
+                Response response = await kess.getDictData(dictName);
+                dataGridView1.DataSource = response.DataSet.Tables["row"];
+                if (dataGridView1.ColumnCount >= 2)
+                {
+                    dataGridView1.AutoResizeColumn(2);
+                }
+            }
+            catch (Exception)
+            {
+                if (dataGridView1.DataSource != null)
+                {
+                    DataTable dt = (DataTable)dataGridView1.DataSource;
+                    dt.Rows.Clear();
+                    dataGridView1.DataSource = dt;
+                }
+            }
+
+            lbQueryDictStatus.Visible = false;
+        }
+        
+        private void dgvParams_CurrentCellChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dgvParams.CurrentRow!= null)
+                {
+                    queryDictionary(dgvParams.CurrentRow.Cells["ColumnName"].Value.ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }

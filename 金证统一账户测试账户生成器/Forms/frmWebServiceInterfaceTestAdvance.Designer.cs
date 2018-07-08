@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefreshMethonList = new System.Windows.Forms.Button();
             this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
@@ -37,16 +37,28 @@
             this.btnLoadRequestXml = new System.Windows.Forms.Button();
             this.label26 = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DD_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DD_ITEM_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DD_ITEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.INT_ORG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbInterfaceTitle = new System.Windows.Forms.Label();
             this.dgvParams = new System.Windows.Forms.DataGridView();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.lbQueryDictStatus = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParams)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRefreshMethonList
@@ -73,11 +85,11 @@
             this.tbxResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxResponse.Location = new System.Drawing.Point(3, 19);
+            this.tbxResponse.Location = new System.Drawing.Point(3, 22);
             this.tbxResponse.Multiline = true;
             this.tbxResponse.Name = "tbxResponse";
             this.tbxResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxResponse.Size = new System.Drawing.Size(517, 538);
+            this.tbxResponse.Size = new System.Drawing.Size(517, 535);
             this.tbxResponse.TabIndex = 25;
             // 
             // btnExecute
@@ -119,8 +131,8 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.splitContainer2);
             this.splitContainer1.Panel1.Controls.Add(this.lbInterfaceTitle);
-            this.splitContainer1.Panel1.Controls.Add(this.dgvParams);
             // 
             // splitContainer1.Panel2
             // 
@@ -128,6 +140,59 @@
             this.splitContainer1.Size = new System.Drawing.Size(1018, 560);
             this.splitContainer1.SplitterDistance = 491;
             this.splitContainer1.TabIndex = 28;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DD_ID,
+            this.DD_ITEM_NAME,
+            this.DD_ITEM,
+            this.INT_ORG});
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(479, 147);
+            this.dataGridView1.TabIndex = 17;
+            // 
+            // DD_ID
+            // 
+            this.DD_ID.DataPropertyName = "DD_ID";
+            this.DD_ID.HeaderText = "字典项";
+            this.DD_ID.Name = "DD_ID";
+            this.DD_ID.ReadOnly = true;
+            // 
+            // DD_ITEM_NAME
+            // 
+            this.DD_ITEM_NAME.DataPropertyName = "DD_ITEM_NAME";
+            this.DD_ITEM_NAME.HeaderText = "名称";
+            this.DD_ITEM_NAME.Name = "DD_ITEM_NAME";
+            this.DD_ITEM_NAME.ReadOnly = true;
+            // 
+            // DD_ITEM
+            // 
+            this.DD_ITEM.DataPropertyName = "DD_ITEM";
+            this.DD_ITEM.HeaderText = "值";
+            this.DD_ITEM.Name = "DD_ITEM";
+            this.DD_ITEM.ReadOnly = true;
+            // 
+            // INT_ORG
+            // 
+            this.INT_ORG.DataPropertyName = "INT_ORG";
+            this.INT_ORG.HeaderText = "INT_ORG";
+            this.INT_ORG.Name = "INT_ORG";
+            this.INT_ORG.ReadOnly = true;
             // 
             // lbInterfaceTitle
             // 
@@ -142,6 +207,7 @@
             // 
             this.dgvParams.AllowUserToAddRows = false;
             this.dgvParams.AllowUserToDeleteRows = false;
+            this.dgvParams.AllowUserToResizeRows = false;
             this.dgvParams.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -151,34 +217,36 @@
             this.ColumnName,
             this.ColumnValue,
             this.Comment});
-            this.dgvParams.Location = new System.Drawing.Point(3, 19);
+            this.dgvParams.Location = new System.Drawing.Point(3, 3);
             this.dgvParams.MultiSelect = false;
             this.dgvParams.Name = "dgvParams";
             this.dgvParams.RowHeadersVisible = false;
             this.dgvParams.RowHeadersWidth = 100;
             this.dgvParams.RowTemplate.Height = 23;
             this.dgvParams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvParams.Size = new System.Drawing.Size(485, 538);
+            this.dgvParams.Size = new System.Drawing.Size(479, 378);
             this.dgvParams.TabIndex = 0;
+            this.dgvParams.CurrentCellChanged += new System.EventHandler(this.dgvParams_CurrentCellChanged);
             // 
             // ColumnName
             // 
             this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnName.DataPropertyName = "字段名";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle7;
             this.ColumnName.FillWeight = 152.2843F;
             this.ColumnName.HeaderText = "字段名";
             this.ColumnName.Name = "ColumnName";
             this.ColumnName.ReadOnly = true;
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.ColumnName.Width = 120;
             // 
             // ColumnValue
             // 
             this.ColumnValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnValue.DataPropertyName = "字段值";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle8;
             this.ColumnValue.FillWeight = 140.1015F;
             this.ColumnValue.HeaderText = "字段值";
             this.ColumnValue.Name = "ColumnValue";
@@ -191,6 +259,39 @@
             this.Comment.HeaderText = "备注";
             this.Comment.Name = "Comment";
             this.Comment.ReadOnly = true;
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer2.Location = new System.Drawing.Point(3, 19);
+            this.splitContainer2.Name = "splitContainer2";
+            this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.dgvParams);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.lbQueryDictStatus);
+            this.splitContainer2.Panel2.Controls.Add(this.dataGridView1);
+            this.splitContainer2.Size = new System.Drawing.Size(485, 538);
+            this.splitContainer2.SplitterDistance = 384;
+            this.splitContainer2.TabIndex = 26;
+            // 
+            // lbQueryDictStatus
+            // 
+            this.lbQueryDictStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbQueryDictStatus.AutoSize = true;
+            this.lbQueryDictStatus.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lbQueryDictStatus.Location = new System.Drawing.Point(170, 47);
+            this.lbQueryDictStatus.Name = "lbQueryDictStatus";
+            this.lbQueryDictStatus.Size = new System.Drawing.Size(88, 16);
+            this.lbQueryDictStatus.TabIndex = 18;
+            this.lbQueryDictStatus.Text = "正在查询：";
+            this.lbQueryDictStatus.Visible = false;
             // 
             // frmWebServiceInterfaceTestAdvance
             // 
@@ -212,7 +313,13 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParams)).EndInit();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +339,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ColumnValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn Comment;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DD_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DD_ITEM_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DD_ITEM;
+        private System.Windows.Forms.DataGridViewTextBoxColumn INT_ORG;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Label lbQueryDictStatus;
     }
 }
