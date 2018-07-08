@@ -379,10 +379,6 @@
   <wsdl:message name="webSendSmsResponse">
     <wsdl:part name="webSendSmsReturn" type="soapenc:string" />
   </wsdl:message>
-  <wsdl:message name="uploadImgStringRequest">
-    <wsdl:part name="in0" type="soapenc:string" />
-    <wsdl:part name="in1" type="soapenc:string" />
-  </wsdl:message>
   <wsdl:message name="closeCustomerResponse">
     <wsdl:part name="closeCustomerReturn" type="soapenc:string" />
   </wsdl:message>
@@ -478,10 +474,6 @@
   </wsdl:message>
   <wsdl:message name="mdfPartnerInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
-  </wsdl:message>
-  <wsdl:message name="uploadImgStringNoBizRequest">
-    <wsdl:part name="in0" type="soapenc:string" />
-    <wsdl:part name="in1" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="mdfCustRiskProprightResponse">
     <wsdl:part name="mdfCustRiskProprightReturn" type="soapenc:string" />
@@ -674,6 +666,9 @@
   </wsdl:message>
   <wsdl:message name="setCustAgreementResponse">
     <wsdl:part name="setCustAgreementReturn" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="downloadImgRequest">
+    <wsdl:part name="in0" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="applyAcctFrtBizResponse">
     <wsdl:part name="applyAcctFrtBizReturn" type="soapenc:string" />
@@ -882,9 +877,6 @@
   <wsdl:message name="activateCubsbScResponse">
     <wsdl:part name="activateCubsbScReturn" type="soapenc:string" />
   </wsdl:message>
-  <wsdl:message name="uploadImgStringResponse">
-    <wsdl:part name="uploadImgStringReturn" type="soapenc:string" />
-  </wsdl:message>
   <wsdl:message name="queryCustAgreementResponse">
     <wsdl:part name="queryCustAgreementReturn" type="soapenc:string" />
   </wsdl:message>
@@ -941,6 +933,9 @@
   </wsdl:message>
   <wsdl:message name="queryBjhgCustApplyCheckRequest">
     <wsdl:part name="in0" type="soapenc:string" />
+  </wsdl:message>
+  <wsdl:message name="downloadImgResponse">
+    <wsdl:part name="downloadImgReturn" type="apachesoap:DataHandler" />
   </wsdl:message>
   <wsdl:message name="mdfPartnerInfoResponse">
     <wsdl:part name="mdfPartnerInfoReturn" type="soapenc:string" />
@@ -1334,9 +1329,6 @@
   </wsdl:message>
   <wsdl:message name="trxCalendarQueryResponse">
     <wsdl:part name="trxCalendarQueryReturn" type="soapenc:string" />
-  </wsdl:message>
-  <wsdl:message name="uploadImgStringNoBizResponse">
-    <wsdl:part name="uploadImgStringNoBizReturn" type="soapenc:string" />
   </wsdl:message>
   <wsdl:message name="listHkTzxxInfoRequest">
     <wsdl:part name="in0" type="soapenc:string" />
@@ -1880,6 +1872,10 @@
       <wsdl:input name="getDictDataRequest" message="impl:getDictDataRequest" />
       <wsdl:output name="getDictDataResponse" message="impl:getDictDataResponse" />
     </wsdl:operation>
+    <wsdl:operation name="downloadImg" parameterOrder="in0">
+      <wsdl:input name="downloadImgRequest" message="impl:downloadImgRequest" />
+      <wsdl:output name="downloadImgResponse" message="impl:downloadImgResponse" />
+    </wsdl:operation>
     <wsdl:operation name="queryMenuUser" parameterOrder="in0">
       <wsdl:input name="queryMenuUserRequest" message="impl:queryMenuUserRequest" />
       <wsdl:output name="queryMenuUserResponse" message="impl:queryMenuUserResponse" />
@@ -1891,10 +1887,6 @@
     <wsdl:operation name="querySurveyIndex" parameterOrder="in0">
       <wsdl:input name="querySurveyIndexRequest" message="impl:querySurveyIndexRequest" />
       <wsdl:output name="querySurveyIndexResponse" message="impl:querySurveyIndexResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="uploadImgString" parameterOrder="in0 in1">
-      <wsdl:input name="uploadImgStringRequest" message="impl:uploadImgStringRequest" />
-      <wsdl:output name="uploadImgStringResponse" message="impl:uploadImgStringResponse" />
     </wsdl:operation>
     <wsdl:operation name="downloadImgString" parameterOrder="in0">
       <wsdl:input name="downloadImgStringRequest" message="impl:downloadImgStringRequest" />
@@ -2267,10 +2259,6 @@
     <wsdl:operation name="openYMTAcctByKbss" parameterOrder="in0">
       <wsdl:input name="openYMTAcctByKbssRequest" message="impl:openYMTAcctByKbssRequest" />
       <wsdl:output name="openYMTAcctByKbssResponse" message="impl:openYMTAcctByKbssResponse" />
-    </wsdl:operation>
-    <wsdl:operation name="uploadImgStringNoBiz" parameterOrder="in0 in1">
-      <wsdl:input name="uploadImgStringNoBizRequest" message="impl:uploadImgStringNoBizRequest" />
-      <wsdl:output name="uploadImgStringNoBizResponse" message="impl:uploadImgStringNoBizResponse" />
     </wsdl:operation>
     <wsdl:operation name="searchAcctFrtBizLog" parameterOrder="in0">
       <wsdl:input name="searchAcctFrtBizLogRequest" message="impl:searchAcctFrtBizLogRequest" />
@@ -2936,6 +2924,15 @@
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="uploadImg">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="uploadImgRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="uploadImgResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="signAgreement">
       <wsdlsoap:operation soapAction="" />
       <wsdl:input name="signAgreementRequest">
@@ -3206,6 +3203,15 @@
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="downloadImg">
+      <wsdlsoap:operation soapAction="" />
+      <wsdl:input name="downloadImgRequest">
+        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:input>
+      <wsdl:output name="downloadImgResponse">
+        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="queryMenuUser">
       <wsdlsoap:operation soapAction="" />
       <wsdl:input name="queryMenuUserRequest">
@@ -3230,15 +3236,6 @@
         <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output name="querySurveyIndexResponse">
-        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="uploadImgString">
-      <wsdlsoap:operation soapAction="" />
-      <wsdl:input name="uploadImgStringRequest">
-        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:input>
-      <wsdl:output name="uploadImgStringResponse">
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>
@@ -4076,15 +4073,6 @@
         <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:input>
       <wsdl:output name="openYMTAcctByKbssResponse">
-        <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:output>
-    </wsdl:operation>
-    <wsdl:operation name="uploadImgStringNoBiz">
-      <wsdlsoap:operation soapAction="" />
-      <wsdl:input name="uploadImgStringNoBizRequest">
-        <wsdlsoap:body use="encoded" namespace="http://impl.service.wsdl.kess.szkingdom.com" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
-      </wsdl:input>
-      <wsdl:output name="uploadImgStringNoBizResponse">
         <wsdlsoap:body use="encoded" namespace="http://60.173.222.38:30004/kess/services/KessService" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" />
       </wsdl:output>
     </wsdl:operation>

@@ -85,6 +85,10 @@ namespace Yushen.WebService.KessClient
             {
                 // 利用反射建立WebService的实例
                 this.kessClientType = Type.GetType(this.kessClassName);
+                if (this.kessClientType == null)
+                {
+                    throw new Exception("未能正确识别" + kessClassName + "的类型");
+                }
 
                 // 创建多个WebService执行器，并加入List
                 for (int i = 0; i < maxConnections; i++)
