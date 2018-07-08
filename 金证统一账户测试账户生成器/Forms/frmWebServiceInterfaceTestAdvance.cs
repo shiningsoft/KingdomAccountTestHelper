@@ -46,6 +46,8 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
+                tbxResponse.Text = "正在执行";
+
                 string innerXml = "";
                 foreach (DataRow dr in dt.Rows)
                 {

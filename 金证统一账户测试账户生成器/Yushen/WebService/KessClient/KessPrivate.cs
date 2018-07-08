@@ -819,6 +819,12 @@ namespace Yushen.WebService.KessClient
         /// <returns></returns>
         async private Task<string> execute(Request request)
         {
+            System.Reflection.MethodInfo method = this.kessClientType.GetMethod(request.methonName);
+            if (method == null)
+            {
+                throw new Exception("“" + request.methonName + "”接口不存在或暂不支持！");
+            }
+
             // 请求队列数+1
             _requestQueueCount++;
 
@@ -853,27 +859,31 @@ namespace Yushen.WebService.KessClient
 
             return await Task.Run(() =>
             {
+                // 调用WebService接口，获取返回值
+
                 _webserviceConnectionsNum += 1;
 
                 logger.Info("执行器" + index.ToString() + "调用Webservice功能<" + request.methonName + ">|" + request.xml);
 
                 stopWatch.Restart();
 
-                // 调用WebService接口，获取返回值
-                System.Reflection.MethodInfo method = this.kessClientType.GetMethod(request.methonName);
-                if (method == null)
-                {
-                    throw new Exception("“" + request.methonName + "”接口不存在！");
-                }
-
                 string result = "";
                 try
                 {
                     result = (string)method.Invoke(kessClientList[index].executor, new object[] { request.xml });
+                    if (result == null)
+                    {
+                        throw new Exception("服务器返回Null");
+                    }
+                    if (result == "")
+                    {
+                        throw new Exception("服务器没有返回数据");
+                    }
                 }
                 catch (Exception)
                 {
                     _webserviceConnectionsNum -= 1;
+                    kessClientList[index].available = true;
                     throw;
                 }
 
