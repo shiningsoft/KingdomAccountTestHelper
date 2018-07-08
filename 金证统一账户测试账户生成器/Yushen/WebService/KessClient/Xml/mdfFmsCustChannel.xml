@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!--2.278	客户操作渠道修改-->
+<request>
+  <auth>
+    <OPERATOR>33146</OPERATOR>
+  </auth>
+  <data>
+    <!--客户代码（非必传）-->
+    <CUST_CODE></CUST_CODE>
+    <!--资产账户（非必传）-->
+    <CUACCT_CODE></CUACCT_CODE>
+    <!--子系统（非必传）-->
+    <SUBSYS></SUBSYS>
+    <!--操作渠道（必传）-->
+    <CHANNELS></CHANNELS>
+    <!--备注（非必传）-->
+    <OP_REMARK></OP_REMARK>
+  </data>
+</request>

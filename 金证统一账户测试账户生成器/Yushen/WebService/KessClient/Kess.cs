@@ -49,7 +49,7 @@ namespace Yushen.WebService.KessClient
             {
                 this.kessWebserviceURL = kessWebserviceURL;
             }
-            
+
             this.CreateInstance();
         }
 
@@ -105,7 +105,6 @@ namespace Yushen.WebService.KessClient
 
             return true;
         }
-
 
         /// <summary>
         /// 操作员退出
@@ -169,7 +168,7 @@ namespace Yushen.WebService.KessClient
                 {
                     user.cuacct_code = user.cust_code;
                 }
-                response = await this.openCuacct(USER_CODE: user.cust_code, CUACCT_CLS:user.cuacct_cls, INT_ORG: user.int_org);
+                response = await this.openCuacct(USER_CODE: user.cust_code, CUACCT_CLS: user.cuacct_cls, INT_ORG: user.int_org);
             }
             else if (response.length > 0)
             {
@@ -227,7 +226,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="user">用户信息</param>
         /// <param name="OPERATION_TYPE">操作类型，0增加密码，1修改密码，3重置密码</param>
         /// <returns></returns>
-        async public Task<bool> mdfUserPassword(User user, string USE_SCOPE, string OPERATION_TYPE="0")
+        async public Task<bool> mdfUserPassword(User user, string USE_SCOPE, string OPERATION_TYPE = "0")
         {
             // 前置条件判断
             if (user.cust_code == "")
@@ -273,7 +272,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SURVEY_COLS">问题序号列字符串</param>
         /// <param name="SURVEY_CELLS">答案序号列字符串</param>
         /// <returns></returns>
-        async public Task<bool> syncSurveyAns2Kbss(User user, string SURVEY_COLS, string SURVEY_CELLS, string SURVEY_SN="1")
+        async public Task<bool> syncSurveyAns2Kbss(User user, string SURVEY_COLS, string SURVEY_CELLS, string SURVEY_SN = "1")
         {
             // 前置条件判断
             if (user.cust_code == "")
@@ -324,6 +323,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="ADDRESS">联系地址（必传）</param>
         /// <param name="ZIP_CODE">邮政编码（必传）</param>
         /// <param name="OCCU_TYPE">职业类型（必传）</param>
+        /// <param name="NATIONALITY">民族（必传）</param>
         /// <param name="EDUCATION">学历（个人必传）</param>
         /// <param name="TEL">联系电话（必传）</param>
         /// <param name="MOBILE_TEL">移动电话（必传）</param>
@@ -360,6 +360,7 @@ namespace Yushen.WebService.KessClient
                                     string ADDRESS,
                                     string ZIP_CODE,
                                     string OCCU_TYPE,
+                                    string NATIONALITY,
                                     string EDUCATION,
                                     string TEL,
                                     string MOBILE_TEL,
@@ -384,7 +385,7 @@ namespace Yushen.WebService.KessClient
                                     )
         {
             // 前置条件判断
-            if (CUST_CODE=="")
+            if (CUST_CODE == "")
             {
                 throw new Exception("客户代码不能为空");
             }
@@ -405,6 +406,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("ADDRESS", ADDRESS);
             request.setAttr("ZIP_CODE", ZIP_CODE);
             request.setAttr("OCCU_TYPE", OCCU_TYPE);
+            request.setAttr("NATIONALITY", NATIONALITY);
             request.setAttr("EDUCATION", EDUCATION);
             request.setAttr("TEL", TEL);
             request.setAttr("MOBILE_TEL", MOBILE_TEL);
@@ -451,10 +453,10 @@ namespace Yushen.WebService.KessClient
         /// <param name="ACCT_TYPE">证券账户类别(非必输)11:沪A，21:深A。DD[ACCT_TYPE]</param>
         /// <param name="ACCTBIZ_EXCODE">账户代理业务(非必输)DD[ACCTBIZ_EXCODE]默认为07-证券账户查询</param>
         /// <returns></returns>
-        async public Task<Response> onSearchNewZD(User user,string ACCT_TYPE = "", string ACCTBIZ_EXCODE = Dict.ACCTBIZ_EXCODE.证券账户查询)
+        async public Task<Response> onSearchNewZD(User user, string ACCT_TYPE = "", string ACCTBIZ_EXCODE = Dict.ACCTBIZ_EXCODE.证券账户查询)
         {
             // 前置条件判断
-            if (user.user_type=="")
+            if (user.user_type == "")
             {
                 throw new Exception("用户类型不能为空");
             }
@@ -482,7 +484,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("ID_TYPE", user.id_type);
             request.setAttr("ID_CODE", user.id_code);
             request.setAttr("INT_ORG", user.int_org);
-            request.setAttr("ACCT_TYPE", ACCT_TYPE); 
+            request.setAttr("ACCT_TYPE", ACCT_TYPE);
             request.setAttr("ACCTBIZ_EXCODE", ACCTBIZ_EXCODE);
 
 
@@ -555,7 +557,7 @@ namespace Yushen.WebService.KessClient
                     response.empty();
                 }
             }
-            else if (response.flag == "0" && response.prompt== "中登接口调用失败: 在当前条件下查找不到相应的记录.")
+            else if (response.flag == "0" && response.prompt == "中登接口调用失败: 在当前条件下查找不到相应的记录.")
             {
                 response.flag = "1";
             }
@@ -580,7 +582,7 @@ namespace Yushen.WebService.KessClient
         async public Task<Response> openStkAcct(User user, string ACCT_TYPE, int timeout = 30)
         {
             // 前置条件判断
-            if (user.ymt_code=="")
+            if (user.ymt_code == "")
             {
                 throw new Exception("一码通不能为空");
             }
@@ -611,13 +613,13 @@ namespace Yushen.WebService.KessClient
                 ZIP_CODE: user.zip_code,
                 CHK_STATUS: Dict.CHK_STATUS.已通过,
                 NET_SERVICE: Dict.NET_SERVICE.否,
-                YMT_CODE:user.ymt_code,
-                BIRTHDAY:user.birthday,
-                ACCT_OPENTYPE:Dict.ACCT_OPENTYPE.客户网上自助,
+                YMT_CODE: user.ymt_code,
+                BIRTHDAY: user.birthday,
+                ACCT_OPENTYPE: Dict.ACCT_OPENTYPE.客户网上自助,
                 timeout: timeout
                 );
 
-            Response response = await searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.证券账户开立, timeout:timeout);
+            Response response = await searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.证券账户开立, timeout: timeout);
 
             // 判断返回的操作结果是否异常
             string RTN_ERR_CODE = response.getValue("RTN_ERR_CODE"); // 获取中登返回的错误代码
@@ -652,7 +654,7 @@ namespace Yushen.WebService.KessClient
                                     ACCTBIZ_EXCODE: Dict.ACCTBIZ_EXCODE.适当性管理信息维护,
                                     ACCTBIZ_CLS: Dict.AcctBiz_CLS.创业板_查询,
                                     ACCT_TYPE: Dict.ACCT_TYPE.深市A股账户,
-                                    STKBD:Dict.STKBD.深圳A股,
+                                    STKBD: Dict.STKBD.深圳A股,
                                     CHK_STATUS: Dict.CHK_STATUS.已通过,
                                     NET_SERVICE: Dict.NET_SERVICE.否,
                                     PROPER_CLS: "",  // 适当性类别必须为空
@@ -660,7 +662,7 @@ namespace Yushen.WebService.KessClient
                                     TRDACCT: TRDACCT    // 深圳A股账号
                                 );
             // 获取中登处理结果
-            Response rspsStkAcctBizInfo = await this.searchStkAcctBizInfo(serialNo,timeout:timeout);
+            Response rspsStkAcctBizInfo = await this.searchStkAcctBizInfo(serialNo, timeout: timeout);
 
             // 判断返回的操作结果是否异常
             if (rspsStkAcctBizInfo.length == 1 && rspsStkAcctBizInfo.getValue("RTN_ERR_CODE") != "0000")
@@ -681,7 +683,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="SIGN_CLS">签约类别</param>
         /// <param name="SIGN_DATE">签约日期</param>
         /// <returns></returns>
-        async public Task openCyb2ZD(User user,string SIGN_CLS, string SIGN_DATE,int timeout=30)
+        async public Task openCyb2ZD(User user, string SIGN_CLS, string SIGN_DATE, int timeout = 30)
         {
             // 前置条件判断
             if (user.cust_code == "")
@@ -741,10 +743,10 @@ namespace Yushen.WebService.KessClient
                 );
 
             // 获取中登处理结果
-            Response responseStkAcctBizInfo = await this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护, TRDACCT: user.szacct,timeout:timeout);
+            Response responseStkAcctBizInfo = await this.searchStkAcctBizInfo(serialNo, Dict.ACCTBIZ_EXCODE.适当性管理信息维护, TRDACCT: user.szacct, timeout: timeout);
 
             // 中登处理是否成功
-            if (responseStkAcctBizInfo.flag!="1")
+            if (responseStkAcctBizInfo.flag != "1")
             {
                 throw new Exception("中登开通创业板失败：" + responseStkAcctBizInfo.prompt);
             }
@@ -764,8 +766,8 @@ namespace Yushen.WebService.KessClient
         async public Task openCyb2KBSS(
             User user,
             string OPEN_TYPE,
-            string SIGN_DATE="",
-            string EFT_DATE=""
+            string SIGN_DATE = "",
+            string EFT_DATE = ""
         )
         {
             // 前置条件判断
@@ -807,7 +809,7 @@ namespace Yushen.WebService.KessClient
                 EFT_DATE: EFT_DATE
             );
 
-            if (response.flag!="1")
+            if (response.flag != "1")
             {
                 throw new Exception("创业板协议签署失败：" + response.prompt);
             }
@@ -898,7 +900,7 @@ namespace Yushen.WebService.KessClient
         /// <returns></returns>
         async public Task<Response> getDictData(string dictName)
         {
-            if (dictName=="")
+            if (dictName == "")
             {
                 string message = "字典项名称不能为空";
                 logger.Error(message);
@@ -910,7 +912,7 @@ namespace Yushen.WebService.KessClient
 
             Response response = await this.invoke(request);
 
-            if(response.flag != "1")
+            if (response.flag != "1")
             {
                 string message = "查询数据字典" + dictName + "失败：" + response.prompt;
                 logger.Error(message);
@@ -964,12 +966,12 @@ namespace Yushen.WebService.KessClient
             request.setAttr("ID_CODE", user.id_code);
             request.setAttr("NATIONALITY", user.nationality);
             request.setAttr("BIRTHDAY", user.birthday);
-            
+
             // 调用WebService获取返回值
             Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
-            if (response.flag != "1") 
+            if (response.flag != "1")
             {
                 throw new Exception("公安校验失败：" + response.prompt);
             }
@@ -986,7 +988,7 @@ namespace Yushen.WebService.KessClient
             Dispose(true);
             GC.SuppressFinalize(this);
         }
-        
+
         // The bulk of the clean-up code is implemented in Dispose(bool)  
         protected virtual void Dispose(bool disposing)
         {
@@ -1136,24 +1138,28 @@ namespace Yushen.WebService.KessClient
         /// <param name="CURRENCY">货币代码DD[CURRENCY]</param>
         /// <param name="CUST_CODE">客户代码</param>
         /// <param name="CUACCT_CODE">资金代码</param>
-        /// <param name="BANK_CUACCT_CODE">客户代码</param>
+        /// <param name="BANK_ACCT_CODE">银行账户卡号</param>
         /// <param name="EXT_ORG">外部机构</param>
         /// <param name="BANK_ACCT">外部银行账户</param>
         /// <param name="FUND_AUTH_DATA">资金密码</param>
         /// <param name="CUBSB_TYPE">银证业务类型DD[CUBSB_TYPE]</param>
         /// <param name="BANK_AUTH_DATA">银行密码</param>
+        /// <param name="SERIAL_NO">流水序号</param>
+        /// <param name="SMS_NO">短信验证码</param>
         /// <returns></returns>
         async public Task<bool> cubsbScOpenAcct(
-                string OP_TYPE = "", //操作类型OP_TYPE为0时表示券商发起银证开户一步式，为1时表示券商发起预指定，即两步式中的第一步，为2时BANK_ACCT、FUND_AUTH_DATA、BANK_AUTH_DATA均传空。
-                string CURRENCY = "", //货币代码DD[CURRENCY]
-                string CUST_CODE = "", //客户代码
-                string CUACCT_CODE = "", //资金代码
-                string BANK_CUACCT_CODE = "", //客户代码
-                string EXT_ORG = "", //外部机构
-                string BANK_ACCT = "", //外部银行账户
-                string FUND_AUTH_DATA = "", //资金密码
-                string CUBSB_TYPE = "1", //银证业务类型DD[CUBSB_TYPE]
-                string BANK_AUTH_DATA = "" //银行密码
+                string OP_TYPE,
+                string CUACCT_CODE,
+                string EXT_ORG,
+                string CUST_CODE = "",
+                string BANK_ACCT_CODE = "",
+                string BANK_ACCT = "",
+                string FUND_AUTH_DATA = "",
+                string CUBSB_TYPE = Dict.CUBSB_TYPE.存管,
+                string BANK_AUTH_DATA = "",
+                string SERIAL_NO = "",
+                string CURRENCY = Dict.CURRENCY.人民币,
+                string SMS_NO = ""
             )
         {
             // 前置条件判断
@@ -1188,13 +1194,15 @@ namespace Yushen.WebService.KessClient
             request.setAttr("CURRENCY", CURRENCY); //货币代码DD[CURRENCY]
             request.setAttr("CUST_CODE", CUST_CODE); //客户代码
             request.setAttr("CUACCT_CODE", CUACCT_CODE); //资金代码
-            request.setAttr("BANK_CUACCT_CODE", BANK_CUACCT_CODE); //客户代码
+            request.setAttr("BANK_ACCT_CODE", BANK_ACCT_CODE); //银行账户卡号
             request.setAttr("EXT_ORG", EXT_ORG); //外部机构
             request.setAttr("BANK_ACCT", BANK_ACCT); //外部银行账户
             request.setAttr("FUND_AUTH_DATA", FUND_AUTH_DATA); //资金密码
             request.setAttr("CUBSB_TYPE", CUBSB_TYPE); //银证业务类型DD[CUBSB_TYPE]
             request.setAttr("BANK_AUTH_DATA", BANK_AUTH_DATA); //银行密码
-
+            request.setAttr("SERIAL_NO", SERIAL_NO); //流水序号
+            request.setAttr("SMS_NO", SMS_NO); //短信验证码
+            
             // 调用WebService获取返回值
             Response response = await this.invoke(request);
 
@@ -1480,7 +1488,7 @@ namespace Yushen.WebService.KessClient
             {
                 throw new Exception("中登返回错误：" + rspsStkAcctBizInfo.getValue("RTN_ERR_CODE") + "，错误信息：" + rspsStkAcctBizInfo.getValue("RETURN_MSG"));
             }
-            
+
             return rspsStkAcctBizInfo;
         }
 

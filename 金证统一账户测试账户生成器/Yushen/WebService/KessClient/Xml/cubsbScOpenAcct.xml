@@ -33,21 +33,5 @@
     <SMS_NO></SMS_NO>
     <!--银证类型-->
     <CUBSB_TYPE></CUBSB_TYPE>
-    <!--股东账户（可选）-->
-    <TRDACCT></TRDACCT>
-    <!--银行代码-->
-    <BANK_CODE></BANK_CODE>
-    <!--签署方式-->
-    <SIGN_WAY></SIGN_WAY>
-    <!--签署日期-->
-    <SIGN_DATE></SIGN_DATE>
-    <!--协议版本-->
-    <AGREEMENT_VERSION></AGREEMENT_VERSION>
-    <!--协议编号-->
-    <AGREEMENT_SNO></AGREEMENT_SNO>
-    <!--电子证书编号-->
-    <AGREEMENT_CA></AGREEMENT_CA>
-    <!--协议备注信息-->
-    <AGREEMENT_REMARK></AGREEMENT_REMARK>
   </data>
 </request>

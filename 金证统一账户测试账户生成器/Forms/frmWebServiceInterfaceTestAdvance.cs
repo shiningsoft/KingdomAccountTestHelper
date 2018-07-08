@@ -13,8 +13,7 @@ namespace 金证统一账户测试账户生成器
     public partial class frmWebServiceInterfaceTestAdvance : Form
     {
         frmFramework frmFramework;
-
-        Request request;
+        
         XmlDocument xmlDoc = new XmlDocument();
         DataTable dt = new DataTable();
 
@@ -51,6 +50,7 @@ namespace 金证统一账户测试账户生成器
                 {
                     innerXml = innerXml + "<" + dr["字段名"] + ">" + dr["字段值"] + "</" + dr["字段名"]  + ">";
                 }
+                Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text);
                 request.data.InnerXml = innerXml;
                 Response response = await kess.invoke(request);
                 tbxResponse.Text = response.xml;
@@ -97,7 +97,7 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
-                request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, false);
+                Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, false);
                 lbInterfaceTitle.Text = "接口名称：" + request.title;
                 
                 XmlNodeList dataList = request.data.ChildNodes;

@@ -276,9 +276,9 @@ namespace Yushen.WebService.KessClient
             }
 
             return response.getValue("SERIAL_NO");
-            
+
         }
-        
+
 
         /// <summary>
         /// 实现 2.121 中登开立股东账户。 
@@ -442,12 +442,12 @@ namespace Yushen.WebService.KessClient
         /// <param name="interval">每次轮询的间隔时间，单位：秒</param>
         /// <returns></returns>
         async private Task<Response> searchStkAcctBizInfo(
-            string SERIAL_NO, 
-            string ACCTBIZ_EXCODE = "", 
-            string ACCT_TYPE = "", 
-            string TRDACCT = "", 
-            string INT_ORG = "", 
-            string ID_CODE = "", 
+            string SERIAL_NO,
+            string ACCTBIZ_EXCODE = "",
+            string ACCT_TYPE = "",
+            string TRDACCT = "",
+            string INT_ORG = "",
+            string ID_CODE = "",
             int timeout = 30,
             int interval = 3
          )
@@ -536,14 +536,14 @@ namespace Yushen.WebService.KessClient
                 logger.Error(message);
                 throw new Exception(message);
             }
-            
+
             // 查询处理结果
             Request request = new Request(this.operatorId, "searchStkAcctBizInfoEx");
             request.setAttr("SERIAL_NO", SERIAL_NO);
-            
+
             // 调用WebService获取返回值
             Response response = await this.invoke(request);
-                
+
             // 判断返回的操作结果是否异常
             if (response.flag != "1")
             {
@@ -625,6 +625,7 @@ namespace Yushen.WebService.KessClient
             request.setAttr("IDCARD_CHECK_FLAG", user.idcard_check_flag); // 证件卡校验标志（非必传）dd[idcard_check_flag]
             request.setAttr("OPEN_AGENT", user.open_agent); // 开户代理人（非必传）
             request.setAttr("SUBJECT_IDENTITY", user.subject_identity); // 主体身份（非必传）
+            request.setAttr("INCOME", user.income); // 年收入（非必传）
             request.setAttr("INOUTSIDE_IDENTITY", user.inoutside_identity); // 境内外身份（非必传）
             request.setAttr("SPECIAL_STATUS", user.special_status); // 特殊身份（非必传）
             request.setAttr("ENTERPRISE_LEVEL", user.enterprise_level); // 企业层级（非必传）
@@ -633,6 +634,12 @@ namespace Yushen.WebService.KessClient
             request.setAttr("LISTED_ATTR", user.listed_attr); // 上市属性（非必传）dd[listed_attr]
             request.setAttr("IDCARD_READ_FLAG", user.idcard_read_flag); // 证件卡读卡标志（非必传）
             request.setAttr("MAIN_YEAR_CHK_DATE", user.main_year_chk_date); // 主证件年检日期（非必传）
+            request.setAttr("WORKPLACE", user.workplace); // 工作单位（非必传）
+            request.setAttr("TRADE", user.trade); // 行业类型（非必传）
+            request.setAttr("OCCU_TYPE", user.occu_type); // 当前职业（非必传）
+            request.setAttr("TEL_CHK_FLAG", user.tel_chk_flag); // 手机校验标识（非必传）
+            request.setAttr("EMAIL_CHK_FLAG", user.email_chk_flag); // 邮箱校验标识（非必传）
+            request.setAttr("FIN_EDU_FLAG", user.fin_edu_flag); // 金融相关专业学历校验标识（非必传）
 
             Response response = await this.invoke(request);
             if (response.flag != "1")
@@ -657,11 +664,11 @@ namespace Yushen.WebService.KessClient
         /// <param name="FUND_TYPE">帐户类型（非必传）</param>
         /// <param name="OP_REMARK">备注信息（非必传）</param>
         /// <returns></returns>
-        async private Task<Response> openCuacct(string USER_CODE, string CUACCT_CLS="",string CUACCT_LVL="0",string CUACCT_GRP="0",string CURRENCY = "0",string INT_ORG="",string CUACCT_CODE="",string FUND_TYPE="",string OP_REMARK="")
+        async private Task<Response> openCuacct(string USER_CODE, string CUACCT_CLS = "", string CUACCT_LVL = "0", string CUACCT_GRP = "0", string CURRENCY = "0", string INT_ORG = "", string CUACCT_CODE = "", string FUND_TYPE = "", string OP_REMARK = "")
         {
             Request request = new Request(this.operatorId, "openCuacct");
             request.setAttr("USER_CODE", USER_CODE);
-            if( CUACCT_CLS != "" ) request.setAttr("CUACCT_CLS", CUACCT_CLS);
+            if (CUACCT_CLS != "") request.setAttr("CUACCT_CLS", CUACCT_CLS);
             request.setAttr("CUACCT_LVL", CUACCT_LVL);
             request.setAttr("CUACCT_GRP", CUACCT_GRP);
             request.setAttr("CURRENCY", CURRENCY);
@@ -687,7 +694,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="OP_TYPE">操作类型OP_TYPE为0时表示券商发起银证开户一步式，为1时表示券商发起预指定，即两步式中的第一步，为2时BANK_ACCT、FUND_AUTH_DATA、BANK_AUTH_DATA均传空。</param>
         /// <param name="CUST_CODE">客户代码</param>
         /// <param name="CUACCT_CODE">资金代码</param>
-        /// <param name="BANK_CUACCT_CODE">银行账户卡号</param>
+        /// <param name="BANK_ACCT_CODE">银行账户卡号</param>
         /// <param name="EXT_ORG">外部机构</param>
         /// <param name="BANK_ACCT">外部银行账户</param>
         /// <param name="BANK_AUTH_DATA">银行密码</param>
@@ -697,14 +704,14 @@ namespace Yushen.WebService.KessClient
         /// <param name="CUBSB_TYPE">银证业务类型DD[CUBSB_TYPE]</param>
         /// <param name="CURRENCY"></param>
         /// <returns></returns>
-        async private Task<Response> cubsbScOpenAcctOneStep( string CUST_CODE, string CUACCT_CODE,string BANK_CUACCT_CODE, string EXT_ORG="",string BANK_ACCT="",string BANK_AUTH_DATA="", string FUND_AUTH_DATA = "", string SERIAL_NO="", string SMS_NO="", string OP_TYPE = "0", string CUBSB_TYPE = "16", string CURRENCY = "0")
+        async private Task<Response> cubsbScOpenAcctOneStep(string CUST_CODE, string CUACCT_CODE, string BANK_ACCT_CODE, string EXT_ORG = "", string BANK_ACCT = "", string BANK_AUTH_DATA = "", string FUND_AUTH_DATA = "", string SERIAL_NO = "", string SMS_NO = "", string OP_TYPE = "0", string CUBSB_TYPE = "16", string CURRENCY = "0")
         {
             Request request = new Request(this.operatorId, "cubsbScOpenAcct");
             request.setAttr("OP_TYPE", "0");
             request.setAttr("CURRENCY", CURRENCY);
             request.setAttr("CUST_CODE", CUST_CODE);
             request.setAttr("CUACCT_CODE", CUACCT_CODE);
-            request.setAttr("BANK_CUACCT_CODE", BANK_CUACCT_CODE);
+            request.setAttr("BANK_ACCT_CODE", BANK_ACCT_CODE);
             //request.setAttr("EXT_ORG", EXT_ORG);
             //request.setAttr("BANK_ACCT", BANK_ACCT);
             //request.setAttr("FUND_AUTH_DATA", FUND_AUTH_DATA);
@@ -734,10 +741,10 @@ namespace Yushen.WebService.KessClient
         /// <param name="EXT_ORG"></param>
         /// <param name="INT_ORG"></param>
         /// <returns></returns>
-        async private Task<Response> getCubsbLog(string SERIAL_NO,string OCCUR_DATE,string CURRENCY, string CUACCT_CODE,string EXT_ORG,string INT_ORG)
+        async private Task<Response> getCubsbLog(string SERIAL_NO, string OCCUR_DATE, string CURRENCY, string CUACCT_CODE, string EXT_ORG, string INT_ORG)
         {
             Request request = new Request(this.operatorId, "getCubsbLog");
-            request.setAttr("SERIAL_NO", SERIAL_NO); 
+            request.setAttr("SERIAL_NO", SERIAL_NO);
 
             Response response = await this.invoke(request);
             if (response.flag != "1")
@@ -746,7 +753,7 @@ namespace Yushen.WebService.KessClient
                 logger.Error(message);
                 throw new Exception(message);
             }
-            
+
             return response;
         }
 
@@ -803,7 +810,7 @@ namespace Yushen.WebService.KessClient
 
             return new Response(result);
         }
-        
+
         /// <summary>
         /// 异步方式调用WebService
         /// </summary>
@@ -840,10 +847,10 @@ namespace Yushen.WebService.KessClient
                     await Task.Delay(10);
                 }
             }
-                                                            
+
             // 找到可用的执行器之后，请求队列数-1
             _requestQueueCount--;
-            
+
             return await Task.Run(() =>
             {
                 _webserviceConnectionsNum += 1;
@@ -869,7 +876,7 @@ namespace Yushen.WebService.KessClient
                     _webserviceConnectionsNum -= 1;
                     throw;
                 }
-                
+
                 //获取stopWatch从开始到现在的时间差，单位是毫秒
                 long diff = stopWatch.ElapsedMilliseconds;
                 stopWatch.Stop();   //停止计时
