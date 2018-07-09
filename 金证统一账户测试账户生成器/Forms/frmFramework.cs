@@ -33,8 +33,8 @@ namespace 金证统一账户测试账户生成器
             forms.Add("存量账户处理", new frmExistAccount(this));
             forms.Add("数据字典查询", new frmDictQuery(this));
             forms.Add("公共参数查询", new frmCommonParamQuery(this));
-            forms.Add("接口测试工具图形版", new frmWebServiceInterfaceTestAdvance(this));
             forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
+            forms.Add("接口测试工具图形版", new frmWebServiceInterfaceTestAdvance(this));
 
             int i = 0;
             foreach (var form in forms)

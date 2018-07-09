@@ -60,6 +60,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
+                tbxResponse.Text = "执行失败";
                 resultForm.Append(ex.Message);
             }
         }
@@ -165,6 +166,7 @@ namespace 金证统一账户测试账户生成器
             {
                 Response response = await kess.getDictData(dictName);
                 dataGridView1.DataSource = response.DataSet.Tables["row"];
+                dataGridView1.ClearSelection();
                 if (dataGridView1.ColumnCount >= 2)
                 {
                     dataGridView1.AutoResizeColumn(2);
