@@ -46,7 +46,6 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 // 初始化风险评级选项
-                // RiskTest riskTest = new RiskTest();
                 Dict.RiskTestLevel levelList = new Dict.RiskTestLevel();
                 risk_level.DisplayMember = "name";
                 risk_level.ValueMember = "value";
@@ -82,11 +81,6 @@ namespace 金证统一账户测试账户生成器
                 cbxCubsbScOpenAcctOpType.ValueMember = "value";
                 cbxCubsbScOpenAcctOpType.DataSource = cubsbScOpenAcctOpTypeList.DataTable;
 
-                //Dict.BankCode bankCodeList = new Dict.BankCode();
-                //bank_code.DisplayMember = "name";
-                //bank_code.ValueMember = "value";
-                //bank_code.DataSource = bankCodeList.DataTable;
-
                 Dict.OPEN_TYPE openTypeList = new Dict.OPEN_TYPE();
                 cbxOpenType.DisplayMember = "name";
                 cbxOpenType.ValueMember = "value";
@@ -96,16 +90,6 @@ namespace 金证统一账户测试账户生成器
                 bank_code.DisplayMember = "name";
                 bank_code.ValueMember = "value";
                 bank_code.DataSource = bankCodeList.DataTable;
-
-                //tbChannels.Text = Settings.Default.默认开通的操作渠道;
-                //tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
-
-                /*
-                Dict.OCCUPATION occupationList = new Dict.OCCUPATION();
-                cbxOccupation.DisplayMember = "name";
-                cbxOccupation.ValueMember = "value";
-                cbxOccupation.DataSource = occupationList.DataTable;
-                */
 
                 if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
                 {
