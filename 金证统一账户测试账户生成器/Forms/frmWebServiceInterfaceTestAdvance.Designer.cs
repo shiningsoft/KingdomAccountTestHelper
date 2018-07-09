@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefreshMethonList = new System.Windows.Forms.Button();
             this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
@@ -44,11 +44,11 @@
             this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbQueryDictStatus = new System.Windows.Forms.Label();
             this.dgvDict = new System.Windows.Forms.DataGridView();
+            this.lbInterfaceTitle = new System.Windows.Forms.Label();
             this.DD_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DD_ITEM_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DD_ITEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.INT_ORG = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbInterfaceTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -191,8 +191,8 @@
             // 
             this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnName.DataPropertyName = "字段名";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle9;
             this.ColumnName.FillWeight = 152.2843F;
             this.ColumnName.HeaderText = "字段名";
             this.ColumnName.Name = "ColumnName";
@@ -204,8 +204,8 @@
             // 
             this.ColumnValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnValue.DataPropertyName = "字段值";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle10;
             this.ColumnValue.FillWeight = 140.1015F;
             this.ColumnValue.HeaderText = "字段值";
             this.ColumnValue.Name = "ColumnValue";
@@ -258,6 +258,15 @@
             this.dgvDict.TabIndex = 17;
             this.dgvDict.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDict_CellDoubleClick);
             // 
+            // lbInterfaceTitle
+            // 
+            this.lbInterfaceTitle.AutoSize = true;
+            this.lbInterfaceTitle.Location = new System.Drawing.Point(4, 4);
+            this.lbInterfaceTitle.Name = "lbInterfaceTitle";
+            this.lbInterfaceTitle.Size = new System.Drawing.Size(65, 12);
+            this.lbInterfaceTitle.TabIndex = 1;
+            this.lbInterfaceTitle.Text = "接口名称：";
+            // 
             // DD_ID
             // 
             this.DD_ID.DataPropertyName = "DD_ID";
@@ -283,19 +292,10 @@
             // INT_ORG
             // 
             this.INT_ORG.DataPropertyName = "INT_ORG";
-            this.INT_ORG.HeaderText = "INT_ORG";
+            this.INT_ORG.HeaderText = "机构代码";
             this.INT_ORG.MinimumWidth = 60;
             this.INT_ORG.Name = "INT_ORG";
             this.INT_ORG.ReadOnly = true;
-            // 
-            // lbInterfaceTitle
-            // 
-            this.lbInterfaceTitle.AutoSize = true;
-            this.lbInterfaceTitle.Location = new System.Drawing.Point(4, 4);
-            this.lbInterfaceTitle.Name = "lbInterfaceTitle";
-            this.lbInterfaceTitle.Size = new System.Drawing.Size(65, 12);
-            this.lbInterfaceTitle.TabIndex = 1;
-            this.lbInterfaceTitle.Text = "接口名称：";
             // 
             // frmWebServiceInterfaceTestAdvance
             // 
