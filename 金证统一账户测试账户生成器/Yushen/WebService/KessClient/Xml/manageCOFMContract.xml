@@ -53,8 +53,6 @@
     <FUND_CODE></FUND_CODE>
     <!--登记公司代码（非必传）-->
     <TA_CODE></TA_CODE>
-    <!--交易行为（非必传）-->
-    <TRADES></TRADES>
     <!--系统标识（非必传）-->
     <SYSTEM_FLAG></SYSTEM_FLAG>
     <!--基金内码（非必传）-->

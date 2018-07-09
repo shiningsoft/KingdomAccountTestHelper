@@ -32,6 +32,7 @@ namespace Yushen.WebService.KessClient
         public Request(string operatorId, string methonName, bool isIgnoreComments = true)
         {
             this.getXmlDocumentFromFile(methonName, isIgnoreComments);
+            validate();
 
             // 设置操作员代码
             this.setOperator(operatorId);
@@ -47,6 +48,7 @@ namespace Yushen.WebService.KessClient
         public Request(string operatorId, string operateName, string xml)
         {
             xmlDoc.LoadXml(xml);
+            validate();
 
             // 设置操作员代码
             this.setOperator(operatorId);
@@ -183,6 +185,25 @@ namespace Yushen.WebService.KessClient
             catch (Exception)
             {
                 throw new NotImplementedException("WebService XML文件加载失败：" + xmlPath);
+            }
+        }
+
+        /// <summary>
+        /// 检查是否存在重复节点
+        /// </summary>
+        internal void validate()
+        {
+            XmlNodeList dataList = data.ChildNodes;
+            foreach (XmlNode node in dataList)
+            {
+                if (node.NodeType==XmlNodeType.Element)
+                {
+                    if (xmlDoc.GetElementsByTagName(node.Name).Count>1)
+                    {
+                        Console.WriteLine(methonName + "发现重复节点：" + node.Name);
+                        throw new Exception(methonName + "发现重复节点：" + node.Name);
+                    }
+                }
             }
         }
     }

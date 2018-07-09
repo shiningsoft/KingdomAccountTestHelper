@@ -13,8 +13,6 @@
     <ACCT_OPENTYPE>0</ACCT_OPENTYPE>
     <!--客户代码-->
     <CUST_CODE></CUST_CODE>
-    <!--用户代码-->
-    <USER_CODE></USER_CODE>
     <!--客户全称-->
     <CUST_FNAME></CUST_FNAME>
     <!--证件类型-->

@@ -53,29 +53,5 @@
     <BGN_RE_OCCUR_DATE></BGN_RE_OCCUR_DATE>
     <!--开户受理结束日期-->
     <END_RE_OCCUR_DATE></END_RE_OCCUR_DATE>
-    <!--以下为当PRJ_VERSION为1时需要传递的参数列表-->
-    <PRJ_VERSION>1</PRJ_VERSION>
-    <!--为1表示获取数据的条数，为其它表示获取数据列表-->
-    <QUERY_TYPE>1</QUERY_TYPE>
-    <!--第几页-->
-    <PAGE_RECNUM>1</PAGE_RECNUM>
-    <!--每页条数-->
-    <PAGE_RECCNT>10</PAGE_RECCNT>
-    <!--内部机构代码-->
-    <INT_ORGES>100,101,999,9000,1011</INT_ORGES>
-    <!--证件号码-->
-    <ID_CODE></ID_CODE>
-    <!--用户名称-->
-    <CUST_NAME></CUST_NAME>
-    <!--手机号码-->
-    <MOBILE_TEL></MOBILE_TEL>
-    <!--开户方式-->
-    <APPT_BIZS></APPT_BIZS>
-    <!--节点状态-->
-    <WEB_PHASES></WEB_PHASES>
-    <!--开户受理开始日期-->
-    <RE_BGN_DATE>20130503</RE_BGN_DATE>
-    <!--开户受理结束日期-->
-    <RE_END_DATE>20130505</RE_END_DATE>
   </data>
 </request>

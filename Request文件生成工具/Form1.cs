@@ -139,5 +139,16 @@ namespace Request文件生成工具
             str = regex.Replace(str, "$1<$2></$3>");
             return str;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string path = Path.Combine(Environment.CurrentDirectory, "xmlfiles");
+            string[] files = Directory.GetFiles(path);
+
+            foreach (string filename in files)
+            {
+
+            }
+        }
     }
 }

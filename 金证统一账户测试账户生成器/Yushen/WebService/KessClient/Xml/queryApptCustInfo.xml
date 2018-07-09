@@ -19,8 +19,6 @@
     <APPT_CHNL></APPT_CHNL>
     <!--预约状态（非必传）DD[APPT_STATUS]复数@表示所有-->
     <APPT_STATUS></APPT_STATUS>
-    <!--复核状态（非必传）-->
-    <CHK_STATUS></CHK_STATUS>
     <!--证件号码（非必传）-->
     <ID_CODE></ID_CODE>
   </data>

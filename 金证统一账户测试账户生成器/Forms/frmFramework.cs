@@ -67,6 +67,19 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
+                // 关闭已经存在的服务
+                if (kess!=null)
+                {
+                    if (timerRefreshQueue != null)
+                    {
+                        timerRefreshQueue.Tick -= TimerRefreshQueue_Tick;
+                        timerRefreshQueue.Dispose();
+                        timerRefreshQueue = null;
+                    }
+                    kess.Dispose();
+                    kess = null;
+                }
+
                 // 初始化WebService连接
                 if (kess == null)
                 {
