@@ -295,8 +295,7 @@ namespace 金证统一账户测试账户生成器
             btnQueryStockAccount.Enabled = false;
             try
             {
-                saveUserInfo();
-                Response response = await kess.queryStkAcct(user);
+                Response response = await kess.queryStkAcct(Dict.USER_TYPE.个人, user_name.Text.Trim(), Dict.ID_TYPE.身份证, id_code.Text.Trim(), Settings.Default.开户营业部);
                 resultForm.Append("该客户有" + response.length.ToString() + "个证券账户");
 
                 if (response.length > 0)
@@ -359,6 +358,7 @@ namespace 金证统一账户测试账户生成器
             btnOpenCYB.Enabled = false;
             try
             {
+                saveUserInfo();
                 await kess.openCyb2ZD(user, cbxOpenType.SelectedValue.ToString(), dtpCybSignDate.Text, timeout: Settings.Default.中登超时时间);
                 resultForm.Append("中登创业板开通成功");
                 await kess.openCyb2KBSS(user, Dict.OPEN_TYPE.T加2, dtpCybSignDate.Text, dtpCybSignDate.Text);

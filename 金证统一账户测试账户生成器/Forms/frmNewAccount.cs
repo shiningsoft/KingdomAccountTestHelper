@@ -316,8 +316,7 @@ namespace 金证统一账户测试账户生成器
             btnQueryStockAccount.Enabled = false;
             try
             {
-                saveUserInfo();
-                Response response = await kess.queryStkAcct(user);
+                Response response = await kess.queryStkAcct(Dict.USER_TYPE.个人, user_name.Text.Trim(),Dict.ID_TYPE.身份证, id_code.Text.Trim(), Settings.Default.开户营业部);
                 resultForm.Append("该客户有" + response.length.ToString() + "个证券账户");
 
                 if (response.length > 0)

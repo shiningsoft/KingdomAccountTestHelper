@@ -506,42 +506,54 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 查询用户在对应市场的中登账户列表
         /// </summary>
-        /// <param name="user"></param>
+        /// <param name="USER_TYPE">用户类型（必传）DD[USER_TYPE]</param>
+        /// <param name="CUST_FNAME">客户名称（必传）</param>
+        /// <param name="ID_TYPE">证件类型（必传）</param>
+        /// <param name="ID_CODE">证件号码（必传）</param>
+        /// <param name="INT_ORG">机构代码（必传）</param>
+        /// <param name="ACCTBIZ_EXCODE">账户代理业务(非必输)DD[ACCTBIZ_EXCODE]默认为07-证券账户查询</param>
         /// <param name="ACCT_TYPE">证券账户类别(非必输)11:沪A，21:深A。DD[ACCT_TYPE]</param>
         /// <returns></returns>
-        async public Task<Response> queryStkAcct(User user, string ACCT_TYPE = "")
+        async public Task<Response> queryStkAcct(
+                    string USER_TYPE = "", //用户类型（必传）DD[USER_TYPE]
+                    string CUST_FNAME = "", //客户名称（必传）
+                    string ID_TYPE = "", //证件类型（必传）
+                    string ID_CODE = "", //证件号码（必传）
+                    string INT_ORG = "", //机构代码（必传）
+                    string ACCT_TYPE = "" //证券账户类别(非必输)DD[ACCT_TYPE]
+            )
         {
             // 前置条件判断
-            if (user.user_type == "")
+            if (USER_TYPE == "")
             {
                 throw new Exception("用户类型不能为空");
             }
-            if (user.user_fname == "")
+            if (CUST_FNAME == "")
             {
                 throw new Exception("用户全称不能为空");
             }
-            if (user.id_type == "")
+            if (ID_TYPE == "")
             {
                 throw new Exception("证件类型不能为空");
             }
-            if (user.id_code == "")
+            if (ID_CODE == "")
             {
                 throw new Exception("证件编号不能为空");
             }
-            if (user.int_org == "")
+            if (INT_ORG == "")
             {
                 throw new Exception("机构代码不能为空");
             }
 
             // 初始化请求
             Request request = new Request(this.operatorId, "onSearchNewZD");
-            request.setAttr("USER_TYPE", user.user_type);
-            request.setAttr("CUST_FNAME", user.user_fname);
-            request.setAttr("ID_TYPE", user.id_type);
-            request.setAttr("ID_CODE", user.id_code);
-            request.setAttr("INT_ORG", user.int_org);
-            request.setAttr("ACCT_TYPE", ACCT_TYPE);
-            request.setAttr("ACCTBIZ_EXCODE", Dict.ACCTBIZ_EXCODE.证券账户查询);
+            request.setAttr("USER_TYPE", USER_TYPE); //用户类型（必传）DD[USER_TYPE]
+            request.setAttr("CUST_FNAME", CUST_FNAME); //客户名称（必传）
+            request.setAttr("ID_TYPE", ID_TYPE); //证件类型（必传）
+            request.setAttr("ID_CODE", ID_CODE); //证件号码（必传）
+            request.setAttr("INT_ORG", INT_ORG); //机构代码（必传）
+            request.setAttr("ACCTBIZ_EXCODE", Dict.ACCTBIZ_EXCODE.证券账户查询); //账户代理业务(非必输)DD[ACCTBIZ_EXCODE]默认为07-证券账户查询
+            request.setAttr("ACCT_TYPE", ACCT_TYPE); //证券账户类别(非必输)DD[ACCT_TYPE]
 
 
             // 调用WebService获取返回值

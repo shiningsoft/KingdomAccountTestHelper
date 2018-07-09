@@ -165,20 +165,20 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 Response response = await kess.getDictData(dictName);
-                dataGridView1.DataSource = response.DataSet.Tables["row"];
-                dataGridView1.ClearSelection();
-                if (dataGridView1.ColumnCount >= 2)
+                dgvDict.DataSource = response.DataSet.Tables["row"];
+                dgvDict.ClearSelection();
+                if (dgvDict.ColumnCount >= 2)
                 {
-                    dataGridView1.AutoResizeColumn(2);
+                    dgvDict.AutoResizeColumn(2);
                 }
             }
             catch (Exception)
             {
-                if (dataGridView1.DataSource != null)
+                if (dgvDict.DataSource != null)
                 {
-                    DataTable dt = (DataTable)dataGridView1.DataSource;
+                    DataTable dt = (DataTable)dgvDict.DataSource;
                     dt.Rows.Clear();
-                    dataGridView1.DataSource = dt;
+                    dgvDict.DataSource = dt;
                 }
             }
 
@@ -197,6 +197,18 @@ namespace 金证统一账户测试账户生成器
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void dgvDict_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                dgvParams.CurrentRow.Cells["ColumnValue"].Value = dgvDict.CurrentRow.Cells["DD_ITEM"].Value;
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
             }
         }
     }
