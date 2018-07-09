@@ -33,8 +33,8 @@ namespace 金证统一账户测试账户生成器
             forms.Add("存量账户处理", new frmExistAccount(this));
             forms.Add("数据字典查询", new frmDictQuery(this));
             forms.Add("公共参数查询", new frmCommonParamQuery(this));
-            forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
             forms.Add("接口测试工具图形版", new frmWebServiceInterfaceTestAdvance(this));
+            forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
 
             int i = 0;
             foreach (var form in forms)
@@ -73,7 +73,8 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
-                toolStripStatusLabelCurrentServer.Text = "当前环境：获取环境信息中，请稍候......";
+                Uri uri = new Uri(Settings.Default.webservice);
+                toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + "获取环境信息中，请稍候......";
 
                 // 更新状态栏信息
                 string serverName = "未能获取服务器名称";
@@ -90,7 +91,6 @@ namespace 金证统一账户测试账户生成器
                     resultForm.Append(ex.Message);
                 }
 
-                Uri uri = new Uri(Settings.Default.webservice);
                 toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + serverName;
                 currentUser.Text = "用户：" + Settings.Default.操作员代码;
 
@@ -102,12 +102,12 @@ namespace 金证统一账户测试账户生成器
             catch (TargetInvocationException ex)
             {
                 resultForm.Append("初始化失败：" + ex.Message + "，请检查设置是否正确或WebService接口状态是否正常？");
-                设置ToolStripMenuItem.PerformClick();
+                系统设置ToolStripMenuItem.PerformClick();
             }
             catch (Exception ex)
             {
                 resultForm.Append("初始化失败：" + ex.Message);
-                设置ToolStripMenuItem.PerformClick();
+                系统设置ToolStripMenuItem.PerformClick();
             }
         }
 
@@ -183,24 +183,6 @@ namespace 金证统一账户测试账户生成器
             Close();
         }
         
-        /// <summary>
-        /// 打开用户自定义数据字典的所在文件夹
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void 修改数据字典ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                string path = Environment.CurrentDirectory + @"\CustomDict\";
-                System.Diagnostics.Process.Start(path);
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append(ex.Message);
-            }
-        }
-
         private void tsmiFunction_MouseHover(object sender, EventArgs e)
         {
             if (sender is ToolStripDropDownItem)
@@ -275,6 +257,11 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
+        /// <summary>
+        /// 显示系统设置窗口
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void 系统设置ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (frmSettings == null || frmSettings.IsDisposed)
@@ -288,6 +275,11 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
+        /// <summary>
+        /// 打开用户自定义数据字典的所在文件夹
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void 自定义数据字典ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -301,7 +293,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        async private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        async private void 操作员退出toolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
             {
