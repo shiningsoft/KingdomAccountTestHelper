@@ -1562,5 +1562,48 @@ namespace Yushen.WebService.KessClient
             return response;
         }
 
+        /// <summary>
+        /// 查询客户签署协议
+        /// 实现2.159	查询客户签署协议
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="STKBD">交易板块（非必传）DD[STKBD]00-深港通，10-沪港通</param>
+        /// <param name="CUST_AGMT_TYPE">协议类型（非必传）DD[CUST_AGMT_TYPE]若未输则查询全部</param>
+        /// <param name="REMOTE_SYS">对接远程系统（非必传）</param>
+        /// <param name="CUACCT_CODE">资产账户（非必传）</param>
+        /// <param name="TRDACCT">交易账户（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> queryCustAgreement(
+                string CUST_CODE = "", //客户代码（必传）
+                string STKBD = "", //交易板块（非必传）DD[STKBD]00-深港通，10-沪港通
+                string CUST_AGMT_TYPE = "", //协议类型（非必传）DD[CUST_AGMT_TYPE]若未输则查询全部
+                string REMOTE_SYS = "", //对接远程系统（非必传）
+                string CUACCT_CODE = "", //资产账户（非必传）
+                string TRDACCT = "" //交易账户（非必传）
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "queryCustAgreement");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（必传）
+            request.setAttr("STKBD", STKBD); //交易板块（非必传）DD[STKBD]00-深港通，10-沪港通
+            request.setAttr("CUST_AGMT_TYPE", CUST_AGMT_TYPE); //协议类型（非必传）DD[CUST_AGMT_TYPE]若未输则查询全部
+            request.setAttr("REMOTE_SYS", REMOTE_SYS); //对接远程系统（非必传）
+            request.setAttr("CUACCT_CODE", CUACCT_CODE); //资产账户（非必传）
+            request.setAttr("TRDACCT", TRDACCT); //交易账户（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+            
+            // 返回结果
+            return response;
+        }
     }
 }

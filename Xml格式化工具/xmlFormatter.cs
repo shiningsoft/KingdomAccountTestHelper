@@ -45,6 +45,14 @@ namespace Yushen.Util
             Console.WriteLine(regex.ToString() + "匹配了" + regex.Matches(strData).Count.ToString() + "次");
             strData = regex.Replace(strData, "$1\r\n//$2");
 
+            regex = new Regex(@"\t", RegexOptions.Multiline);
+            Console.WriteLine(regex.ToString() + "匹配了" + regex.Matches(strData).Count.ToString() + "次");
+            strData = regex.Replace(strData, "");
+
+            regex = new Regex(@"\r\n<", RegexOptions.Multiline);
+            Console.WriteLine(regex.ToString() + "匹配了" + regex.Matches(strData).Count.ToString() + "次");
+            strData = regex.Replace(strData, "<");
+
             return strData;
         }
 
