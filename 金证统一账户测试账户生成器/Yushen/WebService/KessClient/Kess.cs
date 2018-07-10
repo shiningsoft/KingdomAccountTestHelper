@@ -35,6 +35,20 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
+        /// 提交请求时，如果操作员已经退出，是否自动重新登录
+        /// </summary>
+        public bool autoRelogin {
+            set
+            {
+                _autoRelogin = value;
+            }
+            get
+            {
+                return _autoRelogin;
+            }
+        }
+
+        /// <summary>
         /// 构造函数
         /// </summary>
         /// <param name="operatorId">操作员代码</param>

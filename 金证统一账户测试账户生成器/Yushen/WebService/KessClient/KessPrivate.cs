@@ -75,6 +75,8 @@ namespace Yushen.WebService.KessClient
         //创建一个Stopwatch实例，用于计算Webservice请求花费的时间
         private Stopwatch stopWatch = new Stopwatch();
 
+        private bool _autoRelogin = true;
+
         /// <summary>
         /// 创建WebService实例
         /// </summary>
@@ -798,7 +800,7 @@ namespace Yushen.WebService.KessClient
                 result = await execute(request);
 
                 // 检查是否提示操作员已经退出。如果操作员已经退出，则先重新登录然后再次执行
-                if (result.IndexOf("<prompt>您必须先登陆，才能进行其它操作。</prompt>") > -1)
+                if (_autoRelogin && result.IndexOf("<prompt>您必须先登陆，才能进行其它操作。</prompt>") > -1)
                 {
                     await this.operatorLogin();
 

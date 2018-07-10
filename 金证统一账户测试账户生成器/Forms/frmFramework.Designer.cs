@@ -59,9 +59,10 @@ namespace 金证统一账户测试账户生成器
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tsslExpired = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.tsslExpired = new System.Windows.Forms.ToolStripStatusLabel();
+            this.自动重新登录toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,6 +86,7 @@ namespace 金证统一账户测试账户生成器
             this.toolStripSeparator2,
             this.toolStripMenuItem2,
             this.操作员退出toolStripMenuItem,
+            this.自动重新登录toolStripMenuItem,
             this.toolStripSeparator3,
             this.自定义数据字典ToolStripMenuItem,
             this.系统设置ToolStripMenuItem,
@@ -217,6 +219,13 @@ namespace 金证统一账户测试账户生成器
             this.tsslVersion.Text = "当前版本：";
             this.tsslVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // tsslExpired
+            // 
+            this.tsslExpired.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.tsslExpired.Name = "tsslExpired";
+            this.tsslExpired.Size = new System.Drawing.Size(60, 21);
+            this.tsslExpired.Text = "有效期：";
+            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(0, 0);
@@ -234,12 +243,15 @@ namespace 金证统一账户测试账户生成器
             this.panel.Size = new System.Drawing.Size(986, 507);
             this.panel.TabIndex = 76;
             // 
-            // tsslExpired
+            // 自动重新登录toolStripMenuItem
             // 
-            this.tsslExpired.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
-            this.tsslExpired.Name = "tsslExpired";
-            this.tsslExpired.Size = new System.Drawing.Size(60, 21);
-            this.tsslExpired.Text = "有效期：";
+            this.自动重新登录toolStripMenuItem.Checked = true;
+            this.自动重新登录toolStripMenuItem.CheckOnClick = true;
+            this.自动重新登录toolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.自动重新登录toolStripMenuItem.Name = "自动重新登录toolStripMenuItem";
+            this.自动重新登录toolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.自动重新登录toolStripMenuItem.Text = "自动重新登录";
+            this.自动重新登录toolStripMenuItem.Click += new System.EventHandler(this.自动重新登录toolStripMenuItem_Click);
             // 
             // frmFramework
             // 
@@ -254,7 +266,7 @@ namespace 金证统一账户测试账户生成器
             this.Name = "frmFramework";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "金证统一账户测试账户生成器";
+            this.Text = "金证统一账户测试账户生成器 Beta";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFramework_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip.ResumeLayout(false);
@@ -289,6 +301,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripMenuItem 自定义数据字典ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 系统设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel tsslExpired;
+        private System.Windows.Forms.ToolStripMenuItem 自动重新登录toolStripMenuItem;
     }
 }
 

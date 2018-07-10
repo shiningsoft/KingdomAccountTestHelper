@@ -11,33 +11,73 @@ namespace 金证统一账户测试账户生成器
 {
     public partial class frmFramework : Form
     {
-        Timer timerCheckExpired = new Timer();
         /// <summary>
         /// 软件使用期限
         /// </summary>
-        DateTime expiredDate = DateTime.Parse("2017/12/31");
+        DateTime expiredDate = DateTime.Parse("2018/12/31");
 
         /// <summary>
         /// 金证接口调用工具
         /// </summary>
         public Kess kess;
+
+        /// <summary>
+        /// 日志记录器
+        /// </summary>
         public static Logger logger = LogManager.GetCurrentClassLogger();
+
+        /// <summary>
+        /// 用于显示执行结果和错误消息的窗体
+        /// </summary>
         public frmResultForm resultForm = new frmResultForm();
+
+        /// <summary>
+        /// 关于窗体
+        /// </summary>
         frmAboutBox aboutBox;
+
+        /// <summary>
+        /// 设置窗体
+        /// </summary>
         frmSettings frmSettings;
+
+        /// <summary>
+        /// 功能窗体列表
+        /// </summary>
         Dictionary<string, Form> forms = new Dictionary<string, Form>();
+        
+        /// <summary>
+        /// 用于刷新当前WebService连接数和队列数的计时器
+        /// </summary>
         Timer timerRefreshQueue;
-        string defaultTitle = "金证统一账户测试账户生成器";
 
-
+        /// <summary>
+        /// 窗体默认标题
+        /// </summary>
+        string defaultTitle = "";
+        
+        /// <summary>
+        /// 用于检查软件有效期的计时器
+        /// </summary>
+        Timer timerCheckExpired = new Timer();
+        
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public frmFramework()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// 程序初始化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Main_Load(object sender, EventArgs e)
         {
-            Text = defaultTitle;
+            // 保存默认窗体标题
+            defaultTitle = Text;
 
             // 启动有效期检查
             Console.WriteLine(expiredDate);
@@ -81,6 +121,11 @@ namespace 金证统一账户测试账户生成器
             InitWebService();
         }
 
+        /// <summary>
+        /// 定时检查软件是否过期
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void TimerCheckExpired_Tick(object sender, EventArgs e)
         {
             checkExpired();
@@ -168,6 +213,11 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
+        /// <summary>
+        /// 点击功能窗体按钮时自动打开对应功能
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Item_Click(object sender, EventArgs e)
         {
             ToolStripMenuItem item = (ToolStripMenuItem)sender;
@@ -240,6 +290,11 @@ namespace 金证统一账户测试账户生成器
             Close();
         }
         
+        /// <summary>
+        /// 自动展开下拉菜单
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tsmiFunction_MouseHover(object sender, EventArgs e)
         {
             if (sender is ToolStripDropDownItem)
@@ -252,6 +307,11 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
+        /// <summary>
+        /// 关闭窗体时自动保存程序设置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void frmFramework_FormClosing(object sender, FormClosingEventArgs e)
         {
             Settings.Default.Save();
@@ -350,6 +410,11 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
+        /// <summary>
+        /// 操作员退出
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         async private void 操作员退出toolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -364,6 +429,11 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("操作员登录失败：" + ex.Message);
             }
+        }
+
+        private void 自动重新登录toolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            kess.autoRelogin = 自动重新登录toolStripMenuItem.Checked;
         }
     }
 }
