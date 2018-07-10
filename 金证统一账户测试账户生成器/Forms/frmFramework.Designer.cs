@@ -61,6 +61,7 @@ namespace 金证统一账户测试账户生成器
             this.tsslVersion = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.tsslExpired = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -180,7 +181,8 @@ namespace 金证统一账户测试账户生成器
             this.toolStripStatusLabelCurrentServer,
             this.currentUser,
             this.requestQueueCount,
-            this.tsslVersion});
+            this.tsslVersion,
+            this.tsslExpired});
             this.statusStrip1.Location = new System.Drawing.Point(0, 538);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1010, 26);
@@ -210,7 +212,7 @@ namespace 金证统一账户测试账户生成器
             // tsslVersion
             // 
             this.tsslVersion.Name = "tsslVersion";
-            this.tsslVersion.Size = new System.Drawing.Size(697, 21);
+            this.tsslVersion.Size = new System.Drawing.Size(637, 21);
             this.tsslVersion.Spring = true;
             this.tsslVersion.Text = "当前版本：";
             this.tsslVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -231,6 +233,13 @@ namespace 金证统一账户测试账户生成器
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(986, 507);
             this.panel.TabIndex = 76;
+            // 
+            // tsslExpired
+            // 
+            this.tsslExpired.BorderSides = System.Windows.Forms.ToolStripStatusLabelBorderSides.Left;
+            this.tsslExpired.Name = "tsslExpired";
+            this.tsslExpired.Size = new System.Drawing.Size(60, 21);
+            this.tsslExpired.Text = "有效期：";
             // 
             // frmFramework
             // 
@@ -279,6 +288,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem 自定义数据字典ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 系统设置ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel tsslExpired;
     }
 }
 

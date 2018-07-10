@@ -32,11 +32,12 @@ namespace Yushen.WebService.KessClient
         public Request(string operatorId, string methonName, bool isIgnoreComments = true)
         {
             this.getXmlDocumentFromFile(methonName, isIgnoreComments);
-            validate();
 
             // 设置操作员代码
             this.setOperator(operatorId);
             this.methonName = methonName;
+
+            validate();
         }
 
         /// <summary>
@@ -48,11 +49,12 @@ namespace Yushen.WebService.KessClient
         public Request(string operatorId, string operateName, string xml)
         {
             xmlDoc.LoadXml(xml);
-            validate();
 
             // 设置操作员代码
             this.setOperator(operatorId);
             this.methonName = operateName;
+
+            validate();
         }
 
         /// <summary>

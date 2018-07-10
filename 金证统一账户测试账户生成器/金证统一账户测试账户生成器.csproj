@@ -154,8 +154,10 @@
       <DependentUpon>frmWebServiceInterfaceTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="Yushen\Util\EncryptHelper.cs" />
     <Compile Include="Yushen\Util\Formatter.cs" />
     <Compile Include="Yushen\Util\ImageHelper.cs" />
+    <Compile Include="Yushen\Util\RSAHelper.cs" />
     <Compile Include="Yushen\WebService\KessClient\CustomDict.cs" />
     <Compile Include="Yushen\WebService\KessClient\KessClient.cs" />
     <Compile Include="Yushen\WebService\KessClient\Dict.cs" />

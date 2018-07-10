@@ -11,6 +11,12 @@ namespace 金证统一账户测试账户生成器
 {
     public partial class frmFramework : Form
     {
+        Timer timerCheckExpired = new Timer();
+        /// <summary>
+        /// 软件使用期限
+        /// </summary>
+        DateTime expiredDate = DateTime.Parse("2017/12/31");
+
         /// <summary>
         /// 金证接口调用工具
         /// </summary>
@@ -21,6 +27,8 @@ namespace 金证统一账户测试账户生成器
         frmSettings frmSettings;
         Dictionary<string, Form> forms = new Dictionary<string, Form>();
         Timer timerRefreshQueue;
+        string defaultTitle = "金证统一账户测试账户生成器";
+
 
         public frmFramework()
         {
@@ -29,6 +37,16 @@ namespace 金证统一账户测试账户生成器
 
         private void Main_Load(object sender, EventArgs e)
         {
+            Text = defaultTitle;
+
+            // 启动有效期检查
+            Console.WriteLine(expiredDate);
+            tsslExpired.Text = "有效期：" + expiredDate.ToLongDateString();
+            timerCheckExpired.Interval = 15000;
+            timerCheckExpired.Tick += TimerCheckExpired_Tick;
+            timerCheckExpired.Start();
+
+            // 添加功能窗口列表
             forms.Add("新开账户", new frmNewAccount(this));
             forms.Add("存量账户处理", new frmExistAccount(this));
             forms.Add("数据字典查询", new frmDictQuery(this));
@@ -36,6 +54,7 @@ namespace 金证统一账户测试账户生成器
             forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
             forms.Add("接口测试工具图形版", new frmWebServiceInterfaceTestAdvance(this));
 
+            // 将功能窗口添加到菜单
             int i = 0;
             foreach (var form in forms)
             {
@@ -54,10 +73,35 @@ namespace 金证统一账户测试账户生成器
 
                 i++;
             }
-            
-            tsslVersion.Text = "当前版本：" + Application.ProductVersion;
 
+            checkExpired();
+
+            tsslVersion.Text = "当前版本：" + Application.ProductVersion;
+            
             InitWebService();
+        }
+
+        private void TimerCheckExpired_Tick(object sender, EventArgs e)
+        {
+            checkExpired();
+        }
+
+        /// <summary>
+        /// 检查软件是否过期
+        /// </summary>
+        private void checkExpired()
+        {
+            if (DateTime.Now > expiredDate)
+            {
+                TopMost = true;
+                Show();
+                Activate();
+                timerCheckExpired.Stop();
+                if (MessageBox.Show("软件已经过期，请更新到最新版本。") == DialogResult.OK)
+                {
+                    Close();
+                }
+            }
         }
 
         /// <summary>
@@ -135,7 +179,7 @@ namespace 金证统一账户测试账户生成器
             panel.Controls.Clear();  // 清空原有的控件  
             panel.Controls.Add(forms[item.Text]);  // 添加新窗体  
             forms[item.Text].Show();
-            Text = "金证统一账户测试账户生成器 - " + item.Text;
+            Text = defaultTitle + " - " + item.Text;
         }
 
         /// <summary>
