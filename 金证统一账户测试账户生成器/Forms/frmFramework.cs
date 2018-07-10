@@ -136,7 +136,7 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private void checkExpired()
         {
-            if (DateTime.Now > expiredDate)
+            if (DateTime.Now.Date > expiredDate)
             {
                 TopMost = true;
                 Show();

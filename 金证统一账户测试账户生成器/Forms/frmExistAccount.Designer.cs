@@ -939,13 +939,13 @@ namespace 金证统一账户测试账户生成器
             this.groupBox3.Size = new System.Drawing.Size(943, 140);
             this.groupBox3.TabIndex = 98;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "账户操作";
+            this.groupBox3.Text = "普通账户操作";
             // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 469);
+            this.ClientSize = new System.Drawing.Size(968, 467);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);

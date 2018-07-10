@@ -868,13 +868,27 @@ namespace 金证统一账户测试账户生成器
 
                 if (response.length > 1)
                 {
-                    throw new Exception("不支持多个资金账号，停止处理。");
+                    foreach (DataRow dr in response.Rows)
+                    {
+                        Dict.CUACCT_ATTR cuacct_attrList = new Dict.CUACCT_ATTR();
+                        Dict.CUACCT_STATUS cuacct_statusList = new Dict.CUACCT_STATUS();
+
+                        resultForm.Append("类型：" + cuacct_attrList.getNameByValue(dr["CUACCT_ATTR"].ToString()) + "，账户：" + dr["CUACCT_CODE"].ToString() + "，状态：" + cuacct_statusList.getNameByValue(dr["CUACCT_STATUS"].ToString()) + "，是否主资产账户：" + dr["MAIN_FLAG"].ToString());
+
+                        if (dr["CUACCT_ATTR"].ToString() == Dict.CUACCT_ATTR.普通账户 && dr["MAIN_FLAG"].ToString() == "1" && dr["CUACCT_STATUS"].ToString() == Dict.CUACCT_STATUS.正常)
+                        {
+                            tbxCuacct.Text = dr["CUACCT_CODE"].ToString();
+                        }
+                    }
                 }
-                if (response.length == 0)
+                else if (response.length == 1)
+                {
+                    tbxCuacct.Text = response.getValue("CUACCT_CODE");
+                }
+                else if (response.length == 0)
                 {
                     throw new Exception("客户号下没有开立资金账号，停止处理。");
                 }
-                tbxCuacct.Text = response.getValue("CUACCT_CODE");
 
                 // 查询一码通
                 resultForm.Append("正在发起中登查询一码通信息，请稍候。。。");
