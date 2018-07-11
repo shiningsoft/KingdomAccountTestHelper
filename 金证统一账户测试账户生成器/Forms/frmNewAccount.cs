@@ -86,7 +86,7 @@ namespace 金证统一账户测试账户生成器
                 cbxOpenType.ValueMember = "value";
                 cbxOpenType.DataSource = openTypeList.DataTable;
 
-                Dict.CustomDict bankCodeList = new Dict.CustomDict("存管银行");
+                Dict.CustomDict bankCodeList = new Dict.CustomDict("BANK_CODE");
                 bank_code.DisplayMember = "name";
                 bank_code.ValueMember = "value";
                 bank_code.DataSource = bankCodeList.DataTable;

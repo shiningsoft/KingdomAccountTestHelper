@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dict>
+  <BANK_CODE name="农业银行" code="5100" />
+  <BANK_CODE name="招商银行" code="5500" />
+  <BANK_CODE name="建设银行" code="5000" />
+  <BANK_CODE name="中国银行" code="5300" />
+  <BANK_CODE name="工商银行" code="5200" />
+  <BANK_CODE name="兴业银行" code="5700" />
+  <BANK_CODE name="光大银行" code="5800" />
+  <BANK_CODE name="交通银行" code="5400" />
+  <BANK_CODE name="中信银行" code="5600" />
+  <BANK_CODE name="民生银行" code="6000" />
+  <BANK_CODE name="平安银行" code="6100" />
+  <BANK_CODE name="上海银行" code="7100" />
+  <BANK_CODE name="华夏银行" code="5900" />
+  <BANK_CODE name="广发银行" code="6200" />
+  <BANK_CODE name="邮储银行" code="8500" />
+  <BANK_CODE name="浦发银行" code="6300" />
+</dict>

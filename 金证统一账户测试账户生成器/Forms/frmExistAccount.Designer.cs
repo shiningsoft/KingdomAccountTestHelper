@@ -118,10 +118,10 @@ namespace 金证统一账户测试账户生成器
             this.id_beg_date = new System.Windows.Forms.TextBox();
             this.id_exp_date = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tbxCuacctCondition = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -855,6 +855,24 @@ namespace 金证统一账户测试账户生成器
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "查询条件";
             // 
+            // tbxCuacctCondition
+            // 
+            this.tbxCuacctCondition.Location = new System.Drawing.Point(251, 21);
+            this.tbxCuacctCondition.Name = "tbxCuacctCondition";
+            this.tbxCuacctCondition.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxCuacctCondition.Size = new System.Drawing.Size(100, 21);
+            this.tbxCuacctCondition.TabIndex = 1;
+            this.tbxCuacctCondition.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxCuacctCondition_KeyDown);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(180, 24);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(65, 12);
+            this.label26.TabIndex = 22;
+            this.label26.Text = "资金账号：";
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.user_name);
@@ -944,25 +962,7 @@ namespace 金证统一账户测试账户生成器
             this.groupBox3.Size = new System.Drawing.Size(943, 140);
             this.groupBox3.TabIndex = 98;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "普通账户操作";
-            // 
-            // tbxCuacctCondition
-            // 
-            this.tbxCuacctCondition.Location = new System.Drawing.Point(251, 21);
-            this.tbxCuacctCondition.Name = "tbxCuacctCondition";
-            this.tbxCuacctCondition.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxCuacctCondition.Size = new System.Drawing.Size(100, 21);
-            this.tbxCuacctCondition.TabIndex = 1;
-            this.tbxCuacctCondition.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxCuacctCondition_KeyDown);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(180, 24);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(65, 12);
-            this.label26.TabIndex = 22;
-            this.label26.Text = "资金账号：";
+            this.groupBox3.Text = "普通账户";
             // 
             // frmExistAccount
             // 

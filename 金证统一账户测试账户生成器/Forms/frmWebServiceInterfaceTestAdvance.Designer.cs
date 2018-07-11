@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefreshMethonList = new System.Windows.Forms.Button();
             this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
@@ -39,16 +39,16 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dgvParams = new System.Windows.Forms.DataGridView();
-            this.lbQueryDictStatus = new System.Windows.Forms.Label();
-            this.dgvDict = new System.Windows.Forms.DataGridView();
-            this.lbInterfaceTitle = new System.Windows.Forms.Label();
             this.ColumnName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ColumnValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Comment = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbQueryDictStatus = new System.Windows.Forms.Label();
+            this.dgvDict = new System.Windows.Forms.DataGridView();
             this.DD_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DD_ITEM_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DD_ITEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.INT_ORG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbInterfaceTitle = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -182,10 +182,44 @@
             this.dgvParams.RowHeadersVisible = false;
             this.dgvParams.RowHeadersWidth = 100;
             this.dgvParams.RowTemplate.Height = 23;
-            this.dgvParams.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvParams.Size = new System.Drawing.Size(479, 378);
             this.dgvParams.TabIndex = 0;
             this.dgvParams.CurrentCellChanged += new System.EventHandler(this.dgvParams_CurrentCellChanged);
+            // 
+            // ColumnName
+            // 
+            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnName.DataPropertyName = "字段名";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle5;
+            this.ColumnName.FillWeight = 152.2843F;
+            this.ColumnName.HeaderText = "字段名";
+            this.ColumnName.Name = "ColumnName";
+            this.ColumnName.ReadOnly = true;
+            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ColumnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnName.Width = 120;
+            // 
+            // ColumnValue
+            // 
+            this.ColumnValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ColumnValue.DataPropertyName = "字段值";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle6;
+            this.ColumnValue.FillWeight = 140.1015F;
+            this.ColumnValue.HeaderText = "字段值";
+            this.ColumnValue.Name = "ColumnValue";
+            this.ColumnValue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ColumnValue.Width = 120;
+            // 
+            // Comment
+            // 
+            this.Comment.DataPropertyName = "备注";
+            this.Comment.FillWeight = 7.614212F;
+            this.Comment.HeaderText = "备注";
+            this.Comment.Name = "Comment";
+            this.Comment.ReadOnly = true;
+            this.Comment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // lbQueryDictStatus
             // 
@@ -226,50 +260,6 @@
             this.dgvDict.TabIndex = 17;
             this.dgvDict.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDict_CellDoubleClick);
             // 
-            // lbInterfaceTitle
-            // 
-            this.lbInterfaceTitle.AutoSize = true;
-            this.lbInterfaceTitle.Location = new System.Drawing.Point(4, 4);
-            this.lbInterfaceTitle.Name = "lbInterfaceTitle";
-            this.lbInterfaceTitle.Size = new System.Drawing.Size(65, 12);
-            this.lbInterfaceTitle.TabIndex = 1;
-            this.lbInterfaceTitle.Text = "接口名称：";
-            // 
-            // ColumnName
-            // 
-            this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnName.DataPropertyName = "字段名";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle3;
-            this.ColumnName.FillWeight = 152.2843F;
-            this.ColumnName.HeaderText = "字段名";
-            this.ColumnName.Name = "ColumnName";
-            this.ColumnName.ReadOnly = true;
-            this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ColumnName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnName.Width = 120;
-            // 
-            // ColumnValue
-            // 
-            this.ColumnValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ColumnValue.DataPropertyName = "字段值";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle4;
-            this.ColumnValue.FillWeight = 140.1015F;
-            this.ColumnValue.HeaderText = "字段值";
-            this.ColumnValue.Name = "ColumnValue";
-            this.ColumnValue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ColumnValue.Width = 120;
-            // 
-            // Comment
-            // 
-            this.Comment.DataPropertyName = "备注";
-            this.Comment.FillWeight = 7.614212F;
-            this.Comment.HeaderText = "备注";
-            this.Comment.Name = "Comment";
-            this.Comment.ReadOnly = true;
-            this.Comment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
             // DD_ID
             // 
             this.DD_ID.DataPropertyName = "DD_ID";
@@ -299,6 +289,15 @@
             this.INT_ORG.MinimumWidth = 80;
             this.INT_ORG.Name = "INT_ORG";
             this.INT_ORG.ReadOnly = true;
+            // 
+            // lbInterfaceTitle
+            // 
+            this.lbInterfaceTitle.AutoSize = true;
+            this.lbInterfaceTitle.Location = new System.Drawing.Point(4, 4);
+            this.lbInterfaceTitle.Name = "lbInterfaceTitle";
+            this.lbInterfaceTitle.Size = new System.Drawing.Size(65, 12);
+            this.lbInterfaceTitle.TabIndex = 1;
+            this.lbInterfaceTitle.Text = "接口名称：";
             // 
             // frmWebServiceInterfaceTestAdvance
             // 
