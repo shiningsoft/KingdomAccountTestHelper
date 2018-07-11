@@ -5,14 +5,25 @@ using System.Runtime.InteropServices;
 // 有关程序集的一般信息由以下
 // 控制。更改这些特性值可修改
 // 与程序集关联的信息。
+#if DEBUG
+    [assembly: AssemblyTitle("金证统一账户测试账户生成器")]
+    [assembly: AssemblyDescription("基于WebService接口实现。\r\n仅限用于测试环境，切勿在正式环境使用。")]
+    [assembly: AssemblyConfiguration("")]
+    [assembly: AssemblyCompany("")]
+    [assembly: AssemblyProduct("金证统一账户测试账户生成器")]
+    [assembly: AssemblyCopyright("Copyright © 2018")]
+    [assembly: AssemblyTrademark("")]
+    [assembly: AssemblyCulture("")]
+#else
 [assembly: AssemblyTitle("金证统一账户测试账户生成器")]
-[assembly: AssemblyDescription("基于WebService接口实现。\r\n仅限用于测试环境，切勿在正式环境使用。\r\n\r\n邮箱：service@shiningsoft.com.cn\r\nQQ：83678620")]
-[assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("合肥申星软件有限公司")]
-[assembly: AssemblyProduct("金证统一账户测试账户生成器")]
-[assembly: AssemblyCopyright("Copyright © 2018")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
+    [assembly: AssemblyDescription("基于WebService接口实现。\r\n仅限用于测试环境，切勿在正式环境使用。\r\n\r\n客服邮箱：service@shiningsoft.com.cn\r\nQQ：83678620")]
+    [assembly: AssemblyConfiguration("")]
+    [assembly: AssemblyCompany("合肥申星软件有限公司")]
+    [assembly: AssemblyProduct("金证统一账户测试账户生成器")]
+    [assembly: AssemblyCopyright("Copyright © 2018")]
+    [assembly: AssemblyTrademark("")]
+    [assembly: AssemblyCulture("")]
+#endif
 
 //将 ComVisible 设置为 false 将使此程序集中的类型
 //对 COM 组件不可见。  如果需要从 COM 访问此程序集中的类型，
