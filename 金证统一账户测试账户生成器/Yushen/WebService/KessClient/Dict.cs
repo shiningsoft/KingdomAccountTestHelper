@@ -661,6 +661,7 @@ namespace Yushen.WebService.KessClient.Dict
     /// </summary>
     class CUST_AGMT_TYPE : Dict
     {
+        public const string 名称 = "值";
         public const string 代理新股申购 = "00";
         public const string 代理新股配售 = "01";
         public const string 代理配股缴款 = "02";
@@ -670,6 +671,7 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 权证交易协议 = "09";
         public const string 创业板协议 = "0A";
         public const string 开通债券回购协议 = "0B";
+        public const string 客户数据采集授权协议 = "0D";
         public const string 股票期权自动行权协议 = "0G";
         public const string 开通报价回购 = "0L";
         public const string 开通跨境跨市场ETF = "0M";
@@ -703,9 +705,24 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 场内基金盲拆协议 = "15";
         public const string 质押协议回购融入协议 = "17";
         public const string 质押协议回购融出协议 = "18";
+        public const string 证券交易委托补充协议 = "1D";
+        public const string 存托凭证和创新企业股票权限 = "1e";
+        public const string 创新企业股票权限 = "1f";
         public const string 股转优先股交易协议 = "21";
         public const string 一键登录协议 = "22";
         public const string 分级基金合格投资者权限 = "26";
+        public const string 现金产品快速取现交易协议 = "31";
+        public const string 基金质押协议 = "33";
+        public const string 私募合格投资者协议 = "34";
+        public const string 债券质押式逆回购委托协议 = "35";
+        public const string 小额约定购回 = "36";
+        public const string 货币基金快速取现 = "37";
+        public const string 债券逆回购协议 = "99";
+        public const string A或B股开户 = "AB";
+        public const string 信用开户 = "AC";
+        public const string 融资行权 = "FF";
+        public const string 纸质签署电子签名约定书 = "X2";
+        public const string 投资者适当性匹配及不适当性警示确认书_场内产品 = "Y1";
     }
 
     /// <summary>
