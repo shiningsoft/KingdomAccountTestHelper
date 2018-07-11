@@ -675,6 +675,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxCustCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxCustCode.Size = new System.Drawing.Size(100, 21);
             this.tbxCustCode.TabIndex = 0;
+            this.tbxCustCode.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxCustCode_KeyDown);
             // 
             // label11
             // 
@@ -952,6 +953,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxCuacctCondition.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxCuacctCondition.Size = new System.Drawing.Size(100, 21);
             this.tbxCuacctCondition.TabIndex = 1;
+            this.tbxCuacctCondition.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbxCuacctCondition_KeyDown);
             // 
             // label26
             // 

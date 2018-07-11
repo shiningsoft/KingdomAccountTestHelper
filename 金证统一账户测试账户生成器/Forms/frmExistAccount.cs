@@ -916,7 +916,8 @@ namespace 金证统一账户测试账户生成器
                     resultForm.Append("协议类型\t对接远程系统\t生效日期\t生效截止日期\t更新日期\t资产账户\t交易板块\t交易账户");
                     foreach (DataRow agreement in response.Rows)
                     {
-                        Dict.CUST_AGMT_TYPE cust_agmt_typeDict = new Dict.CUST_AGMT_TYPE();
+                        //Dict.CUST_AGMT_TYPE cust_agmt_typeDict = new Dict.CUST_AGMT_TYPE();
+                        Dict.CustomDict cust_agmt_typeDict = new Dict.CustomDict("CUST_AGMT_TYPE");
                         Dict.STKBD stkbdDict = new Dict.STKBD();
                         resultForm.Append(
                             cust_agmt_typeDict.getNameByValue(agreement["CUST_AGMT_TYPE"].ToString())
@@ -1084,6 +1085,22 @@ namespace 金证统一账户测试账户生成器
             zip_code.Text = "";
             password.Text = "111111";
 
+        }
+
+        private void tbxCustCode_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnQueryByUserCode.PerformClick();
+            }
+        }
+
+        private void tbxCuacctCondition_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnQueryByUserCode.PerformClick();
+            }
         }
     }
 }

@@ -1443,7 +1443,7 @@ namespace Yushen.WebService.KessClient.Dict
 
         /// <summary>
         /// 根据指定的字典值取得对应的字典项名称。
-        /// 找不到时返回空。
+        /// 找不到时返回原值。
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>

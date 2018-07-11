@@ -18,7 +18,7 @@ namespace Yushen.WebService.KessClient.Dict
         {
             try
             {
-                this.DataTable = LoadXml(DictName);
+                this.DataTable = LoadXml(DictName.ToUpper());
             }
             catch (Exception ex)
             {
@@ -28,6 +28,24 @@ namespace Yushen.WebService.KessClient.Dict
         }
 
         public new DataTable DataTable;
+
+        /// <summary>
+        /// 根据指定的字典值取得对应的字典项名称。
+        /// 找不到时返回原值。
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public new string getNameByValue(string value)
+        {
+            foreach (DataRow dr in DataTable.Rows)
+            {
+                if (dr["value"].ToString() == value)
+                {
+                    return dr["name"].ToString();
+                }
+            }
+            return value;
+        }
 
         /// <summary>
         /// 从XML文件中读取字典配置
