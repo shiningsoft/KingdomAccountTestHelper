@@ -210,6 +210,7 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
+                saveUserInfo();
                 await syncSurveyAns2Kbss(risk_level.SelectedValue.ToString());
             }
             catch (Exception ex)
@@ -226,6 +227,7 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
+                saveUserInfo();
                 await mdfUserPassword();
             }
             catch (Exception ex)
@@ -489,17 +491,17 @@ namespace 金证统一账户测试账户生成器
         private async Task mdfUserPassword()
         {
             // 设置交易密码
-            bool result = await kess.mdfUserPassword(user, Dict.USE_SCOPE.登录和交易, Dict.OPERATION_TYPE.增加密码);
+            bool result = await kess.mdfUserPassword(user, Dict.USE_SCOPE.登录和交易, Dict.OPERATION_TYPE.重置密码);
             if (result)
             {
-                resultForm.Append("添加交易密码成功，新密码：" + user.password);
+                resultForm.Append("重置交易密码成功，新密码：" + user.password);
             }
 
             // 设置资金密码
-            result = await kess.mdfUserPassword(user, Dict.USE_SCOPE.资金业务, Dict.OPERATION_TYPE.增加密码);
+            result = await kess.mdfUserPassword(user, Dict.USE_SCOPE.资金业务, Dict.OPERATION_TYPE.重置密码);
             if (result)
             {
-                resultForm.Append("添加资金密码成功，新密码：" + user.password);
+                resultForm.Append("重置资金密码成功，新密码：" + user.password);
             }
         }
 
@@ -847,7 +849,20 @@ namespace 金证统一账户测试账户生成器
             {
                 Reset();
 
-                Response response = await kess.queryCustBasicInfoList(tbxCustCode.Text.Trim());
+                if (tbxCustCode.Text.Trim()=="" && tbxCuacctCondition.Text.Trim()=="")
+                {
+                    throw new Exception("客户号或资金账号不能同时为空");
+                }
+
+                Response response;
+                
+                if (tbxCuacctCondition.Text.Trim()!="")
+                {
+                    response = await kess.queryCustInfoByCuacct(tbxCuacctCondition.Text.Trim());
+                    tbxCustCode.Text = response.getValue("USER_CODE");
+                }
+
+                response = await kess.queryCustBasicInfoList(tbxCustCode.Text.Trim());
                 user_name.Text = response.getValue("user_name");
                 id_code.Text = response.getValue("id_code");
                 id_iss_agcy.Text = response.getValue("id_iss_agcy");
@@ -888,6 +903,32 @@ namespace 金证统一账户测试账户生成器
                 else if (response.length == 0)
                 {
                     throw new Exception("客户号下没有开立资金账号，停止处理。");
+                }
+
+                // 查询协议签署情况
+                response = await kess.queryCustAgreement(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append(response.prompt);
+                }
+                else if (response.length > 0)
+                {
+                    resultForm.Append("协议类型\t对接远程系统\t生效日期\t生效截止日期\t更新日期\t资产账户\t交易板块\t交易账户");
+                    foreach (DataRow agreement in response.Rows)
+                    {
+                        Dict.CUST_AGMT_TYPE cust_agmt_typeDict = new Dict.CUST_AGMT_TYPE();
+                        Dict.STKBD stkbdDict = new Dict.STKBD();
+                        resultForm.Append(
+                            cust_agmt_typeDict.getNameByValue(agreement["CUST_AGMT_TYPE"].ToString())
+                            + "\t" + agreement["REMOTE_SYS"].ToString()
+                            + "\t" + agreement["EFT_DATE"].ToString()
+                            + "\t" + agreement["EXP_DATE"].ToString()
+                            + "\t" + agreement["UPD_DATE"].ToString()
+                            + "\t" + agreement["CUACCT_CODE"].ToString()
+                            + "\t" + stkbdDict.getNameByValue(agreement["STKBD"].ToString())
+                            + "\t" + agreement["TRDACCT"].ToString()
+                            );
+                    }
                 }
 
                 // 查询一码通

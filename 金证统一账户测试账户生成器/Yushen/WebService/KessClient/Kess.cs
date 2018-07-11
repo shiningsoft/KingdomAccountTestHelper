@@ -238,6 +238,7 @@ namespace Yushen.WebService.KessClient
         /// 管理用户密码
         /// </summary>
         /// <param name="user">用户信息</param>
+        /// <param name="USE_SCOPE">使用范围（必传）DD[USE_SCOPE]</param>
         /// <param name="OPERATION_TYPE">操作类型，0增加密码，1修改密码，3重置密码</param>
         /// <returns></returns>
         async public Task<bool> mdfUserPassword(User user, string USE_SCOPE, string OPERATION_TYPE = "0")
@@ -261,8 +262,12 @@ namespace Yushen.WebService.KessClient
             request.setAttr("OP_USER", this.operatorId);    // 操作用户
             request.setAttr("OPERATION_TYPE", OPERATION_TYPE);    // 操作类型，0增加密码，1修改密码，3重置密码
             request.setAttr("USER_CODE", user.cust_code);    // 客户名称
+            request.setAttr("USER_ROLE", Dict.USER_ROLE.客户);    // 客户名称
             request.setAttr("NEW_AUTH_DATA", user.password);    // 新密码
-            request.setAttr("USE_SCOPE", USE_SCOPE);    // 设置交易密码
+            request.setAttr("USE_SCOPE", USE_SCOPE);    // 使用范围
+            request.setAttr("AUTH_TYPE", Dict.AUTH_TYPE.密码); //认证类型（必传）DD[AUTH]_TYPE]
+            request.setAttr("SUBSYS_FLAG", "0"); //同步标志0-本地和对接系统均更新1-仅更新对接系统2-仅更新本地
+
 
             // 调用WebService获取返回值
             Response response = await this.invoke(request);
@@ -1602,6 +1607,47 @@ namespace Yushen.WebService.KessClient
             // 调用WebService获取返回值
             Response response = await this.invoke(request);
             
+            // 返回结果
+            return response;
+        }
+
+
+        /// <summary>
+        /// 证券账户查询
+        /// 实现2.53 证券账户查询
+        /// </summary>
+        /// <param name="CUACCT_CODE">资产账户（必传）</param>
+        /// <param name="USER_CODE">客户代码（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> queryCustInfoByCuacct(
+                string CUACCT_CODE, //资产账户（必传）
+                string USER_CODE = "" //客户代码（非必传）
+            )
+        {
+            // 前置条件判断
+            if (CUACCT_CODE == "")
+            {
+                string message = "资产账户不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "queryCustInfoByCuacct");
+            request.setAttr("USER_CODE", USER_CODE); //客户代码（非必传）
+            request.setAttr("CUACCT_CODE", CUACCT_CODE); //资产账户（必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
             // 返回结果
             return response;
         }

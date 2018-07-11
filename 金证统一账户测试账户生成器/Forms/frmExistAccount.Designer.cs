@@ -120,6 +120,8 @@ namespace 金证统一账户测试账户生成器
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.tbxCuacctCondition = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -135,7 +137,7 @@ namespace 金证统一账户测试账户生成器
             this.cbxCubsbScOpenAcctOpType.Location = new System.Drawing.Point(465, 181);
             this.cbxCubsbScOpenAcctOpType.Name = "cbxCubsbScOpenAcctOpType";
             this.cbxCubsbScOpenAcctOpType.Size = new System.Drawing.Size(100, 20);
-            this.cbxCubsbScOpenAcctOpType.TabIndex = 88;
+            this.cbxCubsbScOpenAcctOpType.TabIndex = 15;
             this.cbxCubsbScOpenAcctOpType.SelectedIndexChanged += new System.EventHandler(this.cbxCubsbScOpenAcctOpType_SelectedIndexChanged);
             // 
             // label32
@@ -154,7 +156,7 @@ namespace 金证统一账户测试账户生成器
             this.tbCuacct_cls.Location = new System.Drawing.Point(699, 155);
             this.tbCuacct_cls.Name = "tbCuacct_cls";
             this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
-            this.tbCuacct_cls.TabIndex = 87;
+            this.tbCuacct_cls.TabIndex = 21;
             this.tbCuacct_cls.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的资产账户类别;
             // 
             // label31
@@ -172,7 +174,7 @@ namespace 金证统一账户测试账户生成器
             this.tbChannels.Location = new System.Drawing.Point(699, 181);
             this.tbChannels.Name = "tbChannels";
             this.tbChannels.Size = new System.Drawing.Size(100, 21);
-            this.tbChannels.TabIndex = 85;
+            this.tbChannels.TabIndex = 22;
             this.tbChannels.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的操作渠道;
             // 
             // label30
@@ -198,7 +200,7 @@ namespace 金证统一账户测试账户生成器
             this.cbxOccupation.Location = new System.Drawing.Point(663, 104);
             this.cbxOccupation.Name = "cbxOccupation";
             this.cbxOccupation.Size = new System.Drawing.Size(136, 20);
-            this.cbxOccupation.TabIndex = 83;
+            this.cbxOccupation.TabIndex = 20;
             // 
             // label29
             // 
@@ -214,7 +216,7 @@ namespace 金证统一账户测试账户生成器
             this.btnBindSHAcct.Location = new System.Drawing.Point(429, 74);
             this.btnBindSHAcct.Name = "btnBindSHAcct";
             this.btnBindSHAcct.Size = new System.Drawing.Size(100, 23);
-            this.btnBindSHAcct.TabIndex = 32;
+            this.btnBindSHAcct.TabIndex = 10;
             this.btnBindSHAcct.Text = "指定交易";
             this.btnBindSHAcct.UseVisualStyleBackColor = true;
             this.btnBindSHAcct.Click += new System.EventHandler(this.btnBindSHAcct_Click);
@@ -224,7 +226,7 @@ namespace 金证统一账户测试账户生成器
             this.btnCreateIDCardImgBackSide.Location = new System.Drawing.Point(819, 73);
             this.btnCreateIDCardImgBackSide.Name = "btnCreateIDCardImgBackSide";
             this.btnCreateIDCardImgBackSide.Size = new System.Drawing.Size(100, 23);
-            this.btnCreateIDCardImgBackSide.TabIndex = 51;
+            this.btnCreateIDCardImgBackSide.TabIndex = 26;
             this.btnCreateIDCardImgBackSide.Text = "生成身份证背面";
             this.btnCreateIDCardImgBackSide.UseVisualStyleBackColor = true;
             this.btnCreateIDCardImgBackSide.Click += new System.EventHandler(this.btnCreateIDCardImgBackSide_Click);
@@ -234,7 +236,7 @@ namespace 金证统一账户测试账户生成器
             this.btnCreateIDCardImgFaceSide.Location = new System.Drawing.Point(819, 46);
             this.btnCreateIDCardImgFaceSide.Name = "btnCreateIDCardImgFaceSide";
             this.btnCreateIDCardImgFaceSide.Size = new System.Drawing.Size(100, 23);
-            this.btnCreateIDCardImgFaceSide.TabIndex = 50;
+            this.btnCreateIDCardImgFaceSide.TabIndex = 25;
             this.btnCreateIDCardImgFaceSide.Text = "生成身份证正面";
             this.btnCreateIDCardImgFaceSide.UseVisualStyleBackColor = true;
             this.btnCreateIDCardImgFaceSide.Click += new System.EventHandler(this.btnCreateIDCardImg_Click);
@@ -246,7 +248,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxCybSignDate.ReadOnly = true;
             this.tbxCybSignDate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxCybSignDate.Size = new System.Drawing.Size(188, 21);
-            this.tbxCybSignDate.TabIndex = 43;
+            this.tbxCybSignDate.TabIndex = 16;
             // 
             // label25
             // 
@@ -299,7 +301,7 @@ namespace 金证统一账户测试账户生成器
             this.btnRegisterSZAStkAcct.Location = new System.Drawing.Point(323, 101);
             this.btnRegisterSZAStkAcct.Name = "btnRegisterSZAStkAcct";
             this.btnRegisterSZAStkAcct.Size = new System.Drawing.Size(100, 23);
-            this.btnRegisterSZAStkAcct.TabIndex = 35;
+            this.btnRegisterSZAStkAcct.TabIndex = 13;
             this.btnRegisterSZAStkAcct.Text = "加挂";
             this.btnRegisterSZAStkAcct.UseVisualStyleBackColor = true;
             this.btnRegisterSZAStkAcct.Click += new System.EventHandler(this.btnRegisterSZAStkAcct_Click);
@@ -309,7 +311,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenSZAStkAcct.Location = new System.Drawing.Point(217, 101);
             this.btnOpenSZAStkAcct.Name = "btnOpenSZAStkAcct";
             this.btnOpenSZAStkAcct.Size = new System.Drawing.Size(100, 23);
-            this.btnOpenSZAStkAcct.TabIndex = 34;
+            this.btnOpenSZAStkAcct.TabIndex = 12;
             this.btnOpenSZAStkAcct.Text = "新开";
             this.btnOpenSZAStkAcct.UseVisualStyleBackColor = true;
             this.btnOpenSZAStkAcct.Click += new System.EventHandler(this.btnOpenSZAStkAcct_Click);
@@ -319,7 +321,7 @@ namespace 金证统一账户测试账户生成器
             this.btnQueryCYB.Location = new System.Drawing.Point(535, 101);
             this.btnQueryCYB.Name = "btnQueryCYB";
             this.btnQueryCYB.Size = new System.Drawing.Size(100, 23);
-            this.btnQueryCYB.TabIndex = 37;
+            this.btnQueryCYB.TabIndex = 15;
             this.btnQueryCYB.Text = "创业板信息查询";
             this.btnQueryCYB.UseVisualStyleBackColor = true;
             this.btnQueryCYB.Click += new System.EventHandler(this.btnQueryCYB_Click);
@@ -331,7 +333,7 @@ namespace 金证统一账户测试账户生成器
             this.bank_code.Location = new System.Drawing.Point(466, 208);
             this.bank_code.Name = "bank_code";
             this.bank_code.Size = new System.Drawing.Size(100, 20);
-            this.bank_code.TabIndex = 11;
+            this.bank_code.TabIndex = 16;
             // 
             // sex
             // 
@@ -349,7 +351,7 @@ namespace 金证统一账户测试账户生成器
             this.citizenship.Location = new System.Drawing.Point(465, 155);
             this.citizenship.Name = "citizenship";
             this.citizenship.Size = new System.Drawing.Size(100, 20);
-            this.citizenship.TabIndex = 16;
+            this.citizenship.TabIndex = 14;
             // 
             // education
             // 
@@ -358,7 +360,7 @@ namespace 金证统一账户测试账户生成器
             this.education.Location = new System.Drawing.Point(465, 127);
             this.education.Name = "education";
             this.education.Size = new System.Drawing.Size(100, 20);
-            this.education.TabIndex = 15;
+            this.education.TabIndex = 13;
             // 
             // occu_type
             // 
@@ -367,7 +369,7 @@ namespace 金证统一账户测试账户生成器
             this.occu_type.Location = new System.Drawing.Point(465, 101);
             this.occu_type.Name = "occu_type";
             this.occu_type.Size = new System.Drawing.Size(100, 20);
-            this.occu_type.TabIndex = 14;
+            this.occu_type.TabIndex = 12;
             this.occu_type.SelectedIndexChanged += new System.EventHandler(this.occu_type_SelectedIndexChanged);
             // 
             // nationality
@@ -377,7 +379,7 @@ namespace 金证统一账户测试账户生成器
             this.nationality.Location = new System.Drawing.Point(465, 74);
             this.nationality.Name = "nationality";
             this.nationality.Size = new System.Drawing.Size(100, 20);
-            this.nationality.TabIndex = 13;
+            this.nationality.TabIndex = 11;
             // 
             // label22
             // 
@@ -394,7 +396,7 @@ namespace 金证统一账户测试账户生成器
             this.zip_code.Location = new System.Drawing.Point(273, 181);
             this.zip_code.Name = "zip_code";
             this.zip_code.Size = new System.Drawing.Size(100, 21);
-            this.zip_code.TabIndex = 9;
+            this.zip_code.TabIndex = 7;
             // 
             // label21
             // 
@@ -411,7 +413,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenYMT.Location = new System.Drawing.Point(217, 47);
             this.btnOpenYMT.Name = "btnOpenYMT";
             this.btnOpenYMT.Size = new System.Drawing.Size(100, 23);
-            this.btnOpenYMT.TabIndex = 28;
+            this.btnOpenYMT.TabIndex = 6;
             this.btnOpenYMT.Text = "开一码通";
             this.btnOpenYMT.UseVisualStyleBackColor = true;
             this.btnOpenYMT.Click += new System.EventHandler(this.btnOpenYMT_Click);
@@ -421,7 +423,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenCYB.Location = new System.Drawing.Point(429, 101);
             this.btnOpenCYB.Name = "btnOpenCYB";
             this.btnOpenCYB.Size = new System.Drawing.Size(100, 23);
-            this.btnOpenCYB.TabIndex = 36;
+            this.btnOpenCYB.TabIndex = 14;
             this.btnOpenCYB.Text = "开通创业板";
             this.btnOpenCYB.UseVisualStyleBackColor = true;
             this.btnOpenCYB.Click += new System.EventHandler(this.btnOpenCYB_Click);
@@ -432,7 +434,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxYMTCode.Name = "tbxYMTCode";
             this.tbxYMTCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxYMTCode.Size = new System.Drawing.Size(100, 21);
-            this.tbxYMTCode.TabIndex = 27;
+            this.tbxYMTCode.TabIndex = 5;
             // 
             // label20
             // 
@@ -449,7 +451,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxSZAcct.Name = "tbxSZAcct";
             this.tbxSZAcct.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxSZAcct.Size = new System.Drawing.Size(100, 21);
-            this.tbxSZAcct.TabIndex = 33;
+            this.tbxSZAcct.TabIndex = 11;
             // 
             // label19
             // 
@@ -466,7 +468,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxSHAcct.Name = "tbxSHAcct";
             this.tbxSHAcct.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxSHAcct.Size = new System.Drawing.Size(100, 21);
-            this.tbxSHAcct.TabIndex = 29;
+            this.tbxSHAcct.TabIndex = 7;
             // 
             // label18
             // 
@@ -483,7 +485,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxCuacct.Name = "tbxCuacct";
             this.tbxCuacct.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxCuacct.Size = new System.Drawing.Size(100, 21);
-            this.tbxCuacct.TabIndex = 22;
+            this.tbxCuacct.TabIndex = 0;
             // 
             // label17
             // 
@@ -499,7 +501,7 @@ namespace 金证统一账户测试账户生成器
             this.btnRegisterSHAStkAcct.Location = new System.Drawing.Point(323, 74);
             this.btnRegisterSHAStkAcct.Name = "btnRegisterSHAStkAcct";
             this.btnRegisterSHAStkAcct.Size = new System.Drawing.Size(100, 23);
-            this.btnRegisterSHAStkAcct.TabIndex = 31;
+            this.btnRegisterSHAStkAcct.TabIndex = 9;
             this.btnRegisterSHAStkAcct.Text = "加挂";
             this.btnRegisterSHAStkAcct.UseVisualStyleBackColor = true;
             this.btnRegisterSHAStkAcct.Click += new System.EventHandler(this.btnRegisterStockAccount_Click);
@@ -509,7 +511,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenSHAStkAcct.Location = new System.Drawing.Point(217, 74);
             this.btnOpenSHAStkAcct.Name = "btnOpenSHAStkAcct";
             this.btnOpenSHAStkAcct.Size = new System.Drawing.Size(100, 23);
-            this.btnOpenSHAStkAcct.TabIndex = 30;
+            this.btnOpenSHAStkAcct.TabIndex = 8;
             this.btnOpenSHAStkAcct.Text = "新开";
             this.btnOpenSHAStkAcct.UseVisualStyleBackColor = true;
             this.btnOpenSHAStkAcct.Click += new System.EventHandler(this.btnOpenSHAStkAcct_Click);
@@ -519,7 +521,7 @@ namespace 金证统一账户测试账户生成器
             this.btnQueryStockAccount.Location = new System.Drawing.Point(819, 18);
             this.btnQueryStockAccount.Name = "btnQueryStockAccount";
             this.btnQueryStockAccount.Size = new System.Drawing.Size(100, 23);
-            this.btnQueryStockAccount.TabIndex = 47;
+            this.btnQueryStockAccount.TabIndex = 24;
             this.btnQueryStockAccount.Text = "证券账户查询";
             this.btnQueryStockAccount.UseVisualStyleBackColor = true;
             this.btnQueryStockAccount.Click += new System.EventHandler(this.btnQueryStockAccount_Click);
@@ -529,7 +531,7 @@ namespace 金证统一账户测试账户生成器
             this.btnBankSign.Location = new System.Drawing.Point(535, 20);
             this.btnBankSign.Name = "btnBankSign";
             this.btnBankSign.Size = new System.Drawing.Size(100, 23);
-            this.btnBankSign.TabIndex = 26;
+            this.btnBankSign.TabIndex = 4;
             this.btnBankSign.Text = "三方存管预指定";
             this.btnBankSign.UseVisualStyleBackColor = true;
             this.btnBankSign.Click += new System.EventHandler(this.btnBankSign_Click);
@@ -539,7 +541,7 @@ namespace 金证统一账户测试账户生成器
             this.btnSubmitRiskTest.Location = new System.Drawing.Point(429, 20);
             this.btnSubmitRiskTest.Name = "btnSubmitRiskTest";
             this.btnSubmitRiskTest.Size = new System.Drawing.Size(100, 23);
-            this.btnSubmitRiskTest.TabIndex = 25;
+            this.btnSubmitRiskTest.TabIndex = 3;
             this.btnSubmitRiskTest.Text = "提交风险测评";
             this.btnSubmitRiskTest.UseVisualStyleBackColor = true;
             this.btnSubmitRiskTest.Click += new System.EventHandler(this.btnSubmitRiskTest_Click);
@@ -549,8 +551,8 @@ namespace 金证统一账户测试账户生成器
             this.btnSetPassword.Location = new System.Drawing.Point(323, 20);
             this.btnSetPassword.Name = "btnSetPassword";
             this.btnSetPassword.Size = new System.Drawing.Size(100, 23);
-            this.btnSetPassword.TabIndex = 24;
-            this.btnSetPassword.Text = "设置密码";
+            this.btnSetPassword.TabIndex = 2;
+            this.btnSetPassword.Text = "重置密码";
             this.btnSetPassword.UseVisualStyleBackColor = true;
             this.btnSetPassword.Click += new System.EventHandler(this.btnSetPassword_Click);
             // 
@@ -559,7 +561,7 @@ namespace 金证统一账户测试账户生成器
             this.btnOpenCuacct.Location = new System.Drawing.Point(217, 20);
             this.btnOpenCuacct.Name = "btnOpenCuacct";
             this.btnOpenCuacct.Size = new System.Drawing.Size(100, 23);
-            this.btnOpenCuacct.TabIndex = 23;
+            this.btnOpenCuacct.TabIndex = 1;
             this.btnOpenCuacct.Text = "开资金账号";
             this.btnOpenCuacct.UseVisualStyleBackColor = true;
             this.btnOpenCuacct.Click += new System.EventHandler(this.btnOpenCuacct_Click);
@@ -571,7 +573,7 @@ namespace 金证统一账户测试账户生成器
             this.risk_level.Location = new System.Drawing.Point(465, 48);
             this.risk_level.Name = "risk_level";
             this.risk_level.Size = new System.Drawing.Size(100, 20);
-            this.risk_level.TabIndex = 12;
+            this.risk_level.TabIndex = 10;
             // 
             // label16
             // 
@@ -608,7 +610,7 @@ namespace 金证统一账户测试账户生成器
             this.password.Location = new System.Drawing.Point(465, 20);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(100, 21);
-            this.password.TabIndex = 10;
+            this.password.TabIndex = 9;
             this.password.Text = "111111";
             // 
             // label13
@@ -636,21 +638,21 @@ namespace 金证统一账户测试账户生成器
             this.mobile_tel.Location = new System.Drawing.Point(112, 181);
             this.mobile_tel.Name = "mobile_tel";
             this.mobile_tel.Size = new System.Drawing.Size(100, 21);
-            this.mobile_tel.TabIndex = 8;
+            this.mobile_tel.TabIndex = 6;
             // 
             // id_addr
             // 
             this.id_addr.Location = new System.Drawing.Point(112, 155);
             this.id_addr.Name = "id_addr";
             this.id_addr.Size = new System.Drawing.Size(261, 21);
-            this.id_addr.TabIndex = 7;
+            this.id_addr.TabIndex = 5;
             // 
             // id_iss_agcy
             // 
             this.id_iss_agcy.Location = new System.Drawing.Point(112, 74);
             this.id_iss_agcy.Name = "id_iss_agcy";
             this.id_iss_agcy.Size = new System.Drawing.Size(261, 21);
-            this.id_iss_agcy.TabIndex = 3;
+            this.id_iss_agcy.TabIndex = 2;
             // 
             // id_code
             // 
@@ -672,7 +674,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxCustCode.Name = "tbxCustCode";
             this.tbxCustCode.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxCustCode.Size = new System.Drawing.Size(100, 21);
-            this.tbxCustCode.TabIndex = 20;
+            this.tbxCustCode.TabIndex = 0;
             // 
             // label11
             // 
@@ -766,10 +768,10 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnQueryByUserCode
             // 
-            this.btnQueryByUserCode.Location = new System.Drawing.Point(174, 19);
+            this.btnQueryByUserCode.Location = new System.Drawing.Point(357, 19);
             this.btnQueryByUserCode.Name = "btnQueryByUserCode";
             this.btnQueryByUserCode.Size = new System.Drawing.Size(100, 23);
-            this.btnQueryByUserCode.TabIndex = 21;
+            this.btnQueryByUserCode.TabIndex = 2;
             this.btnQueryByUserCode.Text = "查询";
             this.btnQueryByUserCode.UseVisualStyleBackColor = true;
             this.btnQueryByUserCode.Click += new System.EventHandler(this.btnQueryByUserCode_Click);
@@ -805,7 +807,7 @@ namespace 金证统一账户测试账户生成器
             this.tbxBankAcctCode.Location = new System.Drawing.Point(642, 208);
             this.tbxBankAcctCode.Name = "tbxBankAcctCode";
             this.tbxBankAcctCode.Size = new System.Drawing.Size(157, 21);
-            this.tbxBankAcctCode.TabIndex = 91;
+            this.tbxBankAcctCode.TabIndex = 23;
             // 
             // label14
             // 
@@ -822,24 +824,26 @@ namespace 金证统一账户测试账户生成器
             this.address.Location = new System.Drawing.Point(113, 208);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(261, 21);
-            this.address.TabIndex = 92;
+            this.address.TabIndex = 8;
             // 
             // id_beg_date
             // 
             this.id_beg_date.Location = new System.Drawing.Point(113, 101);
             this.id_beg_date.Name = "id_beg_date";
             this.id_beg_date.Size = new System.Drawing.Size(261, 21);
-            this.id_beg_date.TabIndex = 94;
+            this.id_beg_date.TabIndex = 3;
             // 
             // id_exp_date
             // 
             this.id_exp_date.Location = new System.Drawing.Point(112, 127);
             this.id_exp_date.Name = "id_exp_date";
             this.id_exp_date.Size = new System.Drawing.Size(261, 21);
-            this.id_exp_date.TabIndex = 95;
+            this.id_exp_date.TabIndex = 4;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tbxCuacctCondition);
+            this.groupBox1.Controls.Add(this.label26);
             this.groupBox1.Controls.Add(this.tbxCustCode);
             this.groupBox1.Controls.Add(this.btnQueryByUserCode);
             this.groupBox1.Controls.Add(this.label3);
@@ -940,6 +944,23 @@ namespace 金证统一账户测试账户生成器
             this.groupBox3.TabIndex = 98;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "普通账户操作";
+            // 
+            // tbxCuacctCondition
+            // 
+            this.tbxCuacctCondition.Location = new System.Drawing.Point(251, 21);
+            this.tbxCuacctCondition.Name = "tbxCuacctCondition";
+            this.tbxCuacctCondition.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxCuacctCondition.Size = new System.Drawing.Size(100, 21);
+            this.tbxCuacctCondition.TabIndex = 1;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(180, 24);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(65, 12);
+            this.label26.TabIndex = 22;
+            this.label26.Text = "资金账号：";
             // 
             // frmExistAccount
             // 
@@ -1049,6 +1070,8 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.TextBox tbxCuacctCondition;
+        private System.Windows.Forms.Label label26;
     }
 }
 

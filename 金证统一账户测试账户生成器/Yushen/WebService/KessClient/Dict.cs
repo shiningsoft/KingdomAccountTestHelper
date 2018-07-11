@@ -9,6 +9,17 @@ using System.Reflection;
 /// </summary>
 namespace Yushen.WebService.KessClient.Dict
 {
+
+    /// <summary>
+    /// 认证类型
+    /// </summary>
+    class AUTH_TYPE : Dict
+    {
+        public const string 密码 = "0";
+        public const string 证书 = "1";
+        public const string 指纹 = "2";
+    }
+    
     /// <summary>
     /// 风险测评结果
     /// </summary>
@@ -20,7 +31,6 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 积极型 = "D";
         public const string 激进型 = "E";
     }
-
     /// <summary>
     /// 银证开户操作类型
     /// </summary>
@@ -1431,7 +1441,8 @@ namespace Yushen.WebService.KessClient.Dict
                     return FiledList[i].Name;
                 }
             }
-            throw new Exception("找不到" + value + "对应的字典项");
+            //throw new Exception("找不到" + value + "对应的字典项");
+            return value;
         }
     }
 }
