@@ -45,6 +45,7 @@ namespace 金证统一账户测试账户生成器
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.操作员退出toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.自动重新登录toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.自定义数据字典ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,7 +63,6 @@ namespace 金证统一账户测试账户生成器
             this.tsslExpired = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.自动重新登录toolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +115,16 @@ namespace 金证统一账户测试账户生成器
             this.操作员退出toolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.操作员退出toolStripMenuItem.Text = "操作员退出";
             this.操作员退出toolStripMenuItem.Click += new System.EventHandler(this.操作员退出toolStripMenuItem_Click);
+            // 
+            // 自动重新登录toolStripMenuItem
+            // 
+            this.自动重新登录toolStripMenuItem.Checked = true;
+            this.自动重新登录toolStripMenuItem.CheckOnClick = true;
+            this.自动重新登录toolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.自动重新登录toolStripMenuItem.Name = "自动重新登录toolStripMenuItem";
+            this.自动重新登录toolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.自动重新登录toolStripMenuItem.Text = "自动重新登录";
+            this.自动重新登录toolStripMenuItem.Click += new System.EventHandler(this.自动重新登录toolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
@@ -243,16 +253,6 @@ namespace 金证统一账户测试账户生成器
             this.panel.Size = new System.Drawing.Size(986, 507);
             this.panel.TabIndex = 76;
             // 
-            // 自动重新登录toolStripMenuItem
-            // 
-            this.自动重新登录toolStripMenuItem.Checked = true;
-            this.自动重新登录toolStripMenuItem.CheckOnClick = true;
-            this.自动重新登录toolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.自动重新登录toolStripMenuItem.Name = "自动重新登录toolStripMenuItem";
-            this.自动重新登录toolStripMenuItem.Size = new System.Drawing.Size(160, 22);
-            this.自动重新登录toolStripMenuItem.Text = "自动重新登录";
-            this.自动重新登录toolStripMenuItem.Click += new System.EventHandler(this.自动重新登录toolStripMenuItem_Click);
-            // 
             // frmFramework
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -266,7 +266,7 @@ namespace 金证统一账户测试账户生成器
             this.Name = "frmFramework";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "金证统一账户测试账户生成器 Beta";
+            this.Text = "金证统一账户测试账户生成器";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFramework_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip.ResumeLayout(false);

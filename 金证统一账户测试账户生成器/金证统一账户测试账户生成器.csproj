@@ -151,6 +151,12 @@
     <Compile Include="Forms\frmWebServiceInterfaceTest.Designer.cs">
       <DependentUpon>frmWebServiceInterfaceTest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmStartLogo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmStartLogo.Designer.cs">
+      <DependentUpon>frmStartLogo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Settings.cs" />
     <Compile Include="Yushen\Util\EncryptHelper.cs" />
     <Compile Include="Yushen\Util\Formatter.cs" />
@@ -194,6 +200,7 @@
     <Content Include="logo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\申星软件logo.png" />
     <Content Include="Yushen\WebService\KessClient\Xml\activateCubsbSc.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -1031,6 +1038,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmWebServiceInterfaceTest.resx">
       <DependentUpon>frmWebServiceInterfaceTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmStartLogo.resx">
+      <DependentUpon>frmStartLogo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -79,5 +79,15 @@ namespace 金证统一账户测试账户生成器.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap 申星软件logo {
+            get {
+                object obj = ResourceManager.GetObject("申星软件logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }
