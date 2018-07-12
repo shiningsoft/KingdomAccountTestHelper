@@ -122,9 +122,13 @@ namespace 金证统一账户测试账户生成器
             this.label26 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.tbxFislCuacct = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // cbxCubsbScOpenAcctOpType
@@ -964,11 +968,42 @@ namespace 金证统一账户测试账户生成器
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "普通账户";
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.tbxFislCuacct);
+            this.groupBox4.Controls.Add(this.label27);
+            this.groupBox4.Location = new System.Drawing.Point(12, 462);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(943, 57);
+            this.groupBox4.TabIndex = 99;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "信用账户";
+            this.groupBox4.Visible = false;
+            // 
+            // tbxFislCuacct
+            // 
+            this.tbxFislCuacct.Location = new System.Drawing.Point(111, 20);
+            this.tbxFislCuacct.Name = "tbxFislCuacct";
+            this.tbxFislCuacct.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbxFislCuacct.Size = new System.Drawing.Size(100, 21);
+            this.tbxFislCuacct.TabIndex = 49;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(40, 23);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(65, 12);
+            this.label27.TabIndex = 50;
+            this.label27.Text = "资金账号：";
+            // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(968, 467);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(984, 594);
+            this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -987,6 +1022,8 @@ namespace 金证统一账户测试账户生成器
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1074,6 +1111,9 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox tbxCuacctCondition;
         private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox tbxFislCuacct;
+        private System.Windows.Forms.Label label27;
     }
 }
 

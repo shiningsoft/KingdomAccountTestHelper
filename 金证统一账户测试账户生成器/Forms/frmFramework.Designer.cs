@@ -195,7 +195,7 @@ namespace 金证统一账户测试账户生成器
             this.requestQueueCount,
             this.tsslVersion,
             this.tsslExpired});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 538);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 507);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1010, 26);
             this.statusStrip1.TabIndex = 75;
@@ -250,14 +250,14 @@ namespace 金证统一账户测试账户生成器
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel.Location = new System.Drawing.Point(12, 28);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(986, 507);
+            this.panel.Size = new System.Drawing.Size(986, 476);
             this.panel.TabIndex = 76;
             // 
             // frmFramework
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1010, 564);
+            this.ClientSize = new System.Drawing.Size(1010, 533);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip);
@@ -267,6 +267,7 @@ namespace 金证统一账户测试账户生成器
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "金证统一账户测试账户生成器";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFramework_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.menuStrip.ResumeLayout(false);

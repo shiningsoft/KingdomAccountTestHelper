@@ -237,20 +237,44 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 管理用户密码
         /// </summary>
-        /// <param name="user">用户信息</param>
+        /// <param name="OP_USER"></param>
+        /// <param name="OPERATION_TYPE">操作类型（必传）0：增加密码，1：修改密码3：重置密码</param>
+        /// <param name="USER_CODE">用户代码（必传）</param>
+        /// <param name="USER_ROLE">用户角色（必传）DD[USER_ROLE]</param>
         /// <param name="USE_SCOPE">使用范围（必传）DD[USE_SCOPE]</param>
-        /// <param name="OPERATION_TYPE">操作类型，0增加密码，1修改密码，3重置密码</param>
+        /// <param name="AUTH_TYPE">认证类型（必传）DD[AUTH]_TYPE]</param>
+        /// <param name="OLD_AUTH_DATA">原认证信息（非必传）</param>
+        /// <param name="NEW_AUTH_DATA">新认证信息（必传）</param>
+        /// <param name="OP_REMARK">操作备注（非必传）</param>
+        /// <param name="SUBSYS_FLAG">同步标志0-本地和对接系统均更新1-仅更新对接系统2-仅更新本地</param>
         /// <returns></returns>
-        async public Task<bool> mdfUserPassword(User user, string USE_SCOPE, string OPERATION_TYPE = "0")
+        async public Task<bool> mdfUserPassword(
+                string OPERATION_TYPE, //操作类型（必传）0：增加密码，1：修改密码3：重置密码
+                string USER_CODE, //用户代码（必传）
+                string NEW_AUTH_DATA, //新认证信息（必传）
+                string USE_SCOPE, //使用范围（必传）DD[USE_SCOPE]
+                string OP_USER = "", //
+                string USER_ROLE = Dict.USER_ROLE.客户, //用户角色（必传）DD[USER_ROLE]
+                string AUTH_TYPE = Dict.AUTH_TYPE.密码, //认证类型（必传）DD[AUTH]_TYPE]
+                string OLD_AUTH_DATA = "", //原认证信息（非必传）
+                string OP_REMARK = "", //操作备注（非必传）
+                string SUBSYS_FLAG = "" //同步标志0-本地和对接系统均更新1-仅更新对接系统2-仅更新本地
+            )
         {
             // 前置条件判断
-            if (user.cust_code == "")
+            if (OPERATION_TYPE == "")
             {
                 string message = "客户代码不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
-            if (user.password == "")
+            if (USER_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (NEW_AUTH_DATA == "")
             {
                 string message = "密码不能为空";
                 logger.Error(message);
@@ -259,14 +283,17 @@ namespace Yushen.WebService.KessClient
 
             // 初始化请求
             Request request = new Request(this.operatorId, "mdfUserPassword");
-            request.setAttr("OP_USER", this.operatorId);    // 操作用户
-            request.setAttr("OPERATION_TYPE", OPERATION_TYPE);    // 操作类型，0增加密码，1修改密码，3重置密码
-            request.setAttr("USER_CODE", user.cust_code);    // 客户名称
-            request.setAttr("USER_ROLE", Dict.USER_ROLE.客户);    // 客户名称
-            request.setAttr("NEW_AUTH_DATA", user.password);    // 新密码
-            request.setAttr("USE_SCOPE", USE_SCOPE);    // 使用范围
-            request.setAttr("AUTH_TYPE", Dict.AUTH_TYPE.密码); //认证类型（必传）DD[AUTH]_TYPE]
-            request.setAttr("SUBSYS_FLAG", "0"); //同步标志0-本地和对接系统均更新1-仅更新对接系统2-仅更新本地
+            request.setAttr("OP_USER", OP_USER); //
+            request.setAttr("OPERATION_TYPE", OPERATION_TYPE); //操作类型（必传）0：增加密码，1：修改密码3：重置密码
+            request.setAttr("USER_CODE", USER_CODE); //用户代码（必传）
+            request.setAttr("USER_ROLE", USER_ROLE); //用户角色（必传）DD[USER_ROLE]
+            request.setAttr("USE_SCOPE", USE_SCOPE); //使用范围（必传）DD[USE_SCOPE]
+            request.setAttr("AUTH_TYPE", AUTH_TYPE); //认证类型（必传）DD[AUTH]_TYPE]
+            request.setAttr("OLD_AUTH_DATA", OLD_AUTH_DATA); //原认证信息（非必传）
+            request.setAttr("NEW_AUTH_DATA", NEW_AUTH_DATA); //新认证信息（必传）
+            request.setAttr("OP_REMARK", OP_REMARK); //操作备注（非必传）
+            request.setAttr("SUBSYS_FLAG", SUBSYS_FLAG); //同步标志0-本地和对接系统均更新1-仅更新对接系统2-仅更新本地
+
 
 
             // 调用WebService获取返回值
@@ -1641,12 +1668,12 @@ namespace Yushen.WebService.KessClient
             Response response = await this.invoke(request);
 
             // 判断返回的操作结果是否异常
-            if (response.flag != "1")
-            {
-                string message = "操作失败：" + response.prompt;
-                logger.Error(message);
-                throw new Exception(message);
-            }
+            //if (response.flag != "1")
+            //{
+            //    string message = "操作失败：" + response.prompt;
+            //    logger.Error(message);
+            //    throw new Exception(message);
+            //}
 
             // 返回结果
             return response;

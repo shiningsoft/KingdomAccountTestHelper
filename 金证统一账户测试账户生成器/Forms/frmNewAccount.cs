@@ -506,17 +506,17 @@ namespace 金证统一账户测试账户生成器
         private async Task mdfUserPassword()
         {
             // 设置交易密码
-            bool result = await kess.mdfUserPassword(user, Dict.USE_SCOPE.登录和交易, Dict.OPERATION_TYPE.增加密码);
+            bool result = await kess.mdfUserPassword(Dict.OPERATION_TYPE.增加密码, tbxCustCode.Text.Trim(), password.Text, Dict.USE_SCOPE.登录和交易);
             if (result)
             {
-                resultForm.Append("添加交易密码成功，新密码：" + user.password);
+                resultForm.Append("添加交易密码成功，新密码：" + password.Text);
             }
 
             // 设置资金密码
-            result = await kess.mdfUserPassword(user, Dict.USE_SCOPE.资金业务, Dict.OPERATION_TYPE.增加密码);
+            result = await kess.mdfUserPassword(Dict.OPERATION_TYPE.增加密码, tbxCustCode.Text.Trim(), password.Text, Dict.USE_SCOPE.资金业务);
             if (result)
             {
-                resultForm.Append("添加资金密码成功，新密码：" + user.password);
+                resultForm.Append("添加资金密码成功，新密码：" + password.Text);
             }
         }
 
