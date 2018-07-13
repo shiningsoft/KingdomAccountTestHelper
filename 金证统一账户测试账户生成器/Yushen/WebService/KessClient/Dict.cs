@@ -1368,8 +1368,16 @@ namespace Yushen.WebService.KessClient.Dict
     /// 数据字典基类。
     /// 所有数据字典类应当继承自本类。
     /// </summary>
-    abstract class Dict
+    abstract class Dict : IDict
     {
+        public string Name
+        {
+            get
+            {
+                return GetType().Name;
+            }
+        }
+
         /// <summary>
         /// 创建DataTable以便绑定数据源
         /// </summary>
@@ -1461,5 +1469,26 @@ namespace Yushen.WebService.KessClient.Dict
             //throw new Exception("找不到" + value + "对应的字典项");
             return value;
         }
+    }
+
+    /// <summary>
+    /// 数据字典接口
+    /// </summary>
+    public interface IDict
+    {
+        string Name
+        {
+            get;
+        }
+        DataTable DataTable {
+            get;
+        }
+        bool selectable
+        {
+            set;
+            get;
+        }
+        string getNameByValue(string value);
+        int IndexOf(string value);
     }
 }

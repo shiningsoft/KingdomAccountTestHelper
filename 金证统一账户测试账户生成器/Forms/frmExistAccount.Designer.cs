@@ -120,15 +120,42 @@ namespace 金证统一账户测试账户生成器
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.tbxCuacctCondition = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tbxFislCuacct = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.tc用户信息 = new System.Windows.Forms.TabControl();
+            this.tp基本资料 = new System.Windows.Forms.TabPage();
+            this.tp诚信记录 = new System.Windows.Forms.TabPage();
+            this.dgv诚信记录 = new System.Windows.Forms.DataGridView();
+            this.tp受益人 = new System.Windows.Forms.TabPage();
+            this.dgv受益人 = new System.Windows.Forms.DataGridView();
+            this.tp控制人 = new System.Windows.Forms.TabPage();
+            this.dgv控制人 = new System.Windows.Forms.DataGridView();
+            this.tp已签署协议 = new System.Windows.Forms.TabPage();
+            this.dgv已签署协议 = new System.Windows.Forms.DataGridView();
+            this.CUST_AGMT_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.REMOTE_SYS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EFT_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UPD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUACCT_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STKBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRDACCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
+            this.tc用户信息.SuspendLayout();
+            this.tp基本资料.SuspendLayout();
+            this.tp诚信记录.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).BeginInit();
+            this.tp受益人.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv受益人)).BeginInit();
+            this.tp控制人.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv控制人)).BeginInit();
+            this.tp已签署协议.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCubsbScOpenAcctOpType
@@ -138,7 +165,7 @@ namespace 金证统一账户测试账户生成器
             this.cbxCubsbScOpenAcctOpType.Items.AddRange(new object[] {
             "预指定",
             "一步式"});
-            this.cbxCubsbScOpenAcctOpType.Location = new System.Drawing.Point(465, 181);
+            this.cbxCubsbScOpenAcctOpType.Location = new System.Drawing.Point(460, 174);
             this.cbxCubsbScOpenAcctOpType.Name = "cbxCubsbScOpenAcctOpType";
             this.cbxCubsbScOpenAcctOpType.Size = new System.Drawing.Size(100, 20);
             this.cbxCubsbScOpenAcctOpType.TabIndex = 15;
@@ -147,7 +174,7 @@ namespace 金证统一账户测试账户生成器
             // label32
             // 
             this.label32.AutoSize = true;
-            this.label32.Location = new System.Drawing.Point(394, 184);
+            this.label32.Location = new System.Drawing.Point(389, 177);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(65, 12);
             this.label32.TabIndex = 89;
@@ -157,7 +184,7 @@ namespace 金证统一账户测试账户生成器
             // tbCuacct_cls
             // 
             this.tbCuacct_cls.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的资产账户类别", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbCuacct_cls.Location = new System.Drawing.Point(699, 155);
+            this.tbCuacct_cls.Location = new System.Drawing.Point(817, 22);
             this.tbCuacct_cls.Name = "tbCuacct_cls";
             this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
             this.tbCuacct_cls.TabIndex = 21;
@@ -166,7 +193,7 @@ namespace 金证统一账户测试账户生成器
             // label31
             // 
             this.label31.AutoSize = true;
-            this.label31.Location = new System.Drawing.Point(604, 158);
+            this.label31.Location = new System.Drawing.Point(722, 25);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(89, 12);
             this.label31.TabIndex = 86;
@@ -175,7 +202,7 @@ namespace 金证统一账户测试账户生成器
             // tbChannels
             // 
             this.tbChannels.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的操作渠道", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbChannels.Location = new System.Drawing.Point(699, 181);
+            this.tbChannels.Location = new System.Drawing.Point(817, 48);
             this.tbChannels.Name = "tbChannels";
             this.tbChannels.Size = new System.Drawing.Size(100, 21);
             this.tbChannels.TabIndex = 22;
@@ -184,7 +211,7 @@ namespace 金证统一账户测试账户生成器
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(628, 184);
+            this.label30.Location = new System.Drawing.Point(746, 51);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(65, 12);
             this.label30.TabIndex = 84;
@@ -201,7 +228,7 @@ namespace 金证统一账户测试账户生成器
             "自由职业者",
             "艺术品收藏、拍卖等从业人员",
             "娱乐场所、博彩、影视等从业人员"});
-            this.cbxOccupation.Location = new System.Drawing.Point(663, 104);
+            this.cbxOccupation.Location = new System.Drawing.Point(658, 97);
             this.cbxOccupation.Name = "cbxOccupation";
             this.cbxOccupation.Size = new System.Drawing.Size(136, 20);
             this.cbxOccupation.TabIndex = 20;
@@ -209,7 +236,7 @@ namespace 金证统一账户测试账户生成器
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(592, 106);
+            this.label29.Location = new System.Drawing.Point(587, 99);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(65, 12);
             this.label29.TabIndex = 82;
@@ -227,7 +254,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnCreateIDCardImgBackSide
             // 
-            this.btnCreateIDCardImgBackSide.Location = new System.Drawing.Point(819, 73);
+            this.btnCreateIDCardImgBackSide.Location = new System.Drawing.Point(814, 66);
             this.btnCreateIDCardImgBackSide.Name = "btnCreateIDCardImgBackSide";
             this.btnCreateIDCardImgBackSide.Size = new System.Drawing.Size(100, 23);
             this.btnCreateIDCardImgBackSide.TabIndex = 26;
@@ -237,7 +264,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnCreateIDCardImgFaceSide
             // 
-            this.btnCreateIDCardImgFaceSide.Location = new System.Drawing.Point(819, 46);
+            this.btnCreateIDCardImgFaceSide.Location = new System.Drawing.Point(814, 39);
             this.btnCreateIDCardImgFaceSide.Name = "btnCreateIDCardImgFaceSide";
             this.btnCreateIDCardImgFaceSide.Size = new System.Drawing.Size(100, 23);
             this.btnCreateIDCardImgFaceSide.TabIndex = 25;
@@ -266,7 +293,7 @@ namespace 金证统一账户测试账户生成器
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(592, 77);
+            this.label24.Location = new System.Drawing.Point(587, 70);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(101, 12);
             this.label24.TabIndex = 79;
@@ -276,7 +303,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.dtpCybSignDate.CustomFormat = "yyyyMMdd";
             this.dtpCybSignDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpCybSignDate.Location = new System.Drawing.Point(699, 47);
+            this.dtpCybSignDate.Location = new System.Drawing.Point(694, 40);
             this.dtpCybSignDate.Name = "dtpCybSignDate";
             this.dtpCybSignDate.Size = new System.Drawing.Size(100, 21);
             this.dtpCybSignDate.TabIndex = 18;
@@ -286,7 +313,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.cbxOpenType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxOpenType.FormattingEnabled = true;
-            this.cbxOpenType.Location = new System.Drawing.Point(699, 74);
+            this.cbxOpenType.Location = new System.Drawing.Point(694, 67);
             this.cbxOpenType.Name = "cbxOpenType";
             this.cbxOpenType.Size = new System.Drawing.Size(100, 20);
             this.cbxOpenType.TabIndex = 19;
@@ -294,7 +321,7 @@ namespace 金证统一账户测试账户生成器
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(592, 50);
+            this.label23.Location = new System.Drawing.Point(587, 43);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(101, 12);
             this.label23.TabIndex = 76;
@@ -334,7 +361,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.bank_code.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.bank_code.FormattingEnabled = true;
-            this.bank_code.Location = new System.Drawing.Point(466, 208);
+            this.bank_code.Location = new System.Drawing.Point(461, 201);
             this.bank_code.Name = "bank_code";
             this.bank_code.Size = new System.Drawing.Size(100, 20);
             this.bank_code.TabIndex = 16;
@@ -343,7 +370,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sex.FormattingEnabled = true;
-            this.sex.Location = new System.Drawing.Point(699, 20);
+            this.sex.Location = new System.Drawing.Point(694, 13);
             this.sex.Name = "sex";
             this.sex.Size = new System.Drawing.Size(100, 20);
             this.sex.TabIndex = 17;
@@ -352,7 +379,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.citizenship.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.citizenship.FormattingEnabled = true;
-            this.citizenship.Location = new System.Drawing.Point(465, 155);
+            this.citizenship.Location = new System.Drawing.Point(460, 148);
             this.citizenship.Name = "citizenship";
             this.citizenship.Size = new System.Drawing.Size(100, 20);
             this.citizenship.TabIndex = 14;
@@ -361,7 +388,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.education.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.education.FormattingEnabled = true;
-            this.education.Location = new System.Drawing.Point(465, 127);
+            this.education.Location = new System.Drawing.Point(460, 120);
             this.education.Name = "education";
             this.education.Size = new System.Drawing.Size(100, 20);
             this.education.TabIndex = 13;
@@ -370,7 +397,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.occu_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.occu_type.FormattingEnabled = true;
-            this.occu_type.Location = new System.Drawing.Point(465, 101);
+            this.occu_type.Location = new System.Drawing.Point(460, 94);
             this.occu_type.Name = "occu_type";
             this.occu_type.Size = new System.Drawing.Size(100, 20);
             this.occu_type.TabIndex = 12;
@@ -380,7 +407,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.nationality.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.nationality.FormattingEnabled = true;
-            this.nationality.Location = new System.Drawing.Point(465, 74);
+            this.nationality.Location = new System.Drawing.Point(460, 67);
             this.nationality.Name = "nationality";
             this.nationality.Size = new System.Drawing.Size(100, 20);
             this.nationality.TabIndex = 11;
@@ -388,7 +415,7 @@ namespace 金证统一账户测试账户生成器
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(652, 23);
+            this.label22.Location = new System.Drawing.Point(647, 16);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(41, 12);
             this.label22.TabIndex = 62;
@@ -397,7 +424,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // zip_code
             // 
-            this.zip_code.Location = new System.Drawing.Point(273, 181);
+            this.zip_code.Location = new System.Drawing.Point(268, 174);
             this.zip_code.Name = "zip_code";
             this.zip_code.Size = new System.Drawing.Size(100, 21);
             this.zip_code.TabIndex = 7;
@@ -405,7 +432,7 @@ namespace 金证统一账户测试账户生成器
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(226, 184);
+            this.label21.Location = new System.Drawing.Point(221, 177);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(41, 12);
             this.label21.TabIndex = 59;
@@ -522,7 +549,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnQueryStockAccount
             // 
-            this.btnQueryStockAccount.Location = new System.Drawing.Point(819, 18);
+            this.btnQueryStockAccount.Location = new System.Drawing.Point(814, 11);
             this.btnQueryStockAccount.Name = "btnQueryStockAccount";
             this.btnQueryStockAccount.Size = new System.Drawing.Size(100, 23);
             this.btnQueryStockAccount.TabIndex = 24;
@@ -574,7 +601,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.risk_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.risk_level.FormattingEnabled = true;
-            this.risk_level.Location = new System.Drawing.Point(465, 48);
+            this.risk_level.Location = new System.Drawing.Point(460, 41);
             this.risk_level.Name = "risk_level";
             this.risk_level.Size = new System.Drawing.Size(100, 20);
             this.risk_level.TabIndex = 10;
@@ -582,7 +609,7 @@ namespace 金证统一账户测试账户生成器
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(394, 51);
+            this.label16.Location = new System.Drawing.Point(389, 44);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(65, 12);
             this.label16.TabIndex = 38;
@@ -592,7 +619,7 @@ namespace 金证统一账户测试账户生成器
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(395, 211);
+            this.label15.Location = new System.Drawing.Point(390, 204);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(65, 12);
             this.label15.TabIndex = 36;
@@ -602,7 +629,7 @@ namespace 金证统一账户测试账户生成器
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(394, 23);
+            this.label1.Location = new System.Drawing.Point(389, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(65, 12);
             this.label1.TabIndex = 34;
@@ -611,7 +638,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // password
             // 
-            this.password.Location = new System.Drawing.Point(465, 20);
+            this.password.Location = new System.Drawing.Point(460, 13);
             this.password.Name = "password";
             this.password.Size = new System.Drawing.Size(100, 21);
             this.password.TabIndex = 9;
@@ -620,7 +647,7 @@ namespace 金证统一账户测试账户生成器
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(17, 104);
+            this.label13.Location = new System.Drawing.Point(12, 97);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 12);
             this.label13.TabIndex = 29;
@@ -630,7 +657,7 @@ namespace 金证统一账户测试账户生成器
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(41, 184);
+            this.label12.Location = new System.Drawing.Point(36, 177);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(65, 12);
             this.label12.TabIndex = 27;
@@ -639,35 +666,35 @@ namespace 金证统一账户测试账户生成器
             // 
             // mobile_tel
             // 
-            this.mobile_tel.Location = new System.Drawing.Point(112, 181);
+            this.mobile_tel.Location = new System.Drawing.Point(107, 174);
             this.mobile_tel.Name = "mobile_tel";
             this.mobile_tel.Size = new System.Drawing.Size(100, 21);
             this.mobile_tel.TabIndex = 6;
             // 
             // id_addr
             // 
-            this.id_addr.Location = new System.Drawing.Point(112, 155);
+            this.id_addr.Location = new System.Drawing.Point(107, 148);
             this.id_addr.Name = "id_addr";
             this.id_addr.Size = new System.Drawing.Size(261, 21);
             this.id_addr.TabIndex = 5;
             // 
             // id_iss_agcy
             // 
-            this.id_iss_agcy.Location = new System.Drawing.Point(112, 74);
+            this.id_iss_agcy.Location = new System.Drawing.Point(107, 67);
             this.id_iss_agcy.Name = "id_iss_agcy";
             this.id_iss_agcy.Size = new System.Drawing.Size(261, 21);
             this.id_iss_agcy.TabIndex = 2;
             // 
             // id_code
             // 
-            this.id_code.Location = new System.Drawing.Point(112, 47);
+            this.id_code.Location = new System.Drawing.Point(107, 40);
             this.id_code.Name = "id_code";
             this.id_code.Size = new System.Drawing.Size(261, 21);
             this.id_code.TabIndex = 1;
             // 
             // user_name
             // 
-            this.user_name.Location = new System.Drawing.Point(112, 20);
+            this.user_name.Location = new System.Drawing.Point(107, 13);
             this.user_name.Name = "user_name";
             this.user_name.Size = new System.Drawing.Size(261, 21);
             this.user_name.TabIndex = 0;
@@ -684,7 +711,7 @@ namespace 金证统一账户测试账户生成器
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(41, 158);
+            this.label11.Location = new System.Drawing.Point(36, 151);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(65, 12);
             this.label11.TabIndex = 25;
@@ -694,7 +721,7 @@ namespace 金证统一账户测试账户生成器
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(418, 131);
+            this.label10.Location = new System.Drawing.Point(413, 124);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 12);
             this.label10.TabIndex = 23;
@@ -704,7 +731,7 @@ namespace 金证统一账户测试账户生成器
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(418, 104);
+            this.label9.Location = new System.Drawing.Point(413, 97);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 12);
             this.label9.TabIndex = 21;
@@ -714,7 +741,7 @@ namespace 金证统一账户测试账户生成器
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(418, 77);
+            this.label8.Location = new System.Drawing.Point(413, 70);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(41, 12);
             this.label8.TabIndex = 19;
@@ -724,7 +751,7 @@ namespace 金证统一账户测试账户生成器
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(418, 158);
+            this.label7.Location = new System.Drawing.Point(413, 151);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 12);
             this.label7.TabIndex = 17;
@@ -734,7 +761,7 @@ namespace 金证统一账户测试账户生成器
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 131);
+            this.label6.Location = new System.Drawing.Point(12, 124);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 12);
             this.label6.TabIndex = 15;
@@ -744,7 +771,7 @@ namespace 金证统一账户测试账户生成器
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(41, 77);
+            this.label5.Location = new System.Drawing.Point(36, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 12);
             this.label5.TabIndex = 13;
@@ -754,7 +781,7 @@ namespace 金证统一账户测试账户生成器
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(41, 51);
+            this.label4.Location = new System.Drawing.Point(36, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 11;
@@ -764,7 +791,7 @@ namespace 金证统一账户测试账户生成器
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(41, 23);
+            this.label2.Location = new System.Drawing.Point(36, 16);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 12);
             this.label2.TabIndex = 9;
@@ -800,7 +827,7 @@ namespace 金证统一账户测试账户生成器
             // label33
             // 
             this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(572, 211);
+            this.label33.Location = new System.Drawing.Point(567, 204);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(65, 12);
             this.label33.TabIndex = 90;
@@ -809,7 +836,7 @@ namespace 金证统一账户测试账户生成器
             // tbxBankAcctCode
             // 
             this.tbxBankAcctCode.Enabled = false;
-            this.tbxBankAcctCode.Location = new System.Drawing.Point(642, 208);
+            this.tbxBankAcctCode.Location = new System.Drawing.Point(637, 201);
             this.tbxBankAcctCode.Name = "tbxBankAcctCode";
             this.tbxBankAcctCode.Size = new System.Drawing.Size(157, 21);
             this.tbxBankAcctCode.TabIndex = 23;
@@ -817,7 +844,7 @@ namespace 金证统一账户测试账户生成器
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(42, 211);
+            this.label14.Location = new System.Drawing.Point(37, 204);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(65, 12);
             this.label14.TabIndex = 93;
@@ -826,21 +853,21 @@ namespace 金证统一账户测试账户生成器
             // 
             // address
             // 
-            this.address.Location = new System.Drawing.Point(113, 208);
+            this.address.Location = new System.Drawing.Point(108, 201);
             this.address.Name = "address";
             this.address.Size = new System.Drawing.Size(261, 21);
             this.address.TabIndex = 8;
             // 
             // id_beg_date
             // 
-            this.id_beg_date.Location = new System.Drawing.Point(113, 101);
+            this.id_beg_date.Location = new System.Drawing.Point(108, 94);
             this.id_beg_date.Name = "id_beg_date";
             this.id_beg_date.Size = new System.Drawing.Size(261, 21);
             this.id_beg_date.TabIndex = 3;
             // 
             // id_exp_date
             // 
-            this.id_exp_date.Location = new System.Drawing.Point(112, 127);
+            this.id_exp_date.Location = new System.Drawing.Point(107, 120);
             this.id_exp_date.Name = "id_exp_date";
             this.id_exp_date.Size = new System.Drawing.Size(261, 21);
             this.id_exp_date.TabIndex = 4;
@@ -877,66 +904,6 @@ namespace 金证统一账户测试账户生成器
             this.label26.TabIndex = 22;
             this.label26.Text = "资金账号：";
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.user_name);
-            this.groupBox2.Controls.Add(this.label21);
-            this.groupBox2.Controls.Add(this.id_exp_date);
-            this.groupBox2.Controls.Add(this.zip_code);
-            this.groupBox2.Controls.Add(this.id_beg_date);
-            this.groupBox2.Controls.Add(this.label22);
-            this.groupBox2.Controls.Add(this.label14);
-            this.groupBox2.Controls.Add(this.btnQueryStockAccount);
-            this.groupBox2.Controls.Add(this.address);
-            this.groupBox2.Controls.Add(this.nationality);
-            this.groupBox2.Controls.Add(this.tbxBankAcctCode);
-            this.groupBox2.Controls.Add(this.occu_type);
-            this.groupBox2.Controls.Add(this.label33);
-            this.groupBox2.Controls.Add(this.education);
-            this.groupBox2.Controls.Add(this.citizenship);
-            this.groupBox2.Controls.Add(this.cbxCubsbScOpenAcctOpType);
-            this.groupBox2.Controls.Add(this.sex);
-            this.groupBox2.Controls.Add(this.label32);
-            this.groupBox2.Controls.Add(this.risk_level);
-            this.groupBox2.Controls.Add(this.tbCuacct_cls);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.bank_code);
-            this.groupBox2.Controls.Add(this.label31);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.tbChannels);
-            this.groupBox2.Controls.Add(this.password);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.label30);
-            this.groupBox2.Controls.Add(this.label13);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.cbxOpenType);
-            this.groupBox2.Controls.Add(this.cbxOccupation);
-            this.groupBox2.Controls.Add(this.label12);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.dtpCybSignDate);
-            this.groupBox2.Controls.Add(this.label29);
-            this.groupBox2.Controls.Add(this.mobile_tel);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.id_addr);
-            this.groupBox2.Controls.Add(this.id_iss_agcy);
-            this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.id_code);
-            this.groupBox2.Controls.Add(this.label11);
-            this.groupBox2.Controls.Add(this.btnCreateIDCardImgFaceSide);
-            this.groupBox2.Controls.Add(this.btnCreateIDCardImgBackSide);
-            this.groupBox2.Location = new System.Drawing.Point(12, 69);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(943, 240);
-            this.groupBox2.TabIndex = 97;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "客户资料";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.btnOpenCuacct);
@@ -961,7 +928,11 @@ namespace 金证统一账户测试账户生成器
             this.groupBox3.Controls.Add(this.btnRegisterSHAStkAcct);
             this.groupBox3.Controls.Add(this.btnBankSign);
             this.groupBox3.Controls.Add(this.btnOpenSHAStkAcct);
-            this.groupBox3.Location = new System.Drawing.Point(12, 315);
+            this.groupBox3.Controls.Add(this.tbCuacct_cls);
+            this.groupBox3.Controls.Add(this.label31);
+            this.groupBox3.Controls.Add(this.tbChannels);
+            this.groupBox3.Controls.Add(this.label30);
+            this.groupBox3.Location = new System.Drawing.Point(12, 340);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(943, 140);
             this.groupBox3.TabIndex = 98;
@@ -972,7 +943,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.groupBox4.Controls.Add(this.tbxFislCuacct);
             this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Location = new System.Drawing.Point(12, 462);
+            this.groupBox4.Location = new System.Drawing.Point(12, 487);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(943, 57);
             this.groupBox4.TabIndex = 99;
@@ -997,15 +968,273 @@ namespace 金证统一账户测试账户生成器
             this.label27.TabIndex = 50;
             this.label27.Text = "资金账号：";
             // 
+            // tc用户信息
+            // 
+            this.tc用户信息.Controls.Add(this.tp基本资料);
+            this.tc用户信息.Controls.Add(this.tp诚信记录);
+            this.tc用户信息.Controls.Add(this.tp受益人);
+            this.tc用户信息.Controls.Add(this.tp控制人);
+            this.tc用户信息.Controls.Add(this.tp已签署协议);
+            this.tc用户信息.Location = new System.Drawing.Point(12, 69);
+            this.tc用户信息.Name = "tc用户信息";
+            this.tc用户信息.SelectedIndex = 0;
+            this.tc用户信息.Size = new System.Drawing.Size(943, 265);
+            this.tc用户信息.TabIndex = 97;
+            // 
+            // tp基本资料
+            // 
+            this.tp基本资料.Controls.Add(this.user_name);
+            this.tp基本资料.Controls.Add(this.btnCreateIDCardImgBackSide);
+            this.tp基本资料.Controls.Add(this.btnCreateIDCardImgFaceSide);
+            this.tp基本资料.Controls.Add(this.label11);
+            this.tp基本资料.Controls.Add(this.label21);
+            this.tp基本资料.Controls.Add(this.id_code);
+            this.tp基本资料.Controls.Add(this.id_exp_date);
+            this.tp基本资料.Controls.Add(this.label10);
+            this.tp基本资料.Controls.Add(this.zip_code);
+            this.tp基本资料.Controls.Add(this.id_iss_agcy);
+            this.tp基本资料.Controls.Add(this.id_beg_date);
+            this.tp基本资料.Controls.Add(this.id_addr);
+            this.tp基本资料.Controls.Add(this.label22);
+            this.tp基本资料.Controls.Add(this.label9);
+            this.tp基本资料.Controls.Add(this.label14);
+            this.tp基本资料.Controls.Add(this.label24);
+            this.tp基本资料.Controls.Add(this.btnQueryStockAccount);
+            this.tp基本资料.Controls.Add(this.label8);
+            this.tp基本资料.Controls.Add(this.address);
+            this.tp基本资料.Controls.Add(this.mobile_tel);
+            this.tp基本资料.Controls.Add(this.nationality);
+            this.tp基本资料.Controls.Add(this.label29);
+            this.tp基本资料.Controls.Add(this.tbxBankAcctCode);
+            this.tp基本资料.Controls.Add(this.dtpCybSignDate);
+            this.tp基本资料.Controls.Add(this.occu_type);
+            this.tp基本资料.Controls.Add(this.label7);
+            this.tp基本资料.Controls.Add(this.label33);
+            this.tp基本资料.Controls.Add(this.label12);
+            this.tp基本资料.Controls.Add(this.education);
+            this.tp基本资料.Controls.Add(this.cbxOccupation);
+            this.tp基本资料.Controls.Add(this.citizenship);
+            this.tp基本资料.Controls.Add(this.cbxOpenType);
+            this.tp基本资料.Controls.Add(this.cbxCubsbScOpenAcctOpType);
+            this.tp基本资料.Controls.Add(this.label6);
+            this.tp基本资料.Controls.Add(this.sex);
+            this.tp基本资料.Controls.Add(this.label13);
+            this.tp基本资料.Controls.Add(this.label32);
+            this.tp基本资料.Controls.Add(this.risk_level);
+            this.tp基本资料.Controls.Add(this.label23);
+            this.tp基本资料.Controls.Add(this.label5);
+            this.tp基本资料.Controls.Add(this.label16);
+            this.tp基本资料.Controls.Add(this.password);
+            this.tp基本资料.Controls.Add(this.label2);
+            this.tp基本资料.Controls.Add(this.bank_code);
+            this.tp基本资料.Controls.Add(this.label1);
+            this.tp基本资料.Controls.Add(this.label4);
+            this.tp基本资料.Controls.Add(this.label15);
+            this.tp基本资料.Location = new System.Drawing.Point(4, 22);
+            this.tp基本资料.Name = "tp基本资料";
+            this.tp基本资料.Padding = new System.Windows.Forms.Padding(3);
+            this.tp基本资料.Size = new System.Drawing.Size(935, 239);
+            this.tp基本资料.TabIndex = 0;
+            this.tp基本资料.Text = "基本资料";
+            this.tp基本资料.UseVisualStyleBackColor = true;
+            // 
+            // tp诚信记录
+            // 
+            this.tp诚信记录.Controls.Add(this.dgv诚信记录);
+            this.tp诚信记录.Location = new System.Drawing.Point(4, 22);
+            this.tp诚信记录.Name = "tp诚信记录";
+            this.tp诚信记录.Padding = new System.Windows.Forms.Padding(3);
+            this.tp诚信记录.Size = new System.Drawing.Size(935, 239);
+            this.tp诚信记录.TabIndex = 3;
+            this.tp诚信记录.Text = "诚信记录";
+            this.tp诚信记录.UseVisualStyleBackColor = true;
+            // 
+            // dgv诚信记录
+            // 
+            this.dgv诚信记录.AllowUserToAddRows = false;
+            this.dgv诚信记录.AllowUserToDeleteRows = false;
+            this.dgv诚信记录.AllowUserToResizeRows = false;
+            this.dgv诚信记录.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv诚信记录.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv诚信记录.Location = new System.Drawing.Point(6, 6);
+            this.dgv诚信记录.Name = "dgv诚信记录";
+            this.dgv诚信记录.ReadOnly = true;
+            this.dgv诚信记录.RowHeadersVisible = false;
+            this.dgv诚信记录.RowTemplate.Height = 23;
+            this.dgv诚信记录.Size = new System.Drawing.Size(923, 227);
+            this.dgv诚信记录.TabIndex = 0;
+            // 
+            // tp受益人
+            // 
+            this.tp受益人.Controls.Add(this.dgv受益人);
+            this.tp受益人.Location = new System.Drawing.Point(4, 22);
+            this.tp受益人.Name = "tp受益人";
+            this.tp受益人.Padding = new System.Windows.Forms.Padding(3);
+            this.tp受益人.Size = new System.Drawing.Size(935, 239);
+            this.tp受益人.TabIndex = 1;
+            this.tp受益人.Text = "受益人";
+            this.tp受益人.UseVisualStyleBackColor = true;
+            // 
+            // dgv受益人
+            // 
+            this.dgv受益人.AllowUserToAddRows = false;
+            this.dgv受益人.AllowUserToDeleteRows = false;
+            this.dgv受益人.AllowUserToResizeRows = false;
+            this.dgv受益人.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv受益人.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv受益人.Location = new System.Drawing.Point(6, 6);
+            this.dgv受益人.Name = "dgv受益人";
+            this.dgv受益人.ReadOnly = true;
+            this.dgv受益人.RowHeadersVisible = false;
+            this.dgv受益人.RowTemplate.Height = 23;
+            this.dgv受益人.Size = new System.Drawing.Size(923, 227);
+            this.dgv受益人.TabIndex = 1;
+            // 
+            // tp控制人
+            // 
+            this.tp控制人.Controls.Add(this.dgv控制人);
+            this.tp控制人.Location = new System.Drawing.Point(4, 22);
+            this.tp控制人.Name = "tp控制人";
+            this.tp控制人.Padding = new System.Windows.Forms.Padding(3);
+            this.tp控制人.Size = new System.Drawing.Size(935, 239);
+            this.tp控制人.TabIndex = 2;
+            this.tp控制人.Text = "控制人";
+            this.tp控制人.UseVisualStyleBackColor = true;
+            // 
+            // dgv控制人
+            // 
+            this.dgv控制人.AllowUserToAddRows = false;
+            this.dgv控制人.AllowUserToDeleteRows = false;
+            this.dgv控制人.AllowUserToResizeRows = false;
+            this.dgv控制人.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv控制人.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv控制人.Location = new System.Drawing.Point(6, 6);
+            this.dgv控制人.Name = "dgv控制人";
+            this.dgv控制人.ReadOnly = true;
+            this.dgv控制人.RowHeadersVisible = false;
+            this.dgv控制人.RowTemplate.Height = 23;
+            this.dgv控制人.Size = new System.Drawing.Size(923, 227);
+            this.dgv控制人.TabIndex = 1;
+            // 
+            // tp已签署协议
+            // 
+            this.tp已签署协议.Controls.Add(this.dgv已签署协议);
+            this.tp已签署协议.Location = new System.Drawing.Point(4, 22);
+            this.tp已签署协议.Name = "tp已签署协议";
+            this.tp已签署协议.Padding = new System.Windows.Forms.Padding(3);
+            this.tp已签署协议.Size = new System.Drawing.Size(935, 239);
+            this.tp已签署协议.TabIndex = 4;
+            this.tp已签署协议.Text = "已签署协议";
+            this.tp已签署协议.UseVisualStyleBackColor = true;
+            // 
+            // dgv已签署协议
+            // 
+            this.dgv已签署协议.AllowUserToAddRows = false;
+            this.dgv已签署协议.AllowUserToDeleteRows = false;
+            this.dgv已签署协议.AllowUserToResizeRows = false;
+            this.dgv已签署协议.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv已签署协议.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv已签署协议.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CUST_AGMT_TYPE,
+            this.REMOTE_SYS,
+            this.EFT_DATE,
+            this.EXP_DATE,
+            this.UPD_DATE,
+            this.CUACCT_CODE,
+            this.STKBD,
+            this.TRDACCT,
+            this.CUST_CODE});
+            this.dgv已签署协议.Location = new System.Drawing.Point(6, 6);
+            this.dgv已签署协议.Name = "dgv已签署协议";
+            this.dgv已签署协议.ReadOnly = true;
+            this.dgv已签署协议.RowHeadersVisible = false;
+            this.dgv已签署协议.RowTemplate.Height = 23;
+            this.dgv已签署协议.Size = new System.Drawing.Size(923, 227);
+            this.dgv已签署协议.TabIndex = 2;
+            // 
+            // CUST_AGMT_TYPE
+            // 
+            this.CUST_AGMT_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.CUST_AGMT_TYPE.DataPropertyName = "CUST_AGMT_TYPE";
+            this.CUST_AGMT_TYPE.HeaderText = "客户协议类型";
+            this.CUST_AGMT_TYPE.MinimumWidth = 100;
+            this.CUST_AGMT_TYPE.Name = "CUST_AGMT_TYPE";
+            this.CUST_AGMT_TYPE.ReadOnly = true;
+            // 
+            // REMOTE_SYS
+            // 
+            this.REMOTE_SYS.DataPropertyName = "REMOTE_SYS";
+            this.REMOTE_SYS.HeaderText = "对接远程系统";
+            this.REMOTE_SYS.Name = "REMOTE_SYS";
+            this.REMOTE_SYS.ReadOnly = true;
+            // 
+            // EFT_DATE
+            // 
+            this.EFT_DATE.DataPropertyName = "EFT_DATE";
+            this.EFT_DATE.HeaderText = "生效日期";
+            this.EFT_DATE.Name = "EFT_DATE";
+            this.EFT_DATE.ReadOnly = true;
+            // 
+            // EXP_DATE
+            // 
+            this.EXP_DATE.DataPropertyName = "EXP_DATE";
+            this.EXP_DATE.HeaderText = "生效截止日期";
+            this.EXP_DATE.Name = "EXP_DATE";
+            this.EXP_DATE.ReadOnly = true;
+            // 
+            // UPD_DATE
+            // 
+            this.UPD_DATE.DataPropertyName = "UPD_DATE";
+            this.UPD_DATE.HeaderText = "更新日期";
+            this.UPD_DATE.Name = "UPD_DATE";
+            this.UPD_DATE.ReadOnly = true;
+            // 
+            // CUACCT_CODE
+            // 
+            this.CUACCT_CODE.DataPropertyName = "CUACCT_CODE";
+            this.CUACCT_CODE.HeaderText = "资产账户";
+            this.CUACCT_CODE.Name = "CUACCT_CODE";
+            this.CUACCT_CODE.ReadOnly = true;
+            // 
+            // STKBD
+            // 
+            this.STKBD.DataPropertyName = "STKBD";
+            this.STKBD.HeaderText = "交易板块";
+            this.STKBD.Name = "STKBD";
+            this.STKBD.ReadOnly = true;
+            // 
+            // TRDACCT
+            // 
+            this.TRDACCT.DataPropertyName = "TRDACCT";
+            this.TRDACCT.HeaderText = "交易账户";
+            this.TRDACCT.Name = "TRDACCT";
+            this.TRDACCT.ReadOnly = true;
+            // 
+            // CUST_CODE
+            // 
+            this.CUST_CODE.DataPropertyName = "CUST_CODE";
+            this.CUST_CODE.HeaderText = "客户代码";
+            this.CUST_CODE.Name = "CUST_CODE";
+            this.CUST_CODE.ReadOnly = true;
+            this.CUST_CODE.Visible = false;
+            // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 594);
+            this.ClientSize = new System.Drawing.Size(984, 734);
+            this.Controls.Add(this.tc用户信息);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1018,12 +1247,21 @@ namespace 金证统一账户测试账户生成器
             this.Shown += new System.EventHandler(this.frmExistAccount_Shown);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.tc用户信息.ResumeLayout(false);
+            this.tp基本资料.ResumeLayout(false);
+            this.tp基本资料.PerformLayout();
+            this.tp诚信记录.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).EndInit();
+            this.tp受益人.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv受益人)).EndInit();
+            this.tp控制人.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv控制人)).EndInit();
+            this.tp已签署协议.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1107,13 +1345,31 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.TextBox id_beg_date;
         private System.Windows.Forms.TextBox id_exp_date;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox tbxCuacctCondition;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TextBox tbxFislCuacct;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.TabControl tc用户信息;
+        private System.Windows.Forms.TabPage tp基本资料;
+        private System.Windows.Forms.TabPage tp受益人;
+        private System.Windows.Forms.TabPage tp诚信记录;
+        private System.Windows.Forms.TabPage tp控制人;
+        private System.Windows.Forms.DataGridView dgv诚信记录;
+        private System.Windows.Forms.DataGridView dgv受益人;
+        private System.Windows.Forms.DataGridView dgv控制人;
+        private System.Windows.Forms.TabPage tp已签署协议;
+        private System.Windows.Forms.DataGridView dgv已签署协议;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CUST_AGMT_TYPE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn REMOTE_SYS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EFT_DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EXP_DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UPD_DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CUACCT_CODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn STKBD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TRDACCT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CUST_CODE;
     }
 }
 

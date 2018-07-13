@@ -8,8 +8,36 @@ namespace Yushen.WebService.KessClient.Dict
     /// <summary>
     /// 自定义数据字典，可用XML进行配置
     /// </summary>
-    class CustomDict : Dict
+    class CustomDict : IDict
     {
+        private string _name;
+
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+        }
+
+        private bool _selectable = false;
+
+        /// <summary>
+        /// 设置是否可选
+        /// 设置为true之后，DataTable的第一行将是“请选择”
+        /// </summary>
+        public bool selectable
+        {
+            set
+            {
+                this._selectable = value;
+            }
+            get
+            {
+                return this._selectable;
+            }
+        }
+
         /// <summary>
         /// 自定义数据字典，可用XML文件进行配置
         /// </summary>
@@ -18,7 +46,8 @@ namespace Yushen.WebService.KessClient.Dict
         {
             try
             {
-                this.DataTable = LoadXml(DictName.ToUpper());
+                this._dataTable = LoadXml(DictName.ToUpper());
+                this._name = DictName;
             }
             catch (Exception ex)
             {
@@ -27,7 +56,15 @@ namespace Yushen.WebService.KessClient.Dict
             }
         }
 
-        public new DataTable DataTable;
+        private DataTable _dataTable;
+
+        public DataTable DataTable
+        {
+            get
+            {
+                return _dataTable;
+            }
+        }
 
         /// <summary>
         /// 根据指定的字典值取得对应的字典项名称。
@@ -35,9 +72,9 @@ namespace Yushen.WebService.KessClient.Dict
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
-        public new string getNameByValue(string value)
+        public string getNameByValue(string value)
         {
-            foreach (DataRow dr in DataTable.Rows)
+            foreach (DataRow dr in _dataTable.Rows)
             {
                 if (dr["value"].ToString() == value)
                 {
@@ -86,6 +123,24 @@ namespace Yushen.WebService.KessClient.Dict
             }
 
             return dt;
+        }
+
+        /// <summary>
+        /// 判断指定值是否在字典中存在
+        /// 如果存在则返回索引值，否则返回-1。
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public int IndexOf(string value)
+        {
+            for (int i = 0; i < _dataTable.Rows.Count; i++)
+            {
+                if (value == _dataTable.Rows[i]["value"].ToString())
+                {
+                    return i;
+                }
+            }
+            return -1;
         }
     }
 

@@ -14,6 +14,9 @@ namespace Yushen.WebService.KessClient
         /// 用于存储WebService返回值的Xml文档对象
         /// </summary>
         private XmlDocument xmlDoc = new XmlDocument();
+
+        private DataSet ds = new DataSet();
+
         /// <summary>
         /// WebService返回的服务器处理结果
         /// </summary>
@@ -57,6 +60,8 @@ namespace Yushen.WebService.KessClient
             this.length = int.Parse(xmlDoc.SelectSingleNode("/response/result/length").InnerText);
 
             this.validResult();
+
+            ds = createDataSetFromXmlString(this.xml);
         }
 
         /// <summary>
@@ -212,6 +217,7 @@ namespace Yushen.WebService.KessClient
             {
                 throw new Exception("DataSet读取XML失败");
             }
+
             return ds;
         }
 
@@ -222,7 +228,6 @@ namespace Yushen.WebService.KessClient
         {
             get
             {
-                DataSet ds = createDataSetFromXmlString(this.xml);
                 return ds;
             }
         }
@@ -245,6 +250,24 @@ namespace Yushen.WebService.KessClient
         {
             this.length = 0;
             this.xmlDoc.SelectSingleNode("/response/record").RemoveAll();
+        }
+
+        public void translate(Dict.IDict dict)
+        {
+            string columnName = dict.GetType().Name;
+
+            if (columnName == "CustomDict")
+            {
+                columnName = dict.Name;
+            }
+
+            if (ds.Tables["row"].Columns.Contains(columnName))
+            {
+                foreach (DataRow dr in Rows)
+                {
+                    dr[columnName] = dict.getNameByValue(dr[columnName].ToString());
+                }
+            }
         }
     }
 }

@@ -1638,7 +1638,6 @@ namespace Yushen.WebService.KessClient
             return response;
         }
 
-
         /// <summary>
         /// 证券账户查询
         /// 实现2.53 证券账户查询
@@ -1666,14 +1665,102 @@ namespace Yushen.WebService.KessClient
 
             // 调用WebService获取返回值
             Response response = await this.invoke(request);
+            
+            // 返回结果
+            return response;
+        }
 
-            // 判断返回的操作结果是否异常
-            //if (response.flag != "1")
-            //{
-            //    string message = "操作失败：" + response.prompt;
-            //    logger.Error(message);
-            //    throw new Exception(message);
-            //}
+        /// <summary>
+        /// 客户诚信记录信息查询
+        /// 实现2.229 客户诚信记录信息查询
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="RECORD_SOURCE">诚信记录来源（非必传）DD[RECORD_SOURCE]</param>
+        /// <returns></returns>
+        async public Task<Response> qryCreditRecord(
+                string CUST_CODE, //客户代码（必传）
+                string RECORD_SOURCE = "" //诚信记录来源（非必传）DD[RECORD_SOURCE]
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "qryCreditRecord");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（必传）
+            request.setAttr("RECORD_SOURCE", RECORD_SOURCE); //诚信记录来源（非必传）DD[RECORD_SOURCE]
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+            
+            // 返回结果
+            return response;
+        }
+
+        /// <summary>
+        /// 受益人信息查询
+        /// 实现2.246 受益人信息查询
+        /// </summary>
+        /// <param name="USER_CODE">用户代码（必传）</param>
+        /// <param name="BENEFICIARY_NO">受益人编号（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> queryUserBeneficiaryInfo(
+                string USER_CODE, //用户代码（必传）
+                string BENEFICIARY_NO = "" //受益人编号（非必传）
+            )
+        {
+            // 前置条件判断
+            if (USER_CODE == "")
+            {
+                string message = "用户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "queryUserBeneficiaryInfo");
+            request.setAttr("USER_CODE", USER_CODE); //用户代码（必传）
+            request.setAttr("BENEFICIARY_NO", BENEFICIARY_NO); //受益人编号（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 返回结果
+            return response;
+        }
+
+        /// <summary>
+        /// 受益人信息查询
+        /// 实现2.246 受益人信息查询
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="CONTROLER_NUM">控制人编号（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> queryControllerInfo(
+                string CUST_CODE = "", //客户代码（必传）
+                string CONTROLER_NUM = "" //控制人编号（非必传）
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "queryControllerInfo");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（必传）
+            request.setAttr("CONTROLER_NUM", CONTROLER_NUM); //控制人编号（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
 
             // 返回结果
             return response;

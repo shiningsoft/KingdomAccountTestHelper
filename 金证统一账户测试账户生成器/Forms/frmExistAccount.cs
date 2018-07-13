@@ -896,7 +896,40 @@ namespace 金证统一账户测试账户生成器
                 nationality.SelectedValue = response.getValue("NATIONALITY");
                 sex.SelectedValue = response.getValue("sex");
                 education.SelectedValue = response.getValue("education");
-                
+
+                response = await kess.qryCreditRecord(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到不良诚信记录");
+                }
+                else
+                {
+                    resultForm.Append("找到" + response.length + "条不良诚信记录");
+                    dgv诚信记录.DataSource = response.DataSet.Tables["row"];
+                }
+
+                response = await kess.queryUserBeneficiaryInfo(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到受益人信息");
+                }
+                else
+                {
+                    resultForm.Append("找到" + response.length + "条受益人信息");
+                    dgv受益人.DataSource = response.DataSet.Tables["row"];
+                }
+
+                response = await kess.queryControllerInfo(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到控制人信息");
+                }
+                else
+                {
+                    resultForm.Append("找到" + response.length + "条控制人信息");
+                    dgv控制人.DataSource = response.DataSet.Tables["record"];
+                }
+
                 // 查询资金账号
                 response = await kess.listCuacct(tbxCustCode.Text.Trim());
                 resultForm.Append("客户号下找到" + response.length.ToString() + "个资金账号。");
@@ -946,40 +979,36 @@ namespace 金证统一账户测试账户生成器
                 else if (response.length > 0)
                 {
                     resultForm.Append("客户已经签署了" + response.length + "种协议：");
-                    resultForm.Append("协议类型\t对接远程系统\t生效日期\t生效截止日期\t更新日期\t资产账户\t交易板块\t交易账户");
-                    foreach (DataRow agreement in response.Rows)
-                    {
-                        //Dict.CUST_AGMT_TYPE cust_agmt_typeDict = new Dict.CUST_AGMT_TYPE();
-                        Dict.CustomDict cust_agmt_typeDict = new Dict.CustomDict("CUST_AGMT_TYPE");
-                        Dict.STKBD stkbdDict = new Dict.STKBD();
-                        resultForm.Append(
-                            cust_agmt_typeDict.getNameByValue(agreement["CUST_AGMT_TYPE"].ToString())
-                            + "\t" + agreement["REMOTE_SYS"].ToString()
-                            + "\t" + agreement["EFT_DATE"].ToString()
-                            + "\t" + agreement["EXP_DATE"].ToString()
-                            + "\t" + agreement["UPD_DATE"].ToString()
-                            + "\t" + agreement["CUACCT_CODE"].ToString()
-                            + "\t" + stkbdDict.getNameByValue(agreement["STKBD"].ToString())
-                            + "\t" + agreement["TRDACCT"].ToString()
-                            );
-                    }
+
+                    response.translate(new Dict.CustomDict("CUST_AGMT_TYPE"));
+                    response.translate(new Dict.STKBD());
+                    response.translate(new Dict.REMOTE_SYS());
+
+                    dgv已签署协议.DataSource = response.DataSet.Tables["row"];
                 }
 
                 // 查询一码通
-                resultForm.Append("正在发起中登查询一码通信息，请稍候。。。");
-                response = await kess.queryYMT(id_code.Text.Trim(), user_name.Text.Trim());
-                resultForm.Append("从中登找到该客户的" + response.length.ToString() + "个一码通账号。");
-                Dict.YMT_STATUS ymtStatusList = new Dict.YMT_STATUS();
-                foreach (DataRow row in response.Rows)
+                try
                 {
-                    string ymtStatus = ymtStatusList.getNameByValue(row["YMT_STATUS"].ToString());
+                    resultForm.Append("正在发起中登查询一码通信息，请稍候。。。");
+                    response = await kess.queryYMT(id_code.Text.Trim(), user_name.Text.Trim());
+                    resultForm.Append("从中登找到该客户的" + response.length.ToString() + "个一码通账号。");
+                    Dict.YMT_STATUS ymtStatusList = new Dict.YMT_STATUS();
+                    foreach (DataRow row in response.Rows)
+                    {
+                        string ymtStatus = ymtStatusList.getNameByValue(row["YMT_STATUS"].ToString());
 
-                    resultForm.Append(
-                        "一码通账号：" + response.getValue("YMT_CODE") +
-                        "，账户状态：" + ymtStatus
-                    );
+                        resultForm.Append(
+                            "一码通账号：" + response.getValue("YMT_CODE") +
+                            "，账户状态：" + ymtStatus
+                        );
+                    }
+                    tbxYMTCode.Text = response.getValue("YMT_CODE");
                 }
-                tbxYMTCode.Text = response.getValue("YMT_CODE");
+                catch (Exception ex)
+                {
+                    resultForm.Append(ex.Message);
+                }
 
                 // 查询系统内股东账号
                 response = await kess.listOfStkTrdAcct(tbxCustCode.Text.Trim());
