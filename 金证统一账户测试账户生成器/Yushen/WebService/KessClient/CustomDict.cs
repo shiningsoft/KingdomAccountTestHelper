@@ -64,6 +64,14 @@ namespace Yushen.WebService.KessClient.Dict
         {
             get
             {
+                if (selectable)
+                {
+                    DataRow dr = _dataTable.NewRow();
+                    dr["name"] = "请选择";
+                    dr["value"] = "";
+                    _dataTable.Rows.InsertAt(dr,0);
+                }
+
                 return _dataTable;
             }
         }
@@ -107,14 +115,6 @@ namespace Yushen.WebService.KessClient.Dict
             DataTable dt = new DataTable();
             dt.Columns.Add("name");
             dt.Columns.Add("value");
-
-            if (selectable)
-            {
-                DataRow dr = dt.NewRow();
-                dr["name"] = "请选择";
-                dr["value"] = "";
-                dt.Rows.Add(dr);
-            }
 
             foreach (XmlNode node in nodelist)
             {

@@ -927,7 +927,7 @@ namespace 金证统一账户测试账户生成器
                 }
 
                 // 风险测评
-                response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户, VERSION: "3.0");
+                response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户);
                 if (response.length == 0)
                 {
                     resultForm.Append("没有找到风险测评记录");
@@ -1076,11 +1076,11 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private async void queryRiskSurveyResult()
         {
+            btnQueryRiskSurveyResult.Enabled = false;
             try
             {
-                btnQueryRiskSurveyResult.Enabled = false;
                 // 风险测评
-                Response response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户, dtpBGN_DATE.Text, dtpEND_DATE.Text);
+                Response response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户, dtpBGN_DATE.Value.ToString("yyyyMMdd"), dtpEND_DATE.Value.ToString("yyyyMMdd"));
                 if (response.length == 0)
                 {
                     resultForm.Append("没有找到风险测评记录");
@@ -1090,13 +1090,14 @@ namespace 金证统一账户测试账户生成器
                 {
                     resultForm.Append("找到" + response.length + "条风险测评记录");
                     dgvRiskSurvey.DataSource = response.TranslatedRecord;
+                    dgvRiskSurvey.Sort(dgvRiskSurvey.Columns["ORDINAL"], System.ComponentModel.ListSortDirection.Descending);
                 }
-                btnQueryRiskSurveyResult.Enabled = true;
             }
             catch (Exception ex)
             {
                 resultForm.Append("查询风险测评结果失败：" + ex.Message);
             }
+            btnQueryRiskSurveyResult.Enabled = true;
         }
 
         /// <summary>
