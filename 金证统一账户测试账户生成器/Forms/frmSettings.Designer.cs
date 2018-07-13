@@ -61,8 +61,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbxCols = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.tbxVersion = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpNormal.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -234,8 +232,6 @@
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.tbxVersion);
-            this.tabPage2.Controls.Add(this.label15);
             this.tabPage2.Controls.Add(this.tbxSurveySN);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.btnResetRiskSettings);
@@ -383,23 +379,6 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "题目序列（Cols）：";
             // 
-            // tbxVersion
-            // 
-            this.tbxVersion.Location = new System.Drawing.Point(137, 202);
-            this.tbxVersion.Name = "tbxVersion";
-            this.tbxVersion.Size = new System.Drawing.Size(90, 21);
-            this.tbxVersion.TabIndex = 22;
-            this.tbxVersion.Text = "3.0";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(12, 205);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(119, 12);
-            this.label15.TabIndex = 23;
-            this.label15.Text = "版本号（Version）：";
-            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -456,7 +435,5 @@
         private System.Windows.Forms.Button btnResetRiskSettings;
         private System.Windows.Forms.TextBox tbxSurveySN;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox tbxVersion;
-        private System.Windows.Forms.Label label15;
     }
 }

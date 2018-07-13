@@ -575,7 +575,7 @@ namespace 金证统一账户测试账户生成器
                     throw new Exception(message);
             }
 
-            bool result = await kess.syncSurveyAns2Kbss(user, cols, cells);
+            bool result = await kess.syncSurveyAns2Kbss(tbxCustCode.Text.Trim(), Settings.Default.SURVEY_SN, cols, cells);
             if (result)
             {
                 Action action = () =>

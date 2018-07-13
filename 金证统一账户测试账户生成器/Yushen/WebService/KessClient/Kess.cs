@@ -314,14 +314,26 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 同步风险测评答案到统一账户系统
         /// </summary>
-        /// <param name="user">用户信息对象</param>
-        /// <param name="SURVEY_COLS">问题序号列字符串</param>
-        /// <param name="SURVEY_CELLS">答案序号列字符串</param>
+        /// <param name="USER_CODE">客户代码(必输)</param>
+        /// <param name="SURVEY_SN">调查表编码(必输)</param>
+        /// <param name="SURVEY_COLS">调查表栏目（复数）(以‘|’隔开)(必输)</param>
+        /// <param name="SURVEY_CELLS">调查表单元（复数）(以‘|’隔开)(必输)</param>
+        /// <param name="SURVEY_ANS_VALS">调查表作答分值（复数）(以’|’隔开)(非必输)</param>
+        /// <param name="ANS_STATUS">作答状态1-答题中2-答题结束</param>
+        /// <param name="VERSION">版本号</param>
         /// <returns></returns>
-        async public Task<bool> syncSurveyAns2Kbss(User user, string SURVEY_COLS, string SURVEY_CELLS, string SURVEY_SN = "1")
+        async public Task<bool> syncSurveyAns2Kbss(
+                string USER_CODE, //客户代码(必输)
+                string SURVEY_SN, //调查表编码(必输)
+                string SURVEY_COLS, //调查表栏目（复数）(以‘|’隔开)(必输)
+                string SURVEY_CELLS, //调查表单元（复数）(以‘|’隔开)(必输)
+                string SURVEY_ANS_VALS = "", //调查表作答分值（复数）(以’|’隔开)(非必输)
+                string ANS_STATUS = "", //作答状态1-答题中2-答题结束
+                string VERSION = "" //版本号
+            )
         {
             // 前置条件判断
-            if (user.cust_code == "")
+            if (USER_CODE == "")
             {
                 string message = "客户代码不能为空";
                 logger.Error(message);
@@ -330,10 +342,13 @@ namespace Yushen.WebService.KessClient
 
             // 初始化请求
             Request request = new Request(this.operatorId, "syncSurveyAns2Kbss");
-            request.setAttr("USER_CODE", user.cust_code);    // 客户名称
-            request.setAttr("SURVEY_SN", SURVEY_SN);
-            request.setAttr("SURVEY_COLS", SURVEY_COLS);
-            request.setAttr("SURVEY_CELLS", SURVEY_CELLS);
+            request.setAttr("USER_CODE", USER_CODE); //客户代码(必输)
+            request.setAttr("SURVEY_SN", SURVEY_SN); //调查表编码(必输)
+            request.setAttr("SURVEY_COLS", SURVEY_COLS); //调查表栏目（复数）(以‘|’隔开)(必输)
+            request.setAttr("SURVEY_CELLS", SURVEY_CELLS); //调查表单元（复数）(以‘|’隔开)(必输)
+            request.setAttr("SURVEY_ANS_VALS", SURVEY_ANS_VALS); //调查表作答分值（复数）(以’|’隔开)(非必输)
+            request.setAttr("ANS_STATUS", ANS_STATUS); //作答状态1-答题中2-答题结束
+            request.setAttr("VERSION", VERSION); //版本号
 
             // 调用WebService获取返回值
             Response response = await this.invoke(request);

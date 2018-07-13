@@ -218,8 +218,7 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
-                saveUserInfo();
-                await syncSurveyAns2Kbss(risk_level.SelectedValue.ToString());
+                await syncSurveyAns2Kbss();
                 queryRiskSurveyResult();
             }
             catch (Exception ex)
@@ -429,45 +428,6 @@ namespace 金证统一账户测试账户生成器
             }
             btnRegisterSZAStkAcct.Enabled = true;
         }
-        
-        /// <summary>
-        /// 一次性开立所有账户
-        /// </summary>
-        async private Task openAllAccount()
-        {
-            try
-            {
-                // 使用当前用户信息
-                saveUserInfo();
-
-                await openCustCode();
-
-                await openCuacctCode();
-
-                await mdfUserPassword();
-
-                await syncSurveyAns2Kbss(risk_level.SelectedValue.ToString());
-
-                await signBank();
-
-                await openYMTCode();
-
-                await openSHACode();
-
-                await registerSHACode();
-
-                await openSZACode();
-
-                await registerSZACode();
-
-                await bindSHAcct();
-
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append(ex.Message);
-            }
-        }
 
         /// <summary>
         /// 开客户号
@@ -560,12 +520,12 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 提交风险测评
         /// </summary>
-        private async Task syncSurveyAns2Kbss(string riskLevel)
+        private async Task syncSurveyAns2Kbss()
         {
             // 提交风险测评
             string cols = Settings.Default.Cols;
             string cells = "";
-            switch (riskLevel)
+            switch (risk_level.SelectedValue.ToString())
             {
                 case "A":
                     cells = Settings.Default.保守型;
@@ -589,7 +549,7 @@ namespace 金证统一账户测试账户生成器
                     throw new Exception(message);
             }
 
-            bool result = await kess.syncSurveyAns2Kbss(user, cols, cells);
+            bool result = await kess.syncSurveyAns2Kbss(tbxCustCode.Text.Trim(), Settings.Default.SURVEY_SN, cols, cells);
             if (result)
             {
                 Action action = () =>
