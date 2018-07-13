@@ -97,8 +97,8 @@ namespace 金证统一账户测试账户生成器
                 cbxOpenType.ValueMember = "value";
                 cbxOpenType.DataSource = openTypeList.DataTable;
 
-                //tbChannels.Text = Settings.Default.默认开通的操作渠道;
-                //tbCuacct_cls.Text = Settings.Default.默认开通的资产账户类别;
+                dtpBGN_DATE.Value = DateTime.Now.AddYears(-1).Date;
+                dtpEND_DATE.Value = DateTime.Now.Date;
 
                 if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
                 {
@@ -183,6 +183,7 @@ namespace 金证统一账户测试账户生成器
                 user.channels = tbChannels.Text.Trim();
 
                 user.cust_code = tbxCustCode.Text.Trim();
+                user.cuacct_code = tbxCuacct.Text.Trim();
                 user.ymt_code = tbxYMTCode.Text.Trim();
                 user.shacct = tbxSHAcct.Text.Trim();
                 user.szacct = tbxSZAcct.Text.Trim();
@@ -219,6 +220,7 @@ namespace 金证统一账户测试账户生成器
             {
                 saveUserInfo();
                 await syncSurveyAns2Kbss(risk_level.SelectedValue.ToString());
+                queryRiskSurveyResult();
             }
             catch (Exception ex)
             {
@@ -924,6 +926,17 @@ namespace 金证统一账户测试账户生成器
                     }
                 }
 
+                // 风险测评
+                response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户, VERSION: "3.0");
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到风险测评记录");
+                }
+                else
+                {
+                    resultForm.Append("风险测评级别为：" + response.getValue("RATING_LVL_NAME"));
+                }
+
                 queryCreditRecord();
 
                 queryUserBeneficiaryInfo();
@@ -931,6 +944,8 @@ namespace 金证统一账户测试账户生成器
                 queryControllerInfo();
 
                 queryCustAgreement();
+
+                queryRiskSurveyResult();
 
                 // 查询资金账号
                 response = await kess.listCuacct(tbxCustCode.Text.Trim());
@@ -1056,6 +1071,38 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
+        /// <summary>
+        /// 查询风险测评记录
+        /// </summary>
+        private async void queryRiskSurveyResult()
+        {
+            try
+            {
+                btnQueryRiskSurveyResult.Enabled = false;
+                // 风险测评
+                Response response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户, dtpBGN_DATE.Text, dtpEND_DATE.Text);
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到风险测评记录");
+                    dgvClear(ref dgvRiskSurvey);
+                }
+                else
+                {
+                    resultForm.Append("找到" + response.length + "条风险测评记录");
+                    dgvRiskSurvey.DataSource = response.TranslatedRecord;
+                }
+                btnQueryRiskSurveyResult.Enabled = true;
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("查询风险测评结果失败：" + ex.Message);
+            }
+        }
+
+        /// <summary>
+        /// 清空一个DataGridView的数据
+        /// </summary>
+        /// <param name="dgv"></param>
         private void dgvClear(ref DataGridView dgv)
         {
             if (dgv.DataSource!=null)
@@ -1230,6 +1277,7 @@ namespace 金证统一账户测试账户生成器
             dgvClear(ref dgv已签署协议);
             dgvClear(ref dgv控制人);
             dgvClear(ref dgv诚信记录);
+            dgvClear(ref dgvRiskSurvey);
         }
 
         private void tbxCustCode_KeyDown(object sender, KeyEventArgs e)
@@ -1341,6 +1389,11 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("增加控制人失败：" + ex.Message);
             }
+        }
+
+        private void btnQueryRiskSurveyResult_Click(object sender, EventArgs e)
+        {
+            queryRiskSurveyResult();
         }
     }
 }

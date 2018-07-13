@@ -214,5 +214,17 @@ namespace 金证统一账户测试账户生成器.Properties {
                 this["默认开通的银行类型"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3.0")]
+        public string 风险测评版本号 {
+            get {
+                return ((string)(this["风险测评版本号"]));
+            }
+            set {
+                this["风险测评版本号"] = value;
+            }
+        }
     }
 }

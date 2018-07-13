@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<dict>
+  <RATING_LVL name="1" code="低风险" />
+  <RATING_LVL name="2" code="中低风险" />
+  <RATING_LVL name="3" code="中风险" />
+  <RATING_LVL name="4" code="中高风险" />
+  <RATING_LVL name="5" code="高风险" />
+</dict>

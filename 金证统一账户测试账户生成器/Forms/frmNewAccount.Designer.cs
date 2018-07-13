@@ -122,6 +122,8 @@ namespace 金证统一账户测试账户生成器
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnAddBeneficirayInfo = new System.Windows.Forms.Button();
+            this.btnAddControllerInfo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -948,6 +950,8 @@ namespace 金证统一账户测试账户生成器
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnAddControllerInfo);
+            this.groupBox2.Controls.Add(this.btnAddBeneficirayInfo);
             this.groupBox2.Controls.Add(this.btnOpenUserCode);
             this.groupBox2.Controls.Add(this.btnOpenAccountByOneClick);
             this.groupBox2.Controls.Add(this.label3);
@@ -980,6 +984,26 @@ namespace 金证统一账户测试账户生成器
             this.groupBox2.TabIndex = 93;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "开通账户";
+            // 
+            // btnAddBeneficirayInfo
+            // 
+            this.btnAddBeneficirayInfo.Location = new System.Drawing.Point(294, 20);
+            this.btnAddBeneficirayInfo.Name = "btnAddBeneficirayInfo";
+            this.btnAddBeneficirayInfo.Size = new System.Drawing.Size(100, 23);
+            this.btnAddBeneficirayInfo.TabIndex = 81;
+            this.btnAddBeneficirayInfo.Text = "增加受益人";
+            this.btnAddBeneficirayInfo.UseVisualStyleBackColor = true;
+            this.btnAddBeneficirayInfo.Click += new System.EventHandler(this.btnAddBeneficirayInfo_Click);
+            // 
+            // btnAddControllerInfo
+            // 
+            this.btnAddControllerInfo.Location = new System.Drawing.Point(400, 20);
+            this.btnAddControllerInfo.Name = "btnAddControllerInfo";
+            this.btnAddControllerInfo.Size = new System.Drawing.Size(100, 23);
+            this.btnAddControllerInfo.TabIndex = 82;
+            this.btnAddControllerInfo.Text = "增加控制人";
+            this.btnAddControllerInfo.UseVisualStyleBackColor = true;
+            this.btnAddControllerInfo.Click += new System.EventHandler(this.btnAddControllerInfo_Click);
             // 
             // frmNewAccount
             // 
@@ -1087,6 +1111,8 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Button btnAddBeneficirayInfo;
+        private System.Windows.Forms.Button btnAddControllerInfo;
     }
 }
 

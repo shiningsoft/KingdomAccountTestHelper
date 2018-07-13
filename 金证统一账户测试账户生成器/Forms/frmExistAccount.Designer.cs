@@ -42,9 +42,7 @@ namespace 金证统一账户测试账户生成器
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExistAccount));
             this.cbxCubsbScOpenAcctOpType = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
-            this.tbCuacct_cls = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
-            this.tbChannels = new System.Windows.Forms.TextBox();
             this.label30 = new System.Windows.Forms.Label();
             this.cbxOccupation = new System.Windows.Forms.ComboBox();
             this.label29 = new System.Windows.Forms.Label();
@@ -173,6 +171,32 @@ namespace 金证统一账户测试账户生成器
             this.BENEFICIARY_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BENEFICIARY_ADDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BENEFICIARY_RELA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tpRiskSurveyResult = new System.Windows.Forms.TabPage();
+            this.dgvRiskSurvey = new System.Windows.Forms.DataGridView();
+            this.dtpBGN_DATE = new System.Windows.Forms.DateTimePicker();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label34 = new System.Windows.Forms.Label();
+            this.dtpEND_DATE = new System.Windows.Forms.DateTimePicker();
+            this.btnQueryRiskSurveyResult = new System.Windows.Forms.Button();
+            this.tbChannels = new System.Windows.Forms.TextBox();
+            this.tbCuacct_cls = new System.Windows.Forms.TextBox();
+            this.SURVEY_SN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.风险测评USER_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.USER_ROLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SURVEY_CLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SURVEY_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RATING_LVL_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NEXT_RATING_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SURVEY_SCORE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RATING_LVL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RATING_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.风险测评EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.VERSION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SURVEY_SYN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ORDINAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SURVEY_SCOPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SURVEY_CELLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SURVEY_COLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -187,6 +211,8 @@ namespace 金证统一账户测试账户生成器
             this.tp已签署协议.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).BeginInit();
             this.groupBox2.SuspendLayout();
+            this.tpRiskSurveyResult.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRiskSurvey)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCubsbScOpenAcctOpType
@@ -212,15 +238,6 @@ namespace 金证统一账户测试账户生成器
             this.label32.Text = "存管类型：";
             this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tbCuacct_cls
-            // 
-            this.tbCuacct_cls.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的资产账户类别", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbCuacct_cls.Location = new System.Drawing.Point(818, 22);
-            this.tbCuacct_cls.Name = "tbCuacct_cls";
-            this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
-            this.tbCuacct_cls.TabIndex = 21;
-            this.tbCuacct_cls.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的资产账户类别;
-            // 
             // label31
             // 
             this.label31.AutoSize = true;
@@ -229,15 +246,6 @@ namespace 金证统一账户测试账户生成器
             this.label31.Size = new System.Drawing.Size(89, 12);
             this.label31.TabIndex = 86;
             this.label31.Text = "资产账户类别：";
-            // 
-            // tbChannels
-            // 
-            this.tbChannels.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的操作渠道", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbChannels.Location = new System.Drawing.Point(814, 174);
-            this.tbChannels.Name = "tbChannels";
-            this.tbChannels.Size = new System.Drawing.Size(100, 21);
-            this.tbChannels.TabIndex = 22;
-            this.tbChannels.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的操作渠道;
             // 
             // label30
             // 
@@ -600,7 +608,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnSubmitRiskTest
             // 
-            this.btnSubmitRiskTest.Location = new System.Drawing.Point(566, 38);
+            this.btnSubmitRiskTest.Location = new System.Drawing.Point(829, 210);
             this.btnSubmitRiskTest.Name = "btnSubmitRiskTest";
             this.btnSubmitRiskTest.Size = new System.Drawing.Size(100, 23);
             this.btnSubmitRiskTest.TabIndex = 3;
@@ -632,7 +640,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.risk_level.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.risk_level.FormattingEnabled = true;
-            this.risk_level.Location = new System.Drawing.Point(460, 41);
+            this.risk_level.Location = new System.Drawing.Point(723, 213);
             this.risk_level.Name = "risk_level";
             this.risk_level.Size = new System.Drawing.Size(100, 20);
             this.risk_level.TabIndex = 10;
@@ -640,7 +648,7 @@ namespace 金证统一账户测试账户生成器
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(389, 44);
+            this.label16.Location = new System.Drawing.Point(652, 216);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(65, 12);
             this.label16.TabIndex = 38;
@@ -1001,6 +1009,7 @@ namespace 金证统一账户测试账户生成器
             // tc用户信息
             // 
             this.tc用户信息.Controls.Add(this.tp基本资料);
+            this.tc用户信息.Controls.Add(this.tpRiskSurveyResult);
             this.tc用户信息.Controls.Add(this.tp诚信记录);
             this.tc用户信息.Controls.Add(this.tp受益人);
             this.tc用户信息.Controls.Add(this.tp控制人);
@@ -1029,7 +1038,6 @@ namespace 金证统一账户测试账户生成器
             this.tp基本资料.Controls.Add(this.btnSetPassword);
             this.tp基本资料.Controls.Add(this.id_addr);
             this.tp基本资料.Controls.Add(this.label22);
-            this.tp基本资料.Controls.Add(this.btnSubmitRiskTest);
             this.tp基本资料.Controls.Add(this.label9);
             this.tp基本资料.Controls.Add(this.label14);
             this.tp基本资料.Controls.Add(this.btnQueryStockAccount);
@@ -1049,9 +1057,7 @@ namespace 金证统一账户测试账户生成器
             this.tp基本资料.Controls.Add(this.label6);
             this.tp基本资料.Controls.Add(this.sex);
             this.tp基本资料.Controls.Add(this.label13);
-            this.tp基本资料.Controls.Add(this.risk_level);
             this.tp基本资料.Controls.Add(this.label5);
-            this.tp基本资料.Controls.Add(this.label16);
             this.tp基本资料.Controls.Add(this.password);
             this.tp基本资料.Controls.Add(this.label2);
             this.tp基本资料.Controls.Add(this.label1);
@@ -1186,7 +1192,7 @@ namespace 金证统一账户测试账户生成器
             this.tp已签署协议.Padding = new System.Windows.Forms.Padding(3);
             this.tp已签署协议.Size = new System.Drawing.Size(935, 239);
             this.tp已签署协议.TabIndex = 4;
-            this.tp已签署协议.Text = "已签署协议";
+            this.tp已签署协议.Text = "签署协议";
             this.tp已签署协议.UseVisualStyleBackColor = true;
             // 
             // dgv已签署协议
@@ -1443,7 +1449,7 @@ namespace 金证统一账户测试账户生成器
             this.btnAddBeneficirayInfo.Name = "btnAddBeneficirayInfo";
             this.btnAddBeneficirayInfo.Size = new System.Drawing.Size(110, 23);
             this.btnAddBeneficirayInfo.TabIndex = 3;
-            this.btnAddBeneficirayInfo.Text = "增加本人为受益人";
+            this.btnAddBeneficirayInfo.Text = "增加受益人";
             this.btnAddBeneficirayInfo.UseVisualStyleBackColor = true;
             this.btnAddBeneficirayInfo.Click += new System.EventHandler(this.btnAddBeneficirayInfo_Click);
             // 
@@ -1453,7 +1459,7 @@ namespace 金证统一账户测试账户生成器
             this.btnAddControllerInfo.Name = "btnAddControllerInfo";
             this.btnAddControllerInfo.Size = new System.Drawing.Size(110, 23);
             this.btnAddControllerInfo.TabIndex = 4;
-            this.btnAddControllerInfo.Text = "增加本人为控制人";
+            this.btnAddControllerInfo.Text = "增加控制人";
             this.btnAddControllerInfo.UseVisualStyleBackColor = true;
             this.btnAddControllerInfo.Click += new System.EventHandler(this.btnAddControllerInfo_Click);
             // 
@@ -1537,6 +1543,264 @@ namespace 金证统一账户测试账户生成器
             this.BENEFICIARY_RELA.Name = "BENEFICIARY_RELA";
             this.BENEFICIARY_RELA.ReadOnly = true;
             // 
+            // tpRiskSurveyResult
+            // 
+            this.tpRiskSurveyResult.Controls.Add(this.btnQueryRiskSurveyResult);
+            this.tpRiskSurveyResult.Controls.Add(this.label34);
+            this.tpRiskSurveyResult.Controls.Add(this.dtpEND_DATE);
+            this.tpRiskSurveyResult.Controls.Add(this.label28);
+            this.tpRiskSurveyResult.Controls.Add(this.dtpBGN_DATE);
+            this.tpRiskSurveyResult.Controls.Add(this.btnSubmitRiskTest);
+            this.tpRiskSurveyResult.Controls.Add(this.label16);
+            this.tpRiskSurveyResult.Controls.Add(this.dgvRiskSurvey);
+            this.tpRiskSurveyResult.Controls.Add(this.risk_level);
+            this.tpRiskSurveyResult.Location = new System.Drawing.Point(4, 22);
+            this.tpRiskSurveyResult.Name = "tpRiskSurveyResult";
+            this.tpRiskSurveyResult.Padding = new System.Windows.Forms.Padding(3);
+            this.tpRiskSurveyResult.Size = new System.Drawing.Size(935, 239);
+            this.tpRiskSurveyResult.TabIndex = 5;
+            this.tpRiskSurveyResult.Text = "风险测评";
+            this.tpRiskSurveyResult.UseVisualStyleBackColor = true;
+            // 
+            // dgvRiskSurvey
+            // 
+            this.dgvRiskSurvey.AllowUserToAddRows = false;
+            this.dgvRiskSurvey.AllowUserToDeleteRows = false;
+            this.dgvRiskSurvey.AllowUserToResizeRows = false;
+            this.dgvRiskSurvey.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvRiskSurvey.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRiskSurvey.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.SURVEY_SN,
+            this.风险测评USER_CODE,
+            this.USER_ROLE,
+            this.SURVEY_CLS,
+            this.SURVEY_NAME,
+            this.RATING_LVL_NAME,
+            this.NEXT_RATING_DATE,
+            this.SURVEY_SCORE,
+            this.RATING_LVL,
+            this.RATING_DATE,
+            this.风险测评EXP_DATE,
+            this.VERSION,
+            this.SURVEY_SYN,
+            this.ORDINAL,
+            this.SURVEY_SCOPE,
+            this.SURVEY_CELLS,
+            this.SURVEY_COLS});
+            this.dgvRiskSurvey.Location = new System.Drawing.Point(6, 6);
+            this.dgvRiskSurvey.Name = "dgvRiskSurvey";
+            this.dgvRiskSurvey.ReadOnly = true;
+            this.dgvRiskSurvey.RowHeadersVisible = false;
+            this.dgvRiskSurvey.RowTemplate.Height = 23;
+            this.dgvRiskSurvey.Size = new System.Drawing.Size(923, 198);
+            this.dgvRiskSurvey.TabIndex = 3;
+            // 
+            // dtpBGN_DATE
+            // 
+            this.dtpBGN_DATE.CustomFormat = "yyyyMMdd";
+            this.dtpBGN_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBGN_DATE.Location = new System.Drawing.Point(78, 210);
+            this.dtpBGN_DATE.Name = "dtpBGN_DATE";
+            this.dtpBGN_DATE.Size = new System.Drawing.Size(101, 21);
+            this.dtpBGN_DATE.TabIndex = 5;
+            this.dtpBGN_DATE.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(7, 216);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(65, 12);
+            this.label28.TabIndex = 49;
+            this.label28.Text = "开始日期：";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(198, 216);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(65, 12);
+            this.label34.TabIndex = 51;
+            this.label34.Text = "结束日期：";
+            // 
+            // dtpEND_DATE
+            // 
+            this.dtpEND_DATE.CustomFormat = "yyyyMMdd";
+            this.dtpEND_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEND_DATE.Location = new System.Drawing.Point(269, 210);
+            this.dtpEND_DATE.Name = "dtpEND_DATE";
+            this.dtpEND_DATE.Size = new System.Drawing.Size(101, 21);
+            this.dtpEND_DATE.TabIndex = 50;
+            this.dtpEND_DATE.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            // 
+            // btnQueryRiskSurveyResult
+            // 
+            this.btnQueryRiskSurveyResult.Location = new System.Drawing.Point(376, 210);
+            this.btnQueryRiskSurveyResult.Name = "btnQueryRiskSurveyResult";
+            this.btnQueryRiskSurveyResult.Size = new System.Drawing.Size(77, 23);
+            this.btnQueryRiskSurveyResult.TabIndex = 52;
+            this.btnQueryRiskSurveyResult.Text = "刷新";
+            this.btnQueryRiskSurveyResult.UseVisualStyleBackColor = true;
+            this.btnQueryRiskSurveyResult.Click += new System.EventHandler(this.btnQueryRiskSurveyResult_Click);
+            // 
+            // tbChannels
+            // 
+            this.tbChannels.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的操作渠道", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.tbChannels.Location = new System.Drawing.Point(814, 174);
+            this.tbChannels.Name = "tbChannels";
+            this.tbChannels.Size = new System.Drawing.Size(100, 21);
+            this.tbChannels.TabIndex = 22;
+            this.tbChannels.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的操作渠道;
+            // 
+            // tbCuacct_cls
+            // 
+            this.tbCuacct_cls.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的资产账户类别", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.tbCuacct_cls.Location = new System.Drawing.Point(818, 22);
+            this.tbCuacct_cls.Name = "tbCuacct_cls";
+            this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
+            this.tbCuacct_cls.TabIndex = 21;
+            this.tbCuacct_cls.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的资产账户类别;
+            // 
+            // SURVEY_SN
+            // 
+            this.SURVEY_SN.DataPropertyName = "SURVEY_SN";
+            this.SURVEY_SN.HeaderText = "调查表编码";
+            this.SURVEY_SN.Name = "SURVEY_SN";
+            this.SURVEY_SN.ReadOnly = true;
+            this.SURVEY_SN.Visible = false;
+            // 
+            // 风险测评USER_CODE
+            // 
+            this.风险测评USER_CODE.DataPropertyName = "USER_CODE";
+            this.风险测评USER_CODE.HeaderText = "用户代码";
+            this.风险测评USER_CODE.Name = "风险测评USER_CODE";
+            this.风险测评USER_CODE.ReadOnly = true;
+            this.风险测评USER_CODE.Visible = false;
+            // 
+            // USER_ROLE
+            // 
+            this.USER_ROLE.DataPropertyName = "USER_ROLE";
+            this.USER_ROLE.HeaderText = "用户角色";
+            this.USER_ROLE.Name = "USER_ROLE";
+            this.USER_ROLE.ReadOnly = true;
+            this.USER_ROLE.Visible = false;
+            // 
+            // SURVEY_CLS
+            // 
+            this.SURVEY_CLS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SURVEY_CLS.DataPropertyName = "SURVEY_CLS";
+            this.SURVEY_CLS.HeaderText = "调查表类别";
+            this.SURVEY_CLS.MinimumWidth = 100;
+            this.SURVEY_CLS.Name = "SURVEY_CLS";
+            this.SURVEY_CLS.ReadOnly = true;
+            // 
+            // SURVEY_NAME
+            // 
+            this.SURVEY_NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.SURVEY_NAME.DataPropertyName = "SURVEY_NAME";
+            this.SURVEY_NAME.HeaderText = "调查表名称";
+            this.SURVEY_NAME.MinimumWidth = 100;
+            this.SURVEY_NAME.Name = "SURVEY_NAME";
+            this.SURVEY_NAME.ReadOnly = true;
+            // 
+            // RATING_LVL_NAME
+            // 
+            this.RATING_LVL_NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.RATING_LVL_NAME.DataPropertyName = "RATING_LVL_NAME";
+            this.RATING_LVL_NAME.HeaderText = "评级级别名称";
+            this.RATING_LVL_NAME.MinimumWidth = 120;
+            this.RATING_LVL_NAME.Name = "RATING_LVL_NAME";
+            this.RATING_LVL_NAME.ReadOnly = true;
+            this.RATING_LVL_NAME.Width = 120;
+            // 
+            // NEXT_RATING_DATE
+            // 
+            this.NEXT_RATING_DATE.DataPropertyName = "NEXT_RATING_DATE";
+            this.NEXT_RATING_DATE.HeaderText = "下次可测评日期";
+            this.NEXT_RATING_DATE.MinimumWidth = 140;
+            this.NEXT_RATING_DATE.Name = "NEXT_RATING_DATE";
+            this.NEXT_RATING_DATE.ReadOnly = true;
+            this.NEXT_RATING_DATE.Width = 140;
+            // 
+            // SURVEY_SCORE
+            // 
+            this.SURVEY_SCORE.DataPropertyName = "SURVEY_SCORE";
+            this.SURVEY_SCORE.HeaderText = "调查表分值";
+            this.SURVEY_SCORE.Name = "SURVEY_SCORE";
+            this.SURVEY_SCORE.ReadOnly = true;
+            // 
+            // RATING_LVL
+            // 
+            this.RATING_LVL.DataPropertyName = "RATING_LVL";
+            this.RATING_LVL.HeaderText = "评级级别";
+            this.RATING_LVL.Name = "RATING_LVL";
+            this.RATING_LVL.ReadOnly = true;
+            // 
+            // RATING_DATE
+            // 
+            this.RATING_DATE.DataPropertyName = "RATING_DATE";
+            this.RATING_DATE.HeaderText = "评级日期";
+            this.RATING_DATE.Name = "RATING_DATE";
+            this.RATING_DATE.ReadOnly = true;
+            // 
+            // 风险测评EXP_DATE
+            // 
+            this.风险测评EXP_DATE.DataPropertyName = "EXP_DATE";
+            this.风险测评EXP_DATE.HeaderText = "有效截止日期";
+            this.风险测评EXP_DATE.MinimumWidth = 120;
+            this.风险测评EXP_DATE.Name = "风险测评EXP_DATE";
+            this.风险测评EXP_DATE.ReadOnly = true;
+            this.风险测评EXP_DATE.Width = 120;
+            // 
+            // VERSION
+            // 
+            this.VERSION.DataPropertyName = "VERSION";
+            this.VERSION.HeaderText = "版本";
+            this.VERSION.Name = "VERSION";
+            this.VERSION.ReadOnly = true;
+            // 
+            // SURVEY_SYN
+            // 
+            this.SURVEY_SYN.DataPropertyName = "SURVEY_SYN";
+            this.SURVEY_SYN.HeaderText = "远程同步系统";
+            this.SURVEY_SYN.MinimumWidth = 120;
+            this.SURVEY_SYN.Name = "SURVEY_SYN";
+            this.SURVEY_SYN.ReadOnly = true;
+            this.SURVEY_SYN.Width = 120;
+            // 
+            // ORDINAL
+            // 
+            this.ORDINAL.DataPropertyName = "ORDINAL";
+            this.ORDINAL.HeaderText = "次序";
+            this.ORDINAL.Name = "ORDINAL";
+            this.ORDINAL.ReadOnly = true;
+            // 
+            // SURVEY_SCOPE
+            // 
+            this.SURVEY_SCOPE.DataPropertyName = "SURVEY_SCOPE";
+            this.SURVEY_SCOPE.HeaderText = "SURVEY_SCOPE";
+            this.SURVEY_SCOPE.Name = "SURVEY_SCOPE";
+            this.SURVEY_SCOPE.ReadOnly = true;
+            this.SURVEY_SCOPE.Visible = false;
+            // 
+            // SURVEY_CELLS
+            // 
+            this.SURVEY_CELLS.DataPropertyName = "SURVEY_CELLS";
+            this.SURVEY_CELLS.HeaderText = "答案串";
+            this.SURVEY_CELLS.Name = "SURVEY_CELLS";
+            this.SURVEY_CELLS.ReadOnly = true;
+            this.SURVEY_CELLS.Visible = false;
+            // 
+            // SURVEY_COLS
+            // 
+            this.SURVEY_COLS.DataPropertyName = "SURVEY_COLS";
+            this.SURVEY_COLS.HeaderText = "试题串";
+            this.SURVEY_COLS.Name = "SURVEY_COLS";
+            this.SURVEY_COLS.ReadOnly = true;
+            this.SURVEY_COLS.Visible = false;
+            // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -1575,6 +1839,9 @@ namespace 金证统一账户测试账户生成器
             ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.tpRiskSurveyResult.ResumeLayout(false);
+            this.tpRiskSurveyResult.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRiskSurvey)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1713,6 +1980,30 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_TEL;
         private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_ADDR;
         private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_RELA;
+        private System.Windows.Forms.TabPage tpRiskSurveyResult;
+        private System.Windows.Forms.DataGridView dgvRiskSurvey;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.DateTimePicker dtpBGN_DATE;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.DateTimePicker dtpEND_DATE;
+        private System.Windows.Forms.Button btnQueryRiskSurveyResult;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_SN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 风险测评USER_CODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn USER_ROLE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_CLS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RATING_LVL_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NEXT_RATING_DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_SCORE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RATING_LVL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RATING_DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 风险测评EXP_DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn VERSION;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_SYN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ORDINAL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_SCOPE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_CELLS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_COLS;
     }
 }
 

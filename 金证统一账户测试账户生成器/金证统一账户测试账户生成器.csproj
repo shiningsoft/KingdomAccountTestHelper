@@ -197,6 +197,7 @@
     <Content Include="CustomDict\BANK_CODE.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="CustomDict\RATING_LVL.xml" />
     <Content Include="logo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

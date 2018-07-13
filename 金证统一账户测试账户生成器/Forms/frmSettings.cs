@@ -23,6 +23,7 @@ namespace 金证统一账户测试账户生成器
             tbxPassword.Text = Settings.Default.操作员密码;
             tbxChannel.Text = Settings.Default.操作渠道;
             tbxZdTimeout.Text = Settings.Default.中登超时时间.ToString();
+            tbxVersion.Text = Settings.Default.风险测评版本号;
 
             // 加载风险测评信息
             tbxSurveySN.Text = Settings.Default.SURVEY_SN;
@@ -50,6 +51,8 @@ namespace 金证统一账户测试账户生成器
             Settings.Default.稳健型 = tbxCellsC.Text;
             Settings.Default.积极型 = tbxCellsD.Text;
             Settings.Default.激进型 = tbxCellsE.Text;
+            Settings.Default.风险测评版本号 = tbxVersion.Text;
+
             Settings.Default.Save();
 
             frmFramework.InitWebService();
@@ -71,6 +74,7 @@ namespace 金证统一账户测试账户生成器
             tbxCellsC.Text = RiskTest.cells_C;
             tbxCellsD.Text = RiskTest.cells_D;
             tbxCellsE.Text = RiskTest.cells_E;
+            tbxVersion.Text = "3.0";
         }
     }
 }

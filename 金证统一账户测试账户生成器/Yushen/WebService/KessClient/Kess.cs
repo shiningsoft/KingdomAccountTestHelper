@@ -2136,5 +2136,50 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return response;
         }
+
+        /// <summary>
+        /// 风险测评结果查询
+        /// 实现2.104 风险测评结果查询
+        /// </summary>
+        /// <param name="SURVEY_SN">调查表编码（必传）（默认为1）</param>
+        /// <param name="USER_CODE">用户代码（必传）</param>
+        /// <param name="USER_ROLE">用户角色（必传）</param>
+        /// <param name="BGN_DATE">开始日期（非必传）当需要查询某个时间段内，客户做的所有的风险测评时，送开始日期和结束日期。若取最新一条则无需送开始日期和结束日期。</param>
+        /// <param name="END_DATE">结束日期（非必传）</param>
+        /// <param name="VERSION">版本（非必传）</param>
+        /// <param name="REMARK">备注（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> queryRiskSurveyResult(
+                string SURVEY_SN, //调查表编码（必传）（默认为1）
+                string USER_CODE, //用户代码（必传）
+                string USER_ROLE, //用户角色（必传）
+                string BGN_DATE = "", //开始日期（非必传）当需要查询某个时间段内，客户做的所有的风险测评时，送开始日期和结束日期。若取最新一条则无需送开始日期和结束日期。
+                string END_DATE = "", //结束日期（非必传）
+                string VERSION = "" //版本（非必传）
+            )
+        {
+            // 前置条件判断
+            if (USER_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "queryRiskSurveyResult");
+            request.setAttr("SURVEY_SN", SURVEY_SN); //调查表编码（必传）（默认为1）
+            request.setAttr("USER_CODE", USER_CODE); //用户代码（必传）
+            request.setAttr("USER_ROLE", USER_ROLE); //用户角色（必传）
+            request.setAttr("BGN_DATE", BGN_DATE); //开始日期（非必传）当需要查询某个时间段内，客户做的所有的风险测评时，送开始日期和结束日期。若取最新一条则无需送开始日期和结束日期。
+            request.setAttr("END_DATE", END_DATE); //结束日期（非必传）
+            request.setAttr("VERSION", VERSION); //版本（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+            
+            // 返回结果
+            return response;
+        }
     }
 }

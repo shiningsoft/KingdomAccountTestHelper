@@ -415,16 +415,6 @@ namespace 金证统一账户测试账户生成器
         {
             btnOpenAccountByOneClick.Enabled = false;
 
-            await openAllAccount();
-
-            btnOpenAccountByOneClick.Enabled = true;
-        }
-
-        /// <summary>
-        /// 一次性开立所有账户
-        /// </summary>
-        async private Task openAllAccount()
-        {
             try
             {
                 // 使用当前用户信息
@@ -433,6 +423,10 @@ namespace 金证统一账户测试账户生成器
                 await openCustCode();
 
                 await openCuacctCode();
+
+                btnAddBeneficirayInfo.PerformClick();
+
+                btnAddControllerInfo.PerformClick();
 
                 await mdfUserPassword();
 
@@ -457,6 +451,8 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append(ex.Message);
             }
+
+            btnOpenAccountByOneClick.Enabled = true;
         }
 
         /// <summary>
@@ -977,6 +973,54 @@ namespace 金证统一账户测试账户生成器
             {
                 tbxBankAcctCode.Enabled = false;
             }
+        }
+
+        private async void btnAddBeneficirayInfo_Click(object sender, EventArgs e)
+        {
+            btnAddBeneficirayInfo.Enabled = false;
+            try
+            {
+                Response response = await kess.mdfUserBeneficiaryInfo(
+                    tbxCustCode.Text.Trim(),
+                    Dict.OPERATION_TYPE.增加密码,
+                    "1",
+                    user_name.Text.Trim(),
+                    Dict.ID_TYPE.身份证,
+                    id_code.Text.Trim(),
+                    id_exp_date.Text.Trim(),
+                    mobile_tel.Text.Trim()
+                );
+                resultForm.Append("增加受益人成功");
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("增加受益人失败：" + ex.Message);
+            }
+            btnAddBeneficirayInfo.Enabled = true;
+        }
+
+        private async void btnAddControllerInfo_Click(object sender, EventArgs e)
+        {
+            btnAddControllerInfo.Enabled = false;
+            try
+            {
+                Response response = await kess.mdfControlLerInfo(
+                    Dict.OPERATION_TYPE.增加密码,
+                    tbxCustCode.Text.Trim(),
+                    "1",
+                    id_code.Text.Trim(),
+                    user_name.Text.Trim(),
+                    Dict.ID_TYPE.身份证,
+                    id_exp_date.Text.Trim(),
+                    mobile_tel.Text.Trim()
+                );
+                resultForm.Append("增加控制人成功");
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("增加控制人失败：" + ex.Message);
+            }
+            btnAddControllerInfo.Enabled = true;
         }
     }
 }

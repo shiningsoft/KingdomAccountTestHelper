@@ -50,5 +50,8 @@
     <Setting Name="默认开通的银行类型" Type="System.String" Scope="User">
       <Value Profile="(Default)">5200</Value>
     </Setting>
+    <Setting Name="风险测评版本号" Type="System.String" Scope="User">
+      <Value Profile="(Default)">3.0</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
