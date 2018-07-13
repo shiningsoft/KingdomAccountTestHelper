@@ -97,6 +97,7 @@ namespace 金证统一账户测试账户生成器
                 if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
                 {
                     cbxOccupation.Enabled = false;
+                    cbxOccupation.Text = "";
                 }
                 else
                 {
@@ -882,6 +883,7 @@ namespace 金证统一账户测试账户生成器
                     tbxCustCode.Text = response.getValue("USER_CODE");
                 }
 
+                // 基本资料
                 response = await kess.queryCustBasicInfoList(tbxCustCode.Text.Trim());
                 user_name.Text = response.getValue("user_name");
                 id_code.Text = response.getValue("id_code");
@@ -897,6 +899,19 @@ namespace 金证统一账户测试账户生成器
                 sex.SelectedValue = response.getValue("sex");
                 education.SelectedValue = response.getValue("education");
 
+                // 职业信息
+                response = await kess.getUserOccuInfo(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到职业信息");
+                }
+                else
+                {
+                    occu_type.SelectedValue = response.getValue("OCCU_TYPE");
+                    cbxOccupation.Text = response.getValue("OCCUPATION");
+                }
+                
+                // 诚信记录
                 response = await kess.qryCreditRecord(tbxCustCode.Text.Trim());
                 if (response.length == 0)
                 {
@@ -908,6 +923,7 @@ namespace 金证统一账户测试账户生成器
                     dgv诚信记录.DataSource = response.TranslatedRecord;
                 }
 
+                // 受益人信息
                 response = await kess.queryUserBeneficiaryInfo(tbxCustCode.Text.Trim());
                 if (response.length == 0)
                 {
@@ -920,6 +936,7 @@ namespace 金证统一账户测试账户生成器
                     dgv受益人.DataSource = response.TranslatedRecord;
                 }
 
+                // 控制人信息
                 response = await kess.queryControllerInfo(tbxCustCode.Text.Trim());
                 if (response.length == 0)
                 {
@@ -981,7 +998,7 @@ namespace 金证统一账户测试账户生成器
                 }
                 else if (response.length > 0)
                 {
-                    resultForm.Append("客户已经签署了" + response.length + "种协议：");
+                    resultForm.Append("客户已经签署了" + response.length + "种协议。");
                     dgv已签署协议.DataSource = response.TranslatedRecord;
                 }
 
@@ -1159,6 +1176,55 @@ namespace 金证统一账户测试账户生成器
             if (e.KeyCode == Keys.Enter)
             {
                 btnQueryByUserCode.PerformClick();
+            }
+        }
+
+        async private void btnMdfCustBasicInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response response = await kess.mdfUserGenInfo(
+                    tbxCustCode.Text.Trim(),
+                    zip_code.Text.Trim(),
+                    address.Text.Trim(),
+                    EDUCATION: education.SelectedValue.ToString(),
+                    CITIZENSHIP: citizenship.SelectedValue.ToString(),
+                    MOBILE_TEL: mobile_tel.Text.Trim(),
+                    NATIONALITY: nationality.SelectedValue.ToString(),
+                    ID_ISS_AGCY: id_iss_agcy.Text.Trim(),
+                    ID_ADDR: id_addr.Text.Trim(),
+                    ID_BEG_DATE: id_beg_date.Text.Trim(),
+                    ID_EXP_DATE: id_exp_date.Text.Trim(),
+                    SEX: sex.SelectedValue.ToString()
+                );
+                resultForm.Append("修改客户基本信息成功");
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("修改客户资料失败：" + ex.Message);
+            }
+
+            try
+            {
+                await kess.mdfUserExtInfo(tbxCustCode.Text.Trim(),"1",OCCU_TYPE: occu_type.SelectedValue.ToString(),OCCUPATION:cbxOccupation.Text.Trim());
+                resultForm.Append("修改客户职业信息成功");
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("修改客户职业信息失败：" + ex.Message);
+            }
+        }
+
+        async private void btnMdfChannels_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response response = await kess.mdfFmsCustChannel(tbxCustCode.Text.Trim(), "", "", tbChannels.Text.Trim(), "测试工具修改");
+                resultForm.Append("修改客户操作渠道成功");
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("修改客户资料失败：" + ex.Message);
             }
         }
     }

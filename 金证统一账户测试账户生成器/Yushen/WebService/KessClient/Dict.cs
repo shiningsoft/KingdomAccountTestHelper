@@ -11,7 +11,22 @@ using System.Reflection;
 /// </summary>
 namespace Yushen.WebService.KessClient.Dict
 {
-
+    /// <summary>
+    /// 诚信记录来源
+    /// </summary>
+    class RECORD_SOURCE : Dict
+    {
+        public const string 证券经营机构内部诚信记录 = "00";
+        public const string 中国人民银行征信中心 = "01";
+        public const string 最高人民法院失信被执行人名单 = "02";
+        public const string 工商行政管理机构 = "03";
+        public const string 税务管理机构 = "04";
+        public const string 监管机构及自律组织 = "05";
+        public const string 恶意维权等不当行为信息 = "06";
+        public const string 其他 = "99";
+        public const string 无不良诚信记录 = "X1";
+    }
+    
     /// <summary>
     /// 认证类型
     /// </summary>

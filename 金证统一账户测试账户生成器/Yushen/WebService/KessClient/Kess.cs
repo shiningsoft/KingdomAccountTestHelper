@@ -1765,5 +1765,245 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return response;
         }
+
+        /// <summary>
+        /// 修改用户基本信息
+        /// 实现2.90 修改用户基本信息
+        /// </summary>
+        /// <param name="USER_CODE">客户代码（必传）</param>
+        /// <param name="ZIP_CODE">邮政编码（必传）</param>
+        /// <param name="ADDRESS">联系地址（必传）</param>
+        /// <param name="FISL_EMAIL">电子邮箱（非必传）同步到融资融券的时候必传</param>
+        /// <param name="EDUCATION">学历（非必传）</param>
+        /// <param name="TEL">联系电话（非必传）</param>
+        /// <param name="FAX">传真电话（非必传）</param>
+        /// <param name="EMAIL">电子邮箱（非必传）</param>
+        /// <param name="MOBILE_TEL">移动电话（非必传）</param>
+        /// <param name="CITIZENSHIP">国籍DD[CITIZENSHIP]（非必传）</param>
+        /// <param name="NATIONALITY">民族DD[NATIONALITY]（非必传）</param>
+        /// <param name="NATIVE_PLACE">籍贯（非必传）</param>
+        /// <param name="SEX">性别DD[SEX]（非必传）</param>
+        /// <param name="BIRTHDAY">出生日期（非必传）</param>
+        /// <param name="REMARK">备注信息（非必传）</param>
+        /// <param name="ID_ISS_AGCY">发证机关（非必传）</param>
+        /// <param name="ID_EXP_DATE">证件有效日期（非必传）</param>
+        /// <param name="ID_BEG_DATE">证件开始日期（非必传）</param>
+        /// <param name="ID_ZIP_CODE">证件编码（非必传）</param>
+        /// <param name="ID_ADDR">证件地址（非必传）</param>
+        /// <param name="MARRY">婚姻状态（非必传）</param>
+        /// <param name="AVOCATION">兴趣爱好（非必传）</param>
+        /// <param name="VEHICLE">交通工具DD[VEHICLE]（非必传）</param>
+        /// <param name="HOUSE_OWNER">住宅所有权状况（非必传）</param>
+        /// <param name="OFFICE_TEL">办工电话（非必传）</param>
+        /// <param name="WELL_TEL">小灵通电话（非必传）</param>
+        /// <param name="LINKTEL_ORDER">首选联系电话（非必传）</param>
+        /// <param name="OFFICE_ADDR">办工地址（非必传）</param>
+        /// <param name="CORP_ADDR">公司地址（非必传）</param>
+        /// <param name="LINKADDR_ORDER">首选联系地址（非必传）</param>
+        /// <param name="OPEN_SOURCE">开户来源（非必传）</param>
+        /// <param name="SUBSYS">同步子系统（非必传）</param>
+        /// <param name="RISK_FACTOR">风险要素（非必传）</param>
+        /// <param name="CRITERION">开户规范（非必传）</param>
+        /// <param name="CUST_CLS">客户分类（非必传）</param>
+        /// <param name="TEL_CHK_FLAG">手机校验标识（非必传）</param>
+        /// <param name="EMAIL_CHK_FLAG">邮箱校验标识（非必传）</param>
+        /// <param name="FIN_EDU_FLAG">金融相关专业学历校验标识（非必传）</param>
+        /// <param name="VOCATION">职业（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> mdfUserGenInfo(
+                string USER_CODE, //客户代码（必传）
+                string ZIP_CODE, //邮政编码（必传）
+                string ADDRESS, //联系地址（必传）
+                string FISL_EMAIL = "", //电子邮箱（非必传）同步到融资融券的时候必传
+                string EDUCATION = "", //学历（非必传）
+                string TEL = "", //联系电话（非必传）
+                string FAX = "", //传真电话（非必传）
+                string EMAIL = "", //电子邮箱（非必传）
+                string MOBILE_TEL = "", //移动电话（非必传）
+                string CITIZENSHIP = "", //国籍DD[CITIZENSHIP]（非必传）
+                string NATIONALITY = "", //民族DD[NATIONALITY]（非必传）
+                string NATIVE_PLACE = "", //籍贯（非必传）
+                string SEX = "", //性别DD[SEX]（非必传）
+                string BIRTHDAY = "", //出生日期（非必传）
+                string REMARK = "", //备注信息（非必传）
+                string ID_ISS_AGCY = "", //发证机关（非必传）
+                string ID_EXP_DATE = "", //证件有效日期（非必传）
+                string ID_BEG_DATE = "", //证件开始日期（非必传）
+                string ID_ZIP_CODE = "", //证件编码（非必传）
+                string ID_ADDR = "", //证件地址（非必传）
+                string MARRY = "", //婚姻状态（非必传）
+                string AVOCATION = "", //兴趣爱好（非必传）
+                string VEHICLE = "", //交通工具DD[VEHICLE]（非必传）
+                string HOUSE_OWNER = "", //住宅所有权状况（非必传）
+                string OFFICE_TEL = "", //办工电话（非必传）
+                string WELL_TEL = "", //小灵通电话（非必传）
+                string LINKTEL_ORDER = "", //首选联系电话（非必传）
+                string OFFICE_ADDR = "", //办工地址（非必传）
+                string CORP_ADDR = "", //公司地址（非必传）
+                string LINKADDR_ORDER = "", //首选联系地址（非必传）
+                string OPEN_SOURCE = "", //开户来源（非必传）
+                string SUBSYS = "", //同步子系统（非必传）
+                string RISK_FACTOR = "", //风险要素（非必传）
+                string CRITERION = "", //开户规范（非必传）
+                string CUST_CLS = "", //客户分类（非必传）
+                string TEL_CHK_FLAG = "", //手机校验标识（非必传）
+                string EMAIL_CHK_FLAG = "", //邮箱校验标识（非必传）
+                string FIN_EDU_FLAG = "", //金融相关专业学历校验标识（非必传）
+                string VOCATION = "" //职业（非必传）
+            )
+        {
+            // 前置条件判断
+            if (USER_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "mdfUserGenInfo");
+            request.setAttr("USER_CODE", USER_CODE); //客户代码（必传）
+            request.setAttr("ZIP_CODE", ZIP_CODE); //邮政编码（必传）
+            request.setAttr("ADDRESS", ADDRESS); //联系地址（必传）
+            request.setAttr("FISL_EMAIL", FISL_EMAIL); //电子邮箱（非必传）同步到融资融券的时候必传
+            request.setAttr("EDUCATION", EDUCATION); //学历（非必传）
+            request.setAttr("TEL", TEL); //联系电话（非必传）
+            request.setAttr("FAX", FAX); //传真电话（非必传）
+            request.setAttr("EMAIL", EMAIL); //电子邮箱（非必传）
+            request.setAttr("MOBILE_TEL", MOBILE_TEL); //移动电话（非必传）
+            request.setAttr("CITIZENSHIP", CITIZENSHIP); //国籍DD[CITIZENSHIP]（非必传）
+            request.setAttr("NATIONALITY", NATIONALITY); //民族DD[NATIONALITY]（非必传）
+            request.setAttr("NATIVE_PLACE", NATIVE_PLACE); //籍贯（非必传）
+            request.setAttr("SEX", SEX); //性别DD[SEX]（非必传）
+            request.setAttr("BIRTHDAY", BIRTHDAY); //出生日期（非必传）
+            request.setAttr("REMARK", REMARK); //备注信息（非必传）
+            request.setAttr("ID_ISS_AGCY", ID_ISS_AGCY); //发证机关（非必传）
+            request.setAttr("ID_EXP_DATE", ID_EXP_DATE); //证件有效日期（非必传）
+            request.setAttr("ID_BEG_DATE", ID_BEG_DATE); //证件开始日期（非必传）
+            request.setAttr("ID_ZIP_CODE", ID_ZIP_CODE); //证件编码（非必传）
+            request.setAttr("ID_ADDR", ID_ADDR); //证件地址（非必传）
+            request.setAttr("MARRY", MARRY); //婚姻状态（非必传）
+            request.setAttr("AVOCATION", AVOCATION); //兴趣爱好（非必传）
+            request.setAttr("VEHICLE", VEHICLE); //交通工具DD[VEHICLE]（非必传）
+            request.setAttr("HOUSE_OWNER", HOUSE_OWNER); //住宅所有权状况（非必传）
+            request.setAttr("OFFICE_TEL", OFFICE_TEL); //办工电话（非必传）
+            request.setAttr("WELL_TEL", WELL_TEL); //小灵通电话（非必传）
+            request.setAttr("LINKTEL_ORDER", LINKTEL_ORDER); //首选联系电话（非必传）
+            request.setAttr("OFFICE_ADDR", OFFICE_ADDR); //办工地址（非必传）
+            request.setAttr("CORP_ADDR", CORP_ADDR); //公司地址（非必传）
+            request.setAttr("LINKADDR_ORDER", LINKADDR_ORDER); //首选联系地址（非必传）
+            request.setAttr("OPEN_SOURCE", OPEN_SOURCE); //开户来源（非必传）
+            request.setAttr("SUBSYS", SUBSYS); //同步子系统（非必传）
+            request.setAttr("RISK_FACTOR", RISK_FACTOR); //风险要素（非必传）
+            request.setAttr("CRITERION", CRITERION); //开户规范（非必传）
+            request.setAttr("CUST_CLS", CUST_CLS); //客户分类（非必传）
+            request.setAttr("TEL_CHK_FLAG", TEL_CHK_FLAG); //手机校验标识（非必传）
+            request.setAttr("EMAIL_CHK_FLAG", EMAIL_CHK_FLAG); //邮箱校验标识（非必传）
+            request.setAttr("FIN_EDU_FLAG", FIN_EDU_FLAG); //金融相关专业学历校验标识（非必传）
+            request.setAttr("VOCATION", VOCATION); //职业（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
+
+        /// <summary>
+        /// 客户操作渠道修改
+        /// 实现2.278	客户操作渠道修改
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码（非必传）</param>
+        /// <param name="CUACCT_CODE">资产账户（非必传）</param>
+        /// <param name="SUBSYS">子系统（非必传）</param>
+        /// <param name="CHANNELS">操作渠道（必传）</param>
+        /// <param name="OP_REMARK">备注（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> mdfFmsCustChannel(
+                string CUST_CODE = "", //客户代码（非必传）
+                string CUACCT_CODE = "", //资产账户（非必传）
+                string SUBSYS = "", //子系统（非必传）
+                string CHANNELS = "", //操作渠道（必传）
+                string OP_REMARK = "" //备注（非必传）
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "mdfFmsCustChannel");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（非必传）
+            request.setAttr("CUACCT_CODE", CUACCT_CODE); //资产账户（非必传）
+            request.setAttr("SUBSYS", SUBSYS); //子系统（非必传）
+            request.setAttr("CHANNELS", CHANNELS); //操作渠道（必传）
+            request.setAttr("OP_REMARK", OP_REMARK); //备注（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
+
+        /// <summary>
+        /// 查询客户职业信息
+        /// 实现2.91	查询客户职业信息
+        /// </summary>
+        /// <param name="USER_CODE">客户代码（必传）</param>
+        /// <param name="OUTPUT_TYPE">出参类型（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> getUserOccuInfo(
+                string USER_CODE, //客户代码（必传）
+                string OUTPUT_TYPE = "" //出参类型（非必传）
+            )
+        {
+            // 前置条件判断
+            if (USER_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "getUserOccuInfo");
+            request.setAttr("USER_CODE", USER_CODE); //客户代码（必传）
+            request.setAttr("OUTPUT_TYPE", OUTPUT_TYPE); //出参类型（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
     }
 }
