@@ -905,29 +905,31 @@ namespace 金证统一账户测试账户生成器
                 else
                 {
                     resultForm.Append("找到" + response.length + "条不良诚信记录");
-                    dgv诚信记录.DataSource = response.DataSet.Tables["row"];
+                    dgv诚信记录.DataSource = response.TranslatedRecord;
                 }
 
                 response = await kess.queryUserBeneficiaryInfo(tbxCustCode.Text.Trim());
                 if (response.length == 0)
                 {
                     resultForm.Append("没有找到受益人信息");
+                    dgv受益人.DataSource = new DataTable();
                 }
                 else
                 {
                     resultForm.Append("找到" + response.length + "条受益人信息");
-                    dgv受益人.DataSource = response.DataSet.Tables["row"];
+                    dgv受益人.DataSource = response.TranslatedRecord;
                 }
 
                 response = await kess.queryControllerInfo(tbxCustCode.Text.Trim());
                 if (response.length == 0)
                 {
                     resultForm.Append("没有找到控制人信息");
+                    dgv控制人.DataSource = new DataTable();
                 }
                 else
                 {
                     resultForm.Append("找到" + response.length + "条控制人信息");
-                    dgv控制人.DataSource = response.DataSet.Tables["record"];
+                    dgv控制人.DataSource = response.TranslatedRecord;
                 }
 
                 // 查询资金账号
@@ -975,16 +977,12 @@ namespace 金证统一账户测试账户生成器
                 if (response.length == 0)
                 {
                     resultForm.Append(response.prompt);
+                    dgv已签署协议.DataSource = new DataTable();
                 }
                 else if (response.length > 0)
                 {
                     resultForm.Append("客户已经签署了" + response.length + "种协议：");
-
-                    response.translate(new Dict.CustomDict("CUST_AGMT_TYPE"));
-                    response.translate(new Dict.STKBD());
-                    response.translate(new Dict.REMOTE_SYS());
-
-                    dgv已签署协议.DataSource = response.DataSet.Tables["row"];
+                    dgv已签署协议.DataSource = response.TranslatedRecord;
                 }
 
                 // 查询一码通

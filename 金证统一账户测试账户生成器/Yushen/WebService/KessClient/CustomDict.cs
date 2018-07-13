@@ -10,6 +10,8 @@ namespace Yushen.WebService.KessClient.Dict
     /// </summary>
     class CustomDict : IDict
     {
+        public static string path = Path.Combine(Environment.CurrentDirectory, "CustomDict");
+
         private string _name;
 
         public string Name
@@ -94,7 +96,7 @@ namespace Yushen.WebService.KessClient.Dict
         private DataTable LoadXml(string DictName, string name = "name", string value = "code")
         {
             XmlDocument docXml = new XmlDocument();
-            string file = Environment.CurrentDirectory + "\\CustomDict\\" + DictName + ".xml";
+            string file = Path.Combine(path, DictName + ".xml");
             if (!File.Exists(file))
             {
                 throw new Exception("自定义数据字典文件" + file + "不存在！");

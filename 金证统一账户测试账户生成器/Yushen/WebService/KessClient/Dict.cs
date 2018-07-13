@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Reflection;
 
 /// <summary>
@@ -1370,6 +1372,30 @@ namespace Yushen.WebService.KessClient.Dict
     /// </summary>
     abstract class Dict : IDict
     {
+        /// <summary>
+        /// 指定是否添加“请选择”项
+        /// </summary>
+        private bool _selectable = false;
+
+        /// <summary>
+        /// 设置是否可选
+        /// 设置为true之后，DataTable的第一行将是“请选择”
+        /// </summary>
+        public bool selectable
+        {
+            set
+            {
+                this._selectable = value;
+            }
+            get
+            {
+                return this._selectable;
+            }
+        }
+
+        /// <summary>
+        /// 数据字典项的名称
+        /// </summary>
         public string Name
         {
             get
@@ -1411,24 +1437,6 @@ namespace Yushen.WebService.KessClient.Dict
             }
         }
 
-        private bool _selectable = false;
-
-        /// <summary>
-        /// 设置是否可选
-        /// 设置为true之后，DataTable的第一行将是“请选择”
-        /// </summary>
-        public bool selectable
-        {
-            set
-            {
-                this._selectable = value;
-            }
-            get
-            {
-                return this._selectable;
-            }
-        }
-
         /// <summary>
         /// 判断指定值是否在字典中存在
         /// 如果存在则返回索引值，否则返回-1。
@@ -1466,8 +1474,62 @@ namespace Yushen.WebService.KessClient.Dict
                     return FiledList[i].Name;
                 }
             }
-            //throw new Exception("找不到" + value + "对应的字典项");
             return value;
+        }
+
+        /// <summary>
+        /// 根据数据字典，把数据表转换为可读内容
+        /// </summary>
+        /// <param name="dt"></param>
+        /// <returns></returns>
+        public static DataTable Translate(DataTable dt)
+        {
+            // 根据自定义数据字典翻译
+            List<string> translatedColumns = new List<string>();
+            foreach (string file in Directory.GetFiles(CustomDict.path))
+            {
+                string filename = Path.GetFileNameWithoutExtension(file);
+                foreach (DataColumn column in dt.Columns)
+                {
+                    if (filename == column.ColumnName)
+                    {
+                        CustomDict dict = new CustomDict(filename);
+                        foreach (DataRow dr in dt.Rows)
+                        {
+                            dr[column.ColumnName] = dict.getNameByValue(dr[column.ColumnName].ToString());
+                        }
+                        translatedColumns.Add(column.ColumnName);
+                    }
+                }
+            }
+
+            // 根据程序内置数据字典翻译
+            List<Type> types = new List<Type>();
+            foreach (Type type in Assembly.GetExecutingAssembly().GetTypes())
+            {
+                if (type.Namespace == "Yushen.WebService.KessClient.Dict")
+                {
+                    if (translatedColumns.Contains(type.Name))
+                    {
+                        // 自定义数据字典转义过的字段不再进行转义
+                        continue;
+                    }
+                    foreach (DataColumn column in dt.Columns)
+                    {
+                        if (column.ColumnName == type.Name)
+                        {
+                            object dict = Activator.CreateInstance(type);
+                            MethodInfo method = type.GetMethod("getNameByValue");
+                            foreach (DataRow dr in dt.Rows)
+                            {
+                                dr[column.ColumnName] = method.Invoke(dict, new object[] { dr[column.ColumnName] });
+                            }
+                        }
+                    }
+                }
+            }
+
+            return dt;
         }
     }
 
@@ -1476,19 +1538,45 @@ namespace Yushen.WebService.KessClient.Dict
     /// </summary>
     public interface IDict
     {
+        /// <summary>
+        /// 数据字典名称
+        /// </summary>
         string Name
         {
             get;
         }
+
+        /// <summary>
+        /// 数据字典数据表
+        /// </summary>
         DataTable DataTable {
             get;
         }
+
+        /// <summary>
+        /// 设置是否可选
+        /// 设置为true之后，DataTable的第一行将是“请选择”
+        /// </summary>
         bool selectable
         {
             set;
             get;
         }
+
+        /// <summary>
+        /// 根据指定的字典值取得对应的字典项名称。
+        /// 找不到时返回原值。
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         string getNameByValue(string value);
+
+        /// <summary>
+        /// 判断指定值是否在字典中存在
+        /// 如果存在则返回索引值，否则返回-1。
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         int IndexOf(string value);
     }
 }

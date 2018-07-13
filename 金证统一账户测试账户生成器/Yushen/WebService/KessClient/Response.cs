@@ -15,6 +15,9 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         private XmlDocument xmlDoc = new XmlDocument();
 
+        /// <summary>
+        /// 数据集
+        /// </summary>
         private DataSet ds = new DataSet();
 
         /// <summary>
@@ -116,7 +119,7 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// WebService返回结果中record节点的InnerXml值
         /// </summary>
-        public string record
+        public string RecordInnerXml
         {
             get
             {
@@ -233,13 +236,35 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
+        /// 返回所有结果记录
+        /// </summary>
+        public DataTable Record
+        {
+            get
+            {
+                return DataSet.Tables["row"];
+            }
+        }
+        
+        /// <summary>
+        /// 返回翻译为可读格式的所有结果记录
+        /// </summary>
+        public DataTable TranslatedRecord
+        {
+            get
+            {
+                return Dict.Dict.Translate(DataSet.Tables["row"]);
+            }
+        }
+
+        /// <summary>
         /// Response的数据行集合
         /// </summary>
         public DataRowCollection Rows
         {
             get
             {
-                return DataSet.Tables["row"].Rows;
+                return Record.Rows;
             }
         }
 
@@ -252,6 +277,10 @@ namespace Yushen.WebService.KessClient
             this.xmlDoc.SelectSingleNode("/response/record").RemoveAll();
         }
 
+        /// <summary>
+        /// 根据传入的数据字典对象，翻译对应列的值
+        /// </summary>
+        /// <param name="dict"></param>
         public void translate(Dict.IDict dict)
         {
             string columnName = dict.GetType().Name;
