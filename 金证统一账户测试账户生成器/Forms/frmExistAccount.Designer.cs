@@ -169,6 +169,7 @@ namespace 金证统一账户测试账户生成器
             this.CONTROLER_EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CONTROLER_RELATION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.REMARK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnAddBeneficirayInfo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -255,7 +256,7 @@ namespace 金证统一账户测试账户生成器
             "自由职业者",
             "艺术品收藏、拍卖等从业人员",
             "娱乐场所、博彩、影视等从业人员"});
-            this.cbxOccupation.Location = new System.Drawing.Point(658, 97);
+            this.cbxOccupation.Location = new System.Drawing.Point(460, 201);
             this.cbxOccupation.Name = "cbxOccupation";
             this.cbxOccupation.Size = new System.Drawing.Size(136, 20);
             this.cbxOccupation.TabIndex = 20;
@@ -263,7 +264,7 @@ namespace 金证统一账户测试账户生成器
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(587, 99);
+            this.label29.Location = new System.Drawing.Point(389, 203);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(65, 12);
             this.label29.TabIndex = 82;
@@ -301,17 +302,17 @@ namespace 金证统一账户测试账户生成器
             // 
             // tbxCybSignDate
             // 
-            this.tbxCybSignDate.Location = new System.Drawing.Point(132, 24);
+            this.tbxCybSignDate.Location = new System.Drawing.Point(245, 24);
             this.tbxCybSignDate.Name = "tbxCybSignDate";
             this.tbxCybSignDate.ReadOnly = true;
             this.tbxCybSignDate.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxCybSignDate.Size = new System.Drawing.Size(390, 21);
+            this.tbxCybSignDate.Size = new System.Drawing.Size(277, 21);
             this.tbxCybSignDate.TabIndex = 16;
             // 
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(541, 148);
+            this.label25.Location = new System.Drawing.Point(162, 27);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(77, 12);
             this.label25.TabIndex = 80;
@@ -380,7 +381,7 @@ namespace 金证统一账户测试账户生成器
             this.btnQueryCYB.Name = "btnQueryCYB";
             this.btnQueryCYB.Size = new System.Drawing.Size(100, 23);
             this.btnQueryCYB.TabIndex = 15;
-            this.btnQueryCYB.Text = "创业板信息查询";
+            this.btnQueryCYB.Text = "中登信息查询";
             this.btnQueryCYB.UseVisualStyleBackColor = true;
             this.btnQueryCYB.Click += new System.EventHandler(this.btnQueryCYB_Click);
             // 
@@ -590,13 +591,13 @@ namespace 金证统一账户测试账户生成器
             this.btnBankSign.Name = "btnBankSign";
             this.btnBankSign.Size = new System.Drawing.Size(100, 23);
             this.btnBankSign.TabIndex = 4;
-            this.btnBankSign.Text = "三方存管预指定";
+            this.btnBankSign.Text = "签约三方存管";
             this.btnBankSign.UseVisualStyleBackColor = true;
             this.btnBankSign.Click += new System.EventHandler(this.btnBankSign_Click);
             // 
             // btnSubmitRiskTest
             // 
-            this.btnSubmitRiskTest.Location = new System.Drawing.Point(430, 20);
+            this.btnSubmitRiskTest.Location = new System.Drawing.Point(566, 38);
             this.btnSubmitRiskTest.Name = "btnSubmitRiskTest";
             this.btnSubmitRiskTest.Size = new System.Drawing.Size(100, 23);
             this.btnSubmitRiskTest.TabIndex = 3;
@@ -606,7 +607,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnSetPassword
             // 
-            this.btnSetPassword.Location = new System.Drawing.Point(324, 20);
+            this.btnSetPassword.Location = new System.Drawing.Point(566, 11);
             this.btnSetPassword.Name = "btnSetPassword";
             this.btnSetPassword.Size = new System.Drawing.Size(100, 23);
             this.btnSetPassword.TabIndex = 2;
@@ -940,16 +941,13 @@ namespace 金证统一账户测试账户生成器
             this.groupBox3.Controls.Add(this.btnBindSHAcct);
             this.groupBox3.Controls.Add(this.label19);
             this.groupBox3.Controls.Add(this.tbxYMTCode);
-            this.groupBox3.Controls.Add(this.label25);
             this.groupBox3.Controls.Add(this.tbxSHAcct);
             this.groupBox3.Controls.Add(this.btnRegisterSZAStkAcct);
             this.groupBox3.Controls.Add(this.btnOpenSZAStkAcct);
             this.groupBox3.Controls.Add(this.label18);
             this.groupBox3.Controls.Add(this.btnOpenYMT);
             this.groupBox3.Controls.Add(this.tbxCuacct);
-            this.groupBox3.Controls.Add(this.btnSetPassword);
             this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.btnSubmitRiskTest);
             this.groupBox3.Controls.Add(this.btnRegisterSHAStkAcct);
             this.groupBox3.Controls.Add(this.btnBankSign);
             this.groupBox3.Controls.Add(this.btnOpenSHAStkAcct);
@@ -1025,8 +1023,10 @@ namespace 金证统一账户测试账户生成器
             this.tp基本资料.Controls.Add(this.zip_code);
             this.tp基本资料.Controls.Add(this.id_iss_agcy);
             this.tp基本资料.Controls.Add(this.id_beg_date);
+            this.tp基本资料.Controls.Add(this.btnSetPassword);
             this.tp基本资料.Controls.Add(this.id_addr);
             this.tp基本资料.Controls.Add(this.label22);
+            this.tp基本资料.Controls.Add(this.btnSubmitRiskTest);
             this.tp基本资料.Controls.Add(this.label9);
             this.tp基本资料.Controls.Add(this.label14);
             this.tp基本资料.Controls.Add(this.btnQueryStockAccount);
@@ -1098,6 +1098,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tp受益人
             // 
+            this.tp受益人.Controls.Add(this.btnAddBeneficirayInfo);
             this.tp受益人.Controls.Add(this.dgv受益人);
             this.tp受益人.Location = new System.Drawing.Point(4, 22);
             this.tp受益人.Name = "tp受益人";
@@ -1129,7 +1130,7 @@ namespace 金证统一账户测试账户生成器
             this.dgv受益人.ReadOnly = true;
             this.dgv受益人.RowHeadersVisible = false;
             this.dgv受益人.RowTemplate.Height = 23;
-            this.dgv受益人.Size = new System.Drawing.Size(923, 227);
+            this.dgv受益人.Size = new System.Drawing.Size(923, 198);
             this.dgv受益人.TabIndex = 1;
             // 
             // tp控制人
@@ -1277,7 +1278,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnMdfCustBasicInfo
             // 
-            this.btnMdfCustBasicInfo.Location = new System.Drawing.Point(459, 200);
+            this.btnMdfCustBasicInfo.Location = new System.Drawing.Point(602, 198);
             this.btnMdfCustBasicInfo.Name = "btnMdfCustBasicInfo";
             this.btnMdfCustBasicInfo.Size = new System.Drawing.Size(100, 23);
             this.btnMdfCustBasicInfo.TabIndex = 94;
@@ -1294,6 +1295,7 @@ namespace 金证统一账户测试账户生成器
             this.groupBox2.Controls.Add(this.label24);
             this.groupBox2.Controls.Add(this.btnOpenCYB);
             this.groupBox2.Controls.Add(this.tbxCybSignDate);
+            this.groupBox2.Controls.Add(this.label25);
             this.groupBox2.Location = new System.Drawing.Point(42, 172);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(876, 84);
@@ -1313,6 +1315,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // 诚信记录CUST_CODE
             // 
+            this.诚信记录CUST_CODE.DataPropertyName = "CUST_CODE";
             this.诚信记录CUST_CODE.HeaderText = "客户代码";
             this.诚信记录CUST_CODE.Name = "诚信记录CUST_CODE";
             this.诚信记录CUST_CODE.ReadOnly = true;
@@ -1355,6 +1358,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // 受益人USER_CODE
             // 
+            this.受益人USER_CODE.DataPropertyName = "USER_CODE";
             this.受益人USER_CODE.HeaderText = "用户代码";
             this.受益人USER_CODE.Name = "受益人USER_CODE";
             this.受益人USER_CODE.ReadOnly = true;
@@ -1365,57 +1369,62 @@ namespace 金证统一账户测试账户生成器
             this.BENEFICIARY_NO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.BENEFICIARY_NO.DataPropertyName = "BENEFICIARY_NO";
             this.BENEFICIARY_NO.HeaderText = "受益人编号";
+            this.BENEFICIARY_NO.MinimumWidth = 100;
             this.BENEFICIARY_NO.Name = "BENEFICIARY_NO";
             this.BENEFICIARY_NO.ReadOnly = true;
-            this.BENEFICIARY_NO.Width = 90;
             // 
             // BENEFICIARY_NAME
             // 
             this.BENEFICIARY_NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.BENEFICIARY_NAME.DataPropertyName = "BENEFICIARY_NAME";
             this.BENEFICIARY_NAME.HeaderText = "受益人名称";
+            this.BENEFICIARY_NAME.MinimumWidth = 100;
             this.BENEFICIARY_NAME.Name = "BENEFICIARY_NAME";
             this.BENEFICIARY_NAME.ReadOnly = true;
-            this.BENEFICIARY_NAME.Width = 90;
             // 
             // BENEFICIARY_ID_TYPE
             // 
             this.BENEFICIARY_ID_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.BENEFICIARY_ID_TYPE.DataPropertyName = "BENEFICIARY_ID_TYPE";
             this.BENEFICIARY_ID_TYPE.HeaderText = "受益人证件类型";
+            this.BENEFICIARY_ID_TYPE.MinimumWidth = 120;
             this.BENEFICIARY_ID_TYPE.Name = "BENEFICIARY_ID_TYPE";
             this.BENEFICIARY_ID_TYPE.ReadOnly = true;
-            this.BENEFICIARY_ID_TYPE.Width = 83;
+            this.BENEFICIARY_ID_TYPE.Width = 120;
             // 
             // BENEFICIARY_ID
             // 
             this.BENEFICIARY_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.BENEFICIARY_ID.DataPropertyName = "BENEFICIARY_ID";
             this.BENEFICIARY_ID.HeaderText = "受益人证件号码";
+            this.BENEFICIARY_ID.MinimumWidth = 120;
             this.BENEFICIARY_ID.Name = "BENEFICIARY_ID";
             this.BENEFICIARY_ID.ReadOnly = true;
-            this.BENEFICIARY_ID.Width = 83;
+            this.BENEFICIARY_ID.Width = 120;
             // 
             // BENEFICIARY_EXP_DATE
             // 
             this.BENEFICIARY_EXP_DATE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.BENEFICIARY_EXP_DATE.DataPropertyName = "BENEFICIARY_EXP_DATE";
             this.BENEFICIARY_EXP_DATE.HeaderText = "受益人证件有效期";
+            this.BENEFICIARY_EXP_DATE.MinimumWidth = 140;
             this.BENEFICIARY_EXP_DATE.Name = "BENEFICIARY_EXP_DATE";
             this.BENEFICIARY_EXP_DATE.ReadOnly = true;
-            this.BENEFICIARY_EXP_DATE.Width = 83;
+            this.BENEFICIARY_EXP_DATE.Width = 140;
             // 
             // BENEFICIARY_TEL
             // 
             this.BENEFICIARY_TEL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.BENEFICIARY_TEL.DataPropertyName = "BENEFICIARY_TEL";
             this.BENEFICIARY_TEL.HeaderText = "受益人电话号码";
+            this.BENEFICIARY_TEL.MinimumWidth = 120;
             this.BENEFICIARY_TEL.Name = "BENEFICIARY_TEL";
             this.BENEFICIARY_TEL.ReadOnly = true;
-            this.BENEFICIARY_TEL.Width = 83;
+            this.BENEFICIARY_TEL.Width = 120;
             // 
             // 控制人CUST_CODE
             // 
+            this.控制人CUST_CODE.DataPropertyName = "CUST_CODE";
             this.控制人CUST_CODE.HeaderText = "客户代码";
             this.控制人CUST_CODE.Name = "控制人CUST_CODE";
             this.控制人CUST_CODE.ReadOnly = true;
@@ -1441,6 +1450,7 @@ namespace 金证统一账户测试账户生成器
             this.CONTROLER_ID_TYPE.HeaderText = "控制人证件类型";
             this.CONTROLER_ID_TYPE.Name = "CONTROLER_ID_TYPE";
             this.CONTROLER_ID_TYPE.ReadOnly = true;
+            this.CONTROLER_ID_TYPE.Width = 120;
             // 
             // CONTROLER_ID_NO
             // 
@@ -1448,6 +1458,7 @@ namespace 金证统一账户测试账户生成器
             this.CONTROLER_ID_NO.HeaderText = "控制人证件号码";
             this.CONTROLER_ID_NO.Name = "CONTROLER_ID_NO";
             this.CONTROLER_ID_NO.ReadOnly = true;
+            this.CONTROLER_ID_NO.Width = 120;
             // 
             // CONTROLER_ID_EXP_DATE
             // 
@@ -1455,6 +1466,7 @@ namespace 金证统一账户测试账户生成器
             this.CONTROLER_ID_EXP_DATE.HeaderText = "控制人证件有效期";
             this.CONTROLER_ID_EXP_DATE.Name = "CONTROLER_ID_EXP_DATE";
             this.CONTROLER_ID_EXP_DATE.ReadOnly = true;
+            this.CONTROLER_ID_EXP_DATE.Width = 140;
             // 
             // CONTROLER_TEL
             // 
@@ -1476,6 +1488,7 @@ namespace 金证统一账户测试账户生成器
             this.CONTROLER_RELATION.HeaderText = "控制人与本人关系";
             this.CONTROLER_RELATION.Name = "CONTROLER_RELATION";
             this.CONTROLER_RELATION.ReadOnly = true;
+            this.CONTROLER_RELATION.Width = 140;
             // 
             // REMARK
             // 
@@ -1483,6 +1496,16 @@ namespace 金证统一账户测试账户生成器
             this.REMARK.HeaderText = "备注";
             this.REMARK.Name = "REMARK";
             this.REMARK.ReadOnly = true;
+            // 
+            // btnAddBeneficirayInfo
+            // 
+            this.btnAddBeneficirayInfo.Location = new System.Drawing.Point(6, 210);
+            this.btnAddBeneficirayInfo.Name = "btnAddBeneficirayInfo";
+            this.btnAddBeneficirayInfo.Size = new System.Drawing.Size(110, 23);
+            this.btnAddBeneficirayInfo.TabIndex = 3;
+            this.btnAddBeneficirayInfo.Text = "增加本人为受益人";
+            this.btnAddBeneficirayInfo.UseVisualStyleBackColor = true;
+            this.btnAddBeneficirayInfo.Click += new System.EventHandler(this.btnAddBeneficirayInfo_Click);
             // 
             // frmExistAccount
             // 
@@ -1656,6 +1679,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTROLER_EMAIL;
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTROLER_RELATION;
         private System.Windows.Forms.DataGridViewTextBoxColumn REMARK;
+        private System.Windows.Forms.Button btnAddBeneficirayInfo;
     }
 }
 

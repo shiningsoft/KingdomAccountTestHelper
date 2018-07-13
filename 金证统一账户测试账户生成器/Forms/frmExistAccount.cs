@@ -908,46 +908,23 @@ namespace 金证统一账户测试账户生成器
                 else
                 {
                     occu_type.SelectedValue = response.getValue("OCCU_TYPE");
-                    cbxOccupation.Text = response.getValue("OCCUPATION");
-                }
-                
-                // 诚信记录
-                response = await kess.qryCreditRecord(tbxCustCode.Text.Trim());
-                if (response.length == 0)
-                {
-                    resultForm.Append("没有找到不良诚信记录");
-                }
-                else
-                {
-                    resultForm.Append("找到" + response.length + "条不良诚信记录");
-                    dgv诚信记录.DataSource = response.TranslatedRecord;
+                    if (response.Record.Columns.Contains("OCCUPATION"))
+                    {
+                        cbxOccupation.Text = response.getValue("OCCUPATION");
+                    }
+                    else
+                    {
+                        cbxOccupation.Text = "";
+                    }
                 }
 
-                // 受益人信息
-                response = await kess.queryUserBeneficiaryInfo(tbxCustCode.Text.Trim());
-                if (response.length == 0)
-                {
-                    resultForm.Append("没有找到受益人信息");
-                    dgv受益人.DataSource = new DataTable();
-                }
-                else
-                {
-                    resultForm.Append("找到" + response.length + "条受益人信息");
-                    dgv受益人.DataSource = response.TranslatedRecord;
-                }
+                queryCreditRecord();
 
-                // 控制人信息
-                response = await kess.queryControllerInfo(tbxCustCode.Text.Trim());
-                if (response.length == 0)
-                {
-                    resultForm.Append("没有找到控制人信息");
-                    dgv控制人.DataSource = new DataTable();
-                }
-                else
-                {
-                    resultForm.Append("找到" + response.length + "条控制人信息");
-                    dgv控制人.DataSource = response.TranslatedRecord;
-                }
+                queryUserBeneficiaryInfo();
+
+                queryControllerInfo();
+
+                queryCustAgreement();
 
                 // 查询资金账号
                 response = await kess.listCuacct(tbxCustCode.Text.Trim());
@@ -987,19 +964,6 @@ namespace 金证统一账户测试账户生成器
                 else if (response.length == 0)
                 {
                     throw new Exception("客户号下没有开立资金账号，停止处理。");
-                }
-
-                // 查询协议签署情况
-                response = await kess.queryCustAgreement(tbxCustCode.Text.Trim());
-                if (response.length == 0)
-                {
-                    resultForm.Append(response.prompt);
-                    dgv已签署协议.DataSource = new DataTable();
-                }
-                else if (response.length > 0)
-                {
-                    resultForm.Append("客户已经签署了" + response.length + "种协议。");
-                    dgv已签署协议.DataSource = response.TranslatedRecord;
                 }
 
                 // 查询一码通
@@ -1065,6 +1029,92 @@ namespace 金证统一账户测试账户生成器
             }
 
             btnQueryByUserCode.Enabled = true;
+        }
+
+        /// <summary>
+        /// 查询诚信记录
+        /// </summary>
+        private async void queryCreditRecord()
+        {
+            // 诚信记录
+            Response response = await kess.qryCreditRecord(tbxCustCode.Text.Trim());
+            if (response.length == 0)
+            {
+                resultForm.Append("没有找到不良诚信记录");
+                dgvClear(ref dgv诚信记录);
+            }
+            else
+            {
+                resultForm.Append("找到" + response.length + "条不良诚信记录");
+                dgv诚信记录.DataSource = response.TranslatedRecord;
+            }
+        }
+
+        private void dgvClear(ref DataGridView dgv)
+        {
+            if (dgv.DataSource!=null)
+            {
+                DataTable dt = (DataTable)dgv.DataSource;
+                dt.Rows.Clear();
+                dgv.DataSource = dt;
+            }
+        }
+
+        /// <summary>
+        /// 查询受益人信息
+        /// </summary>
+        private async void queryUserBeneficiaryInfo()
+        {
+            // 受益人信息
+            Response response = await kess.queryUserBeneficiaryInfo(tbxCustCode.Text.Trim());
+            if (response.length == 0)
+            {
+                resultForm.Append("没有找到受益人信息");
+                dgvClear(ref dgv受益人);
+            }
+            else
+            {
+                resultForm.Append("找到" + response.length + "条受益人信息");
+                dgv受益人.DataSource = response.TranslatedRecord;
+            }
+        }
+
+        /// <summary>
+        /// 查询控制人信息
+        /// </summary>
+        private async void queryControllerInfo()
+        {
+            // 控制人信息
+            Response response = await kess.queryControllerInfo(tbxCustCode.Text.Trim());
+            if (response.length == 0)
+            {
+                resultForm.Append("没有找到控制人信息");
+                dgvClear(ref dgv控制人);
+            }
+            else
+            {
+                resultForm.Append("找到" + response.length + "条控制人信息");
+                dgv控制人.DataSource = response.TranslatedRecord;
+            }
+        }
+
+        /// <summary>
+        /// 查询协议签署情况
+        /// </summary>
+        private async void queryCustAgreement()
+        {
+            // 查询协议签署情况
+            Response response = await kess.queryCustAgreement(tbxCustCode.Text.Trim());
+            if (response.length == 0)
+            {
+                resultForm.Append(response.prompt);
+                dgvClear(ref dgv已签署协议);
+            }
+            else if (response.length > 0)
+            {
+                resultForm.Append("客户已经签署了" + response.length + "种协议。");
+                dgv已签署协议.DataSource = response.TranslatedRecord;
+            }
         }
 
         private async void btnBindSHAcct_Click(object sender, EventArgs e)
@@ -1226,6 +1276,30 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("修改客户资料失败：" + ex.Message);
             }
+        }
+
+        private async void btnAddBeneficirayInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response response = await kess.mdfUserBeneficiaryInfo(
+                    tbxCustCode.Text.Trim(),
+                    Dict.OPERATION_TYPE.增加密码,
+                    "1",
+                    user_name.Text.Trim(),
+                    Dict.ID_TYPE.身份证,
+                    id_code.Text.Trim(),
+                    id_exp_date.Text.Trim(),
+                    mobile_tel.Text.Trim()
+                );
+                resultForm.Append("增加受益人成功");
+                queryUserBeneficiaryInfo();
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("增加受益人失败：" + ex.Message);
+            }
+
         }
     }
 }

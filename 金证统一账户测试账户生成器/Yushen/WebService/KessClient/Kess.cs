@@ -2005,5 +2005,69 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return response;
         }
+
+        /// <summary>
+        /// 受益人信息维护
+        /// 实现2.234	受益人信息维护
+        /// </summary>
+        /// <param name="USER_CODE">用户代码（必传）</param>
+        /// <param name="OPERATION_TYPE">操作类型（必传）</param>
+        /// <param name="BENEFICIARY_NO">受益人编号（必传）</param>
+        /// <param name="BENEFICIARY_NAME">受益人名称（非必传）</param>
+        /// <param name="BENEFICIARY_ID_TYPE">受益人证件类型（非必传）</param>
+        /// <param name="BENEFICIARY_ID">受益人证件号码（非必传）</param>
+        /// <param name="BENEFICIARY_EXP_DATE">受益人证件有效期（非必传）</param>
+        /// <param name="BENEFICIARY_TEL">受益人电话号码（非必传）</param>
+        /// <param name="BENEFICIARY_RELA">收益人关系（非必传）</param>
+        /// <param name="OP_REMARK">备注（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> mdfUserBeneficiaryInfo(
+                string USER_CODE, //用户代码（必传）
+                string OPERATION_TYPE, //操作类型（必传）
+                string BENEFICIARY_NO, //受益人编号（必传）
+                string BENEFICIARY_NAME = "", //受益人名称（非必传）
+                string BENEFICIARY_ID_TYPE = "", //受益人证件类型（非必传）
+                string BENEFICIARY_ID = "", //受益人证件号码（非必传）
+                string BENEFICIARY_EXP_DATE = "", //受益人证件有效期（非必传）
+                string BENEFICIARY_TEL = "", //受益人电话号码（非必传）
+                string BENEFICIARY_RELA = "", //收益人关系（非必传）
+                string OP_REMARK = "" //备注（非必传）
+            )
+        {
+            // 前置条件判断
+            if (USER_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "mdfUserBeneficiaryInfo");
+            request.setAttr("USER_CODE", USER_CODE); //用户代码（必传）
+            request.setAttr("OPERATION_TYPE", OPERATION_TYPE); //操作类型（必传）
+            request.setAttr("BENEFICIARY_NO", BENEFICIARY_NO); //受益人编号（必传）
+            request.setAttr("BENEFICIARY_NAME", BENEFICIARY_NAME); //受益人名称（非必传）
+            request.setAttr("BENEFICIARY_ID_TYPE", BENEFICIARY_ID_TYPE); //受益人证件类型（非必传）
+            request.setAttr("BENEFICIARY_ID", BENEFICIARY_ID); //受益人证件号码（非必传）
+            request.setAttr("BENEFICIARY_EXP_DATE", BENEFICIARY_EXP_DATE); //受益人证件有效期（非必传）
+            request.setAttr("BENEFICIARY_TEL", BENEFICIARY_TEL); //受益人电话号码（非必传）
+            request.setAttr("BENEFICIARY_RELA", BENEFICIARY_RELA); //收益人关系（非必传）
+            request.setAttr("OP_REMARK", OP_REMARK); //备注（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
     }
 }
