@@ -52,26 +52,31 @@ namespace 金证统一账户测试账户生成器
                 risk_level.DataSource = levelList.DataTable;
 
                 Dict.NATIONALITY nationalityList = new Dict.NATIONALITY();
+                nationalityList.selectable = true;
                 nationality.DisplayMember = "name";
                 nationality.ValueMember = "value";
                 nationality.DataSource = nationalityList.DataTable;
 
                 Dict.SEX sexList = new Dict.SEX();
+                sexList.selectable = true;
                 sex.DisplayMember = "name";
                 sex.ValueMember = "value";
                 sex.DataSource = sexList.DataTable;
 
                 Dict.OCCU_EXTYPE occuList = new Dict.OCCU_EXTYPE();
+                occuList.selectable = true;
                 occu_type.DisplayMember = "name";
                 occu_type.ValueMember = "value";
                 occu_type.DataSource = occuList.DataTable;
 
                 Dict.EDUCATION eduList = new Dict.EDUCATION();
+                eduList.selectable = true;
                 education.DisplayMember = "name";
                 education.ValueMember = "value";
                 education.DataSource = eduList.DataTable;
 
                 Dict.CITIZENSHIP citizenshipList = new Dict.CITIZENSHIP();
+                citizenshipList.selectable = true;
                 citizenship.DisplayMember = "name";
                 citizenship.ValueMember = "value";
                 citizenship.DataSource = citizenshipList.DataTable;
@@ -82,6 +87,7 @@ namespace 金证统一账户测试账户生成器
                 cbxCubsbScOpenAcctOpType.DataSource = cubsbScOpenAcctOpTypeList.DataTable;
 
                 Dict.CustomDict bankCodeList = new Dict.CustomDict("BANK_CODE");
+                bankCodeList.selectable = true;
                 bank_code.DisplayMember = "name";
                 bank_code.ValueMember = "value";
                 bank_code.DataSource = bankCodeList.DataTable;
@@ -1211,6 +1217,19 @@ namespace 金证统一账户测试账户生成器
             mobile_tel.Text = "";
             zip_code.Text = "";
             password.Text = "111111";
+
+            nationality.SelectedIndex = 0;
+            citizenship.SelectedIndex = 0;
+            risk_level.SelectedIndex = 0;
+            sex.SelectedIndex = 0;
+            occu_type.SelectedIndex = 0;
+            education.SelectedIndex = 0;
+            cbxOccupation.Text = "";
+
+            dgvClear(ref dgv受益人);
+            dgvClear(ref dgv已签署协议);
+            dgvClear(ref dgv控制人);
+            dgvClear(ref dgv诚信记录);
         }
 
         private void tbxCustCode_KeyDown(object sender, KeyEventArgs e)
@@ -1299,7 +1318,29 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("增加受益人失败：" + ex.Message);
             }
+        }
 
+        private async void btnAddControllerInfo_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Response response = await kess.mdfControlLerInfo(
+                    Dict.OPERATION_TYPE.增加密码,
+                    tbxCustCode.Text.Trim(),
+                    "1",
+                    id_code.Text.Trim(),
+                    user_name.Text.Trim(),
+                    Dict.ID_TYPE.身份证,
+                    id_exp_date.Text.Trim(),
+                    mobile_tel.Text.Trim()
+                );
+                resultForm.Append("增加控制人成功");
+                queryControllerInfo();
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("增加控制人失败：" + ex.Message);
+            }
         }
     }
 }

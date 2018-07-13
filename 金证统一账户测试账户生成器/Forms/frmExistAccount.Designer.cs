@@ -152,13 +152,6 @@ namespace 金证统一账户测试账户生成器
             this.RECORD_TXT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RECORD_SCORE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RECORD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.受益人USER_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_ID_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.控制人CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CONTROLER_NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CONTROLER_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -170,6 +163,16 @@ namespace 金证统一账户测试账户生成器
             this.CONTROLER_RELATION = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.REMARK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddBeneficirayInfo = new System.Windows.Forms.Button();
+            this.btnAddControllerInfo = new System.Windows.Forms.Button();
+            this.受益人USER_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_ID_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_ADDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_RELA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -1124,7 +1127,9 @@ namespace 金证统一账户测试账户生成器
             this.BENEFICIARY_ID_TYPE,
             this.BENEFICIARY_ID,
             this.BENEFICIARY_EXP_DATE,
-            this.BENEFICIARY_TEL});
+            this.BENEFICIARY_TEL,
+            this.BENEFICIARY_ADDR,
+            this.BENEFICIARY_RELA});
             this.dgv受益人.Location = new System.Drawing.Point(6, 6);
             this.dgv受益人.Name = "dgv受益人";
             this.dgv受益人.ReadOnly = true;
@@ -1135,6 +1140,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tp控制人
             // 
+            this.tp控制人.Controls.Add(this.btnAddControllerInfo);
             this.tp控制人.Controls.Add(this.dgv控制人);
             this.tp控制人.Location = new System.Drawing.Point(4, 22);
             this.tp控制人.Name = "tp控制人";
@@ -1169,7 +1175,7 @@ namespace 金证统一账户测试账户生成器
             this.dgv控制人.ReadOnly = true;
             this.dgv控制人.RowHeadersVisible = false;
             this.dgv控制人.RowTemplate.Height = 23;
-            this.dgv控制人.Size = new System.Drawing.Size(923, 227);
+            this.dgv控制人.Size = new System.Drawing.Size(923, 198);
             this.dgv控制人.TabIndex = 1;
             // 
             // tp已签署协议
@@ -1356,72 +1362,6 @@ namespace 金证统一账户测试账户生成器
             this.RECORD_DATE.Name = "RECORD_DATE";
             this.RECORD_DATE.ReadOnly = true;
             // 
-            // 受益人USER_CODE
-            // 
-            this.受益人USER_CODE.DataPropertyName = "USER_CODE";
-            this.受益人USER_CODE.HeaderText = "用户代码";
-            this.受益人USER_CODE.Name = "受益人USER_CODE";
-            this.受益人USER_CODE.ReadOnly = true;
-            this.受益人USER_CODE.Visible = false;
-            // 
-            // BENEFICIARY_NO
-            // 
-            this.BENEFICIARY_NO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_NO.DataPropertyName = "BENEFICIARY_NO";
-            this.BENEFICIARY_NO.HeaderText = "受益人编号";
-            this.BENEFICIARY_NO.MinimumWidth = 100;
-            this.BENEFICIARY_NO.Name = "BENEFICIARY_NO";
-            this.BENEFICIARY_NO.ReadOnly = true;
-            // 
-            // BENEFICIARY_NAME
-            // 
-            this.BENEFICIARY_NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_NAME.DataPropertyName = "BENEFICIARY_NAME";
-            this.BENEFICIARY_NAME.HeaderText = "受益人名称";
-            this.BENEFICIARY_NAME.MinimumWidth = 100;
-            this.BENEFICIARY_NAME.Name = "BENEFICIARY_NAME";
-            this.BENEFICIARY_NAME.ReadOnly = true;
-            // 
-            // BENEFICIARY_ID_TYPE
-            // 
-            this.BENEFICIARY_ID_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_ID_TYPE.DataPropertyName = "BENEFICIARY_ID_TYPE";
-            this.BENEFICIARY_ID_TYPE.HeaderText = "受益人证件类型";
-            this.BENEFICIARY_ID_TYPE.MinimumWidth = 120;
-            this.BENEFICIARY_ID_TYPE.Name = "BENEFICIARY_ID_TYPE";
-            this.BENEFICIARY_ID_TYPE.ReadOnly = true;
-            this.BENEFICIARY_ID_TYPE.Width = 120;
-            // 
-            // BENEFICIARY_ID
-            // 
-            this.BENEFICIARY_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_ID.DataPropertyName = "BENEFICIARY_ID";
-            this.BENEFICIARY_ID.HeaderText = "受益人证件号码";
-            this.BENEFICIARY_ID.MinimumWidth = 120;
-            this.BENEFICIARY_ID.Name = "BENEFICIARY_ID";
-            this.BENEFICIARY_ID.ReadOnly = true;
-            this.BENEFICIARY_ID.Width = 120;
-            // 
-            // BENEFICIARY_EXP_DATE
-            // 
-            this.BENEFICIARY_EXP_DATE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_EXP_DATE.DataPropertyName = "BENEFICIARY_EXP_DATE";
-            this.BENEFICIARY_EXP_DATE.HeaderText = "受益人证件有效期";
-            this.BENEFICIARY_EXP_DATE.MinimumWidth = 140;
-            this.BENEFICIARY_EXP_DATE.Name = "BENEFICIARY_EXP_DATE";
-            this.BENEFICIARY_EXP_DATE.ReadOnly = true;
-            this.BENEFICIARY_EXP_DATE.Width = 140;
-            // 
-            // BENEFICIARY_TEL
-            // 
-            this.BENEFICIARY_TEL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_TEL.DataPropertyName = "BENEFICIARY_TEL";
-            this.BENEFICIARY_TEL.HeaderText = "受益人电话号码";
-            this.BENEFICIARY_TEL.MinimumWidth = 120;
-            this.BENEFICIARY_TEL.Name = "BENEFICIARY_TEL";
-            this.BENEFICIARY_TEL.ReadOnly = true;
-            this.BENEFICIARY_TEL.Width = 120;
-            // 
             // 控制人CUST_CODE
             // 
             this.控制人CUST_CODE.DataPropertyName = "CUST_CODE";
@@ -1506,6 +1446,96 @@ namespace 金证统一账户测试账户生成器
             this.btnAddBeneficirayInfo.Text = "增加本人为受益人";
             this.btnAddBeneficirayInfo.UseVisualStyleBackColor = true;
             this.btnAddBeneficirayInfo.Click += new System.EventHandler(this.btnAddBeneficirayInfo_Click);
+            // 
+            // btnAddControllerInfo
+            // 
+            this.btnAddControllerInfo.Location = new System.Drawing.Point(6, 210);
+            this.btnAddControllerInfo.Name = "btnAddControllerInfo";
+            this.btnAddControllerInfo.Size = new System.Drawing.Size(110, 23);
+            this.btnAddControllerInfo.TabIndex = 4;
+            this.btnAddControllerInfo.Text = "增加本人为控制人";
+            this.btnAddControllerInfo.UseVisualStyleBackColor = true;
+            this.btnAddControllerInfo.Click += new System.EventHandler(this.btnAddControllerInfo_Click);
+            // 
+            // 受益人USER_CODE
+            // 
+            this.受益人USER_CODE.DataPropertyName = "USER_CODE";
+            this.受益人USER_CODE.HeaderText = "用户代码";
+            this.受益人USER_CODE.Name = "受益人USER_CODE";
+            this.受益人USER_CODE.ReadOnly = true;
+            this.受益人USER_CODE.Visible = false;
+            // 
+            // BENEFICIARY_NO
+            // 
+            this.BENEFICIARY_NO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_NO.DataPropertyName = "BENEFICIARY_NO";
+            this.BENEFICIARY_NO.HeaderText = "受益人编号";
+            this.BENEFICIARY_NO.MinimumWidth = 100;
+            this.BENEFICIARY_NO.Name = "BENEFICIARY_NO";
+            this.BENEFICIARY_NO.ReadOnly = true;
+            // 
+            // BENEFICIARY_NAME
+            // 
+            this.BENEFICIARY_NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_NAME.DataPropertyName = "BENEFICIARY_NAME";
+            this.BENEFICIARY_NAME.HeaderText = "受益人名称";
+            this.BENEFICIARY_NAME.MinimumWidth = 100;
+            this.BENEFICIARY_NAME.Name = "BENEFICIARY_NAME";
+            this.BENEFICIARY_NAME.ReadOnly = true;
+            // 
+            // BENEFICIARY_ID_TYPE
+            // 
+            this.BENEFICIARY_ID_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_ID_TYPE.DataPropertyName = "BENEFICIARY_ID_TYPE";
+            this.BENEFICIARY_ID_TYPE.HeaderText = "受益人证件类型";
+            this.BENEFICIARY_ID_TYPE.MinimumWidth = 120;
+            this.BENEFICIARY_ID_TYPE.Name = "BENEFICIARY_ID_TYPE";
+            this.BENEFICIARY_ID_TYPE.ReadOnly = true;
+            this.BENEFICIARY_ID_TYPE.Width = 120;
+            // 
+            // BENEFICIARY_ID
+            // 
+            this.BENEFICIARY_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_ID.DataPropertyName = "BENEFICIARY_ID";
+            this.BENEFICIARY_ID.HeaderText = "受益人证件号码";
+            this.BENEFICIARY_ID.MinimumWidth = 120;
+            this.BENEFICIARY_ID.Name = "BENEFICIARY_ID";
+            this.BENEFICIARY_ID.ReadOnly = true;
+            this.BENEFICIARY_ID.Width = 120;
+            // 
+            // BENEFICIARY_EXP_DATE
+            // 
+            this.BENEFICIARY_EXP_DATE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_EXP_DATE.DataPropertyName = "BENEFICIARY_EXP_DATE";
+            this.BENEFICIARY_EXP_DATE.HeaderText = "受益人证件有效期";
+            this.BENEFICIARY_EXP_DATE.MinimumWidth = 140;
+            this.BENEFICIARY_EXP_DATE.Name = "BENEFICIARY_EXP_DATE";
+            this.BENEFICIARY_EXP_DATE.ReadOnly = true;
+            this.BENEFICIARY_EXP_DATE.Width = 140;
+            // 
+            // BENEFICIARY_TEL
+            // 
+            this.BENEFICIARY_TEL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_TEL.DataPropertyName = "BENEFICIARY_TEL";
+            this.BENEFICIARY_TEL.HeaderText = "受益人电话号码";
+            this.BENEFICIARY_TEL.MinimumWidth = 120;
+            this.BENEFICIARY_TEL.Name = "BENEFICIARY_TEL";
+            this.BENEFICIARY_TEL.ReadOnly = true;
+            this.BENEFICIARY_TEL.Width = 120;
+            // 
+            // BENEFICIARY_ADDR
+            // 
+            this.BENEFICIARY_ADDR.DataPropertyName = "BENEFICIARY_ADDR";
+            this.BENEFICIARY_ADDR.HeaderText = "受益人地址";
+            this.BENEFICIARY_ADDR.Name = "BENEFICIARY_ADDR";
+            this.BENEFICIARY_ADDR.ReadOnly = true;
+            // 
+            // BENEFICIARY_RELA
+            // 
+            this.BENEFICIARY_RELA.DataPropertyName = "BENEFICIARY_RELA";
+            this.BENEFICIARY_RELA.HeaderText = "与股东关系";
+            this.BENEFICIARY_RELA.Name = "BENEFICIARY_RELA";
+            this.BENEFICIARY_RELA.ReadOnly = true;
             // 
             // frmExistAccount
             // 
@@ -1662,13 +1692,6 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.DataGridViewTextBoxColumn RECORD_TXT;
         private System.Windows.Forms.DataGridViewTextBoxColumn RECORD_SCORE;
         private System.Windows.Forms.DataGridViewTextBoxColumn RECORD_DATE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 受益人USER_CODE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_NO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_NAME;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_ID_TYPE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_EXP_DATE;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_TEL;
         private System.Windows.Forms.DataGridViewTextBoxColumn 控制人CUST_CODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTROLER_NUM;
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTROLER_NAME;
@@ -1680,6 +1703,16 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.DataGridViewTextBoxColumn CONTROLER_RELATION;
         private System.Windows.Forms.DataGridViewTextBoxColumn REMARK;
         private System.Windows.Forms.Button btnAddBeneficirayInfo;
+        private System.Windows.Forms.Button btnAddControllerInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 受益人USER_CODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_ID_TYPE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_EXP_DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_TEL;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_ADDR;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BENEFICIARY_RELA;
     }
 }
 

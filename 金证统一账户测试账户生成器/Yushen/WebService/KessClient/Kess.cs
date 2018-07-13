@@ -2069,5 +2069,72 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return response;
         }
+
+        /// <summary>
+        /// 控制人信息维护
+        /// 实现2.241	控制人信息维护
+        /// </summary>
+        /// <param name="OPER_TYPE">操作类型（必传）</param>
+        /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="CONTROLER_NUM">控制人编码（非必传）</param>
+        /// <param name="CONTROLER_NAME">控制人姓名（非必传）</param>
+        /// <param name="CONTROLER_ID_TYPE">控制人证件类型（非必传）</param>
+        /// <param name="CONTROLER_ID_NO">控制人证件号码（必传）</param>
+        /// <param name="CONTROLER_ID_EXP_DATE">控制人证件有效期（非必传）</param>
+        /// <param name="CONTROLER_TEL">控制人电话（非必传）</param>
+        /// <param name="CONTROLER_EMAIL">控制人邮箱（非必传）</param>
+        /// <param name="CONTROLER_RELATION">控制人与本人关系（非必传）</param>
+        /// <param name="REMARK">备注（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> mdfControlLerInfo(
+                string OPER_TYPE, //操作类型（必传）
+                string CUST_CODE, //客户代码（必传）
+                string CONTROLER_NUM, //控制人编码（非必传）
+                string CONTROLER_ID_NO, //控制人证件号码（必传）
+                string CONTROLER_NAME = "", //控制人姓名（非必传）
+                string CONTROLER_ID_TYPE = "", //控制人证件类型（非必传）
+                string CONTROLER_ID_EXP_DATE = "", //控制人证件有效期（非必传）
+                string CONTROLER_TEL = "", //控制人电话（非必传）
+                string CONTROLER_EMAIL = "", //控制人邮箱（非必传）
+                string CONTROLER_RELATION = "", //控制人与本人关系（非必传）
+                string REMARK = "" //备注（非必传）
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "mdfControlLerInfo");
+            request.setAttr("OPER_TYPE", OPER_TYPE); //操作类型（必传）
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（必传）
+            request.setAttr("CONTROLER_NUM", CONTROLER_NUM); //控制人编码（非必传）
+            request.setAttr("CONTROLER_NAME", CONTROLER_NAME); //控制人姓名（非必传）
+            request.setAttr("CONTROLER_ID_TYPE", CONTROLER_ID_TYPE); //控制人证件类型（非必传）
+            request.setAttr("CONTROLER_ID_NO", CONTROLER_ID_NO); //控制人证件号码（必传）
+            request.setAttr("CONTROLER_ID_EXP_DATE", CONTROLER_ID_EXP_DATE); //控制人证件有效期（非必传）
+            request.setAttr("CONTROLER_TEL", CONTROLER_TEL); //控制人电话（非必传）
+            request.setAttr("CONTROLER_EMAIL", CONTROLER_EMAIL); //控制人邮箱（非必传）
+            request.setAttr("CONTROLER_RELATION", CONTROLER_RELATION); //控制人与本人关系（非必传）
+            request.setAttr("REMARK", REMARK); //备注（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
     }
 }
