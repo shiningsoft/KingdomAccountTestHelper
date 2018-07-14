@@ -119,67 +119,23 @@ namespace 金证统一账户测试账户生成器
             this.tbxCuacctCondition = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbCuacct_cls = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tbxFislCuacct = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.tc用户信息 = new System.Windows.Forms.TabControl();
             this.tp基本资料 = new System.Windows.Forms.TabPage();
-            this.tp诚信记录 = new System.Windows.Forms.TabPage();
-            this.dgv诚信记录 = new System.Windows.Forms.DataGridView();
-            this.tp受益人 = new System.Windows.Forms.TabPage();
-            this.dgv受益人 = new System.Windows.Forms.DataGridView();
-            this.tp控制人 = new System.Windows.Forms.TabPage();
-            this.dgv控制人 = new System.Windows.Forms.DataGridView();
-            this.tp已签署协议 = new System.Windows.Forms.TabPage();
-            this.dgv已签署协议 = new System.Windows.Forms.DataGridView();
-            this.CUST_AGMT_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.REMOTE_SYS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EFT_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.UPD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUACCT_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.STKBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TRDACCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnMdfCustBasicInfo = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnMdfChannels = new System.Windows.Forms.Button();
-            this.诚信记录CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RECORD_NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RECORD_SOURCE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RECORD_TXT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RECORD_SCORE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RECORD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.控制人CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CONTROLER_NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CONTROLER_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CONTROLER_ID_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CONTROLER_ID_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CONTROLER_ID_EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CONTROLER_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CONTROLER_EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CONTROLER_RELATION = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.REMARK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAddBeneficirayInfo = new System.Windows.Forms.Button();
-            this.btnAddControllerInfo = new System.Windows.Forms.Button();
-            this.受益人USER_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_ID_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_ADDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BENEFICIARY_RELA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnMdfCustBasicInfo = new System.Windows.Forms.Button();
+            this.tbChannels = new System.Windows.Forms.TextBox();
             this.tpRiskSurveyResult = new System.Windows.Forms.TabPage();
-            this.dgvRiskSurvey = new System.Windows.Forms.DataGridView();
-            this.dtpBGN_DATE = new System.Windows.Forms.DateTimePicker();
-            this.label28 = new System.Windows.Forms.Label();
+            this.btnQueryRiskSurveyResult = new System.Windows.Forms.Button();
             this.label34 = new System.Windows.Forms.Label();
             this.dtpEND_DATE = new System.Windows.Forms.DateTimePicker();
-            this.btnQueryRiskSurveyResult = new System.Windows.Forms.Button();
-            this.tbChannels = new System.Windows.Forms.TextBox();
-            this.tbCuacct_cls = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.dtpBGN_DATE = new System.Windows.Forms.DateTimePicker();
+            this.dgvRiskSurvey = new System.Windows.Forms.DataGridView();
             this.SURVEY_SN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.风险测评USER_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.USER_ROLE = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -197,11 +153,58 @@ namespace 金证统一账户测试账户生成器
             this.SURVEY_SCOPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SURVEY_CELLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SURVEY_COLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tp诚信记录 = new System.Windows.Forms.TabPage();
+            this.dgv诚信记录 = new System.Windows.Forms.DataGridView();
+            this.诚信记录CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RECORD_NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RECORD_SOURCE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RECORD_TXT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RECORD_SCORE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RECORD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tp受益人 = new System.Windows.Forms.TabPage();
+            this.btnAddBeneficirayInfo = new System.Windows.Forms.Button();
+            this.dgv受益人 = new System.Windows.Forms.DataGridView();
+            this.受益人USER_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_ID_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_ADDR = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BENEFICIARY_RELA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tp控制人 = new System.Windows.Forms.TabPage();
+            this.btnAddControllerInfo = new System.Windows.Forms.Button();
+            this.dgv控制人 = new System.Windows.Forms.DataGridView();
+            this.控制人CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CONTROLER_NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CONTROLER_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CONTROLER_ID_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CONTROLER_ID_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CONTROLER_ID_EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CONTROLER_TEL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CONTROLER_EMAIL = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CONTROLER_RELATION = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.REMARK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tp已签署协议 = new System.Windows.Forms.TabPage();
+            this.dgv已签署协议 = new System.Windows.Forms.DataGridView();
+            this.CUST_AGMT_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.REMOTE_SYS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EFT_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EXP_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UPD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUACCT_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.STKBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRDACCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.tc用户信息.SuspendLayout();
             this.tp基本资料.SuspendLayout();
+            this.tpRiskSurveyResult.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRiskSurvey)).BeginInit();
             this.tp诚信记录.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).BeginInit();
             this.tp受益人.SuspendLayout();
@@ -210,9 +213,6 @@ namespace 金证统一账户测试账户生成器
             ((System.ComponentModel.ISupportInitialize)(this.dgv控制人)).BeginInit();
             this.tp已签署协议.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).BeginInit();
-            this.groupBox2.SuspendLayout();
-            this.tpRiskSurveyResult.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRiskSurvey)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCubsbScOpenAcctOpType
@@ -409,7 +409,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.sex.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sex.FormattingEnabled = true;
-            this.sex.Location = new System.Drawing.Point(460, 174);
+            this.sex.Location = new System.Drawing.Point(460, 148);
             this.sex.Name = "sex";
             this.sex.Size = new System.Drawing.Size(100, 20);
             this.sex.TabIndex = 17;
@@ -418,7 +418,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.citizenship.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.citizenship.FormattingEnabled = true;
-            this.citizenship.Location = new System.Drawing.Point(460, 148);
+            this.citizenship.Location = new System.Drawing.Point(460, 121);
             this.citizenship.Name = "citizenship";
             this.citizenship.Size = new System.Drawing.Size(100, 20);
             this.citizenship.TabIndex = 14;
@@ -427,7 +427,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.education.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.education.FormattingEnabled = true;
-            this.education.Location = new System.Drawing.Point(460, 120);
+            this.education.Location = new System.Drawing.Point(460, 94);
             this.education.Name = "education";
             this.education.Size = new System.Drawing.Size(100, 20);
             this.education.TabIndex = 13;
@@ -436,7 +436,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.occu_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.occu_type.FormattingEnabled = true;
-            this.occu_type.Location = new System.Drawing.Point(460, 94);
+            this.occu_type.Location = new System.Drawing.Point(460, 174);
             this.occu_type.Name = "occu_type";
             this.occu_type.Size = new System.Drawing.Size(100, 20);
             this.occu_type.TabIndex = 12;
@@ -454,7 +454,7 @@ namespace 金证统一账户测试账户生成器
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(413, 177);
+            this.label22.Location = new System.Drawing.Point(413, 151);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(41, 12);
             this.label22.TabIndex = 62;
@@ -760,7 +760,7 @@ namespace 金证统一账户测试账户生成器
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(413, 124);
+            this.label10.Location = new System.Drawing.Point(413, 98);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(41, 12);
             this.label10.TabIndex = 23;
@@ -770,7 +770,7 @@ namespace 金证统一账户测试账户生成器
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(413, 97);
+            this.label9.Location = new System.Drawing.Point(413, 177);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(41, 12);
             this.label9.TabIndex = 21;
@@ -790,7 +790,7 @@ namespace 金证统一账户测试账户生成器
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(413, 151);
+            this.label7.Location = new System.Drawing.Point(413, 124);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(41, 12);
             this.label7.TabIndex = 17;
@@ -977,6 +977,32 @@ namespace 金证统一账户测试账户生成器
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "普通账户";
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnQueryCYB);
+            this.groupBox2.Controls.Add(this.label23);
+            this.groupBox2.Controls.Add(this.cbxOpenType);
+            this.groupBox2.Controls.Add(this.dtpCybSignDate);
+            this.groupBox2.Controls.Add(this.label24);
+            this.groupBox2.Controls.Add(this.btnOpenCYB);
+            this.groupBox2.Controls.Add(this.tbxCybSignDate);
+            this.groupBox2.Controls.Add(this.label25);
+            this.groupBox2.Location = new System.Drawing.Point(42, 172);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(876, 84);
+            this.groupBox2.TabIndex = 91;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "创业板";
+            // 
+            // tbCuacct_cls
+            // 
+            this.tbCuacct_cls.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的资产账户类别", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.tbCuacct_cls.Location = new System.Drawing.Point(818, 22);
+            this.tbCuacct_cls.Name = "tbCuacct_cls";
+            this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
+            this.tbCuacct_cls.TabIndex = 21;
+            this.tbCuacct_cls.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的资产账户类别;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tbxFislCuacct);
@@ -1070,223 +1096,15 @@ namespace 金证统一账户测试账户生成器
             this.tp基本资料.Text = "基本资料";
             this.tp基本资料.UseVisualStyleBackColor = true;
             // 
-            // tp诚信记录
+            // btnMdfChannels
             // 
-            this.tp诚信记录.Controls.Add(this.dgv诚信记录);
-            this.tp诚信记录.Location = new System.Drawing.Point(4, 22);
-            this.tp诚信记录.Name = "tp诚信记录";
-            this.tp诚信记录.Padding = new System.Windows.Forms.Padding(3);
-            this.tp诚信记录.Size = new System.Drawing.Size(935, 239);
-            this.tp诚信记录.TabIndex = 3;
-            this.tp诚信记录.Text = "诚信记录";
-            this.tp诚信记录.UseVisualStyleBackColor = true;
-            // 
-            // dgv诚信记录
-            // 
-            this.dgv诚信记录.AllowUserToAddRows = false;
-            this.dgv诚信记录.AllowUserToDeleteRows = false;
-            this.dgv诚信记录.AllowUserToResizeRows = false;
-            this.dgv诚信记录.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv诚信记录.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv诚信记录.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.诚信记录CUST_CODE,
-            this.RECORD_NUM,
-            this.RECORD_SOURCE,
-            this.RECORD_TXT,
-            this.RECORD_SCORE,
-            this.RECORD_DATE});
-            this.dgv诚信记录.Location = new System.Drawing.Point(6, 6);
-            this.dgv诚信记录.Name = "dgv诚信记录";
-            this.dgv诚信记录.ReadOnly = true;
-            this.dgv诚信记录.RowHeadersVisible = false;
-            this.dgv诚信记录.RowTemplate.Height = 23;
-            this.dgv诚信记录.Size = new System.Drawing.Size(923, 227);
-            this.dgv诚信记录.TabIndex = 0;
-            // 
-            // tp受益人
-            // 
-            this.tp受益人.Controls.Add(this.btnAddBeneficirayInfo);
-            this.tp受益人.Controls.Add(this.dgv受益人);
-            this.tp受益人.Location = new System.Drawing.Point(4, 22);
-            this.tp受益人.Name = "tp受益人";
-            this.tp受益人.Padding = new System.Windows.Forms.Padding(3);
-            this.tp受益人.Size = new System.Drawing.Size(935, 239);
-            this.tp受益人.TabIndex = 1;
-            this.tp受益人.Text = "受益人";
-            this.tp受益人.UseVisualStyleBackColor = true;
-            // 
-            // dgv受益人
-            // 
-            this.dgv受益人.AllowUserToAddRows = false;
-            this.dgv受益人.AllowUserToDeleteRows = false;
-            this.dgv受益人.AllowUserToResizeRows = false;
-            this.dgv受益人.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv受益人.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv受益人.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.受益人USER_CODE,
-            this.BENEFICIARY_NO,
-            this.BENEFICIARY_NAME,
-            this.BENEFICIARY_ID_TYPE,
-            this.BENEFICIARY_ID,
-            this.BENEFICIARY_EXP_DATE,
-            this.BENEFICIARY_TEL,
-            this.BENEFICIARY_ADDR,
-            this.BENEFICIARY_RELA});
-            this.dgv受益人.Location = new System.Drawing.Point(6, 6);
-            this.dgv受益人.Name = "dgv受益人";
-            this.dgv受益人.ReadOnly = true;
-            this.dgv受益人.RowHeadersVisible = false;
-            this.dgv受益人.RowTemplate.Height = 23;
-            this.dgv受益人.Size = new System.Drawing.Size(923, 198);
-            this.dgv受益人.TabIndex = 1;
-            // 
-            // tp控制人
-            // 
-            this.tp控制人.Controls.Add(this.btnAddControllerInfo);
-            this.tp控制人.Controls.Add(this.dgv控制人);
-            this.tp控制人.Location = new System.Drawing.Point(4, 22);
-            this.tp控制人.Name = "tp控制人";
-            this.tp控制人.Padding = new System.Windows.Forms.Padding(3);
-            this.tp控制人.Size = new System.Drawing.Size(935, 239);
-            this.tp控制人.TabIndex = 2;
-            this.tp控制人.Text = "控制人";
-            this.tp控制人.UseVisualStyleBackColor = true;
-            // 
-            // dgv控制人
-            // 
-            this.dgv控制人.AllowUserToAddRows = false;
-            this.dgv控制人.AllowUserToDeleteRows = false;
-            this.dgv控制人.AllowUserToResizeRows = false;
-            this.dgv控制人.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv控制人.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv控制人.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.控制人CUST_CODE,
-            this.CONTROLER_NUM,
-            this.CONTROLER_NAME,
-            this.CONTROLER_ID_TYPE,
-            this.CONTROLER_ID_NO,
-            this.CONTROLER_ID_EXP_DATE,
-            this.CONTROLER_TEL,
-            this.CONTROLER_EMAIL,
-            this.CONTROLER_RELATION,
-            this.REMARK});
-            this.dgv控制人.Location = new System.Drawing.Point(6, 6);
-            this.dgv控制人.Name = "dgv控制人";
-            this.dgv控制人.ReadOnly = true;
-            this.dgv控制人.RowHeadersVisible = false;
-            this.dgv控制人.RowTemplate.Height = 23;
-            this.dgv控制人.Size = new System.Drawing.Size(923, 198);
-            this.dgv控制人.TabIndex = 1;
-            // 
-            // tp已签署协议
-            // 
-            this.tp已签署协议.Controls.Add(this.dgv已签署协议);
-            this.tp已签署协议.Location = new System.Drawing.Point(4, 22);
-            this.tp已签署协议.Name = "tp已签署协议";
-            this.tp已签署协议.Padding = new System.Windows.Forms.Padding(3);
-            this.tp已签署协议.Size = new System.Drawing.Size(935, 239);
-            this.tp已签署协议.TabIndex = 4;
-            this.tp已签署协议.Text = "签署协议";
-            this.tp已签署协议.UseVisualStyleBackColor = true;
-            // 
-            // dgv已签署协议
-            // 
-            this.dgv已签署协议.AllowUserToAddRows = false;
-            this.dgv已签署协议.AllowUserToDeleteRows = false;
-            this.dgv已签署协议.AllowUserToResizeRows = false;
-            this.dgv已签署协议.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv已签署协议.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv已签署协议.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CUST_AGMT_TYPE,
-            this.REMOTE_SYS,
-            this.EFT_DATE,
-            this.EXP_DATE,
-            this.UPD_DATE,
-            this.CUACCT_CODE,
-            this.STKBD,
-            this.TRDACCT,
-            this.CUST_CODE});
-            this.dgv已签署协议.Location = new System.Drawing.Point(6, 6);
-            this.dgv已签署协议.Name = "dgv已签署协议";
-            this.dgv已签署协议.ReadOnly = true;
-            this.dgv已签署协议.RowHeadersVisible = false;
-            this.dgv已签署协议.RowTemplate.Height = 23;
-            this.dgv已签署协议.Size = new System.Drawing.Size(923, 227);
-            this.dgv已签署协议.TabIndex = 2;
-            // 
-            // CUST_AGMT_TYPE
-            // 
-            this.CUST_AGMT_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.CUST_AGMT_TYPE.DataPropertyName = "CUST_AGMT_TYPE";
-            this.CUST_AGMT_TYPE.HeaderText = "客户协议类型";
-            this.CUST_AGMT_TYPE.MinimumWidth = 100;
-            this.CUST_AGMT_TYPE.Name = "CUST_AGMT_TYPE";
-            this.CUST_AGMT_TYPE.ReadOnly = true;
-            // 
-            // REMOTE_SYS
-            // 
-            this.REMOTE_SYS.DataPropertyName = "REMOTE_SYS";
-            this.REMOTE_SYS.HeaderText = "对接远程系统";
-            this.REMOTE_SYS.Name = "REMOTE_SYS";
-            this.REMOTE_SYS.ReadOnly = true;
-            // 
-            // EFT_DATE
-            // 
-            this.EFT_DATE.DataPropertyName = "EFT_DATE";
-            this.EFT_DATE.HeaderText = "生效日期";
-            this.EFT_DATE.Name = "EFT_DATE";
-            this.EFT_DATE.ReadOnly = true;
-            // 
-            // EXP_DATE
-            // 
-            this.EXP_DATE.DataPropertyName = "EXP_DATE";
-            this.EXP_DATE.HeaderText = "生效截止日期";
-            this.EXP_DATE.Name = "EXP_DATE";
-            this.EXP_DATE.ReadOnly = true;
-            // 
-            // UPD_DATE
-            // 
-            this.UPD_DATE.DataPropertyName = "UPD_DATE";
-            this.UPD_DATE.HeaderText = "更新日期";
-            this.UPD_DATE.Name = "UPD_DATE";
-            this.UPD_DATE.ReadOnly = true;
-            // 
-            // CUACCT_CODE
-            // 
-            this.CUACCT_CODE.DataPropertyName = "CUACCT_CODE";
-            this.CUACCT_CODE.HeaderText = "资产账户";
-            this.CUACCT_CODE.Name = "CUACCT_CODE";
-            this.CUACCT_CODE.ReadOnly = true;
-            // 
-            // STKBD
-            // 
-            this.STKBD.DataPropertyName = "STKBD";
-            this.STKBD.HeaderText = "交易板块";
-            this.STKBD.Name = "STKBD";
-            this.STKBD.ReadOnly = true;
-            // 
-            // TRDACCT
-            // 
-            this.TRDACCT.DataPropertyName = "TRDACCT";
-            this.TRDACCT.HeaderText = "交易账户";
-            this.TRDACCT.Name = "TRDACCT";
-            this.TRDACCT.ReadOnly = true;
-            // 
-            // CUST_CODE
-            // 
-            this.CUST_CODE.DataPropertyName = "CUST_CODE";
-            this.CUST_CODE.HeaderText = "客户代码";
-            this.CUST_CODE.Name = "CUST_CODE";
-            this.CUST_CODE.ReadOnly = true;
-            this.CUST_CODE.Visible = false;
+            this.btnMdfChannels.Location = new System.Drawing.Point(814, 199);
+            this.btnMdfChannels.Name = "btnMdfChannels";
+            this.btnMdfChannels.Size = new System.Drawing.Size(100, 23);
+            this.btnMdfChannels.TabIndex = 95;
+            this.btnMdfChannels.Text = "修改操作渠道";
+            this.btnMdfChannels.UseVisualStyleBackColor = true;
+            this.btnMdfChannels.Click += new System.EventHandler(this.btnMdfChannels_Click);
             // 
             // btnMdfCustBasicInfo
             // 
@@ -1298,250 +1116,14 @@ namespace 金证统一账户测试账户生成器
             this.btnMdfCustBasicInfo.UseVisualStyleBackColor = true;
             this.btnMdfCustBasicInfo.Click += new System.EventHandler(this.btnMdfCustBasicInfo_Click);
             // 
-            // groupBox2
+            // tbChannels
             // 
-            this.groupBox2.Controls.Add(this.btnQueryCYB);
-            this.groupBox2.Controls.Add(this.label23);
-            this.groupBox2.Controls.Add(this.cbxOpenType);
-            this.groupBox2.Controls.Add(this.dtpCybSignDate);
-            this.groupBox2.Controls.Add(this.label24);
-            this.groupBox2.Controls.Add(this.btnOpenCYB);
-            this.groupBox2.Controls.Add(this.tbxCybSignDate);
-            this.groupBox2.Controls.Add(this.label25);
-            this.groupBox2.Location = new System.Drawing.Point(42, 172);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(876, 84);
-            this.groupBox2.TabIndex = 91;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "创业板";
-            // 
-            // btnMdfChannels
-            // 
-            this.btnMdfChannels.Location = new System.Drawing.Point(814, 199);
-            this.btnMdfChannels.Name = "btnMdfChannels";
-            this.btnMdfChannels.Size = new System.Drawing.Size(100, 23);
-            this.btnMdfChannels.TabIndex = 95;
-            this.btnMdfChannels.Text = "修改操作渠道";
-            this.btnMdfChannels.UseVisualStyleBackColor = true;
-            this.btnMdfChannels.Click += new System.EventHandler(this.btnMdfChannels_Click);
-            // 
-            // 诚信记录CUST_CODE
-            // 
-            this.诚信记录CUST_CODE.DataPropertyName = "CUST_CODE";
-            this.诚信记录CUST_CODE.HeaderText = "客户代码";
-            this.诚信记录CUST_CODE.Name = "诚信记录CUST_CODE";
-            this.诚信记录CUST_CODE.ReadOnly = true;
-            this.诚信记录CUST_CODE.Visible = false;
-            // 
-            // RECORD_NUM
-            // 
-            this.RECORD_NUM.DataPropertyName = "RECORD_NUM";
-            this.RECORD_NUM.HeaderText = "诚信记录编号";
-            this.RECORD_NUM.Name = "RECORD_NUM";
-            this.RECORD_NUM.ReadOnly = true;
-            // 
-            // RECORD_SOURCE
-            // 
-            this.RECORD_SOURCE.DataPropertyName = "RECORD_SOURCE";
-            this.RECORD_SOURCE.HeaderText = "诚信记录来源";
-            this.RECORD_SOURCE.Name = "RECORD_SOURCE";
-            this.RECORD_SOURCE.ReadOnly = true;
-            // 
-            // RECORD_TXT
-            // 
-            this.RECORD_TXT.DataPropertyName = "RECORD_TXT";
-            this.RECORD_TXT.HeaderText = "诚信记录内容";
-            this.RECORD_TXT.Name = "RECORD_TXT";
-            this.RECORD_TXT.ReadOnly = true;
-            // 
-            // RECORD_SCORE
-            // 
-            this.RECORD_SCORE.DataPropertyName = "RECORD_SCORE";
-            this.RECORD_SCORE.HeaderText = "加扣分";
-            this.RECORD_SCORE.Name = "RECORD_SCORE";
-            this.RECORD_SCORE.ReadOnly = true;
-            // 
-            // RECORD_DATE
-            // 
-            this.RECORD_DATE.DataPropertyName = "RECORD_DATE";
-            this.RECORD_DATE.HeaderText = "录入日期";
-            this.RECORD_DATE.Name = "RECORD_DATE";
-            this.RECORD_DATE.ReadOnly = true;
-            // 
-            // 控制人CUST_CODE
-            // 
-            this.控制人CUST_CODE.DataPropertyName = "CUST_CODE";
-            this.控制人CUST_CODE.HeaderText = "客户代码";
-            this.控制人CUST_CODE.Name = "控制人CUST_CODE";
-            this.控制人CUST_CODE.ReadOnly = true;
-            this.控制人CUST_CODE.Visible = false;
-            // 
-            // CONTROLER_NUM
-            // 
-            this.CONTROLER_NUM.DataPropertyName = "CONTROLER_NUM";
-            this.CONTROLER_NUM.HeaderText = "控制人编号";
-            this.CONTROLER_NUM.Name = "CONTROLER_NUM";
-            this.CONTROLER_NUM.ReadOnly = true;
-            // 
-            // CONTROLER_NAME
-            // 
-            this.CONTROLER_NAME.DataPropertyName = "CONTROLER_NAME";
-            this.CONTROLER_NAME.HeaderText = "控制人姓名";
-            this.CONTROLER_NAME.Name = "CONTROLER_NAME";
-            this.CONTROLER_NAME.ReadOnly = true;
-            // 
-            // CONTROLER_ID_TYPE
-            // 
-            this.CONTROLER_ID_TYPE.DataPropertyName = "CONTROLER_ID_TYPE";
-            this.CONTROLER_ID_TYPE.HeaderText = "控制人证件类型";
-            this.CONTROLER_ID_TYPE.Name = "CONTROLER_ID_TYPE";
-            this.CONTROLER_ID_TYPE.ReadOnly = true;
-            this.CONTROLER_ID_TYPE.Width = 120;
-            // 
-            // CONTROLER_ID_NO
-            // 
-            this.CONTROLER_ID_NO.DataPropertyName = "CONTROLER_ID_NO";
-            this.CONTROLER_ID_NO.HeaderText = "控制人证件号码";
-            this.CONTROLER_ID_NO.Name = "CONTROLER_ID_NO";
-            this.CONTROLER_ID_NO.ReadOnly = true;
-            this.CONTROLER_ID_NO.Width = 120;
-            // 
-            // CONTROLER_ID_EXP_DATE
-            // 
-            this.CONTROLER_ID_EXP_DATE.DataPropertyName = "CONTROLER_ID_EXP_DATE";
-            this.CONTROLER_ID_EXP_DATE.HeaderText = "控制人证件有效期";
-            this.CONTROLER_ID_EXP_DATE.Name = "CONTROLER_ID_EXP_DATE";
-            this.CONTROLER_ID_EXP_DATE.ReadOnly = true;
-            this.CONTROLER_ID_EXP_DATE.Width = 140;
-            // 
-            // CONTROLER_TEL
-            // 
-            this.CONTROLER_TEL.DataPropertyName = "CONTROLER_TEL";
-            this.CONTROLER_TEL.HeaderText = "控制人电话";
-            this.CONTROLER_TEL.Name = "CONTROLER_TEL";
-            this.CONTROLER_TEL.ReadOnly = true;
-            // 
-            // CONTROLER_EMAIL
-            // 
-            this.CONTROLER_EMAIL.DataPropertyName = "CONTROLER_EMAIL";
-            this.CONTROLER_EMAIL.HeaderText = "控制人邮箱";
-            this.CONTROLER_EMAIL.Name = "CONTROLER_EMAIL";
-            this.CONTROLER_EMAIL.ReadOnly = true;
-            // 
-            // CONTROLER_RELATION
-            // 
-            this.CONTROLER_RELATION.DataPropertyName = "CONTROLER_RELATION";
-            this.CONTROLER_RELATION.HeaderText = "控制人与本人关系";
-            this.CONTROLER_RELATION.Name = "CONTROLER_RELATION";
-            this.CONTROLER_RELATION.ReadOnly = true;
-            this.CONTROLER_RELATION.Width = 140;
-            // 
-            // REMARK
-            // 
-            this.REMARK.DataPropertyName = "REMARK";
-            this.REMARK.HeaderText = "备注";
-            this.REMARK.Name = "REMARK";
-            this.REMARK.ReadOnly = true;
-            // 
-            // btnAddBeneficirayInfo
-            // 
-            this.btnAddBeneficirayInfo.Location = new System.Drawing.Point(6, 210);
-            this.btnAddBeneficirayInfo.Name = "btnAddBeneficirayInfo";
-            this.btnAddBeneficirayInfo.Size = new System.Drawing.Size(110, 23);
-            this.btnAddBeneficirayInfo.TabIndex = 3;
-            this.btnAddBeneficirayInfo.Text = "增加受益人";
-            this.btnAddBeneficirayInfo.UseVisualStyleBackColor = true;
-            this.btnAddBeneficirayInfo.Click += new System.EventHandler(this.btnAddBeneficirayInfo_Click);
-            // 
-            // btnAddControllerInfo
-            // 
-            this.btnAddControllerInfo.Location = new System.Drawing.Point(6, 210);
-            this.btnAddControllerInfo.Name = "btnAddControllerInfo";
-            this.btnAddControllerInfo.Size = new System.Drawing.Size(110, 23);
-            this.btnAddControllerInfo.TabIndex = 4;
-            this.btnAddControllerInfo.Text = "增加控制人";
-            this.btnAddControllerInfo.UseVisualStyleBackColor = true;
-            this.btnAddControllerInfo.Click += new System.EventHandler(this.btnAddControllerInfo_Click);
-            // 
-            // 受益人USER_CODE
-            // 
-            this.受益人USER_CODE.DataPropertyName = "USER_CODE";
-            this.受益人USER_CODE.HeaderText = "用户代码";
-            this.受益人USER_CODE.Name = "受益人USER_CODE";
-            this.受益人USER_CODE.ReadOnly = true;
-            this.受益人USER_CODE.Visible = false;
-            // 
-            // BENEFICIARY_NO
-            // 
-            this.BENEFICIARY_NO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_NO.DataPropertyName = "BENEFICIARY_NO";
-            this.BENEFICIARY_NO.HeaderText = "受益人编号";
-            this.BENEFICIARY_NO.MinimumWidth = 100;
-            this.BENEFICIARY_NO.Name = "BENEFICIARY_NO";
-            this.BENEFICIARY_NO.ReadOnly = true;
-            // 
-            // BENEFICIARY_NAME
-            // 
-            this.BENEFICIARY_NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_NAME.DataPropertyName = "BENEFICIARY_NAME";
-            this.BENEFICIARY_NAME.HeaderText = "受益人名称";
-            this.BENEFICIARY_NAME.MinimumWidth = 100;
-            this.BENEFICIARY_NAME.Name = "BENEFICIARY_NAME";
-            this.BENEFICIARY_NAME.ReadOnly = true;
-            // 
-            // BENEFICIARY_ID_TYPE
-            // 
-            this.BENEFICIARY_ID_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_ID_TYPE.DataPropertyName = "BENEFICIARY_ID_TYPE";
-            this.BENEFICIARY_ID_TYPE.HeaderText = "受益人证件类型";
-            this.BENEFICIARY_ID_TYPE.MinimumWidth = 120;
-            this.BENEFICIARY_ID_TYPE.Name = "BENEFICIARY_ID_TYPE";
-            this.BENEFICIARY_ID_TYPE.ReadOnly = true;
-            this.BENEFICIARY_ID_TYPE.Width = 120;
-            // 
-            // BENEFICIARY_ID
-            // 
-            this.BENEFICIARY_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_ID.DataPropertyName = "BENEFICIARY_ID";
-            this.BENEFICIARY_ID.HeaderText = "受益人证件号码";
-            this.BENEFICIARY_ID.MinimumWidth = 120;
-            this.BENEFICIARY_ID.Name = "BENEFICIARY_ID";
-            this.BENEFICIARY_ID.ReadOnly = true;
-            this.BENEFICIARY_ID.Width = 120;
-            // 
-            // BENEFICIARY_EXP_DATE
-            // 
-            this.BENEFICIARY_EXP_DATE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_EXP_DATE.DataPropertyName = "BENEFICIARY_EXP_DATE";
-            this.BENEFICIARY_EXP_DATE.HeaderText = "受益人证件有效期";
-            this.BENEFICIARY_EXP_DATE.MinimumWidth = 140;
-            this.BENEFICIARY_EXP_DATE.Name = "BENEFICIARY_EXP_DATE";
-            this.BENEFICIARY_EXP_DATE.ReadOnly = true;
-            this.BENEFICIARY_EXP_DATE.Width = 140;
-            // 
-            // BENEFICIARY_TEL
-            // 
-            this.BENEFICIARY_TEL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.BENEFICIARY_TEL.DataPropertyName = "BENEFICIARY_TEL";
-            this.BENEFICIARY_TEL.HeaderText = "受益人电话号码";
-            this.BENEFICIARY_TEL.MinimumWidth = 120;
-            this.BENEFICIARY_TEL.Name = "BENEFICIARY_TEL";
-            this.BENEFICIARY_TEL.ReadOnly = true;
-            this.BENEFICIARY_TEL.Width = 120;
-            // 
-            // BENEFICIARY_ADDR
-            // 
-            this.BENEFICIARY_ADDR.DataPropertyName = "BENEFICIARY_ADDR";
-            this.BENEFICIARY_ADDR.HeaderText = "受益人地址";
-            this.BENEFICIARY_ADDR.Name = "BENEFICIARY_ADDR";
-            this.BENEFICIARY_ADDR.ReadOnly = true;
-            // 
-            // BENEFICIARY_RELA
-            // 
-            this.BENEFICIARY_RELA.DataPropertyName = "BENEFICIARY_RELA";
-            this.BENEFICIARY_RELA.HeaderText = "与股东关系";
-            this.BENEFICIARY_RELA.Name = "BENEFICIARY_RELA";
-            this.BENEFICIARY_RELA.ReadOnly = true;
+            this.tbChannels.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的操作渠道", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.tbChannels.Location = new System.Drawing.Point(814, 174);
+            this.tbChannels.Name = "tbChannels";
+            this.tbChannels.Size = new System.Drawing.Size(100, 21);
+            this.tbChannels.TabIndex = 22;
+            this.tbChannels.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的操作渠道;
             // 
             // tpRiskSurveyResult
             // 
@@ -1561,6 +1143,54 @@ namespace 金证统一账户测试账户生成器
             this.tpRiskSurveyResult.TabIndex = 5;
             this.tpRiskSurveyResult.Text = "风险测评";
             this.tpRiskSurveyResult.UseVisualStyleBackColor = true;
+            // 
+            // btnQueryRiskSurveyResult
+            // 
+            this.btnQueryRiskSurveyResult.Location = new System.Drawing.Point(376, 210);
+            this.btnQueryRiskSurveyResult.Name = "btnQueryRiskSurveyResult";
+            this.btnQueryRiskSurveyResult.Size = new System.Drawing.Size(77, 23);
+            this.btnQueryRiskSurveyResult.TabIndex = 52;
+            this.btnQueryRiskSurveyResult.Text = "刷新";
+            this.btnQueryRiskSurveyResult.UseVisualStyleBackColor = true;
+            this.btnQueryRiskSurveyResult.Click += new System.EventHandler(this.btnQueryRiskSurveyResult_Click);
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(198, 216);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(65, 12);
+            this.label34.TabIndex = 51;
+            this.label34.Text = "结束日期：";
+            // 
+            // dtpEND_DATE
+            // 
+            this.dtpEND_DATE.CustomFormat = "yyyyMMdd";
+            this.dtpEND_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpEND_DATE.Location = new System.Drawing.Point(269, 210);
+            this.dtpEND_DATE.Name = "dtpEND_DATE";
+            this.dtpEND_DATE.Size = new System.Drawing.Size(101, 21);
+            this.dtpEND_DATE.TabIndex = 50;
+            this.dtpEND_DATE.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(7, 216);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(65, 12);
+            this.label28.TabIndex = 49;
+            this.label28.Text = "开始日期：";
+            // 
+            // dtpBGN_DATE
+            // 
+            this.dtpBGN_DATE.CustomFormat = "yyyyMMdd";
+            this.dtpBGN_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpBGN_DATE.Location = new System.Drawing.Point(78, 210);
+            this.dtpBGN_DATE.Name = "dtpBGN_DATE";
+            this.dtpBGN_DATE.Size = new System.Drawing.Size(101, 21);
+            this.dtpBGN_DATE.TabIndex = 5;
+            this.dtpBGN_DATE.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
             // 
             // dgvRiskSurvey
             // 
@@ -1596,72 +1226,6 @@ namespace 金证统一账户测试账户生成器
             this.dgvRiskSurvey.RowTemplate.Height = 23;
             this.dgvRiskSurvey.Size = new System.Drawing.Size(923, 198);
             this.dgvRiskSurvey.TabIndex = 3;
-            // 
-            // dtpBGN_DATE
-            // 
-            this.dtpBGN_DATE.CustomFormat = "yyyyMMdd";
-            this.dtpBGN_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpBGN_DATE.Location = new System.Drawing.Point(78, 210);
-            this.dtpBGN_DATE.Name = "dtpBGN_DATE";
-            this.dtpBGN_DATE.Size = new System.Drawing.Size(101, 21);
-            this.dtpBGN_DATE.TabIndex = 5;
-            this.dtpBGN_DATE.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(7, 216);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(65, 12);
-            this.label28.TabIndex = 49;
-            this.label28.Text = "开始日期：";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(198, 216);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(65, 12);
-            this.label34.TabIndex = 51;
-            this.label34.Text = "结束日期：";
-            // 
-            // dtpEND_DATE
-            // 
-            this.dtpEND_DATE.CustomFormat = "yyyyMMdd";
-            this.dtpEND_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEND_DATE.Location = new System.Drawing.Point(269, 210);
-            this.dtpEND_DATE.Name = "dtpEND_DATE";
-            this.dtpEND_DATE.Size = new System.Drawing.Size(101, 21);
-            this.dtpEND_DATE.TabIndex = 50;
-            this.dtpEND_DATE.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
-            // 
-            // btnQueryRiskSurveyResult
-            // 
-            this.btnQueryRiskSurveyResult.Location = new System.Drawing.Point(376, 210);
-            this.btnQueryRiskSurveyResult.Name = "btnQueryRiskSurveyResult";
-            this.btnQueryRiskSurveyResult.Size = new System.Drawing.Size(77, 23);
-            this.btnQueryRiskSurveyResult.TabIndex = 52;
-            this.btnQueryRiskSurveyResult.Text = "刷新";
-            this.btnQueryRiskSurveyResult.UseVisualStyleBackColor = true;
-            this.btnQueryRiskSurveyResult.Click += new System.EventHandler(this.btnQueryRiskSurveyResult_Click);
-            // 
-            // tbChannels
-            // 
-            this.tbChannels.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的操作渠道", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbChannels.Location = new System.Drawing.Point(814, 174);
-            this.tbChannels.Name = "tbChannels";
-            this.tbChannels.Size = new System.Drawing.Size(100, 21);
-            this.tbChannels.TabIndex = 22;
-            this.tbChannels.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的操作渠道;
-            // 
-            // tbCuacct_cls
-            // 
-            this.tbCuacct_cls.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的资产账户类别", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbCuacct_cls.Location = new System.Drawing.Point(818, 22);
-            this.tbCuacct_cls.Name = "tbCuacct_cls";
-            this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
-            this.tbCuacct_cls.TabIndex = 21;
-            this.tbCuacct_cls.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的资产账户类别;
             // 
             // SURVEY_SN
             // 
@@ -1801,12 +1365,448 @@ namespace 金证统一账户测试账户生成器
             this.SURVEY_COLS.ReadOnly = true;
             this.SURVEY_COLS.Visible = false;
             // 
+            // tp诚信记录
+            // 
+            this.tp诚信记录.Controls.Add(this.dgv诚信记录);
+            this.tp诚信记录.Location = new System.Drawing.Point(4, 22);
+            this.tp诚信记录.Name = "tp诚信记录";
+            this.tp诚信记录.Padding = new System.Windows.Forms.Padding(3);
+            this.tp诚信记录.Size = new System.Drawing.Size(935, 239);
+            this.tp诚信记录.TabIndex = 3;
+            this.tp诚信记录.Text = "诚信记录";
+            this.tp诚信记录.UseVisualStyleBackColor = true;
+            // 
+            // dgv诚信记录
+            // 
+            this.dgv诚信记录.AllowUserToAddRows = false;
+            this.dgv诚信记录.AllowUserToDeleteRows = false;
+            this.dgv诚信记录.AllowUserToResizeRows = false;
+            this.dgv诚信记录.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv诚信记录.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv诚信记录.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.诚信记录CUST_CODE,
+            this.RECORD_NUM,
+            this.RECORD_SOURCE,
+            this.RECORD_TXT,
+            this.RECORD_SCORE,
+            this.RECORD_DATE});
+            this.dgv诚信记录.Location = new System.Drawing.Point(6, 6);
+            this.dgv诚信记录.Name = "dgv诚信记录";
+            this.dgv诚信记录.ReadOnly = true;
+            this.dgv诚信记录.RowHeadersVisible = false;
+            this.dgv诚信记录.RowTemplate.Height = 23;
+            this.dgv诚信记录.Size = new System.Drawing.Size(923, 227);
+            this.dgv诚信记录.TabIndex = 0;
+            // 
+            // 诚信记录CUST_CODE
+            // 
+            this.诚信记录CUST_CODE.DataPropertyName = "CUST_CODE";
+            this.诚信记录CUST_CODE.HeaderText = "客户代码";
+            this.诚信记录CUST_CODE.Name = "诚信记录CUST_CODE";
+            this.诚信记录CUST_CODE.ReadOnly = true;
+            this.诚信记录CUST_CODE.Visible = false;
+            // 
+            // RECORD_NUM
+            // 
+            this.RECORD_NUM.DataPropertyName = "RECORD_NUM";
+            this.RECORD_NUM.HeaderText = "诚信记录编号";
+            this.RECORD_NUM.Name = "RECORD_NUM";
+            this.RECORD_NUM.ReadOnly = true;
+            // 
+            // RECORD_SOURCE
+            // 
+            this.RECORD_SOURCE.DataPropertyName = "RECORD_SOURCE";
+            this.RECORD_SOURCE.HeaderText = "诚信记录来源";
+            this.RECORD_SOURCE.Name = "RECORD_SOURCE";
+            this.RECORD_SOURCE.ReadOnly = true;
+            // 
+            // RECORD_TXT
+            // 
+            this.RECORD_TXT.DataPropertyName = "RECORD_TXT";
+            this.RECORD_TXT.HeaderText = "诚信记录内容";
+            this.RECORD_TXT.Name = "RECORD_TXT";
+            this.RECORD_TXT.ReadOnly = true;
+            // 
+            // RECORD_SCORE
+            // 
+            this.RECORD_SCORE.DataPropertyName = "RECORD_SCORE";
+            this.RECORD_SCORE.HeaderText = "加扣分";
+            this.RECORD_SCORE.Name = "RECORD_SCORE";
+            this.RECORD_SCORE.ReadOnly = true;
+            // 
+            // RECORD_DATE
+            // 
+            this.RECORD_DATE.DataPropertyName = "RECORD_DATE";
+            this.RECORD_DATE.HeaderText = "录入日期";
+            this.RECORD_DATE.Name = "RECORD_DATE";
+            this.RECORD_DATE.ReadOnly = true;
+            // 
+            // tp受益人
+            // 
+            this.tp受益人.Controls.Add(this.btnAddBeneficirayInfo);
+            this.tp受益人.Controls.Add(this.dgv受益人);
+            this.tp受益人.Location = new System.Drawing.Point(4, 22);
+            this.tp受益人.Name = "tp受益人";
+            this.tp受益人.Padding = new System.Windows.Forms.Padding(3);
+            this.tp受益人.Size = new System.Drawing.Size(935, 239);
+            this.tp受益人.TabIndex = 1;
+            this.tp受益人.Text = "受益人";
+            this.tp受益人.UseVisualStyleBackColor = true;
+            // 
+            // btnAddBeneficirayInfo
+            // 
+            this.btnAddBeneficirayInfo.Location = new System.Drawing.Point(6, 210);
+            this.btnAddBeneficirayInfo.Name = "btnAddBeneficirayInfo";
+            this.btnAddBeneficirayInfo.Size = new System.Drawing.Size(110, 23);
+            this.btnAddBeneficirayInfo.TabIndex = 3;
+            this.btnAddBeneficirayInfo.Text = "增加受益人";
+            this.btnAddBeneficirayInfo.UseVisualStyleBackColor = true;
+            this.btnAddBeneficirayInfo.Click += new System.EventHandler(this.btnAddBeneficirayInfo_Click);
+            // 
+            // dgv受益人
+            // 
+            this.dgv受益人.AllowUserToAddRows = false;
+            this.dgv受益人.AllowUserToDeleteRows = false;
+            this.dgv受益人.AllowUserToResizeRows = false;
+            this.dgv受益人.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv受益人.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv受益人.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.受益人USER_CODE,
+            this.BENEFICIARY_NO,
+            this.BENEFICIARY_NAME,
+            this.BENEFICIARY_ID_TYPE,
+            this.BENEFICIARY_ID,
+            this.BENEFICIARY_EXP_DATE,
+            this.BENEFICIARY_TEL,
+            this.BENEFICIARY_ADDR,
+            this.BENEFICIARY_RELA});
+            this.dgv受益人.Location = new System.Drawing.Point(6, 6);
+            this.dgv受益人.Name = "dgv受益人";
+            this.dgv受益人.ReadOnly = true;
+            this.dgv受益人.RowHeadersVisible = false;
+            this.dgv受益人.RowTemplate.Height = 23;
+            this.dgv受益人.Size = new System.Drawing.Size(923, 198);
+            this.dgv受益人.TabIndex = 1;
+            // 
+            // 受益人USER_CODE
+            // 
+            this.受益人USER_CODE.DataPropertyName = "USER_CODE";
+            this.受益人USER_CODE.HeaderText = "用户代码";
+            this.受益人USER_CODE.Name = "受益人USER_CODE";
+            this.受益人USER_CODE.ReadOnly = true;
+            this.受益人USER_CODE.Visible = false;
+            // 
+            // BENEFICIARY_NO
+            // 
+            this.BENEFICIARY_NO.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_NO.DataPropertyName = "BENEFICIARY_NO";
+            this.BENEFICIARY_NO.HeaderText = "受益人编号";
+            this.BENEFICIARY_NO.MinimumWidth = 100;
+            this.BENEFICIARY_NO.Name = "BENEFICIARY_NO";
+            this.BENEFICIARY_NO.ReadOnly = true;
+            // 
+            // BENEFICIARY_NAME
+            // 
+            this.BENEFICIARY_NAME.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_NAME.DataPropertyName = "BENEFICIARY_NAME";
+            this.BENEFICIARY_NAME.HeaderText = "受益人名称";
+            this.BENEFICIARY_NAME.MinimumWidth = 100;
+            this.BENEFICIARY_NAME.Name = "BENEFICIARY_NAME";
+            this.BENEFICIARY_NAME.ReadOnly = true;
+            // 
+            // BENEFICIARY_ID_TYPE
+            // 
+            this.BENEFICIARY_ID_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_ID_TYPE.DataPropertyName = "BENEFICIARY_ID_TYPE";
+            this.BENEFICIARY_ID_TYPE.HeaderText = "受益人证件类型";
+            this.BENEFICIARY_ID_TYPE.MinimumWidth = 120;
+            this.BENEFICIARY_ID_TYPE.Name = "BENEFICIARY_ID_TYPE";
+            this.BENEFICIARY_ID_TYPE.ReadOnly = true;
+            this.BENEFICIARY_ID_TYPE.Width = 120;
+            // 
+            // BENEFICIARY_ID
+            // 
+            this.BENEFICIARY_ID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_ID.DataPropertyName = "BENEFICIARY_ID";
+            this.BENEFICIARY_ID.HeaderText = "受益人证件号码";
+            this.BENEFICIARY_ID.MinimumWidth = 120;
+            this.BENEFICIARY_ID.Name = "BENEFICIARY_ID";
+            this.BENEFICIARY_ID.ReadOnly = true;
+            this.BENEFICIARY_ID.Width = 120;
+            // 
+            // BENEFICIARY_EXP_DATE
+            // 
+            this.BENEFICIARY_EXP_DATE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_EXP_DATE.DataPropertyName = "BENEFICIARY_EXP_DATE";
+            this.BENEFICIARY_EXP_DATE.HeaderText = "受益人证件有效期";
+            this.BENEFICIARY_EXP_DATE.MinimumWidth = 140;
+            this.BENEFICIARY_EXP_DATE.Name = "BENEFICIARY_EXP_DATE";
+            this.BENEFICIARY_EXP_DATE.ReadOnly = true;
+            this.BENEFICIARY_EXP_DATE.Width = 140;
+            // 
+            // BENEFICIARY_TEL
+            // 
+            this.BENEFICIARY_TEL.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.BENEFICIARY_TEL.DataPropertyName = "BENEFICIARY_TEL";
+            this.BENEFICIARY_TEL.HeaderText = "受益人电话号码";
+            this.BENEFICIARY_TEL.MinimumWidth = 120;
+            this.BENEFICIARY_TEL.Name = "BENEFICIARY_TEL";
+            this.BENEFICIARY_TEL.ReadOnly = true;
+            this.BENEFICIARY_TEL.Width = 120;
+            // 
+            // BENEFICIARY_ADDR
+            // 
+            this.BENEFICIARY_ADDR.DataPropertyName = "BENEFICIARY_ADDR";
+            this.BENEFICIARY_ADDR.HeaderText = "受益人地址";
+            this.BENEFICIARY_ADDR.Name = "BENEFICIARY_ADDR";
+            this.BENEFICIARY_ADDR.ReadOnly = true;
+            // 
+            // BENEFICIARY_RELA
+            // 
+            this.BENEFICIARY_RELA.DataPropertyName = "BENEFICIARY_RELA";
+            this.BENEFICIARY_RELA.HeaderText = "与股东关系";
+            this.BENEFICIARY_RELA.Name = "BENEFICIARY_RELA";
+            this.BENEFICIARY_RELA.ReadOnly = true;
+            // 
+            // tp控制人
+            // 
+            this.tp控制人.Controls.Add(this.btnAddControllerInfo);
+            this.tp控制人.Controls.Add(this.dgv控制人);
+            this.tp控制人.Location = new System.Drawing.Point(4, 22);
+            this.tp控制人.Name = "tp控制人";
+            this.tp控制人.Padding = new System.Windows.Forms.Padding(3);
+            this.tp控制人.Size = new System.Drawing.Size(935, 239);
+            this.tp控制人.TabIndex = 2;
+            this.tp控制人.Text = "控制人";
+            this.tp控制人.UseVisualStyleBackColor = true;
+            // 
+            // btnAddControllerInfo
+            // 
+            this.btnAddControllerInfo.Location = new System.Drawing.Point(6, 210);
+            this.btnAddControllerInfo.Name = "btnAddControllerInfo";
+            this.btnAddControllerInfo.Size = new System.Drawing.Size(110, 23);
+            this.btnAddControllerInfo.TabIndex = 4;
+            this.btnAddControllerInfo.Text = "增加控制人";
+            this.btnAddControllerInfo.UseVisualStyleBackColor = true;
+            this.btnAddControllerInfo.Click += new System.EventHandler(this.btnAddControllerInfo_Click);
+            // 
+            // dgv控制人
+            // 
+            this.dgv控制人.AllowUserToAddRows = false;
+            this.dgv控制人.AllowUserToDeleteRows = false;
+            this.dgv控制人.AllowUserToResizeRows = false;
+            this.dgv控制人.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv控制人.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv控制人.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.控制人CUST_CODE,
+            this.CONTROLER_NUM,
+            this.CONTROLER_NAME,
+            this.CONTROLER_ID_TYPE,
+            this.CONTROLER_ID_NO,
+            this.CONTROLER_ID_EXP_DATE,
+            this.CONTROLER_TEL,
+            this.CONTROLER_EMAIL,
+            this.CONTROLER_RELATION,
+            this.REMARK});
+            this.dgv控制人.Location = new System.Drawing.Point(6, 6);
+            this.dgv控制人.Name = "dgv控制人";
+            this.dgv控制人.ReadOnly = true;
+            this.dgv控制人.RowHeadersVisible = false;
+            this.dgv控制人.RowTemplate.Height = 23;
+            this.dgv控制人.Size = new System.Drawing.Size(923, 198);
+            this.dgv控制人.TabIndex = 1;
+            // 
+            // 控制人CUST_CODE
+            // 
+            this.控制人CUST_CODE.DataPropertyName = "CUST_CODE";
+            this.控制人CUST_CODE.HeaderText = "客户代码";
+            this.控制人CUST_CODE.Name = "控制人CUST_CODE";
+            this.控制人CUST_CODE.ReadOnly = true;
+            this.控制人CUST_CODE.Visible = false;
+            // 
+            // CONTROLER_NUM
+            // 
+            this.CONTROLER_NUM.DataPropertyName = "CONTROLER_NUM";
+            this.CONTROLER_NUM.HeaderText = "控制人编号";
+            this.CONTROLER_NUM.Name = "CONTROLER_NUM";
+            this.CONTROLER_NUM.ReadOnly = true;
+            // 
+            // CONTROLER_NAME
+            // 
+            this.CONTROLER_NAME.DataPropertyName = "CONTROLER_NAME";
+            this.CONTROLER_NAME.HeaderText = "控制人姓名";
+            this.CONTROLER_NAME.Name = "CONTROLER_NAME";
+            this.CONTROLER_NAME.ReadOnly = true;
+            // 
+            // CONTROLER_ID_TYPE
+            // 
+            this.CONTROLER_ID_TYPE.DataPropertyName = "CONTROLER_ID_TYPE";
+            this.CONTROLER_ID_TYPE.HeaderText = "控制人证件类型";
+            this.CONTROLER_ID_TYPE.Name = "CONTROLER_ID_TYPE";
+            this.CONTROLER_ID_TYPE.ReadOnly = true;
+            this.CONTROLER_ID_TYPE.Width = 120;
+            // 
+            // CONTROLER_ID_NO
+            // 
+            this.CONTROLER_ID_NO.DataPropertyName = "CONTROLER_ID_NO";
+            this.CONTROLER_ID_NO.HeaderText = "控制人证件号码";
+            this.CONTROLER_ID_NO.Name = "CONTROLER_ID_NO";
+            this.CONTROLER_ID_NO.ReadOnly = true;
+            this.CONTROLER_ID_NO.Width = 120;
+            // 
+            // CONTROLER_ID_EXP_DATE
+            // 
+            this.CONTROLER_ID_EXP_DATE.DataPropertyName = "CONTROLER_ID_EXP_DATE";
+            this.CONTROLER_ID_EXP_DATE.HeaderText = "控制人证件有效期";
+            this.CONTROLER_ID_EXP_DATE.Name = "CONTROLER_ID_EXP_DATE";
+            this.CONTROLER_ID_EXP_DATE.ReadOnly = true;
+            this.CONTROLER_ID_EXP_DATE.Width = 140;
+            // 
+            // CONTROLER_TEL
+            // 
+            this.CONTROLER_TEL.DataPropertyName = "CONTROLER_TEL";
+            this.CONTROLER_TEL.HeaderText = "控制人电话";
+            this.CONTROLER_TEL.Name = "CONTROLER_TEL";
+            this.CONTROLER_TEL.ReadOnly = true;
+            // 
+            // CONTROLER_EMAIL
+            // 
+            this.CONTROLER_EMAIL.DataPropertyName = "CONTROLER_EMAIL";
+            this.CONTROLER_EMAIL.HeaderText = "控制人邮箱";
+            this.CONTROLER_EMAIL.Name = "CONTROLER_EMAIL";
+            this.CONTROLER_EMAIL.ReadOnly = true;
+            // 
+            // CONTROLER_RELATION
+            // 
+            this.CONTROLER_RELATION.DataPropertyName = "CONTROLER_RELATION";
+            this.CONTROLER_RELATION.HeaderText = "控制人与本人关系";
+            this.CONTROLER_RELATION.Name = "CONTROLER_RELATION";
+            this.CONTROLER_RELATION.ReadOnly = true;
+            this.CONTROLER_RELATION.Width = 140;
+            // 
+            // REMARK
+            // 
+            this.REMARK.DataPropertyName = "REMARK";
+            this.REMARK.HeaderText = "备注";
+            this.REMARK.Name = "REMARK";
+            this.REMARK.ReadOnly = true;
+            // 
+            // tp已签署协议
+            // 
+            this.tp已签署协议.Controls.Add(this.dgv已签署协议);
+            this.tp已签署协议.Location = new System.Drawing.Point(4, 22);
+            this.tp已签署协议.Name = "tp已签署协议";
+            this.tp已签署协议.Padding = new System.Windows.Forms.Padding(3);
+            this.tp已签署协议.Size = new System.Drawing.Size(935, 239);
+            this.tp已签署协议.TabIndex = 4;
+            this.tp已签署协议.Text = "签署协议";
+            this.tp已签署协议.UseVisualStyleBackColor = true;
+            // 
+            // dgv已签署协议
+            // 
+            this.dgv已签署协议.AllowUserToAddRows = false;
+            this.dgv已签署协议.AllowUserToDeleteRows = false;
+            this.dgv已签署协议.AllowUserToResizeRows = false;
+            this.dgv已签署协议.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv已签署协议.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv已签署协议.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CUST_AGMT_TYPE,
+            this.REMOTE_SYS,
+            this.EFT_DATE,
+            this.EXP_DATE,
+            this.UPD_DATE,
+            this.CUACCT_CODE,
+            this.STKBD,
+            this.TRDACCT,
+            this.CUST_CODE});
+            this.dgv已签署协议.Location = new System.Drawing.Point(6, 6);
+            this.dgv已签署协议.Name = "dgv已签署协议";
+            this.dgv已签署协议.ReadOnly = true;
+            this.dgv已签署协议.RowHeadersVisible = false;
+            this.dgv已签署协议.RowTemplate.Height = 23;
+            this.dgv已签署协议.Size = new System.Drawing.Size(923, 227);
+            this.dgv已签署协议.TabIndex = 2;
+            // 
+            // CUST_AGMT_TYPE
+            // 
+            this.CUST_AGMT_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.CUST_AGMT_TYPE.DataPropertyName = "CUST_AGMT_TYPE";
+            this.CUST_AGMT_TYPE.HeaderText = "客户协议类型";
+            this.CUST_AGMT_TYPE.MinimumWidth = 100;
+            this.CUST_AGMT_TYPE.Name = "CUST_AGMT_TYPE";
+            this.CUST_AGMT_TYPE.ReadOnly = true;
+            // 
+            // REMOTE_SYS
+            // 
+            this.REMOTE_SYS.DataPropertyName = "REMOTE_SYS";
+            this.REMOTE_SYS.HeaderText = "对接远程系统";
+            this.REMOTE_SYS.Name = "REMOTE_SYS";
+            this.REMOTE_SYS.ReadOnly = true;
+            // 
+            // EFT_DATE
+            // 
+            this.EFT_DATE.DataPropertyName = "EFT_DATE";
+            this.EFT_DATE.HeaderText = "生效日期";
+            this.EFT_DATE.Name = "EFT_DATE";
+            this.EFT_DATE.ReadOnly = true;
+            // 
+            // EXP_DATE
+            // 
+            this.EXP_DATE.DataPropertyName = "EXP_DATE";
+            this.EXP_DATE.HeaderText = "生效截止日期";
+            this.EXP_DATE.Name = "EXP_DATE";
+            this.EXP_DATE.ReadOnly = true;
+            // 
+            // UPD_DATE
+            // 
+            this.UPD_DATE.DataPropertyName = "UPD_DATE";
+            this.UPD_DATE.HeaderText = "更新日期";
+            this.UPD_DATE.Name = "UPD_DATE";
+            this.UPD_DATE.ReadOnly = true;
+            // 
+            // CUACCT_CODE
+            // 
+            this.CUACCT_CODE.DataPropertyName = "CUACCT_CODE";
+            this.CUACCT_CODE.HeaderText = "资产账户";
+            this.CUACCT_CODE.Name = "CUACCT_CODE";
+            this.CUACCT_CODE.ReadOnly = true;
+            // 
+            // STKBD
+            // 
+            this.STKBD.DataPropertyName = "STKBD";
+            this.STKBD.HeaderText = "交易板块";
+            this.STKBD.Name = "STKBD";
+            this.STKBD.ReadOnly = true;
+            // 
+            // TRDACCT
+            // 
+            this.TRDACCT.DataPropertyName = "TRDACCT";
+            this.TRDACCT.HeaderText = "交易账户";
+            this.TRDACCT.Name = "TRDACCT";
+            this.TRDACCT.ReadOnly = true;
+            // 
+            // CUST_CODE
+            // 
+            this.CUST_CODE.DataPropertyName = "CUST_CODE";
+            this.CUST_CODE.HeaderText = "客户代码";
+            this.CUST_CODE.Name = "CUST_CODE";
+            this.CUST_CODE.ReadOnly = true;
+            this.CUST_CODE.Visible = false;
+            // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(984, 634);
+            this.ClientSize = new System.Drawing.Size(1001, 634);
             this.Controls.Add(this.tc用户信息);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -1824,11 +1824,16 @@ namespace 金证统一账户测试账户生成器
             this.groupBox1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.tc用户信息.ResumeLayout(false);
             this.tp基本资料.ResumeLayout(false);
             this.tp基本资料.PerformLayout();
+            this.tpRiskSurveyResult.ResumeLayout(false);
+            this.tpRiskSurveyResult.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRiskSurvey)).EndInit();
             this.tp诚信记录.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).EndInit();
             this.tp受益人.ResumeLayout(false);
@@ -1837,11 +1842,6 @@ namespace 金证统一账户测试账户生成器
             ((System.ComponentModel.ISupportInitialize)(this.dgv控制人)).EndInit();
             this.tp已签署协议.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.tpRiskSurveyResult.ResumeLayout(false);
-            this.tpRiskSurveyResult.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvRiskSurvey)).EndInit();
             this.ResumeLayout(false);
 
         }

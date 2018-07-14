@@ -1874,6 +1874,18 @@ namespace Yushen.WebService.KessClient
                 logger.Error(message);
                 throw new Exception(message);
             }
+            if (ZIP_CODE == "")
+            {
+                string message = "邮政编码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (ADDRESS == "")
+            {
+                string message = "联系地址不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
 
             // 初始化请求
             Request request = new Request(this.operatorId, "mdfUserGenInfo");
@@ -1954,6 +1966,12 @@ namespace Yushen.WebService.KessClient
             if (CUST_CODE == "")
             {
                 string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (CHANNELS == "")
+            {
+                string message = "操作渠道不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
@@ -2056,6 +2074,18 @@ namespace Yushen.WebService.KessClient
                 logger.Error(message);
                 throw new Exception(message);
             }
+            if (OPERATION_TYPE == "")
+            {
+                string message = "操作类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (BENEFICIARY_NO == "")
+            {
+                string message = "受益人编号不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
 
             // 初始化请求
             Request request = new Request(this.operatorId, "mdfUserBeneficiaryInfo");
@@ -2091,10 +2121,10 @@ namespace Yushen.WebService.KessClient
         /// </summary>
         /// <param name="OPER_TYPE">操作类型（必传）</param>
         /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="CONTROLER_ID_NO">控制人证件号码（必传）</param>
         /// <param name="CONTROLER_NUM">控制人编码（非必传）</param>
         /// <param name="CONTROLER_NAME">控制人姓名（非必传）</param>
         /// <param name="CONTROLER_ID_TYPE">控制人证件类型（非必传）</param>
-        /// <param name="CONTROLER_ID_NO">控制人证件号码（必传）</param>
         /// <param name="CONTROLER_ID_EXP_DATE">控制人证件有效期（非必传）</param>
         /// <param name="CONTROLER_TEL">控制人电话（非必传）</param>
         /// <param name="CONTROLER_EMAIL">控制人邮箱（非必传）</param>
@@ -2104,8 +2134,8 @@ namespace Yushen.WebService.KessClient
         async public Task<Response> mdfControlLerInfo(
                 string OPER_TYPE, //操作类型（必传）
                 string CUST_CODE, //客户代码（必传）
-                string CONTROLER_NUM, //控制人编码（非必传）
                 string CONTROLER_ID_NO, //控制人证件号码（必传）
+                string CONTROLER_NUM = "", //控制人编码（非必传）
                 string CONTROLER_NAME = "", //控制人姓名（非必传）
                 string CONTROLER_ID_TYPE = "", //控制人证件类型（非必传）
                 string CONTROLER_ID_EXP_DATE = "", //控制人证件有效期（非必传）
@@ -2116,9 +2146,21 @@ namespace Yushen.WebService.KessClient
             )
         {
             // 前置条件判断
+            if (OPER_TYPE == "")
+            {
+                string message = "操作类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
             if (CUST_CODE == "")
             {
                 string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (CONTROLER_ID_NO == "")
+            {
+                string message = "控制人证件号码不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
@@ -2174,9 +2216,21 @@ namespace Yushen.WebService.KessClient
             )
         {
             // 前置条件判断
+            if (SURVEY_SN == "")
+            {
+                string message = "调查表编码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
             if (USER_CODE == "")
             {
                 string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (USER_ROLE == "")
+            {
+                string message = "客户角色不能为空";
                 logger.Error(message);
                 throw new Exception(message);
             }
@@ -2193,6 +2247,32 @@ namespace Yushen.WebService.KessClient
             // 调用WebService获取返回值
             Response response = await this.invoke(request);
             
+            // 返回结果
+            return response;
+        }
+
+        /// <summary>
+        /// 风险测评结果查询
+        /// 实现2.104 风险测评结果查询
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码（非必传）</param>
+        /// <param name="YMT_CODE">一码通账号（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> queryStkYmt(
+                string CUST_CODE = "", //客户代码（非必传）
+                string YMT_CODE = "" //一码通账号（非必传）
+            )
+        {
+            // 前置条件判断
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "queryStkYmt");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（非必传）
+            request.setAttr("YMT_CODE", YMT_CODE); //一码通账号（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
             // 返回结果
             return response;
         }

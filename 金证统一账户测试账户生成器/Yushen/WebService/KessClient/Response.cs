@@ -149,7 +149,18 @@ namespace Yushen.WebService.KessClient
         /// <returns></returns>
         public string getValue(string columnName)
         {
-            return getSingleNodeText("/response/record/row/" + columnName.ToUpper());
+            //return getSingleNodeText("/response/record/row/" + columnName.ToUpper());
+            if (Record.Rows.Count == 0)
+            {
+                throw new Exception("找不到数据，因为记录集是空的");
+            }
+
+            if (Record.Columns.Contains(columnName) == false)
+            {
+                throw new Exception(columnName + "字段不存在");
+            }
+
+            return Record.Rows[0][columnName].ToString();
         }
 
         /// <summary>

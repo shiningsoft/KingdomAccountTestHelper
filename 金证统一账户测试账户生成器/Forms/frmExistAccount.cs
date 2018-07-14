@@ -219,7 +219,7 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 await syncSurveyAns2Kbss();
-                queryRiskSurveyResult();
+                await queryRiskSurveyResult();
             }
             catch (Exception ex)
             {
@@ -235,22 +235,7 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
-                if (tbxCustCode.Text.Trim() == "" && tbxCuacctCondition.Text.Trim() == "")
-                {
-                    throw new Exception("客户号或资金账号不能同时为空");
-                }
-
-                Response response;
-
-                if (tbxCuacctCondition.Text.Trim() != "")
-                {
-                    response = await kess.queryCustInfoByCuacct(tbxCuacctCondition.Text.Trim(), tbxCustCode.Text.Trim());
-                    if (response.length == 0)
-                    {
-                        throw new Exception("没有找到对应的客户，请确认客户代码和资金账号是否正确？");
-                    }
-                    tbxCustCode.Text = response.getValue("USER_CODE");
-                }
+                await queryCustCode();
 
                 await mdfUserPassword();
             }
@@ -825,34 +810,36 @@ namespace 金证统一账户测试账户生成器
             image.Save(Environment.CurrentDirectory + @"\身份证背面.jpg");
             System.Diagnostics.Process.Start(Environment.CurrentDirectory + @"\身份证背面.jpg");
         }
-        
-        async private void btnQueryByUserCode_Click(object sender, EventArgs e)
-        {
-            btnQueryByUserCode.Enabled = false;
 
+        /// <summary>
+        /// 根据查询条件从柜台取得客户号
+        /// </summary>
+        private async Task queryCustCode()
+        {
+            if (tbxCustCode.Text.Trim() == "" && tbxCuacctCondition.Text.Trim() == "")
+            {
+                throw new Exception("客户号或资金账号不能同时为空");
+            }
+
+            Response response;
+
+            if (tbxCuacctCondition.Text.Trim() != "")
+            {
+                response = await kess.queryCustInfoByCuacct(tbxCuacctCondition.Text.Trim(), tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    throw new Exception("没有找到对应的客户，请确认客户代码和资金账号是否正确？");
+                }
+                tbxCustCode.Text = response.getValue("USER_CODE");
+            }
+        }
+
+        private async Task queryCustBasicInfoList()
+        {
             try
             {
-                Reset();
-
-                if (tbxCustCode.Text.Trim()=="" && tbxCuacctCondition.Text.Trim()=="")
-                {
-                    throw new Exception("客户号或资金账号不能同时为空");
-                }
-
-                Response response;
-                
-                if (tbxCuacctCondition.Text.Trim()!="")
-                {
-                    response = await kess.queryCustInfoByCuacct(tbxCuacctCondition.Text.Trim(),tbxCustCode.Text.Trim());
-                    if (response.length == 0)
-                    {
-                        throw new Exception("没有找到对应的客户，请确认客户代码和资金账号是否正确？");
-                    }
-                    tbxCustCode.Text = response.getValue("USER_CODE");
-                }
-
                 // 基本资料
-                response = await kess.queryCustBasicInfoList(tbxCustCode.Text.Trim());
+                Response response = await kess.queryCustBasicInfoList(tbxCustCode.Text.Trim());
                 user_name.Text = response.getValue("user_name");
                 id_code.Text = response.getValue("id_code");
                 id_iss_agcy.Text = response.getValue("id_iss_agcy");
@@ -866,9 +853,22 @@ namespace 金证统一账户测试账户生成器
                 nationality.SelectedValue = response.getValue("NATIONALITY");
                 sex.SelectedValue = response.getValue("sex");
                 education.SelectedValue = response.getValue("education");
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("查询基本资料失败：" + ex.Message);
+            }
+        }
 
+        /// <summary>
+        /// 查询职业信息
+        /// </summary>
+        private async Task getUserOccuInfo()
+        {
+            try
+            {
                 // 职业信息
-                response = await kess.getUserOccuInfo(tbxCustCode.Text.Trim());
+                Response response = await kess.getUserOccuInfo(tbxCustCode.Text.Trim());
                 if (response.length == 0)
                 {
                     resultForm.Append("没有找到职业信息");
@@ -885,9 +885,22 @@ namespace 金证统一账户测试账户生成器
                         cbxOccupation.Text = "";
                     }
                 }
-
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("查询职业信息失败：" + ex.Message);
+            }
+        }
+        
+        /// <summary>
+        /// 查询最近一条风险测评记录
+        /// </summary>
+        private async Task queryLastRiskSurveyResult()
+        {
+            try
+            {
                 // 风险测评
-                response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户);
+                Response response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户);
                 if (response.length == 0)
                 {
                     resultForm.Append("没有找到风险测评记录");
@@ -896,19 +909,22 @@ namespace 金证统一账户测试账户生成器
                 {
                     resultForm.Append("风险测评级别为：" + response.getValue("RATING_LVL_NAME"));
                 }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("查询风险测评记录失败：" + ex.Message);
+            }
+        }
 
-                queryCreditRecord();
-
-                queryUserBeneficiaryInfo();
-
-                queryControllerInfo();
-
-                queryCustAgreement();
-
-                queryRiskSurveyResult();
-
+        /// <summary>
+        /// 查询资金账号
+        /// </summary>
+        private async Task listCuacct()
+        {
+            try
+            {
                 // 查询资金账号
-                response = await kess.listCuacct(tbxCustCode.Text.Trim());
+                Response response = await kess.listCuacct(tbxCustCode.Text.Trim());
                 resultForm.Append("客户号下找到" + response.length.ToString() + "个资金账号。");
 
                 if (response.length > 1)
@@ -919,19 +935,19 @@ namespace 金证统一账户测试账户生成器
                         Dict.CUACCT_STATUS cuacct_statusList = new Dict.CUACCT_STATUS();
 
                         resultForm.Append(
-                            "类型：" + cuacct_attrList.getNameByValue(dr["CUACCT_ATTR"].ToString()) 
-                            + "，账户：" + dr["CUACCT_CODE"].ToString() 
-                            + "，状态：" + cuacct_statusList.getNameByValue(dr["CUACCT_STATUS"].ToString()) 
+                            "类型：" + cuacct_attrList.getNameByValue(dr["CUACCT_ATTR"].ToString())
+                            + "，账户：" + dr["CUACCT_CODE"].ToString()
+                            + "，状态：" + cuacct_statusList.getNameByValue(dr["CUACCT_STATUS"].ToString())
                             + "，是否主资产账户：" + dr["MAIN_FLAG"].ToString()
                         );
 
-                        if (dr["CUACCT_ATTR"].ToString() == Dict.CUACCT_ATTR.普通账户 
-                            && dr["MAIN_FLAG"].ToString() == "1" 
+                        if (dr["CUACCT_ATTR"].ToString() == Dict.CUACCT_ATTR.普通账户
+                            && dr["MAIN_FLAG"].ToString() == "1"
                             && dr["CUACCT_STATUS"].ToString() == Dict.CUACCT_STATUS.正常)
                         {
                             tbxCuacct.Text = dr["CUACCT_CODE"].ToString();
                         }
-                        else if (dr["CUACCT_ATTR"].ToString() == Dict.CUACCT_ATTR.信用账户 
+                        else if (dr["CUACCT_ATTR"].ToString() == Dict.CUACCT_ATTR.信用账户
                             && dr["CUACCT_STATUS"].ToString() == Dict.CUACCT_STATUS.正常)
                         {
                             tbxFislCuacct.Text = dr["CUACCT_CODE"].ToString();
@@ -946,52 +962,74 @@ namespace 金证统一账户测试账户生成器
                 {
                     throw new Exception("客户号下没有开立资金账号，停止处理。");
                 }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("查询资金账号失败：" + ex.Message);
+            }
+        }
 
+        /// <summary>
+        /// 查询一码通
+        /// </summary>
+        private async Task queryYmt()
+        {
+            try
+            {
                 // 查询一码通
-                try
+                Response response = await kess.queryStkYmt(tbxCustCode.Text.Trim());
+                if (response.length == 0)
                 {
-                    resultForm.Append("正在发起中登查询一码通信息，请稍候。。。");
-                    response = await kess.queryYMT(id_code.Text.Trim(), user_name.Text.Trim());
-                    resultForm.Append("从中登找到该客户的" + response.length.ToString() + "个一码通账号。");
-                    Dict.YMT_STATUS ymtStatusList = new Dict.YMT_STATUS();
-                    foreach (DataRow row in response.Rows)
-                    {
-                        string ymtStatus = ymtStatusList.getNameByValue(row["YMT_STATUS"].ToString());
+                    resultForm.Append("没有查询到柜台一码通信息，原因：" + response.prompt);
 
-                        resultForm.Append(
-                            "一码通账号：" + response.getValue("YMT_CODE") +
-                            "，账户状态：" + ymtStatus
-                        );
+                    try
+                    {
+                        resultForm.Append("正在发起中登查询一码通信息，请稍候。。。");
+                        response = await kess.queryYMT(id_code.Text.Trim(), user_name.Text.Trim());
+                        resultForm.Append("从中登找到该客户的" + response.length.ToString() + "个一码通账号。");
+                        
+                        foreach (DataRow row in response.TranslatedRecord.Rows)
+                        {
+                            resultForm.Append(
+                                "一码通账号：" + row["YMT_CODE"] +
+                                "，账户状态：" + row["YMT_STATUS"]
+                            );
+                        }
+                        tbxYMTCode.Text = response.getValue("YMT_CODE");
                     }
+                    catch (Exception ex)
+                    {
+                        resultForm.Append("中登查询一码通失败：" + ex.Message);
+                    }
+                }
+                else
+                {
+                    response.translate(new Dict.YMT_STATUS());
+                    resultForm.Append("从柜台查询到" + response.length + "条一码通信息，一码通状态：" + response.getValue("YMT_STATUS"));
                     tbxYMTCode.Text = response.getValue("YMT_CODE");
                 }
-                catch (Exception ex)
-                {
-                    resultForm.Append(ex.Message);
-                }
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("查询一码通失败：" + ex.Message);
+            }
+        }
 
+        /// <summary>
+        /// 查询系统内股东账户
+        /// </summary>
+        private async Task listOfStkTrdAcct()
+        {
+            try
+            {
                 // 查询系统内股东账号
-                response = await kess.listOfStkTrdAcct(tbxCustCode.Text.Trim());
+                Response response = await kess.listOfStkTrdAcct(tbxCustCode.Text.Trim());
                 resultForm.Append("系统内找到" + response.length.ToString() + "个股东账号。");
 
                 if (response.length > 0)
                 {
-                    // 显示所有股东账户的信息，包括卡号、市场、状态等
-                    Dict.STKBD stkbdList = new Dict.STKBD();
-                    Dict.TRDACCT_EXCLS trdAcctExclsList = new Dict.TRDACCT_EXCLS();
-                    Dict.TRDACCT_STATUS trdAcctStatusList = new Dict.TRDACCT_STATUS();
                     foreach (DataRow ds in response.Rows)
                     {
-                        string stkbd = stkbdList.getNameByValue(ds["STKBD"].ToString());
-                        string trdAcctExcls = trdAcctExclsList.getNameByValue(ds["TRDACCT_EXCLS"].ToString());
-                        string status = trdAcctStatusList.getNameByValue(ds["TRDACCT_STATUS"].ToString());
-
-                        resultForm.Append(
-                            "交易版块：" + stkbd +
-                            "，交易账户：" + ds["TRDACCT"].ToString() +
-                            "，账户类别：" + trdAcctExcls +
-                            "，账户状态：" + status
-                        );
                         if (ds["STKBD"].ToString() == Dict.STKBD.上海A股)
                         {
                             tbxSHAcct.Text = ds["TRDACCT"].ToString();
@@ -1001,21 +1039,29 @@ namespace 金证统一账户测试账户生成器
                             tbxSZAcct.Text = ds["TRDACCT"].ToString();
                         }
                     }
+
+                    // 显示所有股东账户的信息，包括卡号、市场、状态等
+                    foreach (DataRow dr in response.TranslatedRecord.Rows)
+                    {
+                        resultForm.Append(
+                            "交易版块：" + dr["STKBD"].ToString() +
+                            "，交易账户：" + dr["TRDACCT"].ToString() +
+                            "，账户类别：" + dr["TRDACCT_EXCLS"].ToString() +
+                            "，账户状态：" + dr["TRDACCT_STATUS"].ToString()
+                        );
+                    }
                 }
-                
             }
             catch (Exception ex)
             {
-                resultForm.Append(ex.Message);
+                resultForm.Append("查询股东账户失败：" + ex.Message);
             }
-
-            btnQueryByUserCode.Enabled = true;
         }
 
         /// <summary>
         /// 查询诚信记录
         /// </summary>
-        private async void queryCreditRecord()
+        private async Task queryCreditRecord()
         {
             // 诚信记录
             Response response = await kess.qryCreditRecord(tbxCustCode.Text.Trim());
@@ -1034,7 +1080,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询风险测评记录
         /// </summary>
-        private async void queryRiskSurveyResult()
+        private async Task queryRiskSurveyResult()
         {
             btnQueryRiskSurveyResult.Enabled = false;
             try
@@ -1061,23 +1107,9 @@ namespace 金证统一账户测试账户生成器
         }
 
         /// <summary>
-        /// 清空一个DataGridView的数据
-        /// </summary>
-        /// <param name="dgv"></param>
-        private void dgvClear(ref DataGridView dgv)
-        {
-            if (dgv.DataSource!=null)
-            {
-                DataTable dt = (DataTable)dgv.DataSource;
-                dt.Rows.Clear();
-                dgv.DataSource = dt;
-            }
-        }
-
-        /// <summary>
         /// 查询受益人信息
         /// </summary>
-        private async void queryUserBeneficiaryInfo()
+        private async Task queryUserBeneficiaryInfo()
         {
             // 受益人信息
             Response response = await kess.queryUserBeneficiaryInfo(tbxCustCode.Text.Trim());
@@ -1096,7 +1128,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询控制人信息
         /// </summary>
-        private async void queryControllerInfo()
+        private async Task queryControllerInfo()
         {
             // 控制人信息
             Response response = await kess.queryControllerInfo(tbxCustCode.Text.Trim());
@@ -1115,7 +1147,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询协议签署情况
         /// </summary>
-        private async void queryCustAgreement()
+        private async Task queryCustAgreement()
         {
             // 查询协议签署情况
             Response response = await kess.queryCustAgreement(tbxCustCode.Text.Trim());
@@ -1128,6 +1160,66 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("客户已经签署了" + response.length + "种协议。");
                 dgv已签署协议.DataSource = response.TranslatedRecord;
+            }
+        }
+
+        /// <summary>
+        /// 一键查询所有客户信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private async void btnQueryByUserCode_Click(object sender, EventArgs e)
+        {
+            btnQueryByUserCode.Enabled = false;
+
+            try
+            {
+                Reset();
+
+                await queryCustCode();
+
+                await queryCustBasicInfoList();
+
+                await getUserOccuInfo();
+
+                await queryLastRiskSurveyResult();
+
+                await queryCreditRecord();
+
+                await queryUserBeneficiaryInfo();
+
+                await queryControllerInfo();
+
+                await queryCustAgreement();
+
+                await queryRiskSurveyResult();
+
+                await listCuacct();
+
+                await queryYmt();
+
+                await listOfStkTrdAcct();
+                
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append(ex.Message);
+            }
+
+            btnQueryByUserCode.Enabled = true;
+        }
+
+        /// <summary>
+        /// 清空一个DataGridView的数据
+        /// </summary>
+        /// <param name="dgv"></param>
+        private void dgvClear(ref DataGridView dgv)
+        {
+            if (dgv.DataSource!=null)
+            {
+                DataTable dt = (DataTable)dgv.DataSource;
+                dt.Rows.Clear();
+                dgv.DataSource = dt;
             }
         }
 
@@ -1321,7 +1413,7 @@ namespace 金证统一账户测试账户生成器
                     mobile_tel.Text.Trim()
                 );
                 resultForm.Append("增加受益人成功");
-                queryUserBeneficiaryInfo();
+                await queryUserBeneficiaryInfo();
             }
             catch (Exception ex)
             {
@@ -1336,15 +1428,15 @@ namespace 金证统一账户测试账户生成器
                 Response response = await kess.mdfControlLerInfo(
                     Dict.OPERATION_TYPE.增加密码,
                     tbxCustCode.Text.Trim(),
-                    "1",
                     id_code.Text.Trim(),
+                    "1",
                     user_name.Text.Trim(),
                     Dict.ID_TYPE.身份证,
                     id_exp_date.Text.Trim(),
                     mobile_tel.Text.Trim()
                 );
                 resultForm.Append("增加控制人成功");
-                queryControllerInfo();
+                await queryControllerInfo();
             }
             catch (Exception ex)
             {
@@ -1352,9 +1444,9 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private void btnQueryRiskSurveyResult_Click(object sender, EventArgs e)
+        private async void btnQueryRiskSurveyResult_Click(object sender, EventArgs e)
         {
-            queryRiskSurveyResult();
+            await queryRiskSurveyResult();
         }
     }
 }
