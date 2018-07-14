@@ -604,10 +604,10 @@ namespace 金证统一账户测试账户生成器
         {
             Response response = await kess.listStkPbuOrg(Dict.STKBD.上海A股, Settings.Default.开户营业部);
             await kess.stkTrdacctBind(
-                user.cust_code,
+                tbxCustCode.Text.Trim(),
                 response.getValue("STKPBU"),
                 Dict.STKBD.上海A股,
-                user.shacct,
+                tbxSHAcct.Text.Trim(),
                 Dict.TREG_STATUS.首日指定
             );
             resultForm.Append("上海证券账户" + user.shacct + "指定交易成功" + "，交易单元为：" + response.getValue("STKPBU"));
@@ -1229,11 +1229,6 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
-                saveUserInfo();
-                user.cuacct_code = tbxCuacct.Text.Trim();
-                user.ymt_code = tbxYMTCode.Text.Trim();
-                user.shacct = tbxSHAcct.Text.Trim();
-
                 await bindSHAcct();
             }
             catch (Exception ex)

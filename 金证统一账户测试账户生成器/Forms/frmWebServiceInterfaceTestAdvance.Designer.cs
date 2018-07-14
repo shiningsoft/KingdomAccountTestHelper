@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefreshMethonList = new System.Windows.Forms.Button();
             this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
@@ -49,6 +49,12 @@
             this.DD_ITEM = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.INT_ORG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lbInterfaceTitle = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tpResponseDgv = new System.Windows.Forms.TabPage();
+            this.cbxAutoTranslate = new System.Windows.Forms.CheckBox();
+            this.lbResult = new System.Windows.Forms.Label();
+            this.dgvResponse = new System.Windows.Forms.DataGridView();
+            this.tpResponseText = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -59,6 +65,10 @@
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvParams)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDict)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tpResponseDgv.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResponse)).BeginInit();
+            this.tpResponseText.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnRefreshMethonList
@@ -85,11 +95,11 @@
             this.tbxResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxResponse.Location = new System.Drawing.Point(3, 22);
+            this.tbxResponse.Location = new System.Drawing.Point(6, 6);
             this.tbxResponse.Multiline = true;
             this.tbxResponse.Name = "tbxResponse";
             this.tbxResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxResponse.Size = new System.Drawing.Size(517, 535);
+            this.tbxResponse.Size = new System.Drawing.Size(497, 516);
             this.tbxResponse.TabIndex = 25;
             // 
             // btnExecute
@@ -136,7 +146,7 @@
             // 
             // splitContainer1.Panel2
             // 
-            this.splitContainer1.Panel2.Controls.Add(this.tbxResponse);
+            this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1018, 560);
             this.splitContainer1.SplitterDistance = 491;
             this.splitContainer1.TabIndex = 28;
@@ -190,8 +200,8 @@
             // 
             this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnName.DataPropertyName = "字段名";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle15;
             this.ColumnName.FillWeight = 152.2843F;
             this.ColumnName.HeaderText = "字段名";
             this.ColumnName.Name = "ColumnName";
@@ -204,8 +214,8 @@
             // 
             this.ColumnValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnValue.DataPropertyName = "字段值";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle16;
             this.ColumnValue.FillWeight = 140.1015F;
             this.ColumnValue.HeaderText = "字段值";
             this.ColumnValue.Name = "ColumnValue";
@@ -299,6 +309,86 @@
             this.lbInterfaceTitle.TabIndex = 1;
             this.lbInterfaceTitle.Text = "接口名称：";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tpResponseDgv);
+            this.tabControl1.Controls.Add(this.tpResponseText);
+            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Multiline = true;
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(517, 554);
+            this.tabControl1.TabIndex = 26;
+            // 
+            // tpResponseDgv
+            // 
+            this.tpResponseDgv.Controls.Add(this.cbxAutoTranslate);
+            this.tpResponseDgv.Controls.Add(this.lbResult);
+            this.tpResponseDgv.Controls.Add(this.dgvResponse);
+            this.tpResponseDgv.Location = new System.Drawing.Point(4, 4);
+            this.tpResponseDgv.Name = "tpResponseDgv";
+            this.tpResponseDgv.Padding = new System.Windows.Forms.Padding(3);
+            this.tpResponseDgv.Size = new System.Drawing.Size(509, 528);
+            this.tpResponseDgv.TabIndex = 0;
+            this.tpResponseDgv.Text = "图形版";
+            this.tpResponseDgv.UseVisualStyleBackColor = true;
+            // 
+            // cbxAutoTranslate
+            // 
+            this.cbxAutoTranslate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxAutoTranslate.AutoSize = true;
+            this.cbxAutoTranslate.Checked = true;
+            this.cbxAutoTranslate.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbxAutoTranslate.Location = new System.Drawing.Point(431, 6);
+            this.cbxAutoTranslate.Name = "cbxAutoTranslate";
+            this.cbxAutoTranslate.Size = new System.Drawing.Size(72, 16);
+            this.cbxAutoTranslate.TabIndex = 2;
+            this.cbxAutoTranslate.Text = "自动翻译";
+            this.cbxAutoTranslate.UseVisualStyleBackColor = true;
+            this.cbxAutoTranslate.CheckedChanged += new System.EventHandler(this.cbxAutoTranslate_CheckedChanged);
+            // 
+            // lbResult
+            // 
+            this.lbResult.AutoSize = true;
+            this.lbResult.Location = new System.Drawing.Point(7, 7);
+            this.lbResult.Name = "lbResult";
+            this.lbResult.Size = new System.Drawing.Size(41, 12);
+            this.lbResult.TabIndex = 1;
+            this.lbResult.Text = "状态：";
+            // 
+            // dgvResponse
+            // 
+            this.dgvResponse.AllowUserToAddRows = false;
+            this.dgvResponse.AllowUserToDeleteRows = false;
+            this.dgvResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvResponse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvResponse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvResponse.Location = new System.Drawing.Point(6, 28);
+            this.dgvResponse.Name = "dgvResponse";
+            this.dgvResponse.ReadOnly = true;
+            this.dgvResponse.RowHeadersVisible = false;
+            this.dgvResponse.RowTemplate.Height = 23;
+            this.dgvResponse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvResponse.Size = new System.Drawing.Size(497, 494);
+            this.dgvResponse.TabIndex = 0;
+            // 
+            // tpResponseText
+            // 
+            this.tpResponseText.Controls.Add(this.tbxResponse);
+            this.tpResponseText.Location = new System.Drawing.Point(4, 4);
+            this.tpResponseText.Name = "tpResponseText";
+            this.tpResponseText.Padding = new System.Windows.Forms.Padding(3);
+            this.tpResponseText.Size = new System.Drawing.Size(509, 528);
+            this.tpResponseText.TabIndex = 1;
+            this.tpResponseText.Text = "文字版";
+            this.tpResponseText.UseVisualStyleBackColor = true;
+            // 
             // frmWebServiceInterfaceTestAdvance
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -316,7 +406,6 @@
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
-            this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             this.splitContainer2.Panel1.ResumeLayout(false);
@@ -326,6 +415,12 @@
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvParams)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDict)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tpResponseDgv.ResumeLayout(false);
+            this.tpResponseDgv.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvResponse)).EndInit();
+            this.tpResponseText.ResumeLayout(false);
+            this.tpResponseText.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +447,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn DD_ITEM_NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn DD_ITEM;
         private System.Windows.Forms.DataGridViewTextBoxColumn INT_ORG;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tpResponseDgv;
+        private System.Windows.Forms.TabPage tpResponseText;
+        private System.Windows.Forms.DataGridView dgvResponse;
+        private System.Windows.Forms.Label lbResult;
+        private System.Windows.Forms.CheckBox cbxAutoTranslate;
     }
 }
