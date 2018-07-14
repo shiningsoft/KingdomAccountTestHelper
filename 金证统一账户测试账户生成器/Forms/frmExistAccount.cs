@@ -202,12 +202,11 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 saveUserInfo();
-                user.cuacct_code = tbxCuacct.Text.Trim();
                 await signBank();
             }
             catch (Exception ex)
             {
-                resultForm.Append("预指定失败：" + ex.Message);
+                resultForm.Append("三方存管签约失败：" + ex.Message);
             }
             btnBankSign.Enabled = true;
         }
@@ -484,7 +483,7 @@ namespace 金证统一账户测试账户生成器
 
             if (cbxCubsbScOpenAcctOpType.SelectedValue.ToString() == Dict.CubsbScOpenAcctOpType.预指定)
             {
-                result = await kess.cubsbScOpenAcct("1", user.cuacct_code, bank_code.SelectedValue.ToString());
+                result = await kess.cubsbScOpenAcct("1", tbxCuacct.Text.Trim(), bank_code.SelectedValue.ToString());
 
                 if (result)
                 {
@@ -493,7 +492,7 @@ namespace 金证统一账户测试账户生成器
             }
             else if (cbxCubsbScOpenAcctOpType.SelectedValue.ToString() == Dict.CubsbScOpenAcctOpType.一步式)
             {
-                result = await kess.cubsbScOpenAcct("0", user.cuacct_code, bank_code.SelectedValue.ToString(), user.cust_code, tbxBankAcctCode.Text.Trim());
+                result = await kess.cubsbScOpenAcct("0", tbxCuacct.Text.Trim(), bank_code.SelectedValue.ToString(), tbxCustCode.Text.Trim(), tbxBankAcctCode.Text.Trim());
 
                 if (result)
                 {
@@ -610,7 +609,7 @@ namespace 金证统一账户测试账户生成器
                 tbxSHAcct.Text.Trim(),
                 Dict.TREG_STATUS.首日指定
             );
-            resultForm.Append("上海证券账户" + user.shacct + "指定交易成功" + "，交易单元为：" + response.getValue("STKPBU"));
+            resultForm.Append("上海证券账户" + tbxSHAcct.Text + "指定交易成功" + "，交易单元为：" + response.getValue("STKPBU"));
         }
 
         /// <summary>
@@ -620,9 +619,9 @@ namespace 金证统一账户测试账户生成器
         {
             // 新开深A账户
             Response response = await kess.openStkAcct(user, Dict.ACCT_TYPE.深市A股账户);
-            user.szacct = response.getValue("TRDACCT");
-            resultForm.Append("深A股东账号开立成功：" + user.szacct);
-            tbxSZAcct.Text = user.szacct;
+            tbxSHAcct.Text = response.getValue("TRDACCT");
+            resultForm.Append("深A股东账号开立成功：" + tbxSHAcct.Text);
+            tbxSZAcct.Text = tbxSHAcct.Text;
         }
 
         /// <summary>
@@ -972,7 +971,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询一码通
         /// </summary>
-        private async Task queryYmt()
+        private async Task<int> queryStkYmt()
         {
             try
             {
@@ -982,25 +981,6 @@ namespace 金证统一账户测试账户生成器
                 {
                     resultForm.Append("没有查询到柜台一码通信息，原因：" + response.prompt);
 
-                    try
-                    {
-                        resultForm.Append("正在发起中登查询一码通信息，请稍候。。。");
-                        response = await kess.queryYMT(id_code.Text.Trim(), user_name.Text.Trim());
-                        resultForm.Append("从中登找到该客户的" + response.length.ToString() + "个一码通账号。");
-                        
-                        foreach (DataRow row in response.TranslatedRecord.Rows)
-                        {
-                            resultForm.Append(
-                                "一码通账号：" + row["YMT_CODE"] +
-                                "，账户状态：" + row["YMT_STATUS"]
-                            );
-                        }
-                        tbxYMTCode.Text = response.getValue("YMT_CODE");
-                    }
-                    catch (Exception ex)
-                    {
-                        resultForm.Append("中登查询一码通失败：" + ex.Message);
-                    }
                 }
                 else
                 {
@@ -1008,10 +988,39 @@ namespace 金证统一账户测试账户生成器
                     resultForm.Append("从柜台查询到" + response.length + "条一码通信息，一码通状态：" + response.getValue("YMT_STATUS"));
                     tbxYMTCode.Text = response.getValue("YMT_CODE");
                 }
+                return response.length;
             }
             catch (Exception ex)
             {
                 resultForm.Append("查询一码通失败：" + ex.Message);
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// 从中登查询一码通
+        /// </summary>
+        /// <returns></returns>
+        private async void queryYMT()
+        {
+            try
+            {
+                resultForm.Append("正在发起中登查询一码通信息，请稍候。。。");
+                Response response = await kess.queryYMT(id_code.Text.Trim(), user_name.Text.Trim());
+                resultForm.Append("从中登找到该客户的" + response.length.ToString() + "个一码通账号。");
+
+                foreach (DataRow row in response.TranslatedRecord.Rows)
+                {
+                    resultForm.Append(
+                        "一码通账号：" + row["YMT_CODE"] +
+                        "，账户状态：" + row["YMT_STATUS"]
+                    );
+                }
+                tbxYMTCode.Text = response.getValue("YMT_CODE");
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("中登查询一码通失败：" + ex.Message);
             }
         }
 
@@ -1196,7 +1205,10 @@ namespace 金证统一账户测试账户生成器
 
                 await listCuacct();
 
-                await queryYmt();
+                if(await queryStkYmt() == 0)
+                {
+                    queryYMT();
+                }
 
                 await listOfStkTrdAcct();
                 
@@ -1229,6 +1241,7 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
+                saveUserInfo();
                 await bindSHAcct();
             }
             catch (Exception ex)
