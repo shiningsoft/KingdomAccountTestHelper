@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefreshMethonList = new System.Windows.Forms.Button();
             this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
@@ -156,7 +156,7 @@
             this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer2.Location = new System.Drawing.Point(3, 19);
+            this.splitContainer2.Location = new System.Drawing.Point(3, 35);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -168,8 +168,8 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.lbQueryDictStatus);
             this.splitContainer2.Panel2.Controls.Add(this.dgvDict);
-            this.splitContainer2.Size = new System.Drawing.Size(485, 538);
-            this.splitContainer2.SplitterDistance = 384;
+            this.splitContainer2.Size = new System.Drawing.Size(485, 522);
+            this.splitContainer2.SplitterDistance = 372;
             this.splitContainer2.TabIndex = 26;
             // 
             // dgvParams
@@ -192,7 +192,7 @@
             this.dgvParams.RowHeadersVisible = false;
             this.dgvParams.RowHeadersWidth = 100;
             this.dgvParams.RowTemplate.Height = 23;
-            this.dgvParams.Size = new System.Drawing.Size(479, 378);
+            this.dgvParams.Size = new System.Drawing.Size(479, 366);
             this.dgvParams.TabIndex = 0;
             this.dgvParams.CurrentCellChanged += new System.EventHandler(this.dgvParams_CurrentCellChanged);
             // 
@@ -200,8 +200,8 @@
             // 
             this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnName.DataPropertyName = "字段名";
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle9;
             this.ColumnName.FillWeight = 152.2843F;
             this.ColumnName.HeaderText = "字段名";
             this.ColumnName.Name = "ColumnName";
@@ -214,8 +214,8 @@
             // 
             this.ColumnValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnValue.DataPropertyName = "字段值";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle10;
             this.ColumnValue.FillWeight = 140.1015F;
             this.ColumnValue.HeaderText = "字段值";
             this.ColumnValue.Name = "ColumnValue";
@@ -236,7 +236,7 @@
             this.lbQueryDictStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbQueryDictStatus.AutoSize = true;
             this.lbQueryDictStatus.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbQueryDictStatus.Location = new System.Drawing.Point(170, 47);
+            this.lbQueryDictStatus.Location = new System.Drawing.Point(170, 45);
             this.lbQueryDictStatus.Name = "lbQueryDictStatus";
             this.lbQueryDictStatus.Size = new System.Drawing.Size(88, 16);
             this.lbQueryDictStatus.TabIndex = 18;
@@ -266,7 +266,7 @@
             this.dgvDict.RowHeadersVisible = false;
             this.dgvDict.RowTemplate.Height = 23;
             this.dgvDict.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDict.Size = new System.Drawing.Size(479, 147);
+            this.dgvDict.Size = new System.Drawing.Size(479, 143);
             this.dgvDict.TabIndex = 17;
             this.dgvDict.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDict_CellDoubleClick);
             // 
@@ -303,11 +303,11 @@
             // lbInterfaceTitle
             // 
             this.lbInterfaceTitle.AutoSize = true;
-            this.lbInterfaceTitle.Location = new System.Drawing.Point(4, 4);
+            this.lbInterfaceTitle.Location = new System.Drawing.Point(8, 14);
             this.lbInterfaceTitle.Name = "lbInterfaceTitle";
             this.lbInterfaceTitle.Size = new System.Drawing.Size(65, 12);
             this.lbInterfaceTitle.TabIndex = 1;
-            this.lbInterfaceTitle.Text = "接口名称：";
+            this.lbInterfaceTitle.Text = "接口功能：";
             // 
             // tabControl1
             // 
@@ -339,11 +339,10 @@
             // 
             // cbxAutoTranslate
             // 
-            this.cbxAutoTranslate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxAutoTranslate.AutoSize = true;
             this.cbxAutoTranslate.Checked = true;
             this.cbxAutoTranslate.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxAutoTranslate.Location = new System.Drawing.Point(431, 6);
+            this.cbxAutoTranslate.Location = new System.Drawing.Point(6, 6);
             this.cbxAutoTranslate.Name = "cbxAutoTranslate";
             this.cbxAutoTranslate.Size = new System.Drawing.Size(72, 16);
             this.cbxAutoTranslate.TabIndex = 2;
@@ -354,7 +353,7 @@
             // lbResult
             // 
             this.lbResult.AutoSize = true;
-            this.lbResult.Location = new System.Drawing.Point(7, 7);
+            this.lbResult.Location = new System.Drawing.Point(107, 7);
             this.lbResult.Name = "lbResult";
             this.lbResult.Size = new System.Drawing.Size(41, 12);
             this.lbResult.TabIndex = 1;

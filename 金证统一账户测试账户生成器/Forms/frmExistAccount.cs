@@ -855,7 +855,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                resultForm.Append("查询基本资料失败：" + ex.Message);
+                throw new Exception("查询基本资料失败：" + ex.Message);
             }
         }
 
@@ -887,7 +887,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                resultForm.Append("查询职业信息失败：" + ex.Message);
+                throw new Exception("查询职业信息失败：" + ex.Message);
             }
         }
         
@@ -911,7 +911,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                resultForm.Append("查询风险测评记录失败：" + ex.Message);
+                throw new Exception("查询风险测评记录失败：" + ex.Message);
             }
         }
 
@@ -964,7 +964,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                resultForm.Append("查询资金账号失败：" + ex.Message);
+                throw new Exception("查询资金账号失败：" + ex.Message);
             }
         }
 
@@ -1063,7 +1063,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                resultForm.Append("查询股东账户失败：" + ex.Message);
+                throw new Exception("查询股东账户失败：" + ex.Message);
             }
         }
 
@@ -1072,17 +1072,24 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private async Task queryCreditRecord()
         {
-            // 诚信记录
-            Response response = await kess.qryCreditRecord(tbxCustCode.Text.Trim());
-            if (response.length == 0)
+            try
             {
-                resultForm.Append("没有找到不良诚信记录");
-                dgvClear(ref dgv诚信记录);
+                // 诚信记录
+                Response response = await kess.qryCreditRecord(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到不良诚信记录");
+                    dgvClear(ref dgv诚信记录);
+                }
+                else
+                {
+                    resultForm.Append("找到" + response.length + "条不良诚信记录");
+                    dgv诚信记录.DataSource = response.TranslatedRecord;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                resultForm.Append("找到" + response.length + "条不良诚信记录");
-                dgv诚信记录.DataSource = response.TranslatedRecord;
+                throw new Exception("查询诚信记录失败：" + ex.Message);
             }
         }
 
@@ -1361,6 +1368,7 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
+                saveUserInfo();
                 Response response = await kess.mdfUserGenInfo(
                     tbxCustCode.Text.Trim(),
                     zip_code.Text.Trim(),
