@@ -14,7 +14,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 软件使用期限
         /// </summary>
-        DateTime expiredDate = DateTime.Parse("2018/9/30");
+        DateTime expiredDate = DateTime.Parse("2018/7/20");
 
         /// <summary>
         /// 金证接口调用工具
@@ -102,10 +102,10 @@ namespace 金证统一账户测试账户生成器
             // 添加功能窗口列表
             forms.Add("存量账户处理", new frmExistAccount(this));
             forms.Add("新开账户", new frmNewAccount(this));
+            forms.Add("接口测试工具图形版", new frmWebServiceInterfaceTestAdvance(this));
+            forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
             forms.Add("数据字典查询", new frmDictQuery(this));
             forms.Add("公共参数查询", new frmCommonParamQuery(this));
-            forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
-            forms.Add("接口测试工具图形版", new frmWebServiceInterfaceTestAdvance(this));
 
             // 将功能窗口添加到菜单
             int i = 0;
@@ -149,17 +149,35 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private void checkExpired()
         {
+#if DEBUG
             if (DateTime.Now.Date > expiredDate)
             {
                 TopMost = true;
                 Show();
                 Activate();
                 timerCheckExpired.Stop();
-                if (MessageBox.Show("软件已经过期，请更新到最新版本。") == DialogResult.OK)
+                if (MessageBox.Show("软件已经过期，请更新到最新版本。) == DialogResult.OK)
                 {
                     Close();
                 }
             }
+#else
+            if (DateTime.Now.Date > expiredDate)
+            {
+                TopMost = true;
+                Show();
+                Activate();
+                timerCheckExpired.Stop();
+                if (MessageBox.Show("软件已经过期，请更新到最新版本。\r\n\r\n购买或续费请您联系申星软件客户服务邮箱：service@shiningsoft.com.cn。") == DialogResult.OK)
+                {
+                    Close();
+                }
+            }
+            else if(DateTime.Now.Date > expiredDate.AddDays(-15))
+            {
+                MessageBox.Show("软件将于" + (expiredDate - DateTime.Now).Days.ToString() + "天后到期。\r\n\r\n购买或续费请您联系申星软件客户服务邮箱：service@shiningsoft.com.cn。");
+            }
+#endif
         }
 
         /// <summary>
