@@ -55,18 +55,19 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.button1_Click);
             // 
-            // ResultForm
+            // frmResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(571, 340);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.infoBox);
-            this.Name = "ResultForm";
+            this.Name = "frmResultForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "执行结果";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ResultForm_FormClosing);
+            this.LocationChanged += new System.EventHandler(this.frmResultForm_LocationChanged);
             this.ResumeLayout(false);
             this.PerformLayout();
 

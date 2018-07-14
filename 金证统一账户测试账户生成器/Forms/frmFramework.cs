@@ -29,7 +29,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 用于显示执行结果和错误消息的窗体
         /// </summary>
-        public frmResultForm resultForm = new frmResultForm();
+        public frmResultForm resultForm;
 
         /// <summary>
         /// 关于窗体
@@ -113,6 +113,9 @@ namespace 金证统一账户测试账户生成器
             timerCheckExpired.Interval = 15000;
             timerCheckExpired.Tick += TimerCheckExpired_Tick;
             timerCheckExpired.Start();
+
+            resultForm = new frmResultForm(this);
+            resultForm.Location = new System.Drawing.Point(Location.X + Width, Location.Y);
 
             // 添加功能窗口列表
             forms.Add("存量账户处理", new frmExistAccount(this));
@@ -462,6 +465,14 @@ namespace 金证统一账户测试账户生成器
         private void 自动重新登录toolStripMenuItem_Click(object sender, EventArgs e)
         {
             kess.autoRelogin = 自动重新登录toolStripMenuItem.Checked;
+        }
+
+        private void frmFramework_LocationChanged(object sender, EventArgs e)
+        {
+            if (resultForm != null)
+            {
+                resultForm.refreshLocation();
+            }
         }
     }
 }
