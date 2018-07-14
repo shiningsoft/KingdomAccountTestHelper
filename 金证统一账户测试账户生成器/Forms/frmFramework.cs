@@ -47,11 +47,6 @@ namespace 金证统一账户测试账户生成器
         frmStartLogo frmStartLogo = new frmStartLogo();
         
         /// <summary>
-        /// 用于启动封面淡出效果的计时器
-        /// </summary>
-        Timer timerStartLogoFade = new Timer();
-
-        /// <summary>
         /// 功能窗体列表
         /// </summary>
         Dictionary<string, Form> forms = new Dictionary<string, Form>();
@@ -84,12 +79,6 @@ namespace 金证统一账户测试账户生成器
             InitializeComponent();
         }
 
-        private void TimerStartLogoFade_Tick(object sender, EventArgs e)
-        {
-            frmStartLogo.Close();
-            timerStartLogoFade.Stop();
-        }
-
         /// <summary>
         /// 程序初始化
         /// </summary>
@@ -99,13 +88,6 @@ namespace 金证统一账户测试账户生成器
         {
             // 保存默认窗体标题
             defaultTitle = Text;
-
-#if DEBUG
-#else
-            timerStartLogoFade.Interval = 4000;
-            timerStartLogoFade.Tick += TimerStartLogoFade_Tick;
-            timerStartLogoFade.Start();
-#endif
 
             // 启动有效期检查
             Console.WriteLine(expiredDate);

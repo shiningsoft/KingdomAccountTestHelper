@@ -250,7 +250,7 @@ namespace 金证统一账户测试账户生成器
             // label30
             // 
             this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(743, 177);
+            this.label30.Location = new System.Drawing.Point(389, 44);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(65, 12);
             this.label30.TabIndex = 84;
@@ -1098,7 +1098,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnMdfChannels
             // 
-            this.btnMdfChannels.Location = new System.Drawing.Point(814, 199);
+            this.btnMdfChannels.Location = new System.Drawing.Point(566, 39);
             this.btnMdfChannels.Name = "btnMdfChannels";
             this.btnMdfChannels.Size = new System.Drawing.Size(100, 23);
             this.btnMdfChannels.TabIndex = 95;
@@ -1119,7 +1119,7 @@ namespace 金证统一账户测试账户生成器
             // tbChannels
             // 
             this.tbChannels.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的操作渠道", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbChannels.Location = new System.Drawing.Point(814, 174);
+            this.tbChannels.Location = new System.Drawing.Point(460, 41);
             this.tbChannels.Name = "tbChannels";
             this.tbChannels.Size = new System.Drawing.Size(100, 21);
             this.tbChannels.TabIndex = 22;

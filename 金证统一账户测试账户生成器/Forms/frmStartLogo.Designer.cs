@@ -59,6 +59,7 @@
             this.Text = "StartLogo";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.White;
+            this.Shown += new System.EventHandler(this.frmStartLogo_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
