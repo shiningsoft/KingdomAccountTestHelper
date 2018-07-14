@@ -17,7 +17,9 @@ namespace 金证统一账户测试账户生成器
         
         XmlDocument xmlDoc = new XmlDocument();
         DataTable dt = new DataTable();
-
+        Request request;
+        Response response;
+        
         frmResultForm resultForm
         {
             get
@@ -41,26 +43,59 @@ namespace 金证统一账户测试账户生成器
             frmFramework = form;
             InitializeComponent();
         }
-        
+
+        /// <summary>
+        /// 清空一个DataGridView的数据
+        /// </summary>
+        /// <param name="dgv"></param>
+        private void dgvClear(ref DataGridView dgv)
+        {
+            if (dgv.DataSource != null)
+            {
+                DataTable dt = (DataTable)dgv.DataSource;
+                dt.Rows.Clear();
+                dgv.DataSource = dt;
+            }
+        }
+
         private async void btnExecute_Click(object sender, EventArgs e)
         {
             try
             {
+                // 重置结果窗体
                 tbxResponse.Text = "正在执行";
+                lbResult.Text = "状态：正在执行";
+                dgvResponse.DataSource = new DataTable();
 
                 string innerXml = "";
                 foreach (DataRow dr in dt.Rows)
                 {
                     innerXml = innerXml + "<" + dr["字段名"] + ">" + dr["字段值"] + "</" + dr["字段名"]  + ">";
                 }
-                Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text);
+                request = new Request(Settings.Default.操作员代码, cbxMethonList.Text);
                 request.data.InnerXml = innerXml;
-                Response response = await kess.invoke(request);
+                response = await kess.invoke(request);
                 tbxResponse.Text = response.xml;
+
+                lbResult.Text = "状态：Flag:" + response.flag + "  Prompt:" + response.prompt;
+
+                if (response.length>0)
+                {
+                    if (cbxAutoTranslate.Checked)
+                    {
+                        dgvResponse.DataSource = response.TranslatedRecord;
+                    }
+                    else
+                    {
+                        dgvResponse.DataSource = response.Record;
+                    }
+                    dgvResponse.ClearSelection();
+                }
             }
             catch (Exception ex)
             {
                 tbxResponse.Text = "执行失败";
+                lbResult.Text = "状态：执行失败";
                 resultForm.Append(ex.Message);
             }
         }
@@ -209,6 +244,22 @@ namespace 金证统一账户测试账户生成器
             catch (Exception ex)
             {
                 resultForm.Append(ex.Message);
+            }
+        }
+
+        private void cbxAutoTranslate_CheckedChanged(object sender, EventArgs e)
+        {
+            if (response!=null)
+            {
+                if (cbxAutoTranslate.Checked)
+                {
+                    dgvResponse.DataSource = response.TranslatedRecord;
+                }
+                else
+                {
+                    dgvResponse.DataSource = response.Record;
+                }
+                dgvResponse.ClearSelection();
             }
         }
     }

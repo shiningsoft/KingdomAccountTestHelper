@@ -264,7 +264,7 @@ namespace Yushen.WebService.KessClient
         {
             get
             {
-                return Dict.Dict.Translate(DataSet.Tables["row"]);
+                return Dict.Dict.Translate(DataSet.Tables["row"].Copy());
             }
         }
 
