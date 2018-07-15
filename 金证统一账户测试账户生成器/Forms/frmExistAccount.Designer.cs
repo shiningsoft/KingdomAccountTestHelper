@@ -1036,10 +1036,10 @@ namespace 金证统一账户测试账户生成器
             // 
             this.tc用户信息.Controls.Add(this.tp基本资料);
             this.tc用户信息.Controls.Add(this.tpRiskSurveyResult);
-            this.tc用户信息.Controls.Add(this.tp诚信记录);
             this.tc用户信息.Controls.Add(this.tp受益人);
             this.tc用户信息.Controls.Add(this.tp控制人);
             this.tc用户信息.Controls.Add(this.tp已签署协议);
+            this.tc用户信息.Controls.Add(this.tp诚信记录);
             this.tc用户信息.Location = new System.Drawing.Point(12, 69);
             this.tc用户信息.Name = "tc用户信息";
             this.tc用户信息.SelectedIndex = 0;

@@ -102,10 +102,10 @@ namespace 金证统一账户测试账户生成器
             // 添加功能窗口列表
             forms.Add("存量账户处理", new frmExistAccount(this));
             forms.Add("新开账户", new frmNewAccount(this));
-            forms.Add("接口测试工具图形版", new frmWebServiceInterfaceTestAdvance(this));
-            forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
             forms.Add("数据字典查询", new frmDictQuery(this));
             forms.Add("公共参数查询", new frmCommonParamQuery(this));
+            forms.Add("接口测试工具", new frmWebServiceInterfaceTest(this));
+            forms.Add("接口测试工具图形版", new frmWebServiceInterfaceTestAdvance(this));
 
             // 将功能窗口添加到菜单
             int i = 0;
@@ -209,6 +209,8 @@ namespace 金证统一账户测试账户生成器
                 Uri uri = new Uri(Settings.Default.webservice);
                 toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + "获取环境信息中，请稍候......";
 
+                currentUser.Text = "用户：" + Settings.Default.操作员代码;
+
                 // 更新状态栏信息
                 string serverName = "未能获取服务器名称";
                 try
@@ -225,8 +227,6 @@ namespace 金证统一账户测试账户生成器
                 }
 
                 toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + serverName;
-                currentUser.Text = "用户：" + Settings.Default.操作员代码;
-
                 timerRefreshQueue = new Timer();
                 timerRefreshQueue.Interval = 100;
                 timerRefreshQueue.Tick += TimerRefreshQueue_Tick;
