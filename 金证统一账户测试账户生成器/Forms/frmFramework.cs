@@ -156,7 +156,7 @@ namespace 金证统一账户测试账户生成器
                 Show();
                 Activate();
                 timerCheckExpired.Stop();
-                if (MessageBox.Show("软件已经过期，请更新到最新版本。) == DialogResult.OK)
+                if (MessageBox.Show("软件已经过期，请更新到最新版本。") == DialogResult.OK)
                 {
                     Close();
                 }
