@@ -120,6 +120,7 @@ namespace 金证统一账户测试账户生成器
             this.label26 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.tbCuacct_cls = new System.Windows.Forms.TextBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tbxFislCuacct = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
@@ -127,6 +128,7 @@ namespace 金证统一账户测试账户生成器
             this.tp基本资料 = new System.Windows.Forms.TabPage();
             this.btnMdfChannels = new System.Windows.Forms.Button();
             this.btnMdfCustBasicInfo = new System.Windows.Forms.Button();
+            this.tbChannels = new System.Windows.Forms.TextBox();
             this.tpRiskSurveyResult = new System.Windows.Forms.TabPage();
             this.btnQueryRiskSurveyResult = new System.Windows.Forms.Button();
             this.label34 = new System.Windows.Forms.Label();
@@ -195,8 +197,8 @@ namespace 金证统一账户测试账户生成器
             this.RECORD_TXT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RECORD_SCORE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RECORD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tbChannels = new System.Windows.Forms.TextBox();
-            this.tbCuacct_cls = new System.Windows.Forms.TextBox();
+            this.tp非居民涉税信息 = new System.Windows.Forms.TabPage();
+            this.dgvCustNraTaxInfo = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -213,6 +215,8 @@ namespace 金证统一账户测试账户生成器
             ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).BeginInit();
             this.tp诚信记录.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).BeginInit();
+            this.tp非居民涉税信息.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustNraTaxInfo)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCubsbScOpenAcctOpType
@@ -995,6 +999,15 @@ namespace 金证统一账户测试账户生成器
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "创业板";
             // 
+            // tbCuacct_cls
+            // 
+            this.tbCuacct_cls.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的资产账户类别", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.tbCuacct_cls.Location = new System.Drawing.Point(112, 20);
+            this.tbCuacct_cls.Name = "tbCuacct_cls";
+            this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
+            this.tbCuacct_cls.TabIndex = 21;
+            this.tbCuacct_cls.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的资产账户类别;
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.tbxFislCuacct);
@@ -1032,6 +1045,7 @@ namespace 金证统一账户测试账户生成器
             this.tc用户信息.Controls.Add(this.tp控制人);
             this.tc用户信息.Controls.Add(this.tp已签署协议);
             this.tc用户信息.Controls.Add(this.tp诚信记录);
+            this.tc用户信息.Controls.Add(this.tp非居民涉税信息);
             this.tc用户信息.Location = new System.Drawing.Point(12, 69);
             this.tc用户信息.Name = "tc用户信息";
             this.tc用户信息.SelectedIndex = 0;
@@ -1107,6 +1121,15 @@ namespace 金证统一账户测试账户生成器
             this.btnMdfCustBasicInfo.Text = "修改客户资料";
             this.btnMdfCustBasicInfo.UseVisualStyleBackColor = true;
             this.btnMdfCustBasicInfo.Click += new System.EventHandler(this.btnMdfCustBasicInfo_Click);
+            // 
+            // tbChannels
+            // 
+            this.tbChannels.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的操作渠道", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
+            this.tbChannels.Location = new System.Drawing.Point(708, 121);
+            this.tbChannels.Name = "tbChannels";
+            this.tbChannels.Size = new System.Drawing.Size(100, 21);
+            this.tbChannels.TabIndex = 22;
+            this.tbChannels.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的操作渠道;
             // 
             // tpRiskSurveyResult
             // 
@@ -1784,23 +1807,33 @@ namespace 金证统一账户测试账户生成器
             this.RECORD_DATE.Name = "RECORD_DATE";
             this.RECORD_DATE.ReadOnly = true;
             // 
-            // tbChannels
+            // tp非居民涉税信息
             // 
-            this.tbChannels.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的操作渠道", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbChannels.Location = new System.Drawing.Point(708, 121);
-            this.tbChannels.Name = "tbChannels";
-            this.tbChannels.Size = new System.Drawing.Size(100, 21);
-            this.tbChannels.TabIndex = 22;
-            this.tbChannels.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的操作渠道;
+            this.tp非居民涉税信息.Controls.Add(this.dgvCustNraTaxInfo);
+            this.tp非居民涉税信息.Location = new System.Drawing.Point(4, 22);
+            this.tp非居民涉税信息.Name = "tp非居民涉税信息";
+            this.tp非居民涉税信息.Padding = new System.Windows.Forms.Padding(3);
+            this.tp非居民涉税信息.Size = new System.Drawing.Size(935, 239);
+            this.tp非居民涉税信息.TabIndex = 6;
+            this.tp非居民涉税信息.Text = "非居民涉税信息";
+            this.tp非居民涉税信息.UseVisualStyleBackColor = true;
             // 
-            // tbCuacct_cls
+            // dgvCustNraTaxInfo
             // 
-            this.tbCuacct_cls.DataBindings.Add(new System.Windows.Forms.Binding("Text", global::金证统一账户测试账户生成器.Properties.Settings.Default, "默认开通的资产账户类别", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-            this.tbCuacct_cls.Location = new System.Drawing.Point(112, 20);
-            this.tbCuacct_cls.Name = "tbCuacct_cls";
-            this.tbCuacct_cls.Size = new System.Drawing.Size(100, 21);
-            this.tbCuacct_cls.TabIndex = 21;
-            this.tbCuacct_cls.Text = global::金证统一账户测试账户生成器.Properties.Settings.Default.默认开通的资产账户类别;
+            this.dgvCustNraTaxInfo.AllowUserToAddRows = false;
+            this.dgvCustNraTaxInfo.AllowUserToDeleteRows = false;
+            this.dgvCustNraTaxInfo.AllowUserToResizeRows = false;
+            this.dgvCustNraTaxInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCustNraTaxInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustNraTaxInfo.Location = new System.Drawing.Point(6, 6);
+            this.dgvCustNraTaxInfo.Name = "dgvCustNraTaxInfo";
+            this.dgvCustNraTaxInfo.ReadOnly = true;
+            this.dgvCustNraTaxInfo.RowHeadersVisible = false;
+            this.dgvCustNraTaxInfo.RowTemplate.Height = 23;
+            this.dgvCustNraTaxInfo.Size = new System.Drawing.Size(923, 227);
+            this.dgvCustNraTaxInfo.TabIndex = 1;
             // 
             // frmExistAccount
             // 
@@ -1843,6 +1876,8 @@ namespace 金证统一账户测试账户生成器
             ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).EndInit();
             this.tp诚信记录.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).EndInit();
+            this.tp非居民涉税信息.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustNraTaxInfo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2005,6 +2040,8 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_SCOPE;
         private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_CELLS;
         private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_COLS;
+        private System.Windows.Forms.TabPage tp非居民涉税信息;
+        private System.Windows.Forms.DataGridView dgvCustNraTaxInfo;
     }
 }
 

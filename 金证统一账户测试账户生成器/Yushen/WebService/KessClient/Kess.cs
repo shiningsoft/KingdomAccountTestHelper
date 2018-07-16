@@ -2276,5 +2276,49 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return response;
         }
+
+        /// <summary>
+        /// 非居民金融账户涉税信息查询
+        /// 实现2.272	非居民金融账户涉税信息查询
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="CTRL_FLAG">是否控制人（0非控制人,默认为0,1控制人）（非必传）</param>
+        /// <param name="CTRL_NO">控制人编号（非必传）</param>
+        /// <param name="CITIZENSHIP">国籍（非必传）</param>
+        /// <param name="TAXPAYER_IDNO">纳税人识别号（非必传）</param>
+        /// <param name="SERIAL_NO">流水序号（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> qryCustNraTaxInfo(
+                string CUST_CODE, //客户代码（必传）
+                string CTRL_FLAG = "", //是否控制人（0非控制人,默认为0,1控制人）（非必传）
+                string CTRL_NO = "", //控制人编号（非必传）
+                string CITIZENSHIP = "", //国籍（非必传）
+                string TAXPAYER_IDNO = "", //纳税人识别号（非必传）
+                string SERIAL_NO = "" //流水序号（非必传）
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "qryCustNraTaxInfo");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（必传）
+            request.setAttr("CTRL_FLAG", CTRL_FLAG); //是否控制人（0非控制人,默认为0,1控制人）（非必传）
+            request.setAttr("CTRL_NO", CTRL_NO); //控制人编号（非必传）
+            request.setAttr("CITIZENSHIP", CITIZENSHIP); //国籍（非必传）
+            request.setAttr("TAXPAYER_IDNO", TAXPAYER_IDNO); //纳税人识别号（非必传）
+            request.setAttr("SERIAL_NO", SERIAL_NO); //流水序号（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 返回结果
+            return response;
+        }
     }
 }

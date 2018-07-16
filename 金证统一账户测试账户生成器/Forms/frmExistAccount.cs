@@ -1093,6 +1093,32 @@ namespace 金证统一账户测试账户生成器
         }
 
         /// <summary>
+        /// 查询非居民涉税信息
+        /// </summary>
+        private async Task qryCustNraTaxInfo()
+        {
+            try
+            {
+                // 诚信记录
+                Response response = await kess.qryCustNraTaxInfo(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到非居民金融账户涉税信息");
+                    dgvClear(ref dgvCustNraTaxInfo);
+                }
+                else
+                {
+                    resultForm.Append("找到" + response.length + "条非居民金融账户涉税信息");
+                    dgvCustNraTaxInfo.DataSource = response.TranslatedRecord;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("查询非居民金融账户涉税信息失败：" + ex.Message);
+            }
+        }
+
+        /// <summary>
         /// 查询风险测评记录
         /// </summary>
         private async Task queryRiskSurveyResult()
@@ -1208,6 +1234,8 @@ namespace 金证统一账户测试账户生成器
                 await queryCustAgreement();
 
                 await queryRiskSurveyResult();
+
+                await qryCustNraTaxInfo();
 
                 await listCuacct();
 
@@ -1345,6 +1373,7 @@ namespace 金证统一账户测试账户生成器
             dgvClear(ref dgv控制人);
             dgvClear(ref dgv诚信记录);
             dgvClear(ref dgvRiskSurvey);
+            dgvClear(ref dgvCustNraTaxInfo);
         }
 
         private void tbxCustCode_KeyDown(object sender, KeyEventArgs e)
