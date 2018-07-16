@@ -590,7 +590,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnBankSign
             // 
-            this.btnBankSign.Location = new System.Drawing.Point(506, 47);
+            this.btnBankSign.Location = new System.Drawing.Point(294, 47);
             this.btnBankSign.Name = "btnBankSign";
             this.btnBankSign.Size = new System.Drawing.Size(100, 23);
             this.btnBankSign.TabIndex = 26;
@@ -600,7 +600,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnSubmitRiskTest
             // 
-            this.btnSubmitRiskTest.Location = new System.Drawing.Point(400, 47);
+            this.btnSubmitRiskTest.Location = new System.Drawing.Point(612, 20);
             this.btnSubmitRiskTest.Name = "btnSubmitRiskTest";
             this.btnSubmitRiskTest.Size = new System.Drawing.Size(100, 23);
             this.btnSubmitRiskTest.TabIndex = 25;
@@ -610,7 +610,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnSetPassword
             // 
-            this.btnSetPassword.Location = new System.Drawing.Point(294, 47);
+            this.btnSetPassword.Location = new System.Drawing.Point(294, 20);
             this.btnSetPassword.Name = "btnSetPassword";
             this.btnSetPassword.Size = new System.Drawing.Size(100, 23);
             this.btnSetPassword.TabIndex = 24;
@@ -988,7 +988,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnAddControllerInfo
             // 
-            this.btnAddControllerInfo.Location = new System.Drawing.Point(400, 20);
+            this.btnAddControllerInfo.Location = new System.Drawing.Point(506, 20);
             this.btnAddControllerInfo.Name = "btnAddControllerInfo";
             this.btnAddControllerInfo.Size = new System.Drawing.Size(100, 23);
             this.btnAddControllerInfo.TabIndex = 82;
@@ -998,7 +998,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnAddBeneficirayInfo
             // 
-            this.btnAddBeneficirayInfo.Location = new System.Drawing.Point(294, 20);
+            this.btnAddBeneficirayInfo.Location = new System.Drawing.Point(400, 20);
             this.btnAddBeneficirayInfo.Name = "btnAddBeneficirayInfo";
             this.btnAddBeneficirayInfo.Size = new System.Drawing.Size(100, 23);
             this.btnAddBeneficirayInfo.TabIndex = 81;
