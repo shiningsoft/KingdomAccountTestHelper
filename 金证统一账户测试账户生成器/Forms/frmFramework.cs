@@ -474,5 +474,22 @@ namespace 金证统一账户测试账户生成器
                 resultForm.refreshLocation();
             }
         }
+
+        private void frmFramework_Resize(object sender, EventArgs e)
+        {
+            if (resultForm == null)
+            {
+                return;
+            }
+
+            if (WindowState == FormWindowState.Minimized)
+            {
+                resultForm.WindowState = FormWindowState.Minimized;
+            }
+            else if (WindowState == FormWindowState.Normal)
+            {
+                resultForm.WindowState = FormWindowState.Normal;
+            }
+        }
     }
 }

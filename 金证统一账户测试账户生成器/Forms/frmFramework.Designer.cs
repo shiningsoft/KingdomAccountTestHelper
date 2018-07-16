@@ -269,6 +269,7 @@ namespace 金证统一账户测试账户生成器
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmFramework_FormClosing);
             this.Load += new System.EventHandler(this.Main_Load);
             this.LocationChanged += new System.EventHandler(this.frmFramework_LocationChanged);
+            this.Resize += new System.EventHandler(this.frmFramework_Resize);
             this.menuStrip.ResumeLayout(false);
             this.menuStrip.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
