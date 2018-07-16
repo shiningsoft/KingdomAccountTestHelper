@@ -306,7 +306,7 @@ namespace Yushen.WebService.KessClient
 
             set
             {
-                if (!Validator.IsInteger(value))
+                if (!Validator.IsInteger(value) || value.Length != 8)
                 {
                     string message = value.ToString() + "证件开始日期格式不正确";
                     logger.Error(message);

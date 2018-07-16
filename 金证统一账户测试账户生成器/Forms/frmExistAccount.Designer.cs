@@ -199,6 +199,10 @@ namespace 金证统一账户测试账户生成器
             this.RECORD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp非居民涉税信息 = new System.Windows.Forms.TabPage();
             this.dgvCustNraTaxInfo = new System.Windows.Forms.DataGridView();
+            this.非金融涉税信息CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.非金融涉税信息CUST_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TAX_RESIDENT_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lbLastRiskSurveyDate = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1133,6 +1137,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tpRiskSurveyResult
             // 
+            this.tpRiskSurveyResult.Controls.Add(this.lbLastRiskSurveyDate);
             this.tpRiskSurveyResult.Controls.Add(this.btnQueryRiskSurveyResult);
             this.tpRiskSurveyResult.Controls.Add(this.label34);
             this.tpRiskSurveyResult.Controls.Add(this.dtpEND_DATE);
@@ -1152,7 +1157,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // btnQueryRiskSurveyResult
             // 
-            this.btnQueryRiskSurveyResult.Location = new System.Drawing.Point(376, 210);
+            this.btnQueryRiskSurveyResult.Location = new System.Drawing.Point(363, 210);
             this.btnQueryRiskSurveyResult.Name = "btnQueryRiskSurveyResult";
             this.btnQueryRiskSurveyResult.Size = new System.Drawing.Size(77, 23);
             this.btnQueryRiskSurveyResult.TabIndex = 52;
@@ -1163,7 +1168,7 @@ namespace 金证统一账户测试账户生成器
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(198, 216);
+            this.label34.Location = new System.Drawing.Point(185, 216);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(65, 12);
             this.label34.TabIndex = 51;
@@ -1173,7 +1178,7 @@ namespace 金证统一账户测试账户生成器
             // 
             this.dtpEND_DATE.CustomFormat = "yyyyMMdd";
             this.dtpEND_DATE.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpEND_DATE.Location = new System.Drawing.Point(269, 210);
+            this.dtpEND_DATE.Location = new System.Drawing.Point(256, 210);
             this.dtpEND_DATE.Name = "dtpEND_DATE";
             this.dtpEND_DATE.Size = new System.Drawing.Size(101, 21);
             this.dtpEND_DATE.TabIndex = 50;
@@ -1827,6 +1832,10 @@ namespace 金证统一账户测试账户生成器
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCustNraTaxInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustNraTaxInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.非金融涉税信息CUST_CODE,
+            this.非金融涉税信息CUST_NAME,
+            this.TAX_RESIDENT_TYPE});
             this.dgvCustNraTaxInfo.Location = new System.Drawing.Point(6, 6);
             this.dgvCustNraTaxInfo.Name = "dgvCustNraTaxInfo";
             this.dgvCustNraTaxInfo.ReadOnly = true;
@@ -1835,12 +1844,46 @@ namespace 金证统一账户测试账户生成器
             this.dgvCustNraTaxInfo.Size = new System.Drawing.Size(923, 227);
             this.dgvCustNraTaxInfo.TabIndex = 1;
             // 
+            // 非金融涉税信息CUST_CODE
+            // 
+            this.非金融涉税信息CUST_CODE.DataPropertyName = "CUST_CODE";
+            this.非金融涉税信息CUST_CODE.HeaderText = "客户代码";
+            this.非金融涉税信息CUST_CODE.Name = "非金融涉税信息CUST_CODE";
+            this.非金融涉税信息CUST_CODE.ReadOnly = true;
+            this.非金融涉税信息CUST_CODE.Visible = false;
+            // 
+            // 非金融涉税信息CUST_NAME
+            // 
+            this.非金融涉税信息CUST_NAME.DataPropertyName = "CUST_NAME";
+            this.非金融涉税信息CUST_NAME.HeaderText = "客户名称";
+            this.非金融涉税信息CUST_NAME.Name = "非金融涉税信息CUST_NAME";
+            this.非金融涉税信息CUST_NAME.ReadOnly = true;
+            // 
+            // TAX_RESIDENT_TYPE
+            // 
+            this.TAX_RESIDENT_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.TAX_RESIDENT_TYPE.DataPropertyName = "TAX_RESIDENT_TYPE";
+            this.TAX_RESIDENT_TYPE.HeaderText = "税收居民身份";
+            this.TAX_RESIDENT_TYPE.MinimumWidth = 120;
+            this.TAX_RESIDENT_TYPE.Name = "TAX_RESIDENT_TYPE";
+            this.TAX_RESIDENT_TYPE.ReadOnly = true;
+            this.TAX_RESIDENT_TYPE.Width = 120;
+            // 
+            // lbLastRiskSurveyDate
+            // 
+            this.lbLastRiskSurveyDate.AutoSize = true;
+            this.lbLastRiskSurveyDate.Location = new System.Drawing.Point(446, 216);
+            this.lbLastRiskSurveyDate.Name = "lbLastRiskSurveyDate";
+            this.lbLastRiskSurveyDate.Size = new System.Drawing.Size(89, 12);
+            this.lbLastRiskSurveyDate.TabIndex = 53;
+            this.lbLastRiskSurveyDate.Text = "最后测评日期：";
+            // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1001, 634);
+            this.ClientSize = new System.Drawing.Size(1018, 634);
             this.Controls.Add(this.tc用户信息);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -2042,6 +2085,10 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_COLS;
         private System.Windows.Forms.TabPage tp非居民涉税信息;
         private System.Windows.Forms.DataGridView dgvCustNraTaxInfo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 非金融涉税信息CUST_CODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 非金融涉税信息CUST_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TAX_RESIDENT_TYPE;
+        private System.Windows.Forms.Label lbLastRiskSurveyDate;
     }
 }
 

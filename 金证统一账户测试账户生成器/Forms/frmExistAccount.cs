@@ -901,11 +901,12 @@ namespace 金证统一账户测试账户生成器
                 Response response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户);
                 if (response.length == 0)
                 {
-                    resultForm.Append("没有找到风险测评记录");
+                    resultForm.Append("没有找到最新的风险测评记录");
                 }
                 else
                 {
-                    resultForm.Append("风险测评级别为：" + response.getValue("RATING_LVL_NAME"));
+                    resultForm.Append("最新的风险测评级别为：" + response.getValue("RATING_LVL_NAME") + "，测评日期：" + response.getValue("RATING_DATE"));
+                    lbLastRiskSurveyDate.Text = "最后测评日期：" + response.getValue("RATING_DATE");
                 }
             }
             catch (Exception ex)
@@ -1121,16 +1122,16 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询风险测评记录
         /// </summary>
-        private async Task queryRiskSurveyResult()
+        private async Task<int> queryRiskSurveyResult()
         {
-            btnQueryRiskSurveyResult.Enabled = false;
             try
             {
+                btnQueryRiskSurveyResult.Enabled = false;
                 // 风险测评
                 Response response = await kess.queryRiskSurveyResult(Settings.Default.SURVEY_SN, tbxCustCode.Text.Trim(), Dict.USER_ROLE.客户, dtpBGN_DATE.Value.ToString("yyyyMMdd"), dtpEND_DATE.Value.ToString("yyyyMMdd"));
                 if (response.length == 0)
                 {
-                    resultForm.Append("没有找到风险测评记录");
+                    resultForm.Append(dtpBGN_DATE.Value.ToString("yyyyMMdd") +"至"+ dtpEND_DATE.Value.ToString("yyyyMMdd") + "期间没有找到风险测评记录");
                     dgvClear(ref dgvRiskSurvey);
                 }
                 else
@@ -1138,13 +1139,17 @@ namespace 金证统一账户测试账户生成器
                     resultForm.Append("找到" + response.length + "条风险测评记录");
                     dgvRiskSurvey.DataSource = response.TranslatedRecord;
                     dgvRiskSurvey.Sort(dgvRiskSurvey.Columns["ORDINAL"], System.ComponentModel.ListSortDirection.Descending);
+                    lbLastRiskSurveyDate.Text = "最后测评日期：" + dgvRiskSurvey.Rows[0].Cells["RATING_DATE"].Value.ToString();
                 }
+                btnQueryRiskSurveyResult.Enabled = true;
+                return response.length;
             }
             catch (Exception ex)
             {
                 resultForm.Append("查询风险测评结果失败：" + ex.Message);
+                btnQueryRiskSurveyResult.Enabled = true;
+                return -1;
             }
-            btnQueryRiskSurveyResult.Enabled = true;
         }
 
         /// <summary>
@@ -1223,7 +1228,10 @@ namespace 金证统一账户测试账户生成器
 
                 await getUserOccuInfo();
 
-                await queryLastRiskSurveyResult();
+                if(await queryRiskSurveyResult() <= 0)
+                {
+                    await queryLastRiskSurveyResult();
+                }
 
                 await queryCreditRecord();
 
@@ -1232,8 +1240,6 @@ namespace 金证统一账户测试账户生成器
                 await queryControllerInfo();
 
                 await queryCustAgreement();
-
-                await queryRiskSurveyResult();
 
                 await qryCustNraTaxInfo();
 
@@ -1374,6 +1380,7 @@ namespace 金证统一账户测试账户生成器
             dgvClear(ref dgv诚信记录);
             dgvClear(ref dgvRiskSurvey);
             dgvClear(ref dgvCustNraTaxInfo);
+            lbLastRiskSurveyDate.Text = "最后测评日期：";
         }
 
         private void tbxCustCode_KeyDown(object sender, KeyEventArgs e)

@@ -12,6 +12,26 @@ using System.Reflection;
 namespace Yushen.WebService.KessClient.Dict
 {
     /// <summary>
+    /// 税收居民身份
+    /// </summary>
+    class TAX_RESIDENT_TYPE : Dict
+    {
+        public const string 仅为中国税收居民 = "1";
+        public const string 仅为非居民 = "2";
+        public const string 既是中国税收居民又是其他国家或地区税收居民 = "3";
+        public const string 不配合客户 = "4";
+    }
+    /// <summary>
+    /// 是否消极非金融机构
+    /// </summary>
+    class PASSIVE_NFE : Dict
+    {
+        public const string 居民消极非金融机构 = "1";
+        public const string 非居民消极非金融机构 = "2";
+        public const string 其它机构 = "3";
+    }
+    
+    /// <summary>
     /// 诚信记录来源
     /// </summary>
     class RECORD_SOURCE : Dict
@@ -26,7 +46,7 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 其他 = "99";
         public const string 无不良诚信记录 = "X1";
     }
-    
+
     /// <summary>
     /// 认证类型
     /// </summary>
