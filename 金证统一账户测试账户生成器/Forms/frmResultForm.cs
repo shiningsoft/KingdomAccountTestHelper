@@ -39,6 +39,7 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         public void refreshLocation()
         {
+            Console.WriteLine("X:" + positionX + "\tY:" + positionY);
             Location = new System.Drawing.Point(frmFramework.Location.X + positionX, frmFramework.Location.Y + positionY);
         }
 
