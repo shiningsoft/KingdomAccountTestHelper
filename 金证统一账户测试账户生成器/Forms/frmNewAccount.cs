@@ -90,6 +90,7 @@ namespace 金证统一账户测试账户生成器
                 bank_code.DisplayMember = "name";
                 bank_code.ValueMember = "value";
                 bank_code.DataSource = bankCodeList.DataTable;
+                bank_code.SelectedValue = Settings.Default.默认开通的银行类型;
 
                 if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
                 {
@@ -1021,6 +1022,14 @@ namespace 金证统一账户测试账户生成器
                 resultForm.Append("增加控制人失败：" + ex.Message);
             }
             btnAddControllerInfo.Enabled = true;
+        }
+
+        private void bank_code_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bank_code.SelectedValue.ToString() != "")
+            {
+                Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
+            }
         }
     }
 }

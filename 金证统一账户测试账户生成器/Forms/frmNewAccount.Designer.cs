@@ -122,8 +122,8 @@ namespace 金证统一账户测试账户生成器
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnAddBeneficirayInfo = new System.Windows.Forms.Button();
             this.btnAddControllerInfo = new System.Windows.Forms.Button();
+            this.btnAddBeneficirayInfo = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -374,6 +374,7 @@ namespace 金证统一账户测试账户生成器
             this.bank_code.Name = "bank_code";
             this.bank_code.Size = new System.Drawing.Size(100, 20);
             this.bank_code.TabIndex = 11;
+            this.bank_code.SelectedIndexChanged += new System.EventHandler(this.bank_code_SelectedIndexChanged);
             // 
             // btnValidateId
             // 
@@ -985,16 +986,6 @@ namespace 金证统一账户测试账户生成器
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "开通账户";
             // 
-            // btnAddBeneficirayInfo
-            // 
-            this.btnAddBeneficirayInfo.Location = new System.Drawing.Point(294, 20);
-            this.btnAddBeneficirayInfo.Name = "btnAddBeneficirayInfo";
-            this.btnAddBeneficirayInfo.Size = new System.Drawing.Size(100, 23);
-            this.btnAddBeneficirayInfo.TabIndex = 81;
-            this.btnAddBeneficirayInfo.Text = "增加受益人";
-            this.btnAddBeneficirayInfo.UseVisualStyleBackColor = true;
-            this.btnAddBeneficirayInfo.Click += new System.EventHandler(this.btnAddBeneficirayInfo_Click);
-            // 
             // btnAddControllerInfo
             // 
             this.btnAddControllerInfo.Location = new System.Drawing.Point(400, 20);
@@ -1004,6 +995,16 @@ namespace 金证统一账户测试账户生成器
             this.btnAddControllerInfo.Text = "增加控制人";
             this.btnAddControllerInfo.UseVisualStyleBackColor = true;
             this.btnAddControllerInfo.Click += new System.EventHandler(this.btnAddControllerInfo_Click);
+            // 
+            // btnAddBeneficirayInfo
+            // 
+            this.btnAddBeneficirayInfo.Location = new System.Drawing.Point(294, 20);
+            this.btnAddBeneficirayInfo.Name = "btnAddBeneficirayInfo";
+            this.btnAddBeneficirayInfo.Size = new System.Drawing.Size(100, 23);
+            this.btnAddBeneficirayInfo.TabIndex = 81;
+            this.btnAddBeneficirayInfo.Text = "增加受益人";
+            this.btnAddBeneficirayInfo.UseVisualStyleBackColor = true;
+            this.btnAddBeneficirayInfo.Click += new System.EventHandler(this.btnAddBeneficirayInfo_Click);
             // 
             // frmNewAccount
             // 

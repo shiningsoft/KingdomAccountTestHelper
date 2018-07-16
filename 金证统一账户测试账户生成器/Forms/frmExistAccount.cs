@@ -91,6 +91,7 @@ namespace 金证统一账户测试账户生成器
                 bank_code.DisplayMember = "name";
                 bank_code.ValueMember = "value";
                 bank_code.DataSource = bankCodeList.DataTable;
+                bank_code.SelectedValue = Settings.Default.默认开通的银行类型;
 
                 Dict.OPEN_TYPE openTypeList = new Dict.OPEN_TYPE();
                 cbxOpenType.DisplayMember = "name";
@@ -579,9 +580,8 @@ namespace 金证统一账户测试账户生成器
         {
             // 新开沪A账户
             Response response = await kess.openStkAcct(user, Dict.ACCT_TYPE.沪市A股账户);
-            user.shacct = response.getValue("TRDACCT");
-            resultForm.Append("沪A股东账号开立成功：" + user.shacct);
-            tbxSHAcct.Text = user.shacct;
+            tbxSHAcct.Text = response.getValue("TRDACCT");
+            resultForm.Append("沪A股东账号开立成功：" + tbxSHAcct.Text);
         }
 
         /// <summary>
@@ -619,9 +619,8 @@ namespace 金证统一账户测试账户生成器
         {
             // 新开深A账户
             Response response = await kess.openStkAcct(user, Dict.ACCT_TYPE.深市A股账户);
-            tbxSHAcct.Text = response.getValue("TRDACCT");
-            resultForm.Append("深A股东账号开立成功：" + tbxSHAcct.Text);
-            tbxSZAcct.Text = tbxSHAcct.Text;
+            tbxSZAcct.Text = response.getValue("TRDACCT");
+            resultForm.Append("深A股东账号开立成功：" + tbxSZAcct.Text);
         }
 
         /// <summary>
@@ -1463,6 +1462,14 @@ namespace 金证统一账户测试账户生成器
         private async void btnQueryRiskSurveyResult_Click(object sender, EventArgs e)
         {
             await queryRiskSurveyResult();
+        }
+
+        private void bank_code_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (bank_code.SelectedValue.ToString() != "")
+            {
+                Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
+            }
         }
     }
 }
