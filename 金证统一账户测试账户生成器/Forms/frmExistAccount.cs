@@ -1199,7 +1199,7 @@ namespace 金证统一账户测试账户生成器
             Response response = await kess.queryCustAgreement(tbxCustCode.Text.Trim());
             if (response.length == 0)
             {
-                resultForm.Append(response.prompt);
+                resultForm.Append("没有找到已签署的协议：" + response.prompt);
                 dgvClear(ref dgv已签署协议);
             }
             else if (response.length > 0)

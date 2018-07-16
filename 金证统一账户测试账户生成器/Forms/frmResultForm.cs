@@ -39,8 +39,11 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         public void refreshLocation()
         {
-            Console.WriteLine("X:" + positionX + "\tY:" + positionY);
-            Location = new System.Drawing.Point(frmFramework.Location.X + positionX, frmFramework.Location.Y + positionY);
+            if (frmFramework.WindowState == FormWindowState.Normal)
+            {
+                //Console.WriteLine("X:" + positionX + "\tY:" + positionY);
+                Location = new System.Drawing.Point(frmFramework.Location.X + positionX, frmFramework.Location.Y + positionY);
+            }
         }
 
         private void ResultForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -57,8 +60,11 @@ namespace 金证统一账户测试账户生成器
         /// <param name="e"></param>
         private void frmResultForm_LocationChanged(object sender, EventArgs e)
         {
-            positionX = Location.X - frmFramework.Location.X;
-            positionY = Location.Y - frmFramework.Location.Y;
+            if (WindowState == FormWindowState.Normal && frmFramework.WindowState == FormWindowState.Normal)
+            {
+                positionX = Location.X - frmFramework.Location.X;
+                positionY = Location.Y - frmFramework.Location.Y;
+            }
         }
     }
 }
