@@ -1085,6 +1085,7 @@ namespace 金证统一账户测试账户生成器
                 {
                     resultForm.Append("找到" + response.length + "条不良诚信记录");
                     dgv诚信记录.DataSource = response.TranslatedRecord;
+                    dgv诚信记录.ClearSelection();
                 }
             }
             catch (Exception ex)
@@ -1111,6 +1112,7 @@ namespace 金证统一账户测试账户生成器
                 {
                     resultForm.Append("找到" + response.length + "条非居民金融账户涉税信息");
                     dgvCustNraTaxInfo.DataSource = response.TranslatedRecord;
+                    dgvCustNraTaxInfo.ClearSelection();
                 }
             }
             catch (Exception ex)
@@ -1139,6 +1141,7 @@ namespace 金证统一账户测试账户生成器
                     resultForm.Append("找到" + response.length + "条风险测评记录");
                     dgvRiskSurvey.DataSource = response.TranslatedRecord;
                     dgvRiskSurvey.Sort(dgvRiskSurvey.Columns["ORDINAL"], System.ComponentModel.ListSortDirection.Descending);
+                    dgvRiskSurvey.ClearSelection();
                     lbLastRiskSurveyDate.Text = "最后测评日期：" + dgvRiskSurvey.Rows[0].Cells["RATING_DATE"].Value.ToString();
                 }
                 btnQueryRiskSurveyResult.Enabled = true;
@@ -1168,6 +1171,7 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("找到" + response.length + "条受益人信息");
                 dgv受益人.DataSource = response.TranslatedRecord;
+                dgv受益人.ClearSelection();
             }
         }
 
@@ -1187,6 +1191,7 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("找到" + response.length + "条控制人信息");
                 dgv控制人.DataSource = response.TranslatedRecord;
+                dgv控制人.ClearSelection();
             }
         }
 
@@ -1206,6 +1211,7 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.Append("客户已经签署了" + response.length + "种协议。");
                 dgv已签署协议.DataSource = response.TranslatedRecord;
+                dgv已签署协议.ClearSelection();
             }
         }
 
