@@ -2,10 +2,10 @@
 <!--2.24	查询中登影像质检参数列表-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--影像类别-->
-    <IMG_CLS>022</IMG_CLS>
+    <IMG_CLS></IMG_CLS>
   </data>
 </request>

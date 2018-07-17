@@ -2,7 +2,7 @@
 <!--2.146	港股通业务回报文件查询-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--开始日期（非必传）-->

@@ -2,7 +2,7 @@
 <!--2.156	获取试题集-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--调查表类别（非必传）DD-[SURVEY_CLS]-->

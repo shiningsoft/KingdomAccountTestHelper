@@ -2,7 +2,7 @@
 <!--2.153	客户股票质押式回购申请-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->

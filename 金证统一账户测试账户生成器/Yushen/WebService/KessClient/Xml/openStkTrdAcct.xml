@@ -4,43 +4,43 @@
 -->
 <request>
   <auth>
-    <OPERATOR>31010013</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->
-    <CUST_CODE>10100165492</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--资产账户（必传）-->
-    <CUACCT_CODE>10100175492</CUACCT_CODE>
+    <CUACCT_CODE></CUACCT_CODE>
     <!--交易板块（必传）DD[STKBD]-->
-    <STKBD>00</STKBD>
+    <STKBD></STKBD>
     <!--交易账户（必传）-->
-    <TRDACCT>A000702877</TRDACCT>
+    <TRDACCT></TRDACCT>
     <!--报盘交易账户（非必传）-->
     <TRDACCT_EXID></TRDACCT_EXID>
     <!--交易账户类型（非必传）-->
     <TRDACCT_TYPE></TRDACCT_TYPE>
     <!--交易账户类别（非必传）DD[TRDACCT_EXCLS]-->
-    <TRDACCT_EXCLS>02</TRDACCT_EXCLS>
+    <TRDACCT_EXCLS></TRDACCT_EXCLS>
     <!--交易账户名称（必传）-->
-    <TRDACCT_NAME>深市A股</TRDACCT_NAME>
+    <TRDACCT_NAME></TRDACCT_NAME>
     <!--交易指定状态（非必传）DD[TREG_STATUS]-->
-    <TREG_STATUS>2</TREG_STATUS>
+    <TREG_STATUS></TREG_STATUS>
     <!--回购指定状态（非必传）-->
-    <BREG_STATUS>2</BREG_STATUS>
+    <BREG_STATUS></BREG_STATUS>
     <!--一码通账户（非必传）-->
-    <YMT_CODE>180000034488</YMT_CODE>
+    <YMT_CODE></YMT_CODE>
     <!--交易单元（非必传）-->
     <STKPBU></STKPBU>
     <!--代理商号（非必传）-->
     <FIRMID></FIRMID>
     <!--证件类型（必传）-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码（必传）-->
-    <ID_CODE>433123199112010136</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--发证机关（非必传）-->
-    <ID_ISS_AGCY>深圳市南山区金证科技大厦</ID_ISS_AGCY>
+    <ID_ISS_AGCY></ID_ISS_AGCY>
     <!--证件有效日期（非必传）-->
-    <ID_EXP_DATE>30001231</ID_EXP_DATE>
+    <ID_EXP_DATE></ID_EXP_DATE>
     <!--操作备注（非必传）-->
     <REMARK></REMARK>
     <!--调用时间（非必传）-->

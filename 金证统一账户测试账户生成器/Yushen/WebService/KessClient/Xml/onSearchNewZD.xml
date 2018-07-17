@@ -4,7 +4,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户类型（必传）DD[USER_TYPE]-->
@@ -12,14 +12,14 @@
     <!--客户名称（必传）-->
     <CUST_FNAME></CUST_FNAME>
     <!--证件类型（必传）-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码（必传）-->
-    <ID_CODE>410106198312206187</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--机构代码（必传）-->
-    <INT_ORG>101</INT_ORG>
+    <INT_ORG></INT_ORG>
     <!--账户代理业务(非必输)DD[ACCTBIZ_EXCODE]默认为07-证券账户查询-->
-    <ACCTBIZ_EXCODE>07</ACCTBIZ_EXCODE>
+    <ACCTBIZ_EXCODE></ACCTBIZ_EXCODE>
     <!--证券账户类别(非必输)DD[ACCT_TYPE]-->
-    <ACCT_TYPE>11</ACCT_TYPE>
+    <ACCT_TYPE></ACCT_TYPE>
   </data>
 </request>

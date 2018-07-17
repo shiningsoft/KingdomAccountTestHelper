@@ -4,21 +4,21 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）0-增加1-修改2-删除-->
-    <OPERATOR_TYPE>1</OPERATOR_TYPE>
+    <OPERATOR_TYPE></OPERATOR_TYPE>
     <!--客户编号（必传）-->
-    <CUST_CODE>10100564258</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--流程编号（必传）DD[FLOW_ID]-->
-    <FLOW_ID>D</FLOW_ID>
+    <FLOW_ID></FLOW_ID>
     <!--申请类别（必传）DD[APP_TYPE]-->
-    <APP_TYPE>0</APP_TYPE>
+    <APP_TYPE></APP_TYPE>
     <!--关联单据号（必传）-->
-    <NOTE_NO>500000142</NOTE_NO>
+    <NOTE_NO></NOTE_NO>
     <!--执行结果状态（必传）DD[EXEC_RESULT]0-已执行成功1-通过2-不通过-->
-    <EXEC_RESULT>1</EXEC_RESULT>
+    <EXEC_RESULT></EXEC_RESULT>
     <!--执行结果说明（必传）-->
     <RESULT_REMARK></RESULT_REMARK>
     <!--备注信息（必传）-->

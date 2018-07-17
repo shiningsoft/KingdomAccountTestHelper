@@ -2,7 +2,7 @@
 <!--2.145	港股通通知信息文件查询-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--开始日期（非必传）-->

@@ -2,21 +2,21 @@
 <!--2.27	影像下载-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--影像编号（普通影像下载必填，查询公安联网头像信息，非必填，身份证必填）-->
-    <IMG_SN>2013011000000095</IMG_SN>
+    <IMG_SN></IMG_SN>
     <!--以下参数为查询身份证头像时需要传递的参数-->
     <!--用户名称-->
-    <USER_NAME>傅小司</USER_NAME>
+    <USER_NAME></USER_NAME>
     <!--证件号码（如果非空，会调用公安联网查询）-->
-    <ID_CODE>522226194809144209</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--民族DD[NATIONALITY]-->
-    <NATIONALITY>00</NATIONALITY>
+    <NATIONALITY></NATIONALITY>
     <!--性别DD[SEX]-->
-    <SEX>0</SEX>
+    <SEX></SEX>
     <!--出生日期（必填）-->
-    <BIRTHDAY>20040914</BIRTHDAY>
+    <BIRTHDAY></BIRTHDAY>
   </data>
 </request>

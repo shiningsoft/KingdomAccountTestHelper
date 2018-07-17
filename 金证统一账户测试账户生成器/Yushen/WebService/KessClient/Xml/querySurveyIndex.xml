@@ -2,7 +2,7 @@
 <!--2.31	查询所需风险评测题库-->
 <request>
   <auth>
-    <OPERATOR>2507</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data></data>
 </request>

@@ -2,14 +2,14 @@
 <!--2.12	查询用户基本资料-->
 <request>
   <auth>
-    <OPERATOR>2507</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户角色（非必传）DD[USER_ROLE]-->
     <USER_ROLE></USER_ROLE>
     <!--用户代码（必传）-->
-    <USER_CODE>2518</USER_CODE>
+    <USER_CODE></USER_CODE>
     <!--操作类型（非必传）1-获取拓展信息-->
-    <OP_TYPE>0</OP_TYPE>
+    <OP_TYPE></OP_TYPE>
   </data>
 </request>

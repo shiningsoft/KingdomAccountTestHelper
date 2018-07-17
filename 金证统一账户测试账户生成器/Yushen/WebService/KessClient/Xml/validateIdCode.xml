@@ -2,24 +2,24 @@
 <!--2.14	公安联网校验查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--见证类别DD[WEB_BIZ]-->
-    <WEB_BIZ>1</WEB_BIZ>
+    <WEB_BIZ></WEB_BIZ>
     <!--操作员-->
-    <USER_CODE>33146</USER_CODE>
+    <USER_CODE></USER_CODE>
     <!--用户名称（必填）-->
-    <USER_NAME>傅小司</USER_NAME>
+    <USER_NAME></USER_NAME>
     <!--证件号码（必填）-->
-    <ID_CODE>522226194809144209</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--请求标志固定为0，可不用传此值-->
-    <REQFLAG>0</REQFLAG>
+    <REQFLAG></REQFLAG>
     <!--民族DD[NATIONALITY]-->
-    <NATIONALITY>00</NATIONALITY>
+    <NATIONALITY></NATIONALITY>
     <!--性别DD[SEX]-->
-    <SEX>0</SEX>
+    <SEX></SEX>
     <!--出生日期（必填）-->
-    <BIRTHDAY>20040914</BIRTHDAY>
+    <BIRTHDAY></BIRTHDAY>
   </data>
 </request>

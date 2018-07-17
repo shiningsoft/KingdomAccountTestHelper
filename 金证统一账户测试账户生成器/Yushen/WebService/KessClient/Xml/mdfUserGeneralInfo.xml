@@ -2,7 +2,7 @@
 <!--2.148	用户普通资料修改-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码（必传）-->

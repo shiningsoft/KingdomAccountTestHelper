@@ -5,26 +5,26 @@
 -->
 <request>
   <auth>
-    <OPERATOR>31010013</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码(必传)-->
-    <USER_CODE>310100033013</USER_CODE>
+    <USER_CODE></USER_CODE>
     <!--客户分类DD[CUST_CLS]-->
-    <CUST_CLS>0</CUST_CLS>
+    <CUST_CLS></CUST_CLS>
     <!--内部机构（非必传）-->
-    <INT_ORG>3101</INT_ORG>
+    <INT_ORG></INT_ORG>
     <!--资产账户（非必传）-->
-    <CUACCT_CODE>310100033013</CUACCT_CODE>
+    <CUACCT_CODE></CUACCT_CODE>
     <!--资产账户类别（必传）-->
-    <CUACCT_CLS>0</CUACCT_CLS>
+    <CUACCT_CLS></CUACCT_CLS>
     <!--资产账户级别（必传）-->
-    <CUACCT_LVL>0</CUACCT_LVL>
+    <CUACCT_LVL></CUACCT_LVL>
     <!--资产账户组别（必传）-->
-    <CUACCT_GRP>0</CUACCT_GRP>
+    <CUACCT_GRP></CUACCT_GRP>
     <!--货币（必传）DD[CURRENCY]-->
-    <CURRENCY>0</CURRENCY>
+    <CURRENCY></CURRENCY>
     <!--帐户类型（非必传）-->
-    <FUND_TYPE>0</FUND_TYPE>
+    <FUND_TYPE></FUND_TYPE>
   </data>
 </request>

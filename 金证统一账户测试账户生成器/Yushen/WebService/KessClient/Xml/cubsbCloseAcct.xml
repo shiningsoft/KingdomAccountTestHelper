@@ -4,7 +4,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--资产账户（必传）-->

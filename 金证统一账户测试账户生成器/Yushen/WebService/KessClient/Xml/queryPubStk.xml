@@ -2,7 +2,7 @@
 <!--2.260	上市公司股东股票表查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（非必传）-->

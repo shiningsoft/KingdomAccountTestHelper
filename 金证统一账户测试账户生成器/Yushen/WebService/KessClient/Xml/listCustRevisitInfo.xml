@@ -2,7 +2,7 @@
 <!--2.138	客户征信回访记录查询-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（非必传）（提供给外围请谨慎，若不送值将查询所有客户回访信息）-->

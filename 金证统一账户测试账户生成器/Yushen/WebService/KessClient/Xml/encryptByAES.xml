@@ -2,12 +2,12 @@
 <!--2.73	密码加密-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作员代码（必填）-->
-    <OP_CODE>2507</OP_CODE>
+    <OP_CODE></OP_CODE>
     <!--原始密码（必填）-->
-    <CHK_AUTH_DATA>245223</CHK_AUTH_DATA>
+    <CHK_AUTH_DATA></CHK_AUTH_DATA>
   </data>
 </request>

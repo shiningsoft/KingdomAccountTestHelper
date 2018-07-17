@@ -2,7 +2,7 @@
 <!--2.223	查询测评等级设置情况-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--试题分类（必传）-->

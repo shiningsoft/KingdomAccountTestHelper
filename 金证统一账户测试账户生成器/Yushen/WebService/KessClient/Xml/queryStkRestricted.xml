@@ -2,7 +2,7 @@
 <!--2.253	限售股信息表查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--是否解禁（非必传）-->

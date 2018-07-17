@@ -2,7 +2,7 @@
 <!--2.131	用户影像描述信息操作-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）0-增加1-修改2-删除3-修改影像状态5-离柜开户-->

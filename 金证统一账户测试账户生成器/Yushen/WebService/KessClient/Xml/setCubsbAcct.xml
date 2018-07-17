@@ -2,7 +2,7 @@
 <!--2.78	银证账户设置-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户类型DD[USER_TYPE]-->
@@ -10,17 +10,17 @@
     <!--机构代码-->
     <INT_ORG></INT_ORG>
     <!--外部机构（必传）-->
-    <EXT_ORG>5000</EXT_ORG>
+    <EXT_ORG></EXT_ORG>
     <!--存管账号（必传）-->
     <BDMF_ACCT></BDMF_ACCT>
     <!--银行账号-->
-    <BANK_ACCT>1531121323</BANK_ACCT>
+    <BANK_ACCT></BANK_ACCT>
     <!--客户代码（必传）-->
-    <CUST_CODE>20100002819</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--资产账号（必传）-->
-    <CUACCT_CODE>20100002819</CUACCT_CODE>
+    <CUACCT_CODE></CUACCT_CODE>
     <!--币种（必传）DD[CURRENCY]-->
-    <CURRENCY>0</CURRENCY>
+    <CURRENCY></CURRENCY>
     <!--签约状态-->
     <CONTRACT_STATUS></CONTRACT_STATUS>
     <!--操作类型-->

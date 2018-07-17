@@ -2,7 +2,7 @@
 <!--2.13	查询账户信息（账户系统）-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（非必传）-->

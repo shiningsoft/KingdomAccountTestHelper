@@ -4,7 +4,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--流水号（非必传），如果有签署该协议，传入流水号做修改-->

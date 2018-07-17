@@ -2,7 +2,7 @@
 <!--2.236	公司资料信息维护-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码（必传）-->

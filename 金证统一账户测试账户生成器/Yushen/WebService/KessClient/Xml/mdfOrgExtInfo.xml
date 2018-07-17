@@ -2,7 +2,7 @@
 <!--2.116	机构拓展信息维护-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码（必传）-->

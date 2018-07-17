@@ -4,11 +4,11 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->
-    <CUST_CODE>30491411</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--操作备注(必传)-->
     <OP_REMARK></OP_REMARK>
   </data>

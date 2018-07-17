@@ -4,7 +4,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）0-增加1-修改-->
@@ -22,21 +22,21 @@
     <!--性别（非必传）新增时必传-->
     <SEX></SEX>
     <!--证件类型（非必传）新增时必传-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码（非必传）新增时必传-->
-    <ID_NO>342144199109217839</ID_NO>
+    <ID_NO></ID_NO>
     <!--有效期限开始日（非必传）-->
     <ID_BEG_DATE></ID_BEG_DATE>
     <!--有效期限结束日（非必传）-->
     <ID_END_DATE></ID_END_DATE>
     <!--电话号码（非必传）新增时必传-->
-    <TEL_NO>86-2424-12344321</TEL_NO>
+    <TEL_NO></TEL_NO>
     <!--单位电话号码（非必传）-->
     <OFFICE_TEL></OFFICE_TEL>
     <!--移动电话（非必传）新增时必传-->
-    <MOBILE_TEL>254545</MOBILE_TEL>
+    <MOBILE_TEL></MOBILE_TEL>
     <!--传真（非必传）新增时必传-->
-    <FAX_NO>0743-12345</FAX_NO>
+    <FAX_NO></FAX_NO>
     <!--联系地址（非必传）-->
     <ADDR></ADDR>
     <!--邮政编码（非必传）-->
@@ -44,6 +44,6 @@
     <!--备注（非必传）-->
     <REMARK></REMARK>
     <!--电子邮箱（非必传）新增时必传-->
-    <EMAIL>QWER@qq.com</EMAIL>
+    <EMAIL></EMAIL>
   </data>
 </request>

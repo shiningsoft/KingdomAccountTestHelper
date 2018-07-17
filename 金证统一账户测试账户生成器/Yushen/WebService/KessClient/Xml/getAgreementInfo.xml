@@ -2,7 +2,7 @@
 <!--2.157	查询电子协议信息-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--机构代码（必传）-->

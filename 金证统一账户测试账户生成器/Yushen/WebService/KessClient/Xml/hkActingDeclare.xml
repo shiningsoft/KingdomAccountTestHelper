@@ -4,7 +4,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--港股业务类型（必传）H63：公司收购申报业务回报H64：公开招股申报业务H65：供股行权申报业务H66：红利现金选择权申报业务-->

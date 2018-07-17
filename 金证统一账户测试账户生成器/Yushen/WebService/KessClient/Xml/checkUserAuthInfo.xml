@@ -4,7 +4,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码（非必传）-->
@@ -14,10 +14,10 @@
     <!--认证数据（必传）-->
     <AUTH_DATA></AUTH_DATA>
     <!--用户角色（非必传）DD[USER_ROLE]默认为1-客户-->
-    <USER_ROLE>1</USER_ROLE>
+    <USER_ROLE></USER_ROLE>
     <!--使用范围（非必传）DD[USE_SCOPE]默认为0-登录/交易-->
-    <USE_SCOPE>0</USE_SCOPE>
+    <USE_SCOPE></USE_SCOPE>
     <!--认证类型（非必传）DD[AUTH_TYPE]默认为0–密码-->
-    <AUTH_TYPE>0</AUTH_TYPE>
+    <AUTH_TYPE></AUTH_TYPE>
   </data>
 </request>

@@ -2,27 +2,27 @@
 <!--2.17	见证开户流程变更-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--网上业务类型（必传）DD[WEB_BIZ]-->
-    <WEB_BIZ>1</WEB_BIZ>
+    <WEB_BIZ></WEB_BIZ>
     <!--证件类型（必传）DD[ID_TYPE]-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码（必传）-->
-    <ID_CODE>23071419830710138X</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--内部机构（非必传）-->
-    <INT_ORG>9000</INT_ORG>
+    <INT_ORG></INT_ORG>
     <!--认证手机（非必传）-->
-    <CERT_TEL>18898762136</CERT_TEL>
+    <CERT_TEL></CERT_TEL>
     <!--影像编码（非必传）-->
     <IMG_SNS></IMG_SNS>
     <!--预约流水编号（非必传）-->
     <APP_SN></APP_SN>
     <!--开户阶段（非必传）DD[WEB_PHASE]-->
-    <WEB_PHASE>06</WEB_PHASE>
+    <WEB_PHASE></WEB_PHASE>
     <!--操作员代码（非必传）-->
-    <OP_CODE>33146</OP_CODE>
+    <OP_CODE></OP_CODE>
     <!--操作员姓名（非必传）-->
     <OP_NAME></OP_NAME>
     <!--客户代码（非必传）-->

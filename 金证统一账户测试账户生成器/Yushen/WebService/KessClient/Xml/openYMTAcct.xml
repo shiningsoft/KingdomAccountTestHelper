@@ -5,7 +5,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户类别（必传）DD[USER_TYPE]-->

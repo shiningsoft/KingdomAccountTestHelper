@@ -2,7 +2,7 @@
 <!--2.218	基金账户销户-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--资产账户代码（必传）-->

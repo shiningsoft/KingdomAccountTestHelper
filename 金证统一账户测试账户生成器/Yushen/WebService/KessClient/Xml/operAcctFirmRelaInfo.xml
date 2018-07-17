@@ -2,7 +2,7 @@
 <!--2.202	账户公司关联人信息维护-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）0-增加，1-修改，2删除-->

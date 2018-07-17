@@ -4,10 +4,10 @@
 -->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--流水序号-->
-    <SERIAL_NO>2013010200000041</SERIAL_NO>
+    <SERIAL_NO></SERIAL_NO>
   </data>
 </request>

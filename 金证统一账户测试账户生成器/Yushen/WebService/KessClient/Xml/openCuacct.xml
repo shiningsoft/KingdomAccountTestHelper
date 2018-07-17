@@ -4,7 +4,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>31010013</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码(必传)-->

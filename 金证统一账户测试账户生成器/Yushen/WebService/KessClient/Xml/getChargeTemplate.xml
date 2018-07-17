@@ -2,13 +2,13 @@
 <!--2.92	收费模板查询-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--开户来源（必传）-->
-    <OPEN_SOURCE>1</OPEN_SOURCE>
+    <OPEN_SOURCE></OPEN_SOURCE>
     <!--机构代码（必传）-->
-    <ING_ORG>101</ING_ORG>
+    <ING_ORG></ING_ORG>
     <!--模板配置序号（非必传）-->
     <OPENTMPL_CFG></OPENTMPL_CFG>
   </data>

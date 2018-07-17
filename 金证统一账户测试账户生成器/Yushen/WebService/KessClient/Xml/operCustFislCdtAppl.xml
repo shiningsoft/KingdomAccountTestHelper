@@ -4,43 +4,43 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）0-增加1-修改2-删除3-修改主观分数-->
-    <OPERATOR_TYPE>0</OPERATOR_TYPE>
+    <OPERATOR_TYPE></OPERATOR_TYPE>
     <!--流程编号（非必传）操作类型为非0时必传-->
-    <CDT_APPL_SN>0</CDT_APPL_SN>
+    <CDT_APPL_SN></CDT_APPL_SN>
     <!--客户编号（必传）-->
-    <CUST_CODE>10100564258</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--申请类型（非必传）DD[APP_SEQ_TYPE]新增时必传-->
-    <APP_SEQ_TYPE>0</APP_SEQ_TYPE>
+    <APP_SEQ_TYPE></APP_SEQ_TYPE>
     <!--申请原因（非必传）-->
     <CDT_APPL_REASON></CDT_APPL_REASON>
     <!--申请状态（非必传）DD[CDT_APPL_STATUS]新增时必传-->
-    <CDT_APPL_STATUS>1</CDT_APPL_STATUS>
+    <CDT_APPL_STATUS></CDT_APPL_STATUS>
     <!--调查表编码（非必传）-->
-    <SURVEY_SN>23</SURVEY_SN>
+    <SURVEY_SN></SURVEY_SN>
     <!--信用级别编码（非必传）-->
     <CDT_LEVEL_SN></CDT_LEVEL_SN>
     <!--作答序号（非必传）-->
     <SURVEY_RATING_ORDINAL></SURVEY_RATING_ORDINAL>
     <!--申请日期（非必传）-->
-    <CDT_APPL_DATE>20151123</CDT_APPL_DATE>
+    <CDT_APPL_DATE></CDT_APPL_DATE>
     <!--有效天数（非必传）-->
-    <VALID_DAYS>180</VALID_DAYS>
+    <VALID_DAYS></VALID_DAYS>
     <!--主观分数（非必传）-->
-    <SUB_SCORE>0</SUB_SCORE>
+    <SUB_SCORE></SUB_SCORE>
     <!--客观分数（非必传）-->
-    <OB_SCORE>93</OB_SCORE>
+    <OB_SCORE></OB_SCORE>
     <!--操作备注（非必传）-->
-    <OP_REMARK>征信资料录入</OP_REMARK>
+    <OP_REMARK></OP_REMARK>
     <!--证件类型（非必传）-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码（非必传）-->
-    <ID_CODE>433123199111230153</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--手机号（非必传）-->
-    <MOBILE_TEL>86-43312319911</MOBILE_TEL>
+    <MOBILE_TEL></MOBILE_TEL>
     <!--合同号（非必传）-->
     <FISL_CON_CODE></FISL_CON_CODE>
   </data>

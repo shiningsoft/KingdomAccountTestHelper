@@ -4,14 +4,14 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码-->
-    <USER_CODE>310100033018</USER_CODE>
+    <USER_CODE></USER_CODE>
     <!--客户角色DD[USER_ROLE]-->
-    <USER_ROLE>2</USER_ROLE>
+    <USER_ROLE></USER_ROLE>
     <!--预约流水号（WEB_BIZ_LOG.APP_SN或APPT_CUST_INFO.SERIAL_NO）-->
-    <APPT_SERIAL_NO>2014092200000004</APPT_SERIAL_NO>
+    <APPT_SERIAL_NO></APPT_SERIAL_NO>
   </data>
 </request>

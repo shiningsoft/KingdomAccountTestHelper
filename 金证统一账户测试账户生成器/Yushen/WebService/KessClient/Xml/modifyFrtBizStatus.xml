@@ -2,11 +2,11 @@
 <!--2.72	临柜任务流状态调整-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--在客户影像信息全部同步完成后调用（只需调用一次）-->
     <!--客户代码-->
-    <CUST_CODE>00</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
   </data>
 </request>

@@ -5,7 +5,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>31010013</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--业务类型（默认为0）0-A股账户开户1-基金账户开户2-B股账户开户-->

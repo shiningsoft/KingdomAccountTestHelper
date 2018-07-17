@@ -2,7 +2,7 @@
 <!--2.238	紧急联系人项目表维护-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）0增加1修改2删除-->

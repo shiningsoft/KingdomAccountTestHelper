@@ -2,7 +2,7 @@
 <!--2.155	征信资料录入-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--调查表编码（非必传）默认为1-->

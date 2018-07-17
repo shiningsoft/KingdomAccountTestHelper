@@ -5,12 +5,12 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码-->
-    <CUST_CODE>36050</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--资产账户-->
-    <CUACCT_CODE>5528221</CUACCT_CODE>
+    <CUACCT_CODE></CUACCT_CODE>
   </data>
 </request>

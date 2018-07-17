@@ -2,7 +2,7 @@
 <!--2.240	客户资产信息维护-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）0-新增1-修改-->

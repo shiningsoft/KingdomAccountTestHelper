@@ -4,24 +4,24 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--申请编号（非必传）-->
-    <CDT_APPL_SN>500000001</CDT_APPL_SN>
+    <CDT_APPL_SN></CDT_APPL_SN>
     <!--客户代码（非必传）-->
-    <CUST_CODE>10100564258</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--机构代码（非必传）-->
     <INT_ORG></INT_ORG>
     <!--申请类别（复数，以“，”隔开）（非必传）-->
-    <APP_SEQ_TYPES>0,2,3</APP_SEQ_TYPES>
+    <APP_SEQ_TYPES></APP_SEQ_TYPES>
     <!--申请状态（复数，以“，”隔开）（非必传）-->
-    <CDT_APPL_STATUSES>0,1,2,3,4</CDT_APPL_STATUSES>
+    <CDT_APPL_STATUSES></CDT_APPL_STATUSES>
     <!--调查表编码（非必传）-->
-    <SURVEY_SN>1</SURVEY_SN>
+    <SURVEY_SN></SURVEY_SN>
     <!--信用级别编码（非必传）-->
     <CDT_LEVEL_SN></CDT_LEVEL_SN>
     <!--申请日期（非必传）-->
-    <CDT_APPL_DATE>20151123</CDT_APPL_DATE>
+    <CDT_APPL_DATE></CDT_APPL_DATE>
   </data>
 </request>

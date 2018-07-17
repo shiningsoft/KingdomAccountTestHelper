@@ -2,7 +2,7 @@
 <!--2.259	上市公司股东股票表维护-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（非必传）-->

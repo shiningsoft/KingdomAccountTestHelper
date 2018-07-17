@@ -2,11 +2,11 @@
 <!--2.64	查询公用外部机构-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--货币代码（必传）DD[CURRENCY]-->
-    <CURRENCY>0</CURRENCY>
+    <CURRENCY></CURRENCY>
     <!--内部机构（必传）-->
     <INT_ORG></INT_ORG>
     <!--银证业务类型（必传）DD[CUBSB_TYPE]0-转账1-存管2-银衍-->

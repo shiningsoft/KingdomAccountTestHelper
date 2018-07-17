@@ -2,7 +2,7 @@
 <!--2.268	客户签署协议准入条件-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码（必传）-->

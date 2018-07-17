@@ -2,7 +2,7 @@
 <!--2.230	用户联系信息修改-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码（必传）-->

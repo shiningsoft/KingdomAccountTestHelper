@@ -2,11 +2,11 @@
 <!--2.98	保存基本资料银行密码-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--预约流水号-->
-    <SERIAL_NO>2013010700000002</SERIAL_NO>
+    <SERIAL_NO></SERIAL_NO>
     <!--银行密码-->
     <BANK_PWD></BANK_PWD>
   </data>

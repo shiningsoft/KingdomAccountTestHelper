@@ -2,12 +2,12 @@
 <!--2.68	获取临柜业务影像采集配置-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--证件类型-->
     <ID_TYPE></ID_TYPE>
     <!--证件号码-->
-    <ID_CODE>610481199304093635</ID_CODE>
+    <ID_CODE></ID_CODE>
   </data>
 </request>

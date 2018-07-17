@@ -2,7 +2,7 @@
 <!--2.203	账户公司关联人信息查询-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户名称（非必传）-->

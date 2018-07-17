@@ -2,7 +2,7 @@
 <!--2.226	客户投资经验信息表维护-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）'0'-增加，'1'-修改-->

@@ -4,15 +4,15 @@
 -->
 <request>
   <auth>
-    <OPERATOR>31010107</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--资产账户代码-->
-    <CUACCT_CODE>310100033019</CUACCT_CODE>
+    <CUACCT_CODE></CUACCT_CODE>
     <!--基金登记公司代码-->
-    <TA_CODE>6</TA_CODE>
+    <TA_CODE></TA_CODE>
     <!--基金账号-->
-    <OF_ACCT>310100033020</OF_ACCT>
+    <OF_ACCT></OF_ACCT>
     <!--账单邮寄类型-->
     <BILL_MAIL_TYPE></BILL_MAIL_TYPE>
     <!--分红方式-->

@@ -2,13 +2,13 @@
 <!--2.58	用户扩展信息维护-->
 <request>
   <auth>
-    <OPERATOR>31010107</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码-->
-    <CUST_CODE>31010107</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--操作类型0—增加，1—修改-->
-    <OPERATION_TYPE>0</OPERATION_TYPE>
+    <OPERATION_TYPE></OPERATION_TYPE>
     <!--同步子系统-->
     <SUBSYS></SUBSYS>
     <!--是否校验-->

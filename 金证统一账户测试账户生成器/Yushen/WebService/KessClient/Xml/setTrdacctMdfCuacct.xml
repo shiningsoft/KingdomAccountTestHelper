@@ -2,11 +2,11 @@
 <!--2.88	证券账户内部迁移-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--老客户代码（必传）-->
-    <CUST_CODE>30491411</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--新客户代码-->
     <NEW_CUST_CODE></NEW_CUST_CODE>
     <!--交易版块DD[STKBD]-->

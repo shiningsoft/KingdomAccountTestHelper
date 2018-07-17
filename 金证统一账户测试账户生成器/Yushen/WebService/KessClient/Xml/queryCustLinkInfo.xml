@@ -2,7 +2,7 @@
 <!--2.244	客户备用联系资料查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--联系资料序号（非必传）-->

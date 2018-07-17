@@ -2,33 +2,33 @@
 <!--2.6	登记见证开户摘要信息-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--见证类型DD[WEB_BIZ]-->
-    <WEB_BIZ>2</WEB_BIZ>
+    <WEB_BIZ></WEB_BIZ>
     <!--内部机构-->
-    <INT_ORG>9000</INT_ORG>
+    <INT_ORG></INT_ORG>
     <!--派单操作员代码-->
-    <OP_CODE>33146</OP_CODE>
+    <OP_CODE></OP_CODE>
     <!--派单操作员姓名-->
-    <OP_NAME>李小盾</OP_NAME>
+    <OP_NAME></OP_NAME>
     <!--见证工作人员-->
-    <P_USER_CODE>33146</P_USER_CODE>
+    <P_USER_CODE></P_USER_CODE>
     <!--见证工作人员姓名-->
-    <P_USER_NAME>李小盾[33146]</P_USER_NAME>
+    <P_USER_NAME></P_USER_NAME>
     <!--见证开户人员-->
     <F_USER_CODE></F_USER_CODE>
     <!--见证开户人员姓名-->
     <F_USER_NAME></F_USER_NAME>
     <!--预约流水编号-->
-    <APP_SN>2012122800000020</APP_SN>
+    <APP_SN></APP_SN>
     <!--派单状态-->
-    <ORDER_STATE>2</ORDER_STATE>
+    <ORDER_STATE></ORDER_STATE>
     <!--流水序号-->
-    <SERIAL_NO>2013010200000002</SERIAL_NO>
+    <SERIAL_NO></SERIAL_NO>
     <!--操作类型-->
-    <OPERATOR_TYPE>1</OPERATOR_TYPE>
+    <OPERATOR_TYPE></OPERATOR_TYPE>
     <!--约定时间-->
     <CHECK_TIME></CHECK_TIME>
     <!--约定地点-->

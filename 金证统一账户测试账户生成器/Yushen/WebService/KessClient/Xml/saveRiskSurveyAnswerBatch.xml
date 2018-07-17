@@ -6,20 +6,20 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--预约流水号（必传）-->
-    <APPT_SERIAL_NO>1</APPT_SERIAL_NO>
+    <APPT_SERIAL_NO></APPT_SERIAL_NO>
     <!--调查表编码（必传）-->
-    <SURVEY_SN>1</SURVEY_SN>
+    <SURVEY_SN></SURVEY_SN>
     <!--调查表档组（必传）-->
-    <SURVEY_GR>1</SURVEY_GR>
+    <SURVEY_GR></SURVEY_GR>
     <!--调查表档目（复数）（必传），如：栏目1（试题编号）|栏目2|...-->
-    <SURVEY_COLS>1|2|3</SURVEY_COLS>
+    <SURVEY_COLS></SURVEY_COLS>
     <!--调查表单元（复数）（必传），如：答案1，答案1.1（多选题以逗号分开）|答案2，答案2.1|...-->
-    <SURVEY_CELLS>1,1|2|1</SURVEY_CELLS>
+    <SURVEY_CELLS></SURVEY_CELLS>
     <!--调查表做答分值（复数）（非必传）-->
-    <SURVEY_ANS_VALS>1|0|1</SURVEY_ANS_VALS>
+    <SURVEY_ANS_VALS></SURVEY_ANS_VALS>
   </data>
 </request>

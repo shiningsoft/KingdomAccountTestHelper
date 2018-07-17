@@ -2,7 +2,7 @@
 <!--2.224	客户风险测评作答详细信息查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--试题分类（非必传）-->

@@ -2,7 +2,7 @@
 <!--2.221	创新业务（报价回购）客户资质审核-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->

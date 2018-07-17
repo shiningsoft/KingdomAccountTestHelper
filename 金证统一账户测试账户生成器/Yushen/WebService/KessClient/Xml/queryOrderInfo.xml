@@ -2,34 +2,34 @@
 <!--2.7	查询客户见证预约信息-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--PRJ_VERSION为0时需要传递如下参数列表-->
-    <PRJ_VERSION>0</PRJ_VERSION>
+    <PRJ_VERSION></PRJ_VERSION>
     <!--操作员代码-->
-    <OP_USER>33146</OP_USER>
+    <OP_USER></OP_USER>
     <!--开始日期-->
-    <BGN_DATE>20130106</BGN_DATE>
+    <BGN_DATE></BGN_DATE>
     <!--结束日期-->
-    <END_DATE>20130107</END_DATE>
+    <END_DATE></END_DATE>
     <!--机构代码-->
     <INT_ORG></INT_ORG>
     <!--客户姓名-->
     <CUST_NAME></CUST_NAME>
     <!--证件类型-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码-->
     <ID_CODE></ID_CODE>
     <!--手机号码-->
     <MOBILE_TEL></MOBILE_TEL>
     <!--派单状态，数据字典[ORDER_STATE]-->
-    <ORDER_STATES>1</ORDER_STATES>
+    <ORDER_STATES></ORDER_STATES>
     <!--客户经理-->
     <ACCT_MANAGER></ACCT_MANAGER>
     <!--派单人员-->
-    <OP_CODE>33146</OP_CODE>
+    <OP_CODE></OP_CODE>
     <!--登陆的用户-->
-    <F_USER_CODE>33146</F_USER_CODE>
+    <F_USER_CODE></F_USER_CODE>
   </data>
 </request>

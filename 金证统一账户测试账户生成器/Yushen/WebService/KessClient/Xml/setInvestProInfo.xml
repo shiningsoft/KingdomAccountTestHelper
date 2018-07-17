@@ -2,7 +2,7 @@
 <!--2.106	投资者适当性信息设置-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）-->

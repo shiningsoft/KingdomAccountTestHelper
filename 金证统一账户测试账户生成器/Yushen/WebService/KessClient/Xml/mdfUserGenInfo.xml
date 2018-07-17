@@ -4,15 +4,15 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->
-    <USER_CODE>30496640</USER_CODE>
+    <USER_CODE></USER_CODE>
     <!--邮政编码（必传）-->
-    <ZIP_CODE>112223</ZIP_CODE>
+    <ZIP_CODE></ZIP_CODE>
     <!--联系地址（必传）-->
-    <ADDRESS>广东深圳</ADDRESS>
+    <ADDRESS></ADDRESS>
     <!--电子邮箱（非必传，同步到融资融券的时候必传）-->
     <FISL_EMAIL></FISL_EMAIL>
     <!--学历（非必传）-->

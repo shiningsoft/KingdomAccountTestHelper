@@ -2,7 +2,7 @@
 <!--2.142	证券登记业务信息查询（港股）-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--开始日期（非必传）（默认为当天）-->

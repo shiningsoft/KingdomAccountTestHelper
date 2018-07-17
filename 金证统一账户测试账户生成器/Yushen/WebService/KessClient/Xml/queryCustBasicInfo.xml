@@ -4,13 +4,13 @@
 -->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--开始日期可不传此值，默认为19000101-->
-    <BGN_DATE>19000101</BGN_DATE>
+    <BGN_DATE></BGN_DATE>
     <!--结束日期可不传此值，默认为30000101-->
-    <END_DATE>30000101</END_DATE>
+    <END_DATE></END_DATE>
     <!--预约状态-->
     <APPT_STATUS></APPT_STATUS>
     <!--证件类型-->
@@ -20,7 +20,7 @@
     <!--机构代码-->
     <INT_ORG></INT_ORG>
     <!--证件号码-->
-    <ID_CODE>610481199304093635</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--预约方式-->
     <APPT_CHNL></APPT_CHNL>
     <!--预约业务-->

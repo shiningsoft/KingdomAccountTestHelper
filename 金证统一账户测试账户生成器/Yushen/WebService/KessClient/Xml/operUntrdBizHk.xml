@@ -4,7 +4,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--内部机构（必传）-->

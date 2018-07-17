@@ -2,7 +2,7 @@
 <!--2.55	保证金扣除-->
 <request>
   <auth>
-    <OPERATOR>31010013</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--SERIAL_NO的前8位-->

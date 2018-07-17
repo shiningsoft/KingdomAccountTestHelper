@@ -2,7 +2,7 @@
 <!--2.212	适当性管理信息维护-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）-->

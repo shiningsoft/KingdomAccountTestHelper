@@ -2,7 +2,7 @@
 <!--2.207	基金账户资料变更-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--资产账户（必传）-->

@@ -2,11 +2,11 @@
 <!--2.25	查询客户基本信息（账户系统）-->
 <request>
   <auth>
-    <OPERATOR>2507</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
-    <USER_CODE>2518</USER_CODE>
+    <USER_CODE></USER_CODE>
     <USER_ROLE></USER_ROLE>
-    <OP_TYPE>0</OP_TYPE>
+    <OP_TYPE></OP_TYPE>
   </data>
 </request>

@@ -2,13 +2,13 @@
 <!--2.39	客户扩展信息中12个字段修改-->
 <request>
   <auth>
-    <OPERATOR>31010013</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--流水号必要参数-->
     <SERIAL_NO></SERIAL_NO>
     <!--证件类型必要参数-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码必要参数-->
     <ID_CODE></ID_CODE>
     <!--以下均为可选参数，传什么改什么，不传不会修改。-->

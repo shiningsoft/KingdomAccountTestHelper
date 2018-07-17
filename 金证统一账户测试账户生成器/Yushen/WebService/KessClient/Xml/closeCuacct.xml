@@ -4,11 +4,11 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--资产账户（必传）-->
-    <CUACCT_CODE>800500099753</CUACCT_CODE>
+    <CUACCT_CODE></CUACCT_CODE>
     <!--货币（必传）DD[CURRENCY]-->
     <CURRENCY></CURRENCY>
     <!--操作备注-->

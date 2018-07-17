@@ -2,7 +2,7 @@
 <!--2.247	客户激活标志信息查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--开始日期（非必传）-->

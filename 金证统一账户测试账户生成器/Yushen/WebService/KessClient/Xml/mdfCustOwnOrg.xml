@@ -2,11 +2,11 @@
 <!--2.87	客户迁移-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->
-    <CUST_CODE>30491411</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--机构代码（必传）-->
     <INT_ORG></INT_ORG>
     <!--原资产账户（必传）-->

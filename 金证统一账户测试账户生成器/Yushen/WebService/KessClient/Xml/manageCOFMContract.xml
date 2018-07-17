@@ -2,13 +2,13 @@
 <!--2.219	集合理财合同新增、删除-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--签约行为标志（必传）0－增加/签订，1－修改，2－删除/解约-->
     <ACTION></ACTION>
     <!--用户角色（必传）-->
-    <USER_ROLE>1</USER_ROLE>
+    <USER_ROLE></USER_ROLE>
     <!--客户编号（必传）-->
     <CUST_CODE></CUST_CODE>
     <!--交易账号（必传）-->
@@ -18,31 +18,31 @@
     <!--营业厅代码（必传）-->
     <INT_ORG></INT_ORG>
     <!--签约风险提示（必传）-->
-    <SIGN_RISK_NOTICE>1</SIGN_RISK_NOTICE>
+    <SIGN_RISK_NOTICE></SIGN_RISK_NOTICE>
     <!--登记公司代码（非必传）-->
-    <DBTID>98</DBTID>
+    <DBTID></DBTID>
     <!--交易行为（非必传）-->
     <TRADES></TRADES>
     <!--操作方式（非必传）-->
     <CHANNEL></CHANNEL>
     <!--有效期限（非必传）-->
-    <LIMIT_DATE>0</LIMIT_DATE>
+    <LIMIT_DATE></LIMIT_DATE>
     <!--合同签署时间（非必传）-->
-    <OCCUR_TIME>0</OCCUR_TIME>
+    <OCCUR_TIME></OCCUR_TIME>
     <!--备注信息（非必传）-->
     <REMARK></REMARK>
     <!--合同类型（非必传）-->
-    <ECTYPE>1</ECTYPE>
+    <ECTYPE></ECTYPE>
     <!--合同上传标志（非必传）-->
-    <STATUS>0</STATUS>
+    <STATUS></STATUS>
     <!--风险匹配（非必传）-->
-    <RISK_MATCHING>1</RISK_MATCHING>
+    <RISK_MATCHING></RISK_MATCHING>
     <!--资金保留额度有效期截止日（非必传）-->
-    <EXPIRY_DATE>0</EXPIRY_DATE>
+    <EXPIRY_DATE></EXPIRY_DATE>
     <!--资产上限（非必传）-->
-    <ASSET_FLOOR>0</ASSET_FLOOR>
+    <ASSET_FLOOR></ASSET_FLOOR>
     <!--资金保留额度（非必传）-->
-    <WORKING_ASSET_FLOOR>200.00</WORKING_ASSET_FLOOR>
+    <WORKING_ASSET_FLOOR></WORKING_ASSET_FLOOR>
     <!--资产增值计划协议状态（非必传）-->
     <ASSET_APPR_STATUS></ASSET_APPR_STATUS>
     <!--客户协议暂停有效期限（非必传）-->

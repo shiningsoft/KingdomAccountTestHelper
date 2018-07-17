@@ -2,13 +2,13 @@
 <!--2.66	实时获取证券账户状态-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码-->
-    <CUST_CODE>36050</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--市场板块DD[STKBD]-->
-    <STKBD>0</STKBD>
+    <STKBD></STKBD>
     <!--股东代码-->
     <TRDACCT></TRDACCT>
     <!--资产账户-->

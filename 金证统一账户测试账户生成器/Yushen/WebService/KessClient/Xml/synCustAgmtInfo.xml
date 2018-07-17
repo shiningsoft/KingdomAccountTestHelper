@@ -2,7 +2,7 @@
 <!--2.256	客户签署协议信息同步-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--调查表编码（必传）-->

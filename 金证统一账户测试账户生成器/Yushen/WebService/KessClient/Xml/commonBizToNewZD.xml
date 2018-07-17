@@ -8,7 +8,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--账户业务代码（必传）DD-[ACCTBIZ_EXCODE]
@@ -21,9 +21,9 @@
 22-产品客户一码通账户开立23-身份信息验证-->
     <ACCTBIZ_EXCODE></ACCTBIZ_EXCODE>
     <!--循环获取中登返回结果最大次数（非必传）默认为20次-->
-    <CIRCLE_TIMES>20</CIRCLE_TIMES>
+    <CIRCLE_TIMES></CIRCLE_TIMES>
     <!--循环获取中登返回结果间隔时间，单位为秒（非必传）默认为3s，故此接口设置的超时时间默认为60s，可由调用方自行控制-->
-    <INTERVAL_TIME>3</INTERVAL_TIME>
+    <INTERVAL_TIME></INTERVAL_TIME>
     <!--一码通号码（非必传）-->
     <YMT_CODE></YMT_CODE>
     <!--客户代码（非必传）-->

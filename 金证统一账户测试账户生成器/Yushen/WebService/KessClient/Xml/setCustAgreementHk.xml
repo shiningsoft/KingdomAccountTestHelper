@@ -2,7 +2,7 @@
 <!--2.143	客户港股通协议维护-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）0-新增1-修改2-删除3-设置报送状态-->

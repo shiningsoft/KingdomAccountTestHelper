@@ -2,52 +2,52 @@
 <!--2.15	见证开户基本资料登记和修改-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--其他配置字段名对应APPT_EXTEND_CFG里面的FIELD_CODE-->
     <!--操作类型：0表示登记预约开户资料，1表示修改预约开户资料-->
-    <OP_TYPE>1</OP_TYPE>
+    <OP_TYPE></OP_TYPE>
     <!--当前日期-->
-    <OCCUR_DATE>20130107</OCCUR_DATE>
+    <OCCUR_DATE></OCCUR_DATE>
     <!--当前时间-->
-    <OCCUR_TIME>2013-01-0708:52:56.950634</OCCUR_TIME>
+    <OCCUR_TIME></OCCUR_TIME>
     <!--预约流水号-->
-    <SERIAL_NO>2013010700000002</SERIAL_NO>
+    <SERIAL_NO></SERIAL_NO>
     <!--预约方式DD[APPT_CHNL]-->
-    <APPT_CHNL>4</APPT_CHNL>
+    <APPT_CHNL></APPT_CHNL>
     <!--预约业务DD[APPT_BIZ]-->
-    <APPT_BIZ>8</APPT_BIZ>
+    <APPT_BIZ></APPT_BIZ>
     <!--预约状态-->
-    <APPT_STATUS>0</APPT_STATUS>
+    <APPT_STATUS></APPT_STATUS>
     <!--有效日期-->
-    <EXP_DATE>20140107</EXP_DATE>
+    <EXP_DATE></EXP_DATE>
     <!--内部机构-->
-    <INT_ORG>9000</INT_ORG>
+    <INT_ORG></INT_ORG>
     <!--客户代码-->
-    <CUST_CODE>0</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--客户姓名-->
-    <CUST_NAME>b</CUST_NAME>
+    <CUST_NAME></CUST_NAME>
     <!--客户全称-->
     <CUST_FNAME></CUST_FNAME>
     <!--资产账户-->
-    <CUACCT_CODE>0</CUACCT_CODE>
+    <CUACCT_CODE></CUACCT_CODE>
     <!--用户类型DD[USER_TYPE]-->
-    <USER_TYPE>0</USER_TYPE>
+    <USER_TYPE></USER_TYPE>
     <!--证件类型DD[ID_TYPE]-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码-->
-    <ID_CODE>23071419830710138X</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--发证机关-->
-    <ID_ISS_AGCY>b</ID_ISS_AGCY>
+    <ID_ISS_AGCY></ID_ISS_AGCY>
     <!--证件开始日期-->
-    <ID_BEG_DATE>20130101</ID_BEG_DATE>
+    <ID_BEG_DATE></ID_BEG_DATE>
     <!--证件有效日期-->
-    <ID_EXP_DATE>20180101</ID_EXP_DATE>
+    <ID_EXP_DATE></ID_EXP_DATE>
     <!--证件邮编-->
     <ID_ZIP_CODE></ID_ZIP_CODE>
     <!--证件地址-->
-    <ID_ADDR>b</ID_ADDR>
+    <ID_ADDR></ID_ADDR>
     <!--邮政编码-->
     <ZIP_CODE></ZIP_CODE>
     <!--联系地址-->
@@ -61,17 +61,17 @@
     <!--电子邮箱-->
     <EMAIL></EMAIL>
     <!--国籍DD[CITIZENSHIP]-->
-    <CITIZENSHIP>CHN</CITIZENSHIP>
+    <CITIZENSHIP></CITIZENSHIP>
     <!--籍贯/注册地-->
     <NATIVE_PLACE></NATIVE_PLACE>
     <!--出生/注册日期-->
-    <BIRTHDAY>19830710</BIRTHDAY>
+    <BIRTHDAY></BIRTHDAY>
     <!--民族DD[NATIONALITY]-->
-    <NATIONALITY>00</NATIONALITY>
+    <NATIONALITY></NATIONALITY>
     <!--学历DD[EDUCATION]-->
     <EDUCATION></EDUCATION>
     <!--性别DD[SEX]-->
-    <SEX>1</SEX>
+    <SEX></SEX>
     <!--法人代表-->
     <LEGAL_REP></LEGAL_REP>
     <!--法人代表证件号码-->
@@ -89,15 +89,15 @@
     <!--备注信息-->
     <REMARK></REMARK>
     <!--复核申请序号-->
-    <CHK_APP_SN>0</CHK_APP_SN>
+    <CHK_APP_SN></CHK_APP_SN>
     <!--复核状态-->
-    <CHK_STATUS>0</CHK_STATUS>
+    <CHK_STATUS></CHK_STATUS>
     <!--复核备注-->
     <CHK_REMARK></CHK_REMARK>
     <!--银证业务序号-->
-    <CUBSB_LOG_SN>0</CUBSB_LOG_SN>
+    <CUBSB_LOG_SN></CUBSB_LOG_SN>
     <!--处理日期-->
-    <PROC_DATE>0</PROC_DATE>
+    <PROC_DATE></PROC_DATE>
     <!--处理备注-->
     <PROC_REMARK></PROC_REMARK>
     <!--办公电话-->
@@ -113,7 +113,7 @@
     <!--首选联系地址DD[LINKADDR_ORDER]-->
     <LINKADDR_ORDER></LINKADDR_ORDER>
     <!--外部机构-->
-    <EXT_ORG>5200</EXT_ORG>
+    <EXT_ORG></EXT_ORG>
     <!--银行账户-->
     <BANK_ACCT></BANK_ACCT>
     <!--存管账户-->
@@ -129,23 +129,23 @@
     <!--见证时间-->
     <OPEN_TIME></OPEN_TIME>
     <!--见证派单状态-->
-    <ORDER_STATE>3</ORDER_STATE>
+    <ORDER_STATE></ORDER_STATE>
     <!--见证开户人员代码-->
-    <F_USER_CODE>0</F_USER_CODE>
+    <F_USER_CODE></F_USER_CODE>
     <!--付费模式-->
     <PAY_MODE></PAY_MODE>
     <!--审核日期-->
-    <CHK_DATE>0</CHK_DATE>
+    <CHK_DATE></CHK_DATE>
     <!--审核结果-->
     <CHK_RESULT></CHK_RESULT>
     <!--开户阶段-->
-    <WEB_PHASE>07</WEB_PHASE>
+    <WEB_PHASE></WEB_PHASE>
     <!--操作员姓名-->
-    <OP_NAME>李小盾</OP_NAME>
+    <OP_NAME></OP_NAME>
     <!--见证开发人员名称-->
     <F_USER_NAME></F_USER_NAME>
     <!--视频编码-->
-    <VIDEO_SN>0</VIDEO_SN>
+    <VIDEO_SN></VIDEO_SN>
     <!--影像编码-->
     <IMG_SNS></IMG_SNS>
     <!--一审提交日期-->
@@ -156,19 +156,19 @@
     <CHK_TWO_STATUS></CHK_TWO_STATUS>
     <!--二审提交时间-->
     <CHK_TWO_TIME></CHK_TWO_TIME>
-    <RE_OCCUR_DATE>20130107</RE_OCCUR_DATE>
-    <ONE_USER_CODE>0</ONE_USER_CODE>
+    <RE_OCCUR_DATE></RE_OCCUR_DATE>
+    <ONE_USER_CODE></ONE_USER_CODE>
     <ONE_USER_NAME></ONE_USER_NAME>
-    <TWO_USER_CODE>0</TWO_USER_CODE>
+    <TWO_USER_CODE></TWO_USER_CODE>
     <TWO_USER_NAME></TWO_USER_NAME>
     <!--银行二-->
-    <EXT_ORG2>0</EXT_ORG2>
+    <EXT_ORG2></EXT_ORG2>
     <!--银行三-->
-    <EXT_ORG3>0</EXT_ORG3>
+    <EXT_ORG3></EXT_ORG3>
     <!--银行四-->
-    <EXT_ORG4>0</EXT_ORG4>
+    <EXT_ORG4></EXT_ORG4>
     <!--银行五-->
-    <EXT_ORG5>0</EXT_ORG5>
+    <EXT_ORG5></EXT_ORG5>
     <!--银行帐户二-->
     <BANK_ACCT2></BANK_ACCT2>
     <!--银行帐户三-->
@@ -178,7 +178,7 @@
     <!--银行帐户五-->
     <BANK_ACCT5></BANK_ACCT5>
     <!--操作渠道(委托方式)DD[CHANNEL]-->
-    <CHANNEL>1</CHANNEL>
+    <CHANNEL></CHANNEL>
     <!--预约来源DD[APPT_SOURCE]-->
     <APPT_SOURCE></APPT_SOURCE>
     <!--客户经理-->
@@ -227,13 +227,13 @@
     <!--拥有本公司以外的产品DD[EN_PRODUCT_CODE]-->
     <EN_PRODUCT_CODE></EN_PRODUCT_CODE>
     <!--法人证件有效期-->
-    <LEGAL_ID_EXP_DATE>0</LEGAL_ID_EXP_DATE>
+    <LEGAL_ID_EXP_DATE></LEGAL_ID_EXP_DATE>
     <!--代理人名称-->
     <USER_NAME_AGENT></USER_NAME_AGENT>
     <!--代理人证件类型-->
     <ID_CODE_AGENT></ID_CODE_AGENT>
     <!--代理人证件有效期-->
-    <ID_EXP_DATE_AGENT>0</ID_EXP_DATE_AGENT>
+    <ID_EXP_DATE_AGENT></ID_EXP_DATE_AGENT>
     <SALESSTAFF_CODE></SALESSTAFF_CODE>
     <SALESSTAFF_NAME></SALESSTAFF_NAME>
     <!--基金账户信息-->
@@ -243,9 +243,9 @@
     <!--交易密码-->
     <TRDACCT_PWD></TRDACCT_PWD>
     <!--港币转账银行-->
-    <EXT_ORG_HK>0</EXT_ORG_HK>
+    <EXT_ORG_HK></EXT_ORG_HK>
     <!--美元转账银行-->
-    <EXT_ORG_US>0</EXT_ORG_US>
+    <EXT_ORG_US></EXT_ORG_US>
     <!--港币转账银行帐户-->
     <BANK_ACCT_HK></BANK_ACCT_HK>
     <!--美元转账银行帐户-->
@@ -271,7 +271,7 @@
     <!--隐私级别DD[PRIVACY_LEVEL]-->
     <PRIVACY_LEVEL></PRIVACY_LEVEL>
     <!--阅读状态-->
-    <READ_STATES>[{"inputType":"1","level1":"1"}]</READ_STATES>
+    <READ_STATES></READ_STATES>
     <!--邮寄方式-->
     <MAIL_TYPE></MAIL_TYPE>
     <!--利率编码组-->

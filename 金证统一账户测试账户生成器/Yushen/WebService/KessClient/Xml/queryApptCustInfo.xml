@@ -2,7 +2,7 @@
 <!--2.262	预约开户资料查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--开始日期（必传）-->

@@ -2,7 +2,7 @@
 <!--2.254	客户签署协议检查配置查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户协议类型（非必传）DD[CUST_AGMT_TYPE]-->

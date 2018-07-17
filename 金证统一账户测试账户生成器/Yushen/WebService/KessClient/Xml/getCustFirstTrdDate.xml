@@ -2,7 +2,7 @@
 <!--2.168	首次交易日期查询或中登报送-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必输）-->

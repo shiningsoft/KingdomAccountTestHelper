@@ -2,7 +2,7 @@
 <!--2.150	电子协议流水查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--协议所属机构-->

@@ -5,7 +5,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--新开户标志0-已有一码通1-新开一码通-->

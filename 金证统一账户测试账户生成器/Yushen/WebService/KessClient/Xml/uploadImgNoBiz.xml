@@ -6,15 +6,15 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--影像类别021是正面免冠照，022身份证正反面，02c是银行卡照-->
-    <IMG_CLS>021</IMG_CLS>
+    <IMG_CLS></IMG_CLS>
     <!--用户代码-->
-    <USER_CODE>33146</USER_CODE>
+    <USER_CODE></USER_CODE>
     <!--证件号码-->
-    <ID_CODE>220204195605105527</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--内部机构(必填)-->
     <INT_ORG></INT_ORG>
     <!--现场采集标志-->
@@ -22,6 +22,6 @@
     <!--审核标志-->
     <AUDIT_FLAG></AUDIT_FLAG>
     <!--影像编码（第一次上传影像，必须填写字符串”null”，其它情况必须传对应的编码）-->
-    <IMG_SN>2013011600000020</IMG_SN>
+    <IMG_SN></IMG_SN>
   </data>
 </request>

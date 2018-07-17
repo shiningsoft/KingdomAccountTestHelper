@@ -4,11 +4,11 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必输）-->
-    <CUST_CODE>10100165492</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--操作类型（必输）9位字符，WIN版使用
 0客户代码0该客户代码不存在需要新开户，1该客户代码已存在需要同步更新资料和状态，2前端未勾选不更新客户代码信息
 1资金账户0该资金账户不存在需要新开户，1该资金账户已存在需要更新状态，2前端未勾选不更新该资金账户信息
@@ -22,15 +22,15 @@
 提交后台信息为：
 OperType[0]+OperType[1]+OperType[2]+OperType[3]+OperType[4]+OperType[51]+OperType[6]+OperType[7]+OperType[8],9位字符。
 如：12220000，只修改客户代码信息和状态，资金帐户和股东账户等信息不变-->
-    <OPERATION_TYPE>022222222</OPERATION_TYPE>
+    <OPERATION_TYPE></OPERATION_TYPE>
     <!--资产账户（必输）-->
-    <CUACCT_CODE>10100165492</CUACCT_CODE>
+    <CUACCT_CODE></CUACCT_CODE>
     <!--深圳交易账户（非必输）-->
     <TRDACCTSZ></TRDACCTSZ>
     <!--上海交易账户（非必输）-->
     <TRDACCTSH></TRDACCTSH>
     <!--信用交易密码（非必输）-->
-    <FISL_TRD_AUTH_DATA>123123</FISL_TRD_AUTH_DATA>
+    <FISL_TRD_AUTH_DATA></FISL_TRD_AUTH_DATA>
     <!--是否同步密码（非必输）0-同步其它-不同步U版使用-->
     <SYNC_AUTH></SYNC_AUTH>
     <!--操作渠道（非必输）-->

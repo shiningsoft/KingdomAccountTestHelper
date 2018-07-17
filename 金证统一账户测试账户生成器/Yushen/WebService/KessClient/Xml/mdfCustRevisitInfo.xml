@@ -2,7 +2,7 @@
 <!--2.137	客户征信回访记录信息维护-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->

@@ -2,11 +2,11 @@
 <!--2.100	三方存管预约开户激活-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--内部机构-->
-    <INT_ORG>101</INT_ORG>
+    <INT_ORG></INT_ORG>
     <!--分支机构-->
     <INT_BRH></INT_BRH>
     <!--资金帐号-->

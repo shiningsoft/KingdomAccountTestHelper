@@ -2,7 +2,7 @@
 <!--2.136	证券账户登记资料维护-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码-->

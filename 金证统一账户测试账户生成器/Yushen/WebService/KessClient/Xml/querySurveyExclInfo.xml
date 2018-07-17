@@ -2,7 +2,7 @@
 <!--2.267	测评试题互斥信息查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--测评编号（非必传）-->

@@ -2,13 +2,13 @@
 <!--2.65	客户代码状态维护-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码-->
-    <CUST_CODE>36050</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--客户状态-->
-    <CUST_STATUS>0</CUST_STATUS>
+    <CUST_STATUS></CUST_STATUS>
     <!--操作备注-->
     <OP_REMARK></OP_REMARK>
   </data>

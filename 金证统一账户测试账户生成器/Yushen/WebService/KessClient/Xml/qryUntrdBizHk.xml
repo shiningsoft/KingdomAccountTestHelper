@@ -2,7 +2,7 @@
 <!--2.215	非交易报送业务查询（港股）-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--流水序号（非必传）-->

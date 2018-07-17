@@ -2,7 +2,7 @@
 <!--2.128	临柜业务任务申请-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--内部机构（必传）-->

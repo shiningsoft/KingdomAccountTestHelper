@@ -2,7 +2,7 @@
 <!--2.147	根据资产账户查询客户信息-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（非必传）-->

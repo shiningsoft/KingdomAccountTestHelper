@@ -4,11 +4,11 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->
-    <CUST_CODE>800500099753</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--内部机构-->
     <INT_ORG></INT_ORG>
     <!--开户来源-->

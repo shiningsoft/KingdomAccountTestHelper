@@ -4,29 +4,29 @@
 -->
 <request>
   <auth>
-    <OPERATOR>31010013</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户名称-->
-    <USER_NAME>cccccc</USER_NAME>
+    <USER_NAME></USER_NAME>
     <!--用户类型DD[USER_TYPE]-->
-    <USER_TYPE>0</USER_TYPE>
+    <USER_TYPE></USER_TYPE>
     <!--证件类型-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码-->
-    <ID_CODE>370103194308171700</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--用户全称-->
-    <USER_FNAME>cccccc</USER_FNAME>
+    <USER_FNAME></USER_FNAME>
     <!--证件邮编-->
     <ID_ZIP_CODE></ID_ZIP_CODE>
     <!--证件地址-->
-    <ID_ADDR>cccccccccccccccccccccccccccccc</ID_ADDR>
+    <ID_ADDR></ID_ADDR>
     <!--证件有效日期-->
-    <ID_EXP_DATE>20330303</ID_EXP_DATE>
+    <ID_EXP_DATE></ID_EXP_DATE>
     <!--邮政编码-->
-    <ZIP_CODE>111111</ZIP_CODE>
+    <ZIP_CODE></ZIP_CODE>
     <!--联系地址-->
-    <ADDRESS>cccccccccccccccccccccccccccccccccccccccccccccccc</ADDRESS>
+    <ADDRESS></ADDRESS>
     <!--联系电话-->
     <TEL></TEL>
     <!--传真电话-->
@@ -34,30 +34,30 @@
     <!--电子邮箱-->
     <EMAIL></EMAIL>
     <!--移动电话-->
-    <MOBILE_TEL>13333333333</MOBILE_TEL>
+    <MOBILE_TEL></MOBILE_TEL>
     <!--国籍DD[CITIZENSHIP]-->
-    <CITIZENSHIP>CHN</CITIZENSHIP>
+    <CITIZENSHIP></CITIZENSHIP>
     <!--学历-->
-    <EDUCATION>0</EDUCATION>
+    <EDUCATION></EDUCATION>
     <!--籍贯/注册地-->
     <NATIVE_PLACE></NATIVE_PLACE>
     <!--性别DD[SEX]-->
-    <SEX>1</SEX>
+    <SEX></SEX>
     <!--出生日期/注册日期-->
-    <BIRTHDAY>19430817</BIRTHDAY>
+    <BIRTHDAY></BIRTHDAY>
     <!--职业类型-->
-    <OCCU_TYPE>02</OCCU_TYPE>
+    <OCCU_TYPE></OCCU_TYPE>
     <!--法人代表-->
     <LEGAL_REP></LEGAL_REP>
     <!--法人代表证件号码-->
     <LEGAL_REP_ID_CODE></LEGAL_REP_ID_CODE>
     <!--机构编码-->
-    <INT_ORG>3101</INT_ORG>
+    <INT_ORG></INT_ORG>
     <!--客户代码-->
-    <CUST_CODE>310100033019</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--开户方式：0柜台开户1客户自助2视频见证3双人见证-->
-    <ACCT_OPENTYPE>2</ACCT_OPENTYPE>
+    <ACCT_OPENTYPE></ACCT_OPENTYPE>
     <!--交易市场开户(预约)-->
-    <APPT_OPEN_ACCT>0,1,4,5</APPT_OPEN_ACCT>
+    <APPT_OPEN_ACCT></APPT_OPEN_ACCT>
   </data>
 </request>

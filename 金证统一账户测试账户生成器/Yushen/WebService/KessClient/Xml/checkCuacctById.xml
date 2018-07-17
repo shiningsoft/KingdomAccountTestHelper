@@ -2,7 +2,7 @@
 <!--2.115	根据证件类型和号码查询是否已开资金账号及状态-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--证件类型（必传）-->

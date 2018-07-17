@@ -2,11 +2,11 @@
 <!--2.80	客户资料查询-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->
-    <CUST_CODE>30496623</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--机构代码（非必传）-->
     <INT_ORG></INT_ORG>
     <!--客户分类（非必传）DD[CUST_CLS]-->

@@ -4,10 +4,10 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--信用级别编码（非必传）-->
-    <CDT_LEVEL_SN>1</CDT_LEVEL_SN>
+    <CDT_LEVEL_SN></CDT_LEVEL_SN>
   </data>
 </request>

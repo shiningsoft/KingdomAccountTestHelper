@@ -4,17 +4,17 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--证券账户类别DD[ACCT_TYPE]-->
     <ACCT_TYPE></ACCT_TYPE>
     <!--内部机构-->
-    <INT_ORG>101</INT_ORG>
+    <INT_ORG></INT_ORG>
     <!--客户代码-->
     <CUST_CODE></CUST_CODE>
     <!--证件类型-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码-->
     <ID_CODE></ID_CODE>
     <!--股东账户-->

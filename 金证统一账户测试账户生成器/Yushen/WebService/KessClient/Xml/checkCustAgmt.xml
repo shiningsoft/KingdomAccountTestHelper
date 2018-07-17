@@ -2,7 +2,7 @@
 <!--2.255	客户签署协议检查-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户协议类型（非必传）-->

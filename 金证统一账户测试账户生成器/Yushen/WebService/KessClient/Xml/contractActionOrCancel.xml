@@ -2,13 +2,13 @@
 <!--2.75	券商预约确认/取消-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型（必传）:0表示券商预约确认，1表示券商预约取消-->
-    <OP_TYPE>0</OP_TYPE>
+    <OP_TYPE></OP_TYPE>
     <!--预约流水序号（必传）-->
-    <APPT_SERIAL_NO>2014021300000001</APPT_SERIAL_NO>
+    <APPT_SERIAL_NO></APPT_SERIAL_NO>
     <!--银行校验串-->
     <BANK_APPT_MAC></BANK_APPT_MAC>
   </data>

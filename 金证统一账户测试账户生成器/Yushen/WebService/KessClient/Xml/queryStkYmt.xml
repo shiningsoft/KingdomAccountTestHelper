@@ -2,7 +2,7 @@
 <!--2.274	一码通查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（非必传）-->

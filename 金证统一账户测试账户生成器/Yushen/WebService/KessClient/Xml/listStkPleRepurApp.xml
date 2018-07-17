@@ -2,7 +2,7 @@
 <!--2.154	查询客户股票质押式回购申请记录-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->

@@ -2,7 +2,7 @@
 <!--2.275	客户权限状态设置-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--有效客户协议类型（非必传）-->

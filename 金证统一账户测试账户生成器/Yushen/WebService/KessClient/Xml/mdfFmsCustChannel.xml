@@ -2,7 +2,7 @@
 <!--2.278	客户操作渠道修改-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（非必传）-->

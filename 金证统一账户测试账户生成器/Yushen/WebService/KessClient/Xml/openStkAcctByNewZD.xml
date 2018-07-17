@@ -8,7 +8,7 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--业务类型（必传）0-A股账户开户1-基金账户开户2-B股账户开户3-信用账户开户-->

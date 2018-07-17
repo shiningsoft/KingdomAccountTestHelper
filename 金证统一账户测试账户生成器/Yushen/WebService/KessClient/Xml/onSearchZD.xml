@@ -2,15 +2,15 @@
 <!--2.21	中登实时查询-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--证件类型-->
-    <ID_TYPE>00</ID_TYPE>
+    <ID_TYPE></ID_TYPE>
     <!--证件号码-->
-    <ID_CODE>410106198312206187</ID_CODE>
+    <ID_CODE></ID_CODE>
     <!--国籍DD[CITIZENSHIP]-->
-    <CITIZENSHIP>CHN</CITIZENSHIP>
+    <CITIZENSHIP></CITIZENSHIP>
     <!--机构代码-->
     <INT_ORG></INT_ORG>
     <!--用户名称-->

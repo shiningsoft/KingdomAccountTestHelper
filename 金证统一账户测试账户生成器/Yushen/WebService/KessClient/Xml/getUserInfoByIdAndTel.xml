@@ -2,7 +2,7 @@
 <!--2.162	根据证件号码和手机号查询客户信息-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--证件号码（非必传）-->

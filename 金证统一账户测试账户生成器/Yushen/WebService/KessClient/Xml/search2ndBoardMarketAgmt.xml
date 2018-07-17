@@ -2,7 +2,7 @@
 <!--2.139	查询系统内创业板协议-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（必传）-->

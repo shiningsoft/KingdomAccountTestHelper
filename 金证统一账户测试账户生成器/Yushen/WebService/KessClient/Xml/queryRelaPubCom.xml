@@ -2,7 +2,7 @@
 <!--2.258	上市公司关联人信息表查询-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--交易市场（必传）DD[STKEX]-->

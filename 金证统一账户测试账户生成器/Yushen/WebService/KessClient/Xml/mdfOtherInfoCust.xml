@@ -2,7 +2,7 @@
 <!--2.45	客户其它资料修改（系统账户库，不是预约库）-->
 <request>
   <auth>
-    <OPERATOR>31010013</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--柜员工作机构（非必传）-->

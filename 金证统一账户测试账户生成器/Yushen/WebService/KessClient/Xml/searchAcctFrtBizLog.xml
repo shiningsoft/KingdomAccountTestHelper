@@ -2,7 +2,7 @@
 <!--2.127	查询临柜业务流水-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--内部机构（必传）-->

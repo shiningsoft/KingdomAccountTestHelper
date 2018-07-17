@@ -2,7 +2,7 @@
 <!--2.2	操作员退出-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data></data>
 </request>

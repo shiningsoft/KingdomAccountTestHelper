@@ -2,7 +2,7 @@
 <!--2.117	交易日历查询-->
 <request>
   <auth>
-    <OPERATOR>11843</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--帐套编号（非必传）-->

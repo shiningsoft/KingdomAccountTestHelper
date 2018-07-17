@@ -2,24 +2,24 @@
 <!--2.70	查询银证业务流水-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--流水序号（必传）-->
-    <SERIAL_NO>2015110600000001</SERIAL_NO>
+    <SERIAL_NO></SERIAL_NO>
     <!--发生日期（必传）-->
-    <OCCUR_DATE>20130201</OCCUR_DATE>
+    <OCCUR_DATE></OCCUR_DATE>
     <!--货币代码（必传）DD[CURRENCY]0-人民币1-港币2-美元-->
-    <CURRENCY>0</CURRENCY>
+    <CURRENCY></CURRENCY>
     <!--资产账户（必传）-->
-    <CUACCT_CODE>5528221</CUACCT_CODE>
+    <CUACCT_CODE></CUACCT_CODE>
     <!--外部机构（必传）-->
-    <EXT_ORG>3121</EXT_ORG>
+    <EXT_ORG></EXT_ORG>
     <!--内部机构（必传）-->
-    <INT_ORG>1500</INT_ORG>
+    <INT_ORG></INT_ORG>
     <!--银证业务标识（非必传）DD[CUBSB_TRD_ID]-->
-    <CUBSB_TRD_IDS>19</CUBSB_TRD_IDS>
+    <CUBSB_TRD_IDS></CUBSB_TRD_IDS>
     <!--银证业务状态（非必传）DD[CUBSB_TRD_STATUSS]-->
-    <CUBSB_TRD_STATUSS>1</CUBSB_TRD_STATUSS>
+    <CUBSB_TRD_STATUSS></CUBSB_TRD_STATUSS>
   </data>
 </request>

@@ -2,11 +2,11 @@
 <!--2.18	查询风险测评题库-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--调查表类别-->
-    <SURVEY_CLS>0</SURVEY_CLS>
+    <SURVEY_CLS></SURVEY_CLS>
     <!--调查表编号-->
     <SURVEY_SN></SURVEY_SN>
     <!--主客观-->

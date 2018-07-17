@@ -2,10 +2,10 @@
 <!--2.20	查询风险测评答案-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--预约开户流水号-->
-    <APPT_SERIAL_NO>2013010700000002</APPT_SERIAL_NO>
+    <APPT_SERIAL_NO></APPT_SERIAL_NO>
   </data>
 </request>

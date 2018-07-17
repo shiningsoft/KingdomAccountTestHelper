@@ -2,7 +2,7 @@
 <!--2.59	客户协议维护-->
 <request>
   <auth>
-    <OPERATOR>31010107</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--操作类型0-增加1-修改2-删除-->
@@ -30,7 +30,7 @@
     <!--是否重新申报1-重新申报-->
     <REDO_FLAG></REDO_FLAG>
     <!--报送状态0-未报,1-已报,9-报送失败-->
-    <DEAL_STATUS>0</DEAL_STATUS>
+    <DEAL_STATUS></DEAL_STATUS>
     <!--签署日期-->
     <SIGN_DATE></SIGN_DATE>
     <!--任务流序号-->

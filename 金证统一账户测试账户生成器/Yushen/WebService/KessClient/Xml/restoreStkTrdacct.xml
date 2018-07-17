@@ -4,15 +4,15 @@
 -->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码（必传）-->
-    <CUST_CODE>30496623</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--交易版块（必传）-数据字典DD[STKBD]-->
-    <STKBD>00</STKBD>
+    <STKBD></STKBD>
     <!--交易账户（必传）-->
-    <TRDACCT>0100009966</TRDACCT>
+    <TRDACCT></TRDACCT>
     <!--操作备注-->
     <OP_REMARK></OP_REMARK>
   </data>

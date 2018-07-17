@@ -4,11 +4,11 @@
 -->
 <request>
   <auth>
-    <OPERATOR>31010013</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码-->
-    <CUST_CODE>310100033041</CUST_CODE>
+    <CUST_CODE></CUST_CODE>
     <!--交易版块10-沪A11-沪B等，见数据字典DD[STKBD]-->
     <STKBD></STKBD>
     <!--股东账户-->

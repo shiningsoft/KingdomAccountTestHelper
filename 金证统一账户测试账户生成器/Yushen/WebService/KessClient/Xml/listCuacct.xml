@@ -2,11 +2,11 @@
 <!--2.81	客户资产账户维护-->
 <request>
   <auth>
-    <OPERATOR>36050</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--用户代码（必传）-->
-    <USER_CODE>30496623</USER_CODE>
+    <USER_CODE></USER_CODE>
     <!--资产账户代码-->
     <CUACCT_CODE></CUACCT_CODE>
   </data>

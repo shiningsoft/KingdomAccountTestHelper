@@ -2,7 +2,7 @@
 <!--2.276	查询协议失效状态流水-->
 <request>
   <auth>
-    <OPERATOR>33146</OPERATOR>
+    <OPERATOR></OPERATOR>
   </auth>
   <data>
     <!--客户代码（非必传）-->
