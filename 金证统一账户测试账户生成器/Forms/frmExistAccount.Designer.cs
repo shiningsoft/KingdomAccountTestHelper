@@ -130,6 +130,7 @@ namespace 金证统一账户测试账户生成器
             this.btnMdfCustBasicInfo = new System.Windows.Forms.Button();
             this.tbChannels = new System.Windows.Forms.TextBox();
             this.tpRiskSurveyResult = new System.Windows.Forms.TabPage();
+            this.lbLastRiskSurveyDate = new System.Windows.Forms.Label();
             this.btnQueryRiskSurveyResult = new System.Windows.Forms.Button();
             this.label34 = new System.Windows.Forms.Label();
             this.dtpEND_DATE = new System.Windows.Forms.DateTimePicker();
@@ -202,7 +203,55 @@ namespace 金证统一账户测试账户生成器
             this.非金融涉税信息CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.非金融涉税信息CUST_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TAX_RESIDENT_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lbLastRiskSurveyDate = new System.Windows.Forms.Label();
+            this.CTRL_FLAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SURNAME_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NAME_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.非居民涉税信息ADDRESS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NATION_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROVINCE_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CITY_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADDRESS_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.非居民涉税信息CITIZENSHIP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CITIZENSHIP2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CITIZENSHIP3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TAXPAYER_IDNO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TAXPAYER_IDNO2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TAXPAYER_IDNO3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.非居民涉税信息BIRTHDAY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BIRTH_ADDRESS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BIRTH_ADDRESS_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BIRTH_NATION_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BIRTH_PROVINCE_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BIRTH_CITY_ENG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NO_TAXPAYERID_REASON = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NO_TAXPAYERID_REASON2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NO_TAXPAYERID_REASON3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PASSIVE_NFE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTRL_NON_RESIDENT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.非居民涉税信息REMARK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.非居民涉税信息CTRL_NO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GET_INVEST_CERFLAG = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ADDRESS_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTRL_TYPE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CTRL_SHARE_RATIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.REMARK2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.REG_COUNTRY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.LIVING_COUNTRY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.BIRTH_COUNTRY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MONAMNT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CURR_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAYMENT_TYPE1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAYMENT_TYPE2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAYMENT_TYPE3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAYMENT_TYPE4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAYMENT_AMNT1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAYMENT_AMNT2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAYMENT_AMNT3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PAYMENT_AMNT4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROVINCE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CITYCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DISTRICT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CITYEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -1155,6 +1204,15 @@ namespace 金证统一账户测试账户生成器
             this.tpRiskSurveyResult.Text = "风险测评";
             this.tpRiskSurveyResult.UseVisualStyleBackColor = true;
             // 
+            // lbLastRiskSurveyDate
+            // 
+            this.lbLastRiskSurveyDate.AutoSize = true;
+            this.lbLastRiskSurveyDate.Location = new System.Drawing.Point(446, 216);
+            this.lbLastRiskSurveyDate.Name = "lbLastRiskSurveyDate";
+            this.lbLastRiskSurveyDate.Size = new System.Drawing.Size(89, 12);
+            this.lbLastRiskSurveyDate.TabIndex = 53;
+            this.lbLastRiskSurveyDate.Text = "最后测评日期：";
+            // 
             // btnQueryRiskSurveyResult
             // 
             this.btnQueryRiskSurveyResult.Location = new System.Drawing.Point(363, 210);
@@ -1831,11 +1889,61 @@ namespace 金证统一账户测试账户生成器
             this.dgvCustNraTaxInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvCustNraTaxInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvCustNraTaxInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustNraTaxInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.非金融涉税信息CUST_CODE,
             this.非金融涉税信息CUST_NAME,
-            this.TAX_RESIDENT_TYPE});
+            this.TAX_RESIDENT_TYPE,
+            this.CTRL_FLAG,
+            this.SURNAME_ENG,
+            this.NAME_ENG,
+            this.非居民涉税信息ADDRESS,
+            this.NATION_ENG,
+            this.PROVINCE_ENG,
+            this.CITY_ENG,
+            this.ADDRESS_ENG,
+            this.非居民涉税信息CITIZENSHIP,
+            this.CITIZENSHIP2,
+            this.CITIZENSHIP3,
+            this.TAXPAYER_IDNO,
+            this.TAXPAYER_IDNO2,
+            this.TAXPAYER_IDNO3,
+            this.非居民涉税信息BIRTHDAY,
+            this.BIRTH_ADDRESS,
+            this.BIRTH_ADDRESS_ENG,
+            this.BIRTH_NATION_ENG,
+            this.BIRTH_PROVINCE_ENG,
+            this.BIRTH_CITY_ENG,
+            this.NO_TAXPAYERID_REASON,
+            this.NO_TAXPAYERID_REASON2,
+            this.NO_TAXPAYERID_REASON3,
+            this.PASSIVE_NFE,
+            this.CTRL_NON_RESIDENT,
+            this.非居民涉税信息REMARK,
+            this.非居民涉税信息CTRL_NO,
+            this.GET_INVEST_CERFLAG,
+            this.ADDRESS_TYPE,
+            this.CTRL_TYPE,
+            this.CTRL_SHARE_RATIO,
+            this.REMARK2,
+            this.REG_COUNTRY,
+            this.LIVING_COUNTRY,
+            this.BIRTH_COUNTRY,
+            this.MONAMNT,
+            this.CURR_CODE,
+            this.PAYMENT_TYPE1,
+            this.PAYMENT_TYPE2,
+            this.PAYMENT_TYPE3,
+            this.PAYMENT_TYPE4,
+            this.PAYMENT_AMNT1,
+            this.PAYMENT_AMNT2,
+            this.PAYMENT_AMNT3,
+            this.PAYMENT_AMNT4,
+            this.PROVINCE,
+            this.CITYCN,
+            this.DISTRICT_NAME,
+            this.CITYEN});
             this.dgvCustNraTaxInfo.Location = new System.Drawing.Point(6, 6);
             this.dgvCustNraTaxInfo.Name = "dgvCustNraTaxInfo";
             this.dgvCustNraTaxInfo.ReadOnly = true;
@@ -1851,6 +1959,7 @@ namespace 金证统一账户测试账户生成器
             this.非金融涉税信息CUST_CODE.Name = "非金融涉税信息CUST_CODE";
             this.非金融涉税信息CUST_CODE.ReadOnly = true;
             this.非金融涉税信息CUST_CODE.Visible = false;
+            this.非金融涉税信息CUST_CODE.Width = 59;
             // 
             // 非金融涉税信息CUST_NAME
             // 
@@ -1858,6 +1967,7 @@ namespace 金证统一账户测试账户生成器
             this.非金融涉税信息CUST_NAME.HeaderText = "客户名称";
             this.非金融涉税信息CUST_NAME.Name = "非金融涉税信息CUST_NAME";
             this.非金融涉税信息CUST_NAME.ReadOnly = true;
+            this.非金融涉税信息CUST_NAME.Width = 78;
             // 
             // TAX_RESIDENT_TYPE
             // 
@@ -1869,14 +1979,397 @@ namespace 金证统一账户测试账户生成器
             this.TAX_RESIDENT_TYPE.ReadOnly = true;
             this.TAX_RESIDENT_TYPE.Width = 120;
             // 
-            // lbLastRiskSurveyDate
+            // CTRL_FLAG
             // 
-            this.lbLastRiskSurveyDate.AutoSize = true;
-            this.lbLastRiskSurveyDate.Location = new System.Drawing.Point(446, 216);
-            this.lbLastRiskSurveyDate.Name = "lbLastRiskSurveyDate";
-            this.lbLastRiskSurveyDate.Size = new System.Drawing.Size(89, 12);
-            this.lbLastRiskSurveyDate.TabIndex = 53;
-            this.lbLastRiskSurveyDate.Text = "最后测评日期：";
+            this.CTRL_FLAG.DataPropertyName = "CTRL_FLAG";
+            this.CTRL_FLAG.HeaderText = "是否控制人";
+            this.CTRL_FLAG.Name = "CTRL_FLAG";
+            this.CTRL_FLAG.ReadOnly = true;
+            this.CTRL_FLAG.Width = 90;
+            // 
+            // SURNAME_ENG
+            // 
+            this.SURNAME_ENG.DataPropertyName = "SURNAME_ENG";
+            this.SURNAME_ENG.HeaderText = "姓（英文或拼音）";
+            this.SURNAME_ENG.Name = "SURNAME_ENG";
+            this.SURNAME_ENG.ReadOnly = true;
+            this.SURNAME_ENG.Width = 83;
+            // 
+            // NAME_ENG
+            // 
+            this.NAME_ENG.DataPropertyName = "NAME_ENG";
+            this.NAME_ENG.HeaderText = "名（英文或拼音）";
+            this.NAME_ENG.Name = "NAME_ENG";
+            this.NAME_ENG.ReadOnly = true;
+            this.NAME_ENG.Width = 83;
+            // 
+            // 非居民涉税信息ADDRESS
+            // 
+            this.非居民涉税信息ADDRESS.DataPropertyName = "ADDRESS";
+            this.非居民涉税信息ADDRESS.HeaderText = "详细地址";
+            this.非居民涉税信息ADDRESS.Name = "非居民涉税信息ADDRESS";
+            this.非居民涉税信息ADDRESS.ReadOnly = true;
+            this.非居民涉税信息ADDRESS.Width = 61;
+            // 
+            // NATION_ENG
+            // 
+            this.NATION_ENG.DataPropertyName = "NATION_ENG";
+            this.NATION_ENG.HeaderText = "地址（国家）";
+            this.NATION_ENG.Name = "NATION_ENG";
+            this.NATION_ENG.ReadOnly = true;
+            this.NATION_ENG.Width = 72;
+            // 
+            // PROVINCE_ENG
+            // 
+            this.PROVINCE_ENG.DataPropertyName = "PROVINCE_ENG";
+            this.PROVINCE_ENG.HeaderText = "省（英文或拼音）";
+            this.PROVINCE_ENG.Name = "PROVINCE_ENG";
+            this.PROVINCE_ENG.ReadOnly = true;
+            this.PROVINCE_ENG.Width = 83;
+            // 
+            // CITY_ENG
+            // 
+            this.CITY_ENG.DataPropertyName = "CITY_ENG";
+            this.CITY_ENG.HeaderText = "市（英文或拼音）";
+            this.CITY_ENG.Name = "CITY_ENG";
+            this.CITY_ENG.ReadOnly = true;
+            this.CITY_ENG.Width = 83;
+            // 
+            // ADDRESS_ENG
+            // 
+            this.ADDRESS_ENG.DataPropertyName = "ADDRESS_ENG";
+            this.ADDRESS_ENG.HeaderText = "详细地址(英文或拼音)";
+            this.ADDRESS_ENG.Name = "ADDRESS_ENG";
+            this.ADDRESS_ENG.ReadOnly = true;
+            this.ADDRESS_ENG.Width = 99;
+            // 
+            // 非居民涉税信息CITIZENSHIP
+            // 
+            this.非居民涉税信息CITIZENSHIP.DataPropertyName = "CITIZENSHIP";
+            this.非居民涉税信息CITIZENSHIP.HeaderText = "国籍1";
+            this.非居民涉税信息CITIZENSHIP.Name = "非居民涉税信息CITIZENSHIP";
+            this.非居民涉税信息CITIZENSHIP.ReadOnly = true;
+            this.非居民涉税信息CITIZENSHIP.Width = 51;
+            // 
+            // CITIZENSHIP2
+            // 
+            this.CITIZENSHIP2.DataPropertyName = "CITIZENSHIP2";
+            this.CITIZENSHIP2.HeaderText = "国籍2";
+            this.CITIZENSHIP2.Name = "CITIZENSHIP2";
+            this.CITIZENSHIP2.ReadOnly = true;
+            this.CITIZENSHIP2.Width = 51;
+            // 
+            // CITIZENSHIP3
+            // 
+            this.CITIZENSHIP3.DataPropertyName = "CITIZENSHIP3";
+            this.CITIZENSHIP3.HeaderText = "国籍3";
+            this.CITIZENSHIP3.Name = "CITIZENSHIP3";
+            this.CITIZENSHIP3.ReadOnly = true;
+            this.CITIZENSHIP3.Width = 51;
+            // 
+            // TAXPAYER_IDNO
+            // 
+            this.TAXPAYER_IDNO.DataPropertyName = "TAXPAYER_IDNO";
+            this.TAXPAYER_IDNO.HeaderText = "纳税人识别号1";
+            this.TAXPAYER_IDNO.Name = "TAXPAYER_IDNO";
+            this.TAXPAYER_IDNO.ReadOnly = true;
+            this.TAXPAYER_IDNO.Width = 72;
+            // 
+            // TAXPAYER_IDNO2
+            // 
+            this.TAXPAYER_IDNO2.DataPropertyName = "TAXPAYER_IDNO2";
+            this.TAXPAYER_IDNO2.HeaderText = "纳税人识别号2";
+            this.TAXPAYER_IDNO2.Name = "TAXPAYER_IDNO2";
+            this.TAXPAYER_IDNO2.ReadOnly = true;
+            this.TAXPAYER_IDNO2.Width = 72;
+            // 
+            // TAXPAYER_IDNO3
+            // 
+            this.TAXPAYER_IDNO3.DataPropertyName = "TAXPAYER_IDNO3";
+            this.TAXPAYER_IDNO3.HeaderText = "纳税人识别号3";
+            this.TAXPAYER_IDNO3.Name = "TAXPAYER_IDNO3";
+            this.TAXPAYER_IDNO3.ReadOnly = true;
+            this.TAXPAYER_IDNO3.Width = 72;
+            // 
+            // 非居民涉税信息BIRTHDAY
+            // 
+            this.非居民涉税信息BIRTHDAY.DataPropertyName = "BIRTHDAY";
+            this.非居民涉税信息BIRTHDAY.HeaderText = "出生日期";
+            this.非居民涉税信息BIRTHDAY.Name = "非居民涉税信息BIRTHDAY";
+            this.非居民涉税信息BIRTHDAY.ReadOnly = true;
+            this.非居民涉税信息BIRTHDAY.Width = 61;
+            // 
+            // BIRTH_ADDRESS
+            // 
+            this.BIRTH_ADDRESS.DataPropertyName = "BIRTH_ADDRESS";
+            this.BIRTH_ADDRESS.HeaderText = "出生详细地址";
+            this.BIRTH_ADDRESS.Name = "BIRTH_ADDRESS";
+            this.BIRTH_ADDRESS.ReadOnly = true;
+            this.BIRTH_ADDRESS.Width = 72;
+            // 
+            // BIRTH_ADDRESS_ENG
+            // 
+            this.BIRTH_ADDRESS_ENG.DataPropertyName = "BIRTH_ADDRESS_ENG";
+            this.BIRTH_ADDRESS_ENG.HeaderText = "出生地英文";
+            this.BIRTH_ADDRESS_ENG.Name = "BIRTH_ADDRESS_ENG";
+            this.BIRTH_ADDRESS_ENG.ReadOnly = true;
+            this.BIRTH_ADDRESS_ENG.Width = 72;
+            // 
+            // BIRTH_NATION_ENG
+            // 
+            this.BIRTH_NATION_ENG.DataPropertyName = "BIRTH_NATION_ENG";
+            this.BIRTH_NATION_ENG.HeaderText = "出生地英文国家";
+            this.BIRTH_NATION_ENG.Name = "BIRTH_NATION_ENG";
+            this.BIRTH_NATION_ENG.ReadOnly = true;
+            this.BIRTH_NATION_ENG.Width = 83;
+            // 
+            // BIRTH_PROVINCE_ENG
+            // 
+            this.BIRTH_PROVINCE_ENG.DataPropertyName = "BIRTH_PROVINCE_ENG";
+            this.BIRTH_PROVINCE_ENG.HeaderText = "出生地英文省";
+            this.BIRTH_PROVINCE_ENG.Name = "BIRTH_PROVINCE_ENG";
+            this.BIRTH_PROVINCE_ENG.ReadOnly = true;
+            this.BIRTH_PROVINCE_ENG.Width = 72;
+            // 
+            // BIRTH_CITY_ENG
+            // 
+            this.BIRTH_CITY_ENG.DataPropertyName = "BIRTH_CITY_ENG";
+            this.BIRTH_CITY_ENG.HeaderText = "出生地英文市";
+            this.BIRTH_CITY_ENG.Name = "BIRTH_CITY_ENG";
+            this.BIRTH_CITY_ENG.ReadOnly = true;
+            this.BIRTH_CITY_ENG.Width = 72;
+            // 
+            // NO_TAXPAYERID_REASON
+            // 
+            this.NO_TAXPAYERID_REASON.DataPropertyName = "NO_TAXPAYERID_REASON";
+            this.NO_TAXPAYERID_REASON.HeaderText = "无纳税人识别号原因";
+            this.NO_TAXPAYERID_REASON.Name = "NO_TAXPAYERID_REASON";
+            this.NO_TAXPAYERID_REASON.ReadOnly = true;
+            this.NO_TAXPAYERID_REASON.Width = 94;
+            // 
+            // NO_TAXPAYERID_REASON2
+            // 
+            this.NO_TAXPAYERID_REASON2.DataPropertyName = "NO_TAXPAYERID_REASON2";
+            this.NO_TAXPAYERID_REASON2.HeaderText = "未取得纳税人识别号原因2";
+            this.NO_TAXPAYERID_REASON2.Name = "NO_TAXPAYERID_REASON2";
+            this.NO_TAXPAYERID_REASON2.ReadOnly = true;
+            this.NO_TAXPAYERID_REASON2.Width = 105;
+            // 
+            // NO_TAXPAYERID_REASON3
+            // 
+            this.NO_TAXPAYERID_REASON3.DataPropertyName = "NO_TAXPAYERID_REASON3";
+            this.NO_TAXPAYERID_REASON3.HeaderText = "未取得纳税人识别号原因3";
+            this.NO_TAXPAYERID_REASON3.Name = "NO_TAXPAYERID_REASON3";
+            this.NO_TAXPAYERID_REASON3.ReadOnly = true;
+            this.NO_TAXPAYERID_REASON3.Width = 105;
+            // 
+            // PASSIVE_NFE
+            // 
+            this.PASSIVE_NFE.DataPropertyName = "PASSIVE_NFE";
+            this.PASSIVE_NFE.HeaderText = "是否消极非金融机构";
+            this.PASSIVE_NFE.Name = "PASSIVE_NFE";
+            this.PASSIVE_NFE.ReadOnly = true;
+            this.PASSIVE_NFE.Width = 94;
+            // 
+            // CTRL_NON_RESIDENT
+            // 
+            this.CTRL_NON_RESIDENT.DataPropertyName = "CTRL_NON_RESIDENT";
+            this.CTRL_NON_RESIDENT.HeaderText = "控制人是否为非居民";
+            this.CTRL_NON_RESIDENT.Name = "CTRL_NON_RESIDENT";
+            this.CTRL_NON_RESIDENT.ReadOnly = true;
+            this.CTRL_NON_RESIDENT.Width = 94;
+            // 
+            // 非居民涉税信息REMARK
+            // 
+            this.非居民涉税信息REMARK.DataPropertyName = "REMARK";
+            this.非居民涉税信息REMARK.HeaderText = "备注";
+            this.非居民涉税信息REMARK.Name = "非居民涉税信息REMARK";
+            this.非居民涉税信息REMARK.ReadOnly = true;
+            this.非居民涉税信息REMARK.Width = 51;
+            // 
+            // 非居民涉税信息CTRL_NO
+            // 
+            this.非居民涉税信息CTRL_NO.DataPropertyName = "CTRL_NO";
+            this.非居民涉税信息CTRL_NO.HeaderText = "控制人编号";
+            this.非居民涉税信息CTRL_NO.Name = "非居民涉税信息CTRL_NO";
+            this.非居民涉税信息CTRL_NO.ReadOnly = true;
+            this.非居民涉税信息CTRL_NO.Width = 72;
+            // 
+            // GET_INVEST_CERFLAG
+            // 
+            this.GET_INVEST_CERFLAG.DataPropertyName = "GET_INVEST_CERFLAG";
+            this.GET_INVEST_CERFLAG.HeaderText = "取得投资人声明标识";
+            this.GET_INVEST_CERFLAG.Name = "GET_INVEST_CERFLAG";
+            this.GET_INVEST_CERFLAG.ReadOnly = true;
+            this.GET_INVEST_CERFLAG.Width = 94;
+            // 
+            // ADDRESS_TYPE
+            // 
+            this.ADDRESS_TYPE.DataPropertyName = "ADDRESS_TYPE";
+            this.ADDRESS_TYPE.HeaderText = "地址类型";
+            this.ADDRESS_TYPE.Name = "ADDRESS_TYPE";
+            this.ADDRESS_TYPE.ReadOnly = true;
+            this.ADDRESS_TYPE.Width = 61;
+            // 
+            // CTRL_TYPE
+            // 
+            this.CTRL_TYPE.DataPropertyName = "CTRL_TYPE";
+            this.CTRL_TYPE.HeaderText = "控制人类型";
+            this.CTRL_TYPE.Name = "CTRL_TYPE";
+            this.CTRL_TYPE.ReadOnly = true;
+            this.CTRL_TYPE.Width = 72;
+            // 
+            // CTRL_SHARE_RATIO
+            // 
+            this.CTRL_SHARE_RATIO.DataPropertyName = "CTRL_SHARE_RATIO";
+            this.CTRL_SHARE_RATIO.HeaderText = "控制人持股比例";
+            this.CTRL_SHARE_RATIO.Name = "CTRL_SHARE_RATIO";
+            this.CTRL_SHARE_RATIO.ReadOnly = true;
+            this.CTRL_SHARE_RATIO.Width = 83;
+            // 
+            // REMARK2
+            // 
+            this.REMARK2.DataPropertyName = "REMARK2";
+            this.REMARK2.HeaderText = "备注2";
+            this.REMARK2.Name = "REMARK2";
+            this.REMARK2.ReadOnly = true;
+            this.REMARK2.Width = 51;
+            // 
+            // REG_COUNTRY
+            // 
+            this.REG_COUNTRY.DataPropertyName = "REG_COUNTRY";
+            this.REG_COUNTRY.HeaderText = "注册地国家代码";
+            this.REG_COUNTRY.Name = "REG_COUNTRY";
+            this.REG_COUNTRY.ReadOnly = true;
+            this.REG_COUNTRY.Width = 83;
+            // 
+            // LIVING_COUNTRY
+            // 
+            this.LIVING_COUNTRY.DataPropertyName = "LIVING_COUNTRY";
+            this.LIVING_COUNTRY.HeaderText = "现居国家代码";
+            this.LIVING_COUNTRY.Name = "LIVING_COUNTRY";
+            this.LIVING_COUNTRY.ReadOnly = true;
+            this.LIVING_COUNTRY.Width = 72;
+            // 
+            // BIRTH_COUNTRY
+            // 
+            this.BIRTH_COUNTRY.DataPropertyName = "BIRTH_COUNTRY";
+            this.BIRTH_COUNTRY.HeaderText = "出生地国家代码";
+            this.BIRTH_COUNTRY.Name = "BIRTH_COUNTRY";
+            this.BIRTH_COUNTRY.ReadOnly = true;
+            this.BIRTH_COUNTRY.Width = 83;
+            // 
+            // MONAMNT
+            // 
+            this.MONAMNT.DataPropertyName = "MONAMNT";
+            this.MONAMNT.HeaderText = "金额（账户余额）";
+            this.MONAMNT.Name = "MONAMNT";
+            this.MONAMNT.ReadOnly = true;
+            this.MONAMNT.Width = 83;
+            // 
+            // CURR_CODE
+            // 
+            this.CURR_CODE.DataPropertyName = "CURR_CODE";
+            this.CURR_CODE.HeaderText = "货币代码";
+            this.CURR_CODE.Name = "CURR_CODE";
+            this.CURR_CODE.ReadOnly = true;
+            this.CURR_CODE.Width = 61;
+            // 
+            // PAYMENT_TYPE1
+            // 
+            this.PAYMENT_TYPE1.DataPropertyName = "PAYMENT_TYPE1";
+            this.PAYMENT_TYPE1.HeaderText = "收入类型1";
+            this.PAYMENT_TYPE1.Name = "PAYMENT_TYPE1";
+            this.PAYMENT_TYPE1.ReadOnly = true;
+            this.PAYMENT_TYPE1.Width = 61;
+            // 
+            // PAYMENT_TYPE2
+            // 
+            this.PAYMENT_TYPE2.DataPropertyName = "PAYMENT_TYPE2";
+            this.PAYMENT_TYPE2.HeaderText = "收入类型2";
+            this.PAYMENT_TYPE2.Name = "PAYMENT_TYPE2";
+            this.PAYMENT_TYPE2.ReadOnly = true;
+            this.PAYMENT_TYPE2.Width = 61;
+            // 
+            // PAYMENT_TYPE3
+            // 
+            this.PAYMENT_TYPE3.DataPropertyName = "PAYMENT_TYPE3";
+            this.PAYMENT_TYPE3.HeaderText = "收入类型3";
+            this.PAYMENT_TYPE3.Name = "PAYMENT_TYPE3";
+            this.PAYMENT_TYPE3.ReadOnly = true;
+            this.PAYMENT_TYPE3.Width = 61;
+            // 
+            // PAYMENT_TYPE4
+            // 
+            this.PAYMENT_TYPE4.DataPropertyName = "PAYMENT_TYPE4";
+            this.PAYMENT_TYPE4.HeaderText = "收入类型4";
+            this.PAYMENT_TYPE4.Name = "PAYMENT_TYPE4";
+            this.PAYMENT_TYPE4.ReadOnly = true;
+            this.PAYMENT_TYPE4.Width = 61;
+            // 
+            // PAYMENT_AMNT1
+            // 
+            this.PAYMENT_AMNT1.DataPropertyName = "PAYMENT_AMNT1";
+            this.PAYMENT_AMNT1.HeaderText = "收入金额和货币类型1";
+            this.PAYMENT_AMNT1.Name = "PAYMENT_AMNT1";
+            this.PAYMENT_AMNT1.ReadOnly = true;
+            this.PAYMENT_AMNT1.Width = 94;
+            // 
+            // PAYMENT_AMNT2
+            // 
+            this.PAYMENT_AMNT2.DataPropertyName = "PAYMENT_AMNT2";
+            this.PAYMENT_AMNT2.HeaderText = "收入金额和货币类型2";
+            this.PAYMENT_AMNT2.Name = "PAYMENT_AMNT2";
+            this.PAYMENT_AMNT2.ReadOnly = true;
+            this.PAYMENT_AMNT2.Width = 94;
+            // 
+            // PAYMENT_AMNT3
+            // 
+            this.PAYMENT_AMNT3.DataPropertyName = "PAYMENT_AMNT3";
+            this.PAYMENT_AMNT3.HeaderText = "收入金额和货币类型3";
+            this.PAYMENT_AMNT3.Name = "PAYMENT_AMNT3";
+            this.PAYMENT_AMNT3.ReadOnly = true;
+            this.PAYMENT_AMNT3.Width = 94;
+            // 
+            // PAYMENT_AMNT4
+            // 
+            this.PAYMENT_AMNT4.DataPropertyName = "PAYMENT_AMNT4";
+            this.PAYMENT_AMNT4.HeaderText = "收入金额和货币类型4";
+            this.PAYMENT_AMNT4.Name = "PAYMENT_AMNT4";
+            this.PAYMENT_AMNT4.ReadOnly = true;
+            this.PAYMENT_AMNT4.Width = 94;
+            // 
+            // PROVINCE
+            // 
+            this.PROVINCE.DataPropertyName = "PROVINCE";
+            this.PROVINCE.HeaderText = "省级行政区划代码";
+            this.PROVINCE.Name = "PROVINCE";
+            this.PROVINCE.ReadOnly = true;
+            this.PROVINCE.Width = 83;
+            // 
+            // CITYCN
+            // 
+            this.CITYCN.DataPropertyName = "CITYCN";
+            this.CITYCN.HeaderText = "地市级行政区划代码";
+            this.CITYCN.Name = "CITYCN";
+            this.CITYCN.ReadOnly = true;
+            this.CITYCN.Width = 94;
+            // 
+            // DISTRICT_NAME
+            // 
+            this.DISTRICT_NAME.DataPropertyName = "DISTRICT_NAME";
+            this.DISTRICT_NAME.HeaderText = "县级级行政区划代码";
+            this.DISTRICT_NAME.Name = "DISTRICT_NAME";
+            this.DISTRICT_NAME.ReadOnly = true;
+            this.DISTRICT_NAME.Width = 94;
+            // 
+            // CITYEN
+            // 
+            this.CITYEN.DataPropertyName = "CITYEN";
+            this.CITYEN.HeaderText = "所在城市";
+            this.CITYEN.Name = "CITYEN";
+            this.CITYEN.ReadOnly = true;
+            this.CITYEN.Width = 61;
             // 
             // frmExistAccount
             // 
@@ -2085,10 +2578,59 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.DataGridViewTextBoxColumn SURVEY_COLS;
         private System.Windows.Forms.TabPage tp非居民涉税信息;
         private System.Windows.Forms.DataGridView dgvCustNraTaxInfo;
+        private System.Windows.Forms.Label lbLastRiskSurveyDate;
         private System.Windows.Forms.DataGridViewTextBoxColumn 非金融涉税信息CUST_CODE;
         private System.Windows.Forms.DataGridViewTextBoxColumn 非金融涉税信息CUST_NAME;
         private System.Windows.Forms.DataGridViewTextBoxColumn TAX_RESIDENT_TYPE;
-        private System.Windows.Forms.Label lbLastRiskSurveyDate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTRL_FLAG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SURNAME_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NAME_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 非居民涉税信息ADDRESS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NATION_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PROVINCE_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CITY_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADDRESS_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 非居民涉税信息CITIZENSHIP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CITIZENSHIP2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CITIZENSHIP3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TAXPAYER_IDNO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TAXPAYER_IDNO2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TAXPAYER_IDNO3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 非居民涉税信息BIRTHDAY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BIRTH_ADDRESS;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BIRTH_ADDRESS_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BIRTH_NATION_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BIRTH_PROVINCE_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BIRTH_CITY_ENG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NO_TAXPAYERID_REASON;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NO_TAXPAYERID_REASON2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NO_TAXPAYERID_REASON3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PASSIVE_NFE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTRL_NON_RESIDENT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 非居民涉税信息REMARK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 非居民涉税信息CTRL_NO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn GET_INVEST_CERFLAG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ADDRESS_TYPE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTRL_TYPE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CTRL_SHARE_RATIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn REMARK2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn REG_COUNTRY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn LIVING_COUNTRY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BIRTH_COUNTRY;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MONAMNT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CURR_CODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAYMENT_TYPE1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAYMENT_TYPE2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAYMENT_TYPE3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAYMENT_TYPE4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAYMENT_AMNT1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAYMENT_AMNT2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAYMENT_AMNT3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PAYMENT_AMNT4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PROVINCE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CITYCN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DISTRICT_NAME;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CITYEN;
     }
 }
 
