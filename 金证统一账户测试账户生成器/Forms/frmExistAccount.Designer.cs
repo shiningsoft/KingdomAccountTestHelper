@@ -39,6 +39,12 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExistAccount));
             this.cbxCubsbScOpenAcctOpType = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -1269,6 +1275,14 @@ namespace 金证统一账户测试账户生成器
             this.dgvRiskSurvey.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvRiskSurvey.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRiskSurvey.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRiskSurvey.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.SURVEY_SN,
@@ -1464,6 +1478,14 @@ namespace 金证统一账户测试账户生成器
             this.dgv受益人.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv受益人.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv受益人.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv受益人.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.受益人USER_CODE,
@@ -1593,6 +1615,14 @@ namespace 金证统一账户测试账户生成器
             this.dgv控制人.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv控制人.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv控制人.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv控制人.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.控制人CUST_CODE,
@@ -1707,6 +1737,14 @@ namespace 金证统一账户测试账户生成器
             this.dgv已签署协议.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv已签署协议.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv已签署协议.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv已签署协议.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CUST_AGMT_TYPE,
@@ -1734,6 +1772,7 @@ namespace 金证统一账户测试账户生成器
             this.CUST_AGMT_TYPE.MinimumWidth = 100;
             this.CUST_AGMT_TYPE.Name = "CUST_AGMT_TYPE";
             this.CUST_AGMT_TYPE.ReadOnly = true;
+            this.CUST_AGMT_TYPE.Width = 102;
             // 
             // REMOTE_SYS
             // 
@@ -1811,6 +1850,14 @@ namespace 金证统一账户测试账户生成器
             this.dgv诚信记录.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv诚信记录.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv诚信记录.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv诚信记录.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.诚信记录CUST_CODE,
@@ -1890,6 +1937,14 @@ namespace 金证统一账户测试账户生成器
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCustNraTaxInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCustNraTaxInfo.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCustNraTaxInfo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustNraTaxInfo.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.非金融涉税信息CUST_CODE,
@@ -1974,10 +2029,9 @@ namespace 金证统一账户测试账户生成器
             this.TAX_RESIDENT_TYPE.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.TAX_RESIDENT_TYPE.DataPropertyName = "TAX_RESIDENT_TYPE";
             this.TAX_RESIDENT_TYPE.HeaderText = "税收居民身份";
-            this.TAX_RESIDENT_TYPE.MinimumWidth = 120;
             this.TAX_RESIDENT_TYPE.Name = "TAX_RESIDENT_TYPE";
             this.TAX_RESIDENT_TYPE.ReadOnly = true;
-            this.TAX_RESIDENT_TYPE.Width = 120;
+            this.TAX_RESIDENT_TYPE.Width = 102;
             // 
             // CTRL_FLAG
             // 
@@ -1993,7 +2047,7 @@ namespace 金证统一账户测试账户生成器
             this.SURNAME_ENG.HeaderText = "姓（英文或拼音）";
             this.SURNAME_ENG.Name = "SURNAME_ENG";
             this.SURNAME_ENG.ReadOnly = true;
-            this.SURNAME_ENG.Width = 83;
+            this.SURNAME_ENG.Width = 126;
             // 
             // NAME_ENG
             // 
@@ -2001,7 +2055,7 @@ namespace 金证统一账户测试账户生成器
             this.NAME_ENG.HeaderText = "名（英文或拼音）";
             this.NAME_ENG.Name = "NAME_ENG";
             this.NAME_ENG.ReadOnly = true;
-            this.NAME_ENG.Width = 83;
+            this.NAME_ENG.Width = 126;
             // 
             // 非居民涉税信息ADDRESS
             // 
@@ -2009,7 +2063,7 @@ namespace 金证统一账户测试账户生成器
             this.非居民涉税信息ADDRESS.HeaderText = "详细地址";
             this.非居民涉税信息ADDRESS.Name = "非居民涉税信息ADDRESS";
             this.非居民涉税信息ADDRESS.ReadOnly = true;
-            this.非居民涉税信息ADDRESS.Width = 61;
+            this.非居民涉税信息ADDRESS.Width = 78;
             // 
             // NATION_ENG
             // 
@@ -2017,7 +2071,7 @@ namespace 金证统一账户测试账户生成器
             this.NATION_ENG.HeaderText = "地址（国家）";
             this.NATION_ENG.Name = "NATION_ENG";
             this.NATION_ENG.ReadOnly = true;
-            this.NATION_ENG.Width = 72;
+            this.NATION_ENG.Width = 102;
             // 
             // PROVINCE_ENG
             // 
@@ -2025,7 +2079,7 @@ namespace 金证统一账户测试账户生成器
             this.PROVINCE_ENG.HeaderText = "省（英文或拼音）";
             this.PROVINCE_ENG.Name = "PROVINCE_ENG";
             this.PROVINCE_ENG.ReadOnly = true;
-            this.PROVINCE_ENG.Width = 83;
+            this.PROVINCE_ENG.Width = 126;
             // 
             // CITY_ENG
             // 
@@ -2033,7 +2087,7 @@ namespace 金证统一账户测试账户生成器
             this.CITY_ENG.HeaderText = "市（英文或拼音）";
             this.CITY_ENG.Name = "CITY_ENG";
             this.CITY_ENG.ReadOnly = true;
-            this.CITY_ENG.Width = 83;
+            this.CITY_ENG.Width = 126;
             // 
             // ADDRESS_ENG
             // 
@@ -2041,7 +2095,7 @@ namespace 金证统一账户测试账户生成器
             this.ADDRESS_ENG.HeaderText = "详细地址(英文或拼音)";
             this.ADDRESS_ENG.Name = "ADDRESS_ENG";
             this.ADDRESS_ENG.ReadOnly = true;
-            this.ADDRESS_ENG.Width = 99;
+            this.ADDRESS_ENG.Width = 150;
             // 
             // 非居民涉税信息CITIZENSHIP
             // 
@@ -2049,7 +2103,7 @@ namespace 金证统一账户测试账户生成器
             this.非居民涉税信息CITIZENSHIP.HeaderText = "国籍1";
             this.非居民涉税信息CITIZENSHIP.Name = "非居民涉税信息CITIZENSHIP";
             this.非居民涉税信息CITIZENSHIP.ReadOnly = true;
-            this.非居民涉税信息CITIZENSHIP.Width = 51;
+            this.非居民涉税信息CITIZENSHIP.Width = 60;
             // 
             // CITIZENSHIP2
             // 
@@ -2057,7 +2111,7 @@ namespace 金证统一账户测试账户生成器
             this.CITIZENSHIP2.HeaderText = "国籍2";
             this.CITIZENSHIP2.Name = "CITIZENSHIP2";
             this.CITIZENSHIP2.ReadOnly = true;
-            this.CITIZENSHIP2.Width = 51;
+            this.CITIZENSHIP2.Width = 60;
             // 
             // CITIZENSHIP3
             // 
@@ -2065,7 +2119,7 @@ namespace 金证统一账户测试账户生成器
             this.CITIZENSHIP3.HeaderText = "国籍3";
             this.CITIZENSHIP3.Name = "CITIZENSHIP3";
             this.CITIZENSHIP3.ReadOnly = true;
-            this.CITIZENSHIP3.Width = 51;
+            this.CITIZENSHIP3.Width = 60;
             // 
             // TAXPAYER_IDNO
             // 
@@ -2073,7 +2127,7 @@ namespace 金证统一账户测试账户生成器
             this.TAXPAYER_IDNO.HeaderText = "纳税人识别号1";
             this.TAXPAYER_IDNO.Name = "TAXPAYER_IDNO";
             this.TAXPAYER_IDNO.ReadOnly = true;
-            this.TAXPAYER_IDNO.Width = 72;
+            this.TAXPAYER_IDNO.Width = 108;
             // 
             // TAXPAYER_IDNO2
             // 
@@ -2081,7 +2135,7 @@ namespace 金证统一账户测试账户生成器
             this.TAXPAYER_IDNO2.HeaderText = "纳税人识别号2";
             this.TAXPAYER_IDNO2.Name = "TAXPAYER_IDNO2";
             this.TAXPAYER_IDNO2.ReadOnly = true;
-            this.TAXPAYER_IDNO2.Width = 72;
+            this.TAXPAYER_IDNO2.Width = 108;
             // 
             // TAXPAYER_IDNO3
             // 
@@ -2089,7 +2143,7 @@ namespace 金证统一账户测试账户生成器
             this.TAXPAYER_IDNO3.HeaderText = "纳税人识别号3";
             this.TAXPAYER_IDNO3.Name = "TAXPAYER_IDNO3";
             this.TAXPAYER_IDNO3.ReadOnly = true;
-            this.TAXPAYER_IDNO3.Width = 72;
+            this.TAXPAYER_IDNO3.Width = 108;
             // 
             // 非居民涉税信息BIRTHDAY
             // 
@@ -2097,7 +2151,7 @@ namespace 金证统一账户测试账户生成器
             this.非居民涉税信息BIRTHDAY.HeaderText = "出生日期";
             this.非居民涉税信息BIRTHDAY.Name = "非居民涉税信息BIRTHDAY";
             this.非居民涉税信息BIRTHDAY.ReadOnly = true;
-            this.非居民涉税信息BIRTHDAY.Width = 61;
+            this.非居民涉税信息BIRTHDAY.Width = 78;
             // 
             // BIRTH_ADDRESS
             // 
@@ -2105,7 +2159,7 @@ namespace 金证统一账户测试账户生成器
             this.BIRTH_ADDRESS.HeaderText = "出生详细地址";
             this.BIRTH_ADDRESS.Name = "BIRTH_ADDRESS";
             this.BIRTH_ADDRESS.ReadOnly = true;
-            this.BIRTH_ADDRESS.Width = 72;
+            this.BIRTH_ADDRESS.Width = 102;
             // 
             // BIRTH_ADDRESS_ENG
             // 
@@ -2113,7 +2167,7 @@ namespace 金证统一账户测试账户生成器
             this.BIRTH_ADDRESS_ENG.HeaderText = "出生地英文";
             this.BIRTH_ADDRESS_ENG.Name = "BIRTH_ADDRESS_ENG";
             this.BIRTH_ADDRESS_ENG.ReadOnly = true;
-            this.BIRTH_ADDRESS_ENG.Width = 72;
+            this.BIRTH_ADDRESS_ENG.Width = 90;
             // 
             // BIRTH_NATION_ENG
             // 
@@ -2121,7 +2175,7 @@ namespace 金证统一账户测试账户生成器
             this.BIRTH_NATION_ENG.HeaderText = "出生地英文国家";
             this.BIRTH_NATION_ENG.Name = "BIRTH_NATION_ENG";
             this.BIRTH_NATION_ENG.ReadOnly = true;
-            this.BIRTH_NATION_ENG.Width = 83;
+            this.BIRTH_NATION_ENG.Width = 114;
             // 
             // BIRTH_PROVINCE_ENG
             // 
@@ -2129,7 +2183,7 @@ namespace 金证统一账户测试账户生成器
             this.BIRTH_PROVINCE_ENG.HeaderText = "出生地英文省";
             this.BIRTH_PROVINCE_ENG.Name = "BIRTH_PROVINCE_ENG";
             this.BIRTH_PROVINCE_ENG.ReadOnly = true;
-            this.BIRTH_PROVINCE_ENG.Width = 72;
+            this.BIRTH_PROVINCE_ENG.Width = 102;
             // 
             // BIRTH_CITY_ENG
             // 
@@ -2137,7 +2191,7 @@ namespace 金证统一账户测试账户生成器
             this.BIRTH_CITY_ENG.HeaderText = "出生地英文市";
             this.BIRTH_CITY_ENG.Name = "BIRTH_CITY_ENG";
             this.BIRTH_CITY_ENG.ReadOnly = true;
-            this.BIRTH_CITY_ENG.Width = 72;
+            this.BIRTH_CITY_ENG.Width = 102;
             // 
             // NO_TAXPAYERID_REASON
             // 
@@ -2145,7 +2199,7 @@ namespace 金证统一账户测试账户生成器
             this.NO_TAXPAYERID_REASON.HeaderText = "无纳税人识别号原因";
             this.NO_TAXPAYERID_REASON.Name = "NO_TAXPAYERID_REASON";
             this.NO_TAXPAYERID_REASON.ReadOnly = true;
-            this.NO_TAXPAYERID_REASON.Width = 94;
+            this.NO_TAXPAYERID_REASON.Width = 138;
             // 
             // NO_TAXPAYERID_REASON2
             // 
@@ -2153,7 +2207,7 @@ namespace 金证统一账户测试账户生成器
             this.NO_TAXPAYERID_REASON2.HeaderText = "未取得纳税人识别号原因2";
             this.NO_TAXPAYERID_REASON2.Name = "NO_TAXPAYERID_REASON2";
             this.NO_TAXPAYERID_REASON2.ReadOnly = true;
-            this.NO_TAXPAYERID_REASON2.Width = 105;
+            this.NO_TAXPAYERID_REASON2.Width = 168;
             // 
             // NO_TAXPAYERID_REASON3
             // 
@@ -2161,7 +2215,7 @@ namespace 金证统一账户测试账户生成器
             this.NO_TAXPAYERID_REASON3.HeaderText = "未取得纳税人识别号原因3";
             this.NO_TAXPAYERID_REASON3.Name = "NO_TAXPAYERID_REASON3";
             this.NO_TAXPAYERID_REASON3.ReadOnly = true;
-            this.NO_TAXPAYERID_REASON3.Width = 105;
+            this.NO_TAXPAYERID_REASON3.Width = 168;
             // 
             // PASSIVE_NFE
             // 
@@ -2169,7 +2223,7 @@ namespace 金证统一账户测试账户生成器
             this.PASSIVE_NFE.HeaderText = "是否消极非金融机构";
             this.PASSIVE_NFE.Name = "PASSIVE_NFE";
             this.PASSIVE_NFE.ReadOnly = true;
-            this.PASSIVE_NFE.Width = 94;
+            this.PASSIVE_NFE.Width = 138;
             // 
             // CTRL_NON_RESIDENT
             // 
@@ -2177,7 +2231,7 @@ namespace 金证统一账户测试账户生成器
             this.CTRL_NON_RESIDENT.HeaderText = "控制人是否为非居民";
             this.CTRL_NON_RESIDENT.Name = "CTRL_NON_RESIDENT";
             this.CTRL_NON_RESIDENT.ReadOnly = true;
-            this.CTRL_NON_RESIDENT.Width = 94;
+            this.CTRL_NON_RESIDENT.Width = 138;
             // 
             // 非居民涉税信息REMARK
             // 
@@ -2185,7 +2239,7 @@ namespace 金证统一账户测试账户生成器
             this.非居民涉税信息REMARK.HeaderText = "备注";
             this.非居民涉税信息REMARK.Name = "非居民涉税信息REMARK";
             this.非居民涉税信息REMARK.ReadOnly = true;
-            this.非居民涉税信息REMARK.Width = 51;
+            this.非居民涉税信息REMARK.Width = 54;
             // 
             // 非居民涉税信息CTRL_NO
             // 
@@ -2193,7 +2247,7 @@ namespace 金证统一账户测试账户生成器
             this.非居民涉税信息CTRL_NO.HeaderText = "控制人编号";
             this.非居民涉税信息CTRL_NO.Name = "非居民涉税信息CTRL_NO";
             this.非居民涉税信息CTRL_NO.ReadOnly = true;
-            this.非居民涉税信息CTRL_NO.Width = 72;
+            this.非居民涉税信息CTRL_NO.Width = 90;
             // 
             // GET_INVEST_CERFLAG
             // 
@@ -2201,7 +2255,7 @@ namespace 金证统一账户测试账户生成器
             this.GET_INVEST_CERFLAG.HeaderText = "取得投资人声明标识";
             this.GET_INVEST_CERFLAG.Name = "GET_INVEST_CERFLAG";
             this.GET_INVEST_CERFLAG.ReadOnly = true;
-            this.GET_INVEST_CERFLAG.Width = 94;
+            this.GET_INVEST_CERFLAG.Width = 138;
             // 
             // ADDRESS_TYPE
             // 
@@ -2209,7 +2263,7 @@ namespace 金证统一账户测试账户生成器
             this.ADDRESS_TYPE.HeaderText = "地址类型";
             this.ADDRESS_TYPE.Name = "ADDRESS_TYPE";
             this.ADDRESS_TYPE.ReadOnly = true;
-            this.ADDRESS_TYPE.Width = 61;
+            this.ADDRESS_TYPE.Width = 78;
             // 
             // CTRL_TYPE
             // 
@@ -2217,7 +2271,7 @@ namespace 金证统一账户测试账户生成器
             this.CTRL_TYPE.HeaderText = "控制人类型";
             this.CTRL_TYPE.Name = "CTRL_TYPE";
             this.CTRL_TYPE.ReadOnly = true;
-            this.CTRL_TYPE.Width = 72;
+            this.CTRL_TYPE.Width = 90;
             // 
             // CTRL_SHARE_RATIO
             // 
@@ -2225,7 +2279,7 @@ namespace 金证统一账户测试账户生成器
             this.CTRL_SHARE_RATIO.HeaderText = "控制人持股比例";
             this.CTRL_SHARE_RATIO.Name = "CTRL_SHARE_RATIO";
             this.CTRL_SHARE_RATIO.ReadOnly = true;
-            this.CTRL_SHARE_RATIO.Width = 83;
+            this.CTRL_SHARE_RATIO.Width = 114;
             // 
             // REMARK2
             // 
@@ -2233,7 +2287,7 @@ namespace 金证统一账户测试账户生成器
             this.REMARK2.HeaderText = "备注2";
             this.REMARK2.Name = "REMARK2";
             this.REMARK2.ReadOnly = true;
-            this.REMARK2.Width = 51;
+            this.REMARK2.Width = 60;
             // 
             // REG_COUNTRY
             // 
@@ -2241,7 +2295,7 @@ namespace 金证统一账户测试账户生成器
             this.REG_COUNTRY.HeaderText = "注册地国家代码";
             this.REG_COUNTRY.Name = "REG_COUNTRY";
             this.REG_COUNTRY.ReadOnly = true;
-            this.REG_COUNTRY.Width = 83;
+            this.REG_COUNTRY.Width = 114;
             // 
             // LIVING_COUNTRY
             // 
@@ -2249,7 +2303,7 @@ namespace 金证统一账户测试账户生成器
             this.LIVING_COUNTRY.HeaderText = "现居国家代码";
             this.LIVING_COUNTRY.Name = "LIVING_COUNTRY";
             this.LIVING_COUNTRY.ReadOnly = true;
-            this.LIVING_COUNTRY.Width = 72;
+            this.LIVING_COUNTRY.Width = 102;
             // 
             // BIRTH_COUNTRY
             // 
@@ -2257,7 +2311,7 @@ namespace 金证统一账户测试账户生成器
             this.BIRTH_COUNTRY.HeaderText = "出生地国家代码";
             this.BIRTH_COUNTRY.Name = "BIRTH_COUNTRY";
             this.BIRTH_COUNTRY.ReadOnly = true;
-            this.BIRTH_COUNTRY.Width = 83;
+            this.BIRTH_COUNTRY.Width = 114;
             // 
             // MONAMNT
             // 
@@ -2265,7 +2319,7 @@ namespace 金证统一账户测试账户生成器
             this.MONAMNT.HeaderText = "金额（账户余额）";
             this.MONAMNT.Name = "MONAMNT";
             this.MONAMNT.ReadOnly = true;
-            this.MONAMNT.Width = 83;
+            this.MONAMNT.Width = 126;
             // 
             // CURR_CODE
             // 
@@ -2273,7 +2327,7 @@ namespace 金证统一账户测试账户生成器
             this.CURR_CODE.HeaderText = "货币代码";
             this.CURR_CODE.Name = "CURR_CODE";
             this.CURR_CODE.ReadOnly = true;
-            this.CURR_CODE.Width = 61;
+            this.CURR_CODE.Width = 78;
             // 
             // PAYMENT_TYPE1
             // 
@@ -2281,7 +2335,7 @@ namespace 金证统一账户测试账户生成器
             this.PAYMENT_TYPE1.HeaderText = "收入类型1";
             this.PAYMENT_TYPE1.Name = "PAYMENT_TYPE1";
             this.PAYMENT_TYPE1.ReadOnly = true;
-            this.PAYMENT_TYPE1.Width = 61;
+            this.PAYMENT_TYPE1.Width = 84;
             // 
             // PAYMENT_TYPE2
             // 
@@ -2289,7 +2343,7 @@ namespace 金证统一账户测试账户生成器
             this.PAYMENT_TYPE2.HeaderText = "收入类型2";
             this.PAYMENT_TYPE2.Name = "PAYMENT_TYPE2";
             this.PAYMENT_TYPE2.ReadOnly = true;
-            this.PAYMENT_TYPE2.Width = 61;
+            this.PAYMENT_TYPE2.Width = 84;
             // 
             // PAYMENT_TYPE3
             // 
@@ -2297,7 +2351,7 @@ namespace 金证统一账户测试账户生成器
             this.PAYMENT_TYPE3.HeaderText = "收入类型3";
             this.PAYMENT_TYPE3.Name = "PAYMENT_TYPE3";
             this.PAYMENT_TYPE3.ReadOnly = true;
-            this.PAYMENT_TYPE3.Width = 61;
+            this.PAYMENT_TYPE3.Width = 84;
             // 
             // PAYMENT_TYPE4
             // 
@@ -2305,7 +2359,7 @@ namespace 金证统一账户测试账户生成器
             this.PAYMENT_TYPE4.HeaderText = "收入类型4";
             this.PAYMENT_TYPE4.Name = "PAYMENT_TYPE4";
             this.PAYMENT_TYPE4.ReadOnly = true;
-            this.PAYMENT_TYPE4.Width = 61;
+            this.PAYMENT_TYPE4.Width = 84;
             // 
             // PAYMENT_AMNT1
             // 
@@ -2313,7 +2367,7 @@ namespace 金证统一账户测试账户生成器
             this.PAYMENT_AMNT1.HeaderText = "收入金额和货币类型1";
             this.PAYMENT_AMNT1.Name = "PAYMENT_AMNT1";
             this.PAYMENT_AMNT1.ReadOnly = true;
-            this.PAYMENT_AMNT1.Width = 94;
+            this.PAYMENT_AMNT1.Width = 144;
             // 
             // PAYMENT_AMNT2
             // 
@@ -2321,7 +2375,7 @@ namespace 金证统一账户测试账户生成器
             this.PAYMENT_AMNT2.HeaderText = "收入金额和货币类型2";
             this.PAYMENT_AMNT2.Name = "PAYMENT_AMNT2";
             this.PAYMENT_AMNT2.ReadOnly = true;
-            this.PAYMENT_AMNT2.Width = 94;
+            this.PAYMENT_AMNT2.Width = 144;
             // 
             // PAYMENT_AMNT3
             // 
@@ -2329,7 +2383,7 @@ namespace 金证统一账户测试账户生成器
             this.PAYMENT_AMNT3.HeaderText = "收入金额和货币类型3";
             this.PAYMENT_AMNT3.Name = "PAYMENT_AMNT3";
             this.PAYMENT_AMNT3.ReadOnly = true;
-            this.PAYMENT_AMNT3.Width = 94;
+            this.PAYMENT_AMNT3.Width = 144;
             // 
             // PAYMENT_AMNT4
             // 
@@ -2337,7 +2391,7 @@ namespace 金证统一账户测试账户生成器
             this.PAYMENT_AMNT4.HeaderText = "收入金额和货币类型4";
             this.PAYMENT_AMNT4.Name = "PAYMENT_AMNT4";
             this.PAYMENT_AMNT4.ReadOnly = true;
-            this.PAYMENT_AMNT4.Width = 94;
+            this.PAYMENT_AMNT4.Width = 144;
             // 
             // PROVINCE
             // 
@@ -2345,7 +2399,7 @@ namespace 金证统一账户测试账户生成器
             this.PROVINCE.HeaderText = "省级行政区划代码";
             this.PROVINCE.Name = "PROVINCE";
             this.PROVINCE.ReadOnly = true;
-            this.PROVINCE.Width = 83;
+            this.PROVINCE.Width = 126;
             // 
             // CITYCN
             // 
@@ -2353,7 +2407,7 @@ namespace 金证统一账户测试账户生成器
             this.CITYCN.HeaderText = "地市级行政区划代码";
             this.CITYCN.Name = "CITYCN";
             this.CITYCN.ReadOnly = true;
-            this.CITYCN.Width = 94;
+            this.CITYCN.Width = 138;
             // 
             // DISTRICT_NAME
             // 
@@ -2361,7 +2415,7 @@ namespace 金证统一账户测试账户生成器
             this.DISTRICT_NAME.HeaderText = "县级级行政区划代码";
             this.DISTRICT_NAME.Name = "DISTRICT_NAME";
             this.DISTRICT_NAME.ReadOnly = true;
-            this.DISTRICT_NAME.Width = 94;
+            this.DISTRICT_NAME.Width = 138;
             // 
             // CITYEN
             // 
@@ -2369,7 +2423,7 @@ namespace 金证统一账户测试账户生成器
             this.CITYEN.HeaderText = "所在城市";
             this.CITYEN.Name = "CITYEN";
             this.CITYEN.ReadOnly = true;
-            this.CITYEN.Width = 61;
+            this.CITYEN.Width = 78;
             // 
             // frmExistAccount
             // 
