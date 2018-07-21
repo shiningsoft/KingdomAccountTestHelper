@@ -1315,7 +1315,7 @@ namespace 金证统一账户测试账户生成器
         {
             if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
             {
-                cbxOccupation.ResetText();
+                cbxOccupation.Text = " ";
                 cbxOccupation.Enabled = false;
             }
             else
@@ -1433,7 +1433,7 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
-                await kess.mdfUserExtInfo(tbxCustCode.Text.Trim(),"1",OCCU_TYPE: occu_type.SelectedValue.ToString(),OCCUPATION:cbxOccupation.Text.Trim());
+                await kess.mdfUserExtInfo(tbxCustCode.Text.Trim(),"1",OCCU_TYPE: occu_type.SelectedValue.ToString(),OCCUPATION:cbxOccupation.Text);
                 resultForm.Append("修改客户职业信息成功");
             }
             catch (Exception ex)
