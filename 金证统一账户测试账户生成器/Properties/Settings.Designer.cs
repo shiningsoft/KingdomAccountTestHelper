@@ -226,5 +226,17 @@ namespace 金证统一账户测试账户生成器.Properties {
                 this["风险测评版本号"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("U")]
+        public string 统一账户版本 {
+            get {
+                return ((string)(this["统一账户版本"]));
+            }
+            set {
+                this["统一账户版本"] = value;
+            }
+        }
     }
 }

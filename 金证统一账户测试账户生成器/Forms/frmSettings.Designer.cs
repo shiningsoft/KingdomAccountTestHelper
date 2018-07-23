@@ -61,6 +61,9 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbxCols = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
+            this.rbU = new System.Windows.Forms.RadioButton();
+            this.rbWin = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpNormal.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -209,6 +212,9 @@
             // 
             // tpNormal
             // 
+            this.tpNormal.Controls.Add(this.label15);
+            this.tpNormal.Controls.Add(this.rbWin);
+            this.tpNormal.Controls.Add(this.rbU);
             this.tpNormal.Controls.Add(this.tbxWebserviceUrl);
             this.tpNormal.Controls.Add(this.label7);
             this.tpNormal.Controls.Add(this.tbxOperatorId);
@@ -379,6 +385,37 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "题目序列（Cols）：";
             // 
+            // rbU
+            // 
+            this.rbU.AutoSize = true;
+            this.rbU.Checked = true;
+            this.rbU.Location = new System.Drawing.Point(135, 184);
+            this.rbU.Name = "rbU";
+            this.rbU.Size = new System.Drawing.Size(41, 16);
+            this.rbU.TabIndex = 15;
+            this.rbU.TabStop = true;
+            this.rbU.Text = "U版";
+            this.rbU.UseVisualStyleBackColor = true;
+            // 
+            // rbWin
+            // 
+            this.rbWin.AutoSize = true;
+            this.rbWin.Location = new System.Drawing.Point(182, 184);
+            this.rbWin.Name = "rbWin";
+            this.rbWin.Size = new System.Drawing.Size(53, 16);
+            this.rbWin.TabIndex = 16;
+            this.rbWin.Text = "Win版";
+            this.rbWin.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(40, 186);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 12);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "统一账户版本：";
+            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -435,5 +472,8 @@
         private System.Windows.Forms.Button btnResetRiskSettings;
         private System.Windows.Forms.TextBox tbxSurveySN;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.RadioButton rbWin;
+        private System.Windows.Forms.RadioButton rbU;
     }
 }

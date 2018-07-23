@@ -9,14 +9,28 @@ namespace Yushen.WebService.KessClient
     public partial class Kess : IDisposable
     {
         /// <summary>
-        /// 字典项，金证Win版柜台系统
+        /// 金证系统类型
+        /// 分为Win版和U版两种
         /// </summary>
-        public static string WindowsCounter = "Win";
+        public enum Edtion{
+            Win = 0,
+            U = 1
+        }
 
         /// <summary>
-        /// 字典项，金证U版柜台系统
+        /// 柜台系统类型
         /// </summary>
-        public static string UnixCounter = "Uinx";
+        public Edtion edition
+        {
+            set
+            {
+                _edition = value;
+            }
+            get
+            {
+                return _edition;
+            }
+        }
 
         /// <summary>
         /// 同时发起的WebService请求的最大数量，超过则必须等待
@@ -54,7 +68,8 @@ namespace Yushen.WebService.KessClient
         /// <param name="operatorId">操作员代码</param>
         /// <param name="password">操作员密码</param>
         /// <param name="channel">统一账户操作渠道</param>
-        public Kess(string operatorId, string password, string channel, string kessWebserviceURL = "")
+        /// <param name="edtion">统一账户系统版本，默认为U版</param>
+        public Kess(string operatorId, string password, string channel, string kessWebserviceURL = "", Edtion edtion = Edtion.U)
         {
             this.operatorId = operatorId;
             this.password = password;
@@ -63,6 +78,7 @@ namespace Yushen.WebService.KessClient
             {
                 this.kessWebserviceURL = kessWebserviceURL;
             }
+            this.edition = edtion;
 
             this.CreateInstance();
         }
@@ -2319,6 +2335,53 @@ namespace Yushen.WebService.KessClient
 
             // 返回结果
             return response;
+        }
+
+        /// <summary>
+        /// 查询20个交易日日均资产
+        /// 实现2.170	查询20个交易日日均资产
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="INT_ORG">机构代码（必传）</param>
+        /// <returns></returns>
+        async public Task<string> getCustAvgAssets(
+            string CUST_CODE, //客户代码（必传）
+            string INT_ORG = "" //机构代码（必传）
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "getCustAvgAssets");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（必传）
+            request.setAttr("INT_ORG", INT_ORG); //机构代码（必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            
+            // 返回结果
+            if (edition == Edtion.U)
+            {
+                return response.getValue("AVG_MKT");
+            }
+            else
+            {
+                return response.getValue("AVG_FUNDASSET");
+            }
         }
     }
 }

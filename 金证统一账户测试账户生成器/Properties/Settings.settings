@@ -53,5 +53,8 @@
     <Setting Name="风险测评版本号" Type="System.String" Scope="User">
       <Value Profile="(Default)">3.0</Value>
     </Setting>
+    <Setting Name="统一账户版本" Type="System.String" Scope="User">
+      <Value Profile="(Default)">U</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

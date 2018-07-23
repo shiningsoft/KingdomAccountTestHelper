@@ -75,8 +75,16 @@ namespace Yushen.WebService.KessClient
         //创建一个Stopwatch实例，用于计算Webservice请求花费的时间
         private Stopwatch stopWatch = new Stopwatch();
 
+        /// <summary>
+        /// 是否自动重新登录
+        /// </summary>
         private bool _autoRelogin = true;
 
+        /// <summary>
+        /// 柜台系统类型
+        /// </summary>
+        private Edtion _edition;
+        
         /// <summary>
         /// 创建WebService实例
         /// </summary>

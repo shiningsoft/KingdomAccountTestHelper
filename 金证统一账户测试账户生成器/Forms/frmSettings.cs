@@ -42,6 +42,14 @@ namespace 金证统一账户测试账户生成器
             Settings.Default.操作员密码 = tbxPassword.Text.Trim();
             Settings.Default.操作渠道 = tbxChannel.Text.Trim();
             Settings.Default.中登超时时间 = int.Parse(tbxZdTimeout.Text.Trim());
+            if (rbU.Checked)
+            {
+                Settings.Default.统一账户版本 = Kess.Edtion.U.ToString();
+            }
+            else
+            {
+                Settings.Default.统一账户版本 = Kess.Edtion.Win.ToString();
+            }
 
             Settings.Default.SURVEY_SN = tbxSurveySN.Text;
             Settings.Default.Cols = tbxCols.Text;

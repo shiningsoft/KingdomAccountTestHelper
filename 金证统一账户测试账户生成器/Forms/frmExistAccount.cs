@@ -1024,6 +1024,24 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
+
+        /// <summary>
+        /// 查询20个交易日日均资产
+        /// </summary>
+        /// <returns></returns>
+        private async void getCustAvgAssets()
+        {
+            try
+            {
+                resultForm.Append("正在查询20日日均资产");
+                lbAvgAsset.Text = await kess.getCustAvgAssets(tbxCustCode.Text.Trim()) + "元";
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("查询20日日均资产失败：" + ex.Message);
+            }
+        }
+
         /// <summary>
         /// 查询系统内股东账户
         /// </summary>
@@ -1248,6 +1266,8 @@ namespace 金证统一账户测试账户生成器
                 await queryCustAgreement();
 
                 await qryCustNraTaxInfo();
+
+                getCustAvgAssets();
 
                 await listCuacct();
 

@@ -206,6 +206,16 @@ namespace 金证统一账户测试账户生成器
                     kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
                 }
 
+                // 设置柜台版本
+                if (Settings.Default.统一账户版本 == Kess.Edtion.Win.ToString())
+                {
+                    kess.edition = Kess.Edtion.Win;
+                }
+                else
+                {
+                    kess.edition = Kess.Edtion.U;
+                }
+
                 Uri uri = new Uri(Settings.Default.webservice);
                 toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + "获取环境信息中，请稍候......";
 
