@@ -16,7 +16,7 @@ namespace Yushen.Util.Tests
         {
             Assert.IsTrue(Validator.IsTelephone("0551-62207837"));
             Assert.IsTrue(Validator.IsTelephone("0551-1234567"));
-            Assert.IsFalse(Validator.IsTelephone("055162207837"));
+            Assert.IsTrue(Validator.IsTelephone("055162207837"));
             Assert.IsFalse(Validator.IsTelephone("18655958868"));
             Assert.IsFalse(Validator.IsTelephone("0551-62207837;62207114"));
             Assert.IsFalse(Validator.IsTelephone("0551-62207837,123456789"));

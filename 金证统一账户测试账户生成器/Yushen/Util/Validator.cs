@@ -12,7 +12,7 @@ namespace Yushen.Util
         /// <returns></returns>
         public static bool IsTelephone(string str_telephone)
         {
-            return Regex.IsMatch(str_telephone, @"^(\d{3,4}-)?\d{6,12}$");
+            return IsMobile(str_telephone) == false && Regex.IsMatch(str_telephone, @"^(\d{3,4}-)?\d{6,12}$");
         }
 
         /// <summary>
