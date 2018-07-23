@@ -1407,6 +1407,7 @@ namespace 金证统一账户测试账户生成器
             dgvClear(ref dgvRiskSurvey);
             dgvClear(ref dgvCustNraTaxInfo);
             lbLastRiskSurveyDate.Text = "最后测评日期：";
+            lbAvgAsset.Text = "0元";
         }
 
         private void tbxCustCode_KeyDown(object sender, KeyEventArgs e)
