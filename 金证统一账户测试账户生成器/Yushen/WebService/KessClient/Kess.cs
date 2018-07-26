@@ -44,7 +44,15 @@ namespace Yushen.WebService.KessClient
         {
             get
             {
-                return _webserviceConnectionsNum;
+                int i = 0;
+                foreach (KessClient client in kessClientList)
+                {
+                    if (client.available == false)
+                    {
+                        i += 1;
+                    }
+                }
+                return i;
             }
         }
 

@@ -219,7 +219,7 @@ namespace 金证统一账户测试账户生成器
             try
             {
                 await syncSurveyAns2Kbss();
-                await queryRiskSurveyResult();
+                queryRiskSurveyResult();
             }
             catch (Exception ex)
             {
@@ -832,7 +832,7 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private async Task queryCustBasicInfoList()
+        private async void queryCustBasicInfoList()
         {
             try
             {
@@ -861,7 +861,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询职业信息
         /// </summary>
-        private async Task getUserOccuInfo()
+        private async void getUserOccuInfo()
         {
             try
             {
@@ -893,7 +893,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询最近一条风险测评记录
         /// </summary>
-        private async Task queryLastRiskSurveyResult()
+        private async void queryLastRiskSurveyResult()
         {
             try
             {
@@ -918,7 +918,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询资金账号
         /// </summary>
-        private async Task listCuacct()
+        private async void listCuacct()
         {
             try
             {
@@ -971,7 +971,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询一码通
         /// </summary>
-        private async Task<int> queryStkYmt()
+        private async void queryStkYmt()
         {
             try
             {
@@ -980,7 +980,7 @@ namespace 金证统一账户测试账户生成器
                 if (response.length == 0)
                 {
                     resultForm.Append("没有查询到柜台一码通信息，原因：" + response.prompt);
-
+                    queryYMT();
                 }
                 else
                 {
@@ -988,12 +988,10 @@ namespace 金证统一账户测试账户生成器
                     resultForm.Append("从柜台查询到" + response.length + "条一码通信息，一码通状态：" + response.getValue("YMT_STATUS"));
                     tbxYMTCode.Text = response.getValue("YMT_CODE");
                 }
-                return response.length;
             }
             catch (Exception ex)
             {
                 resultForm.Append("查询一码通失败：" + ex.Message);
-                return 0;
             }
         }
 
@@ -1045,7 +1043,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询系统内股东账户
         /// </summary>
-        private async Task listOfStkTrdAcct()
+        private async void listOfStkTrdAcct()
         {
             try
             {
@@ -1088,7 +1086,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询诚信记录
         /// </summary>
-        private async Task queryCreditRecord()
+        private async void queryCreditRecord()
         {
             try
             {
@@ -1115,7 +1113,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询非居民涉税信息
         /// </summary>
-        private async Task qryCustNraTaxInfo()
+        private async void qryCustNraTaxInfo()
         {
             try
             {
@@ -1142,7 +1140,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询风险测评记录
         /// </summary>
-        private async Task<int> queryRiskSurveyResult()
+        private async void queryRiskSurveyResult()
         {
             try
             {
@@ -1153,6 +1151,9 @@ namespace 金证统一账户测试账户生成器
                 {
                     resultForm.Append(dtpBGN_DATE.Value.ToString("yyyyMMdd") +"至"+ dtpEND_DATE.Value.ToString("yyyyMMdd") + "期间没有找到风险测评记录");
                     dgvClear(ref dgvRiskSurvey);
+
+                    // 查询最新一条
+                    queryLastRiskSurveyResult();
                 }
                 else
                 {
@@ -1163,20 +1164,18 @@ namespace 金证统一账户测试账户生成器
                     lbLastRiskSurveyDate.Text = "最后测评日期：" + dgvRiskSurvey.Rows[0].Cells["RATING_DATE"].Value.ToString();
                 }
                 btnQueryRiskSurveyResult.Enabled = true;
-                return response.length;
             }
             catch (Exception ex)
             {
                 resultForm.Append("查询风险测评结果失败：" + ex.Message);
                 btnQueryRiskSurveyResult.Enabled = true;
-                return -1;
             }
         }
 
         /// <summary>
         /// 查询受益人信息
         /// </summary>
-        private async Task queryUserBeneficiaryInfo()
+        private async void queryUserBeneficiaryInfo()
         {
             // 受益人信息
             Response response = await kess.queryUserBeneficiaryInfo(tbxCustCode.Text.Trim());
@@ -1196,7 +1195,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询控制人信息
         /// </summary>
-        private async Task queryControllerInfo()
+        private async void queryControllerInfo()
         {
             // 控制人信息
             Response response = await kess.queryControllerInfo(tbxCustCode.Text.Trim());
@@ -1216,7 +1215,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 查询协议签署情况
         /// </summary>
-        private async Task queryCustAgreement()
+        private async void queryCustAgreement()
         {
             // 查询协议签署情况
             Response response = await kess.queryCustAgreement(tbxCustCode.Text.Trim());
@@ -1248,35 +1247,29 @@ namespace 金证统一账户测试账户生成器
 
                 await queryCustCode();
 
-                await queryCustBasicInfoList();
+                queryCustBasicInfoList();
 
-                await getUserOccuInfo();
+                getUserOccuInfo();
 
-                if(await queryRiskSurveyResult() <= 0)
-                {
-                    await queryLastRiskSurveyResult();
-                }
+                queryRiskSurveyResult();
 
-                await queryCreditRecord();
+                queryCreditRecord();
 
-                await queryUserBeneficiaryInfo();
+                queryUserBeneficiaryInfo();
 
-                await queryControllerInfo();
+                queryControllerInfo();
 
-                await queryCustAgreement();
+                queryCustAgreement();
 
-                await qryCustNraTaxInfo();
+                qryCustNraTaxInfo();
 
                 getCustAvgAssets();
 
-                await listCuacct();
+                listCuacct();
 
-                if(await queryStkYmt() == 0)
-                {
-                    queryYMT();
-                }
+                queryStkYmt();
 
-                await listOfStkTrdAcct();
+                listOfStkTrdAcct();
                 
             }
             catch (Exception ex)
@@ -1491,7 +1484,7 @@ namespace 金证统一账户测试账户生成器
                     mobile_tel.Text.Trim()
                 );
                 resultForm.Append("增加受益人成功");
-                await queryUserBeneficiaryInfo();
+                queryUserBeneficiaryInfo();
             }
             catch (Exception ex)
             {
@@ -1514,7 +1507,7 @@ namespace 金证统一账户测试账户生成器
                     mobile_tel.Text.Trim()
                 );
                 resultForm.Append("增加控制人成功");
-                await queryControllerInfo();
+                queryControllerInfo();
             }
             catch (Exception ex)
             {
@@ -1522,9 +1515,9 @@ namespace 金证统一账户测试账户生成器
             }
         }
 
-        private async void btnQueryRiskSurveyResult_Click(object sender, EventArgs e)
+        private void btnQueryRiskSurveyResult_Click(object sender, EventArgs e)
         {
-            await queryRiskSurveyResult();
+            queryRiskSurveyResult();
         }
 
         private void bank_code_SelectedIndexChanged(object sender, EventArgs e)

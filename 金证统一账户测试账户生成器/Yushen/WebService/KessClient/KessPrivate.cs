@@ -63,11 +63,6 @@ namespace Yushen.WebService.KessClient
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
-        /// 当前正在发起的WebService连接数量
-        /// </summary>
-        private int _webserviceConnectionsNum = 0;
-
-        /// <summary>
         /// 存储当前排队中的请求的数量
         /// </summary>
         private int _requestQueueCount = 0;
@@ -840,7 +835,7 @@ namespace Yushen.WebService.KessClient
             }
 
             // 请求队列数+1
-            _requestQueueCount++;
+            _requestQueueCount += 1;
 
             // 可用执行器的索引号
             int index = -1;
@@ -869,14 +864,11 @@ namespace Yushen.WebService.KessClient
             }
 
             // 找到可用的执行器之后，请求队列数-1
-            _requestQueueCount--;
+            _requestQueueCount -= 1;
 
             return await Task.Run(() =>
             {
                 // 调用WebService接口，获取返回值
-
-                _webserviceConnectionsNum += 1;
-
                 logger.Info("执行器" + index.ToString() + "调用Webservice功能<" + request.methonName + ">|" + request.xml);
 
                 stopWatch.Restart();
@@ -896,7 +888,6 @@ namespace Yushen.WebService.KessClient
                 }
                 catch (Exception)
                 {
-                    _webserviceConnectionsNum -= 1;
                     kessClientList[index].available = true;
                     throw;
                 }
@@ -906,9 +897,7 @@ namespace Yushen.WebService.KessClient
                 stopWatch.Stop();   //停止计时
 
                 logger.Info("执行器" + index.ToString() + "响应Webservice功能<" + request.methonName + ">，耗时" + diff.ToString() + "毫秒|" + result);
-
-                _webserviceConnectionsNum -= 1;
-
+                
                 kessClientList[index].available = true;
 
                 return result;
