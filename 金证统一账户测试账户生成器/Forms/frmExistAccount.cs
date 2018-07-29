@@ -854,7 +854,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                throw new Exception("查询基本资料失败：" + ex.Message);
+                resultForm.Append("查询基本资料失败：" + ex.Message);
             }
         }
 
@@ -886,7 +886,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                throw new Exception("查询职业信息失败：" + ex.Message);
+                resultForm.Append("查询职业信息失败：" + ex.Message);
             }
         }
         
@@ -911,7 +911,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                throw new Exception("查询风险测评记录失败：" + ex.Message);
+                resultForm.Append("查询风险测评记录失败：" + ex.Message);
             }
         }
 
@@ -959,12 +959,12 @@ namespace 金证统一账户测试账户生成器
                 }
                 else if (response.length == 0)
                 {
-                    throw new Exception("客户号下没有开立资金账号，停止处理。");
+                    resultForm.Append("客户号下没有开立资金账号，停止处理。");
                 }
             }
             catch (Exception ex)
             {
-                throw new Exception("查询资金账号失败：" + ex.Message);
+                resultForm.Append("查询资金账号失败：" + ex.Message);
             }
         }
 
@@ -1079,7 +1079,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                throw new Exception("查询股东账户失败：" + ex.Message);
+                resultForm.Append("查询股东账户失败：" + ex.Message);
             }
         }
 
@@ -1106,7 +1106,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                throw new Exception("查询诚信记录失败：" + ex.Message);
+                resultForm.Append("查询诚信记录失败：" + ex.Message);
             }
         }
 
@@ -1133,7 +1133,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (Exception ex)
             {
-                throw new Exception("查询非居民金融账户涉税信息失败：" + ex.Message);
+                resultForm.Append("查询非居民金融账户涉税信息失败：" + ex.Message);
             }
         }
 

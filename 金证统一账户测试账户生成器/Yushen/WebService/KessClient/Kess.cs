@@ -35,7 +35,7 @@ namespace Yushen.WebService.KessClient
         /// <summary>
         /// 同时发起的WebService请求的最大数量，超过则必须等待
         /// </summary>
-        public int maxConnections = 5;
+        public int maxConnections = 10;
 
         /// <summary>
         /// 当前并发数量
@@ -44,15 +44,7 @@ namespace Yushen.WebService.KessClient
         {
             get
             {
-                int i = 0;
-                foreach (KessClient client in kessClientList)
-                {
-                    if (client.available == false)
-                    {
-                        i += 1;
-                    }
-                }
-                return i;
+                return _webserviceConnectionsNum;
             }
         }
 

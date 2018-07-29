@@ -63,6 +63,11 @@ namespace Yushen.WebService.KessClient
         private static Logger logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>
+        /// 当前正在发起的WebService连接数量
+        /// </summary>
+        private int _webserviceConnectionsNum = 0;
+
+        /// <summary>
         /// 存储当前排队中的请求的数量
         /// </summary>
         private int _requestQueueCount = 0;
@@ -869,6 +874,9 @@ namespace Yushen.WebService.KessClient
             return await Task.Run(() =>
             {
                 // 调用WebService接口，获取返回值
+
+                _webserviceConnectionsNum += 1;
+
                 logger.Info("执行器" + index.ToString() + "调用Webservice功能<" + request.methonName + ">|" + request.xml);
 
                 stopWatch.Restart();
@@ -877,6 +885,21 @@ namespace Yushen.WebService.KessClient
                 try
                 {
                     result = (string)method.Invoke(kessClientList[index].executor, new object[] { request.xml });
+
+                    //获取stopWatch从开始到现在的时间差，单位是毫秒
+                    long diff = stopWatch.ElapsedMilliseconds;
+                    stopWatch.Stop();   //停止计时
+
+                    logger.Info("执行器" + index.ToString() + "响应Webservice功能<" + request.methonName + ">，耗时" + diff.ToString() + "毫秒|" + result);
+
+                    if (_webserviceConnectionsNum > 0)
+                    {
+                        _webserviceConnectionsNum -= 1;
+                    }
+
+                    kessClientList[index].available = true;
+
+
                     if (result == null)
                     {
                         throw new Exception("服务器返回Null");
@@ -885,22 +908,19 @@ namespace Yushen.WebService.KessClient
                     {
                         throw new Exception("服务器没有返回数据");
                     }
+
+                    return result;
                 }
                 catch (Exception)
                 {
+                    if (_webserviceConnectionsNum > 0)
+                    {
+                        _webserviceConnectionsNum -= 1;
+                    }
+
                     kessClientList[index].available = true;
                     throw;
                 }
-
-                //获取stopWatch从开始到现在的时间差，单位是毫秒
-                long diff = stopWatch.ElapsedMilliseconds;
-                stopWatch.Stop();   //停止计时
-
-                logger.Info("执行器" + index.ToString() + "响应Webservice功能<" + request.methonName + ">，耗时" + diff.ToString() + "毫秒|" + result);
-                
-                kessClientList[index].available = true;
-
-                return result;
             }).ConfigureAwait(false);
         }
 
