@@ -45,6 +45,9 @@
             this.tbxBranchNo = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpNormal = new System.Windows.Forms.TabPage();
+            this.label15 = new System.Windows.Forms.Label();
+            this.rbWin = new System.Windows.Forms.RadioButton();
+            this.rbU = new System.Windows.Forms.RadioButton();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tbxSurveySN = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -61,9 +64,8 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbxCols = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.rbU = new System.Windows.Forms.RadioButton();
-            this.rbWin = new System.Windows.Forms.RadioButton();
-            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbxMaxConnections = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tpNormal.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -102,7 +104,7 @@
             // 
             this.tbxOperatorId.Location = new System.Drawing.Point(135, 75);
             this.tbxOperatorId.Name = "tbxOperatorId";
-            this.tbxOperatorId.Size = new System.Drawing.Size(175, 21);
+            this.tbxOperatorId.Size = new System.Drawing.Size(141, 21);
             this.tbxOperatorId.TabIndex = 2;
             // 
             // tbxPassword
@@ -110,14 +112,14 @@
             this.tbxPassword.Location = new System.Drawing.Point(135, 102);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.PasswordChar = '*';
-            this.tbxPassword.Size = new System.Drawing.Size(175, 21);
+            this.tbxPassword.Size = new System.Drawing.Size(141, 21);
             this.tbxPassword.TabIndex = 3;
             // 
             // tbxChannel
             // 
             this.tbxChannel.Location = new System.Drawing.Point(135, 129);
             this.tbxChannel.Name = "tbxChannel";
-            this.tbxChannel.Size = new System.Drawing.Size(175, 21);
+            this.tbxChannel.Size = new System.Drawing.Size(141, 21);
             this.tbxChannel.TabIndex = 4;
             // 
             // label1
@@ -169,13 +171,14 @@
             // 
             this.tbxZdTimeout.Location = new System.Drawing.Point(135, 156);
             this.tbxZdTimeout.Name = "tbxZdTimeout";
-            this.tbxZdTimeout.Size = new System.Drawing.Size(175, 21);
+            this.tbxZdTimeout.Size = new System.Drawing.Size(141, 21);
             this.tbxZdTimeout.TabIndex = 5;
+            this.tbxZdTimeout.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxZdTimeout_KeyPress);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(316, 159);
+            this.label6.Location = new System.Drawing.Point(282, 159);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(17, 12);
             this.label6.TabIndex = 12;
@@ -194,7 +197,7 @@
             // 
             this.tbxBranchNo.Location = new System.Drawing.Point(135, 48);
             this.tbxBranchNo.Name = "tbxBranchNo";
-            this.tbxBranchNo.Size = new System.Drawing.Size(175, 21);
+            this.tbxBranchNo.Size = new System.Drawing.Size(141, 21);
             this.tbxBranchNo.TabIndex = 1;
             // 
             // tabControl1
@@ -212,6 +215,8 @@
             // 
             // tpNormal
             // 
+            this.tpNormal.Controls.Add(this.label16);
+            this.tpNormal.Controls.Add(this.tbxMaxConnections);
             this.tpNormal.Controls.Add(this.label15);
             this.tpNormal.Controls.Add(this.rbWin);
             this.tpNormal.Controls.Add(this.rbU);
@@ -235,6 +240,37 @@
             this.tpNormal.TabIndex = 0;
             this.tpNormal.Text = "常规";
             this.tpNormal.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(40, 186);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 12);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "统一账户版本：";
+            // 
+            // rbWin
+            // 
+            this.rbWin.AutoSize = true;
+            this.rbWin.Location = new System.Drawing.Point(182, 184);
+            this.rbWin.Name = "rbWin";
+            this.rbWin.Size = new System.Drawing.Size(53, 16);
+            this.rbWin.TabIndex = 16;
+            this.rbWin.Text = "Win版";
+            this.rbWin.UseVisualStyleBackColor = true;
+            // 
+            // rbU
+            // 
+            this.rbU.AutoSize = true;
+            this.rbU.Checked = true;
+            this.rbU.Location = new System.Drawing.Point(135, 184);
+            this.rbU.Name = "rbU";
+            this.rbU.Size = new System.Drawing.Size(41, 16);
+            this.rbU.TabIndex = 15;
+            this.rbU.TabStop = true;
+            this.rbU.Text = "U版";
+            this.rbU.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
@@ -385,36 +421,22 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "题目序列（Cols）：";
             // 
-            // rbU
+            // label16
             // 
-            this.rbU.AutoSize = true;
-            this.rbU.Checked = true;
-            this.rbU.Location = new System.Drawing.Point(135, 184);
-            this.rbU.Name = "rbU";
-            this.rbU.Size = new System.Drawing.Size(41, 16);
-            this.rbU.TabIndex = 15;
-            this.rbU.TabStop = true;
-            this.rbU.Text = "U版";
-            this.rbU.UseVisualStyleBackColor = true;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(369, 51);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(77, 12);
+            this.label16.TabIndex = 19;
+            this.label16.Text = "最大并发数：";
             // 
-            // rbWin
+            // tbxMaxConnections
             // 
-            this.rbWin.AutoSize = true;
-            this.rbWin.Location = new System.Drawing.Point(182, 184);
-            this.rbWin.Name = "rbWin";
-            this.rbWin.Size = new System.Drawing.Size(53, 16);
-            this.rbWin.TabIndex = 16;
-            this.rbWin.Text = "Win版";
-            this.rbWin.UseVisualStyleBackColor = true;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(40, 186);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(89, 12);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "统一账户版本：";
+            this.tbxMaxConnections.Location = new System.Drawing.Point(452, 48);
+            this.tbxMaxConnections.Name = "tbxMaxConnections";
+            this.tbxMaxConnections.Size = new System.Drawing.Size(141, 21);
+            this.tbxMaxConnections.TabIndex = 18;
+            this.tbxMaxConnections.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxMaxConnections_KeyPress);
             // 
             // frmSettings
             // 
@@ -475,5 +497,7 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.RadioButton rbWin;
         private System.Windows.Forms.RadioButton rbU;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox tbxMaxConnections;
     }
 }

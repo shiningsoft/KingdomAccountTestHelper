@@ -32,6 +32,7 @@ namespace 金证统一账户测试账户生成器
             tbxCellsC.Text = Settings.Default.稳健型;
             tbxCellsD.Text = Settings.Default.积极型;
             tbxCellsE.Text = Settings.Default.激进型;
+            tbxMaxConnections.Text = Settings.Default.最大并发数.ToString();
         }
 
         private void accept_Click(object sender, EventArgs e)
@@ -50,6 +51,7 @@ namespace 金证统一账户测试账户生成器
             {
                 Settings.Default.统一账户版本 = Kess.Edtion.Win.ToString();
             }
+            Settings.Default.最大并发数 = int.Parse(tbxMaxConnections.Text.Trim());
 
             Settings.Default.SURVEY_SN = tbxSurveySN.Text;
             Settings.Default.Cols = tbxCols.Text;
@@ -79,6 +81,22 @@ namespace 金证统一账户测试账户生成器
             tbxCellsC.Text = RiskTest.cells_C;
             tbxCellsD.Text = RiskTest.cells_D;
             tbxCellsE.Text = RiskTest.cells_E;
+        }
+
+        private void tbxMaxConnections_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && !Char.IsDigit(e.KeyChar))//如果不是输入数字就不让输入
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void tbxZdTimeout_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar != 8 && !Char.IsDigit(e.KeyChar))//如果不是输入数字就不让输入
+            {
+                e.Handled = true;
+            }
         }
     }
 }

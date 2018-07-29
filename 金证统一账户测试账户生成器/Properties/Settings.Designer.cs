@@ -238,5 +238,17 @@ namespace 金证统一账户测试账户生成器.Properties {
                 this["统一账户版本"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("10")]
+        public int 最大并发数 {
+            get {
+                return ((int)(this["最大并发数"]));
+            }
+            set {
+                this["最大并发数"] = value;
+            }
+        }
     }
 }

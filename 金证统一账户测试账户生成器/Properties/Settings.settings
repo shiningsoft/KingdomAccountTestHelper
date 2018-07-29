@@ -56,5 +56,8 @@
     <Setting Name="统一账户版本" Type="System.String" Scope="User">
       <Value Profile="(Default)">U</Value>
     </Setting>
+    <Setting Name="最大并发数" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">10</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
