@@ -203,7 +203,7 @@ namespace 金证统一账户测试账户生成器
                 // 初始化WebService连接
                 if (kess == null)
                 {
-                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice);
+                    kess = new Kess(Settings.Default.操作员代码, Settings.Default.操作员密码, Settings.Default.操作渠道, Settings.Default.webservice,Settings.Default.最大并发数);
                 }
 
                 // 设置柜台版本

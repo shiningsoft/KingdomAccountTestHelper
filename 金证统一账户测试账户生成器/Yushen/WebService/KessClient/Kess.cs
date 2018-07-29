@@ -69,7 +69,7 @@ namespace Yushen.WebService.KessClient
         /// <param name="password">操作员密码</param>
         /// <param name="channel">统一账户操作渠道</param>
         /// <param name="edtion">统一账户系统版本，默认为U版</param>
-        public Kess(string operatorId, string password, string channel, string kessWebserviceURL = "", Edtion edtion = Edtion.U)
+        public Kess(string operatorId, string password, string channel, string kessWebserviceURL = "", int maxConnections = 10, Edtion edtion = Edtion.U)
         {
             this.operatorId = operatorId;
             this.password = password;
@@ -79,6 +79,7 @@ namespace Yushen.WebService.KessClient
                 this.kessWebserviceURL = kessWebserviceURL;
             }
             this.edition = edtion;
+            this.maxConnections = maxConnections;
 
             this.CreateInstance();
         }

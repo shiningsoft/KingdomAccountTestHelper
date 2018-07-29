@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.cancel = new System.Windows.Forms.Button();
             this.accept = new System.Windows.Forms.Button();
             this.tbxWebserviceUrl = new System.Windows.Forms.TextBox();
@@ -66,6 +67,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.tbxMaxConnections = new System.Windows.Forms.TextBox();
+            this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tpNormal.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -99,6 +101,7 @@
             this.tbxWebserviceUrl.Name = "tbxWebserviceUrl";
             this.tbxWebserviceUrl.Size = new System.Drawing.Size(458, 21);
             this.tbxWebserviceUrl.TabIndex = 0;
+            this.toolTip.SetToolTip(this.tbxWebserviceUrl, "统一账户系统的WebService接口地址，一定要输入正确哦");
             // 
             // tbxOperatorId
             // 
@@ -106,6 +109,7 @@
             this.tbxOperatorId.Name = "tbxOperatorId";
             this.tbxOperatorId.Size = new System.Drawing.Size(141, 21);
             this.tbxOperatorId.TabIndex = 2;
+            this.toolTip.SetToolTip(this.tbxOperatorId, "统一账户系统里有WebService接口权限的操作员账号");
             // 
             // tbxPassword
             // 
@@ -114,6 +118,7 @@
             this.tbxPassword.PasswordChar = '*';
             this.tbxPassword.Size = new System.Drawing.Size(141, 21);
             this.tbxPassword.TabIndex = 3;
+            this.toolTip.SetToolTip(this.tbxPassword, "统一账户系统操作员的密码");
             // 
             // tbxChannel
             // 
@@ -121,6 +126,7 @@
             this.tbxChannel.Name = "tbxChannel";
             this.tbxChannel.Size = new System.Drawing.Size(141, 21);
             this.tbxChannel.TabIndex = 4;
+            this.toolTip.SetToolTip(this.tbxChannel, "WebService操作员使用的操作渠道，操作员一定要有这个渠道的访问权限");
             // 
             // label1
             // 
@@ -173,6 +179,7 @@
             this.tbxZdTimeout.Name = "tbxZdTimeout";
             this.tbxZdTimeout.Size = new System.Drawing.Size(141, 21);
             this.tbxZdTimeout.TabIndex = 5;
+            this.toolTip.SetToolTip(this.tbxZdTimeout, "发起中登业务时的超时时间，默认30秒，视情况而定");
             this.tbxZdTimeout.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxZdTimeout_KeyPress);
             // 
             // label6
@@ -199,6 +206,7 @@
             this.tbxBranchNo.Name = "tbxBranchNo";
             this.tbxBranchNo.Size = new System.Drawing.Size(141, 21);
             this.tbxBranchNo.TabIndex = 1;
+            this.toolTip.SetToolTip(this.tbxBranchNo, "新开账户时默认开到哪个营业部，注意要用营业部代码而不是名称");
             // 
             // tabControl1
             // 
@@ -258,6 +266,7 @@
             this.rbWin.Size = new System.Drawing.Size(53, 16);
             this.rbWin.TabIndex = 16;
             this.rbWin.Text = "Win版";
+            this.toolTip.SetToolTip(this.rbWin, "Win版统一账户系统请选这个！");
             this.rbWin.UseVisualStyleBackColor = true;
             // 
             // rbU
@@ -270,6 +279,7 @@
             this.rbU.TabIndex = 15;
             this.rbU.TabStop = true;
             this.rbU.Text = "U版";
+            this.toolTip.SetToolTip(this.rbU, "U版统一账户系统请选这个！");
             this.rbU.UseVisualStyleBackColor = true;
             // 
             // tabPage2
@@ -304,6 +314,7 @@
             this.tbxSurveySN.Size = new System.Drawing.Size(458, 21);
             this.tbxSurveySN.TabIndex = 0;
             this.tbxSurveySN.Text = "1";
+            this.toolTip.SetToolTip(this.tbxSurveySN, "个人投资者风险测评问卷序号");
             // 
             // label14
             // 
@@ -411,6 +422,7 @@
             this.tbxCols.Name = "tbxCols";
             this.tbxCols.Size = new System.Drawing.Size(458, 21);
             this.tbxCols.TabIndex = 1;
+            this.toolTip.SetToolTip(this.tbxCols, "用于快速提交风险测评的题目序列");
             // 
             // label8
             // 
@@ -436,6 +448,7 @@
             this.tbxMaxConnections.Name = "tbxMaxConnections";
             this.tbxMaxConnections.Size = new System.Drawing.Size(141, 21);
             this.tbxMaxConnections.TabIndex = 18;
+            this.toolTip.SetToolTip(this.tbxMaxConnections, "发起WebService请求的最大并发数，最小为1。适当提高能够大大加快查询速度");
             this.tbxMaxConnections.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbxMaxConnections_KeyPress);
             // 
             // frmSettings
@@ -499,5 +512,6 @@
         private System.Windows.Forms.RadioButton rbU;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox tbxMaxConnections;
+        private System.Windows.Forms.ToolTip toolTip;
     }
 }
