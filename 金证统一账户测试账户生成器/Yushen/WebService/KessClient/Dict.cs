@@ -12,6 +12,16 @@ using System.Reflection;
 namespace Yushen.WebService.KessClient.Dict
 {
     /// <summary>
+    /// 申报状态
+    /// </summary>
+    class RPT_STATUS : Dict
+    {
+        public const string 申请 = "0";
+        public const string 完成 = "1";
+        public const string 额度已设置 = "S";
+    }
+
+    /// <summary>
     /// 税收居民身份
     /// </summary>
     class TAX_RESIDENT_TYPE : Dict
@@ -21,6 +31,7 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 既是中国税收居民又是其他国家或地区税收居民 = "3";
         public const string 不配合客户 = "4";
     }
+
     /// <summary>
     /// 是否消极非金融机构
     /// </summary>

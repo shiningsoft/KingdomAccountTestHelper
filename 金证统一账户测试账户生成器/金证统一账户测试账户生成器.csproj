@@ -203,6 +203,7 @@
     <Content Include="logo.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="目录说明.txt" />
     <None Include="Resources\申星软件logo.png" />
     <Content Include="Yushen\WebService\KessClient\Xml\activateCubsbSc.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

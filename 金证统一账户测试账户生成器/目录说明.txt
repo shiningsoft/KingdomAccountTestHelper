@@ -1,0 +1,3 @@
+﻿目录名		用途
+CustomDict	自定义数据字典
+Yushen		金证接口相关文件
