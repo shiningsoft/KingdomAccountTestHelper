@@ -45,6 +45,7 @@ namespace 金证统一账户测试账户生成器
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmExistAccount));
             this.cbxCubsbScOpenAcctOpType = new System.Windows.Forms.ComboBox();
             this.label32 = new System.Windows.Forms.Label();
@@ -263,6 +264,17 @@ namespace 金证统一账户测试账户生成器
             this.CITYCN = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DISTRICT_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CITYEN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tp登记账号 = new System.Windows.Forms.TabPage();
+            this.dgv登记账号 = new System.Windows.Forms.DataGridView();
+            this.登记账号CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.登记账号CUACCT_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OTC_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.OTC_ACCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TRANS_ACCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.登记账号ACCT_STAT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.登记账号OPEN_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.登记账号CLOSE_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.登记账号INST_CLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -282,6 +294,8 @@ namespace 金证统一账户测试账户生成器
             ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).BeginInit();
             this.tp非居民涉税信息.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustNraTaxInfo)).BeginInit();
+            this.tp登记账号.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv登记账号)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCubsbScOpenAcctOpType
@@ -1141,6 +1155,7 @@ namespace 金证统一账户测试账户生成器
             this.tc用户信息.Controls.Add(this.tp已签署协议);
             this.tc用户信息.Controls.Add(this.tp诚信记录);
             this.tc用户信息.Controls.Add(this.tp非居民涉税信息);
+            this.tc用户信息.Controls.Add(this.tp登记账号);
             this.tc用户信息.Location = new System.Drawing.Point(12, 69);
             this.tc用户信息.Name = "tc用户信息";
             this.tc用户信息.SelectedIndex = 0;
@@ -2482,6 +2497,125 @@ namespace 金证统一账户测试账户生成器
             this.CITYEN.ReadOnly = true;
             this.CITYEN.Width = 78;
             // 
+            // tp登记账号
+            // 
+            this.tp登记账号.Controls.Add(this.dgv登记账号);
+            this.tp登记账号.Location = new System.Drawing.Point(4, 22);
+            this.tp登记账号.Name = "tp登记账号";
+            this.tp登记账号.Padding = new System.Windows.Forms.Padding(3);
+            this.tp登记账号.Size = new System.Drawing.Size(935, 239);
+            this.tp登记账号.TabIndex = 7;
+            this.tp登记账号.Text = "登记账号";
+            this.tp登记账号.UseVisualStyleBackColor = true;
+            // 
+            // dgv登记账号
+            // 
+            this.dgv登记账号.AllowUserToAddRows = false;
+            this.dgv登记账号.AllowUserToDeleteRows = false;
+            this.dgv登记账号.AllowUserToResizeRows = false;
+            this.dgv登记账号.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv登记账号.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv登记账号.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv登记账号.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv登记账号.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.登记账号CUST_CODE,
+            this.登记账号CUACCT_CODE,
+            this.OTC_CODE,
+            this.OTC_ACCT,
+            this.TRANS_ACCT,
+            this.登记账号ACCT_STAT,
+            this.登记账号OPEN_DATE,
+            this.登记账号CLOSE_DATE,
+            this.登记账号INST_CLS});
+            this.dgv登记账号.Location = new System.Drawing.Point(6, 6);
+            this.dgv登记账号.Name = "dgv登记账号";
+            this.dgv登记账号.ReadOnly = true;
+            this.dgv登记账号.RowHeadersVisible = false;
+            this.dgv登记账号.RowTemplate.Height = 23;
+            this.dgv登记账号.Size = new System.Drawing.Size(923, 227);
+            this.dgv登记账号.TabIndex = 3;
+            // 
+            // 登记账号CUST_CODE
+            // 
+            this.登记账号CUST_CODE.DataPropertyName = "CUST_CODE";
+            this.登记账号CUST_CODE.HeaderText = "客户代码";
+            this.登记账号CUST_CODE.Name = "登记账号CUST_CODE";
+            this.登记账号CUST_CODE.ReadOnly = true;
+            this.登记账号CUST_CODE.Width = 78;
+            // 
+            // 登记账号CUACCT_CODE
+            // 
+            this.登记账号CUACCT_CODE.DataPropertyName = "CUACCT_CODE";
+            this.登记账号CUACCT_CODE.HeaderText = "资产账户";
+            this.登记账号CUACCT_CODE.Name = "登记账号CUACCT_CODE";
+            this.登记账号CUACCT_CODE.ReadOnly = true;
+            this.登记账号CUACCT_CODE.Width = 78;
+            // 
+            // OTC_CODE
+            // 
+            this.OTC_CODE.DataPropertyName = "OTC_CODE";
+            this.OTC_CODE.HeaderText = "登记机构";
+            this.OTC_CODE.Name = "OTC_CODE";
+            this.OTC_CODE.ReadOnly = true;
+            this.OTC_CODE.Width = 78;
+            // 
+            // OTC_ACCT
+            // 
+            this.OTC_ACCT.DataPropertyName = "OTC_ACCT";
+            this.OTC_ACCT.HeaderText = "登记账号";
+            this.OTC_ACCT.Name = "OTC_ACCT";
+            this.OTC_ACCT.ReadOnly = true;
+            this.OTC_ACCT.Width = 78;
+            // 
+            // TRANS_ACCT
+            // 
+            this.TRANS_ACCT.DataPropertyName = "TRANS_ACCT";
+            this.TRANS_ACCT.HeaderText = "交易账号";
+            this.TRANS_ACCT.Name = "TRANS_ACCT";
+            this.TRANS_ACCT.ReadOnly = true;
+            this.TRANS_ACCT.Width = 78;
+            // 
+            // 登记账号ACCT_STAT
+            // 
+            this.登记账号ACCT_STAT.DataPropertyName = "ACCT_STAT";
+            this.登记账号ACCT_STAT.HeaderText = "账户状态";
+            this.登记账号ACCT_STAT.Name = "登记账号ACCT_STAT";
+            this.登记账号ACCT_STAT.ReadOnly = true;
+            this.登记账号ACCT_STAT.Width = 78;
+            // 
+            // 登记账号OPEN_DATE
+            // 
+            this.登记账号OPEN_DATE.DataPropertyName = "OPEN_DATE";
+            this.登记账号OPEN_DATE.HeaderText = "开户日期";
+            this.登记账号OPEN_DATE.Name = "登记账号OPEN_DATE";
+            this.登记账号OPEN_DATE.ReadOnly = true;
+            this.登记账号OPEN_DATE.Width = 78;
+            // 
+            // 登记账号CLOSE_DATE
+            // 
+            this.登记账号CLOSE_DATE.DataPropertyName = "CLOSE_DATE";
+            this.登记账号CLOSE_DATE.HeaderText = "销户日期";
+            this.登记账号CLOSE_DATE.Name = "登记账号CLOSE_DATE";
+            this.登记账号CLOSE_DATE.ReadOnly = true;
+            this.登记账号CLOSE_DATE.Width = 78;
+            // 
+            // 登记账号INST_CLS
+            // 
+            this.登记账号INST_CLS.DataPropertyName = "INST_CLS";
+            this.登记账号INST_CLS.HeaderText = "产品子类";
+            this.登记账号INST_CLS.Name = "登记账号INST_CLS";
+            this.登记账号INST_CLS.ReadOnly = true;
+            this.登记账号INST_CLS.Width = 78;
+            // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2527,6 +2661,8 @@ namespace 金证统一账户测试账户生成器
             ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).EndInit();
             this.tp非居民涉税信息.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustNraTaxInfo)).EndInit();
+            this.tp登记账号.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv登记账号)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2749,6 +2885,17 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.ComboBox id_type;
+        private System.Windows.Forms.TabPage tp登记账号;
+        private System.Windows.Forms.DataGridView dgv登记账号;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号CUST_CODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号CUACCT_CODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OTC_CODE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn OTC_ACCT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TRANS_ACCT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号ACCT_STAT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号OPEN_DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号CLOSE_DATE;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号INST_CLS;
     }
 }
 

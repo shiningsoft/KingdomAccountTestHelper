@@ -2508,5 +2508,54 @@ namespace Yushen.WebService.KessClient
                 return response.getValue("AVG_FUNDASSET");
             }
         }
+
+        /// <summary>
+        /// 登记账号查询
+        /// 实现2.195	登记账号查询
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="CUACCT_CODE">资产账户（非必传）</param>
+        /// <param name="OTC_CODE">登记机构（非必传）</param>
+        /// <param name="TRANS_ACCT">交易账号（非必传）</param>
+        /// <param name="INST_CLS">产品子类（非必传）</param>
+        /// <returns></returns>
+        async public Task<Response> queryOtcAcct(
+                string CUST_CODE, //客户代码（必传）
+                string CUACCT_CODE = "", //资产账户（非必传）
+                string OTC_CODE = "", //登记机构（非必传）
+                string TRANS_ACCT = "", //交易账号（非必传）
+                string INST_CLS = "" //产品子类（非必传）
+            )
+        {
+            // 前置条件判断
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "queryOtcAcct");
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（必传）
+            request.setAttr("CUACCT_CODE", CUACCT_CODE); //资产账户（非必传）
+            request.setAttr("OTC_CODE", OTC_CODE); //登记机构（非必传）
+            request.setAttr("TRANS_ACCT", TRANS_ACCT); //交易账号（非必传）
+            request.setAttr("INST_CLS", INST_CLS); //产品子类（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
     }
 }

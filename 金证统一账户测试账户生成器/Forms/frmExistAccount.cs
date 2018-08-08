@@ -1038,7 +1038,6 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
-                resultForm.Append("正在查询20日日均资产");
                 lbAvgAsset.Text = await kess.getCustAvgAssets(tbxCustCode.Text.Trim()) + "元";
             }
             catch (Exception ex)
@@ -1240,6 +1239,26 @@ namespace 金证统一账户测试账户生成器
         }
 
         /// <summary>
+        /// 查询登记账号
+        /// </summary>
+        private async void queryOtcAcct()
+        {
+            // 受益人信息
+            Response response = await kess.queryOtcAcct(tbxCustCode.Text.Trim());
+            if (response.length == 0)
+            {
+                resultForm.Append("没有找到登记账号信息");
+                dgvClear(ref dgv登记账号);
+            }
+            else
+            {
+                resultForm.Append("找到" + response.length + "条登记账号信息");
+                dgv登记账号.DataSource = response.TranslatedRecord;
+                dgv登记账号.ClearSelection();
+            }
+        }
+
+        /// <summary>
         /// 一键查询所有客户信息
         /// </summary>
         /// <param name="sender"></param>
@@ -1277,7 +1296,8 @@ namespace 金证统一账户测试账户生成器
                 queryStkYmt();
 
                 listOfStkTrdAcct();
-                
+
+                queryOtcAcct();
             }
             catch (Exception ex)
             {
@@ -1407,6 +1427,7 @@ namespace 金证统一账户测试账户生成器
             dgvClear(ref dgv诚信记录);
             dgvClear(ref dgvRiskSurvey);
             dgvClear(ref dgvCustNraTaxInfo);
+            dgvClear(ref dgv登记账号);
             lbLastRiskSurveyDate.Text = "最后测评日期：";
             lbAvgAsset.Text = "0元";
         }

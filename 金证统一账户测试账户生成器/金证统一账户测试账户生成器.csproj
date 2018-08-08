@@ -742,7 +742,7 @@
     <Content Include="Yushen\WebService\KessClient\Xml\queryOrgInfoList.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Yushen\WebService\KessClient\Xml\queryOtcAcctInfo.xml">
+    <Content Include="Yushen\WebService\KessClient\Xml\queryOtcAcct.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Yushen\WebService\KessClient\Xml\queryOtcCustPayerInfo.xml">
