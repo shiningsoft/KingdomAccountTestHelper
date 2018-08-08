@@ -1183,18 +1183,25 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private async void queryUserBeneficiaryInfo()
         {
-            // 受益人信息
-            Response response = await kess.queryUserBeneficiaryInfo(tbxCustCode.Text.Trim());
-            if (response.length == 0)
+            try
             {
-                resultForm.Append("没有找到受益人信息");
-                dgvClear(ref dgv受益人);
+                // 受益人信息
+                Response response = await kess.queryUserBeneficiaryInfo(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到受益人信息");
+                    dgvClear(ref dgv受益人);
+                }
+                else
+                {
+                    resultForm.Append("找到" + response.length + "条受益人信息");
+                    dgv受益人.DataSource = response.TranslatedRecord;
+                    dgv受益人.ClearSelection();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                resultForm.Append("找到" + response.length + "条受益人信息");
-                dgv受益人.DataSource = response.TranslatedRecord;
-                dgv受益人.ClearSelection();
+                resultForm.Append("查询受益人信息失败：" + ex.Message);
             }
         }
 
@@ -1203,18 +1210,25 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private async void queryControllerInfo()
         {
-            // 控制人信息
-            Response response = await kess.queryControllerInfo(tbxCustCode.Text.Trim());
-            if (response.length == 0)
+            try
             {
-                resultForm.Append("没有找到控制人信息");
-                dgvClear(ref dgv控制人);
+                // 控制人信息
+                Response response = await kess.queryControllerInfo(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到控制人信息");
+                    dgvClear(ref dgv控制人);
+                }
+                else
+                {
+                    resultForm.Append("找到" + response.length + "条控制人信息");
+                    dgv控制人.DataSource = response.TranslatedRecord;
+                    dgv控制人.ClearSelection();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                resultForm.Append("找到" + response.length + "条控制人信息");
-                dgv控制人.DataSource = response.TranslatedRecord;
-                dgv控制人.ClearSelection();
+                resultForm.Append("查询控制人信息失败：" + ex.Message);
             }
         }
 
@@ -1223,18 +1237,25 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private async void queryCustAgreement()
         {
-            // 查询协议签署情况
-            Response response = await kess.queryCustAgreement(tbxCustCode.Text.Trim());
-            if (response.length == 0)
+            try
             {
-                resultForm.Append("没有找到已签署的协议：" + response.prompt);
-                dgvClear(ref dgv已签署协议);
+                // 查询协议签署情况
+                Response response = await kess.queryCustAgreement(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到已签署的协议：" + response.prompt);
+                    dgvClear(ref dgv已签署协议);
+                }
+                else if (response.length > 0)
+                {
+                    resultForm.Append("客户已经签署了" + response.length + "种协议。");
+                    dgv已签署协议.DataSource = response.TranslatedRecord;
+                    dgv已签署协议.ClearSelection();
+                }
             }
-            else if (response.length > 0)
+            catch (Exception ex)
             {
-                resultForm.Append("客户已经签署了" + response.length + "种协议。");
-                dgv已签署协议.DataSource = response.TranslatedRecord;
-                dgv已签署协议.ClearSelection();
+                resultForm.Append("查询控制人信息失败：" + ex.Message);
             }
         }
 
@@ -1243,18 +1264,25 @@ namespace 金证统一账户测试账户生成器
         /// </summary>
         private async void queryOtcAcct()
         {
-            // 受益人信息
-            Response response = await kess.queryOtcAcct(tbxCustCode.Text.Trim());
-            if (response.length == 0)
+            try
             {
-                resultForm.Append("没有找到登记账号信息");
-                dgvClear(ref dgv登记账号);
+                // 登记账号信息
+                Response response = await kess.queryOtcAcct(tbxCustCode.Text.Trim());
+                if (response.length == 0)
+                {
+                    resultForm.Append("没有找到登记账号信息");
+                    dgvClear(ref dgv登记账号);
+                }
+                else
+                {
+                    resultForm.Append("找到" + response.length + "条登记账号信息");
+                    dgv登记账号.DataSource = response.TranslatedRecord;
+                    dgv登记账号.ClearSelection();
+                }
             }
-            else
+            catch (Exception ex)
             {
-                resultForm.Append("找到" + response.length + "条登记账号信息");
-                dgv登记账号.DataSource = response.TranslatedRecord;
-                dgv登记账号.ClearSelection();
+                resultForm.Append("查询控制人信息失败：" + ex.Message);
             }
         }
 
