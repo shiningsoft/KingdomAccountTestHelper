@@ -582,7 +582,7 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 回乡证 = "04";
         public const string 户口本 = "05";
         public const string 外国护照 = "06";
-        public const string 技术监督局号码 = "08";
+        public const string 技术监督局号码08 = "08";
         public const string 其它证件 = "09";
         public const string 香港居民通行证 = "0b";
         public const string 澳门居民通行证 = "0c";
@@ -601,7 +601,7 @@ namespace Yushen.WebService.KessClient.Dict
         public const string 武警 = "15";
         public const string 军队 = "16";
         public const string 基金会 = "17";
-        // public const string 技术监督局号码 = "18";
+        public const string 技术监督局号码18 = "18";
         public const string 其它证书 = "19";
         public const string 组织机构代码证 = "1A";
         public const string 批文 = "1Z";

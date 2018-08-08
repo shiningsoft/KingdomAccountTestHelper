@@ -1962,6 +1962,130 @@ namespace Yushen.WebService.KessClient
         }
 
         /// <summary>
+        /// 修改用户重要信息
+        /// 实现2.90 修改用户重要信息
+        /// </summary>
+        /// <param name="USER_CODE">用户代码</param>
+        /// <param name="USER_NAME">用户名称</param>
+        /// <param name="ID_TYPE">证件类型</param>
+        /// <param name="ID_CODE">证件号码</param>
+        /// <param name="USER_FNAME">用户全称</param>
+        /// <param name="ID_ISS_AGCY">发证机关</param>
+        /// <param name="ID_BEG_DATE">证件开始日期</param>
+        /// <param name="ID_EXP_DATE">证件有效日期</param>
+        /// <param name="ID_ZIP_CODE">证件编码</param>
+        /// <param name="ID_ADDR">证件地址</param>
+        /// <param name="OP_REMARK">操作备注</param>
+        /// <param name="BSB_USER_FNAME">签约客户姓名</param>
+        /// <param name="BSB_ID_TYPE">签约证件类型</param>
+        /// <param name="BSB_ID_CODE">签约证件号码</param>
+        /// <param name="BSB_ID_EXP_DATE">签约证件有效日期</param>
+        /// <param name="BUSINESS_TAX_NO">税务登记证</param>
+        /// <param name="TAX_NO_EXP_DATE">登记证有效日期</param>
+        /// <param name="BUSINESS_LICENCE_NO">营业执照号</param>
+        /// <param name="LICENCE_NO_EXP_DATE">执照有效日期</param>
+        /// <param name="ORG_ID_CODE">组织机构代码</param>
+        /// <param name="ORG_ID_EXP_DATE">代码证有效日期</param>
+        /// <param name="MAIN_YEAR_CHK_DATE">组织证年检日期</param>
+        /// <param name="IDCARD_READ_FLAG">证件卡读卡标志</param>
+        /// <param name="BIRTHDAY">出生日期/注册日期</param>
+        /// <returns></returns>
+        async public Task<Response> updateUserImportantInfo(
+                string USER_CODE, //用户代码
+                string USER_NAME = "", //用户名称
+                string ID_TYPE = "", //证件类型
+                string ID_CODE = "", //证件号码
+                string USER_FNAME = "", //用户全称
+                string ID_ISS_AGCY = "", //发证机关
+                string ID_BEG_DATE = "", //证件开始日期
+                string ID_EXP_DATE = "", //证件有效日期
+                string ID_ZIP_CODE = "", //证件编码
+                string ID_ADDR = "", //证件地址
+                string OP_REMARK = "", //操作备注
+                string BSB_USER_FNAME = "", //签约客户姓名
+                string BSB_ID_TYPE = "", //签约证件类型
+                string BSB_ID_CODE = "", //签约证件号码
+                string BSB_ID_EXP_DATE = "", //签约证件有效日期
+                string BUSINESS_TAX_NO = "", //税务登记证
+                string TAX_NO_EXP_DATE = "", //登记证有效日期
+                string BUSINESS_LICENCE_NO = "", //营业执照号
+                string LICENCE_NO_EXP_DATE = "", //执照有效日期
+                string ORG_ID_CODE = "", //组织机构代码
+                string ORG_ID_EXP_DATE = "", //代码证有效日期
+                string MAIN_YEAR_CHK_DATE = "", //组织证年检日期
+                string IDCARD_READ_FLAG = "", //证件卡读卡标志
+                string BIRTHDAY = "" //出生日期/注册日期
+            )
+        {
+            // 前置条件判断
+            if (USER_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (USER_NAME == "")
+            {
+                string message = "用户名称不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (ID_TYPE == "")
+            {
+                string message = "证件类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (ID_CODE == "")
+            {
+                string message = "证件号码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "updateUserImportantInfo");
+            request.setAttr("USER_CODE", USER_CODE); //用户代码
+            request.setAttr("USER_NAME", USER_NAME); //用户名称
+            request.setAttr("ID_TYPE", ID_TYPE); //证件类型
+            request.setAttr("ID_CODE", ID_CODE); //证件号码
+            request.setAttr("USER_FNAME", USER_FNAME); //用户全称
+            request.setAttr("ID_ISS_AGCY", ID_ISS_AGCY); //发证机关
+            request.setAttr("ID_BEG_DATE", ID_BEG_DATE); //证件开始日期
+            request.setAttr("ID_EXP_DATE", ID_EXP_DATE); //证件有效日期
+            request.setAttr("ID_ZIP_CODE", ID_ZIP_CODE); //证件编码
+            request.setAttr("ID_ADDR", ID_ADDR); //证件地址
+            request.setAttr("OP_REMARK", OP_REMARK); //操作备注
+            request.setAttr("BSB_USER_FNAME", BSB_USER_FNAME); //签约客户姓名
+            request.setAttr("BSB_ID_TYPE", BSB_ID_TYPE); //签约证件类型
+            request.setAttr("BSB_ID_CODE", BSB_ID_CODE); //签约证件号码
+            request.setAttr("BSB_ID_EXP_DATE", BSB_ID_EXP_DATE); //签约证件有效日期
+            request.setAttr("BUSINESS_TAX_NO", BUSINESS_TAX_NO); //税务登记证
+            request.setAttr("TAX_NO_EXP_DATE", TAX_NO_EXP_DATE); //登记证有效日期
+            request.setAttr("BUSINESS_LICENCE_NO", BUSINESS_LICENCE_NO); //营业执照号
+            request.setAttr("LICENCE_NO_EXP_DATE", LICENCE_NO_EXP_DATE); //执照有效日期
+            request.setAttr("ORG_ID_CODE", ORG_ID_CODE); //组织机构代码
+            request.setAttr("ORG_ID_EXP_DATE", ORG_ID_EXP_DATE); //代码证有效日期
+            request.setAttr("MAIN_YEAR_CHK_DATE", MAIN_YEAR_CHK_DATE); //组织证年检日期
+            request.setAttr("IDCARD_READ_FLAG", IDCARD_READ_FLAG); //证件卡读卡标志
+            request.setAttr("BIRTHDAY", BIRTHDAY); //出生日期/注册日期
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "修改客户重要信息失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return response;
+        }
+
+        /// <summary>
         /// 客户操作渠道修改
         /// 实现2.278	客户操作渠道修改
         /// </summary>

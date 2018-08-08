@@ -98,6 +98,12 @@ namespace 金证统一账户测试账户生成器
                 cbxOpenType.ValueMember = "value";
                 cbxOpenType.DataSource = openTypeList.DataTable;
 
+                Dict.ID_TYPE idTypeList = new Dict.ID_TYPE();
+                idTypeList.selectable = true;
+                id_type.DisplayMember = "name";
+                id_type.ValueMember = "value";
+                id_type.DataSource = idTypeList.DataTable;
+
                 dtpBGN_DATE.Value = DateTime.Now.AddYears(-1).Date;
                 dtpEND_DATE.Value = DateTime.Now.Date;
 
@@ -155,7 +161,7 @@ namespace 金证统一账户测试账户生成器
                 user.user_type = Dict.USER_TYPE.个人;
                 user.user_name = user_name.Text.Trim();
                 user.user_fname = user_name.Text.Trim();
-                user.id_type = Dict.ID_TYPE.身份证;
+                user.id_type = id_type.SelectedValue.ToString();
                 user.id_code = id_code.Text.Trim();
                 user.id_addr = id_addr.Text.Trim();
                 user.id_iss_agcy = id_iss_agcy.Text.Trim();
@@ -839,6 +845,7 @@ namespace 金证统一账户测试账户生成器
                 // 基本资料
                 Response response = await kess.queryCustBasicInfoList(tbxCustCode.Text.Trim());
                 user_name.Text = response.getValue("user_name");
+                id_type.SelectedValue = response.getValue("id_type");
                 id_code.Text = response.getValue("id_code");
                 id_iss_agcy.Text = response.getValue("id_iss_agcy");
                 id_beg_date.Text = response.getValue("id_beg_date");
@@ -1385,6 +1392,7 @@ namespace 金证统一账户测试账户生成器
             zip_code.Text = "";
             password.Text = "111111";
 
+            id_type.SelectedIndex = 0;
             nationality.SelectedIndex = 0;
             citizenship.SelectedIndex = 0;
             risk_level.SelectedIndex = 0;
@@ -1438,6 +1446,7 @@ namespace 金证统一账户测试账户生成器
                     ID_EXP_DATE: id_exp_date.Text.Trim(),
                     SEX: sex.SelectedValue.ToString()
                 );
+                response = await kess.updateUserImportantInfo(tbxCustCode.Text.Trim(),user_name.Text.Trim(),ID_TYPE: id_type.SelectedValue.ToString(), ID_CODE: id_code.Text.Trim());
                 resultForm.Append("修改客户基本信息成功");
             }
             catch (Exception ex)
