@@ -92,6 +92,12 @@ namespace 金证统一账户测试账户生成器
                 bank_code.DataSource = bankCodeList.DataTable;
                 bank_code.SelectedValue = Settings.Default.默认开通的银行类型;
 
+                Dict.ID_TYPE idTypeList = new Dict.ID_TYPE();
+                idTypeList.selectable = true;
+                id_type.DisplayMember = "name";
+                id_type.ValueMember = "value";
+                id_type.DataSource = idTypeList.DataTable;
+
                 if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
                 {
                     cbxOccupation.Enabled = false;
@@ -137,6 +143,15 @@ namespace 金证统一账户测试账户生成器
             bank_code.SelectedValue = Settings.Default.默认开通的银行类型;
             cbxOpenType.SelectedValue = Dict.OPEN_TYPE.T加2;
             cbxOccupation.Text = "专业技术人员";
+            id_type.SelectedValue = Dict.ID_TYPE.身份证;
+            if (cbxShortIdNo.Checked)
+            {
+                birthday.Value = DateTime.ParseExact("19" + id_code.Text.Substring(6, 6),"yyyyMMdd", System.Globalization.DateTimeFormatInfo.CurrentInfo);
+            }
+            else
+            {
+                birthday.Value = DateTime.ParseExact(id_code.Text.Substring(6, 8), "yyyyMMdd", System.Globalization.DateTimeFormatInfo.CurrentInfo);
+            }
 
             saveUserInfo();
         }
@@ -152,12 +167,13 @@ namespace 金证统一账户测试账户生成器
                 user.user_type = Dict.USER_TYPE.个人;
                 user.user_name = user_name.Text.Trim();
                 user.user_fname = user_name.Text.Trim();
-                user.id_type = Dict.ID_TYPE.身份证;
+                user.id_type = id_type.SelectedValue.ToString();
                 user.id_code = id_code.Text.Trim();
                 user.id_addr = id_addr.Text.Trim();
                 user.id_iss_agcy = id_iss_agcy.Text.Trim();
                 user.id_beg_date = id_beg_date.Text.Trim();
                 user.id_exp_date = id_exp_date.Text.Trim();
+                user.birthday = birthday.Text.Trim();
                 user.linktel_order = Dict.LINKTEL_ORDER.手机;
                 user.linkaddr_order = Dict.LINKADDR_ORDER.家庭地址;
                 user.address = id_addr.Text.Trim();
@@ -1029,6 +1045,18 @@ namespace 金证统一账户测试账户生成器
             if (bank_code.SelectedValue.ToString() != "")
             {
                 Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
+            }
+        }
+
+        private void id_type_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (id_type.SelectedValue.ToString() == Dict.ID_TYPE.身份证.ToString())
+            {
+                cbxShortIdNo.Enabled = true;
+            }
+            else
+            {
+                cbxShortIdNo.Enabled = false;
             }
         }
     }
