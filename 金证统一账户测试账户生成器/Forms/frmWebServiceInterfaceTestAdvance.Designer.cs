@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefreshMethonList = new System.Windows.Forms.Button();
             this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
@@ -136,6 +136,7 @@
             this.splitContainer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
             this.splitContainer1.Location = new System.Drawing.Point(12, 39);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -148,7 +149,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1018, 560);
-            this.splitContainer1.SplitterDistance = 491;
+            this.splitContainer1.SplitterDistance = 500;
             this.splitContainer1.TabIndex = 28;
             // 
             // splitContainer2
@@ -168,7 +169,7 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.lbQueryDictStatus);
             this.splitContainer2.Panel2.Controls.Add(this.dgvDict);
-            this.splitContainer2.Size = new System.Drawing.Size(485, 522);
+            this.splitContainer2.Size = new System.Drawing.Size(494, 522);
             this.splitContainer2.SplitterDistance = 372;
             this.splitContainer2.TabIndex = 26;
             // 
@@ -192,7 +193,7 @@
             this.dgvParams.RowHeadersVisible = false;
             this.dgvParams.RowHeadersWidth = 100;
             this.dgvParams.RowTemplate.Height = 23;
-            this.dgvParams.Size = new System.Drawing.Size(479, 366);
+            this.dgvParams.Size = new System.Drawing.Size(488, 366);
             this.dgvParams.TabIndex = 0;
             this.dgvParams.CurrentCellChanged += new System.EventHandler(this.dgvParams_CurrentCellChanged);
             // 
@@ -200,8 +201,8 @@
             // 
             this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnName.DataPropertyName = "字段名";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle1;
             this.ColumnName.FillWeight = 152.2843F;
             this.ColumnName.HeaderText = "字段名";
             this.ColumnName.Name = "ColumnName";
@@ -214,8 +215,8 @@
             // 
             this.ColumnValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnValue.DataPropertyName = "字段值";
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle2;
             this.ColumnValue.FillWeight = 140.1015F;
             this.ColumnValue.HeaderText = "字段值";
             this.ColumnValue.Name = "ColumnValue";
@@ -236,7 +237,7 @@
             this.lbQueryDictStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbQueryDictStatus.AutoSize = true;
             this.lbQueryDictStatus.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbQueryDictStatus.Location = new System.Drawing.Point(170, 45);
+            this.lbQueryDictStatus.Location = new System.Drawing.Point(175, 45);
             this.lbQueryDictStatus.Name = "lbQueryDictStatus";
             this.lbQueryDictStatus.Size = new System.Drawing.Size(88, 16);
             this.lbQueryDictStatus.TabIndex = 18;
@@ -266,7 +267,7 @@
             this.dgvDict.RowHeadersVisible = false;
             this.dgvDict.RowTemplate.Height = 23;
             this.dgvDict.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDict.Size = new System.Drawing.Size(479, 143);
+            this.dgvDict.Size = new System.Drawing.Size(488, 143);
             this.dgvDict.TabIndex = 17;
             this.dgvDict.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDict_CellDoubleClick);
             // 
@@ -321,7 +322,7 @@
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(517, 554);
+            this.tabControl1.Size = new System.Drawing.Size(508, 554);
             this.tabControl1.TabIndex = 26;
             // 
             // tpResponseDgv
@@ -332,7 +333,7 @@
             this.tpResponseDgv.Location = new System.Drawing.Point(4, 4);
             this.tpResponseDgv.Name = "tpResponseDgv";
             this.tpResponseDgv.Padding = new System.Windows.Forms.Padding(3);
-            this.tpResponseDgv.Size = new System.Drawing.Size(509, 528);
+            this.tpResponseDgv.Size = new System.Drawing.Size(500, 528);
             this.tpResponseDgv.TabIndex = 0;
             this.tpResponseDgv.Text = "图形版";
             this.tpResponseDgv.UseVisualStyleBackColor = true;
@@ -374,7 +375,7 @@
             this.dgvResponse.RowHeadersVisible = false;
             this.dgvResponse.RowTemplate.Height = 23;
             this.dgvResponse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResponse.Size = new System.Drawing.Size(497, 494);
+            this.dgvResponse.Size = new System.Drawing.Size(488, 494);
             this.dgvResponse.TabIndex = 0;
             // 
             // tpResponseText

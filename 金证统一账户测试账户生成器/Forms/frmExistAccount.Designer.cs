@@ -2621,7 +2621,7 @@ namespace 金证统一账户测试账户生成器
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1035, 634);
+            this.ClientSize = new System.Drawing.Size(1052, 634);
             this.Controls.Add(this.tc用户信息);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);

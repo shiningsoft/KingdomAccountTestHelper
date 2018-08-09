@@ -118,6 +118,8 @@ namespace 金证统一账户测试账户生成器
                 }
 
                 dtpCybSignDate.Value = DateTime.Now;
+
+                Reset();
             }
             catch (Exception ex)
             {
@@ -858,6 +860,11 @@ namespace 金证统一账户测试账户生成器
                 nationality.SelectedValue = response.getValue("NATIONALITY");
                 sex.SelectedValue = response.getValue("sex");
                 education.SelectedValue = response.getValue("education");
+
+                btnMdfCustBasicInfo.Enabled = true;
+                btnQueryStockAccount.Enabled = true;
+                btnCreateIDCardImgFaceSide.Enabled = true;
+                btnCreateIDCardImgBackSide.Enabled = true;
             }
             catch (Exception ex)
             {
@@ -1458,6 +1465,11 @@ namespace 金证统一账户测试账户生成器
             dgvClear(ref dgv登记账号);
             lbLastRiskSurveyDate.Text = "最后测评日期：";
             lbAvgAsset.Text = "0元";
+
+            btnMdfCustBasicInfo.Enabled = false;
+            btnQueryStockAccount.Enabled = false;
+            btnCreateIDCardImgFaceSide.Enabled = false;
+            btnCreateIDCardImgBackSide.Enabled = false;
         }
 
         private void tbxCustCode_KeyDown(object sender, KeyEventArgs e)
@@ -1480,7 +1492,9 @@ namespace 金证统一账户测试账户生成器
         {
             try
             {
+                // 格式校验
                 saveUserInfo();
+
                 Response response = await kess.mdfUserGenInfo(
                     tbxCustCode.Text.Trim(),
                     zip_code.Text.Trim(),
@@ -1495,22 +1509,16 @@ namespace 金证统一账户测试账户生成器
                     ID_EXP_DATE: id_exp_date.Text.Trim(),
                     SEX: sex.SelectedValue.ToString()
                 );
+                // 修改重要信息
                 response = await kess.updateUserImportantInfo(tbxCustCode.Text.Trim(),user_name.Text.Trim(),ID_TYPE: id_type.SelectedValue.ToString(), ID_CODE: id_code.Text.Trim());
-                resultForm.Append("修改客户基本信息成功");
+                // 修改职业信息
+                await kess.mdfUserExtInfo(tbxCustCode.Text.Trim(), "1", OCCU_TYPE: occu_type.SelectedValue.ToString(), OCCUPATION: cbxOccupation.Text);
+
+                resultForm.Append("修改客户资料成功");
             }
             catch (Exception ex)
             {
                 resultForm.Append("修改客户资料失败：" + ex.Message);
-            }
-
-            try
-            {
-                await kess.mdfUserExtInfo(tbxCustCode.Text.Trim(),"1",OCCU_TYPE: occu_type.SelectedValue.ToString(),OCCUPATION:cbxOccupation.Text);
-                resultForm.Append("修改客户职业信息成功");
-            }
-            catch (Exception ex)
-            {
-                resultForm.Append("修改客户职业信息失败：" + ex.Message);
             }
         }
 
