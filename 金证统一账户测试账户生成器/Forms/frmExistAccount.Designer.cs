@@ -203,6 +203,10 @@ namespace 金证统一账户测试账户生成器
             this.TRDACCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp诚信记录 = new System.Windows.Forms.TabPage();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.cbxCreditRecordSource = new System.Windows.Forms.ComboBox();
+            this.btnNoNegativeCreditRecord = new System.Windows.Forms.Button();
             this.dgv诚信记录 = new System.Windows.Forms.DataGridView();
             this.诚信记录CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RECORD_NUM = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -275,7 +279,7 @@ namespace 金证统一账户测试账户生成器
             this.登记账号OPEN_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.登记账号CLOSE_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.登记账号INST_CLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNoNegativeCreditRecord = new System.Windows.Forms.Button();
+            this.nudCreditRecordScore = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -297,6 +301,7 @@ namespace 金证统一账户测试账户生成器
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustNraTaxInfo)).BeginInit();
             this.tp登记账号.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv登记账号)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCreditRecordScore)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCubsbScOpenAcctOpType
@@ -1906,6 +1911,10 @@ namespace 金证统一账户测试账户生成器
             // 
             // tp诚信记录
             // 
+            this.tp诚信记录.Controls.Add(this.nudCreditRecordScore);
+            this.tp诚信记录.Controls.Add(this.label38);
+            this.tp诚信记录.Controls.Add(this.label37);
+            this.tp诚信记录.Controls.Add(this.cbxCreditRecordSource);
             this.tp诚信记录.Controls.Add(this.btnNoNegativeCreditRecord);
             this.tp诚信记录.Controls.Add(this.dgv诚信记录);
             this.tp诚信记录.Location = new System.Drawing.Point(4, 22);
@@ -1915,6 +1924,44 @@ namespace 金证统一账户测试账户生成器
             this.tp诚信记录.TabIndex = 3;
             this.tp诚信记录.Text = "诚信记录";
             this.tp诚信记录.UseVisualStyleBackColor = true;
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(243, 215);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(53, 12);
+            this.label38.TabIndex = 8;
+            this.label38.Text = "加减分：";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(4, 214);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(41, 12);
+            this.label37.TabIndex = 7;
+            this.label37.Text = "来源：";
+            // 
+            // cbxCreditRecordSource
+            // 
+            this.cbxCreditRecordSource.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCreditRecordSource.FormattingEnabled = true;
+            this.cbxCreditRecordSource.Location = new System.Drawing.Point(51, 211);
+            this.cbxCreditRecordSource.Name = "cbxCreditRecordSource";
+            this.cbxCreditRecordSource.Size = new System.Drawing.Size(186, 20);
+            this.cbxCreditRecordSource.TabIndex = 6;
+            this.cbxCreditRecordSource.SelectedIndexChanged += new System.EventHandler(this.cbxCreditRecordSource_SelectedIndexChanged);
+            // 
+            // btnNoNegativeCreditRecord
+            // 
+            this.btnNoNegativeCreditRecord.Location = new System.Drawing.Point(343, 209);
+            this.btnNoNegativeCreditRecord.Name = "btnNoNegativeCreditRecord";
+            this.btnNoNegativeCreditRecord.Size = new System.Drawing.Size(110, 23);
+            this.btnNoNegativeCreditRecord.TabIndex = 5;
+            this.btnNoNegativeCreditRecord.Text = "增加诚信记录";
+            this.btnNoNegativeCreditRecord.UseVisualStyleBackColor = true;
+            this.btnNoNegativeCreditRecord.Click += new System.EventHandler(this.btnNoNegativeCreditRecord_Click);
             // 
             // dgv诚信记录
             // 
@@ -2618,22 +2665,30 @@ namespace 金证统一账户测试账户生成器
             this.登记账号INST_CLS.ReadOnly = true;
             this.登记账号INST_CLS.Width = 78;
             // 
-            // btnNoNegativeCreditRecord
+            // nudCreditRecordScore
             // 
-            this.btnNoNegativeCreditRecord.Location = new System.Drawing.Point(6, 210);
-            this.btnNoNegativeCreditRecord.Name = "btnNoNegativeCreditRecord";
-            this.btnNoNegativeCreditRecord.Size = new System.Drawing.Size(110, 23);
-            this.btnNoNegativeCreditRecord.TabIndex = 5;
-            this.btnNoNegativeCreditRecord.Text = "无不良诚信记录";
-            this.btnNoNegativeCreditRecord.UseVisualStyleBackColor = true;
-            this.btnNoNegativeCreditRecord.Click += new System.EventHandler(this.btnNoNegativeCreditRecord_Click);
+            this.nudCreditRecordScore.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudCreditRecordScore.Location = new System.Drawing.Point(294, 210);
+            this.nudCreditRecordScore.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.nudCreditRecordScore.Name = "nudCreditRecordScore";
+            this.nudCreditRecordScore.Size = new System.Drawing.Size(43, 21);
+            this.nudCreditRecordScore.TabIndex = 10;
+            this.nudCreditRecordScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1052, 634);
+            this.ClientSize = new System.Drawing.Size(1069, 634);
             this.Controls.Add(this.tc用户信息);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.groupBox3);
@@ -2670,11 +2725,13 @@ namespace 金证统一账户测试账户生成器
             this.tp已签署协议.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).EndInit();
             this.tp诚信记录.ResumeLayout(false);
+            this.tp诚信记录.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).EndInit();
             this.tp非居民涉税信息.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustNraTaxInfo)).EndInit();
             this.tp登记账号.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv登记账号)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCreditRecordScore)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2909,6 +2966,10 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号CLOSE_DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号INST_CLS;
         private System.Windows.Forms.Button btnNoNegativeCreditRecord;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.ComboBox cbxCreditRecordSource;
+        private System.Windows.Forms.NumericUpDown nudCreditRecordScore;
     }
 }
 

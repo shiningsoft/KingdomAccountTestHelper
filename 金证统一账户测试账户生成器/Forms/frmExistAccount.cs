@@ -104,6 +104,11 @@ namespace 金证统一账户测试账户生成器
                 id_type.ValueMember = "value";
                 id_type.DataSource = idTypeList.DataTable;
 
+                Dict.RECORD_SOURCE recordSourceList = new Dict.RECORD_SOURCE();
+                cbxCreditRecordSource.DisplayMember = "name";
+                cbxCreditRecordSource.ValueMember = "value";
+                cbxCreditRecordSource.DataSource = recordSourceList.DataTable;
+
                 dtpBGN_DATE.Value = DateTime.Now.AddYears(-1).Date;
                 dtpEND_DATE.Value = DateTime.Now.Date;
 
@@ -1455,6 +1460,9 @@ namespace 金证统一账户测试账户生成器
             occu_type.SelectedIndex = 0;
             education.SelectedIndex = 0;
             cbxOccupation.Text = "";
+            
+            cbxCreditRecordSource.SelectedValue = Dict.RECORD_SOURCE.无不良诚信记录;
+            nudCreditRecordScore.Value = 0;
 
             dgvClear(ref dgv受益人);
             dgvClear(ref dgv已签署协议);
@@ -1600,16 +1608,33 @@ namespace 金证统一账户测试账户生成器
 
             try
             {
-                await kess.mdfCreditRecord(Dict.OPERATION_TYPE.增加密码, tbxCustCode.Text.Trim(), RECORD_SOURCE: Dict.RECORD_SOURCE.无不良诚信记录);
-                resultForm.Append("设置无不良诚信记录成功！");
+                await kess.mdfCreditRecord(Dict.OPERATION_TYPE.增加密码, tbxCustCode.Text.Trim(), RECORD_SOURCE: cbxCreditRecordSource.SelectedValue.ToString(),RECORD_TXT:"测试工具添加的记录", RECORD_SCORE: nudCreditRecordScore.Value.ToString());
+                resultForm.Append("增加诚信记录成功！");
                 queryCreditRecord();
             }
             catch (Exception ex)
             {
-                resultForm.Append("设置无不良诚信记录失败：" + ex.Message);
+                resultForm.Append("增加诚信记录失败：" + ex.Message);
             }
 
             btnNoNegativeCreditRecord.Enabled = true;
+        }
+
+        private void tbxCuacctCondition_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbxCreditRecordSource_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbxCreditRecordSource.SelectedValue.ToString() == Dict.RECORD_SOURCE.无不良诚信记录)
+            {
+                nudCreditRecordScore.Enabled = false;
+            }
+            else
+            {
+                nudCreditRecordScore.Enabled = true;
+            }
         }
     }
 }
