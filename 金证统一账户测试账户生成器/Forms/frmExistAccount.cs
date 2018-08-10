@@ -1593,5 +1593,23 @@ namespace 金证统一账户测试账户生成器
                 Settings.Default.默认开通的银行类型 = bank_code.SelectedValue.ToString();
             }
         }
+
+        private async void btnNoNegativeCreditRecord_Click(object sender, EventArgs e)
+        {
+            btnNoNegativeCreditRecord.Enabled = false;
+
+            try
+            {
+                await kess.mdfCreditRecord(Dict.OPERATION_TYPE.增加密码, tbxCustCode.Text.Trim(), RECORD_SOURCE: Dict.RECORD_SOURCE.无不良诚信记录);
+                resultForm.Append("设置无不良诚信记录成功！");
+                queryCreditRecord();
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("设置无不良诚信记录失败：" + ex.Message);
+            }
+
+            btnNoNegativeCreditRecord.Enabled = true;
+        }
     }
 }

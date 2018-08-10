@@ -275,6 +275,7 @@ namespace 金证统一账户测试账户生成器
             this.登记账号OPEN_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.登记账号CLOSE_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.登记账号INST_CLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnNoNegativeCreditRecord = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -1905,6 +1906,7 @@ namespace 金证统一账户测试账户生成器
             // 
             // tp诚信记录
             // 
+            this.tp诚信记录.Controls.Add(this.btnNoNegativeCreditRecord);
             this.tp诚信记录.Controls.Add(this.dgv诚信记录);
             this.tp诚信记录.Location = new System.Drawing.Point(4, 22);
             this.tp诚信记录.Name = "tp诚信记录";
@@ -1943,7 +1945,7 @@ namespace 金证统一账户测试账户生成器
             this.dgv诚信记录.ReadOnly = true;
             this.dgv诚信记录.RowHeadersVisible = false;
             this.dgv诚信记录.RowTemplate.Height = 23;
-            this.dgv诚信记录.Size = new System.Drawing.Size(923, 227);
+            this.dgv诚信记录.Size = new System.Drawing.Size(923, 198);
             this.dgv诚信记录.TabIndex = 0;
             // 
             // 诚信记录CUST_CODE
@@ -2616,6 +2618,16 @@ namespace 金证统一账户测试账户生成器
             this.登记账号INST_CLS.ReadOnly = true;
             this.登记账号INST_CLS.Width = 78;
             // 
+            // btnNoNegativeCreditRecord
+            // 
+            this.btnNoNegativeCreditRecord.Location = new System.Drawing.Point(6, 210);
+            this.btnNoNegativeCreditRecord.Name = "btnNoNegativeCreditRecord";
+            this.btnNoNegativeCreditRecord.Size = new System.Drawing.Size(110, 23);
+            this.btnNoNegativeCreditRecord.TabIndex = 5;
+            this.btnNoNegativeCreditRecord.Text = "无不良诚信记录";
+            this.btnNoNegativeCreditRecord.UseVisualStyleBackColor = true;
+            this.btnNoNegativeCreditRecord.Click += new System.EventHandler(this.btnNoNegativeCreditRecord_Click);
+            // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2896,6 +2908,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号OPEN_DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号CLOSE_DATE;
         private System.Windows.Forms.DataGridViewTextBoxColumn 登记账号INST_CLS;
+        private System.Windows.Forms.Button btnNoNegativeCreditRecord;
     }
 }
 

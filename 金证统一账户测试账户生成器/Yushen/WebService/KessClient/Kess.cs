@@ -2557,5 +2557,63 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return response;
         }
+
+        /// <summary>
+        /// 登记账号查询
+        /// 实现2.195	登记账号查询
+        /// </summary>
+        /// <param name="OPER_TYPE">操作类型（必传）</param>
+        /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="RECORD_NUM">诚信记录编号（非必传）</param>
+        /// <param name="RECORD_SOURCE">诚信记录来源（非必传）DD[RECORD_SOURCE]</param>
+        /// <param name="RECORD_TXT">诚信记录内容（非必传）</param>
+        /// <param name="RECORD_SCORE">加扣分（非必传）加分项直接填写分数，扣分项填负分，例如-25</param>
+        /// <returns></returns>
+        async public Task<bool> mdfCreditRecord(
+                string OPER_TYPE = "", //操作类型（必传）
+                string CUST_CODE = "", //客户代码（必传）
+                string RECORD_NUM = "", //诚信记录编号（非必传）
+                string RECORD_SOURCE = "", //诚信记录来源（非必传）DD[RECORD_SOURCE]
+                string RECORD_TXT = "", //诚信记录内容（非必传）
+                string RECORD_SCORE = "" //加扣分（非必传）加分项直接填写分数，扣分项填负分，例如-25
+            )
+        {
+            // 前置条件判断
+            if (OPER_TYPE == "")
+            {
+                string message = "操作类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "mdfCreditRecord");
+            request.setAttr("OPER_TYPE", OPER_TYPE); //操作类型（必传）
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（必传）
+            request.setAttr("RECORD_NUM", RECORD_NUM); //诚信记录编号（非必传）
+            request.setAttr("RECORD_SOURCE", RECORD_SOURCE); //诚信记录来源（非必传）DD[RECORD_SOURCE]
+            request.setAttr("RECORD_TXT", RECORD_TXT); //诚信记录内容（非必传）
+            request.setAttr("RECORD_SCORE", RECORD_SCORE); //加扣分（非必传）加分项直接填写分数，扣分项填负分，例如-25
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return true;
+        }
     }
 }
