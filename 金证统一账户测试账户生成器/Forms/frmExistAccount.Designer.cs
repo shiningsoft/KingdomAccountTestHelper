@@ -203,6 +203,7 @@ namespace 金证统一账户测试账户生成器
             this.TRDACCT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp诚信记录 = new System.Windows.Forms.TabPage();
+            this.nudCreditRecordScore = new System.Windows.Forms.NumericUpDown();
             this.label38 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.cbxCreditRecordSource = new System.Windows.Forms.ComboBox();
@@ -215,6 +216,9 @@ namespace 金证统一账户测试账户生成器
             this.RECORD_SCORE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RECORD_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tp非居民涉税信息 = new System.Windows.Forms.TabPage();
+            this.label40 = new System.Windows.Forms.Label();
+            this.cbxTaxResidentType = new System.Windows.Forms.ComboBox();
+            this.btnMdfCustNraTaxInfo = new System.Windows.Forms.Button();
             this.dgvCustNraTaxInfo = new System.Windows.Forms.DataGridView();
             this.非金融涉税信息CUST_CODE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.非金融涉税信息CUST_NAME = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -279,7 +283,6 @@ namespace 金证统一账户测试账户生成器
             this.登记账号OPEN_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.登记账号CLOSE_DATE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.登记账号INST_CLS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nudCreditRecordScore = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -296,12 +299,12 @@ namespace 金证统一账户测试账户生成器
             this.tp已签署协议.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).BeginInit();
             this.tp诚信记录.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCreditRecordScore)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).BeginInit();
             this.tp非居民涉税信息.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustNraTaxInfo)).BeginInit();
             this.tp登记账号.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv登记账号)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCreditRecordScore)).BeginInit();
             this.SuspendLayout();
             // 
             // cbxCubsbScOpenAcctOpType
@@ -1925,6 +1928,24 @@ namespace 金证统一账户测试账户生成器
             this.tp诚信记录.Text = "诚信记录";
             this.tp诚信记录.UseVisualStyleBackColor = true;
             // 
+            // nudCreditRecordScore
+            // 
+            this.nudCreditRecordScore.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.nudCreditRecordScore.Location = new System.Drawing.Point(294, 210);
+            this.nudCreditRecordScore.Minimum = new decimal(new int[] {
+            100,
+            0,
+            0,
+            -2147483648});
+            this.nudCreditRecordScore.Name = "nudCreditRecordScore";
+            this.nudCreditRecordScore.Size = new System.Drawing.Size(43, 21);
+            this.nudCreditRecordScore.TabIndex = 10;
+            this.nudCreditRecordScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // label38
             // 
             this.label38.AutoSize = true;
@@ -2040,6 +2061,9 @@ namespace 金证统一账户测试账户生成器
             // 
             // tp非居民涉税信息
             // 
+            this.tp非居民涉税信息.Controls.Add(this.label40);
+            this.tp非居民涉税信息.Controls.Add(this.cbxTaxResidentType);
+            this.tp非居民涉税信息.Controls.Add(this.btnMdfCustNraTaxInfo);
             this.tp非居民涉税信息.Controls.Add(this.dgvCustNraTaxInfo);
             this.tp非居民涉税信息.Location = new System.Drawing.Point(4, 22);
             this.tp非居民涉税信息.Name = "tp非居民涉税信息";
@@ -2048,6 +2072,34 @@ namespace 金证统一账户测试账户生成器
             this.tp非居民涉税信息.TabIndex = 6;
             this.tp非居民涉税信息.Text = "非居民涉税信息";
             this.tp非居民涉税信息.UseVisualStyleBackColor = true;
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(12, 213);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(89, 12);
+            this.label40.TabIndex = 13;
+            this.label40.Text = "税收居民身份：";
+            // 
+            // cbxTaxResidentType
+            // 
+            this.cbxTaxResidentType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTaxResidentType.FormattingEnabled = true;
+            this.cbxTaxResidentType.Location = new System.Drawing.Point(107, 210);
+            this.cbxTaxResidentType.Name = "cbxTaxResidentType";
+            this.cbxTaxResidentType.Size = new System.Drawing.Size(186, 20);
+            this.cbxTaxResidentType.TabIndex = 12;
+            // 
+            // btnMdfCustNraTaxInfo
+            // 
+            this.btnMdfCustNraTaxInfo.Location = new System.Drawing.Point(299, 208);
+            this.btnMdfCustNraTaxInfo.Name = "btnMdfCustNraTaxInfo";
+            this.btnMdfCustNraTaxInfo.Size = new System.Drawing.Size(110, 23);
+            this.btnMdfCustNraTaxInfo.TabIndex = 11;
+            this.btnMdfCustNraTaxInfo.Text = "修改涉税信息";
+            this.btnMdfCustNraTaxInfo.UseVisualStyleBackColor = true;
+            this.btnMdfCustNraTaxInfo.Click += new System.EventHandler(this.btnMdfCustNraTaxInfo_Click);
             // 
             // dgvCustNraTaxInfo
             // 
@@ -2125,7 +2177,7 @@ namespace 金证统一账户测试账户生成器
             this.dgvCustNraTaxInfo.ReadOnly = true;
             this.dgvCustNraTaxInfo.RowHeadersVisible = false;
             this.dgvCustNraTaxInfo.RowTemplate.Height = 23;
-            this.dgvCustNraTaxInfo.Size = new System.Drawing.Size(923, 227);
+            this.dgvCustNraTaxInfo.Size = new System.Drawing.Size(923, 198);
             this.dgvCustNraTaxInfo.TabIndex = 1;
             // 
             // 非金融涉税信息CUST_CODE
@@ -2665,24 +2717,6 @@ namespace 金证统一账户测试账户生成器
             this.登记账号INST_CLS.ReadOnly = true;
             this.登记账号INST_CLS.Width = 78;
             // 
-            // nudCreditRecordScore
-            // 
-            this.nudCreditRecordScore.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.nudCreditRecordScore.Location = new System.Drawing.Point(294, 210);
-            this.nudCreditRecordScore.Minimum = new decimal(new int[] {
-            100,
-            0,
-            0,
-            -2147483648});
-            this.nudCreditRecordScore.Name = "nudCreditRecordScore";
-            this.nudCreditRecordScore.Size = new System.Drawing.Size(43, 21);
-            this.nudCreditRecordScore.TabIndex = 10;
-            this.nudCreditRecordScore.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
             // frmExistAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -2726,12 +2760,13 @@ namespace 金证统一账户测试账户生成器
             ((System.ComponentModel.ISupportInitialize)(this.dgv已签署协议)).EndInit();
             this.tp诚信记录.ResumeLayout(false);
             this.tp诚信记录.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudCreditRecordScore)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv诚信记录)).EndInit();
             this.tp非居民涉税信息.ResumeLayout(false);
+            this.tp非居民涉税信息.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustNraTaxInfo)).EndInit();
             this.tp登记账号.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv登记账号)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nudCreditRecordScore)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2970,6 +3005,9 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.ComboBox cbxCreditRecordSource;
         private System.Windows.Forms.NumericUpDown nudCreditRecordScore;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.ComboBox cbxTaxResidentType;
+        private System.Windows.Forms.Button btnMdfCustNraTaxInfo;
     }
 }
 

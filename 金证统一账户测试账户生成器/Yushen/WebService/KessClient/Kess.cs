@@ -2615,5 +2615,224 @@ namespace Yushen.WebService.KessClient
             // 返回结果
             return true;
         }
+
+        /// <summary>
+        /// 非居民金融账户涉税信息维护
+        /// 实现2.271	非居民金融账户涉税信息维护
+        /// </summary>
+        /// <param name="CUST_CODE">客户代码（必传）</param>
+        /// <param name="TAX_RESIDENT_TYPE">税收居民身份（非必传）</param>
+        /// <param name="CTRL_FLAG">是否控制人（0非控制人,默认为0,1控制人）（非必传）</param>
+        /// <param name="CUST_NAME">客户名称（非必传）</param>
+        /// <param name="SURNAME_ENG">姓(英文或拼音)（非必传）</param>
+        /// <param name="NAME_ENG">名(英文或拼音)（非必传）</param>
+        /// <param name="CITIZENSHIP">国籍（非必传）国籍、地址等信息用"||"拼接，如广东省深圳市南山区：广东省||深圳市||南山区</param>
+        /// <param name="ADDRESS">地址（非必传）</param>
+        /// <param name="ADDRESS_ENG">地址(英文或拼音)（非必传）</param>
+        /// <param name="TAXPAYER_IDNO">纳税人识别号（必传）</param>
+        /// <param name="NO_TAXPAYERID_REASON">无纳税人识别号原因（非必传）</param>
+        /// <param name="BIRTHDAY">出生日期（非必传）</param>
+        /// <param name="BIRTH_ADDRESS">出生地址（非必传）</param>
+        /// <param name="BIRTH_ADDRESS_ENG">出生地址(英文或拼音)（非必传）</param>
+        /// <param name="PASSIVE_NFE">是否消极非金融机构（必传）</param>
+        /// <param name="CTRL_NON_RESIDENT">控制人是否非居民（必传）</param>
+        /// <param name="OPERATOR_TYPE">操作类型（必传）</param>
+        /// <param name="CTRL_NO">控制人编号（非必传）</param>
+        /// <param name="GET_INVEST_CERFLAG">取得投资人声明标识（非必传）</param>
+        /// <param name="ADDRESS_TYPE">地址类型（非必传）</param>
+        /// <param name="CTRL_TYPE">控制人类型（非必传）</param>
+        /// <param name="CTRL_SHARE_RATIO">控制人持股比例（非必传）</param>
+        /// <param name="REMARK">备注（非必传）</param>
+        /// <param name="REMARK2">备注2（非必传）</param>
+        /// <param name="REG_COUNTRY">注册国家代码（非必传）</param>
+        /// <param name="LIVING_COUNTRY">现居国家代码（非必传）</param>
+        /// <param name="BIRTH_COUNTRY">出生国家代码（非必传）</param>
+        /// <param name="BIRTH_CITY_ENG">出生地市(英文或拼音)（非必传）</param>
+        /// <param name="BIRTH_NATION_ENG">出生地国家(英文或拼音)（非必传）</param>
+        /// <param name="BIRTH_PROVINCE_ENG">出生地省(英文或拼音)（非必传）</param>
+        /// <param name="CITIZENSHIP2">税收居民国籍2（非必传）</param>
+        /// <param name="CITIZENSHIP3">税收居民国籍3（非必传）</param>
+        /// <param name="CITY_ENG">居住地市(英文或拼音)（非必传）</param>（非必传）
+        /// <param name="NATION_ENG">居住地国家(英文或拼音)（非必传）</param>
+        /// <param name="NO_TAXPAYERID_REASON2">纳税人识别号原因2（非必传）</param>
+        /// <param name="NO_TAXPAYERID_REASON3">无纳税人识别号原因3（非必传）</param>
+        /// <param name="PROVINCE_ENG">居住地省(英文或拼音)（非必传）</param>
+        /// <param name="TAXPAYER_IDNO2">纳税人识别号2（非必传）</param>
+        /// <param name="TAXPAYER_IDNO3">纳税人识别号3（非必传）</param>
+        /// <param name="MONAMNT">金额(账户余额)（非必传）</param>
+        /// <param name="CURR_CODE">货币代码（非必传）</param>
+        /// <param name="PAYMENT_TYPE1">收入类型1（非必传）</param>
+        /// <param name="PAYMENT_TYPE2">收入类型2（非必传）</param>
+        /// <param name="PAYMENT_TYPE3">收入类型3（非必传）</param>
+        /// <param name="PAYMENT_TYPE4">收入类型4（非必传）</param>
+        /// <param name="PAYMENT_AMNT1">收入金额和货币类型1（非必传）</param>
+        /// <param name="PAYMENT_AMNT2">收入金额和货币类型2（非必传）</param>
+        /// <param name="PAYMENT_AMNT3">收入金额和货币类型3（非必传）</param>
+        /// <param name="PAYMENT_AMNT4">收入金额和货币类型4（非必传）</param>
+        /// <param name="PROVINCE">省级行政区划代码（非必传）</param>
+        /// <param name="CITYCN">地市级行政区划代码（非必传）</param>
+        /// <param name="DISTRICT_NAME">县级行政区划代码（非必传）</param>
+        /// <param name="CITYEN">所在城市（英文）（非必传）</param>
+        /// <returns></returns>
+        async public Task<bool> mdfCustNraTaxInfo(
+                string OPERATOR_TYPE, //操作类型（必传）
+                string CUST_CODE, //客户代码（必传）
+                string TAXPAYER_IDNO, //纳税人识别号（必传）
+                string PASSIVE_NFE, //是否消极非金融机构（必传）
+                string CTRL_NON_RESIDENT, //控制人是否非居民（必传）
+                string TAX_RESIDENT_TYPE = "", //税收居民身份（非必传）
+                string CTRL_FLAG = "", //是否控制人（0非控制人,默认为0,1控制人）（非必传）
+                string CUST_NAME = "", //客户名称（非必传）
+                string SURNAME_ENG = "", //姓(英文或拼音)（非必传）
+                string NAME_ENG = "", //名(英文或拼音)（非必传）
+                string CITIZENSHIP = "", //国籍（非必传）国籍、地址等信息用"||"拼接，如广东省深圳市南山区：广东省||深圳市||南山区
+                string ADDRESS = "", //地址（非必传）
+                string ADDRESS_ENG = "", //地址(英文或拼音)（非必传）
+                string NO_TAXPAYERID_REASON = "", //无纳税人识别号原因（非必传）
+                string BIRTHDAY = "", //出生日期（非必传）
+                string BIRTH_ADDRESS = "", //出生地址（非必传）
+                string BIRTH_ADDRESS_ENG = "", //出生地址(英文或拼音)（非必传）
+                string CTRL_NO = "", //控制人编号（非必传）
+                string GET_INVEST_CERFLAG = "", //取得投资人声明标识（非必传）
+                string ADDRESS_TYPE = "", //地址类型（非必传）
+                string CTRL_TYPE = "", //控制人类型（非必传）
+                string CTRL_SHARE_RATIO = "", //控制人持股比例（非必传）
+                string REMARK = "", //备注（非必传）
+                string REMARK2 = "", //备注2（非必传）
+                string REG_COUNTRY = "", //注册国家代码（非必传）
+                string LIVING_COUNTRY = "", //现居国家代码（非必传）
+                string BIRTH_COUNTRY = "", //出生国家代码（非必传）
+                string BIRTH_CITY_ENG = "", //出生地市(英文或拼音)（非必传）
+                string BIRTH_NATION_ENG = "", //出生地国家(英文或拼音)（非必传）
+                string BIRTH_PROVINCE_ENG = "", //出生地省(英文或拼音)（非必传）
+                string CITIZENSHIP2 = "", //税收居民国籍2（非必传）
+                string CITIZENSHIP3 = "", //税收居民国籍3（非必传）
+                string CITY_ENG = "", //居住地市(英文或拼音)（非必传）（非必传）
+                string NATION_ENG = "", //居住地国家(英文或拼音)（非必传）
+                string NO_TAXPAYERID_REASON2 = "", //纳税人识别号原因2（非必传）
+                string NO_TAXPAYERID_REASON3 = "", //无纳税人识别号原因3（非必传）
+                string PROVINCE_ENG = "", //居住地省(英文或拼音)（非必传）
+                string TAXPAYER_IDNO2 = "", //纳税人识别号2（非必传）
+                string TAXPAYER_IDNO3 = "", //纳税人识别号3（非必传）
+                string MONAMNT = "", //金额(账户余额)（非必传）
+                string CURR_CODE = "", //货币代码（非必传）
+                string PAYMENT_TYPE1 = "", //收入类型1（非必传）
+                string PAYMENT_TYPE2 = "", //收入类型2（非必传）
+                string PAYMENT_TYPE3 = "", //收入类型3（非必传）
+                string PAYMENT_TYPE4 = "", //收入类型4（非必传）
+                string PAYMENT_AMNT1 = "", //收入金额和货币类型1（非必传）
+                string PAYMENT_AMNT2 = "", //收入金额和货币类型2（非必传）
+                string PAYMENT_AMNT3 = "", //收入金额和货币类型3（非必传）
+                string PAYMENT_AMNT4 = "", //收入金额和货币类型4（非必传）
+                string PROVINCE = "", //省级行政区划代码（非必传）
+                string CITYCN = "", //地市级行政区划代码（非必传）
+                string DISTRICT_NAME = "", //县级行政区划代码（非必传）
+                string CITYEN = "" //所在城市（英文）（非必传）
+            )
+        {
+            // 前置条件判断
+            if (TAXPAYER_IDNO == "")
+            {
+                string message = "纳税人识别号不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (CUST_CODE == "")
+            {
+                string message = "客户代码不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (OPERATOR_TYPE == "")
+            {
+                string message = "操作类型不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (PASSIVE_NFE == "")
+            {
+                string message = "是否消极非金融机构不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+            if (CTRL_NON_RESIDENT == "")
+            {
+                string message = "控制人是否非居民不能为空";
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 初始化请求
+            Request request = new Request(this.operatorId, "mdfCustNraTaxInfo");
+            //Request request = new Request(this.operatorId, System.Reflection.MethodBase.GetCurrentMethod().Name);
+            Console.WriteLine(System.Reflection.MethodBase.GetCurrentMethod().Name);
+            request.setAttr("CUST_CODE", CUST_CODE); //客户代码（必传）
+            request.setAttr("TAX_RESIDENT_TYPE", TAX_RESIDENT_TYPE); //税收居民身份（非必传）
+            request.setAttr("CTRL_FLAG", CTRL_FLAG); //是否控制人（0非控制人,默认为0,1控制人）（非必传）
+            request.setAttr("CUST_NAME", CUST_NAME); //客户名称（非必传）
+            request.setAttr("SURNAME_ENG", SURNAME_ENG); //姓(英文或拼音)（非必传）
+            request.setAttr("NAME_ENG", NAME_ENG); //名(英文或拼音)（非必传）
+            request.setAttr("CITIZENSHIP", CITIZENSHIP); //国籍（非必传）国籍、地址等信息用"||"拼接，如广东省深圳市南山区：广东省||深圳市||南山区
+            request.setAttr("ADDRESS", ADDRESS); //地址（非必传）
+            request.setAttr("ADDRESS_ENG", ADDRESS_ENG); //地址(英文或拼音)（非必传）
+            request.setAttr("TAXPAYER_IDNO", TAXPAYER_IDNO); //纳税人识别号（必传）
+            request.setAttr("NO_TAXPAYERID_REASON", NO_TAXPAYERID_REASON); //无纳税人识别号原因（非必传）
+            request.setAttr("BIRTHDAY", BIRTHDAY); //出生日期（非必传）
+            request.setAttr("BIRTH_ADDRESS", BIRTH_ADDRESS); //出生地址（非必传）
+            request.setAttr("BIRTH_ADDRESS_ENG", BIRTH_ADDRESS_ENG); //出生地址(英文或拼音)（非必传）
+            request.setAttr("PASSIVE_NFE", PASSIVE_NFE); //是否消极非金融机构（必传）
+            request.setAttr("CTRL_NON_RESIDENT", CTRL_NON_RESIDENT); //控制人是否非居民（必传）
+            request.setAttr("OPERATOR_TYPE", OPERATOR_TYPE); //操作类型（必传）
+            request.setAttr("CTRL_NO", CTRL_NO); //控制人编号（非必传）
+            request.setAttr("GET_INVEST_CERFLAG", GET_INVEST_CERFLAG); //取得投资人声明标识（非必传）
+            request.setAttr("ADDRESS_TYPE", ADDRESS_TYPE); //地址类型（非必传）
+            request.setAttr("CTRL_TYPE", CTRL_TYPE); //控制人类型（非必传）
+            request.setAttr("CTRL_SHARE_RATIO", CTRL_SHARE_RATIO); //控制人持股比例（非必传）
+            request.setAttr("REMARK", REMARK); //备注（非必传）
+            request.setAttr("REMARK2", REMARK2); //备注2（非必传）
+            request.setAttr("REG_COUNTRY", REG_COUNTRY); //注册国家代码（非必传）
+            request.setAttr("LIVING_COUNTRY", LIVING_COUNTRY); //现居国家代码（非必传）
+            request.setAttr("BIRTH_COUNTRY", BIRTH_COUNTRY); //出生国家代码（非必传）
+            request.setAttr("BIRTH_CITY_ENG", BIRTH_CITY_ENG); //出生地市(英文或拼音)（非必传）
+            request.setAttr("BIRTH_NATION_ENG", BIRTH_NATION_ENG); //出生地国家(英文或拼音)（非必传）
+            request.setAttr("BIRTH_PROVINCE_ENG", BIRTH_PROVINCE_ENG); //出生地省(英文或拼音)（非必传）
+            request.setAttr("CITIZENSHIP2", CITIZENSHIP2); //税收居民国籍2（非必传）
+            request.setAttr("CITIZENSHIP3", CITIZENSHIP3); //税收居民国籍3（非必传）
+            request.setAttr("CITY_ENG", CITY_ENG); //居住地市(英文或拼音)（非必传）（非必传）
+            request.setAttr("NATION_ENG", NATION_ENG); //居住地国家(英文或拼音)（非必传）
+            request.setAttr("NO_TAXPAYERID_REASON2", NO_TAXPAYERID_REASON2); //纳税人识别号原因2（非必传）
+            request.setAttr("NO_TAXPAYERID_REASON3", NO_TAXPAYERID_REASON3); //无纳税人识别号原因3（非必传）
+            request.setAttr("PROVINCE_ENG", PROVINCE_ENG); //居住地省(英文或拼音)（非必传）
+            request.setAttr("TAXPAYER_IDNO2", TAXPAYER_IDNO2); //纳税人识别号2（非必传）
+            request.setAttr("TAXPAYER_IDNO3", TAXPAYER_IDNO3); //纳税人识别号3（非必传）
+            request.setAttr("MONAMNT", MONAMNT); //金额(账户余额)（非必传）
+            request.setAttr("CURR_CODE", CURR_CODE); //货币代码（非必传）
+            request.setAttr("PAYMENT_TYPE1", PAYMENT_TYPE1); //收入类型1（非必传）
+            request.setAttr("PAYMENT_TYPE2", PAYMENT_TYPE2); //收入类型2（非必传）
+            request.setAttr("PAYMENT_TYPE3", PAYMENT_TYPE3); //收入类型3（非必传）
+            request.setAttr("PAYMENT_TYPE4", PAYMENT_TYPE4); //收入类型4（非必传）
+            request.setAttr("PAYMENT_AMNT1", PAYMENT_AMNT1); //收入金额和货币类型1（非必传）
+            request.setAttr("PAYMENT_AMNT2", PAYMENT_AMNT2); //收入金额和货币类型2（非必传）
+            request.setAttr("PAYMENT_AMNT3", PAYMENT_AMNT3); //收入金额和货币类型3（非必传）
+            request.setAttr("PAYMENT_AMNT4", PAYMENT_AMNT4); //收入金额和货币类型4（非必传）
+            request.setAttr("PROVINCE", PROVINCE); //省级行政区划代码（非必传）
+            request.setAttr("CITYCN", CITYCN); //地市级行政区划代码（非必传）
+            request.setAttr("DISTRICT_NAME", DISTRICT_NAME); //县级行政区划代码（非必传）
+            request.setAttr("CITYEN", CITYEN); //所在城市（英文）（非必传）
+
+            // 调用WebService获取返回值
+            Response response = await this.invoke(request);
+
+            // 判断返回的操作结果是否异常
+            if (response.flag != "1")
+            {
+                string message = "操作失败：" + response.prompt;
+                logger.Error(message);
+                throw new Exception(message);
+            }
+
+            // 返回结果
+            return true;
+        }
     }
 }

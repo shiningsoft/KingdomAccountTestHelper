@@ -109,6 +109,11 @@ namespace 金证统一账户测试账户生成器
                 cbxCreditRecordSource.ValueMember = "value";
                 cbxCreditRecordSource.DataSource = recordSourceList.DataTable;
 
+                Dict.TAX_RESIDENT_TYPE taxResidentTypeList = new Dict.TAX_RESIDENT_TYPE();
+                cbxTaxResidentType.DisplayMember = "name";
+                cbxTaxResidentType.ValueMember = "value";
+                cbxTaxResidentType.DataSource = taxResidentTypeList.DataTable;
+
                 dtpBGN_DATE.Value = DateTime.Now.AddYears(-1).Date;
                 dtpEND_DATE.Value = DateTime.Now.Date;
 
@@ -1620,11 +1625,6 @@ namespace 金证统一账户测试账户生成器
             btnNoNegativeCreditRecord.Enabled = true;
         }
 
-        private void tbxCuacctCondition_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void cbxCreditRecordSource_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cbxCreditRecordSource.SelectedValue.ToString() == Dict.RECORD_SOURCE.无不良诚信记录)
@@ -1635,6 +1635,24 @@ namespace 金证统一账户测试账户生成器
             {
                 nudCreditRecordScore.Enabled = true;
             }
+        }
+
+        private async void btnMdfCustNraTaxInfo_Click(object sender, EventArgs e)
+        {
+            btnMdfCustNraTaxInfo.Enabled = false;
+
+            try
+            {
+                await kess.mdfCustNraTaxInfo(Dict.OPERATION_TYPE.增加密码, tbxCustCode.Text.Trim(), "测试账号生成器", Dict.PASSIVE_NFE.居民消极非金融机构, "0", cbxTaxResidentType.SelectedValue.ToString());
+                resultForm.Append("修改非居民涉税信息成功！");
+                qryCustNraTaxInfo();
+            }
+            catch (Exception ex)
+            {
+                resultForm.Append("修改非居民涉税信息失败：" + ex.Message);
+            }
+
+            btnMdfCustNraTaxInfo.Enabled = true;
         }
     }
 }
