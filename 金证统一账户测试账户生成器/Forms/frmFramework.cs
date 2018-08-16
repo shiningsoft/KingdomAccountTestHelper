@@ -86,6 +86,9 @@ namespace 金证统一账户测试账户生成器
         /// <param name="e"></param>
         private void Main_Load(object sender, EventArgs e)
         {
+#if DEBUG
+            购买授权ToolStripMenuItem.Visible = false;
+#endif
             // 保存默认窗体标题
             defaultTitle = Text;
 
@@ -500,6 +503,11 @@ namespace 金证统一账户测试账户生成器
             {
                 resultForm.WindowState = FormWindowState.Normal;
             }
+        }
+
+        private void 购买授权ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://www.shiningsoft.com.cn/price.html");
         }
     }
 }

@@ -54,7 +54,9 @@ namespace 金证统一账户测试账户生成器
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.查看当前日志ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.打开日志目录ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.购买授权ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
@@ -73,7 +75,7 @@ namespace 金证统一账户测试账户生成器
             this.menuStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiFunction,
             this.toolStripMenuItem1,
-            this.关于ToolStripMenuItem});
+            this.帮助ToolStripMenuItem});
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.Size = new System.Drawing.Size(1010, 25);
@@ -180,12 +182,28 @@ namespace 金证统一账户测试账户生成器
             this.打开日志目录ToolStripMenuItem.Text = "打开日志目录";
             this.打开日志目录ToolStripMenuItem.Click += new System.EventHandler(this.打开日志目录ToolStripMenuItem_Click);
             // 
-            // 关于ToolStripMenuItem
+            // 帮助ToolStripMenuItem
             // 
-            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.关于ToolStripMenuItem.Text = "关于";
-            this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
+            this.帮助ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.购买授权ToolStripMenuItem,
+            this.关于ToolStripMenuItem1});
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.帮助ToolStripMenuItem.Text = "帮助";
+            // 
+            // 购买授权ToolStripMenuItem
+            // 
+            this.购买授权ToolStripMenuItem.Name = "购买授权ToolStripMenuItem";
+            this.购买授权ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.购买授权ToolStripMenuItem.Text = "购买授权";
+            this.购买授权ToolStripMenuItem.Click += new System.EventHandler(this.购买授权ToolStripMenuItem_Click);
+            // 
+            // 关于ToolStripMenuItem1
+            // 
+            this.关于ToolStripMenuItem1.Name = "关于ToolStripMenuItem1";
+            this.关于ToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.关于ToolStripMenuItem1.Text = "关于";
+            this.关于ToolStripMenuItem1.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -281,7 +299,7 @@ namespace 金证统一账户测试账户生成器
 
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip;
-        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tsmiFunction;
         private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
@@ -303,6 +321,8 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripMenuItem 系统设置ToolStripMenuItem;
         private System.Windows.Forms.ToolStripStatusLabel tsslExpired;
         private System.Windows.Forms.ToolStripMenuItem 自动重新登录toolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 购买授权ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
     }
 }
 
