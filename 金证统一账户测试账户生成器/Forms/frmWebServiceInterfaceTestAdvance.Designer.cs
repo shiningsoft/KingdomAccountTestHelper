@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefreshMethonList = new System.Windows.Forms.Button();
             this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
@@ -89,6 +89,7 @@
             this.cbxMethonList.Size = new System.Drawing.Size(265, 20);
             this.cbxMethonList.TabIndex = 26;
             this.cbxMethonList.SelectedIndexChanged += new System.EventHandler(this.cbxMethonList_SelectedIndexChanged);
+            this.cbxMethonList.TextUpdate += new System.EventHandler(this.cbxMethonList_TextUpdate);
             // 
             // tbxResponse
             // 
@@ -201,8 +202,8 @@
             // 
             this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnName.DataPropertyName = "字段名";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnName.FillWeight = 152.2843F;
             this.ColumnName.HeaderText = "字段名";
             this.ColumnName.Name = "ColumnName";
@@ -215,8 +216,8 @@
             // 
             this.ColumnValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnValue.DataPropertyName = "字段值";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle6;
             this.ColumnValue.FillWeight = 140.1015F;
             this.ColumnValue.HeaderText = "字段值";
             this.ColumnValue.Name = "ColumnValue";
@@ -384,7 +385,7 @@
             this.tpResponseText.Location = new System.Drawing.Point(4, 4);
             this.tpResponseText.Name = "tpResponseText";
             this.tpResponseText.Padding = new System.Windows.Forms.Padding(3);
-            this.tpResponseText.Size = new System.Drawing.Size(509, 528);
+            this.tpResponseText.Size = new System.Drawing.Size(500, 528);
             this.tpResponseText.TabIndex = 1;
             this.tpResponseText.Text = "文字版";
             this.tpResponseText.UseVisualStyleBackColor = true;

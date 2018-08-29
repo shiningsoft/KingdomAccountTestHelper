@@ -134,11 +134,16 @@ namespace 金证统一账户测试账户生成器
 
         private void cbxMethonList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            refreshMethon();
+        }
+
+        private void refreshMethon()
+        {
             try
             {
                 Request request = new Request(Settings.Default.操作员代码, cbxMethonList.Text, false);
                 lbInterfaceTitle.Text = "接口名称：" + request.title;
-                
+
                 XmlNodeList dataList = request.data.ChildNodes;
                 XmlNode node;
 
@@ -146,7 +151,7 @@ namespace 金证统一账户测试账户生成器
                 dt.Columns.Add(new DataColumn("字段名"));
                 dt.Columns.Add(new DataColumn("字段值"));
                 dt.Columns.Add(new DataColumn("备注"));
-                
+
                 for (int i = 0; i < dataList.Count; i++)
                 {
                     node = dataList[i];
@@ -156,20 +161,20 @@ namespace 金证统一账户测试账户生成器
                         dr["字段名"] = node.Name;
                         dr["字段值"] = node.InnerText;
 
-                        if (i > 0 && dataList[i-1].NodeType == XmlNodeType.Comment)
+                        if (i > 0 && dataList[i - 1].NodeType == XmlNodeType.Comment)
                         {
                             dr["备注"] = dataList[i - 1].InnerText.Replace("//", "");
                         }
                         dt.Rows.Add(dr);
                     }
                 }
-                
+
                 dgvParams.DataSource = dt;
-                
+
             }
             catch (NotImplementedException)
             {
-                resultForm.Append("不支持的WebService方法：" + cbxMethonList.Text);
+                // resultForm.Append("不支持的WebService方法：" + cbxMethonList.Text);
             }
             catch (Exception ex)
             {
@@ -261,6 +266,11 @@ namespace 金证统一账户测试账户生成器
                 }
                 dgvResponse.ClearSelection();
             }
+        }
+
+        private void cbxMethonList_TextUpdate(object sender, EventArgs e)
+        {
+            refreshMethon();
         }
     }
 }
