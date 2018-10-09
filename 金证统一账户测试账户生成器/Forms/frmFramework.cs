@@ -247,7 +247,7 @@ namespace 金证统一账户测试账户生成器
             }
             catch (TargetInvocationException ex)
             {
-                resultForm.Append("初始化失败：" + ex.Message + "，请检查设置是否正确或WebService接口状态是否正常？");
+                resultForm.Append("初始化失败：" + ex.Message + "请检查设置是否正确或WebService接口状态是否正常？");
                 系统设置ToolStripMenuItem.PerformClick();
             }
             catch (Exception ex)
@@ -421,7 +421,9 @@ namespace 金证统一账户测试账户生成器
             if (frmSettings == null || frmSettings.IsDisposed)
             {
                 frmSettings = new frmSettings(this);
+                frmSettings.TopMost=true;
                 frmSettings.Show();
+                frmSettings.Activate();
             }
             else
             {
