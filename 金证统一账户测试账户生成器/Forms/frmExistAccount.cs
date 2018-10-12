@@ -114,7 +114,7 @@ namespace 金证统一账户测试账户生成器
                 cbxTaxResidentType.ValueMember = "value";
                 cbxTaxResidentType.DataSource = taxResidentTypeList.DataTable;
 
-                dtpBGN_DATE.Value = DateTime.Now.AddYears(-1).Date;
+                dtpBGN_DATE.Value = DateTime.Now.AddMonths(-3).Date;
                 dtpEND_DATE.Value = DateTime.Now.Date;
 
                 if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)

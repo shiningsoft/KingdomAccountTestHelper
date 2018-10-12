@@ -12,10 +12,10 @@ namespace 金证统一账户测试账户生成器.KessService {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(Namespace="http://60.173.222.38:30004/kess/services/KessService", ConfigurationName="KessService.KessService")]
+    [System.ServiceModel.ServiceContractAttribute(Namespace="http://60.173.222.38:30092/kess/services/KessService", ConfigurationName="KessService.KessService")]
     public interface KessService {
         
-        // CODEGEN: 消息 createDirectoryRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 createDirectoryRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.createDirectoryResponse createDirectory(金证统一账户测试账户生成器.KessService.createDirectoryRequest request);
@@ -25,7 +25,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.createDirectoryResponse EndcreateDirectory(System.IAsyncResult result);
         
-        // CODEGEN: 消息 signAgreementRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 signAgreementRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.signAgreementResponse signAgreement(金证统一账户测试账户生成器.KessService.signAgreementRequest request);
@@ -35,7 +35,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.signAgreementResponse EndsignAgreement(System.IAsyncResult result);
         
-        // CODEGEN: 消息 encryptByAESRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 encryptByAESRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.encryptByAESResponse encryptByAES(金证统一账户测试账户生成器.KessService.encryptByAESRequest request);
@@ -45,7 +45,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.encryptByAESResponse EndencryptByAES(System.IAsyncResult result);
         
-        // CODEGEN: 消息 decryptByAESRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 decryptByAESRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.decryptByAESResponse decryptByAES(金证统一账户测试账户生成器.KessService.decryptByAESRequest request);
@@ -55,7 +55,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.decryptByAESResponse EnddecryptByAES(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openYMTAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openYMTAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openYMTAcctResponse openYMTAcct(金证统一账户测试账户生成器.KessService.openYMTAcctRequest request);
@@ -65,7 +65,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openYMTAcctResponse EndopenYMTAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getUserInfoByIdRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getUserInfoByIdRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getUserInfoByIdResponse getUserInfoById(金证统一账户测试账户生成器.KessService.getUserInfoByIdRequest request);
@@ -75,7 +75,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getUserInfoByIdResponse EndgetUserInfoById(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operatorLoginRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operatorLoginRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operatorLoginResponse operatorLogin(金证统一账户测试账户生成器.KessService.operatorLoginRequest request);
@@ -85,7 +85,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operatorLoginResponse EndoperatorLogin(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operatorLogoutRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operatorLogoutRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operatorLogoutResponse operatorLogout(金证统一账户测试账户生成器.KessService.operatorLogoutRequest request);
@@ -95,7 +95,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operatorLogoutResponse EndoperatorLogout(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryOperatorMenuListRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryOperatorMenuListRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryOperatorMenuListResponse queryOperatorMenuList(金证统一账户测试账户生成器.KessService.queryOperatorMenuListRequest request);
@@ -105,7 +105,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryOperatorMenuListResponse EndqueryOperatorMenuList(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryOperatorOrgListRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryOperatorOrgListRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryOperatorOrgListResponse queryOperatorOrgList(金证统一账户测试账户生成器.KessService.queryOperatorOrgListRequest request);
@@ -115,7 +115,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryOperatorOrgListResponse EndqueryOperatorOrgList(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryScheduleRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryScheduleRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryScheduleResponse querySchedule(金证统一账户测试账户生成器.KessService.queryScheduleRequest request);
@@ -125,7 +125,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryScheduleResponse EndquerySchedule(System.IAsyncResult result);
         
-        // CODEGEN: 消息 registSummaryInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 registSummaryInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.registSummaryInfoResponse registSummaryInfo(金证统一账户测试账户生成器.KessService.registSummaryInfoRequest request);
@@ -135,7 +135,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.registSummaryInfoResponse EndregistSummaryInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryOrderInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryOrderInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryOrderInfoResponse queryOrderInfo(金证统一账户测试账户生成器.KessService.queryOrderInfoRequest request);
@@ -145,7 +145,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryOrderInfoResponse EndqueryOrderInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 refuseWitnessRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 refuseWitnessRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.refuseWitnessResponse refuseWitness(金证统一账户测试账户生成器.KessService.refuseWitnessRequest request);
@@ -155,7 +155,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.refuseWitnessResponse EndrefuseWitness(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustBasicInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustBasicInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustBasicInfoResponse queryCustBasicInfo(金证统一账户测试账户生成器.KessService.queryCustBasicInfoRequest request);
@@ -165,7 +165,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustBasicInfoResponse EndqueryCustBasicInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustExpandInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustExpandInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustExpandInfoResponse queryCustExpandInfo(金证统一账户测试账户生成器.KessService.queryCustExpandInfoRequest request);
@@ -175,7 +175,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustExpandInfoResponse EndqueryCustExpandInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryOpenAccountProgressRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryOpenAccountProgressRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryOpenAccountProgressResponse queryOpenAccountProgress(金证统一账户测试账户生成器.KessService.queryOpenAccountProgressRequest request);
@@ -185,7 +185,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryOpenAccountProgressResponse EndqueryOpenAccountProgress(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustBasicInfoListRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustBasicInfoListRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustBasicInfoListResponse queryCustBasicInfoList(金证统一账户测试账户生成器.KessService.queryCustBasicInfoListRequest request);
@@ -195,7 +195,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustBasicInfoListResponse EndqueryCustBasicInfoList(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryAccountInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryAccountInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryAccountInfoResponse queryAccountInfo(金证统一账户测试账户生成器.KessService.queryAccountInfoRequest request);
@@ -205,7 +205,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryAccountInfoResponse EndqueryAccountInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 validateIdCodeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 validateIdCodeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.validateIdCodeResponse validateIdCode(金证统一账户测试账户生成器.KessService.validateIdCodeRequest request);
@@ -215,7 +215,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.validateIdCodeResponse EndvalidateIdCode(System.IAsyncResult result);
         
-        // CODEGEN: 消息 updateBasicInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 updateBasicInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.updateBasicInfoResponse updateBasicInfo(金证统一账户测试账户生成器.KessService.updateBasicInfoRequest request);
@@ -225,7 +225,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.updateBasicInfoResponse EndupdateBasicInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 updateExpandInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 updateExpandInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.updateExpandInfoResponse updateExpandInfo(金证统一账户测试账户生成器.KessService.updateExpandInfoRequest request);
@@ -235,7 +235,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.updateExpandInfoResponse EndupdateExpandInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 changeOpenAccountFlowRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 changeOpenAccountFlowRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.changeOpenAccountFlowResponse changeOpenAccountFlow(金证统一账户测试账户生成器.KessService.changeOpenAccountFlowRequest request);
@@ -245,7 +245,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.changeOpenAccountFlowResponse EndchangeOpenAccountFlow(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryRiskSurveyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryRiskSurveyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryRiskSurveyResponse queryRiskSurvey(金证统一账户测试账户生成器.KessService.queryRiskSurveyRequest request);
@@ -255,7 +255,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryRiskSurveyResponse EndqueryRiskSurvey(System.IAsyncResult result);
         
-        // CODEGEN: 消息 saveRiskSurveyAnswerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 saveRiskSurveyAnswerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.saveRiskSurveyAnswerResponse saveRiskSurveyAnswer(金证统一账户测试账户生成器.KessService.saveRiskSurveyAnswerRequest request);
@@ -265,7 +265,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.saveRiskSurveyAnswerResponse EndsaveRiskSurveyAnswer(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryRiskSurveyAnswerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryRiskSurveyAnswerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryRiskSurveyAnswerResponse queryRiskSurveyAnswer(金证统一账户测试账户生成器.KessService.queryRiskSurveyAnswerRequest request);
@@ -275,7 +275,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryRiskSurveyAnswerResponse EndqueryRiskSurveyAnswer(System.IAsyncResult result);
         
-        // CODEGEN: 消息 onSearchZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 onSearchZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.onSearchZDResponse onSearchZD(金证统一账户测试账户生成器.KessService.onSearchZDRequest request);
@@ -285,7 +285,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.onSearchZDResponse EndonSearchZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryOrgInfoListRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryOrgInfoListRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryOrgInfoListResponse queryOrgInfoList(金证统一账户测试账户生成器.KessService.queryOrgInfoListRequest request);
@@ -295,7 +295,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryOrgInfoListResponse EndqueryOrgInfoList(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryImgQcParaRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryImgQcParaRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryImgQcParaResponse queryImgQcPara(金证统一账户测试账户生成器.KessService.queryImgQcParaRequest request);
@@ -305,7 +305,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryImgQcParaResponse EndqueryImgQcPara(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryZDImgQcParaRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryZDImgQcParaRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryZDImgQcParaResponse queryZDImgQcPara(金证统一账户测试账户生成器.KessService.queryZDImgQcParaRequest request);
@@ -315,7 +315,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryZDImgQcParaResponse EndqueryZDImgQcPara(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getDictDataRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getDictDataRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getDictDataResponse getDictData(金证统一账户测试账户生成器.KessService.getDictDataRequest request);
@@ -325,7 +325,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getDictDataResponse EndgetDictData(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryMenuUserRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryMenuUserRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryMenuUserResponse queryMenuUser(金证统一账户测试账户生成器.KessService.queryMenuUserRequest request);
@@ -335,7 +335,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryMenuUserResponse EndqueryMenuUser(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operatorInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operatorInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operatorInfoResponse operatorInfo(金证统一账户测试账户生成器.KessService.operatorInfoRequest request);
@@ -345,7 +345,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operatorInfoResponse EndoperatorInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 querySurveyIndexRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 querySurveyIndexRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.querySurveyIndexResponse querySurveyIndex(金证统一账户测试账户生成器.KessService.querySurveyIndexRequest request);
@@ -355,7 +355,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.querySurveyIndexResponse EndquerySurveyIndex(System.IAsyncResult result);
         
-        // CODEGEN: 消息 uploadImgStringRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 uploadImgStringRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.uploadImgStringResponse uploadImgString(金证统一账户测试账户生成器.KessService.uploadImgStringRequest request);
@@ -365,7 +365,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.uploadImgStringResponse EnduploadImgString(System.IAsyncResult result);
         
-        // CODEGEN: 消息 downloadImgStringRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 downloadImgStringRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.downloadImgStringResponse downloadImgString(金证统一账户测试账户生成器.KessService.downloadImgStringRequest request);
@@ -375,7 +375,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.downloadImgStringResponse EnddownloadImgString(System.IAsyncResult result);
         
-        // CODEGEN: 消息 downloadImgStringByImgClsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 downloadImgStringByImgClsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsResponse downloadImgStringByImgCls(金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsRequest request);
@@ -385,7 +385,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.downloadImgStringByImgClsResponse EnddownloadImgStringByImgCls(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openCustomerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openCustomerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openCustomerResponse openCustomer(金证统一账户测试账户生成器.KessService.openCustomerRequest request);
@@ -395,7 +395,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openCustomerResponse EndopenCustomer(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openCuacctResponse openCuacct(金证统一账户测试账户生成器.KessService.openCuacctRequest request);
@@ -405,7 +405,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openCuacctResponse EndopenCuacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 webCheckApptCustInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 webCheckApptCustInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.webCheckApptCustInfoResponse webCheckApptCustInfo(金证统一账户测试账户生成器.KessService.webCheckApptCustInfoRequest request);
@@ -415,7 +415,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.webCheckApptCustInfoResponse EndwebCheckApptCustInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfOtherInfoCustRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfOtherInfoCustRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfOtherInfoCustResponse mdfOtherInfoCust(金证统一账户测试账户生成器.KessService.mdfOtherInfoCustRequest request);
@@ -425,7 +425,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfOtherInfoCustResponse EndmdfOtherInfoCust(System.IAsyncResult result);
         
-        // CODEGEN: 消息 backApptCustInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 backApptCustInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.backApptCustInfoResponse backApptCustInfo(金证统一账户测试账户生成器.KessService.backApptCustInfoRequest request);
@@ -435,7 +435,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.backApptCustInfoResponse EndbackApptCustInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserPasswordRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserPasswordRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserPasswordResponse mdfUserPassword(金证统一账户测试账户生成器.KessService.mdfUserPasswordRequest request);
@@ -445,7 +445,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserPasswordResponse EndmdfUserPassword(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openStkAccRunTimeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openStkAccRunTimeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openStkAccRunTimeResponse openStkAccRunTime(金证统一账户测试账户生成器.KessService.openStkAccRunTimeRequest request);
@@ -455,7 +455,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openStkAccRunTimeResponse EndopenStkAccRunTime(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openStkTrdAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openStkTrdAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openStkTrdAcctResponse openStkTrdAcct(金证统一账户测试账户生成器.KessService.openStkTrdAcctRequest request);
@@ -465,7 +465,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openStkTrdAcctResponse EndopenStkTrdAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 stkTrdacctBindRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 stkTrdacctBindRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.stkTrdacctBindResponse stkTrdacctBind(金证统一账户测试账户生成器.KessService.stkTrdacctBindRequest request);
@@ -475,7 +475,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.stkTrdacctBindResponse EndstkTrdacctBind(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openOfTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openOfTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openOfTrdacctResponse openOfTrdacct(金证统一账户测试账户生成器.KessService.openOfTrdacctRequest request);
@@ -485,7 +485,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openOfTrdacctResponse EndopenOfTrdacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 registerOfTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 registerOfTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.registerOfTrdacctResponse registerOfTrdacct(金证统一账户测试账户生成器.KessService.registerOfTrdacctRequest request);
@@ -495,7 +495,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.registerOfTrdacctResponse EndregisterOfTrdacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listOfStkTrdAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listOfStkTrdAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listOfStkTrdAcctResponse listOfStkTrdAcct(金证统一账户测试账户生成器.KessService.listOfStkTrdAcctRequest request);
@@ -505,7 +505,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listOfStkTrdAcctResponse EndlistOfStkTrdAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listOfTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listOfTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listOfTrdacctResponse listOfTrdacct(金证统一账户测试账户生成器.KessService.listOfTrdacctRequest request);
@@ -515,7 +515,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listOfTrdacctResponse EndlistOfTrdacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 moneyDeductRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 moneyDeductRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.moneyDeductResponse moneyDeduct(金证统一账户测试账户生成器.KessService.moneyDeductRequest request);
@@ -525,7 +525,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.moneyDeductResponse EndmoneyDeduct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 modifyCustInfoTableRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 modifyCustInfoTableRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.modifyCustInfoTableResponse modifyCustInfoTable(金证统一账户测试账户生成器.KessService.modifyCustInfoTableRequest request);
@@ -535,7 +535,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.modifyCustInfoTableResponse EndmodifyCustInfoTable(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listStkPbuOrgRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listStkPbuOrgRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listStkPbuOrgResponse listStkPbuOrg(金证统一账户测试账户生成器.KessService.listStkPbuOrgRequest request);
@@ -545,7 +545,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listStkPbuOrgResponse EndlistStkPbuOrg(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getCommonParamsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getCommonParamsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getCommonParamsResponse getCommonParams(金证统一账户测试账户生成器.KessService.getCommonParamsRequest request);
@@ -555,7 +555,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getCommonParamsResponse EndgetCommonParams(System.IAsyncResult result);
         
-        // CODEGEN: 消息 webSendSmsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 webSendSmsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.webSendSmsResponse webSendSms(金证统一账户测试账户生成器.KessService.webSendSmsRequest request);
@@ -565,7 +565,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.webSendSmsResponse EndwebSendSms(System.IAsyncResult result);
         
-        // CODEGEN: 消息 saveVideoInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 saveVideoInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.saveVideoInfoResponse saveVideoInfo(金证统一账户测试账户生成器.KessService.saveVideoInfoRequest request);
@@ -575,7 +575,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.saveVideoInfoResponse EndsaveVideoInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserExtInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserExtInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserExtInfoResponse mdfUserExtInfo(金证统一账户测试账户生成器.KessService.mdfUserExtInfoRequest request);
@@ -585,7 +585,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserExtInfoResponse EndmdfUserExtInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCustAgreementRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCustAgreementRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCustAgreementResponse setCustAgreement(金证统一账户测试账户生成器.KessService.setCustAgreementRequest request);
@@ -595,7 +595,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCustAgreementResponse EndsetCustAgreement(System.IAsyncResult result);
         
-        // CODEGEN: 消息 ansSurveyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 ansSurveyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.ansSurveyResponse ansSurvey(金证统一账户测试账户生成器.KessService.ansSurveyRequest request);
@@ -605,7 +605,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.ansSurveyResponse EndansSurvey(System.IAsyncResult result);
         
-        // CODEGEN: 消息 cubsbScOpenAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 cubsbScOpenAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.cubsbScOpenAcctResponse cubsbScOpenAcct(金证统一账户测试账户生成器.KessService.cubsbScOpenAcctRequest request);
@@ -615,7 +615,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.cubsbScOpenAcctResponse EndcubsbScOpenAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openUserImgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openUserImgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openUserImgInfoResponse openUserImgInfo(金证统一账户测试账户生成器.KessService.openUserImgInfoRequest request);
@@ -625,7 +625,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openUserImgInfoResponse EndopenUserImgInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCustFlagYHZQRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCustFlagYHZQRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCustFlagYHZQResponse setCustFlagYHZQ(金证统一账户测试账户生成器.KessService.setCustFlagYHZQRequest request);
@@ -635,7 +635,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCustFlagYHZQResponse EndsetCustFlagYHZQ(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getWebBizLogRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getWebBizLogRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getWebBizLogResponse getWebBizLog(金证统一账户测试账户生成器.KessService.getWebBizLogRequest request);
@@ -645,7 +645,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getWebBizLogResponse EndgetWebBizLog(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getCubsPubExtOrgRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getCubsPubExtOrgRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getCubsPubExtOrgResponse getCubsPubExtOrg(金证统一账户测试账户生成器.KessService.getCubsPubExtOrgRequest request);
@@ -655,7 +655,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getCubsPubExtOrgResponse EndgetCubsPubExtOrg(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getCubsbContractRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getCubsbContractRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getCubsbContractResponse getCubsbContract(金证统一账户测试账户生成器.KessService.getCubsbContractRequest request);
@@ -665,7 +665,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getCubsbContractResponse EndgetCubsbContract(System.IAsyncResult result);
         
-        // CODEGEN: 消息 custCodeStatusRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 custCodeStatusRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.custCodeStatusResponse custCodeStatus(金证统一账户测试账户生成器.KessService.custCodeStatusRequest request);
@@ -675,7 +675,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.custCodeStatusResponse EndcustCodeStatus(System.IAsyncResult result);
         
-        // CODEGEN: 消息 querySendOrderRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 querySendOrderRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.querySendOrderResponse querySendOrder(金证统一账户测试账户生成器.KessService.querySendOrderRequest request);
@@ -685,7 +685,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.querySendOrderResponse EndquerySendOrder(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getStkTregStatusRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getStkTregStatusRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getStkTregStatusResponse getStkTregStatus(金证统一账户测试账户生成器.KessService.getStkTregStatusRequest request);
@@ -695,7 +695,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getStkTregStatusResponse EndgetStkTregStatus(System.IAsyncResult result);
         
-        // CODEGEN: 消息 cubsbScCloseAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 cubsbScCloseAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.cubsbScCloseAcctResponse cubsbScCloseAcct(金证统一账户测试账户生成器.KessService.cubsbScCloseAcctRequest request);
@@ -705,7 +705,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.cubsbScCloseAcctResponse EndcubsbScCloseAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getCubsbLogRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getCubsbLogRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getCubsbLogResponse getCubsbLog(金证统一账户测试账户生成器.KessService.getCubsbLogRequest request);
@@ -715,7 +715,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getCubsbLogResponse EndgetCubsbLog(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getGlobalConfigsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getGlobalConfigsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getGlobalConfigsResponse getGlobalConfigs(金证统一账户测试账户生成器.KessService.getGlobalConfigsRequest request);
@@ -725,7 +725,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getGlobalConfigsResponse EndgetGlobalConfigs(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getImgScanConfigsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getImgScanConfigsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getImgScanConfigsResponse getImgScanConfigs(金证统一账户测试账户生成器.KessService.getImgScanConfigsRequest request);
@@ -735,7 +735,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getImgScanConfigsResponse EndgetImgScanConfigs(System.IAsyncResult result);
         
-        // CODEGEN: 消息 synImgInfo2KbssRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 synImgInfo2KbssRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.synImgInfo2KbssResponse synImgInfo2Kbss(金证统一账户测试账户生成器.KessService.synImgInfo2KbssRequest request);
@@ -745,7 +745,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.synImgInfo2KbssResponse EndsynImgInfo2Kbss(System.IAsyncResult result);
         
-        // CODEGEN: 消息 modifyFrtBizStatusRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 modifyFrtBizStatusRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.modifyFrtBizStatusResponse modifyFrtBizStatus(金证统一账户测试账户生成器.KessService.modifyFrtBizStatusRequest request);
@@ -755,7 +755,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.modifyFrtBizStatusResponse EndmodifyFrtBizStatus(System.IAsyncResult result);
         
-        // CODEGEN: 消息 contractActionOrCancelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 contractActionOrCancelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.contractActionOrCancelResponse contractActionOrCancel(金证统一账户测试账户生成器.KessService.contractActionOrCancelRequest request);
@@ -765,7 +765,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.contractActionOrCancelResponse EndcontractActionOrCancel(System.IAsyncResult result);
         
-        // CODEGEN: 消息 webImgNoUpRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 webImgNoUpRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.webImgNoUpResponse webImgNoUp(金证统一账户测试账户生成器.KessService.webImgNoUpRequest request);
@@ -775,7 +775,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.webImgNoUpResponse EndwebImgNoUp(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operUserImgReCordInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operUserImgReCordInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operUserImgReCordInfoResponse operUserImgReCordInfo(金证统一账户测试账户生成器.KessService.operUserImgReCordInfoRequest request);
@@ -785,7 +785,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operUserImgReCordInfoResponse EndoperUserImgReCordInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCubsbAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCubsbAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCubsbAcctResponse setCubsbAcct(金证统一账户测试账户生成器.KessService.setCubsbAcctRequest request);
@@ -795,7 +795,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCubsbAcctResponse EndsetCubsbAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCubsbContractRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCubsbContractRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCubsbContractResponse setCubsbContract(金证统一账户测试账户生成器.KessService.setCubsbContractRequest request);
@@ -805,7 +805,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCubsbContractResponse EndsetCubsbContract(System.IAsyncResult result);
         
-        // CODEGEN: 消息 closeCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 closeCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.closeCuacctResponse closeCuacct(金证统一账户测试账户生成器.KessService.closeCuacctRequest request);
@@ -815,7 +815,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.closeCuacctResponse EndcloseCuacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 closeCustomerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 closeCustomerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.closeCustomerResponse closeCustomer(金证统一账户测试账户生成器.KessService.closeCustomerRequest request);
@@ -825,7 +825,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.closeCustomerResponse EndcloseCustomer(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listCustInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listCustInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listCustInfoResponse listCustInfo(金证统一账户测试账户生成器.KessService.listCustInfoRequest request);
@@ -835,7 +835,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listCustInfoResponse EndlistCustInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listCuacctResponse listCuacct(金证统一账户测试账户生成器.KessService.listCuacctRequest request);
@@ -845,7 +845,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listCuacctResponse EndlistCuacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCustOwnOrgRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCustOwnOrgRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCustOwnOrgResponse mdfCustOwnOrg(金证统一账户测试账户生成器.KessService.mdfCustOwnOrgRequest request);
@@ -855,7 +855,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCustOwnOrgResponse EndmdfCustOwnOrg(System.IAsyncResult result);
         
-        // CODEGEN: 消息 restoreCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 restoreCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.restoreCuacctResponse restoreCuacct(金证统一账户测试账户生成器.KessService.restoreCuacctRequest request);
@@ -865,7 +865,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.restoreCuacctResponse EndrestoreCuacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 restoreCustomerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 restoreCustomerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.restoreCustomerResponse restoreCustomer(金证统一账户测试账户生成器.KessService.restoreCustomerRequest request);
@@ -875,7 +875,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.restoreCustomerResponse EndrestoreCustomer(System.IAsyncResult result);
         
-        // CODEGEN: 消息 restoreStkTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 restoreStkTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.restoreStkTrdacctResponse restoreStkTrdacct(金证统一账户测试账户生成器.KessService.restoreStkTrdacctRequest request);
@@ -885,7 +885,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.restoreStkTrdacctResponse EndrestoreStkTrdacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setTrdacctMdfCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setTrdacctMdfCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setTrdacctMdfCuacctResponse setTrdacctMdfCuacct(金证统一账户测试账户生成器.KessService.setTrdacctMdfCuacctRequest request);
@@ -895,7 +895,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setTrdacctMdfCuacctResponse EndsetTrdacctMdfCuacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCuacctClsFeeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCuacctClsFeeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCuacctClsFeeResponse setCuacctClsFee(金证统一账户测试账户生成器.KessService.setCuacctClsFeeRequest request);
@@ -905,7 +905,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCuacctClsFeeResponse EndsetCuacctClsFee(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserGenInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserGenInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserGenInfoResponse mdfUserGenInfo(金证统一账户测试账户生成器.KessService.mdfUserGenInfoRequest request);
@@ -915,7 +915,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserGenInfoResponse EndmdfUserGenInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getUserOccuInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getUserOccuInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getUserOccuInfoResponse getUserOccuInfo(金证统一账户测试账户生成器.KessService.getUserOccuInfoRequest request);
@@ -925,7 +925,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getUserOccuInfoResponse EndgetUserOccuInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getChargeTemplateRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getChargeTemplateRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getChargeTemplateResponse getChargeTemplate(金证统一账户测试账户生成器.KessService.getChargeTemplateRequest request);
@@ -935,7 +935,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getChargeTemplateResponse EndgetChargeTemplate(System.IAsyncResult result);
         
-        // CODEGEN: 消息 saveRiskSurveyAnswerBatchRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 saveRiskSurveyAnswerBatchRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.saveRiskSurveyAnswerBatchResponse saveRiskSurveyAnswerBatch(金证统一账户测试账户生成器.KessService.saveRiskSurveyAnswerBatchRequest request);
@@ -945,7 +945,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.saveRiskSurveyAnswerBatchResponse EndsaveRiskSurveyAnswerBatch(System.IAsyncResult result);
         
-        // CODEGEN: 消息 ansSurveyBatchRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 ansSurveyBatchRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.ansSurveyBatchResponse ansSurveyBatch(金证统一账户测试账户生成器.KessService.ansSurveyBatchRequest request);
@@ -955,7 +955,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.ansSurveyBatchResponse EndansSurveyBatch(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getAgreementInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getAgreementInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getAgreementInfoResponse getAgreementInfo(金证统一账户测试账户生成器.KessService.getAgreementInfoRequest request);
@@ -965,7 +965,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getAgreementInfoResponse EndgetAgreementInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getAgreementContentRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getAgreementContentRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getAgreementContentResponse getAgreementContent(金证统一账户测试账户生成器.KessService.getAgreementContentRequest request);
@@ -975,7 +975,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getAgreementContentResponse EndgetAgreementContent(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getPayFeeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getPayFeeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getPayFeeResponse getPayFee(金证统一账户测试账户生成器.KessService.getPayFeeRequest request);
@@ -985,7 +985,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getPayFeeResponse EndgetPayFee(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getMenuAutorityRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getMenuAutorityRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getMenuAutorityResponse getMenuAutority(金证统一账户测试账户生成器.KessService.getMenuAutorityRequest request);
@@ -995,7 +995,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getMenuAutorityResponse EndgetMenuAutority(System.IAsyncResult result);
         
-        // CODEGEN: 消息 searchDateTimeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 searchDateTimeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.searchDateTimeResponse searchDateTime(金证统一账户测试账户生成器.KessService.searchDateTimeRequest request);
@@ -1005,7 +1005,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.searchDateTimeResponse EndsearchDateTime(System.IAsyncResult result);
         
-        // CODEGEN: 消息 isPhoneOpenAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 isPhoneOpenAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.isPhoneOpenAcctResponse isPhoneOpenAcct(金证统一账户测试账户生成器.KessService.isPhoneOpenAcctRequest request);
@@ -1015,7 +1015,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.isPhoneOpenAcctResponse EndisPhoneOpenAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 updateCertInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 updateCertInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.updateCertInfoResponse updateCertInfo(金证统一账户测试账户生成器.KessService.updateCertInfoRequest request);
@@ -1025,7 +1025,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.updateCertInfoResponse EndupdateCertInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 searchSignAgreementRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 searchSignAgreementRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.searchSignAgreementResponse searchSignAgreement(金证统一账户测试账户生成器.KessService.searchSignAgreementRequest request);
@@ -1035,7 +1035,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.searchSignAgreementResponse EndsearchSignAgreement(System.IAsyncResult result);
         
-        // CODEGEN: 消息 onSearchNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 onSearchNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.onSearchNewZDResponse onSearchNewZD(金证统一账户测试账户生成器.KessService.onSearchNewZDRequest request);
@@ -1045,7 +1045,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.onSearchNewZDResponse EndonSearchNewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openNewStkAccRunTimeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openNewStkAccRunTimeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openNewStkAccRunTimeResponse openNewStkAccRunTime(金证统一账户测试账户生成器.KessService.openNewStkAccRunTimeRequest request);
@@ -1055,7 +1055,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openNewStkAccRunTimeResponse EndopenNewStkAccRunTime(System.IAsyncResult result);
         
-        // CODEGEN: 消息 saveApptCustInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 saveApptCustInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.saveApptCustInfoExResponse saveApptCustInfoEx(金证统一账户测试账户生成器.KessService.saveApptCustInfoExRequest request);
@@ -1065,7 +1065,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.saveApptCustInfoExResponse EndsaveApptCustInfoEx(System.IAsyncResult result);
         
-        // CODEGEN: 消息 searchSubsbScContractRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 searchSubsbScContractRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.searchSubsbScContractResponse searchSubsbScContract(金证统一账户测试账户生成器.KessService.searchSubsbScContractRequest request);
@@ -1075,7 +1075,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.searchSubsbScContractResponse EndsearchSubsbScContract(System.IAsyncResult result);
         
-        // CODEGEN: 消息 activateCubsbScRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 activateCubsbScRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.activateCubsbScResponse activateCubsbSc(金证统一账户测试账户生成器.KessService.activateCubsbScRequest request);
@@ -1085,7 +1085,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.activateCubsbScResponse EndactivateCubsbSc(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getSurveySetRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getSurveySetRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getSurveySetResponse getSurveySet(金证统一账户测试账户生成器.KessService.getSurveySetRequest request);
@@ -1095,7 +1095,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getSurveySetResponse EndgetSurveySet(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryRiskSurveyResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryRiskSurveyResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryRiskSurveyResultResponse queryRiskSurveyResult(金证统一账户测试账户生成器.KessService.queryRiskSurveyResultRequest request);
@@ -1105,7 +1105,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryRiskSurveyResultResponse EndqueryRiskSurveyResult(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryInvestProInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryInvestProInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryInvestProInfoResponse queryInvestProInfo(金证统一账户测试账户生成器.KessService.queryInvestProInfoRequest request);
@@ -1115,7 +1115,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryInvestProInfoResponse EndqueryInvestProInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setInvestProInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setInvestProInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setInvestProInfoResponse setInvestProInfo(金证统一账户测试账户生成器.KessService.setInvestProInfoRequest request);
@@ -1125,7 +1125,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setInvestProInfoResponse EndsetInvestProInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryToConfirmRiskSurveyResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryToConfirmRiskSurveyResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryToConfirmRiskSurveyResultResponse queryToConfirmRiskSurveyResult(金证统一账户测试账户生成器.KessService.queryToConfirmRiskSurveyResultRequest request);
@@ -1135,7 +1135,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryToConfirmRiskSurveyResultResponse EndqueryToConfirmRiskSurveyResult(System.IAsyncResult result);
         
-        // CODEGEN: 消息 confirmReslutRiskSurveyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 confirmReslutRiskSurveyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.confirmReslutRiskSurveyResponse confirmReslutRiskSurvey(金证统一账户测试账户生成器.KessService.confirmReslutRiskSurveyRequest request);
@@ -1145,7 +1145,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.confirmReslutRiskSurveyResponse EndconfirmReslutRiskSurvey(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getRiskSurveyResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getRiskSurveyResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getRiskSurveyResultResponse getRiskSurveyResult(金证统一账户测试账户生成器.KessService.getRiskSurveyResultRequest request);
@@ -1155,7 +1155,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getRiskSurveyResultResponse EndgetRiskSurveyResult(System.IAsyncResult result);
         
-        // CODEGEN: 消息 ansRiskSurveyBatchRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 ansRiskSurveyBatchRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.ansRiskSurveyBatchResponse ansRiskSurveyBatch(金证统一账户测试账户生成器.KessService.ansRiskSurveyBatchRequest request);
@@ -1165,7 +1165,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.ansRiskSurveyBatchResponse EndansRiskSurveyBatch(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openAgentRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openAgentRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openAgentResponse openAgent(金证统一账户测试账户生成器.KessService.openAgentRequest request);
@@ -1175,7 +1175,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openAgentResponse EndopenAgent(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCustAgentAcctBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCustAgentAcctBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCustAgentAcctBizResponse setCustAgentAcctBiz(金证统一账户测试账户生成器.KessService.setCustAgentAcctBizRequest request);
@@ -1185,7 +1185,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCustAgentAcctBizResponse EndsetCustAgentAcctBiz(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCustAgentCuacctBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCustAgentCuacctBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCustAgentCuacctBizResponse setCustAgentCuacctBiz(金证统一账户测试账户生成器.KessService.setCustAgentCuacctBizRequest request);
@@ -1195,7 +1195,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCustAgentCuacctBizResponse EndsetCustAgentCuacctBiz(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCustAgentStkBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCustAgentStkBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCustAgentStkBizResponse setCustAgentStkBiz(金证统一账户测试账户生成器.KessService.setCustAgentStkBizRequest request);
@@ -1205,7 +1205,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCustAgentStkBizResponse EndsetCustAgentStkBiz(System.IAsyncResult result);
         
-        // CODEGEN: 消息 checkCuacctByIdRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 checkCuacctByIdRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.checkCuacctByIdResponse checkCuacctById(金证统一账户测试账户生成器.KessService.checkCuacctByIdRequest request);
@@ -1215,7 +1215,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.checkCuacctByIdResponse EndcheckCuacctById(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfOrgExtInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfOrgExtInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfOrgExtInfoResponse mdfOrgExtInfo(金证统一账户测试账户生成器.KessService.mdfOrgExtInfoRequest request);
@@ -1225,7 +1225,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfOrgExtInfoResponse EndmdfOrgExtInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 trxCalendarQueryRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 trxCalendarQueryRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.trxCalendarQueryResponse trxCalendarQuery(金证统一账户测试账户生成器.KessService.trxCalendarQueryRequest request);
@@ -1235,7 +1235,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.trxCalendarQueryResponse EndtrxCalendarQuery(System.IAsyncResult result);
         
-        // CODEGEN: 消息 syncSurveyAns2KbssRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 syncSurveyAns2KbssRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.syncSurveyAns2KbssResponse syncSurveyAns2Kbss(金证统一账户测试账户生成器.KessService.syncSurveyAns2KbssRequest request);
@@ -1245,7 +1245,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.syncSurveyAns2KbssResponse EndsyncSurveyAns2Kbss(System.IAsyncResult result);
         
-        // CODEGEN: 消息 submitStkAcctBizOpReq2NewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 submitStkAcctBizOpReq2NewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.submitStkAcctBizOpReq2NewZDResponse submitStkAcctBizOpReq2NewZD(金证统一账户测试账户生成器.KessService.submitStkAcctBizOpReq2NewZDRequest request);
@@ -1255,7 +1255,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.submitStkAcctBizOpReq2NewZDResponse EndsubmitStkAcctBizOpReq2NewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 searchStkAcctBizInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 searchStkAcctBizInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.searchStkAcctBizInfoResponse searchStkAcctBizInfo(金证统一账户测试账户生成器.KessService.searchStkAcctBizInfoRequest request);
@@ -1265,7 +1265,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.searchStkAcctBizInfoResponse EndsearchStkAcctBizInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openStkAcctByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openStkAcctByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openStkAcctByNewZDResponse openStkAcctByNewZD(金证统一账户测试账户生成器.KessService.openStkAcctByNewZDRequest request);
@@ -1275,7 +1275,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openStkAcctByNewZDResponse EndopenStkAcctByNewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openYMTAcctByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openYMTAcctByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openYMTAcctByNewZDResponse openYMTAcctByNewZD(金证统一账户测试账户生成器.KessService.openYMTAcctByNewZDRequest request);
@@ -1285,7 +1285,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openYMTAcctByNewZDResponse EndopenYMTAcctByNewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openYMTAcctByKbssRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openYMTAcctByKbssRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openYMTAcctByKbssResponse openYMTAcctByKbss(金证统一账户测试账户生成器.KessService.openYMTAcctByKbssRequest request);
@@ -1295,7 +1295,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openYMTAcctByKbssResponse EndopenYMTAcctByKbss(System.IAsyncResult result);
         
-        // CODEGEN: 消息 uploadImgStringNoBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 uploadImgStringNoBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.uploadImgStringNoBizResponse uploadImgStringNoBiz(金证统一账户测试账户生成器.KessService.uploadImgStringNoBizRequest request);
@@ -1305,7 +1305,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.uploadImgStringNoBizResponse EnduploadImgStringNoBiz(System.IAsyncResult result);
         
-        // CODEGEN: 消息 searchAcctFrtBizLogRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 searchAcctFrtBizLogRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.searchAcctFrtBizLogResponse searchAcctFrtBizLog(金证统一账户测试账户生成器.KessService.searchAcctFrtBizLogRequest request);
@@ -1315,7 +1315,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.searchAcctFrtBizLogResponse EndsearchAcctFrtBizLog(System.IAsyncResult result);
         
-        // CODEGEN: 消息 applyAcctFrtBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 applyAcctFrtBizRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.applyAcctFrtBizResponse applyAcctFrtBiz(金证统一账户测试账户生成器.KessService.applyAcctFrtBizRequest request);
@@ -1325,7 +1325,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.applyAcctFrtBizResponse EndapplyAcctFrtBiz(System.IAsyncResult result);
         
-        // CODEGEN: 消息 searchImgScanConfigRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 searchImgScanConfigRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.searchImgScanConfigResponse searchImgScanConfig(金证统一账户测试账户生成器.KessService.searchImgScanConfigRequest request);
@@ -1335,7 +1335,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.searchImgScanConfigResponse EndsearchImgScanConfig(System.IAsyncResult result);
         
-        // CODEGEN: 消息 searchUserImgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 searchUserImgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.searchUserImgInfoResponse searchUserImgInfo(金证统一账户测试账户生成器.KessService.searchUserImgInfoRequest request);
@@ -1345,7 +1345,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.searchUserImgInfoResponse EndsearchUserImgInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 maintainUserImgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 maintainUserImgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.maintainUserImgInfoResponse maintainUserImgInfo(金证统一账户测试账户生成器.KessService.maintainUserImgInfoRequest request);
@@ -1355,7 +1355,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.maintainUserImgInfoResponse EndmaintainUserImgInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 synImgInfo2KbssExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 synImgInfo2KbssExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.synImgInfo2KbssExResponse synImgInfo2KbssEx(金证统一账户测试账户生成器.KessService.synImgInfo2KbssExRequest request);
@@ -1365,7 +1365,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.synImgInfo2KbssExResponse EndsynImgInfo2KbssEx(System.IAsyncResult result);
         
-        // CODEGEN: 消息 workBoardScZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 workBoardScZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.workBoardScZDResponse workBoardScZD(金证统一账户测试账户生成器.KessService.workBoardScZDRequest request);
@@ -1375,7 +1375,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.workBoardScZDResponse EndworkBoardScZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 closeCustAcctNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 closeCustAcctNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.closeCustAcctNewZDResponse closeCustAcctNewZD(金证统一账户测试账户生成器.KessService.closeCustAcctNewZDRequest request);
@@ -1385,7 +1385,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.closeCustAcctNewZDResponse EndcloseCustAcctNewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 search2ndBoardMarketAgmtRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 search2ndBoardMarketAgmtRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.search2ndBoardMarketAgmtResponse search2ndBoardMarketAgmt(金证统一账户测试账户生成器.KessService.search2ndBoardMarketAgmtRequest request);
@@ -1395,7 +1395,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.search2ndBoardMarketAgmtResponse Endsearch2ndBoardMarketAgmt(System.IAsyncResult result);
         
-        // CODEGEN: 消息 searchStkAcctBizInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 searchStkAcctBizInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.searchStkAcctBizInfoExResponse searchStkAcctBizInfoEx(金证统一账户测试账户生成器.KessService.searchStkAcctBizInfoExRequest request);
@@ -1405,7 +1405,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.searchStkAcctBizInfoExResponse EndsearchStkAcctBizInfoEx(System.IAsyncResult result);
         
-        // CODEGEN: 消息 syncAnsAppSurvey2RunRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 syncAnsAppSurvey2RunRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.syncAnsAppSurvey2RunResponse syncAnsAppSurvey2Run(金证统一账户测试账户生成器.KessService.syncAnsAppSurvey2RunRequest request);
@@ -1415,7 +1415,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.syncAnsAppSurvey2RunResponse EndsyncAnsAppSurvey2Run(System.IAsyncResult result);
         
-        // CODEGEN: 消息 updateUserImportantInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 updateUserImportantInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.updateUserImportantInfoResponse updateUserImportantInfo(金证统一账户测试账户生成器.KessService.updateUserImportantInfoRequest request);
@@ -1425,7 +1425,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.updateUserImportantInfoResponse EndupdateUserImportantInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 maintainUserImportantInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 maintainUserImportantInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.maintainUserImportantInfoResponse maintainUserImportantInfo(金证统一账户测试账户生成器.KessService.maintainUserImportantInfoRequest request);
@@ -1435,7 +1435,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.maintainUserImportantInfoResponse EndmaintainUserImportantInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCustRevisitInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCustRevisitInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCustRevisitInfoResponse mdfCustRevisitInfo(金证统一账户测试账户生成器.KessService.mdfCustRevisitInfoRequest request);
@@ -1445,7 +1445,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCustRevisitInfoResponse EndmdfCustRevisitInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listCustRevisitInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listCustRevisitInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listCustRevisitInfoResponse listCustRevisitInfo(金证统一账户测试账户生成器.KessService.listCustRevisitInfoRequest request);
@@ -1455,7 +1455,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listCustRevisitInfoResponse EndlistCustRevisitInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustInfoByCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustInfoByCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustInfoByCuacctResponse queryCustInfoByCuacct(金证统一账户测试账户生成器.KessService.queryCustInfoByCuacctRequest request);
@@ -1465,7 +1465,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustInfoByCuacctResponse EndqueryCustInfoByCuacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserGeneralInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserGeneralInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserGeneralInfoResponse mdfUserGeneralInfo(金证统一账户测试账户生成器.KessService.mdfUserGeneralInfoRequest request);
@@ -1475,7 +1475,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserGeneralInfoResponse EndmdfUserGeneralInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 hkVotingDeclareRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 hkVotingDeclareRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.hkVotingDeclareResponse hkVotingDeclare(金证统一账户测试账户生成器.KessService.hkVotingDeclareRequest request);
@@ -1485,7 +1485,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.hkVotingDeclareResponse EndhkVotingDeclare(System.IAsyncResult result);
         
-        // CODEGEN: 消息 hkActingDeclareRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 hkActingDeclareRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.hkActingDeclareResponse hkActingDeclare(金证统一账户测试账户生成器.KessService.hkActingDeclareRequest request);
@@ -1495,7 +1495,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.hkActingDeclareResponse EndhkActingDeclare(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listStkRegBizInfoHkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listStkRegBizInfoHkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listStkRegBizInfoHkResponse listStkRegBizInfoHk(金证统一账户测试账户生成器.KessService.listStkRegBizInfoHkRequest request);
@@ -1505,7 +1505,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listStkRegBizInfoHkResponse EndlistStkRegBizInfoHk(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCustAgreementHkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCustAgreementHkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCustAgreementHkResponse setCustAgreementHk(金证统一账户测试账户生成器.KessService.setCustAgreementHkRequest request);
@@ -1515,7 +1515,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCustAgreementHkResponse EndsetCustAgreementHk(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listHkTzxxInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listHkTzxxInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listHkTzxxInfoResponse listHkTzxxInfo(金证统一账户测试账户生成器.KessService.listHkTzxxInfoRequest request);
@@ -1525,7 +1525,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listHkTzxxInfoResponse EndlistHkTzxxInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listHkYwhbInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listHkYwhbInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listHkYwhbInfoResponse listHkYwhbInfo(金证统一账户测试账户生成器.KessService.listHkYwhbInfoRequest request);
@@ -1535,7 +1535,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listHkYwhbInfoResponse EndlistHkYwhbInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listSettNoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listSettNoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listSettNoResponse listSettNo(金证统一账户测试账户生成器.KessService.listSettNoRequest request);
@@ -1545,7 +1545,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listSettNoResponse EndlistSettNo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 cfmFistAppCreditNewRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 cfmFistAppCreditNewRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.cfmFistAppCreditNewResponse cfmFistAppCreditNew(金证统一账户测试账户生成器.KessService.cfmFistAppCreditNewRequest request);
@@ -1555,7 +1555,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.cfmFistAppCreditNewResponse EndcfmFistAppCreditNew(System.IAsyncResult result);
         
-        // CODEGEN: 消息 closeStkTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 closeStkTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.closeStkTrdacctResponse closeStkTrdacct(金证统一账户测试账户生成器.KessService.closeStkTrdacctRequest request);
@@ -1565,7 +1565,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.closeStkTrdacctResponse EndcloseStkTrdacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 stkPleRepurAppRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 stkPleRepurAppRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.stkPleRepurAppResponse stkPleRepurApp(金证统一账户测试账户生成器.KessService.stkPleRepurAppRequest request);
@@ -1575,7 +1575,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.stkPleRepurAppResponse EndstkPleRepurApp(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listStkPleRepurAppRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listStkPleRepurAppRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listStkPleRepurAppResponse listStkPleRepurApp(金证统一账户测试账户生成器.KessService.listStkPleRepurAppRequest request);
@@ -1585,7 +1585,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listStkPleRepurAppResponse EndlistStkPleRepurApp(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operFislCdtApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operFislCdtApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operFislCdtApplResponse operFislCdtAppl(金证统一账户测试账户生成器.KessService.operFislCdtApplRequest request);
@@ -1595,7 +1595,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operFislCdtApplResponse EndoperFislCdtAppl(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustAgreementRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustAgreementRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustAgreementResponse queryCustAgreement(金证统一账户测试账户生成器.KessService.queryCustAgreementRequest request);
@@ -1605,7 +1605,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustAgreementResponse EndqueryCustAgreement(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openOperWayRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openOperWayRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openOperWayResponse openOperWay(金证统一账户测试账户生成器.KessService.openOperWayRequest request);
@@ -1615,7 +1615,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openOperWayResponse EndopenOperWay(System.IAsyncResult result);
         
-        // CODEGEN: 消息 cubsbCloseAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 cubsbCloseAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.cubsbCloseAcctResponse cubsbCloseAcct(金证统一账户测试账户生成器.KessService.cubsbCloseAcctRequest request);
@@ -1625,7 +1625,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.cubsbCloseAcctResponse EndcubsbCloseAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 checkUserAuthInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 checkUserAuthInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.checkUserAuthInfoResponse checkUserAuthInfo(金证统一账户测试账户生成器.KessService.checkUserAuthInfoRequest request);
@@ -1635,7 +1635,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.checkUserAuthInfoResponse EndcheckUserAuthInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getUserInfoByIdAndTelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getUserInfoByIdAndTelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getUserInfoByIdAndTelResponse getUserInfoByIdAndTel(金证统一账户测试账户生成器.KessService.getUserInfoByIdAndTelRequest request);
@@ -1645,7 +1645,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getUserInfoByIdAndTelResponse EndgetUserInfoByIdAndTel(System.IAsyncResult result);
         
-        // CODEGEN: 消息 activeCustAcctNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 activeCustAcctNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.activeCustAcctNewZDResponse activeCustAcctNewZD(金证统一账户测试账户生成器.KessService.activeCustAcctNewZDRequest request);
@@ -1655,7 +1655,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.activeCustAcctNewZDResponse EndactiveCustAcctNewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 activeCustNativeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 activeCustNativeRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.activeCustNativeResponse activeCustNative(金证统一账户测试账户生成器.KessService.activeCustNativeRequest request);
@@ -1665,7 +1665,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.activeCustNativeResponse EndactiveCustNative(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getCustOtherStoreInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getCustOtherStoreInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getCustOtherStoreInfoResponse getCustOtherStoreInfo(金证统一账户测试账户生成器.KessService.getCustOtherStoreInfoRequest request);
@@ -1675,7 +1675,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getCustOtherStoreInfoResponse EndgetCustOtherStoreInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryHkBizLogRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryHkBizLogRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryHkBizLogResponse queryHkBizLog(金证统一账户测试账户生成器.KessService.queryHkBizLogRequest request);
@@ -1685,7 +1685,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryHkBizLogResponse EndqueryHkBizLog(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getCheckResultByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getCheckResultByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getCheckResultByNewZDResponse getCheckResultByNewZD(金证统一账户测试账户生成器.KessService.getCheckResultByNewZDRequest request);
@@ -1695,7 +1695,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getCheckResultByNewZDResponse EndgetCheckResultByNewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 openFislCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 openFislCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.openFislCuacctResponse openFislCuacct(金证统一账户测试账户生成器.KessService.openFislCuacctRequest request);
@@ -1705,7 +1705,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.openFislCuacctResponse EndopenFislCuacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getCustFirstTrdDateRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getCustFirstTrdDateRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getCustFirstTrdDateResponse getCustFirstTrdDate(金证统一账户测试账户生成器.KessService.getCustFirstTrdDateRequest request);
@@ -1715,7 +1715,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getCustFirstTrdDateResponse EndgetCustFirstTrdDate(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryFirstTrdDateByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryFirstTrdDateByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryFirstTrdDateByNewZDResponse queryFirstTrdDateByNewZD(金证统一账户测试账户生成器.KessService.queryFirstTrdDateByNewZDRequest request);
@@ -1725,7 +1725,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryFirstTrdDateByNewZDResponse EndqueryFirstTrdDateByNewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getCustAvgAssetsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getCustAvgAssetsRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getCustAvgAssetsResponse getCustAvgAssets(金证统一账户测试账户生成器.KessService.getCustAvgAssetsRequest request);
@@ -1735,7 +1735,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getCustAvgAssetsResponse EndgetCustAvgAssets(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operBlackListInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operBlackListInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operBlackListInfoResponse operBlackListInfo(金证统一账户测试账户生成器.KessService.operBlackListInfoRequest request);
@@ -1745,7 +1745,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operBlackListInfoResponse EndoperBlackListInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryBlackListInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryBlackListInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryBlackListInfoResponse queryBlackListInfo(金证统一账户测试账户生成器.KessService.queryBlackListInfoRequest request);
@@ -1755,7 +1755,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryBlackListInfoResponse EndqueryBlackListInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operRelaInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operRelaInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operRelaInfoResponse operRelaInfo(金证统一账户测试账户生成器.KessService.operRelaInfoRequest request);
@@ -1765,7 +1765,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operRelaInfoResponse EndoperRelaInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryRelaInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryRelaInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryRelaInfoResponse queryRelaInfo(金证统一账户测试账户生成器.KessService.queryRelaInfoRequest request);
@@ -1775,7 +1775,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryRelaInfoResponse EndqueryRelaInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operFislChiefInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operFislChiefInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operFislChiefInfoResponse operFislChiefInfo(金证统一账户测试账户生成器.KessService.operFislChiefInfoRequest request);
@@ -1785,7 +1785,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operFislChiefInfoResponse EndoperFislChiefInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryFislChiefInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryFislChiefInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryFislChiefInfoResponse queryFislChiefInfo(金证统一账户测试账户生成器.KessService.queryFislChiefInfoRequest request);
@@ -1795,7 +1795,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryFislChiefInfoResponse EndqueryFislChiefInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operRecommenderInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operRecommenderInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operRecommenderInfoResponse operRecommenderInfo(金证统一账户测试账户生成器.KessService.operRecommenderInfoRequest request);
@@ -1805,7 +1805,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operRecommenderInfoResponse EndoperRecommenderInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryRecommenderInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryRecommenderInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryRecommenderInfoResponse queryRecommenderInfo(金证统一账户测试账户生成器.KessService.queryRecommenderInfoRequest request);
@@ -1815,7 +1815,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryRecommenderInfoResponse EndqueryRecommenderInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operEmerContactInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operEmerContactInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operEmerContactInfoResponse operEmerContactInfo(金证统一账户测试账户生成器.KessService.operEmerContactInfoRequest request);
@@ -1825,7 +1825,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operEmerContactInfoResponse EndoperEmerContactInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryEmerContactInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryEmerContactInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryEmerContactInfoResponse queryEmerContactInfo(金证统一账户测试账户生成器.KessService.queryEmerContactInfoRequest request);
@@ -1835,7 +1835,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryEmerContactInfoResponse EndqueryEmerContactInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operAcctFirmRelaInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operAcctFirmRelaInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operAcctFirmRelaInfoResponse operAcctFirmRelaInfo(金证统一账户测试账户生成器.KessService.operAcctFirmRelaInfoRequest request);
@@ -1845,7 +1845,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operAcctFirmRelaInfoResponse EndoperAcctFirmRelaInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryAcctFirmRelaInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryAcctFirmRelaInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryAcctFirmRelaInfoResponse queryAcctFirmRelaInfo(金证统一账户测试账户生成器.KessService.queryAcctFirmRelaInfoRequest request);
@@ -1855,7 +1855,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryAcctFirmRelaInfoResponse EndqueryAcctFirmRelaInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operCustFislCdtApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operCustFislCdtApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operCustFislCdtApplResponse operCustFislCdtAppl(金证统一账户测试账户生成器.KessService.operCustFislCdtApplRequest request);
@@ -1865,7 +1865,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operCustFislCdtApplResponse EndoperCustFislCdtAppl(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustFislCdtApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustFislCdtApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustFislCdtApplResponse queryCustFislCdtAppl(金证统一账户测试账户生成器.KessService.queryCustFislCdtApplRequest request);
@@ -1875,7 +1875,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustFislCdtApplResponse EndqueryCustFislCdtAppl(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operCustFislCdtFlowRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operCustFislCdtFlowRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operCustFislCdtFlowResponse operCustFislCdtFlow(金证统一账户测试账户生成器.KessService.operCustFislCdtFlowRequest request);
@@ -1885,7 +1885,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operCustFislCdtFlowResponse EndoperCustFislCdtFlow(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustFislCdtFlowRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustFislCdtFlowRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustFislCdtFlowResponse queryCustFislCdtFlow(金证统一账户测试账户生成器.KessService.queryCustFislCdtFlowRequest request);
@@ -1895,7 +1895,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustFislCdtFlowResponse EndqueryCustFislCdtFlow(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operCustContractInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operCustContractInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operCustContractInfoResponse operCustContractInfo(金证统一账户测试账户生成器.KessService.operCustContractInfoRequest request);
@@ -1905,7 +1905,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operCustContractInfoResponse EndoperCustContractInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustContractInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustContractInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustContractInfoResponse queryCustContractInfo(金证统一账户测试账户生成器.KessService.queryCustContractInfoRequest request);
@@ -1915,7 +1915,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustContractInfoResponse EndqueryCustContractInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCustCreditStatusRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCustCreditStatusRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCustCreditStatusResponse mdfCustCreditStatus(金证统一账户测试账户生成器.KessService.mdfCustCreditStatusRequest request);
@@ -1925,7 +1925,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCustCreditStatusResponse EndmdfCustCreditStatus(System.IAsyncResult result);
         
-        // CODEGEN: 消息 custInfoToFislSysRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 custInfoToFislSysRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.custInfoToFislSysResponse custInfoToFislSys(金证统一账户测试账户生成器.KessService.custInfoToFislSysRequest request);
@@ -1935,7 +1935,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.custInfoToFislSysResponse EndcustInfoToFislSys(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listCreditLevelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listCreditLevelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listCreditLevelResponse listCreditLevel(金证统一账户测试账户生成器.KessService.listCreditLevelRequest request);
@@ -1945,7 +1945,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listCreditLevelResponse EndlistCreditLevel(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listFislInterestGroupInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listFislInterestGroupInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listFislInterestGroupInfoResponse listFislInterestGroupInfo(金证统一账户测试账户生成器.KessService.listFislInterestGroupInfoRequest request);
@@ -1955,7 +1955,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listFislInterestGroupInfoResponse EndlistFislInterestGroupInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 custCreditApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 custCreditApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.custCreditApplResponse custCreditAppl(金证统一账户测试账户生成器.KessService.custCreditApplRequest request);
@@ -1965,7 +1965,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.custCreditApplResponse EndcustCreditAppl(System.IAsyncResult result);
         
-        // CODEGEN: 消息 auditCustCreditApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 auditCustCreditApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.auditCustCreditApplResponse auditCustCreditAppl(金证统一账户测试账户生成器.KessService.auditCustCreditApplRequest request);
@@ -1975,7 +1975,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.auditCustCreditApplResponse EndauditCustCreditAppl(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustCreditApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustCreditApplRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustCreditApplResponse queryCustCreditAppl(金证统一账户测试账户生成器.KessService.queryCustCreditApplRequest request);
@@ -1985,7 +1985,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustCreditApplResponse EndqueryCustCreditAppl(System.IAsyncResult result);
         
-        // CODEGEN: 消息 evaluateCreditLevelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 evaluateCreditLevelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.evaluateCreditLevelResponse evaluateCreditLevel(金证统一账户测试账户生成器.KessService.evaluateCreditLevelRequest request);
@@ -1995,7 +1995,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.evaluateCreditLevelResponse EndevaluateCreditLevel(System.IAsyncResult result);
         
-        // CODEGEN: 消息 cfmFislAppCreditRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 cfmFislAppCreditRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.cfmFislAppCreditResponse cfmFislAppCredit(金证统一账户测试账户生成器.KessService.cfmFislAppCreditRequest request);
@@ -2005,7 +2005,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.cfmFislAppCreditResponse EndcfmFislAppCredit(System.IAsyncResult result);
         
-        // CODEGEN: 消息 auditCfmFislAppCreditRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 auditCfmFislAppCreditRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.auditCfmFislAppCreditResponse auditCfmFislAppCredit(金证统一账户测试账户生成器.KessService.auditCfmFislAppCreditRequest request);
@@ -2015,7 +2015,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.auditCfmFislAppCreditResponse EndauditCfmFislAppCredit(System.IAsyncResult result);
         
-        // CODEGEN: 消息 custCreditActiveRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 custCreditActiveRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.custCreditActiveResponse custCreditActive(金证统一账户测试账户生成器.KessService.custCreditActiveRequest request);
@@ -2025,7 +2025,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.custCreditActiveResponse EndcustCreditActive(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustFundAuthorityRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustFundAuthorityRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustFundAuthorityResponse queryCustFundAuthority(金证统一账户测试账户生成器.KessService.queryCustFundAuthorityRequest request);
@@ -2035,7 +2035,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustFundAuthorityResponse EndqueryCustFundAuthority(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustTradeAuthorityRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustTradeAuthorityRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustTradeAuthorityResponse queryCustTradeAuthority(金证统一账户测试账户生成器.KessService.queryCustTradeAuthorityRequest request);
@@ -2045,7 +2045,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustTradeAuthorityResponse EndqueryCustTradeAuthority(System.IAsyncResult result);
         
-        // CODEGEN: 消息 cubsbScSyncInterestRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 cubsbScSyncInterestRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.cubsbScSyncInterestResponse cubsbScSyncInterest(金证统一账户测试账户生成器.KessService.cubsbScSyncInterestRequest request);
@@ -2055,7 +2055,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.cubsbScSyncInterestResponse EndcubsbScSyncInterest(System.IAsyncResult result);
         
-        // CODEGEN: 消息 commonBizToNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 commonBizToNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.commonBizToNewZDResponse commonBizToNewZD(金证统一账户测试账户生成器.KessService.commonBizToNewZDRequest request);
@@ -2065,7 +2065,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.commonBizToNewZDResponse EndcommonBizToNewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operOtcAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operOtcAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operOtcAcctResponse operOtcAcct(金证统一账户测试账户生成器.KessService.operOtcAcctRequest request);
@@ -2075,7 +2075,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operOtcAcctResponse EndoperOtcAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryOtcAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryOtcAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryOtcAcctResponse queryOtcAcct(金证统一账户测试账户生成器.KessService.queryOtcAcctRequest request);
@@ -2085,7 +2085,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryOtcAcctResponse EndqueryOtcAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operOtcCustPayerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operOtcCustPayerRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operOtcCustPayerResponse operOtcCustPayer(金证统一账户测试账户生成器.KessService.operOtcCustPayerRequest request);
@@ -2095,7 +2095,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operOtcCustPayerResponse EndoperOtcCustPayer(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryOtcCustPayerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryOtcCustPayerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryOtcCustPayerInfoResponse queryOtcCustPayerInfo(金证统一账户测试账户生成器.KessService.queryOtcCustPayerInfoRequest request);
@@ -2105,7 +2105,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryOtcCustPayerInfoResponse EndqueryOtcCustPayerInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 custInfoToOTCSysRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 custInfoToOTCSysRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.custInfoToOTCSysResponse custInfoToOTCSys(金证统一账户测试账户生成器.KessService.custInfoToOTCSysRequest request);
@@ -2115,7 +2115,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.custInfoToOTCSysResponse EndcustInfoToOTCSys(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCustChannelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCustChannelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCustChannelResponse mdfCustChannel(金证统一账户测试账户生成器.KessService.mdfCustChannelRequest request);
@@ -2125,7 +2125,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCustChannelResponse EndmdfCustChannel(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getUserExtInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getUserExtInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getUserExtInfoResponse getUserExtInfo(金证统一账户测试账户生成器.KessService.getUserExtInfoRequest request);
@@ -2135,7 +2135,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getUserExtInfoResponse EndgetUserExtInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getPartnerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getPartnerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getPartnerInfoResponse getPartnerInfo(金证统一账户测试账户生成器.KessService.getPartnerInfoRequest request);
@@ -2145,7 +2145,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getPartnerInfoResponse EndgetPartnerInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 qryFislAttrRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 qryFislAttrRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.qryFislAttrResponse qryFislAttr(金证统一账户测试账户生成器.KessService.qryFislAttrRequest request);
@@ -2155,7 +2155,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.qryFislAttrResponse EndqryFislAttr(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfFislAttrRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfFislAttrRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfFislAttrResponse mdfFislAttr(金证统一账户测试账户生成器.KessService.mdfFislAttrRequest request);
@@ -2165,7 +2165,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfFislAttrResponse EndmdfFislAttr(System.IAsyncResult result);
         
-        // CODEGEN: 消息 qryLinkmanInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 qryLinkmanInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.qryLinkmanInfoResponse qryLinkmanInfo(金证统一账户测试账户生成器.KessService.qryLinkmanInfoRequest request);
@@ -2175,7 +2175,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.qryLinkmanInfoResponse EndqryLinkmanInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfTaAcctInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfTaAcctInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfTaAcctInfoResponse mdfTaAcctInfo(金证统一账户测试账户生成器.KessService.mdfTaAcctInfoRequest request);
@@ -2185,7 +2185,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfTaAcctInfoResponse EndmdfTaAcctInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 custInfoToBankAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 custInfoToBankAcctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.custInfoToBankAcctResponse custInfoToBankAcct(金证统一账户测试账户生成器.KessService.custInfoToBankAcctRequest request);
@@ -2195,7 +2195,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.custInfoToBankAcctResponse EndcustInfoToBankAcct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setMainCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setMainCuacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setMainCuacctResponse setMainCuacct(金证统一账户测试账户生成器.KessService.setMainCuacctRequest request);
@@ -2205,7 +2205,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setMainCuacctResponse EndsetMainCuacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operBoodsBizInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operBoodsBizInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operBoodsBizInfoResponse operBoodsBizInfo(金证统一账户测试账户生成器.KessService.operBoodsBizInfoRequest request);
@@ -2215,7 +2215,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operBoodsBizInfoResponse EndoperBoodsBizInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listBoodsBizInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listBoodsBizInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listBoodsBizInfoResponse listBoodsBizInfo(金证统一账户测试账户生成器.KessService.listBoodsBizInfoRequest request);
@@ -2225,7 +2225,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.listBoodsBizInfoResponse EndlistBoodsBizInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operProManagerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operProManagerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operProManagerInfoResponse operProManagerInfo(金证统一账户测试账户生成器.KessService.operProManagerInfoRequest request);
@@ -2235,7 +2235,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operProManagerInfoResponse EndoperProManagerInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 qryProManaerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 qryProManaerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.qryProManaerInfoResponse qryProManaerInfo(金证统一账户测试账户生成器.KessService.qryProManaerInfoRequest request);
@@ -2245,7 +2245,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.qryProManaerInfoResponse EndqryProManaerInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 operUntrdBizHkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 operUntrdBizHkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.operUntrdBizHkResponse operUntrdBizHk(金证统一账户测试账户生成器.KessService.operUntrdBizHkRequest request);
@@ -2255,7 +2255,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.operUntrdBizHkResponse EndoperUntrdBizHk(System.IAsyncResult result);
         
-        // CODEGEN: 消息 qryUntrdBizHkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 qryUntrdBizHkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.qryUntrdBizHkResponse qryUntrdBizHk(金证统一账户测试账户生成器.KessService.qryUntrdBizHkRequest request);
@@ -2265,7 +2265,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.qryUntrdBizHkResponse EndqryUntrdBizHk(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getShStkInfoByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getShStkInfoByNewZDRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getShStkInfoByNewZDResponse getShStkInfoByNewZD(金证统一账户测试账户生成器.KessService.getShStkInfoByNewZDRequest request);
@@ -2275,7 +2275,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getShStkInfoByNewZDResponse EndgetShStkInfoByNewZD(System.IAsyncResult result);
         
-        // CODEGEN: 消息 stkTrdacctTranAllRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 stkTrdacctTranAllRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.stkTrdacctTranAllResponse stkTrdacctTranAll(金证统一账户测试账户生成器.KessService.stkTrdacctTranAllRequest request);
@@ -2285,7 +2285,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.stkTrdacctTranAllResponse EndstkTrdacctTranAll(System.IAsyncResult result);
         
-        // CODEGEN: 消息 closeOfTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 closeOfTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.closeOfTrdacctResponse closeOfTrdacct(金证统一账户测试账户生成器.KessService.closeOfTrdacctRequest request);
@@ -2295,7 +2295,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.closeOfTrdacctResponse EndcloseOfTrdacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 manageCOFMContractRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 manageCOFMContractRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.manageCOFMContractResponse manageCOFMContract(金证统一账户测试账户生成器.KessService.manageCOFMContractRequest request);
@@ -2305,7 +2305,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.manageCOFMContractResponse EndmanageCOFMContract(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setMainTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setMainTrdacctRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setMainTrdacctResponse setMainTrdacct(金证统一账户测试账户生成器.KessService.setMainTrdacctRequest request);
@@ -2315,7 +2315,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setMainTrdacctResponse EndsetMainTrdacct(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getBizSerialNoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getBizSerialNoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getBizSerialNoResponse getBizSerialNo(金证统一账户测试账户生成器.KessService.getBizSerialNoRequest request);
@@ -2325,7 +2325,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getBizSerialNoResponse EndgetBizSerialNo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 uploadImgFileRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 uploadImgFileRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.uploadImgFileResponse uploadImgFile(金证统一账户测试账户生成器.KessService.uploadImgFileRequest request);
@@ -2335,7 +2335,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.uploadImgFileResponse EnduploadImgFile(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getUserImgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getUserImgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getUserImgInfoResponse getUserImgInfo(金证统一账户测试账户生成器.KessService.getUserImgInfoRequest request);
@@ -2345,7 +2345,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getUserImgInfoResponse EndgetUserImgInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 downloadImgFileRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 downloadImgFileRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.downloadImgFileResponse downloadImgFile(金证统一账户测试账户生成器.KessService.downloadImgFileRequest request);
@@ -2355,7 +2355,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.downloadImgFileResponse EnddownloadImgFile(System.IAsyncResult result);
         
-        // CODEGEN: 消息 bjhgCustApplyCheckRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 bjhgCustApplyCheckRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.bjhgCustApplyCheckResponse bjhgCustApplyCheck(金证统一账户测试账户生成器.KessService.bjhgCustApplyCheckRequest request);
@@ -2365,7 +2365,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.bjhgCustApplyCheckResponse EndbjhgCustApplyCheck(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryBjhgCustApplyCheckRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryBjhgCustApplyCheckRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryBjhgCustApplyCheckResponse queryBjhgCustApplyCheck(金证统一账户测试账户生成器.KessService.queryBjhgCustApplyCheckRequest request);
@@ -2375,7 +2375,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryBjhgCustApplyCheckResponse EndqueryBjhgCustApplyCheck(System.IAsyncResult result);
         
-        // CODEGEN: 消息 querySurveyRatingStdMXRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 querySurveyRatingStdMXRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.querySurveyRatingStdMXResponse querySurveyRatingStdMX(金证统一账户测试账户生成器.KessService.querySurveyRatingStdMXRequest request);
@@ -2385,7 +2385,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.querySurveyRatingStdMXResponse EndquerySurveyRatingStdMX(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryUserRiskDetailInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryUserRiskDetailInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryUserRiskDetailInfoResponse queryUserRiskDetailInfo(金证统一账户测试账户生成器.KessService.queryUserRiskDetailInfoRequest request);
@@ -2395,7 +2395,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryUserRiskDetailInfoResponse EndqueryUserRiskDetailInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 qrySurveyRatingStdRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 qrySurveyRatingStdRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.qrySurveyRatingStdResponse qrySurveyRatingStd(金证统一账户测试账户生成器.KessService.qrySurveyRatingStdRequest request);
@@ -2405,7 +2405,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.qrySurveyRatingStdResponse EndqrySurveyRatingStd(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCustInvestExpInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCustInvestExpInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCustInvestExpInfoResponse mdfCustInvestExpInfo(金证统一账户测试账户生成器.KessService.mdfCustInvestExpInfoRequest request);
@@ -2415,7 +2415,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCustInvestExpInfoResponse EndmdfCustInvestExpInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 qryCustInvestExpInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 qryCustInvestExpInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.qryCustInvestExpInfoResponse qryCustInvestExpInfo(金证统一账户测试账户生成器.KessService.qryCustInvestExpInfoRequest request);
@@ -2425,7 +2425,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.qryCustInvestExpInfoResponse EndqryCustInvestExpInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCreditRecordRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCreditRecordRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCreditRecordResponse mdfCreditRecord(金证统一账户测试账户生成器.KessService.mdfCreditRecordRequest request);
@@ -2435,7 +2435,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCreditRecordResponse EndmdfCreditRecord(System.IAsyncResult result);
         
-        // CODEGEN: 消息 qryCreditRecordRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 qryCreditRecordRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.qryCreditRecordResponse qryCreditRecord(金证统一账户测试账户生成器.KessService.qryCreditRecordRequest request);
@@ -2445,7 +2445,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.qryCreditRecordResponse EndqryCreditRecord(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserLinkInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserLinkInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserLinkInfoResponse mdfUserLinkInfo(金证统一账户测试账户生成器.KessService.mdfUserLinkInfoRequest request);
@@ -2455,7 +2455,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserLinkInfoResponse EndmdfUserLinkInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 setCustOtherFlagRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 setCustOtherFlagRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.setCustOtherFlagResponse setCustOtherFlag(金证统一账户测试账户生成器.KessService.setCustOtherFlagRequest request);
@@ -2465,7 +2465,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.setCustOtherFlagResponse EndsetCustOtherFlag(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCustLinkInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCustLinkInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCustLinkInfoResponse mdfCustLinkInfo(金证统一账户测试账户生成器.KessService.mdfCustLinkInfoRequest request);
@@ -2475,7 +2475,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCustLinkInfoResponse EndmdfCustLinkInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserGuardianInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserGuardianInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserGuardianInfoResponse mdfUserGuardianInfo(金证统一账户测试账户生成器.KessService.mdfUserGuardianInfoRequest request);
@@ -2485,7 +2485,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserGuardianInfoResponse EndmdfUserGuardianInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserBeneficiaryInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserBeneficiaryInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserBeneficiaryInfoResponse mdfUserBeneficiaryInfo(金证统一账户测试账户生成器.KessService.mdfUserBeneficiaryInfoRequest request);
@@ -2495,7 +2495,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserBeneficiaryInfoResponse EndmdfUserBeneficiaryInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserOccupationInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserOccupationInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserOccupationInfoResponse mdfUserOccupationInfo(金证统一账户测试账户生成器.KessService.mdfUserOccupationInfoRequest request);
@@ -2505,7 +2505,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserOccupationInfoResponse EndmdfUserOccupationInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserBasicCorpInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserBasicCorpInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserBasicCorpInfoResponse mdfUserBasicCorpInfo(金证统一账户测试账户生成器.KessService.mdfUserBasicCorpInfoRequest request);
@@ -2515,7 +2515,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserBasicCorpInfoResponse EndmdfUserBasicCorpInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfUserLinkmanInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfUserLinkmanInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfUserLinkmanInfoResponse mdfUserLinkmanInfo(金证统一账户测试账户生成器.KessService.mdfUserLinkmanInfoRequest request);
@@ -2525,7 +2525,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfUserLinkmanInfoResponse EndmdfUserLinkmanInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCriticalContactRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCriticalContactRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCriticalContactResponse mdfCriticalContact(金证统一账户测试账户生成器.KessService.mdfCriticalContactRequest request);
@@ -2535,7 +2535,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCriticalContactResponse EndmdfCriticalContact(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfPartnerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfPartnerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfPartnerInfoResponse mdfPartnerInfo(金证统一账户测试账户生成器.KessService.mdfPartnerInfoRequest request);
@@ -2545,7 +2545,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfPartnerInfoResponse EndmdfPartnerInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCustAssetsInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCustAssetsInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCustAssetsInfoResponse mdfCustAssetsInfo(金证统一账户测试账户生成器.KessService.mdfCustAssetsInfoRequest request);
@@ -2555,7 +2555,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCustAssetsInfoResponse EndmdfCustAssetsInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfControlLerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfControlLerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfControlLerInfoResponse mdfControlLerInfo(金证统一账户测试账户生成器.KessService.mdfControlLerInfoRequest request);
@@ -2565,7 +2565,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfControlLerInfoResponse EndmdfControlLerInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfProductInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfProductInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfProductInfoResponse mdfProductInfo(金证统一账户测试账户生成器.KessService.mdfProductInfoRequest request);
@@ -2575,7 +2575,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfProductInfoResponse EndmdfProductInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfStkRestrictedRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfStkRestrictedRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfStkRestrictedResponse mdfStkRestricted(金证统一账户测试账户生成器.KessService.mdfStkRestrictedRequest request);
@@ -2585,7 +2585,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfStkRestrictedResponse EndmdfStkRestricted(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustLinkInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustLinkInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustLinkInfoResponse queryCustLinkInfo(金证统一账户测试账户生成器.KessService.queryCustLinkInfoRequest request);
@@ -2595,7 +2595,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustLinkInfoResponse EndqueryCustLinkInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryUserGuardianInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryUserGuardianInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryUserGuardianInfoResponse queryUserGuardianInfo(金证统一账户测试账户生成器.KessService.queryUserGuardianInfoRequest request);
@@ -2605,7 +2605,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryUserGuardianInfoResponse EndqueryUserGuardianInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryUserBeneficiaryInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryUserBeneficiaryInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryUserBeneficiaryInfoResponse queryUserBeneficiaryInfo(金证统一账户测试账户生成器.KessService.queryUserBeneficiaryInfoRequest request);
@@ -2615,7 +2615,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryUserBeneficiaryInfoResponse EndqueryUserBeneficiaryInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustFlagInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustFlagInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustFlagInfoResponse queryCustFlagInfo(金证统一账户测试账户生成器.KessService.queryCustFlagInfoRequest request);
@@ -2625,7 +2625,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustFlagInfoResponse EndqueryCustFlagInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 getLinkmanInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 getLinkmanInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.getLinkmanInfoResponse getLinkmanInfo(金证统一账户测试账户生成器.KessService.getLinkmanInfoRequest request);
@@ -2635,7 +2635,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.getLinkmanInfoResponse EndgetLinkmanInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustFlagRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustFlagRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustFlagResponse queryCustFlag(金证统一账户测试账户生成器.KessService.queryCustFlagRequest request);
@@ -2645,7 +2645,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustFlagResponse EndqueryCustFlag(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustAssetsInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustAssetsInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustAssetsInfoResponse queryCustAssetsInfo(金证统一账户测试账户生成器.KessService.queryCustAssetsInfoRequest request);
@@ -2655,7 +2655,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustAssetsInfoResponse EndqueryCustAssetsInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryControllerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryControllerInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryControllerInfoResponse queryControllerInfo(金证统一账户测试账户生成器.KessService.queryControllerInfoRequest request);
@@ -2665,7 +2665,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryControllerInfoResponse EndqueryControllerInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryProductInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryProductInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryProductInfoResponse queryProductInfo(金证统一账户测试账户生成器.KessService.queryProductInfoRequest request);
@@ -2675,7 +2675,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryProductInfoResponse EndqueryProductInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryStkRestrictedRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryStkRestrictedRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryStkRestrictedResponse queryStkRestricted(金证统一账户测试账户生成器.KessService.queryStkRestrictedRequest request);
@@ -2685,7 +2685,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryStkRestrictedResponse EndqueryStkRestricted(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustAgmtChkCfgRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustAgmtChkCfgRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustAgmtChkCfgResponse queryCustAgmtChkCfg(金证统一账户测试账户生成器.KessService.queryCustAgmtChkCfgRequest request);
@@ -2695,7 +2695,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustAgmtChkCfgResponse EndqueryCustAgmtChkCfg(System.IAsyncResult result);
         
-        // CODEGEN: 消息 checkCustAgmtRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 checkCustAgmtRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.checkCustAgmtResponse checkCustAgmt(金证统一账户测试账户生成器.KessService.checkCustAgmtRequest request);
@@ -2705,7 +2705,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.checkCustAgmtResponse EndcheckCustAgmt(System.IAsyncResult result);
         
-        // CODEGEN: 消息 synCustAgmtInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 synCustAgmtInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.synCustAgmtInfoResponse synCustAgmtInfo(金证统一账户测试账户生成器.KessService.synCustAgmtInfoRequest request);
@@ -2715,7 +2715,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.synCustAgmtInfoResponse EndsynCustAgmtInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfRelaPubComRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfRelaPubComRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfRelaPubComResponse mdfRelaPubCom(金证统一账户测试账户生成器.KessService.mdfRelaPubComRequest request);
@@ -2725,7 +2725,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfRelaPubComResponse EndmdfRelaPubCom(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryRelaPubComRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryRelaPubComRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryRelaPubComResponse queryRelaPubCom(金证统一账户测试账户生成器.KessService.queryRelaPubComRequest request);
@@ -2735,7 +2735,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryRelaPubComResponse EndqueryRelaPubCom(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfPubStkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfPubStkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfPubStkResponse mdfPubStk(金证统一账户测试账户生成器.KessService.mdfPubStkRequest request);
@@ -2745,7 +2745,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfPubStkResponse EndmdfPubStk(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryPubStkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryPubStkRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryPubStkResponse queryPubStk(金证统一账户测试账户生成器.KessService.queryPubStkRequest request);
@@ -2755,7 +2755,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryPubStkResponse EndqueryPubStk(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryCustSurveyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryCustSurveyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryCustSurveyResponse queryCustSurvey(金证统一账户测试账户生成器.KessService.queryCustSurveyRequest request);
@@ -2765,7 +2765,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryCustSurveyResponse EndqueryCustSurvey(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryApptCustInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryApptCustInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryApptCustInfoResponse queryApptCustInfo(金证统一账户测试账户生成器.KessService.queryApptCustInfoRequest request);
@@ -2775,7 +2775,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryApptCustInfoResponse EndqueryApptCustInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryApptCustBaseInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryApptCustBaseInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExResponse queryApptCustBaseInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExRequest request);
@@ -2785,7 +2785,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryApptCustBaseInfoExResponse EndqueryApptCustBaseInfoEx(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryApptCustInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryApptCustInfoExRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryApptCustInfoExResponse queryApptCustInfoEx(金证统一账户测试账户生成器.KessService.queryApptCustInfoExRequest request);
@@ -2795,7 +2795,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryApptCustInfoExResponse EndqueryApptCustInfoEx(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfApptBCInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfApptBCInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfApptBCInfoResponse mdfApptBCInfo(金证统一账户测试账户生成器.KessService.mdfApptBCInfoRequest request);
@@ -2805,7 +2805,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfApptBCInfoResponse EndmdfApptBCInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryApptBCInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryApptBCInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryApptBCInfoResponse queryApptBCInfo(金证统一账户测试账户生成器.KessService.queryApptBCInfoRequest request);
@@ -2815,7 +2815,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryApptBCInfoResponse EndqueryApptBCInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 querySurveyExclInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 querySurveyExclInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.querySurveyExclInfoResponse querySurveyExclInfo(金证统一账户测试账户生成器.KessService.querySurveyExclInfoRequest request);
@@ -2825,7 +2825,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.querySurveyExclInfoResponse EndquerySurveyExclInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 checkCustAgmtLimitRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 checkCustAgmtLimitRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.checkCustAgmtLimitResponse checkCustAgmtLimit(金证统一账户测试账户生成器.KessService.checkCustAgmtLimitRequest request);
@@ -2835,7 +2835,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.checkCustAgmtLimitResponse EndcheckCustAgmtLimit(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryApptOrgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryApptOrgInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryApptOrgInfoResponse queryApptOrgInfo(金证统一账户测试账户生成器.KessService.queryApptOrgInfoRequest request);
@@ -2845,7 +2845,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryApptOrgInfoResponse EndqueryApptOrgInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 addBizTrailRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 addBizTrailRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.addBizTrailResponse addBizTrail(金证统一账户测试账户生成器.KessService.addBizTrailRequest request);
@@ -2855,7 +2855,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.addBizTrailResponse EndaddBizTrail(System.IAsyncResult result);
         
-        // CODEGEN: 消息 qryCustBizRiskResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 qryCustBizRiskResultRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.qryCustBizRiskResultResponse qryCustBizRiskResult(金证统一账户测试账户生成器.KessService.qryCustBizRiskResultRequest request);
@@ -2865,7 +2865,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.qryCustBizRiskResultResponse EndqryCustBizRiskResult(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCustRiskProprightRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCustRiskProprightRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCustRiskProprightResponse mdfCustRiskPropright(金证统一账户测试账户生成器.KessService.mdfCustRiskProprightRequest request);
@@ -2875,7 +2875,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCustRiskProprightResponse EndmdfCustRiskPropright(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfCustNraTaxInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfCustNraTaxInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoResponse mdfCustNraTaxInfo(金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoRequest request);
@@ -2885,7 +2885,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfCustNraTaxInfoResponse EndmdfCustNraTaxInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 qryCustNraTaxInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 qryCustNraTaxInfoRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoResponse qryCustNraTaxInfo(金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoRequest request);
@@ -2895,7 +2895,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.qryCustNraTaxInfoResponse EndqryCustNraTaxInfo(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfFislCreditModifyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfFislCreditModifyRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfFislCreditModifyResponse mdfFislCreditModify(金证统一账户测试账户生成器.KessService.mdfFislCreditModifyRequest request);
@@ -2905,7 +2905,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfFislCreditModifyResponse EndmdfFislCreditModify(System.IAsyncResult result);
         
-        // CODEGEN: 消息 queryStkYmtRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 queryStkYmtRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.queryStkYmtResponse queryStkYmt(金证统一账户测试账户生成器.KessService.queryStkYmtRequest request);
@@ -2915,7 +2915,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.queryStkYmtResponse EndqueryStkYmt(System.IAsyncResult result);
         
-        // CODEGEN: 消息 mdfFmsCustChannelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 mdfFmsCustChannelRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.mdfFmsCustChannelResponse mdfFmsCustChannel(金证统一账户测试账户生成器.KessService.mdfFmsCustChannelRequest request);
@@ -2925,7 +2925,7 @@ namespace 金证统一账户测试账户生成器.KessService {
         
         金证统一账户测试账户生成器.KessService.mdfFmsCustChannelResponse EndmdfFmsCustChannel(System.IAsyncResult result);
         
-        // CODEGEN: 消息 listKeyMonitorInfoOrImpRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30004/kess/services/KessService)不匹配
+        // CODEGEN: 消息 listKeyMonitorInfoOrImpRequest 的包装命名空间(http://impl.service.wsdl.kess.szkingdom.com)以后生成的消息协定与默认值(http://60.173.222.38:30092/kess/services/KessService)不匹配
         [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(Style=System.ServiceModel.OperationFormatStyle.Rpc, SupportFaults=true, Use=System.ServiceModel.OperationFormatUse.Encoded)]
         金证统一账户测试账户生成器.KessService.listKeyMonitorInfoOrImpResponse listKeyMonitorInfoOrImp(金证统一账户测试账户生成器.KessService.listKeyMonitorInfoOrImpRequest request);
@@ -2956,7 +2956,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="createDirectoryResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="createDirectoryResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class createDirectoryResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -2990,7 +2990,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="signAgreementResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="signAgreementResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class signAgreementResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3024,7 +3024,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="encryptByAESResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="encryptByAESResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class encryptByAESResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3058,7 +3058,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="decryptByAESResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="decryptByAESResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class decryptByAESResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3092,7 +3092,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openYMTAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openYMTAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openYMTAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3126,7 +3126,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserInfoByIdResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserInfoByIdResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getUserInfoByIdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3160,7 +3160,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operatorLoginResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operatorLoginResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operatorLoginResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3194,7 +3194,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operatorLogoutResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operatorLogoutResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operatorLogoutResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3228,7 +3228,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOperatorMenuListResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOperatorMenuListResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryOperatorMenuListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3262,7 +3262,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOperatorOrgListResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOperatorOrgListResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryOperatorOrgListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3296,7 +3296,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryScheduleResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryScheduleResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryScheduleResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3330,7 +3330,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registSummaryInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registSummaryInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class registSummaryInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3364,7 +3364,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOrderInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOrderInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryOrderInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3398,7 +3398,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="refuseWitnessResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="refuseWitnessResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class refuseWitnessResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3432,7 +3432,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustBasicInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustBasicInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustBasicInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3466,7 +3466,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustExpandInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustExpandInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustExpandInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3500,7 +3500,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOpenAccountProgressResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOpenAccountProgressResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryOpenAccountProgressResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3534,7 +3534,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustBasicInfoListResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustBasicInfoListResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustBasicInfoListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3568,7 +3568,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAccountInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAccountInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryAccountInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3602,7 +3602,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="validateIdCodeResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="validateIdCodeResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class validateIdCodeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3636,7 +3636,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBasicInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateBasicInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class updateBasicInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3670,7 +3670,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateExpandInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateExpandInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class updateExpandInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3704,7 +3704,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="changeOpenAccountFlowResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="changeOpenAccountFlowResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class changeOpenAccountFlowResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3738,7 +3738,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRiskSurveyResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRiskSurveyResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryRiskSurveyResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3772,7 +3772,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="saveRiskSurveyAnswerResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="saveRiskSurveyAnswerResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class saveRiskSurveyAnswerResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3806,7 +3806,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRiskSurveyAnswerResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRiskSurveyAnswerResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryRiskSurveyAnswerResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3840,7 +3840,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="onSearchZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="onSearchZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class onSearchZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3874,7 +3874,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOrgInfoListResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOrgInfoListResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryOrgInfoListResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3908,7 +3908,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryImgQcParaResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryImgQcParaResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryImgQcParaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3942,7 +3942,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryZDImgQcParaResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryZDImgQcParaResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryZDImgQcParaResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -3976,7 +3976,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getDictDataResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getDictDataResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getDictDataResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4010,7 +4010,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryMenuUserResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryMenuUserResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryMenuUserResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4044,7 +4044,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operatorInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operatorInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operatorInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4078,7 +4078,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySurveyIndexResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySurveyIndexResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class querySurveyIndexResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4116,7 +4116,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgStringResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgStringResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class uploadImgStringResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4150,7 +4150,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgStringResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgStringResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class downloadImgStringResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4184,7 +4184,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgStringByImgClsResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgStringByImgClsResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class downloadImgStringByImgClsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4218,7 +4218,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openCustomerResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openCustomerResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openCustomerResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4252,7 +4252,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openCuacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openCuacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openCuacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4286,7 +4286,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="webCheckApptCustInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="webCheckApptCustInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class webCheckApptCustInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4320,7 +4320,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfOtherInfoCustResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfOtherInfoCustResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfOtherInfoCustResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4354,7 +4354,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="backApptCustInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="backApptCustInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class backApptCustInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4388,7 +4388,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserPasswordResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserPasswordResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserPasswordResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4422,7 +4422,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openStkAccRunTimeResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openStkAccRunTimeResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openStkAccRunTimeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4456,7 +4456,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openStkTrdAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openStkTrdAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openStkTrdAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4490,7 +4490,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="stkTrdacctBindResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="stkTrdacctBindResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class stkTrdacctBindResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4524,7 +4524,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openOfTrdacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openOfTrdacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openOfTrdacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4558,7 +4558,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="registerOfTrdacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="registerOfTrdacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class registerOfTrdacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4592,7 +4592,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listOfStkTrdAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listOfStkTrdAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listOfStkTrdAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4626,7 +4626,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listOfTrdacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listOfTrdacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listOfTrdacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4660,7 +4660,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="moneyDeductResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="moneyDeductResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class moneyDeductResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4694,7 +4694,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modifyCustInfoTableResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modifyCustInfoTableResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class modifyCustInfoTableResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4728,7 +4728,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listStkPbuOrgResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listStkPbuOrgResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listStkPbuOrgResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4762,7 +4762,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCommonParamsResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCommonParamsResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getCommonParamsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4796,7 +4796,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="webSendSmsResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="webSendSmsResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class webSendSmsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4830,7 +4830,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="saveVideoInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="saveVideoInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class saveVideoInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4864,7 +4864,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserExtInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserExtInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserExtInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4898,7 +4898,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgreementResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgreementResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCustAgreementResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4932,7 +4932,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ansSurveyResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ansSurveyResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class ansSurveyResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -4966,7 +4966,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cubsbScOpenAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cubsbScOpenAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class cubsbScOpenAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5000,7 +5000,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openUserImgInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openUserImgInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openUserImgInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5034,7 +5034,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustFlagYHZQResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustFlagYHZQResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCustFlagYHZQResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5068,7 +5068,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getWebBizLogResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getWebBizLogResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getWebBizLogResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5102,7 +5102,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCubsPubExtOrgResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCubsPubExtOrgResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getCubsPubExtOrgResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5136,7 +5136,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCubsbContractResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCubsbContractResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getCubsbContractResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5170,7 +5170,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="custCodeStatusResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="custCodeStatusResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class custCodeStatusResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5204,7 +5204,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySendOrderResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySendOrderResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class querySendOrderResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5238,7 +5238,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getStkTregStatusResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getStkTregStatusResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getStkTregStatusResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5272,7 +5272,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cubsbScCloseAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cubsbScCloseAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class cubsbScCloseAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5306,7 +5306,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCubsbLogResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCubsbLogResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getCubsbLogResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5340,7 +5340,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getGlobalConfigsResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getGlobalConfigsResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getGlobalConfigsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5374,7 +5374,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getImgScanConfigsResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getImgScanConfigsResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getImgScanConfigsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5408,7 +5408,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="synImgInfo2KbssResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="synImgInfo2KbssResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class synImgInfo2KbssResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5442,7 +5442,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="modifyFrtBizStatusResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="modifyFrtBizStatusResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class modifyFrtBizStatusResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5476,7 +5476,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="contractActionOrCancelResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="contractActionOrCancelResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class contractActionOrCancelResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5510,7 +5510,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="webImgNoUpResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="webImgNoUpResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class webImgNoUpResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5544,7 +5544,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operUserImgReCordInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operUserImgReCordInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operUserImgReCordInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5578,7 +5578,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCubsbAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCubsbAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCubsbAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5612,7 +5612,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCubsbContractResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCubsbContractResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCubsbContractResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5646,7 +5646,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="closeCuacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="closeCuacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class closeCuacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5680,7 +5680,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="closeCustomerResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="closeCustomerResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class closeCustomerResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5714,7 +5714,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listCustInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listCustInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listCustInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5748,7 +5748,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listCuacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listCuacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listCuacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5782,7 +5782,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustOwnOrgResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustOwnOrgResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCustOwnOrgResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5816,7 +5816,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="restoreCuacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="restoreCuacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class restoreCuacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5850,7 +5850,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="restoreCustomerResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="restoreCustomerResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class restoreCustomerResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5884,7 +5884,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="restoreStkTrdacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="restoreStkTrdacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class restoreStkTrdacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5918,7 +5918,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setTrdacctMdfCuacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setTrdacctMdfCuacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setTrdacctMdfCuacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5952,7 +5952,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCuacctClsFeeResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCuacctClsFeeResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCuacctClsFeeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -5986,7 +5986,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserGenInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserGenInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserGenInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6020,7 +6020,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserOccuInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserOccuInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getUserOccuInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6054,7 +6054,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getChargeTemplateResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getChargeTemplateResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getChargeTemplateResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6088,7 +6088,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="saveRiskSurveyAnswerBatchResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="saveRiskSurveyAnswerBatchResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class saveRiskSurveyAnswerBatchResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6122,7 +6122,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ansSurveyBatchResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ansSurveyBatchResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class ansSurveyBatchResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6156,7 +6156,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getAgreementInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getAgreementInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getAgreementInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6190,7 +6190,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getAgreementContentResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getAgreementContentResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getAgreementContentResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6224,7 +6224,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getPayFeeResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getPayFeeResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getPayFeeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6258,7 +6258,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getMenuAutorityResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getMenuAutorityResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getMenuAutorityResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6292,7 +6292,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="searchDateTimeResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="searchDateTimeResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class searchDateTimeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6326,7 +6326,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="isPhoneOpenAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="isPhoneOpenAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class isPhoneOpenAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6360,7 +6360,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateCertInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateCertInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class updateCertInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6394,7 +6394,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="searchSignAgreementResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="searchSignAgreementResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class searchSignAgreementResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6428,7 +6428,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="onSearchNewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="onSearchNewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class onSearchNewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6462,7 +6462,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openNewStkAccRunTimeResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openNewStkAccRunTimeResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openNewStkAccRunTimeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6496,7 +6496,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="saveApptCustInfoExResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="saveApptCustInfoExResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class saveApptCustInfoExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6530,7 +6530,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="searchSubsbScContractResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="searchSubsbScContractResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class searchSubsbScContractResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6564,7 +6564,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="activateCubsbScResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="activateCubsbScResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class activateCubsbScResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6598,7 +6598,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getSurveySetResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getSurveySetResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getSurveySetResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6632,7 +6632,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRiskSurveyResultResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRiskSurveyResultResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryRiskSurveyResultResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6666,7 +6666,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryInvestProInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryInvestProInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryInvestProInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6700,7 +6700,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setInvestProInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setInvestProInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setInvestProInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6734,7 +6734,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryToConfirmRiskSurveyResultResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryToConfirmRiskSurveyResultResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryToConfirmRiskSurveyResultResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6768,7 +6768,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="confirmReslutRiskSurveyResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="confirmReslutRiskSurveyResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class confirmReslutRiskSurveyResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6802,7 +6802,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getRiskSurveyResultResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getRiskSurveyResultResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getRiskSurveyResultResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6836,7 +6836,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="ansRiskSurveyBatchResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="ansRiskSurveyBatchResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class ansRiskSurveyBatchResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6870,7 +6870,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openAgentResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openAgentResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openAgentResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6904,7 +6904,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgentAcctBizResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgentAcctBizResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCustAgentAcctBizResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6938,7 +6938,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgentCuacctBizResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgentCuacctBizResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCustAgentCuacctBizResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -6972,7 +6972,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgentStkBizResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgentStkBizResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCustAgentStkBizResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7006,7 +7006,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="checkCuacctByIdResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="checkCuacctByIdResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class checkCuacctByIdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7040,7 +7040,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfOrgExtInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfOrgExtInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfOrgExtInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7074,7 +7074,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="trxCalendarQueryResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="trxCalendarQueryResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class trxCalendarQueryResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7108,7 +7108,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="syncSurveyAns2KbssResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="syncSurveyAns2KbssResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class syncSurveyAns2KbssResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7142,7 +7142,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="submitStkAcctBizOpReq2NewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="submitStkAcctBizOpReq2NewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class submitStkAcctBizOpReq2NewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7176,7 +7176,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="searchStkAcctBizInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="searchStkAcctBizInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class searchStkAcctBizInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7210,7 +7210,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openStkAcctByNewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openStkAcctByNewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openStkAcctByNewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7244,7 +7244,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openYMTAcctByNewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openYMTAcctByNewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openYMTAcctByNewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7278,7 +7278,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openYMTAcctByKbssResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openYMTAcctByKbssResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openYMTAcctByKbssResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7316,7 +7316,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgStringNoBizResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgStringNoBizResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class uploadImgStringNoBizResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7350,7 +7350,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="searchAcctFrtBizLogResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="searchAcctFrtBizLogResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class searchAcctFrtBizLogResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7384,7 +7384,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="applyAcctFrtBizResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="applyAcctFrtBizResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class applyAcctFrtBizResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7418,7 +7418,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="searchImgScanConfigResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="searchImgScanConfigResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class searchImgScanConfigResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7452,7 +7452,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="searchUserImgInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="searchUserImgInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class searchUserImgInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7486,7 +7486,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="maintainUserImgInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="maintainUserImgInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class maintainUserImgInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7520,7 +7520,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="synImgInfo2KbssExResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="synImgInfo2KbssExResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class synImgInfo2KbssExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7554,7 +7554,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="workBoardScZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="workBoardScZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class workBoardScZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7588,7 +7588,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="closeCustAcctNewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="closeCustAcctNewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class closeCustAcctNewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7622,7 +7622,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="search2ndBoardMarketAgmtResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="search2ndBoardMarketAgmtResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class search2ndBoardMarketAgmtResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7656,7 +7656,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="searchStkAcctBizInfoExResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="searchStkAcctBizInfoExResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class searchStkAcctBizInfoExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7690,7 +7690,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="syncAnsAppSurvey2RunResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="syncAnsAppSurvey2RunResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class syncAnsAppSurvey2RunResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7724,7 +7724,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="updateUserImportantInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="updateUserImportantInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class updateUserImportantInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7758,7 +7758,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="maintainUserImportantInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="maintainUserImportantInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class maintainUserImportantInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7792,7 +7792,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustRevisitInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustRevisitInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCustRevisitInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7826,7 +7826,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listCustRevisitInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listCustRevisitInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listCustRevisitInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7860,7 +7860,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustInfoByCuacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustInfoByCuacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustInfoByCuacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7894,7 +7894,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserGeneralInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserGeneralInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserGeneralInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7928,7 +7928,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="hkVotingDeclareResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="hkVotingDeclareResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class hkVotingDeclareResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7962,7 +7962,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="hkActingDeclareResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="hkActingDeclareResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class hkActingDeclareResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -7996,7 +7996,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listStkRegBizInfoHkResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listStkRegBizInfoHkResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listStkRegBizInfoHkResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8030,7 +8030,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgreementHkResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustAgreementHkResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCustAgreementHkResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8064,7 +8064,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listHkTzxxInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listHkTzxxInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listHkTzxxInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8098,7 +8098,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listHkYwhbInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listHkYwhbInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listHkYwhbInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8132,7 +8132,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listSettNoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listSettNoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listSettNoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8166,7 +8166,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cfmFistAppCreditNewResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cfmFistAppCreditNewResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class cfmFistAppCreditNewResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8200,7 +8200,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="closeStkTrdacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="closeStkTrdacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class closeStkTrdacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8234,7 +8234,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="stkPleRepurAppResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="stkPleRepurAppResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class stkPleRepurAppResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8268,7 +8268,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listStkPleRepurAppResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listStkPleRepurAppResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listStkPleRepurAppResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8302,7 +8302,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operFislCdtApplResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operFislCdtApplResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operFislCdtApplResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8336,7 +8336,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustAgreementResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustAgreementResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustAgreementResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8370,7 +8370,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openOperWayResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openOperWayResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openOperWayResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8404,7 +8404,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cubsbCloseAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cubsbCloseAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class cubsbCloseAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8438,7 +8438,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="checkUserAuthInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="checkUserAuthInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class checkUserAuthInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8472,7 +8472,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserInfoByIdAndTelResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserInfoByIdAndTelResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getUserInfoByIdAndTelResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8506,7 +8506,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="activeCustAcctNewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="activeCustAcctNewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class activeCustAcctNewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8540,7 +8540,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="activeCustNativeResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="activeCustNativeResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class activeCustNativeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8574,7 +8574,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCustOtherStoreInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCustOtherStoreInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getCustOtherStoreInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8608,7 +8608,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryHkBizLogResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryHkBizLogResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryHkBizLogResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8642,7 +8642,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCheckResultByNewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCheckResultByNewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getCheckResultByNewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8676,7 +8676,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="openFislCuacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="openFislCuacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class openFislCuacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8710,7 +8710,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCustFirstTrdDateResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCustFirstTrdDateResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getCustFirstTrdDateResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8744,7 +8744,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFirstTrdDateByNewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFirstTrdDateByNewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryFirstTrdDateByNewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8778,7 +8778,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCustAvgAssetsResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getCustAvgAssetsResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getCustAvgAssetsResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8812,7 +8812,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operBlackListInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operBlackListInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operBlackListInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8846,7 +8846,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryBlackListInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryBlackListInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryBlackListInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8880,7 +8880,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operRelaInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operRelaInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operRelaInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8914,7 +8914,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRelaInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRelaInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryRelaInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8948,7 +8948,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operFislChiefInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operFislChiefInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operFislChiefInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -8982,7 +8982,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFislChiefInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryFislChiefInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryFislChiefInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9016,7 +9016,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operRecommenderInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operRecommenderInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operRecommenderInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9050,7 +9050,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRecommenderInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRecommenderInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryRecommenderInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9084,7 +9084,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operEmerContactInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operEmerContactInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operEmerContactInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9118,7 +9118,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmerContactInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryEmerContactInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryEmerContactInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9152,7 +9152,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operAcctFirmRelaInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operAcctFirmRelaInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operAcctFirmRelaInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9186,7 +9186,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAcctFirmRelaInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryAcctFirmRelaInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryAcctFirmRelaInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9220,7 +9220,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operCustFislCdtApplResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operCustFislCdtApplResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operCustFislCdtApplResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9254,7 +9254,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFislCdtApplResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFislCdtApplResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustFislCdtApplResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9288,7 +9288,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operCustFislCdtFlowResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operCustFislCdtFlowResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operCustFislCdtFlowResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9322,7 +9322,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFislCdtFlowResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFislCdtFlowResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustFislCdtFlowResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9356,7 +9356,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operCustContractInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operCustContractInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operCustContractInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9390,7 +9390,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustContractInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustContractInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustContractInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9424,7 +9424,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustCreditStatusResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustCreditStatusResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCustCreditStatusResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9458,7 +9458,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="custInfoToFislSysResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="custInfoToFislSysResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class custInfoToFislSysResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9492,7 +9492,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listCreditLevelResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listCreditLevelResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listCreditLevelResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9526,7 +9526,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listFislInterestGroupInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listFislInterestGroupInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listFislInterestGroupInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9560,7 +9560,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="custCreditApplResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="custCreditApplResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class custCreditApplResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9594,7 +9594,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="auditCustCreditApplResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="auditCustCreditApplResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class auditCustCreditApplResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9628,7 +9628,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustCreditApplResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustCreditApplResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustCreditApplResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9662,7 +9662,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="evaluateCreditLevelResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="evaluateCreditLevelResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class evaluateCreditLevelResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9696,7 +9696,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cfmFislAppCreditResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cfmFislAppCreditResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class cfmFislAppCreditResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9730,7 +9730,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="auditCfmFislAppCreditResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="auditCfmFislAppCreditResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class auditCfmFislAppCreditResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9764,7 +9764,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="custCreditActiveResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="custCreditActiveResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class custCreditActiveResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9798,7 +9798,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFundAuthorityResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFundAuthorityResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustFundAuthorityResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9832,7 +9832,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustTradeAuthorityResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustTradeAuthorityResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustTradeAuthorityResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9866,7 +9866,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="cubsbScSyncInterestResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="cubsbScSyncInterestResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class cubsbScSyncInterestResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9900,7 +9900,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="commonBizToNewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="commonBizToNewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class commonBizToNewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9934,7 +9934,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operOtcAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operOtcAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operOtcAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -9968,7 +9968,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOtcAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOtcAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryOtcAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10002,7 +10002,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operOtcCustPayerResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operOtcCustPayerResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operOtcCustPayerResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10036,7 +10036,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOtcCustPayerInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryOtcCustPayerInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryOtcCustPayerInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10070,7 +10070,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="custInfoToOTCSysResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="custInfoToOTCSysResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class custInfoToOTCSysResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10104,7 +10104,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustChannelResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustChannelResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCustChannelResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10138,7 +10138,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserExtInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserExtInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getUserExtInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10172,7 +10172,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getPartnerInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getPartnerInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getPartnerInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10206,7 +10206,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="qryFislAttrResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryFislAttrResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class qryFislAttrResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10240,7 +10240,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfFislAttrResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfFislAttrResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfFislAttrResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10274,7 +10274,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="qryLinkmanInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryLinkmanInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class qryLinkmanInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10308,7 +10308,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfTaAcctInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfTaAcctInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfTaAcctInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10342,7 +10342,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="custInfoToBankAcctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="custInfoToBankAcctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class custInfoToBankAcctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10376,7 +10376,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setMainCuacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setMainCuacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setMainCuacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10410,7 +10410,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operBoodsBizInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operBoodsBizInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operBoodsBizInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10444,7 +10444,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listBoodsBizInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listBoodsBizInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listBoodsBizInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10478,7 +10478,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operProManagerInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operProManagerInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operProManagerInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10512,7 +10512,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="qryProManaerInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryProManaerInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class qryProManaerInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10546,7 +10546,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operUntrdBizHkResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operUntrdBizHkResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class operUntrdBizHkResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10580,7 +10580,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="qryUntrdBizHkResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryUntrdBizHkResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class qryUntrdBizHkResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10614,7 +10614,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getShStkInfoByNewZDResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getShStkInfoByNewZDResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getShStkInfoByNewZDResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10648,7 +10648,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="stkTrdacctTranAllResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="stkTrdacctTranAllResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class stkTrdacctTranAllResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10682,7 +10682,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="closeOfTrdacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="closeOfTrdacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class closeOfTrdacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10716,7 +10716,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="manageCOFMContractResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="manageCOFMContractResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class manageCOFMContractResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10750,7 +10750,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setMainTrdacctResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setMainTrdacctResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setMainTrdacctResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10784,7 +10784,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getBizSerialNoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getBizSerialNoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getBizSerialNoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10818,7 +10818,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgFileResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="uploadImgFileResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class uploadImgFileResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10852,7 +10852,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserImgInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getUserImgInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getUserImgInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10886,7 +10886,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgFileResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="downloadImgFileResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class downloadImgFileResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10920,7 +10920,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="bjhgCustApplyCheckResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="bjhgCustApplyCheckResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class bjhgCustApplyCheckResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10954,7 +10954,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryBjhgCustApplyCheckResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryBjhgCustApplyCheckResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryBjhgCustApplyCheckResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -10988,7 +10988,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySurveyRatingStdMXResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySurveyRatingStdMXResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class querySurveyRatingStdMXResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11022,7 +11022,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserRiskDetailInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserRiskDetailInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryUserRiskDetailInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11056,7 +11056,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="qrySurveyRatingStdResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qrySurveyRatingStdResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class qrySurveyRatingStdResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11090,7 +11090,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustInvestExpInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustInvestExpInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCustInvestExpInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11124,7 +11124,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustInvestExpInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustInvestExpInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class qryCustInvestExpInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11158,7 +11158,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCreditRecordResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCreditRecordResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCreditRecordResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11192,7 +11192,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCreditRecordResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCreditRecordResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class qryCreditRecordResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11226,7 +11226,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserLinkInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserLinkInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserLinkInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11260,7 +11260,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustOtherFlagResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="setCustOtherFlagResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class setCustOtherFlagResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11294,7 +11294,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustLinkInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustLinkInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCustLinkInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11328,7 +11328,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserGuardianInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserGuardianInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserGuardianInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11362,7 +11362,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserBeneficiaryInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserBeneficiaryInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserBeneficiaryInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11396,7 +11396,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserOccupationInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserOccupationInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserOccupationInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11430,7 +11430,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserBasicCorpInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserBasicCorpInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserBasicCorpInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11464,7 +11464,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserLinkmanInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfUserLinkmanInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfUserLinkmanInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11498,7 +11498,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCriticalContactResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCriticalContactResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCriticalContactResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11532,7 +11532,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfPartnerInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfPartnerInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfPartnerInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11566,7 +11566,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustAssetsInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustAssetsInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCustAssetsInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11600,7 +11600,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfControlLerInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfControlLerInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfControlLerInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11634,7 +11634,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfProductInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfProductInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfProductInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11668,7 +11668,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfStkRestrictedResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfStkRestrictedResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfStkRestrictedResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11702,7 +11702,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustLinkInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustLinkInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustLinkInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11736,7 +11736,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserGuardianInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserGuardianInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryUserGuardianInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11770,7 +11770,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserBeneficiaryInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryUserBeneficiaryInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryUserBeneficiaryInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11804,7 +11804,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFlagInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFlagInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustFlagInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11838,7 +11838,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getLinkmanInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLinkmanInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class getLinkmanInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11872,7 +11872,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFlagResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustFlagResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustFlagResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11906,7 +11906,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustAssetsInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustAssetsInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustAssetsInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11940,7 +11940,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryControllerInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryControllerInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryControllerInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -11974,7 +11974,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryProductInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryProductInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryProductInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12008,7 +12008,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryStkRestrictedResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryStkRestrictedResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryStkRestrictedResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12042,7 +12042,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustAgmtChkCfgResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustAgmtChkCfgResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustAgmtChkCfgResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12076,7 +12076,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="checkCustAgmtResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="checkCustAgmtResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class checkCustAgmtResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12110,7 +12110,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="synCustAgmtInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="synCustAgmtInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class synCustAgmtInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12144,7 +12144,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfRelaPubComResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfRelaPubComResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfRelaPubComResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12178,7 +12178,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRelaPubComResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryRelaPubComResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryRelaPubComResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12212,7 +12212,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfPubStkResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfPubStkResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfPubStkResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12246,7 +12246,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPubStkResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryPubStkResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryPubStkResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12280,7 +12280,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustSurveyResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryCustSurveyResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryCustSurveyResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12314,7 +12314,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryApptCustInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12348,7 +12348,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustBaseInfoExResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustBaseInfoExResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryApptCustBaseInfoExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12382,7 +12382,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustInfoExResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptCustInfoExResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryApptCustInfoExResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12416,7 +12416,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfApptBCInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfApptBCInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfApptBCInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12450,7 +12450,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptBCInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptBCInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryApptBCInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12484,7 +12484,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="querySurveyExclInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="querySurveyExclInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class querySurveyExclInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12518,7 +12518,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="checkCustAgmtLimitResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="checkCustAgmtLimitResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class checkCustAgmtLimitResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12552,7 +12552,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptOrgInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryApptOrgInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryApptOrgInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12586,7 +12586,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="addBizTrailResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="addBizTrailResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class addBizTrailResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12620,7 +12620,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustBizRiskResultResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustBizRiskResultResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class qryCustBizRiskResultResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12654,7 +12654,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustRiskProprightResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustRiskProprightResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCustRiskProprightResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12688,7 +12688,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustNraTaxInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfCustNraTaxInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfCustNraTaxInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12722,7 +12722,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustNraTaxInfoResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="qryCustNraTaxInfoResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class qryCustNraTaxInfoResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12756,7 +12756,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfFislCreditModifyResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfFislCreditModifyResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfFislCreditModifyResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12790,7 +12790,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="queryStkYmtResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="queryStkYmtResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class queryStkYmtResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12824,7 +12824,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfFmsCustChannelResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="mdfFmsCustChannelResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class mdfFmsCustChannelResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
@@ -12858,7 +12858,7 @@ namespace 金证统一账户测试账户生成器.KessService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="listKeyMonitorInfoOrImpResponse", WrapperNamespace="http://60.173.222.38:30004/kess/services/KessService", IsWrapped=true)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="listKeyMonitorInfoOrImpResponse", WrapperNamespace="http://60.173.222.38:30092/kess/services/KessService", IsWrapped=true)]
     public partial class listKeyMonitorInfoOrImpResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="", Order=0)]
