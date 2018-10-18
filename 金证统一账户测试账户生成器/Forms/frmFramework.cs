@@ -14,7 +14,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 软件使用期限
         /// </summary>
-        DateTime expiredDate = DateTime.Parse("2018/11/30");
+        DateTime expiredDate = DateTime.Parse("2018/12/31");
 
         /// <summary>
         /// 金证接口调用工具
@@ -57,7 +57,7 @@ namespace 金证统一账户测试账户生成器
         Timer timerRefreshQueue;
 
         /// <summary>
-        /// 窗体默认标题
+        /// 用于保存原始的窗体标题，以便切换窗体时显示不同的标题
         /// </summary>
         string defaultTitle = "";
         
