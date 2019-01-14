@@ -2,9 +2,6 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="金证统一账户测试账户生成器.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="webservice" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://60.173.222.38:30004/kess/services/KessService?wsdl</Value>
-    </Setting>
     <Setting Name="操作员代码" Type="System.String" Scope="User">
       <Value Profile="(Default)">90019</Value>
     </Setting>
@@ -58,6 +55,9 @@
     </Setting>
     <Setting Name="最大并发数" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">10</Value>
+    </Setting>
+    <Setting Name="webservice" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://127.0.0.1:8080/kess/services/KessService?wsdl</Value>
     </Setting>
   </Settings>
 </SettingsFile>

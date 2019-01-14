@@ -25,18 +25,6 @@ namespace 金证统一账户测试账户生成器.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://60.173.222.38:30004/kess/services/KessService?wsdl")]
-        public string webservice {
-            get {
-                return ((string)(this["webservice"]));
-            }
-            set {
-                this["webservice"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("90019")]
         public string 操作员代码 {
             get {
@@ -248,6 +236,18 @@ namespace 金证统一账户测试账户生成器.Properties {
             }
             set {
                 this["最大并发数"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://127.0.0.1:8080/kess/services/KessService?wsdl")]
+        public string webservice {
+            get {
+                return ((string)(this["webservice"]));
+            }
+            set {
+                this["webservice"] = value;
             }
         }
     }
