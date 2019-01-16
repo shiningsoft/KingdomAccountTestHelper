@@ -86,6 +86,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -158,8 +159,10 @@
       <DependentUpon>frmStartLogo.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs" />
+    <Compile Include="Yushen\Util\Base64Helper.cs" />
     <Compile Include="Yushen\Util\EncryptHelper.cs" />
     <Compile Include="Yushen\Util\Formatter.cs" />
+    <Compile Include="Yushen\Util\Https.cs" />
     <Compile Include="Yushen\Util\ImageHelper.cs" />
     <Compile Include="Yushen\Util\RSAHelper.cs" />
     <Compile Include="Yushen\WebService\KessClient\CustomDict.cs" />
@@ -191,6 +194,7 @@
     <Compile Include="Yushen\WebService\Webservice.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Yushen\ZhengTong\Validator\ZtMobile.cs" />
     <Content Include="CustomDict\CUST_AGMT_TYPE.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

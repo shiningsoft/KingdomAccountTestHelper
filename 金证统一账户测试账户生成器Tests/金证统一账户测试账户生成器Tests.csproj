@@ -56,6 +56,7 @@
     <Compile Include="Yushen\Util\GeneratorTests.cs" />
     <Compile Include="Yushen\Util\ResponseTest.cs" />
     <Compile Include="Yushen\Util\ValidatorTests.cs" />
+    <Compile Include="Yushen\ZhengTong\Validator\ZtMobileTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\金证统一账户测试账户生成器\金证统一账户测试账户生成器.csproj">

@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace 旗鱼电话.Classes
+namespace Yushen.Util
 {
     public class EncryptHelper
     {
@@ -616,7 +616,24 @@ namespace 旗鱼电话.Classes
             return Convert.ToBase64String(Result);  //返回长度为44字节的字符串
         }
         #endregion
-    
+
+
+        #region  SHA512加密算法
+        
+        /// <summary>
+        /// SHA512函数
+        /// </summary>
+        /// <param name="str">原始字符串</param>
+        /// <returns>SHA512结果(返回长度为44字节的字符串)</returns>
+        public static string SHA512(string str)
+        {
+            byte[] SHA512Data = Encoding.UTF8.GetBytes(str);
+            SHA512Managed Sha512 = new SHA512Managed();
+            byte[] Result = Sha512.ComputeHash(SHA512Data);
+            return Convert.ToBase64String(Result);  //返回长度为44字节的字符串
+        }
+        #endregion
+
         #region RSA加密 解密
         /// <summary>RSA加密
         /// 
