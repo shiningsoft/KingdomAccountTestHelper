@@ -2,12 +2,14 @@
 using System.Windows.Forms;
 using Settings = 金证统一账户测试账户生成器.Properties.Settings;
 using Yushen.WebService.KessClient;
+using System.Data;
 
 namespace 金证统一账户测试账户生成器
 {
     public partial class frmSettings : Form
     {
         frmFramework frmFramework;
+        DataTable webservices = new DataTable();
 
         public frmSettings(frmFramework form)
         {
@@ -33,6 +35,15 @@ namespace 金证统一账户测试账户生成器
             tbxCellsD.Text = Settings.Default.积极型;
             tbxCellsE.Text = Settings.Default.激进型;
             tbxMaxConnections.Text = Settings.Default.最大并发数.ToString();
+
+            webservices.Columns.Add(new DataColumn("webservice"));
+            foreach (var url in Settings.Default.webservices)
+            {
+                DataRow dr = webservices.NewRow();
+                dr["webservice"] = url;
+                webservices.Rows.Add(dr);
+            }
+            dgvWebServices.DataSource = webservices;
         }
 
         private void accept_Click(object sender, EventArgs e)
@@ -60,6 +71,22 @@ namespace 金证统一账户测试账户生成器
             Settings.Default.稳健型 = tbxCellsC.Text;
             Settings.Default.积极型 = tbxCellsD.Text;
             Settings.Default.激进型 = tbxCellsE.Text;
+
+            Settings.Default.webservices.Clear();
+            foreach (DataGridViewRow dr in dgvWebServices.Rows)
+            {
+                if (dr.IsNewRow)
+                {
+                    continue;
+                }
+                if (!Uri.IsWellFormedUriString(dr.Cells["webservice"].Value.ToString(),UriKind.RelativeOrAbsolute))
+                {
+                    MessageBox.Show("WebService地址格式不合法，请检查！");
+                    return;
+                }
+                Settings.Default.webservices.Add(dr.Cells["webservice"].Value.ToString());
+            }
+
             Settings.Default.Save();
 
             frmFramework.InitWebService();

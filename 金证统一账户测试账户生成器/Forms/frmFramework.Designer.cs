@@ -65,6 +65,7 @@ namespace 金证统一账户测试账户生成器
             this.tsslExpired = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.toolStripDropDownButtonWebServices = new System.Windows.Forms.ToolStripDropDownButton();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -207,6 +208,7 @@ namespace 金证统一账户测试账户生成器
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripDropDownButtonWebServices,
             this.toolStripStatusLabelCurrentServer,
             this.currentUser,
             this.requestQueueCount,
@@ -241,7 +243,7 @@ namespace 金证统一账户测试账户生成器
             // tsslVersion
             // 
             this.tsslVersion.Name = "tsslVersion";
-            this.tsslVersion.Size = new System.Drawing.Size(618, 19);
+            this.tsslVersion.Size = new System.Drawing.Size(515, 19);
             this.tsslVersion.Spring = true;
             this.tsslVersion.Text = "当前版本：";
             this.tsslVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -269,6 +271,13 @@ namespace 金证统一账户测试账户生成器
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(986, 622);
             this.panel.TabIndex = 76;
+            // 
+            // toolStripDropDownButtonWebServices
+            // 
+            this.toolStripDropDownButtonWebServices.Name = "toolStripDropDownButtonWebServices";
+            this.toolStripDropDownButtonWebServices.Size = new System.Drawing.Size(72, 22);
+            this.toolStripDropDownButtonWebServices.Text = "当前环境";
+            this.toolStripDropDownButtonWebServices.ToolTipText = "选择环境";
             // 
             // frmFramework
             // 
@@ -322,6 +331,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripMenuItem 自动重新登录toolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 购买授权ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonWebServices;
     }
 }
 
