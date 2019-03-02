@@ -58,6 +58,7 @@ namespace 金证统一账户测试账户生成器
             this.购买授权ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripDropDownButtonWebServices = new System.Windows.Forms.ToolStripDropDownButton();
             this.toolStripStatusLabelCurrentServer = new System.Windows.Forms.ToolStripStatusLabel();
             this.currentUser = new System.Windows.Forms.ToolStripStatusLabel();
             this.requestQueueCount = new System.Windows.Forms.ToolStripStatusLabel();
@@ -65,7 +66,7 @@ namespace 金证统一账户测试账户生成器
             this.tsslExpired = new System.Windows.Forms.ToolStripStatusLabel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
-            this.toolStripDropDownButtonWebServices = new System.Windows.Forms.ToolStripDropDownButton();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -208,6 +209,7 @@ namespace 金证统一账户测试账户生成器
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1,
             this.toolStripDropDownButtonWebServices,
             this.toolStripStatusLabelCurrentServer,
             this.currentUser,
@@ -219,6 +221,13 @@ namespace 金证统一账户测试账户生成器
             this.statusStrip1.Size = new System.Drawing.Size(1010, 24);
             this.statusStrip1.TabIndex = 75;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripDropDownButtonWebServices
+            // 
+            this.toolStripDropDownButtonWebServices.Name = "toolStripDropDownButtonWebServices";
+            this.toolStripDropDownButtonWebServices.Size = new System.Drawing.Size(72, 22);
+            this.toolStripDropDownButtonWebServices.Text = "当前环境";
+            this.toolStripDropDownButtonWebServices.ToolTipText = "选择环境";
             // 
             // toolStripStatusLabelCurrentServer
             // 
@@ -243,7 +252,7 @@ namespace 金证统一账户测试账户生成器
             // tsslVersion
             // 
             this.tsslVersion.Name = "tsslVersion";
-            this.tsslVersion.Size = new System.Drawing.Size(515, 19);
+            this.tsslVersion.Size = new System.Drawing.Size(443, 19);
             this.tsslVersion.Spring = true;
             this.tsslVersion.Text = "当前版本：";
             this.tsslVersion.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -272,12 +281,11 @@ namespace 金证统一账户测试账户生成器
             this.panel.Size = new System.Drawing.Size(986, 622);
             this.panel.TabIndex = 76;
             // 
-            // toolStripDropDownButtonWebServices
+            // toolStripStatusLabel1
             // 
-            this.toolStripDropDownButtonWebServices.Name = "toolStripDropDownButtonWebServices";
-            this.toolStripDropDownButtonWebServices.Size = new System.Drawing.Size(72, 22);
-            this.toolStripDropDownButtonWebServices.Text = "当前环境";
-            this.toolStripDropDownButtonWebServices.ToolTipText = "选择环境";
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(72, 19);
+            this.toolStripStatusLabel1.Text = "当前环境：";
             // 
             // frmFramework
             // 
@@ -332,6 +340,7 @@ namespace 金证统一账户测试账户生成器
         private System.Windows.Forms.ToolStripMenuItem 购买授权ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButtonWebServices;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }
 

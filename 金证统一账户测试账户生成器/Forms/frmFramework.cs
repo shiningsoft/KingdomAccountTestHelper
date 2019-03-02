@@ -219,8 +219,21 @@ namespace 金证统一账户测试账户生成器
                     kess.edition = Kess.Edtion.U;
                 }
 
+                toolStripDropDownButtonWebServices.DropDownItems.Clear();
+                foreach (string url in Settings.Default.webservices)
+                {
+                    Uri server = new Uri(url);
+                    ToolStripMenuItem item = new ToolStripMenuItem();
+                    item.Text = url;
+                    item.Click += Webservice_Item_Click;
+
+                    toolStripDropDownButtonWebServices.DropDownItems.Add(item);
+                }
+
                 Uri uri = new Uri(Settings.Default.webservice);
-                toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + "获取环境信息中，请稍候......";
+                toolStripDropDownButtonWebServices.Text = uri.Host + ":" + uri.Port;
+
+                toolStripStatusLabelCurrentServer.Text = "获取环境信息中，请稍候......";
 
                 currentUser.Text = "用户：" + Settings.Default.操作员代码;
 
@@ -229,6 +242,8 @@ namespace 金证统一账户测试账户生成器
                 try
                 {
                     serverName = await kess.getSingleCommonParamValue("SERVER_NAME");
+
+                    resultForm.Append("成功连接到" + serverName);
                     if (serverName.IndexOf("测试") == -1)
                     {
                         resultForm.Append("服务器公共参数（SERVER_NAME）中未检测到目标字符“测试”，请确认是否在测试环境中运行！");
@@ -236,10 +251,10 @@ namespace 金证统一账户测试账户生成器
                 }
                 catch (Exception ex)
                 {
-                    resultForm.Append(ex.Message);
+                    resultForm.Append("获取服务器信息失败：" + ex.Message);
                 }
 
-                toolStripStatusLabelCurrentServer.Text = "当前环境：" + uri.Host + ":" + uri.Port + "，" + serverName;
+                toolStripStatusLabelCurrentServer.Text = serverName;
                 timerRefreshQueue = new Timer();
                 timerRefreshQueue.Interval = 100;
                 timerRefreshQueue.Tick += TimerRefreshQueue_Tick;
@@ -255,6 +270,14 @@ namespace 金证统一账户测试账户生成器
                 resultForm.Append("初始化失败：" + ex.Message);
                 系统设置ToolStripMenuItem.PerformClick();
             }
+        }
+
+        private void Webservice_Item_Click(object sender, EventArgs e)
+        {
+            ToolStripMenuItem item = (ToolStripMenuItem)sender;
+            Settings.Default.webservice = item.Text;
+            Settings.Default.Save();
+            InitWebService();
         }
 
         /// <summary>
@@ -421,7 +444,6 @@ namespace 金证统一账户测试账户生成器
             if (frmSettings == null || frmSettings.IsDisposed)
             {
                 frmSettings = new frmSettings(this);
-                frmSettings.TopMost=true;
                 frmSettings.Show();
                 frmSettings.Activate();
             }

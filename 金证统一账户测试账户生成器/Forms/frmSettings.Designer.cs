@@ -31,11 +31,9 @@
             this.components = new System.ComponentModel.Container();
             this.cancel = new System.Windows.Forms.Button();
             this.accept = new System.Windows.Forms.Button();
-            this.tbxWebserviceUrl = new System.Windows.Forms.TextBox();
             this.tbxOperatorId = new System.Windows.Forms.TextBox();
             this.tbxPassword = new System.Windows.Forms.TextBox();
             this.tbxChannel = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -51,6 +49,10 @@
             this.label15 = new System.Windows.Forms.Label();
             this.rbWin = new System.Windows.Forms.RadioButton();
             this.rbU = new System.Windows.Forms.RadioButton();
+            this.tpServers = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.dgvWebServices = new System.Windows.Forms.DataGridView();
+            this.webservice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tbxSurveySN = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -68,15 +70,11 @@
             this.tbxCols = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.tpServers = new System.Windows.Forms.TabPage();
-            this.dgvWebServices = new System.Windows.Forms.DataGridView();
-            this.label17 = new System.Windows.Forms.Label();
-            this.webservice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tpNormal.SuspendLayout();
-            this.tabPage2.SuspendLayout();
             this.tpServers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWebServices)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // cancel
@@ -101,17 +99,9 @@
             this.accept.UseVisualStyleBackColor = true;
             this.accept.Click += new System.EventHandler(this.accept_Click);
             // 
-            // tbxWebserviceUrl
-            // 
-            this.tbxWebserviceUrl.Location = new System.Drawing.Point(135, 21);
-            this.tbxWebserviceUrl.Name = "tbxWebserviceUrl";
-            this.tbxWebserviceUrl.Size = new System.Drawing.Size(458, 21);
-            this.tbxWebserviceUrl.TabIndex = 0;
-            this.toolTip.SetToolTip(this.tbxWebserviceUrl, "统一账户系统的WebService接口地址，一定要输入正确哦");
-            // 
             // tbxOperatorId
             // 
-            this.tbxOperatorId.Location = new System.Drawing.Point(135, 75);
+            this.tbxOperatorId.Location = new System.Drawing.Point(126, 78);
             this.tbxOperatorId.Name = "tbxOperatorId";
             this.tbxOperatorId.Size = new System.Drawing.Size(141, 21);
             this.tbxOperatorId.TabIndex = 2;
@@ -119,7 +109,7 @@
             // 
             // tbxPassword
             // 
-            this.tbxPassword.Location = new System.Drawing.Point(135, 102);
+            this.tbxPassword.Location = new System.Drawing.Point(126, 105);
             this.tbxPassword.Name = "tbxPassword";
             this.tbxPassword.PasswordChar = '*';
             this.tbxPassword.Size = new System.Drawing.Size(141, 21);
@@ -128,25 +118,16 @@
             // 
             // tbxChannel
             // 
-            this.tbxChannel.Location = new System.Drawing.Point(135, 129);
+            this.tbxChannel.Location = new System.Drawing.Point(126, 132);
             this.tbxChannel.Name = "tbxChannel";
             this.tbxChannel.Size = new System.Drawing.Size(141, 21);
             this.tbxChannel.TabIndex = 4;
             this.toolTip.SetToolTip(this.tbxChannel, "WebService操作员使用的操作渠道，操作员一定要有这个渠道的访问权限");
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 12);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "WebService地址：";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(52, 78);
+            this.label2.Location = new System.Drawing.Point(43, 81);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 12);
             this.label2.TabIndex = 7;
@@ -155,7 +136,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(52, 105);
+            this.label3.Location = new System.Drawing.Point(43, 108);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 12);
             this.label3.TabIndex = 8;
@@ -164,7 +145,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(64, 132);
+            this.label4.Location = new System.Drawing.Point(55, 135);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 12);
             this.label4.TabIndex = 9;
@@ -173,7 +154,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(40, 159);
+            this.label5.Location = new System.Drawing.Point(313, 54);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(89, 12);
             this.label5.TabIndex = 11;
@@ -181,7 +162,7 @@
             // 
             // tbxZdTimeout
             // 
-            this.tbxZdTimeout.Location = new System.Drawing.Point(135, 156);
+            this.tbxZdTimeout.Location = new System.Drawing.Point(408, 51);
             this.tbxZdTimeout.Name = "tbxZdTimeout";
             this.tbxZdTimeout.Size = new System.Drawing.Size(141, 21);
             this.tbxZdTimeout.TabIndex = 5;
@@ -191,7 +172,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(282, 159);
+            this.label6.Location = new System.Drawing.Point(555, 54);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(17, 12);
             this.label6.TabIndex = 12;
@@ -200,7 +181,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(52, 51);
+            this.label7.Location = new System.Drawing.Point(43, 54);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 12);
             this.label7.TabIndex = 14;
@@ -208,7 +189,7 @@
             // 
             // tbxBranchNo
             // 
-            this.tbxBranchNo.Location = new System.Drawing.Point(135, 48);
+            this.tbxBranchNo.Location = new System.Drawing.Point(126, 51);
             this.tbxBranchNo.Name = "tbxBranchNo";
             this.tbxBranchNo.Size = new System.Drawing.Size(141, 21);
             this.tbxBranchNo.TabIndex = 1;
@@ -219,8 +200,8 @@
             this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tabControl1.Controls.Add(this.tpNormal);
             this.tabControl1.Controls.Add(this.tpServers);
+            this.tabControl1.Controls.Add(this.tpNormal);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
@@ -235,7 +216,6 @@
             this.tpNormal.Controls.Add(this.label15);
             this.tpNormal.Controls.Add(this.rbWin);
             this.tpNormal.Controls.Add(this.rbU);
-            this.tpNormal.Controls.Add(this.tbxWebserviceUrl);
             this.tpNormal.Controls.Add(this.label7);
             this.tpNormal.Controls.Add(this.tbxOperatorId);
             this.tpNormal.Controls.Add(this.tbxBranchNo);
@@ -243,7 +223,6 @@
             this.tpNormal.Controls.Add(this.label6);
             this.tpNormal.Controls.Add(this.tbxChannel);
             this.tpNormal.Controls.Add(this.label5);
-            this.tpNormal.Controls.Add(this.label1);
             this.tpNormal.Controls.Add(this.tbxZdTimeout);
             this.tpNormal.Controls.Add(this.label2);
             this.tpNormal.Controls.Add(this.label4);
@@ -253,13 +232,13 @@
             this.tpNormal.Padding = new System.Windows.Forms.Padding(3);
             this.tpNormal.Size = new System.Drawing.Size(634, 237);
             this.tpNormal.TabIndex = 0;
-            this.tpNormal.Text = "常规";
+            this.tpNormal.Text = "系统参数";
             this.tpNormal.UseVisualStyleBackColor = true;
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(369, 51);
+            this.label16.Location = new System.Drawing.Point(325, 104);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(77, 12);
             this.label16.TabIndex = 19;
@@ -267,7 +246,7 @@
             // 
             // tbxMaxConnections
             // 
-            this.tbxMaxConnections.Location = new System.Drawing.Point(452, 48);
+            this.tbxMaxConnections.Location = new System.Drawing.Point(408, 101);
             this.tbxMaxConnections.Name = "tbxMaxConnections";
             this.tbxMaxConnections.Size = new System.Drawing.Size(141, 21);
             this.tbxMaxConnections.TabIndex = 18;
@@ -277,7 +256,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(40, 186);
+            this.label15.Location = new System.Drawing.Point(313, 81);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(89, 12);
             this.label15.TabIndex = 17;
@@ -286,7 +265,7 @@
             // rbWin
             // 
             this.rbWin.AutoSize = true;
-            this.rbWin.Location = new System.Drawing.Point(182, 184);
+            this.rbWin.Location = new System.Drawing.Point(455, 79);
             this.rbWin.Name = "rbWin";
             this.rbWin.Size = new System.Drawing.Size(53, 16);
             this.rbWin.TabIndex = 16;
@@ -298,7 +277,7 @@
             // 
             this.rbU.AutoSize = true;
             this.rbU.Checked = true;
-            this.rbU.Location = new System.Drawing.Point(135, 184);
+            this.rbU.Location = new System.Drawing.Point(408, 79);
             this.rbU.Name = "rbU";
             this.rbU.Size = new System.Drawing.Size(41, 16);
             this.rbU.TabIndex = 15;
@@ -306,6 +285,50 @@
             this.rbU.Text = "U版";
             this.toolTip.SetToolTip(this.rbU, "U版统一账户系统请选这个！");
             this.rbU.UseVisualStyleBackColor = true;
+            // 
+            // tpServers
+            // 
+            this.tpServers.Controls.Add(this.label17);
+            this.tpServers.Controls.Add(this.dgvWebServices);
+            this.tpServers.Location = new System.Drawing.Point(4, 22);
+            this.tpServers.Name = "tpServers";
+            this.tpServers.Padding = new System.Windows.Forms.Padding(3);
+            this.tpServers.Size = new System.Drawing.Size(634, 237);
+            this.tpServers.TabIndex = 2;
+            this.tpServers.Text = "WebService列表";
+            this.tpServers.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(6, 12);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(281, 12);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "允许设置多个WebService，以便快速切换不同环境。";
+            // 
+            // dgvWebServices
+            // 
+            this.dgvWebServices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvWebServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvWebServices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.webservice});
+            this.dgvWebServices.Location = new System.Drawing.Point(7, 30);
+            this.dgvWebServices.Name = "dgvWebServices";
+            this.dgvWebServices.RowTemplate.Height = 23;
+            this.dgvWebServices.Size = new System.Drawing.Size(621, 201);
+            this.dgvWebServices.TabIndex = 0;
+            // 
+            // webservice
+            // 
+            this.webservice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.webservice.DataPropertyName = "webservice";
+            this.webservice.HeaderText = "WebService地址";
+            this.webservice.MinimumWidth = 400;
+            this.webservice.Name = "webservice";
+            this.webservice.Width = 400;
             // 
             // tabPage2
             // 
@@ -458,50 +481,6 @@
             this.label8.TabIndex = 8;
             this.label8.Text = "题目序列（Cols）：";
             // 
-            // tpServers
-            // 
-            this.tpServers.Controls.Add(this.label17);
-            this.tpServers.Controls.Add(this.dgvWebServices);
-            this.tpServers.Location = new System.Drawing.Point(4, 22);
-            this.tpServers.Name = "tpServers";
-            this.tpServers.Padding = new System.Windows.Forms.Padding(3);
-            this.tpServers.Size = new System.Drawing.Size(634, 237);
-            this.tpServers.TabIndex = 2;
-            this.tpServers.Text = "服务器";
-            this.tpServers.UseVisualStyleBackColor = true;
-            // 
-            // dgvWebServices
-            // 
-            this.dgvWebServices.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvWebServices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvWebServices.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.webservice});
-            this.dgvWebServices.Location = new System.Drawing.Point(7, 30);
-            this.dgvWebServices.Name = "dgvWebServices";
-            this.dgvWebServices.RowTemplate.Height = 23;
-            this.dgvWebServices.Size = new System.Drawing.Size(621, 201);
-            this.dgvWebServices.TabIndex = 0;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 12);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(125, 12);
-            this.label17.TabIndex = 1;
-            this.label17.Text = "WebService地址列表：";
-            // 
-            // webservice
-            // 
-            this.webservice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.webservice.DataPropertyName = "webservice";
-            this.webservice.HeaderText = "WebService地址";
-            this.webservice.MinimumWidth = 400;
-            this.webservice.Name = "webservice";
-            this.webservice.Width = 400;
-            // 
             // frmSettings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -517,11 +496,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tpNormal.ResumeLayout(false);
             this.tpNormal.PerformLayout();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.tpServers.ResumeLayout(false);
             this.tpServers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvWebServices)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -530,11 +509,9 @@
 
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button accept;
-        private System.Windows.Forms.TextBox tbxWebserviceUrl;
         private System.Windows.Forms.TextBox tbxOperatorId;
         private System.Windows.Forms.TextBox tbxPassword;
         private System.Windows.Forms.TextBox tbxChannel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
