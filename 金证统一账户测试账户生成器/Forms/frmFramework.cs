@@ -14,7 +14,7 @@ namespace 金证统一账户测试账户生成器
         /// <summary>
         /// 软件使用期限
         /// </summary>
-        DateTime expiredDate = DateTime.Parse("2019/06/30");
+        DateTime expiredDate = DateTime.Parse("2019/12/31");
 
         /// <summary>
         /// 金证接口调用工具
@@ -130,7 +130,7 @@ namespace 金证统一账户测试账户生成器
                 i++;
             }
 
-            checkExpired();
+            // checkExpired();
 
             tsslVersion.Text = "当前版本：" + Application.ProductVersion;
             
