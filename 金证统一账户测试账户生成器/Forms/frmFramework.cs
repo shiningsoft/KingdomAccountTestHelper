@@ -12,7 +12,7 @@ namespace 金证统一账户测试账户生成器
     public partial class frmFramework : Form
     {
         /// <summary>
-        /// 软件使用期限
+        /// 软件使用期限，已作废
         /// </summary>
         DateTime expiredDate = DateTime.Parse("2019/12/31");
 
