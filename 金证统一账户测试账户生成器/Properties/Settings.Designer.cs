@@ -253,11 +253,9 @@ namespace 金证统一账户测试账户生成器.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute(@"<?xml version=""1.0"" encoding=""utf-16""?>
-<ArrayOfString xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"">
-  <string>http://60.173.222.38:30092/kess/services/KessService?wsdl</string>
-  <string>http://60.173.222.38:30004/kess/services/KessService?wsdl</string>
-</ArrayOfString>")]
+        [global::System.Configuration.DefaultSettingValueAttribute("<?xml version=\"1.0\" encoding=\"utf-16\"?>\r\n<ArrayOfString xmlns:xsi=\"http://www.w3." +
+            "org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\r\n  <s" +
+            "tring />\r\n</ArrayOfString>")]
         public global::System.Collections.Specialized.StringCollection webservices {
             get {
                 return ((global::System.Collections.Specialized.StringCollection)(this["webservices"]));

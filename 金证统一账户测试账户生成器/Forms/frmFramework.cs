@@ -93,11 +93,11 @@ namespace 金证统一账户测试账户生成器
             defaultTitle = Text;
 
             // 启动有效期检查
-            Console.WriteLine(expiredDate);
-            tsslExpired.Text = "有效期：" + expiredDate.ToLongDateString();
-            timerCheckExpired.Interval = 15000;
-            timerCheckExpired.Tick += TimerCheckExpired_Tick;
-            timerCheckExpired.Start();
+            //Console.WriteLine(expiredDate);
+            //tsslExpired.Text = "有效期：" + expiredDate.ToLongDateString();
+            //timerCheckExpired.Interval = 15000;
+            //timerCheckExpired.Tick += TimerCheckExpired_Tick;
+            //timerCheckExpired.Start();
 
             resultForm = new frmResultForm(this);
             resultForm.Location = new System.Drawing.Point(Location.X + Width, Location.Y);
