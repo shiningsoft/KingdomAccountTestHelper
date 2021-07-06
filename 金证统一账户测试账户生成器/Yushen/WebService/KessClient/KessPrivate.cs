@@ -911,7 +911,7 @@ namespace Yushen.WebService.KessClient
 
                     return result;
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
                     if (_webserviceConnectionsNum > 0)
                     {
@@ -919,6 +919,7 @@ namespace Yushen.WebService.KessClient
                     }
 
                     kessClientList[index].available = true;
+                    logger.Error(ex.Message);
                     throw;
                 }
             }).ConfigureAwait(false);
