@@ -130,6 +130,7 @@ namespace 金证统一账户测试账户生成器
                 i++;
             }
 
+            // 启用有效期检查
             // checkExpired();
 
             tsslVersion.Text = "当前版本：" + Application.ProductVersion;
