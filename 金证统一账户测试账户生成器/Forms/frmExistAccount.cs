@@ -117,7 +117,7 @@ namespace 金证统一账户测试账户生成器
                 dtpBGN_DATE.Value = DateTime.Now.AddMonths(-3).Date;
                 dtpEND_DATE.Value = DateTime.Now.Date;
 
-                if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
+                if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.无业)
                 {
                     cbxOccupation.Enabled = false;
                     cbxOccupation.Text = "";
@@ -187,7 +187,7 @@ namespace 金证统一账户测试账户生成器
                 user.password = password.Text.Trim();
                 user.mobile_tel = mobile_tel.Text.Trim();
                 user.occu_type = occu_type.SelectedValue.ToString();
-                if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.其他 && cbxOccupation.Text == "")
+                if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.无业 && cbxOccupation.Text == "")
                 {
                     throw new Exception("当职业为其他时，手输职业不能为空！");
                 }
@@ -1398,7 +1398,7 @@ namespace 金证统一账户测试账户生成器
 
         private void occu_type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
+            if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.无业)
             {
                 cbxOccupation.Text = " ";
                 cbxOccupation.Enabled = false;

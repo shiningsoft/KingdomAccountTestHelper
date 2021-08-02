@@ -876,20 +876,46 @@ namespace Yushen.WebService.KessClient.Dict
     /// </summary>
     class OCCU_EXTYPE : Dict
     {
-        public const string 文教科卫专业人员 = "01";
-        public const string 党政在职或离退休机关干部 = "02";
-        public const string 企事业单位干部 = "03";
-        public const string 行政企事业单位工人 = "04";
-        public const string 农民 = "05";
-        public const string 个体 = "06";
-        public const string 无业 = "07";
-        public const string 军人 = "08";
-        public const string 学生 = "09";
-        public const string 自由职业者 = "0A";
-        public const string 证券从业人员 = "10";
-        public const string 离退休 = "11";
-        public const string 其他 = "99";
+ 		public const string 党政机关负责人及管理人员 = "21";
+		public const string 企事业单位负责人及管理人员 = "22";
+		public const string 民主党派和工商联负责人及管理人员 = "23";
+		public const string 人民团体或群众团体负责人及管理人员 = "24";
+		public const string 社会组织社会团体和基金会和社会服务机构和外国商会等负责人及管理人员 = "25";
+		public const string 科学研究及教学人员 = "26";
+		public const string 文学艺术和体育专业人员 = "27";
+		public const string 新闻出版和文化专业人员 = "28";
+		public const string 卫生专业技术人员 = "29";
+		public const string 工程和农业专业人员 = "30";
+		public const string 法律和会计和审计和税务专业人员 = "31";
+		public const string 证券从业人员 = "32";
+		public const string 经济和金融专业人员 = "33";
+		public const string 宗教人士等特殊职业人员 = "34";
+		public const string 其他专业技术人员 = "35";
+		public const string 党政机关和企事业单位行政工作人员 = "36";
+		public const string 民主党派和工商联和人民团体或社会组织等单位工作人员 = "37";
+		public const string 人民警察和消防和应急救援人员 = "38";
+		public const string 批发与零售服务人员 = "39";
+		public const string 房地产服务人员 = "40";
+		public const string 旅游和住宿和餐饮服务人员 = "41";
+		public const string 珠宝和黄金等贵金属行业服务人员 = "42";
+		public const string 文化和体育和娱乐服务人员 = "43";
+		public const string 典当和拍卖行业服务人员 = "44";
+		public const string 艺术品或文物收藏行业服务人员 = "45";
+		public const string 废品和旧货回收服务人员 = "46";
+		public const string 交通运输和仓储和邮政业服务人员 = "47";
+		public const string 信息运输和软件和信息技术服务人员 = "48";
+		public const string 居民和健康服务人员 = "49";
+		public const string 其他社会生产和社会服务人员 = "50";
+		public const string 农和林和牧和渔业生产及辅助人员 = "51";
+		public const string 生产制造及有关人员 = "52";
+		public const string 军人 = "53";
+		public const string 国际组织工作人员 = "54";
+		public const string 离退休人员 = "55";
+		public const string 个体工商户含淘宝店自营等 = "56";
+		public const string 无业 = "57";
+		public const string 学生 = "58";
     }
+
     /// <summary>
     /// 远程同步系统（风险测评）
     /// </summary>

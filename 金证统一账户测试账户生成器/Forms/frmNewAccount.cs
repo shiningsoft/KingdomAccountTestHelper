@@ -98,7 +98,7 @@ namespace 金证统一账户测试账户生成器
                 id_type.ValueMember = "value";
                 id_type.DataSource = idTypeList.DataTable;
 
-                if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
+                if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.无业)
                 {
                     cbxOccupation.Enabled = false;
                 }
@@ -137,7 +137,7 @@ namespace 金证统一账户测试账户生成器
 
             sex.SelectedValue = idcard.Sex.ToString();
             risk_level.SelectedValue = Dict.RiskTestLevel.积极型;
-            occu_type.SelectedValue = Dict.OCCU_EXTYPE.其他;
+            occu_type.SelectedValue = Dict.OCCU_EXTYPE.无业;
             citizenship.SelectedValue = Dict.CITIZENSHIP.中国;
             education.SelectedIndex = Generator.CreateRandomInteger(0, education.Items.Count);
             bank_code.SelectedValue = Settings.Default.默认开通的银行类型;
@@ -182,7 +182,7 @@ namespace 金证统一账户测试账户生成器
                 user.password = password.Text.Trim();
                 user.mobile_tel = mobile_tel.Text.Trim();
                 user.occu_type = occu_type.SelectedValue.ToString();
-                if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.其他 && cbxOccupation.Text == "")
+                if (occu_type.SelectedValue.ToString() == Dict.OCCU_EXTYPE.无业 && cbxOccupation.Text == "")
                 {
                     throw new Exception("当职业为其他时，手输职业不能为空！");
                 }
@@ -961,7 +961,7 @@ namespace 金证统一账户测试账户生成器
 
         private void occu_type_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.其他)
+            if (occu_type.SelectedValue.ToString() != Dict.OCCU_EXTYPE.无业)
             {
                 cbxOccupation.ResetText();
                 cbxOccupation.Enabled = false;
