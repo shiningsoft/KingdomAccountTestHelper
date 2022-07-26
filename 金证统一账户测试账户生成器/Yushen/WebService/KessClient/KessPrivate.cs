@@ -726,12 +726,12 @@ namespace Yushen.WebService.KessClient
             request.setAttr("CUST_CODE", CUST_CODE);
             request.setAttr("CUACCT_CODE", CUACCT_CODE);
             request.setAttr("BANK_ACCT_CODE", BANK_ACCT_CODE);
-            //request.setAttr("EXT_ORG", EXT_ORG);
-            //request.setAttr("BANK_ACCT", BANK_ACCT);
-            //request.setAttr("FUND_AUTH_DATA", FUND_AUTH_DATA);
-            //request.setAttr("BANK_AUTH_DATA", BANK_AUTH_DATA);
-            //request.setAttr("SERIAL_NO", SERIAL_NO);
-            //request.setAttr("SMS_NO", SMS_NO);
+            request.setAttr("EXT_ORG", EXT_ORG);
+            request.setAttr("BANK_ACCT", BANK_ACCT);
+            request.setAttr("FUND_AUTH_DATA", FUND_AUTH_DATA);
+            request.setAttr("BANK_AUTH_DATA", BANK_AUTH_DATA);
+            request.setAttr("SERIAL_NO", SERIAL_NO);
+            request.setAttr("SMS_NO", SMS_NO);
             request.setAttr("CUBSB_TYPE", "16"); // 券商发起-银证开户
 
             Response response = await this.invoke(request);

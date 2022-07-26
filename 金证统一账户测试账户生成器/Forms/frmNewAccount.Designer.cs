@@ -120,14 +120,14 @@ namespace 金证统一账户测试账户生成器
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.birthday = new System.Windows.Forms.DateTimePicker();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.id_type = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnAddControllerInfo = new System.Windows.Forms.Button();
             this.btnAddBeneficirayInfo = new System.Windows.Forms.Button();
-            this.id_type = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.birthday = new System.Windows.Forms.DateTimePicker();
-            this.label26 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -219,15 +219,15 @@ namespace 金证统一账户测试账户生成器
             "自由职业者",
             "艺术品收藏、拍卖等从业人员",
             "娱乐场所、博彩、影视等从业人员"});
-            this.cbxOccupation.Location = new System.Drawing.Point(658, 104);
+            this.cbxOccupation.Location = new System.Drawing.Point(694, 104);
             this.cbxOccupation.Name = "cbxOccupation";
-            this.cbxOccupation.Size = new System.Drawing.Size(136, 20);
+            this.cbxOccupation.Size = new System.Drawing.Size(100, 20);
             this.cbxOccupation.TabIndex = 83;
             // 
             // label29
             // 
             this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(587, 106);
+            this.label29.Location = new System.Drawing.Point(623, 107);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(65, 12);
             this.label29.TabIndex = 82;
@@ -423,7 +423,7 @@ namespace 金证统一账户测试账户生成器
             this.occu_type.FormattingEnabled = true;
             this.occu_type.Location = new System.Drawing.Point(460, 101);
             this.occu_type.Name = "occu_type";
-            this.occu_type.Size = new System.Drawing.Size(100, 20);
+            this.occu_type.Size = new System.Drawing.Size(157, 20);
             this.occu_type.TabIndex = 14;
             this.occu_type.SelectedIndexChanged += new System.EventHandler(this.occu_type_SelectedIndexChanged);
             // 
@@ -947,6 +947,55 @@ namespace 金证统一账户测试账户生成器
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "设置客户资料";
             // 
+            // birthday
+            // 
+            this.birthday.CustomFormat = "yyyyMMdd";
+            this.birthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.birthday.Location = new System.Drawing.Point(107, 181);
+            this.birthday.Name = "birthday";
+            this.birthday.Size = new System.Drawing.Size(88, 21);
+            this.birthday.TabIndex = 95;
+            this.birthday.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(36, 184);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(65, 12);
+            this.label26.TabIndex = 96;
+            this.label26.Text = "出生日期：";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(201, 131);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(11, 12);
+            this.label6.TabIndex = 94;
+            this.label6.Text = "-";
+            // 
+            // id_type
+            // 
+            this.id_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.id_type.FormattingEnabled = true;
+            this.id_type.Location = new System.Drawing.Point(107, 48);
+            this.id_type.Name = "id_type";
+            this.id_type.Size = new System.Drawing.Size(200, 20);
+            this.id_type.TabIndex = 92;
+            this.id_type.SelectedIndexChanged += new System.EventHandler(this.id_type_SelectedIndexChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(36, 51);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(65, 12);
+            this.label14.TabIndex = 93;
+            this.label14.Text = "证件类型：";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.btnAddControllerInfo);
@@ -1003,55 +1052,6 @@ namespace 金证统一账户测试账户生成器
             this.btnAddBeneficirayInfo.Text = "增加受益人";
             this.btnAddBeneficirayInfo.UseVisualStyleBackColor = true;
             this.btnAddBeneficirayInfo.Click += new System.EventHandler(this.btnAddBeneficirayInfo_Click);
-            // 
-            // id_type
-            // 
-            this.id_type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.id_type.FormattingEnabled = true;
-            this.id_type.Location = new System.Drawing.Point(107, 48);
-            this.id_type.Name = "id_type";
-            this.id_type.Size = new System.Drawing.Size(200, 20);
-            this.id_type.TabIndex = 92;
-            this.id_type.SelectedIndexChanged += new System.EventHandler(this.id_type_SelectedIndexChanged);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(36, 51);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(65, 12);
-            this.label14.TabIndex = 93;
-            this.label14.Text = "证件类型：";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(201, 131);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(11, 12);
-            this.label6.TabIndex = 94;
-            this.label6.Text = "-";
-            // 
-            // birthday
-            // 
-            this.birthday.CustomFormat = "yyyyMMdd";
-            this.birthday.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.birthday.Location = new System.Drawing.Point(107, 181);
-            this.birthday.Name = "birthday";
-            this.birthday.Size = new System.Drawing.Size(88, 21);
-            this.birthday.TabIndex = 95;
-            this.birthday.Value = new System.DateTime(2017, 1, 1, 0, 0, 0, 0);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(36, 184);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(65, 12);
-            this.label26.TabIndex = 96;
-            this.label26.Text = "出生日期：";
-            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmNewAccount
             // 

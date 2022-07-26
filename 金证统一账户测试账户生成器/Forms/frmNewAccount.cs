@@ -551,7 +551,7 @@ namespace 金证统一账户测试账户生成器
             }
             else if (cbxCubsbScOpenAcctOpType.SelectedValue.ToString() == Dict.CubsbScOpenAcctOpType.一步式)
             {
-                result = await kess.cubsbScOpenAcct("0", user.cuacct_code, bank_code.SelectedValue.ToString(), user.cust_code, tbxBankAcctCode.Text.Trim());
+                result = await kess.cubsbScOpenAcct("0", user.cuacct_code, bank_code.SelectedValue.ToString(), user.cust_code, tbxBankAcctCode.Text.Trim(), BANK_ACCT: tbxBankAcctCode.Text.Trim());
 
                 if (result)
                 {

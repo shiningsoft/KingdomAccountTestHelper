@@ -361,7 +361,7 @@ namespace 金证统一账户测试账户生成器
             "娱乐场所、博彩、影视等从业人员"});
             this.cbxOccupation.Location = new System.Drawing.Point(459, 147);
             this.cbxOccupation.Name = "cbxOccupation";
-            this.cbxOccupation.Size = new System.Drawing.Size(136, 20);
+            this.cbxOccupation.Size = new System.Drawing.Size(160, 20);
             this.cbxOccupation.TabIndex = 20;
             // 
             // label29
@@ -531,7 +531,7 @@ namespace 金证统一账户测试账户生成器
             this.occu_type.FormattingEnabled = true;
             this.occu_type.Location = new System.Drawing.Point(459, 120);
             this.occu_type.Name = "occu_type";
-            this.occu_type.Size = new System.Drawing.Size(100, 20);
+            this.occu_type.Size = new System.Drawing.Size(160, 20);
             this.occu_type.TabIndex = 12;
             this.occu_type.SelectedIndexChanged += new System.EventHandler(this.occu_type_SelectedIndexChanged);
             // 
