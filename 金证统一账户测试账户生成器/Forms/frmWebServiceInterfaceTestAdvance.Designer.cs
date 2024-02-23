@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnRefreshMethonList = new System.Windows.Forms.Button();
             this.cbxMethonList = new System.Windows.Forms.ComboBox();
             this.tbxResponse = new System.Windows.Forms.TextBox();
@@ -73,9 +73,10 @@
             // 
             // btnRefreshMethonList
             // 
-            this.btnRefreshMethonList.Location = new System.Drawing.Point(562, 10);
+            this.btnRefreshMethonList.Location = new System.Drawing.Point(749, 12);
+            this.btnRefreshMethonList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnRefreshMethonList.Name = "btnRefreshMethonList";
-            this.btnRefreshMethonList.Size = new System.Drawing.Size(100, 23);
+            this.btnRefreshMethonList.Size = new System.Drawing.Size(133, 29);
             this.btnRefreshMethonList.TabIndex = 27;
             this.btnRefreshMethonList.Text = "重新加载列表";
             this.btnRefreshMethonList.UseVisualStyleBackColor = true;
@@ -84,9 +85,10 @@
             // cbxMethonList
             // 
             this.cbxMethonList.FormattingEnabled = true;
-            this.cbxMethonList.Location = new System.Drawing.Point(79, 12);
+            this.cbxMethonList.Location = new System.Drawing.Point(105, 15);
+            this.cbxMethonList.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxMethonList.Name = "cbxMethonList";
-            this.cbxMethonList.Size = new System.Drawing.Size(265, 20);
+            this.cbxMethonList.Size = new System.Drawing.Size(352, 23);
             this.cbxMethonList.TabIndex = 26;
             this.cbxMethonList.SelectedIndexChanged += new System.EventHandler(this.cbxMethonList_SelectedIndexChanged);
             this.cbxMethonList.TextUpdate += new System.EventHandler(this.cbxMethonList_TextUpdate);
@@ -96,18 +98,20 @@
             this.tbxResponse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbxResponse.Location = new System.Drawing.Point(6, 6);
+            this.tbxResponse.Location = new System.Drawing.Point(8, 8);
+            this.tbxResponse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tbxResponse.Multiline = true;
             this.tbxResponse.Name = "tbxResponse";
             this.tbxResponse.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbxResponse.Size = new System.Drawing.Size(497, 516);
+            this.tbxResponse.Size = new System.Drawing.Size(661, 644);
             this.tbxResponse.TabIndex = 25;
             // 
             // btnExecute
             // 
-            this.btnExecute.Location = new System.Drawing.Point(350, 10);
+            this.btnExecute.Location = new System.Drawing.Point(467, 12);
+            this.btnExecute.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExecute.Name = "btnExecute";
-            this.btnExecute.Size = new System.Drawing.Size(100, 23);
+            this.btnExecute.Size = new System.Drawing.Size(133, 29);
             this.btnExecute.TabIndex = 23;
             this.btnExecute.Text = "执行请求";
             this.btnExecute.UseVisualStyleBackColor = true;
@@ -115,9 +119,10 @@
             // 
             // btnLoadRequestXml
             // 
-            this.btnLoadRequestXml.Location = new System.Drawing.Point(456, 10);
+            this.btnLoadRequestXml.Location = new System.Drawing.Point(608, 12);
+            this.btnLoadRequestXml.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLoadRequestXml.Name = "btnLoadRequestXml";
-            this.btnLoadRequestXml.Size = new System.Drawing.Size(100, 23);
+            this.btnLoadRequestXml.Size = new System.Drawing.Size(133, 29);
             this.btnLoadRequestXml.TabIndex = 21;
             this.btnLoadRequestXml.Text = "打开接口目录";
             this.btnLoadRequestXml.UseVisualStyleBackColor = true;
@@ -126,9 +131,10 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(20, 15);
+            this.label26.Location = new System.Drawing.Point(27, 19);
+            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(53, 12);
+            this.label26.Size = new System.Drawing.Size(67, 15);
             this.label26.TabIndex = 22;
             this.label26.Text = "接口名：";
             // 
@@ -138,7 +144,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(12, 39);
+            this.splitContainer1.Location = new System.Drawing.Point(16, 49);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -149,8 +156,9 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.tabControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1018, 560);
+            this.splitContainer1.Size = new System.Drawing.Size(1357, 700);
             this.splitContainer1.SplitterDistance = 500;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 28;
             // 
             // splitContainer2
@@ -158,7 +166,8 @@
             this.splitContainer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitContainer2.Location = new System.Drawing.Point(3, 35);
+            this.splitContainer2.Location = new System.Drawing.Point(4, 44);
+            this.splitContainer2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer2.Name = "splitContainer2";
             this.splitContainer2.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -170,8 +179,9 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.lbQueryDictStatus);
             this.splitContainer2.Panel2.Controls.Add(this.dgvDict);
-            this.splitContainer2.Size = new System.Drawing.Size(494, 522);
-            this.splitContainer2.SplitterDistance = 372;
+            this.splitContainer2.Size = new System.Drawing.Size(492, 652);
+            this.splitContainer2.SplitterDistance = 464;
+            this.splitContainer2.SplitterWidth = 5;
             this.splitContainer2.TabIndex = 26;
             // 
             // dgvParams
@@ -188,13 +198,14 @@
             this.ColumnName,
             this.ColumnValue,
             this.Comment});
-            this.dgvParams.Location = new System.Drawing.Point(3, 3);
+            this.dgvParams.Location = new System.Drawing.Point(4, 4);
+            this.dgvParams.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvParams.MultiSelect = false;
             this.dgvParams.Name = "dgvParams";
             this.dgvParams.RowHeadersVisible = false;
             this.dgvParams.RowHeadersWidth = 100;
             this.dgvParams.RowTemplate.Height = 23;
-            this.dgvParams.Size = new System.Drawing.Size(488, 366);
+            this.dgvParams.Size = new System.Drawing.Size(484, 457);
             this.dgvParams.TabIndex = 0;
             this.dgvParams.CurrentCellChanged += new System.EventHandler(this.dgvParams_CurrentCellChanged);
             // 
@@ -202,10 +213,11 @@
             // 
             this.ColumnName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnName.DataPropertyName = "字段名";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnName.DefaultCellStyle = dataGridViewCellStyle3;
             this.ColumnName.FillWeight = 152.2843F;
             this.ColumnName.HeaderText = "字段名";
+            this.ColumnName.MinimumWidth = 6;
             this.ColumnName.Name = "ColumnName";
             this.ColumnName.ReadOnly = true;
             this.ColumnName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
@@ -216,10 +228,11 @@
             // 
             this.ColumnValue.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.ColumnValue.DataPropertyName = "字段值";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            this.ColumnValue.DefaultCellStyle = dataGridViewCellStyle4;
             this.ColumnValue.FillWeight = 140.1015F;
             this.ColumnValue.HeaderText = "字段值";
+            this.ColumnValue.MinimumWidth = 6;
             this.ColumnValue.Name = "ColumnValue";
             this.ColumnValue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.ColumnValue.Width = 120;
@@ -229,6 +242,7 @@
             this.Comment.DataPropertyName = "备注";
             this.Comment.FillWeight = 7.614212F;
             this.Comment.HeaderText = "备注";
+            this.Comment.MinimumWidth = 6;
             this.Comment.Name = "Comment";
             this.Comment.ReadOnly = true;
             this.Comment.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -238,9 +252,10 @@
             this.lbQueryDictStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbQueryDictStatus.AutoSize = true;
             this.lbQueryDictStatus.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lbQueryDictStatus.Location = new System.Drawing.Point(175, 45);
+            this.lbQueryDictStatus.Location = new System.Drawing.Point(150, 56);
+            this.lbQueryDictStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbQueryDictStatus.Name = "lbQueryDictStatus";
-            this.lbQueryDictStatus.Size = new System.Drawing.Size(88, 16);
+            this.lbQueryDictStatus.Size = new System.Drawing.Size(109, 20);
             this.lbQueryDictStatus.TabIndex = 18;
             this.lbQueryDictStatus.Text = "正在查询：";
             this.lbQueryDictStatus.Visible = false;
@@ -262,13 +277,15 @@
             this.DD_ITEM_NAME,
             this.DD_ITEM,
             this.INT_ORG});
-            this.dgvDict.Location = new System.Drawing.Point(3, 3);
+            this.dgvDict.Location = new System.Drawing.Point(4, 4);
+            this.dgvDict.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvDict.Name = "dgvDict";
             this.dgvDict.ReadOnly = true;
             this.dgvDict.RowHeadersVisible = false;
+            this.dgvDict.RowHeadersWidth = 51;
             this.dgvDict.RowTemplate.Height = 23;
             this.dgvDict.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDict.Size = new System.Drawing.Size(488, 143);
+            this.dgvDict.Size = new System.Drawing.Size(484, 180);
             this.dgvDict.TabIndex = 17;
             this.dgvDict.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDict_CellDoubleClick);
             // 
@@ -276,6 +293,7 @@
             // 
             this.DD_ID.DataPropertyName = "DD_ID";
             this.DD_ID.HeaderText = "字典项";
+            this.DD_ID.MinimumWidth = 6;
             this.DD_ID.Name = "DD_ID";
             this.DD_ID.ReadOnly = true;
             // 
@@ -283,6 +301,7 @@
             // 
             this.DD_ITEM_NAME.DataPropertyName = "DD_ITEM_NAME";
             this.DD_ITEM_NAME.HeaderText = "名称";
+            this.DD_ITEM_NAME.MinimumWidth = 6;
             this.DD_ITEM_NAME.Name = "DD_ITEM_NAME";
             this.DD_ITEM_NAME.ReadOnly = true;
             // 
@@ -305,9 +324,10 @@
             // lbInterfaceTitle
             // 
             this.lbInterfaceTitle.AutoSize = true;
-            this.lbInterfaceTitle.Location = new System.Drawing.Point(8, 14);
+            this.lbInterfaceTitle.Location = new System.Drawing.Point(11, 18);
+            this.lbInterfaceTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbInterfaceTitle.Name = "lbInterfaceTitle";
-            this.lbInterfaceTitle.Size = new System.Drawing.Size(65, 12);
+            this.lbInterfaceTitle.Size = new System.Drawing.Size(82, 15);
             this.lbInterfaceTitle.TabIndex = 1;
             this.lbInterfaceTitle.Text = "接口功能：";
             // 
@@ -319,11 +339,12 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tpResponseDgv);
             this.tabControl1.Controls.Add(this.tpResponseText);
-            this.tabControl1.Location = new System.Drawing.Point(3, 3);
+            this.tabControl1.Location = new System.Drawing.Point(4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(508, 554);
+            this.tabControl1.Size = new System.Drawing.Size(844, 692);
             this.tabControl1.TabIndex = 26;
             // 
             // tpResponseDgv
@@ -332,9 +353,10 @@
             this.tpResponseDgv.Controls.Add(this.lbResult);
             this.tpResponseDgv.Controls.Add(this.dgvResponse);
             this.tpResponseDgv.Location = new System.Drawing.Point(4, 4);
+            this.tpResponseDgv.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpResponseDgv.Name = "tpResponseDgv";
-            this.tpResponseDgv.Padding = new System.Windows.Forms.Padding(3);
-            this.tpResponseDgv.Size = new System.Drawing.Size(500, 528);
+            this.tpResponseDgv.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpResponseDgv.Size = new System.Drawing.Size(836, 663);
             this.tpResponseDgv.TabIndex = 0;
             this.tpResponseDgv.Text = "图形版";
             this.tpResponseDgv.UseVisualStyleBackColor = true;
@@ -344,9 +366,10 @@
             this.cbxAutoTranslate.AutoSize = true;
             this.cbxAutoTranslate.Checked = true;
             this.cbxAutoTranslate.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbxAutoTranslate.Location = new System.Drawing.Point(6, 6);
+            this.cbxAutoTranslate.Location = new System.Drawing.Point(8, 8);
+            this.cbxAutoTranslate.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxAutoTranslate.Name = "cbxAutoTranslate";
-            this.cbxAutoTranslate.Size = new System.Drawing.Size(72, 16);
+            this.cbxAutoTranslate.Size = new System.Drawing.Size(89, 19);
             this.cbxAutoTranslate.TabIndex = 2;
             this.cbxAutoTranslate.Text = "自动翻译";
             this.cbxAutoTranslate.UseVisualStyleBackColor = true;
@@ -355,9 +378,10 @@
             // lbResult
             // 
             this.lbResult.AutoSize = true;
-            this.lbResult.Location = new System.Drawing.Point(107, 7);
+            this.lbResult.Location = new System.Drawing.Point(143, 9);
+            this.lbResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbResult.Name = "lbResult";
-            this.lbResult.Size = new System.Drawing.Size(41, 12);
+            this.lbResult.Size = new System.Drawing.Size(52, 15);
             this.lbResult.TabIndex = 1;
             this.lbResult.Text = "状态：";
             // 
@@ -370,37 +394,41 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvResponse.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvResponse.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvResponse.Location = new System.Drawing.Point(6, 28);
+            this.dgvResponse.Location = new System.Drawing.Point(8, 35);
+            this.dgvResponse.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvResponse.Name = "dgvResponse";
             this.dgvResponse.ReadOnly = true;
             this.dgvResponse.RowHeadersVisible = false;
+            this.dgvResponse.RowHeadersWidth = 51;
             this.dgvResponse.RowTemplate.Height = 23;
             this.dgvResponse.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResponse.Size = new System.Drawing.Size(488, 494);
+            this.dgvResponse.Size = new System.Drawing.Size(818, 618);
             this.dgvResponse.TabIndex = 0;
             // 
             // tpResponseText
             // 
             this.tpResponseText.Controls.Add(this.tbxResponse);
             this.tpResponseText.Location = new System.Drawing.Point(4, 4);
+            this.tpResponseText.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tpResponseText.Name = "tpResponseText";
-            this.tpResponseText.Padding = new System.Windows.Forms.Padding(3);
-            this.tpResponseText.Size = new System.Drawing.Size(500, 528);
+            this.tpResponseText.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tpResponseText.Size = new System.Drawing.Size(669, 663);
             this.tpResponseText.TabIndex = 1;
             this.tpResponseText.Text = "文字版";
             this.tpResponseText.UseVisualStyleBackColor = true;
             // 
             // frmWebServiceInterfaceTestAdvance
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1042, 611);
+            this.ClientSize = new System.Drawing.Size(1389, 764);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.btnRefreshMethonList);
             this.Controls.Add(this.cbxMethonList);
             this.Controls.Add(this.btnExecute);
             this.Controls.Add(this.btnLoadRequestXml);
             this.Controls.Add(this.label26);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmWebServiceInterfaceTestAdvance";
             this.Text = "接口测试工具";
             this.Load += new System.EventHandler(this.frmWebServiceInterfaceTest_Load);
